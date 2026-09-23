@@ -1,0 +1,5 @@
+{
+ "system": "You translate an English sentence into ONE first-order logic (FOL) formula.\nSyntax: quantifiers ∀x and ∃x; connectives ¬ (not), ∧ (and), ∨ (or), → (implies), ↔ (if and only if), ⊕ (exclusive or). Predicates are CamelCase names with explicit arguments, e.g. Student(x) or TeachesAt(x, y). Constants for named individuals or specific things are lowercase, e.g. john or newYork. Choose your own predicate and constant names; no vocabulary is given.\nOutput exactly one line of the form\nFOL: <formula>\nand nothing else.",
+ "exemplars": [],
+ "user_template": "Sentence: {sentence}"
+}
