@@ -1,0 +1,91 @@
+13:13:15|INFO   |premise agreement: curated stories 73, matched to folio-refined 63, line-aligned 63, premise lines 321
+13:13:15|INFO   |Logic-LM gpt-3.5-turbo: n_records=204
+13:13:15|INFO   |Logic-LM gpt-4: n_records=204
+13:13:15|INFO   |Logic-LM text-davinci-003: n_records=204
+13:13:15|INFO   |label_many: 623 pairs, 623 uncached
+13:13:25|INFO   |  labelled 50/623
+13:13:37|INFO   |  labelled 100/623
+13:13:37|INFO   |  labelled 150/623
+13:13:38|INFO   |  labelled 200/623
+13:13:39|INFO   |  labelled 250/623
+13:13:40|INFO   |  labelled 300/623
+13:13:40|INFO   |  labelled 350/623
+13:13:41|INFO   |  labelled 400/623
+13:13:41|INFO   |  labelled 450/623
+13:13:41|INFO   |  labelled 500/623
+13:13:41|INFO   |  labelled 550/623
+13:13:43|INFO   |  labelled 600/623
+13:13:49|INFO   |agreed premises: 271 distinct texts (of 321 lines); status {'EQUIV': 264, 'VOCAB': 7, 'UNPARSEABLE': 9, 'NONEQ': 10, 'REF_UNPARSEABLE': 31}
+13:13:49|INFO   |track-L conclusion match: distinct 112/202; extension with agreed premises of matched stories: True
+13:13:49|INFO   |label_many: 753 pairs, 523 uncached
+13:13:51|INFO   |  labelled 50/523
+13:13:52|INFO   |  labelled 100/523
+13:13:54|INFO   |  labelled 150/523
+13:13:58|INFO   |  labelled 200/523
+13:14:00|INFO   |  labelled 250/523
+13:14:01|INFO   |  labelled 300/523
+13:14:04|INFO   |  labelled 350/523
+13:14:09|INFO   |  labelled 400/523
+13:14:12|INFO   |  labelled 450/523
+13:14:14|INFO   |  labelled 500/523
+13:14:46|INFO   |{
+ "n_by_track_label": {
+  "L": {
+   "CORRECT": 278,
+   "UNPARSEABLE": 60,
+   "UNCERTAIN": 204,
+   "ERROR": 199,
+   "REF_UNPARSEABLE": 12
+  },
+  "H": {
+   "CORRECT": 201,
+   "REF_UNPARSEABLE": 8,
+   "ERROR": 35,
+   "UNCERTAIN": 22,
+   "READING_CHOICE": 19,
+   "UNPARSEABLE": 17
+  }
+ },
+ "match_rate": {
+  "distinct_conclusions_matched": 112,
+  "curated_conclusions": 202,
+  "rate": 0.5545,
+  "extension_applied": true,
+  "n_unmatched_conclusion_lines": 308
+ },
+ "premise_agreement": {
+  "curated_story_rows": 73,
+  "matched_to_refined": 63,
+  "line_aligned_stories": 63,
+  "premise_lines": 321,
+  "status_counts": {
+   "EQUIV": 264,
+   "VOCAB": 7,
+   "UNPARSEABLE": 9,
+   "NONEQ": 10,
+   "REF_UNPARSEABLE": 31
+  },
+  "agreed_distinct_texts": 271
+ },
+ "invariance": {
+  "CONTRAPOSITIVE": {
+   "n/a": 110,
+   "True": 40
+  },
+  "DEMORGAN": {
+   "n/a": 117,
+   "True": 33
+  },
+  "PRENEX": {
+   "n/a": 149,
+   "True": 1
+  },
+  "RENAME": {
+   "rename-bijection (not z3; lexical)": 150
+  },
+  "REORDER": {
+   "n/a": 116,
+   "True": 34
+  }
+ }
+}
