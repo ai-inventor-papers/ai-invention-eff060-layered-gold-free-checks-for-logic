@@ -1,0 +1,630 @@
+{
+ "metadata": {
+  "description": "Held-out NL->FOL faithfulness meta-evaluation set (run_u75jRHUss0zo, invention iter 1, dataset E). HELD-OUT: iteration 2 must not tune any threshold on heldout rows.",
+  "label_rule": "see dataset_card.md section 'Final label rule'",
+  "panel_members": {
+   "P1": "anthropic/claude-haiku-4.5",
+   "P3": "z-ai/glm-4.6",
+   "R1": "moonshotai/kimi-k2-0905"
+  },
+  "source_verification": {
+   "heldout_candidates": {
+    "rows": 7307,
+    "verified": 7307,
+    "unverified": 0,
+    "labels": {
+     "UNPARSEABLE": 859,
+     "CORRECT": 311,
+     "UNRESOLVED": 5128,
+     "ERROR": 1009
+    }
+   },
+   "heldout_sentences": {
+    "rows": 600,
+    "verified": 600,
+    "unverified": 0,
+    "labels": {
+     "UNAUDITED_AGREED_FOLIO": 150,
+     "UNAUDITED_MALLS_GPT4_GOLD": 450
+    }
+   },
+   "panel_calibration": {
+    "rows": 173,
+    "verified": 173,
+    "unverified": 0,
+    "labels": {
+     "UNFAITHFUL": 37,
+     "FAITHFUL": 40,
+     "ORIGINAL_UNFAITHFUL__CORRECTED_FAITHFUL": 96
+    }
+   },
+   "screen_audit": {
+    "rows": 1173,
+    "verified": 1173,
+    "unverified": 0,
+    "labels": {
+     "ERROR": 268,
+     "UNRESOLVED": 418,
+     "CORRECT": 347,
+     "UNPARSEABLE": 78,
+     "NO_REFERENCE": 60,
+     "CONTESTED": 2
+    }
+   }
+  },
+  "reading": "for f in sorted(glob('full_data_out/full_data_out_*.json')): concatenate each group's examples"
+ },
+ "datasets": [
+  {
+   "dataset": "heldout_candidates",
+   "examples": [
+    {
+     "input": "{\"text\": \"When something is depressing, it is sad.\", \"candidate_fol\": \"\", \"reference_fol\": \"∀x (Depressing(x) → Sad(x))\", \"system\": \"ccg2lambda\", \"prompt_variant\": \"none\"}",
+     "output": "UNPARSEABLE",
+     "metadata_fold": "heldout",
+     "metadata_item_id": "31452c4db10ee367",
+     "metadata_sentence_id": "0000c2274e80",
+     "metadata_system": "ccg2lambda",
+     "metadata_slot": "CCG",
+     "metadata_family": "symbolic",
+     "metadata_system_class": "symbolic_eventsem",
+     "metadata_generator_model_id": "ccg2lambda",
+     "metadata_prompt_variant": "none",
+     "metadata_raw_output": "(exists x1 e2.(_depress(e2) & (Subj(e2) = x1)) -> exists x3.((x3 = _it) & _sad(x3)))",
+     "metadata_normalisation_applied": [
+      "nltk_to_fol"
+     ],
+     "metadata_auto_label": "UNPARSEABLE",
+     "metadata_equiv_status": null,
+     "metadata_repair_ops": null,
+     "metadata_repair_status": null,
+     "metadata_convention_flags": null,
+     "metadata_panel_votes": null,
+     "metadata_final_label": "UNPARSEABLE",
+     "metadata_error_ops": null,
+     "metadata_label_tier": "-",
+     "metadata_label_source": "parser",
+     "metadata_addrop_only_suspect": false,
+     "metadata_solver_lenient_label": "UNPARSEABLE",
+     "metadata_correct_not_equivalent": false,
+     "metadata_reading_choice": false,
+     "metadata_gold_audit_flag": "PENDING",
+     "metadata_reference_status": "UNAUDITED_AGREED_FOLIO",
+     "metadata_strata": {
+      "words": 7,
+      "n_quant": 1,
+      "depth": 1,
+      "n_conditions": 1,
+      "text_conditions": 1,
+      "exception_type": null,
+      "source_stratum": "CTRL",
+      "ctrl_len_bin": "0-11"
+     },
+     "metadata_disguised_text": "When babobing is gunining, it is milup.",
+     "metadata_disguised_fol": null,
+     "metadata_class_id": null,
+     "metadata_class_size": null,
+     "metadata_cost_usd": 0.0,
+     "metadata_finish_reason": null,
+     "metadata_provider": null,
+     "metadata_source_verified": true,
+     "metadata_source_file": "tasksource__folio/folio_v2_train.jsonl + local_sources/yfxiao__folio-refined__train.csv + kenken6696__folio_by_ccg2lambda/train"
+    },
+    {
+     "input": "{\"text\": \"When something is depressing, it is sad.\", \"candidate_fol\": \"∀x (Depressing(x) → Sad(x))\", \"reference_fol\": \"∀x (Depressing(x) → Sad(x))\", \"system\": \"F:openai/gpt-5.1\", \"prompt_variant\": \"fe...",
+     "output": "CORRECT",
+     "metadata_fold": "heldout",
+     "metadata_item_id": "b87a8dda4faced11",
+     "metadata_sentence_id": "0000c2274e80",
+     "metadata_system": "F:openai/gpt-5.1",
+     "metadata_slot": "F",
+     "metadata_family": "openai-frontier",
+     "metadata_system_class": "llm",
+     "metadata_generator_model_id": "openai/gpt-5.1",
+     "metadata_prompt_variant": "fewshot_v1",
+     "metadata_raw_output": "FOL: ∀x (Depressing(x) → Sad(x))",
+     "metadata_normalisation_applied": [
+      "fol_prefix"
+     ],
+     "metadata_auto_label": "CORRECT",
+     "metadata_equiv_status": "EQ",
+     "metadata_repair_ops": null,
+     "metadata_repair_status": null,
+     "metadata_convention_flags": null,
+     "metadata_panel_votes": null,
+     "metadata_final_label": "CORRECT",
+     "metadata_error_ops": null,
+     "metadata_label_tier": "A_unaudited_ref",
+     "metadata_label_source": "solver",
+     "metadata_addrop_only_suspect": false,
+     "metadata_solver_lenient_label": "CORRECT",
+     "metadata_correct_not_equivalent": false,
+     "metadata_reading_choice": false,
+     "metadata_gold_audit_flag": "PENDING",
+     "metadata_reference_status": "UNAUDITED_AGREED_FOLIO",
+     "metadata_strata": {
+      "words": 7,
+      "n_quant": 1,
+      "depth": 1,
+      "n_conditions": 1,
+      "text_conditions": 1,
+      "exception_type": null,
+      "source_stratum": "CTRL",
+      "ctrl_len_bin": "0-11"
+     },
+     "metadata_disguised_text": "When babobing is gunining, it is milup.",
+     "metadata_disguised_fol": "∀x ((Gunining(x) → Milup(x)))",
+     "metadata_class_id": "0000c2274e80:c0",
+     "metadata_class_size": 12,
+     "metadata_cost_usd": 0.000825,
+     "metadata_finish_reason": "stop",
+     "metadata_provider": "OpenAI",
+     "metadata_source_verified": true,
+     "metadata_source_file": "tasksource__folio/folio_v2_train.jsonl + local_sources/yfxiao__folio-refined__train.csv + generated_candidates/generations.jsonl"
+    },
+    {
+     "input": "{\"text\": \"When something is depressing, it is sad.\", \"candidate_fol\": \"∀x (Depressing(x) → Sad(x))\", \"reference_fol\": \"∀x (Depressing(x) → Sad(x))\", \"system\": \"G1b:meta-llama/llama-3.3-70b-instruct\", ...",
+     "output": "CORRECT",
+     "metadata_fold": "heldout",
+     "metadata_item_id": "3222a9e5bc15a5c9",
+     "metadata_sentence_id": "0000c2274e80",
+     "metadata_system": "G1b:meta-llama/llama-3.3-70b-instruct",
+     "metadata_slot": "G1b",
+     "metadata_family": "meta",
+     "metadata_system_class": "llm",
+     "metadata_generator_model_id": "meta-llama/llama-3.3-70b-instruct",
+     "metadata_prompt_variant": "fewshot_v1",
+     "metadata_raw_output": "FOL: ∀x (Depressing(x) → Sad(x))",
+     "metadata_normalisation_applied": [
+      "fol_prefix"
+     ],
+     "metadata_auto_label": "CORRECT",
+     "metadata_equiv_status": "EQ",
+     "metadata_repair_ops": null,
+     "metadata_repair_status": null,
+     "metadata_convention_flags": null,
+     "metadata_panel_votes": null,
+     "metadata_final_label": "CORRECT",
+     "metadata_error_ops": null,
+     "metadata_label_tier": "A_unaudited_ref",
+     "metadata_label_source": "solver",
+     "metadata_addrop_only_suspect": false,
+     "metadata_solver_lenient_label": "CORRECT",
+     "metadata_correct_not_equivalent": false,
+     "metadata_reading_choice": false,
+     "metadata_gold_audit_flag": "PENDING",
+     "metadata_reference_status": "UNAUDITED_AGREED_FOLIO",
+     "metadata_strata": {
+      "words": 7,
+      "n_quant": 1,
+      "depth": 1,
+      "n_conditions": 1,
+      "text_conditions": 1,
+      "exception_type": null,
+      "source_stratum": "CTRL",
+      "ctrl_len_bin": "0-11"
+     },
+     "metadata_disguised_text": "When babobing is gunining, it is milup.",
+     "metadata_disguised_fol": "∀x ((Gunining(x) → Milup(x)))",
+     "metadata_class_id": "0000c2274e80:c0",
+     "metadata_class_size": 12,
+     "metadata_cost_usd": 4.99e-05,
+     "metadata_finish_reason": "stop",
+     "metadata_provider": "DeepInfra",
+     "metadata_source_verified": true,
+     "metadata_source_file": "tasksource__folio/folio_v2_train.jsonl + local_sources/yfxiao__folio-refined__train.csv + generated_candidates/generations.jsonl"
+    }
+   ]
+  },
+  {
+   "dataset": "heldout_sentences",
+   "examples": [
+    {
+     "input": "{\"text\": \"When something is depressing, it is sad.\", \"reference_fol\": \"∀x (Depressing(x) → Sad(x))\"}",
+     "output": "UNAUDITED_AGREED_FOLIO",
+     "metadata_fold": "heldout",
+     "metadata_sentence_id": "0000c2274e80",
+     "metadata_source": "FOLIO-v2-train",
+     "metadata_original_reference_fol": "∀x (Depressing(x) → Sad(x))",
+     "metadata_ctrl_original_fol": "∀x (Depressing(x) → Sad(x))",
+     "metadata_agreement_type": "IDENTICAL_STRING",
+     "metadata_gold_audit_flag": "PENDING",
+     "metadata_gold_audit_votes": null,
+     "metadata_reading_choice": false,
+     "metadata_strata": {
+      "words": 7,
+      "n_quant": 1,
+      "depth": 1,
+      "n_conditions": 1,
+      "text_conditions": 1,
+      "exception_type": null,
+      "source_stratum": "CTRL",
+      "ctrl_len_bin": "0-11"
+     },
+     "metadata_n_candidates": 13,
+     "metadata_n_classes": 2,
+     "metadata_auto_label_counts": {
+      "TIMEOUT_UNKNOWN": 1,
+      "CORRECT": 11,
+      "COMPOUND": 1
+     },
+     "metadata_disguised_text": "When babobing is gunining, it is milup.",
+     "metadata_label_seconds": 0.05,
+     "metadata_source_verified": true,
+     "metadata_source_file": "tasksource__folio/folio_v2_train.jsonl + local_sources/yfxiao__folio-refined__train.csv"
+    },
+    {
+     "input": "{\"text\": \"A location is classified as a desert if it experiences low precipitation, has extreme temperature variations, and supports minimal vegetation.\", \"reference_fol\": \"∀x (Location(x) ∧ LowPrecip...",
+     "output": "UNAUDITED_MALLS_GPT4_GOLD",
+     "metadata_fold": "heldout",
+     "metadata_sentence_id": "000969d4c50f",
+     "metadata_source": "MALLS-v0.1-train",
+     "metadata_original_reference_fol": "∀x (Location(x) ∧ LowPrecipitation(x) ∧ ExtremeTemperatureVariations(x) ∧ MinimalVegetation(x) → Desert(x))",
+     "metadata_ctrl_original_fol": null,
+     "metadata_agreement_type": null,
+     "metadata_gold_audit_flag": "PENDING",
+     "metadata_gold_audit_votes": null,
+     "metadata_reading_choice": false,
+     "metadata_strata": {
+      "words": 20,
+      "n_quant": 1,
+      "depth": 4,
+      "n_conditions": 4,
+      "text_conditions": 1,
+      "exception_type": null,
+      "source_stratum": "L20",
+      "ctrl_len_bin": null
+     },
+     "metadata_n_candidates": 13,
+     "metadata_n_classes": 7,
+     "metadata_auto_label_counts": {
+      "ERROR": 3,
+      "COMPOUND": 7,
+      "CORRECT": 3
+     },
+     "metadata_disguised_text": "A filifion is podamed as a ravap if it dukorences pufub vulupation, has zakebe famive dilufions, and dubibs zelokal ravolation.",
+     "metadata_label_seconds": 5.53,
+     "metadata_source_verified": true,
+     "metadata_source_file": "local_sources/yuan-yang__MALLS-v0__MALLS-v0.1-train.json"
+    },
+    {
+     "input": "{\"text\": \"A combustion reaction occurs when a substance, typically a hydrocarbon, reacts with oxygen, generating heat and light energy, and producing water and carbon dioxide as byproducts.\", \"referen...",
+     "output": "UNAUDITED_MALLS_GPT4_GOLD",
+     "metadata_fold": "heldout",
+     "metadata_sentence_id": "0021b577fdd5",
+     "metadata_source": "MALLS-v0.1-train",
+     "metadata_original_reference_fol": "∀x∀y∀z (CombustionReaction(x) ∧ Substance(y) ∧ Hydrocarbon(y) ∧ Oxygen(z) → (ReactsWithOxygen(y, z) ∧ GeneratesHeatAndLightEnergy(x) ∧ ProducesWaterAndCarbonDioxideAsByproducts(x)))",
+     "metadata_ctrl_original_fol": null,
+     "metadata_agreement_type": null,
+     "metadata_gold_audit_flag": "PENDING",
+     "metadata_gold_audit_votes": null,
+     "metadata_reading_choice": false,
+     "metadata_strata": {
+      "words": 26,
+      "n_quant": 3,
+      "depth": 4,
+      "n_conditions": 4,
+      "text_conditions": 1,
+      "exception_type": null,
+      "source_stratum": "L25",
+      "ctrl_len_bin": null
+     },
+     "metadata_n_candidates": 13,
+     "metadata_n_classes": 13,
+     "metadata_auto_label_counts": {
+      "COMPOUND": 12,
+      "CORRECT": 1
+     },
+     "metadata_disguised_text": "A rimezion rateb nidals when a kovote, tipovally a vutig, fonips with midal, gazufating fitip and nunig tiguv, and tutoging nebut and zafob kuruge as ferots.",
+     "metadata_label_seconds": 105.49,
+     "metadata_source_verified": true,
+     "metadata_source_file": "local_sources/yuan-yang__MALLS-v0__MALLS-v0.1-train.json"
+    }
+   ]
+  },
+  {
+   "dataset": "panel_calibration",
+   "examples": [
+    {
+     "input": "{\"text\": \"Every person who has human rights is entitled to the right to life and liberty.\", \"candidate_fol\": \"∀x ((¬Have(x, humanRights) → EntitledTo(x, rightToLifeAndLiberty)))\", \"reference_fol\": \"∀x...",
+     "output": "UNFAITHFUL",
+     "metadata_fold": "calibration",
+     "metadata_subset": "synthetic_gate",
+     "metadata_calib_id": "cal000",
+     "metadata_sentence_id": "18d3205eddf5",
+     "metadata_variant_type": "NEG",
+     "metadata_position": "DOWN",
+     "metadata_position_z3_profile": "DOWN",
+     "metadata_z3_verified": "NONEQUIVALENT",
+     "metadata_rename_map": null,
+     "metadata_panel_verdicts_prompt_v2": {
+      "P2": {
+       "faithful": false,
+       "ops": [
+        "REV",
+        "NEG"
+       ],
+       "conf": 5
+      },
+      "P1": {
+       "faithful": false,
+       "ops": [
+        "NEG"
+       ],
+       "conf": 5
+      },
+      "P3": {
+       "faithful": false,
+       "ops": [
+        "REV",
+        "NEG"
+       ],
+       "conf": 5
+      },
+      "R2": {
+       "faithful": false,
+       "ops": [
+        "REV",
+        "NEG"
+       ],
+       "conf": 5
+      },
+      "R1": {
+       "faithful": false,
+       "ops": [
+        "NEG",
+        "REV"
+       ],
+       "conf": 5
+      }
+     },
+     "metadata_source_verified": true,
+     "metadata_source_file": "local_sources/yfxiao__folio-refined__train.csv"
+    },
+    {
+     "input": "{\"text\": \"Every person who has human rights is entitled to the right to life and liberty.\", \"candidate_fol\": \"∀x (((Have(x, humanRights) ∧ EuropeanSoccerClub(x)) → EntitledTo(x, rightToLifeAndLiberty)...",
+     "output": "UNFAITHFUL",
+     "metadata_fold": "calibration",
+     "metadata_subset": "synthetic_gate",
+     "metadata_calib_id": "cal001",
+     "metadata_sentence_id": "18d3205eddf5",
+     "metadata_variant_type": "ADD",
+     "metadata_position": "DOWN",
+     "metadata_position_z3_profile": "DOWN",
+     "metadata_z3_verified": "NONEQUIVALENT",
+     "metadata_rename_map": null,
+     "metadata_panel_verdicts_prompt_v2": {
+      "P2": {
+       "faithful": false,
+       "ops": [
+        "ADD"
+       ],
+       "conf": 5
+      },
+      "P1": {
+       "faithful": false,
+       "ops": [
+        "ADD"
+       ],
+       "conf": 5
+      },
+      "P3": {
+       "faithful": false,
+       "ops": [
+        "ADD"
+       ],
+       "conf": 5
+      },
+      "R2": {
+       "faithful": false,
+       "ops": [
+        "ADD"
+       ],
+       "conf": 5
+      },
+      "R1": {
+       "faithful": false,
+       "ops": [
+        "ADD"
+       ],
+       "conf": 5
+      }
+     },
+     "metadata_source_verified": true,
+     "metadata_source_file": "local_sources/yfxiao__folio-refined__train.csv"
+    },
+    {
+     "input": "{\"text\": \"Every person who has human rights is entitled to the right to life and liberty.\", \"candidate_fol\": \"∀x ((¬EntitledTo(x, rightToLifeAndLiberty) → ¬Have(x, humanRights)))\", \"reference_fol\": \"∀...",
+     "output": "FAITHFUL",
+     "metadata_fold": "calibration",
+     "metadata_subset": "synthetic_gate",
+     "metadata_calib_id": "cal002",
+     "metadata_sentence_id": "18d3205eddf5",
+     "metadata_variant_type": "STRICT_CONTRAPOSITIVE",
+     "metadata_position": null,
+     "metadata_position_z3_profile": null,
+     "metadata_z3_verified": "EQUIVALENT",
+     "metadata_rename_map": null,
+     "metadata_panel_verdicts_prompt_v2": {
+      "P2": {
+       "faithful": false,
+       "ops": [
+        "REV"
+       ],
+       "conf": 5
+      },
+      "P1": {
+       "faithful": false,
+       "ops": [
+        "NEG",
+        "REV"
+       ],
+       "conf": 5
+      },
+      "P3": {
+       "faithful": false,
+       "ops": [
+        "REV",
+        "NEG"
+       ],
+       "conf": 5
+      },
+      "R2": {
+       "faithful": false,
+       "ops": [
+        "REV",
+        "NEG"
+       ],
+       "conf": 5
+      },
+      "R1": {
+       "faithful": true,
+       "ops": [],
+       "conf": 5
+      }
+     },
+     "metadata_source_verified": true,
+     "metadata_source_file": "local_sources/yfxiao__folio-refined__train.csv"
+    }
+   ]
+  },
+  {
+   "dataset": "screen_audit",
+   "examples": [
+    {
+     "input": "{\"text\": \"Bonnie performs in school talent shows often.\", \"candidate_fol\": \"Perform(bonnie)\", \"reference_fol\": \"PerformOftenIn(bonnie, schoolTalentShow)\", \"system\": \"gpt-3.5-turbo\", \"prompt_variant\": ...",
+     "output": "ERROR",
+     "metadata_fold": "screen_audit",
+     "metadata_item_id": "634fdb0b6ece1d72",
+     "metadata_track": "L",
+     "metadata_system": "gpt-3.5-turbo",
+     "metadata_role": "conclusion",
+     "metadata_record_id": "FOLIO_dev_0",
+     "metadata_screen_sentence_id": "d4c2b9d5121a",
+     "metadata_candidate_fol_normalised": "Perform(bonnie)",
+     "metadata_normalisation_applied": [],
+     "metadata_auto_label": "ERROR",
+     "metadata_equiv_status": "NONEQ",
+     "metadata_repair_ops": [
+      "ADD",
+      "DROP"
+     ],
+     "metadata_repair_status": "FOUND",
+     "metadata_convention_flags": [],
+     "metadata_panel_votes": null,
+     "metadata_final_label": "ERROR",
+     "metadata_label_tier": "auto_only",
+     "metadata_label_source": "solver",
+     "metadata_reading_choice": false,
+     "metadata_addrop_only_suspect": true,
+     "metadata_ambiguous_curated": false,
+     "metadata_reference_source": "curated_corrected_conclusion",
+     "metadata_strata": {
+      "words": 7,
+      "n_quant": 0,
+      "depth": 0,
+      "n_conditions": 0,
+      "exception_type": null
+     },
+     "metadata_join_keys": {
+      "system": "gpt-3.5-turbo",
+      "raw_text": "Bonnie performs in school talent shows often.",
+      "normtext": "bonnie performs in school talent shows often",
+      "raw_fol": "Perform(bonnie)"
+     },
+     "metadata_class_id": "d4c2b9d5121a:c1",
+     "metadata_source_verified": true,
+     "metadata_source_file": "logiclm_FOLIO_dev_outputs/FOLIO_dev_gpt-3.5-turbo.json"
+    },
+    {
+     "input": "{\"text\": \"If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor t...",
+     "output": "UNRESOLVED",
+     "metadata_fold": "screen_audit",
+     "metadata_item_id": "878ffab81c8b4fcb",
+     "metadata_track": "L",
+     "metadata_system": "gpt-3.5-turbo",
+     "metadata_role": "conclusion",
+     "metadata_record_id": "FOLIO_dev_1",
+     "metadata_screen_sentence_id": "9864d0541e16",
+     "metadata_candidate_fol_normalised": "((Wish(bonnie) ∧ Chaperone(bonnie)) ∨ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ (Inactive(bonnie) ∧ Disinterested(bonnie)))",
+     "metadata_normalisation_applied": [],
+     "metadata_auto_label": "COMPOUND",
+     "metadata_equiv_status": "NONEQ",
+     "metadata_repair_ops": null,
+     "metadata_repair_status": "COMPOUND_TIMEOUT",
+     "metadata_convention_flags": [
+      "ARITY_REIFY"
+     ],
+     "metadata_panel_votes": null,
+     "metadata_final_label": "UNRESOLVED",
+     "metadata_label_tier": "auto_only",
+     "metadata_label_source": "pending_panel",
+     "metadata_reading_choice": false,
+     "metadata_addrop_only_suspect": false,
+     "metadata_ambiguous_curated": true,
+     "metadata_reference_source": "curated_corrected_conclusion",
+     "metadata_strata": {
+      "words": 63,
+      "n_quant": 0,
+      "depth": 6,
+      "n_conditions": 9,
+      "exception_type": null
+     },
+     "metadata_join_keys": {
+      "system": "gpt-3.5-turbo",
+      "raw_text": "If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager wh...",
+      "normtext": "if bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager wh...",
+      "raw_fol": "((Wish(bonnie) ∧ Chaperone(bonnie)) ∨ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ (Inactive(bonnie) ∧ Disinterested(bonnie)))"
+     },
+     "metadata_class_id": "9864d0541e16:c1",
+     "metadata_source_verified": true,
+     "metadata_source_file": "logiclm_FOLIO_dev_outputs/FOLIO_dev_gpt-3.5-turbo.json"
+    },
+    {
+     "input": "{\"text\": \"If Bonnie either chaperones high school dances or, if she does not, she performs in school talent shows often, then Bonnie is both a young child or teenager who wishes to further her academi...",
+     "output": "UNRESOLVED",
+     "metadata_fold": "screen_audit",
+     "metadata_item_id": "b9a596c62d8f557f",
+     "metadata_track": "L",
+     "metadata_system": "gpt-3.5-turbo",
+     "metadata_role": "conclusion",
+     "metadata_record_id": "FOLIO_dev_2",
+     "metadata_screen_sentence_id": "75b0bf13387a",
+     "metadata_candidate_fol_normalised": "(Chaperone(bonnie) ∨ (¬Chaperone(bonnie) ∧ Perform(bonnie))) → (Wish(bonnie) ∧ Young(bonnie) ∧ Inactive(bonnie) ∧ Disinterested(bonnie))",
+     "metadata_normalisation_applied": [],
+     "metadata_auto_label": "COMPOUND",
+     "metadata_equiv_status": "NONEQ",
+     "metadata_repair_ops": null,
+     "metadata_repair_status": "COMPOUND_EXHAUSTED",
+     "metadata_convention_flags": [
+      "ARITY_REIFY"
+     ],
+     "metadata_panel_votes": null,
+     "metadata_final_label": "UNRESOLVED",
+     "metadata_label_tier": "auto_only",
+     "metadata_label_source": "pending_panel",
+     "metadata_reading_choice": false,
+     "metadata_addrop_only_suspect": false,
+     "metadata_ambiguous_curated": true,
+     "metadata_reference_source": "curated_corrected_conclusion",
+     "metadata_strata": {
+      "words": 47,
+      "n_quant": 0,
+      "depth": 7,
+      "n_conditions": 2,
+      "exception_type": null
+     },
+     "metadata_join_keys": {
+      "system": "gpt-3.5-turbo",
+      "raw_text": "If Bonnie either chaperones high school dances or, if she does not, she performs in school talent shows often, then Bonnie is both a young child or teenager who wishes to further her academic career a...",
+      "normtext": "if bonnie either chaperones high school dances or if she does not she performs in school talent shows often then bonnie is both a young child or teenager who wishes to further her academic career and ...",
+      "raw_fol": "(Chaperone(bonnie) ∨ (¬Chaperone(bonnie) ∧ Perform(bonnie))) → (Wish(bonnie) ∧ Young(bonnie) ∧ Inactive(bonnie) ∧ Disinterested(bonnie))"
+     },
+     "metadata_class_id": "75b0bf13387a:c1",
+     "metadata_source_verified": true,
+     "metadata_source_file": "logiclm_FOLIO_dev_outputs/FOLIO_dev_gpt-3.5-turbo.json"
+    }
+   ]
+  }
+ ]
+}

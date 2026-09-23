@@ -1,0 +1,121 @@
+{
+ "counts": {
+  "heldout_candidates": 7307,
+  "heldout_sentences": 600,
+  "panel_calibration": 173,
+  "screen_audit": 1173
+ },
+ "heldout_final_label": {
+  "UNPARSEABLE": 859,
+  "CORRECT": 311,
+  "UNRESOLVED": 5128,
+  "ERROR": 1009
+ },
+ "heldout_tier": {
+  "-": 859,
+  "A_unaudited_ref": 1320,
+  "none": 5128
+ },
+ "testability": {
+  "L25": {
+   "provisional_strict_excl_addrop": {
+    "ERROR_rows": 39,
+    "ERROR_sents": 18,
+    "CORRECT_rows": 9,
+    "CORRECT_sents": 6,
+    "testable": false
+   },
+   "official_tierAB": {
+    "ERROR_rows": 0,
+    "ERROR_sents": 0,
+    "CORRECT_rows": 0,
+    "CORRECT_sents": 0,
+    "testable": false
+   },
+   "provisional_incl_unaudited_ref": {
+    "ERROR_rows": 131,
+    "ERROR_sents": 63,
+    "CORRECT_rows": 9,
+    "CORRECT_sents": 6,
+    "testable": false
+   }
+  },
+  "L20": {
+   "provisional_strict_excl_addrop": {
+    "ERROR_rows": 78,
+    "ERROR_sents": 35,
+    "CORRECT_rows": 33,
+    "CORRECT_sents": 20,
+    "testable": false
+   },
+   "official_tierAB": {
+    "ERROR_rows": 0,
+    "ERROR_sents": 0,
+    "CORRECT_rows": 0,
+    "CORRECT_sents": 0,
+    "testable": false
+   },
+   "provisional_incl_unaudited_ref": {
+    "ERROR_rows": 227,
+    "ERROR_sents": 81,
+    "CORRECT_rows": 33,
+    "CORRECT_sents": 20,
+    "testable": false
+   }
+  },
+  "EXC": {
+   "provisional_strict_excl_addrop": {
+    "ERROR_rows": 115,
+    "ERROR_sents": 46,
+    "CORRECT_rows": 76,
+    "CORRECT_sents": 25,
+    "testable": true
+   },
+   "official_tierAB": {
+    "ERROR_rows": 0,
+    "ERROR_sents": 0,
+    "CORRECT_rows": 0,
+    "CORRECT_sents": 0,
+    "testable": false
+   },
+   "provisional_incl_unaudited_ref": {
+    "ERROR_rows": 218,
+    "ERROR_sents": 64,
+    "CORRECT_rows": 76,
+    "CORRECT_sents": 25,
+    "testable": true
+   }
+  },
+  "CTRL": {
+   "provisional_strict_excl_addrop": {
+    "ERROR_rows": 113,
+    "ERROR_sents": 33,
+    "CORRECT_rows": 193,
+    "CORRECT_sents": 28,
+    "testable": true
+   },
+   "official_tierAB": {
+    "ERROR_rows": 0,
+    "ERROR_sents": 0,
+    "CORRECT_rows": 0,
+    "CORRECT_sents": 0,
+    "testable": false
+   },
+   "provisional_incl_unaudited_ref": {
+    "ERROR_rows": 433,
+    "ERROR_sents": 84,
+    "CORRECT_rows": 193,
+    "CORRECT_sents": 28,
+    "testable": true
+   }
+  }
+ },
+ "disguise_check": {
+  "sentences": 50,
+  "pairs": 932,
+  "mismatches": 0,
+  "z3_unknown_pairs": 0,
+  "passed": true
+ },
+ "cost_total_usd": 1.3927
+}

@@ -1,0 +1,45 @@
+{
+ "heldout_candidates": {
+  "rows": 7307,
+  "verified": 7307,
+  "unverified": 0,
+  "labels": {
+   "UNPARSEABLE": 859,
+   "CORRECT": 311,
+   "UNRESOLVED": 5128,
+   "ERROR": 1009
+  }
+ },
+ "heldout_sentences": {
+  "rows": 600,
+  "verified": 600,
+  "unverified": 0,
+  "labels": {
+   "UNAUDITED_AGREED_FOLIO": 150,
+   "UNAUDITED_MALLS_GPT4_GOLD": 450
+  }
+ },
+ "panel_calibration": {
+  "rows": 173,
+  "verified": 173,
+  "unverified": 0,
+  "labels": {
+   "UNFAITHFUL": 37,
+   "FAITHFUL": 40,
+   "ORIGINAL_UNFAITHFUL__CORRECTED_FAITHFUL": 96
+  }
+ },
+ "screen_audit": {
+  "rows": 1173,
+  "verified": 1173,
+  "unverified": 0,
+  "labels": {
+   "ERROR": 268,
+   "UNRESOLVED": 418,
+   "CORRECT": 347,
+   "UNPARSEABLE": 78,
+   "NO_REFERENCE": 60,
+   "CONTESTED": 2
+  }
+ }
+}

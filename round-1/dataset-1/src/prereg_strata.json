@@ -1,0 +1,121 @@
+{
+ "frozen_at_utc": "2026-09-23T13:11:04Z",
+ "frozen_before": "any candidate generation, labelling or metric run",
+ "strata": {
+  "EXC": "MALLS-train; all parseable unless/except/excluding/other-than items (sha1-ordered, cap 100), filled with 'without' then non-XOR 'but not' items with >=15 words",
+  "L25": ">=25 words and n_conditions>=3 (gold-derived nconds), even over word bins 25-29/30-34/>=35",
+  "L20": "20-24 words and n_conditions>=3, even over bins 20-21/22/23-24",
+  "CTRL": "FOLIO-v2-train premises where tasksource original gold \u2261 folio-refined (IDENTICAL_STRING/EQ/VOCAB/GRAN); reference = refined; bins <12/12-19/>=20 words; non-identical agreement preferred"
+ },
+ "counts": {
+  "EXC": 100,
+  "L25": 200,
+  "L20": 150,
+  "CTRL": 150
+ },
+ "exclusion": {
+  "hash_count": 2054,
+  "collisions_after_exclusion": 0
+ },
+ "testability_rule": "A stratum is TESTABLE only if, using tier A+B final labels only (CONTESTED excluded), it has >=50 ERROR rows AND >=50 CORRECT rows AND >=25 distinct sentences contributing ERROR rows AND >=25 distinct sentences contributing CORRECT rows. Declared per stratum after labelling, before any metric runs.",
+ "top_up_rule": "If after Step 3 the tier-A-projected ERROR or CORRECT count of L25 is below 60, generate one more sha1-ordered batch of 100 L25 sentences with the 5 cheapest generator slots, budget permitting.",
+ "testability_declaration": {
+  "declared_at_utc": "2026-09-23T14:40:11Z",
+  "declared_before_any_metric_run": true,
+  "per_stratum": {
+   "L25": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 39,
+     "ERROR_sents": 18,
+     "CORRECT_rows": 9,
+     "CORRECT_sents": 6,
+     "testable": false
+    },
+    "official_tierAB": {
+     "ERROR_rows": 0,
+     "ERROR_sents": 0,
+     "CORRECT_rows": 0,
+     "CORRECT_sents": 0,
+     "testable": false
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 131,
+     "ERROR_sents": 63,
+     "CORRECT_rows": 9,
+     "CORRECT_sents": 6,
+     "testable": false
+    }
+   },
+   "L20": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 78,
+     "ERROR_sents": 35,
+     "CORRECT_rows": 33,
+     "CORRECT_sents": 20,
+     "testable": false
+    },
+    "official_tierAB": {
+     "ERROR_rows": 0,
+     "ERROR_sents": 0,
+     "CORRECT_rows": 0,
+     "CORRECT_sents": 0,
+     "testable": false
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 227,
+     "ERROR_sents": 81,
+     "CORRECT_rows": 33,
+     "CORRECT_sents": 20,
+     "testable": false
+    }
+   },
+   "EXC": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 115,
+     "ERROR_sents": 46,
+     "CORRECT_rows": 76,
+     "CORRECT_sents": 25,
+     "testable": true
+    },
+    "official_tierAB": {
+     "ERROR_rows": 0,
+     "ERROR_sents": 0,
+     "CORRECT_rows": 0,
+     "CORRECT_sents": 0,
+     "testable": false
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 218,
+     "ERROR_sents": 64,
+     "CORRECT_rows": 76,
+     "CORRECT_sents": 25,
+     "testable": true
+    }
+   },
+   "CTRL": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 113,
+     "ERROR_sents": 33,
+     "CORRECT_rows": 193,
+     "CORRECT_sents": 28,
+     "testable": true
+    },
+    "official_tierAB": {
+     "ERROR_rows": 0,
+     "ERROR_sents": 0,
+     "CORRECT_rows": 0,
+     "CORRECT_sents": 0,
+     "testable": false
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 433,
+     "ERROR_sents": 84,
+     "CORRECT_rows": 193,
+     "CORRECT_sents": 28,
+     "testable": true
+    }
+   }
+  },
+  "status": "OFFICIAL tier A+B testability = FALSE for every stratum because the panel (gold audit + tier-B adjudication) was blocked by the shared OpenRouter key's daily limit. PROVISIONAL counts use solver-only tier A against UNAUDITED references (MALLS GPT-4 gold / agreed FOLIO refs). If the panel is later run (src/resume_panel.sh), re-run stats.py and this declaration is superseded."
+ }
+}
