@@ -2,91 +2,140 @@
 
 Workspace (absolute): `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1`
 
-This is the one-shot **confirmation** population for gold-free NL→FOL faithfulness metrics. Iteration 2 must not tune
-thresholds on it. It has 600 screen-disjoint sentences (MALLS-train L25/L20/EXC plus FOLIO-train CTRL). Each sentence has
-real candidates from 9 LLM families, a zero-shot variant, a frontier model, ccg2lambda and the MALLS GPT-4 gold, labelled by
-the shared solver labeller.
+This is the one-shot **confirmation** population for gold-free NL→FOL faithfulness metrics. **Iteration 2 must not tune any
+threshold on it.**
+- 700 screen-disjoint sentences:
+  - MALLS-train L25 (300, including a pre-registered 100-sentence top-up), L20 (150) and EXC (100);
+  - FOLIO-train CTRL (150).
+- 8,507 real candidate rows. They come from 9 LLM families (10 few-shot slots), 2 zero-shot variants, the frontier model
+  GPT-5.1 on 200 sentences, ccg2lambda, and the MALLS GPT-4 gold treated as a system.
+- Each row is labelled by the shared solver labeller (`labeller/`, the ⊕-precedence-fixed iter-3 code) and by a blind,
+  disguised, family-disjoint LLM panel: Haiku-4.5 / GLM-4.6 / Kimi-K2. The panel passed a known-label gate, and its
+  accuracy on real errors is measured against expert corrections.
+- The panel also audits every reference, and wrong MALLS references were repaired by panel agreement where possible.
+- The rebuilt shared screen (Logic-LM track L + curated track H) is included, keyed by the screen's exact `item_id`.
 
-It also contains the rebuilt shared screen (Logic-LM track L + curated track H), keyed by the screen's exact `item_id`, and
-the panel calibration material.
+**Read `dataset_card.md` first.** It holds every data-quality statistic, the label rule verbatim, the panel calibration and
+the known biases.
 
-**Read `dataset_card.md` first.**
+## Headline numbers
+- Final labels (held-out rows): `{"UNPARSEABLE": 1086, "CORRECT": 1750, "ERROR": 5005, "UNRESOLVED": 276, "CONTESTED": 390}`. Tiers: `{"-": 1086, "A": 1044, "B": 2157, "C": 3891, "none": 276, "A_unaudited_ref": 53}`.
+- Testability (LLM rows, tiers A+B, CONTESTED and reading_choice excluded; each cell is rows (distinct sentences)):
 
-The LLM panel stage (gold audit + tier-B adjudication + track-H real-error check + screen audit) was **blocked**: the OpenRouter
-key is shared across runs and has a $50/day limit, which other runs exhausted at 13:29 UTC. In this release:
-- CORRECT/ERROR labels are solver-only, against an unaudited reference (tier `A_unaudited_ref`);
-- every row the solver cannot settle is `UNRESOLVED`.
+| stratum | CORRECT A+B | ERROR A+B | testable | CORRECT tier A | ERROR tier A |
+|---|---|---|---|---|---|
+| L25 | 176 (78) | 697 (107) | yes | 40 (25) | 98 (46) |
+| L25_orig200 | 141 (54) | 567 (70) | yes | 34 (19) | 73 (30) |
+| L25_topup100 | 35 (24) | 130 (37) | no | 6 (6) | 25 (16) |
+| L20 | 229 (65) | 592 (79) | yes | 64 (33) | 132 (51) |
+| EXC | 222 (55) | 384 (63) | yes | 124 (38) | 129 (48) |
+| CTRL | 237 (31) | 149 (28) | yes | 186 (20) | 94 (15) |
 
-`src/resume_panel.sh` completes those steps (they are resumable and cached) once the key has credit again.
+- Panel: its majority accuracy on the 75 unambiguous expert-corrected real-error pairs is 0.727. It
+  accepts only 0.613 of the expert-corrected formulas, so it is STRICT.
+  - The reference audit rejects 440/535 MALLS golds and
+    112/148 CTRL references. Part of this is likely panel over-strictness
+    (card §0 and §7).
+  - Cohen κ between GLM and Kimi is 0.5133; the
+    3-rater Fleiss κ on the pilot is 0.5391.
+- Solver labeller vs panel majority: error precision 0.7879, error recall
+  0.8363.
+- OpenRouter spend: $9.833, still under the $10 artifact budget. The plan cap was $9.50; it was raised to
+  $9.80 for the last repair and adjudication calls, and one batch overshot. See card §0.
 
 ## Deliverables
 | Path | What |
 |---|---|
-| `data.py` | `uv run data.py`: builds the dataset from `work/assembled.json`, re-verifies EVERY row against the sources symlinked in `temp/datasets/` (`metadata_source_verified`: 9,253/9,253 true), writes the files below |
-| `full_data_out.json` | **THE DATASET** (aii-json `exp_sel_data_out`, single file, 26.6 MB, under the 100 MB limit). Groups: `heldout_candidates` (7,307), `heldout_sentences` (600), `panel_calibration` (173), `screen_audit` (1,173). Absolute path: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json` |
-| `mini_data_out.json`, `preview_data_out.json` | First 3 rows per group; preview truncates strings to 200 chars |
-| `screen_adjudicated_labels.json` | `{item_id: {track, system, auto_label, repair_ops, panel_votes, final_label, label_tier, reading_choice, join_keys, ...}}` for the screen (absolute path: workspace + `/screen_adjudicated_labels.json`) |
-| `prereg_strata.json` | Strata definitions, counts and exclusion counts (frozen at selection, before any generation). The testability declaration was added after labelling, before any metric run |
-| `dataset_card.md` | Data-quality statistics, label rule, gate tables, deviations, licences |
+| `full_data_out.json` | **THE DATASET** (aii-json `exp_sel_data_out`, validated; 27.7 MB, one file). Groups: `heldout_candidates` (8,507), `heldout_sentences` (700), `panel_calibration` (173), `screen_audit` (1,173). Absolute path: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json` |
+| `mini_data_out.json`, `preview_data_out.json` | First 3 rows per group; the preview truncates strings to 200 chars |
+| `screen_adjudicated_labels.json` | `{item_id: {track, system, auto_label, repair_ops, panel_votes, final_label, label_tier, reading_choice, join_keys, ...}}` for the screen. Absolute path: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/screen_adjudicated_labels.json` |
+| `prereg_strata.json` | Strata definitions and exclusion counts (frozen at selection), the L25 top-up execution record, and the testability declaration (`testability_declaration.primary_pool`, made before any metric run) |
+| `dataset_card.md` | Data-quality statistics, the label rule, gate and real-error tables, deviations, licences |
 | `work/label_report.json` | Every statistic in the card, machine-readable |
-| `cost_ledger.jsonl` | One line per OpenRouter call (phase, model, tokens, usage.cost) |
+| `cost_ledger.jsonl` | One line per OpenRouter call: phase, model, tokens, usage.cost |
+| `data.py` | `uv run data.py` builds `full_data_out.json` from `work/assembled.json` and re-verifies EVERY row against the sources in `temp/datasets/`. Result: `metadata_source_verified` is true for 10,553/10,553 rows |
 
-Row format: `input` = JSON string `{text, candidate_fol, reference_fol, system, prompt_variant}`; `output` = final label
-(`CORRECT` / `ERROR` / `CONTESTED` / `UNRESOLVED` / `UNPARSEABLE`).
+Row format:
+- `input` is a JSON string `{text, candidate_fol, reference_fol, system, prompt_variant}`.
+- `output` is the final label: `CORRECT` / `ERROR` / `CONTESTED` / `UNRESOLVED` / `UNPARSEABLE`. Sentence rows carry the
+  reference status instead.
 
 Key `metadata_*` fields:
-- `item_id`, `sentence_id`, `system`, `slot`, `family`, `system_class`, `raw_output`, `normalisation_applied`;
-- `auto_label`, `equiv_status`, `repair_ops`, `repair_status`, `convention_flags`;
-- `panel_votes`, `error_ops`, `label_tier`, `label_source`, `solver_lenient_label` (sensitivity only);
-- `correct_not_equivalent`, `reading_choice`, `gold_audit_flag`, `reference_status`;
-- `strata` {words, n_quant, depth, n_conditions, text_conditions, exception_type, source_stratum, ctrl_len_bin};
+- identity: `item_id` (sha1(system|norm(text)|raw_output)[:16], the screen recipe), `sentence_id`, `system`, `slot`,
+  `family`, `system_class`, `prompt_variant`, `raw_output`, `normalisation_applied`;
+- solver: `auto_label`, `equiv_status`, `repair_ops`, `repair_status`, `convention_flags`;
+- panel: `panel_votes` (per model: faithful, ops, conf), `panel_item`, `panel_ambiguous`, `panel_scope`;
+- final label: `error_ops`, `label_tier` (A / B / C / A_unaudited_ref / none / -), `label_source`, `correct_not_equivalent`,
+  `reading_choice`, `addrop_only_suspect`;
+- reference: `gold_audit_flag`, `reference_status`;
+- `strata` {words, n_quant, depth, n_conditions, text_conditions, exception_type, source_stratum, ctrl_len_bin,
+  l25_topup_batch};
 - `disguised_text`, `disguised_fol`, `class_id`, `class_size`, `cost_usd`.
 
-The held-out `item_id` = sha1(system|norm(text)|raw_output.strip())[:16], using the screen's norm.
+**Primary analysis**: tiers A+B, excluding CONTESTED and reading_choice rows. Bootstraps must resample by `sentence_id`.
+**Robustness**: tier A only. **Secondary**: tier C (panel-only labels for sentences without a trusted reference).
 
 ## Layout
 - `labeller/`: the shared labeller.
-  - `fol.py`: the iter-3 parser with the ⊕ precedence fix and the `<->` tokenisation fix.
-  - `repair_census.py`: verbatim, with the data path repointed.
+  - `fol.py`: the iter-3 parser with the ⊕-precedence and `<->` fixes.
+  - `repair_census.py`.
   - `label_lib.py`: `equivalent_modulo_vocab`, `minimal_typed_repair`, `convention_flags`, `auto_label`.
   - `disguise.py`: the nonce disguise.
-  - `complexity_counts.py`, `lint_smells.py`: copied for reference; L1 lint is NOT run here.
-- `src/`: pipeline scripts (below). `tests/test_fol.py`: parser regression tests.
-- `prompts/`:
-  - `fewshot_v1.txt` (sha1 a1c7ae39…): the frozen generation prompt;
-  - `zeroshot_v1.txt`: the same prompt without exemplars.
-- `raw/`:
-  - `generations.jsonl`: all generator API outputs, irreproducible;
+  - `complexity_counts.py`, `lint_smells.py`: reference copies; L1 lint is NOT run.
+- `src/`: pipeline scripts.
+  - `select_sentences.py`, `select_topup.py`: sentence selection and the L25 top-up.
+  - `generate.py`, `ccg2lambda_candidates.py`, `normalise.py`: candidate generation and normalisation.
+  - `screen.py`: the screen rebuild.
+  - `run_label.py`, `label_worker.py`, `extend_labels.py`: solver labelling; `extend_labels.py` adds new rows without
+    renumbering classes.
+  - `calibration.py`, `gate.py`: the gate and track H.
+  - `panel.py`, `panel_run.py`: the panel, including the `--adjudicate`, `--ctrl-reduced` and `--vg-only` modes.
+  - `screen_scope.py`, `repair_refs.py`.
+  - `assemble.py`, `stats.py`, `card.py`: the final label rule, the statistics and the card.
+  - `or_client.py`: an async OpenRouter client with a cost ledger and budget stops.
+  - `resume_panel.sh`: the LLM steps in the order they were executed.
+- `tests/test_fol.py`: parser regression tests.
+- `prompts/`: `fewshot_v1.txt` (the frozen generation prompt) and `zeroshot_v1.txt`.
+- `raw/` (irreproducible API outputs, keep):
+  - `generations.jsonl`: all generator outputs; the later of duplicate keys wins;
+  - `reference_repair.jsonl`: the panel-written references;
   - `ccg2lambda_candidates.jsonl`;
-  - `logiclm/`: Logic-LM FOLIO_dev outputs;
+  - `logiclm/`;
   - `hf/`: HF downloads.
 - `work/`:
-  - `sentences.json`, `calib_sentences.json`, `fewshot_exemplars.json`, `exclusion_log.json`;
-  - `labels_heldout.jsonl` and `labels_screen.jsonl`: per-sentence class collapse and labels;
-  - `screen_items.json`, `screen_meta.json`, `calibration_items.json`;
-  - `gate_results*.json`, `panel_cache.jsonl` (every panel response), `trackh_panel_rows.json`;
-  - `models_snapshot.json`, `generation_manifest.json`, `assembled.json`, `label_report.json`.
+  - `sentences.json` (700 rows), `sentences_topup.json`, `sentences_600_before_topup.json`;
+  - `labels_heldout.jsonl`, `labels_heldout_repaired.jsonl`, `labels_screen.jsonl`: per-sentence classes and labels;
+  - `panel_cache.jsonl`: every panel response;
+  - `panel_heldout.jsonl` and `panel_heldout_adj.jsonl`: stage 1, and the Haiku adjudication;
+  - `panel_screen.jsonl`, `panel_screen_vg.jsonl`;
+  - `reference_overrides.json`, `no_trusted_reference.json`;
+  - `gate_results.json` (synthetic gate + track H), `trackh_panel_rows.json`;
+  - `assembled.json`, `label_report.json`;
+  - backups of the pre-panel versions: `*_v1_blocked.py.txt`, `labels_heldout.jsonl.bak_before_extend`.
 - `data_local/`: read-only copies of the iter-3 source files (MALLS-v0.1, folio-refined, DSAVlab curated).
+- `temp/datasets/`: symlinks to every source used by `data.py`. No external dataset search was needed: the plan fixes all
+  sources.
 
-## How to rerun (each step is resumable from its jsonl)
+## How to rerun (each step is resumable; the panel cache never re-bills)
 ```
-uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python z3-solver nltk aiohttp loguru huggingface_hub numpy scipy requests pytest pandas pyarrow
-.venv/bin/python -m pytest -q -c pytest.ini tests/test_fol.py     # step 0b regression
-.venv/bin/python src/select_sentences.py                          # step 1 (deterministic; the 6 exemplars were then hand-picked, see card §9)
-.venv/bin/python src/generate.py --limit 12 && .venv/bin/python src/generate.py --cap 3.5   # step 2 pilot + sweep
-.venv/bin/python src/ccg2lambda_candidates.py                     # step 2d
-.venv/bin/python src/screen.py                                    # step 6a
-.venv/bin/python src/run_label.py --kind heldout --budget 8       # step 3 (~50 min on 4 CPUs)
-.venv/bin/python src/run_label.py --kind screen --budget 8        # step 6b auto labels
-.venv/bin/python src/calibration.py && .venv/bin/python src/gate.py --mode synthetic --members P1,P2,P3,R1 --cap 0.45   # step 4a/4b
-bash src/resume_panel.sh                                          # steps 4c, 5b-5e, 6b panel (pending: needs key credit)
-.venv/bin/python src/assemble.py && .venv/bin/python src/stats.py && .venv/bin/python src/card.py && uv run data.py   # step 7
+uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python -r pyproject.toml
+.venv/bin/python -m pytest -q -c pytest.ini tests/test_fol.py                   # step 0b regression
+.venv/bin/python src/select_sentences.py                                        # step 1 (the 6 exemplars were hand-picked, card §10)
+.venv/bin/python src/generate.py --limit 12 && .venv/bin/python src/generate.py --cap 3.5   # step 2
+.venv/bin/python src/ccg2lambda_candidates.py && .venv/bin/python src/screen.py             # step 2d, 6a
+.venv/bin/python src/run_label.py --kind heldout --budget 8 && .venv/bin/python src/run_label.py --kind screen --budget 8   # step 3
+.venv/bin/python src/calibration.py && .venv/bin/python src/gate.py --mode synthetic --members P1,P2,P3,R1 --cap 0.45       # step 4a/4b
+bash src/resume_panel.sh    # 4c, top-up, 5b-5e, 6b, then assemble -> stats -> card -> data.py
 ```
+OpenRouter needs `OPENROUTER_API_KEY`. `AII_HARD_CAP` (default 9.50) is the cumulative-spend stop.
 
 ## Restoring removed files
-- `.venv/`: regenerable. `uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python -r pyproject.toml`
-- `nltk_data/`: redownloadable. `.venv/bin/python -c "import nltk; [nltk.download(p, download_dir='nltk_data') for p in ('wordnet','omw-1.4')]"`
-- `raw/hf/`: redownloadable. `.venv/bin/python -c "from huggingface_hub import hf_hub_download as d; [d('tasksource/folio', f, repo_type='dataset', local_dir='raw/hf/tasksource__folio') for f in ('folio_v2_train.jsonl','folio_v2_validation.jsonl')]; [d('kenken6696/folio_by_ccg2lambda', f, repo_type='dataset', local_dir='raw/hf/kenken6696__folio_by_ccg2lambda') for f in ('data/train-00000-of-00001.parquet','data/valid-00000-of-00001.parquet')]"`
-  (`temp/datasets/` symlinks point into it.)
-- `__pycache__/`, `src/__pycache__/`, `tests/__pycache__/`, `labeller/__pycache__/`: regenerable Python bytecode, recreated on import.
-- `.pytest_cache/`: regenerable. `.venv/bin/python -m pytest -q -c pytest.ini tests/test_fol.py`
+- `.venv/` (regenerable): `uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python -r pyproject.toml`
+- `nltk_data/` (redownloadable):
+  `.venv/bin/python -c "import nltk; [nltk.download(p, download_dir='nltk_data') for p in ('wordnet','omw-1.4')]"`
+- `raw/hf/` (redownloadable):
+  `.venv/bin/python -c "from huggingface_hub import hf_hub_download as d; [d('tasksource/folio', f, repo_type='dataset', local_dir='raw/hf/tasksource__folio') for f in ('folio_v2_train.jsonl','folio_v2_validation.jsonl')]; [d('kenken6696/folio_by_ccg2lambda', f, repo_type='dataset', local_dir='raw/hf/kenken6696__folio_by_ccg2lambda') for f in ('data/train-00000-of-00001.parquet','data/valid-00000-of-00001.parquet')]"`.
+  The `temp/datasets/` symlinks point into it.
+- `__pycache__/`, `src/__pycache__/`, `tests/__pycache__/`, `labeller/__pycache__/` (regenerable): Python bytecode,
+  recreated on import.
+- `.pytest_cache/` (regenerable): `.venv/bin/python -m pytest -q -c pytest.ini tests/test_fol.py`

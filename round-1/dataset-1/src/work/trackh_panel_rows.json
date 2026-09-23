@@ -378,6 +378,15 @@
      "SWAP"
     ],
     "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP",
+     "DROP"
+    ],
+    "ambiguous": false
    }
   },
   "majority_orig_faithful": false,
@@ -400,6 +409,21 @@
      "DROP"
     ],
     "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "RESTR"
+    ],
+    "ambiguous": false
    }
   },
   "majority_orig_faithful": false,
@@ -414,9 +438,39 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "MOVE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "37",
@@ -427,9 +481,31 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "38",
@@ -440,9 +516,40 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "DROP",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "SWAP",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "39",
@@ -453,9 +560,37 @@
   "ambiguous": false,
   "census_cls": "CONN+NEG",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "40",
@@ -466,9 +601,36 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "42",
@@ -479,9 +641,30 @@
   "ambiguous": false,
   "census_cls": "ADD",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "43",
@@ -492,9 +675,36 @@
   "ambiguous": false,
   "census_cls": "RESTR",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "55",
@@ -505,9 +715,34 @@
   "ambiguous": true,
   "census_cls": "CONN+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "56",
@@ -518,9 +753,38 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV",
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "60",
@@ -531,9 +795,34 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "61",
@@ -544,9 +833,38 @@
   "ambiguous": false,
   "census_cls": "UNGLUE",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "UNGLUE",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "62",
@@ -557,9 +875,33 @@
   "ambiguous": true,
   "census_cls": "ADD+ADD",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "65",
@@ -570,9 +912,34 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "66",
@@ -583,9 +950,36 @@
   "ambiguous": true,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "67",
@@ -596,9 +990,34 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "68",
@@ -609,9 +1028,34 @@
   "ambiguous": true,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "71",
@@ -622,9 +1066,28 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "72",
@@ -635,9 +1098,38 @@
   "ambiguous": true,
   "census_cls": "CONN+NEG",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "74",
@@ -648,9 +1140,33 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "81",
@@ -661,9 +1177,34 @@
   "ambiguous": false,
   "census_cls": "UNGLUE",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "UNGLUE",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "83",
@@ -674,9 +1215,40 @@
   "ambiguous": false,
   "census_cls": "CONN+UNGLUE",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "CONN",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN",
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "85",
@@ -687,9 +1259,40 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SCOPE",
+     "NEG"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SCOPE",
+     "BIND",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "SCOPE",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "86",
@@ -700,9 +1303,35 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "MOVE"
+    ],
+    "ambiguous": true
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "88",
@@ -713,9 +1342,33 @@
   "ambiguous": false,
   "census_cls": "UNGLUE",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "92",
@@ -726,9 +1379,37 @@
   "ambiguous": false,
   "census_cls": "UNGLUE",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "93",
@@ -739,9 +1420,33 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "MOVE",
+     "ADD"
+    ],
+    "ambiguous": true
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "94",
@@ -752,9 +1457,32 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "MOVE",
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "95",
@@ -765,9 +1493,35 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "QUANT"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "96",
@@ -778,9 +1532,34 @@
   "ambiguous": true,
   "census_cls": "ADD",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "100",
@@ -791,9 +1570,38 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "REV",
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_380_1",
@@ -804,9 +1612,36 @@
   "ambiguous": false,
   "census_cls": "DROP",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_426_6",
@@ -817,9 +1652,40 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "MOVE",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "CONN",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_198_9",
@@ -830,9 +1696,34 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_20_13",
@@ -843,9 +1734,35 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_20_15",
@@ -856,9 +1773,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_232_25",
@@ -869,9 +1811,32 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_340_31",
@@ -882,9 +1847,32 @@
   "ambiguous": false,
   "census_cls": "DROP",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_340_32",
@@ -895,9 +1883,35 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_340_33",
@@ -908,9 +1922,35 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_96_34",
@@ -921,9 +1961,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_96_35",
@@ -934,9 +1999,36 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_96_36",
@@ -947,9 +2039,36 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "BIND",
+     "NEG"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_79_57",
@@ -960,9 +2079,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_2_58",
@@ -973,9 +2117,32 @@
   "ambiguous": false,
   "census_cls": "ADD",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_2_59",
@@ -986,9 +2153,38 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_234_67",
@@ -999,9 +2195,36 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "BIND",
+     "QUANT",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_234_68",
@@ -1012,9 +2235,28 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_120_70",
@@ -1025,9 +2267,28 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_322_72",
@@ -1038,9 +2299,39 @@
   "ambiguous": false,
   "census_cls": "ADD+NEG",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_322_73",
@@ -1051,9 +2342,40 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_83_74",
@@ -1064,9 +2386,28 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_368_77",
@@ -1077,9 +2418,38 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_368_78",
@@ -1090,9 +2460,29 @@
   "ambiguous": false,
   "census_cls": "ADD+CONN",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_306_85",
@@ -1103,9 +2493,41 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP",
+     "ADD",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_245_87",
@@ -1116,9 +2538,28 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_58_88",
@@ -1129,9 +2570,37 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_58_90",
@@ -1142,9 +2611,30 @@
   "ambiguous": true,
   "census_cls": "GRAN",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_472_101",
@@ -1155,9 +2645,40 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_379_102",
@@ -1168,9 +2689,37 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_379_104",
@@ -1181,9 +2730,31 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_197_105",
@@ -1194,9 +2765,39 @@
   "ambiguous": false,
   "census_cls": "SWAP",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_197_107",
@@ -1207,9 +2808,39 @@
   "ambiguous": false,
   "census_cls": "SWAP",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_361_109",
@@ -1220,9 +2851,28 @@
   "ambiguous": true,
   "census_cls": "ADD+CONN",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_361_110",
@@ -1233,9 +2883,28 @@
   "ambiguous": false,
   "census_cls": "ADD",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_183_115",
@@ -1246,9 +2915,34 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_151_119",
@@ -1259,9 +2953,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_315_122",
@@ -1272,9 +2991,28 @@
   "ambiguous": false,
   "census_cls": "ADD",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_315_124",
@@ -1285,9 +3023,28 @@
   "ambiguous": false,
   "census_cls": "CONN+NEG",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_330_128",
@@ -1298,9 +3055,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_203_137",
@@ -1311,9 +3093,35 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_460_140",
@@ -1324,9 +3132,34 @@
   "ambiguous": false,
   "census_cls": "BIND",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_460_141",
@@ -1337,9 +3170,32 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "DROP",
+     "BIND",
+     "RESTR"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_460_142",
@@ -1350,9 +3206,33 @@
   "ambiguous": true,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND",
+     "OTHER"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "CONN",
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_483_145",
@@ -1363,9 +3243,32 @@
   "ambiguous": false,
   "census_cls": "DROP",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_483_146",
@@ -1376,9 +3279,32 @@
   "ambiguous": false,
   "census_cls": "DROP",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_217_161",
@@ -1389,9 +3315,36 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_217_162",
@@ -1402,9 +3355,36 @@
   "ambiguous": false,
   "census_cls": "REV",
   "census_class": "single-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "REV",
+     "NEG"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "REV"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_318_164",
@@ -1415,9 +3395,39 @@
   "ambiguous": false,
   "census_cls": "ADD+DROP",
   "census_class": "two-op",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_318_165",
@@ -1428,9 +3438,33 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "ADD",
+     "SWAP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_318_166",
@@ -1441,9 +3475,37 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "SCOPE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "ADD",
+     "RESTR",
+     "BIND",
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_51_177",
@@ -1454,9 +3516,31 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
  },
  {
   "id": "concl_64_185",
@@ -1467,9 +3551,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_64_186",
@@ -1480,9 +3589,32 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_64_187",
@@ -1493,9 +3625,34 @@
   "ambiguous": false,
   "census_cls": "VOCAB",
   "census_class": "VOCAB_GRAN",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  },
  {
   "id": "concl_140_195",
@@ -1506,8 +3663,34 @@
   "ambiguous": false,
   "census_cls": "COMPOUND",
   "census_class": "COMPOUND",
-  "votes": {},
-  "majority_orig_faithful": null,
-  "majority_corr_faithful": null
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
  }
 ]

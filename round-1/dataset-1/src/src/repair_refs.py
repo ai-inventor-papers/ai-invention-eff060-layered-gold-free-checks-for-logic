@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "labeller"))
 sys.setrecursionlimit(10000)
-from or_client import Client  # noqa: E402
+from or_client import BudgetExceeded, Client  # noqa: E402
 from panel import MEMBERS  # noqa: E402
 from normalise import normalise  # noqa: E402
 from fol import parse  # noqa: E402
@@ -31,10 +31,17 @@ OUT = ROOT / "raw" / "reference_repair.jsonl"
 
 def gold_wrong_ids() -> list[str]:
     ids = []
+    adj = {}
+    p = ROOT / "work" / "panel_heldout_adj.jsonl"
+    if p.exists():  # third member's votes on the two raters' disagreements
+        for line in open(p):
+            a = json.loads(line)
+            for cid, v in a["votes"].items():
+                adj.setdefault(cid, {})[a["member"]] = v
     for line in open(ROOT / "work" / "panel_heldout.jsonl"):
         r = json.loads(line)
         sid = r["sentence_id"]
-        v = {m: x for m, x in r["votes"].get(f"{sid}:c0", {}).items() if m in PANEL}
+        v = {m: x for m, x in {**r["votes"].get(f"{sid}:c0", {}), **adj.get(f"{sid}:c0", {})}.items() if m in PANEL}
         if len(v) >= 2 and sum(not x["faithful"] for x in v.values()) >= 2:
             ids.append(sid)
     sents = {s["sentence_id"]: s for s in json.loads((ROOT / "work" / "sentences.json").read_text())}
@@ -51,12 +58,35 @@ async def main(cap: float = 0.6):
             msgs = [{"role": "system", "content": prompt["system"]}] + prompt["exemplars"] + \
                    [{"role": "user", "content": prompt["user_template"].format(sentence=sents[sid]["text"])}]
             cfg = MEMBERS[m]
-            r = await client.chat(cfg["model"], msgs, tag=f"repair:{m}:{sid}", retries=2, **{**cfg["params"], "max_tokens": 600})
+            try:
+                r = await client.chat(cfg["model"], msgs, tag=f"repair:{m}:{sid}", retries=2, **{**cfg["params"], "max_tokens": 600})
+            except BudgetExceeded as e:
+                print(f"budget: {e}")
+                return
             with open(OUT, "a", encoding="utf-8") as f:
                 f.write(json.dumps({"sentence_id": sid, "member": m, "raw": r["text"], "error": r["error"], "cost_usd": r["cost_usd"]}, ensure_ascii=False) + "\n")
-        await asyncio.gather(*[one(s, m) for s in ids for m in PANEL if (s, m) not in done])
+        # sequential agreement (budget): the two cheaper members first; P1 only where they are not mutually equivalent
+        await asyncio.gather(*[one(s, m) for s in ids for m in ("P3", "R1") if (s, m) not in done])
+        first = {}
+        for line in (open(OUT) if OUT.exists() else []):
+            r = json.loads(line)
+            if r["raw"]:
+                first.setdefault(r["sentence_id"], {})[r["member"]] = normalise(r["raw"])[0]
+        need = []
+        for sid in ids:
+            f = first.get(sid, {})
+            ok = False
+            if "P3" in f and "R1" in f:
+                try:
+                    ok = equivalent_modulo_vocab(parse(f["P3"]), parse(f["R1"])) in ("EQ", "VOCAB", "GRAN")
+                except Exception:  # noqa: BLE001
+                    ok = False
+            if not ok and (sid, "P1") not in done:
+                need.append(sid)
+        print(f"P3/R1 agree on {len(ids) - len(need)} of {len(ids)}; P1 called for {len(need)}")
+        await asyncio.gather(*[one(s, "P1") for s in need])
     by = {}
-    for line in open(OUT):
+    for line in (open(OUT) if OUT.exists() else []):
         r = json.loads(line)
         if r["raw"]:
             by.setdefault(r["sentence_id"], {})[r["member"]] = normalise(r["raw"])[0]

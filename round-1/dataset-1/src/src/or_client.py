@@ -21,7 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "cost_ledger.jsonl"
 CATALOG = ROOT / "work" / "models_snapshot.json"
 URL = "https://openrouter.ai/api/v1/chat/completions"
-HARD_CAP_USD = 9.50
+# plan cap $9.50; raised to $9.80 (env AII_HARD_CAP) for the final repair + adjudication remainder, still under the
+# artifact's absolute $10 budget with >= $0.20 margin for in-flight calls (<= concurrency x ~$0.003)
+HARD_CAP_USD = float(os.environ.get("AII_HARD_CAP", "9.50"))
 
 
 class BudgetExceeded(RuntimeError):
@@ -97,14 +99,15 @@ class Client:
     async def chat(self, model: str, messages: list[dict], *, tag: str = "", retries: int = 3,
                    **params) -> dict:
         """Returns {text, reasoning, usage, cost_usd, provider, seconds, error}."""
-        if self.spent_total >= HARD_CAP_USD:
-            raise BudgetExceeded(f"hard cap reached: ${self.spent_total:.3f}")
-        if self.spent_phase >= self.phase_cap:
-            raise BudgetExceeded(f"phase {self.phase} cap reached: ${self.spent_phase:.3f}")
         body = {"model": model, "messages": messages, "usage": {"include": True}, **params}
         headers = {"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"}
         last_err = ""
         async with self.sem:
+            # budget checked INSIDE the semaphore: at most `concurrency` calls can be in flight past the cap
+            if self.spent_total >= HARD_CAP_USD:
+                raise BudgetExceeded(f"hard cap reached: ${self.spent_total:.3f}")
+            if self.spent_phase >= self.phase_cap:
+                raise BudgetExceeded(f"phase {self.phase} cap reached: ${self.spent_phase:.3f}")
             for attempt in range(retries):
                 t0 = time.time()
                 try:

@@ -76,7 +76,7 @@ def load_cache() -> dict:
         for line in CACHE.read_text().splitlines():
             if line.strip():
                 r = json.loads(line)
-                if r.get("parsed") is not None:
+                if r.get("parsed"):  # failed calls (parsed=False) are retried, never served from cache
                     out[r["key"]] = r
     return out
 

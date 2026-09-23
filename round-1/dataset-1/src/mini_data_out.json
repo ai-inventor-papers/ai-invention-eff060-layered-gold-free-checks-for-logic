@@ -9,23 +9,29 @@
     },
     "source_verification": {
       "heldout_candidates": {
-        "rows": 7307,
-        "verified": 7307,
+        "rows": 8507,
+        "verified": 8507,
         "unverified": 0,
         "labels": {
-          "UNPARSEABLE": 859,
-          "CORRECT": 311,
-          "UNRESOLVED": 5128,
-          "ERROR": 1009
+          "UNPARSEABLE": 1086,
+          "CORRECT": 1750,
+          "ERROR": 5005,
+          "UNRESOLVED": 276,
+          "CONTESTED": 390
         }
       },
       "heldout_sentences": {
-        "rows": 600,
-        "verified": 600,
+        "rows": 700,
+        "verified": 700,
         "unverified": 0,
         "labels": {
-          "UNAUDITED_AGREED_FOLIO": 150,
-          "UNAUDITED_MALLS_GPT4_GOLD": 450
+          "TRUSTED_AGREED": 36,
+          "NO_TRUSTED_REFERENCE": 295,
+          "DISPUTED_REFERENCE": 112,
+          "PANEL_REPAIRED": 145,
+          "GOLD_PANEL_OK": 95,
+          "UNAUDITED_MALLS_GPT4_GOLD": 15,
+          "UNAUDITED_AGREED_FOLIO": 2
         }
       },
       "panel_calibration": {
@@ -43,12 +49,12 @@
         "verified": 1173,
         "unverified": 0,
         "labels": {
-          "ERROR": 268,
-          "UNRESOLVED": 418,
-          "CORRECT": 347,
+          "ERROR": 540,
+          "CORRECT": 473,
           "UNPARSEABLE": 78,
           "NO_REFERENCE": 60,
-          "CONTESTED": 2
+          "CONTESTED": 21,
+          "UNRESOLVED": 1
         }
       }
     },
@@ -80,6 +86,13 @@
           "metadata_repair_status": null,
           "metadata_convention_flags": null,
           "metadata_panel_votes": null,
+          "metadata_panel_item": "0000c2274e80:c1",
+          "metadata_panel_ambiguous": {
+            "P1": false,
+            "P3": false,
+            "R1": false
+          },
+          "metadata_panel_scope": "ctrl_reduced_uncertain_only",
           "metadata_final_label": "UNPARSEABLE",
           "metadata_error_ops": null,
           "metadata_label_tier": "-",
@@ -88,8 +101,8 @@
           "metadata_solver_lenient_label": "UNPARSEABLE",
           "metadata_correct_not_equivalent": false,
           "metadata_reading_choice": false,
-          "metadata_gold_audit_flag": "PENDING",
-          "metadata_reference_status": "UNAUDITED_AGREED_FOLIO",
+          "metadata_gold_audit_flag": "FAITHFUL",
+          "metadata_reference_status": "TRUSTED_AGREED",
           "metadata_strata": {
             "words": 7,
             "n_quant": 1,
@@ -98,7 +111,8 @@
             "text_conditions": 1,
             "exception_type": null,
             "source_stratum": "CTRL",
-            "ctrl_len_bin": "0-11"
+            "ctrl_len_bin": "0-11",
+            "l25_topup_batch": false
           },
           "metadata_disguised_text": "When babobing is gunining, it is milup.",
           "metadata_disguised_fol": null,
@@ -131,17 +145,40 @@
           "metadata_repair_ops": null,
           "metadata_repair_status": null,
           "metadata_convention_flags": null,
-          "metadata_panel_votes": null,
+          "metadata_panel_votes": {
+            "P1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "P3": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "R1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            }
+          },
+          "metadata_panel_item": "0000c2274e80:c0",
+          "metadata_panel_ambiguous": {
+            "P1": false,
+            "P3": false,
+            "R1": false
+          },
+          "metadata_panel_scope": "ctrl_reduced_uncertain_only",
           "metadata_final_label": "CORRECT",
           "metadata_error_ops": null,
-          "metadata_label_tier": "A_unaudited_ref",
+          "metadata_label_tier": "A",
           "metadata_label_source": "solver",
           "metadata_addrop_only_suspect": false,
           "metadata_solver_lenient_label": "CORRECT",
           "metadata_correct_not_equivalent": false,
           "metadata_reading_choice": false,
-          "metadata_gold_audit_flag": "PENDING",
-          "metadata_reference_status": "UNAUDITED_AGREED_FOLIO",
+          "metadata_gold_audit_flag": "FAITHFUL",
+          "metadata_reference_status": "TRUSTED_AGREED",
           "metadata_strata": {
             "words": 7,
             "n_quant": 1,
@@ -150,12 +187,13 @@
             "text_conditions": 1,
             "exception_type": null,
             "source_stratum": "CTRL",
-            "ctrl_len_bin": "0-11"
+            "ctrl_len_bin": "0-11",
+            "l25_topup_batch": false
           },
           "metadata_disguised_text": "When babobing is gunining, it is milup.",
           "metadata_disguised_fol": "∀x ((Gunining(x) → Milup(x)))",
           "metadata_class_id": "0000c2274e80:c0",
-          "metadata_class_size": 12,
+          "metadata_class_size": 13,
           "metadata_cost_usd": 0.000825,
           "metadata_finish_reason": "stop",
           "metadata_provider": "OpenAI",
@@ -183,17 +221,40 @@
           "metadata_repair_ops": null,
           "metadata_repair_status": null,
           "metadata_convention_flags": null,
-          "metadata_panel_votes": null,
+          "metadata_panel_votes": {
+            "P1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "P3": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "R1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            }
+          },
+          "metadata_panel_item": "0000c2274e80:c0",
+          "metadata_panel_ambiguous": {
+            "P1": false,
+            "P3": false,
+            "R1": false
+          },
+          "metadata_panel_scope": "ctrl_reduced_uncertain_only",
           "metadata_final_label": "CORRECT",
           "metadata_error_ops": null,
-          "metadata_label_tier": "A_unaudited_ref",
+          "metadata_label_tier": "A",
           "metadata_label_source": "solver",
           "metadata_addrop_only_suspect": false,
           "metadata_solver_lenient_label": "CORRECT",
           "metadata_correct_not_equivalent": false,
           "metadata_reading_choice": false,
-          "metadata_gold_audit_flag": "PENDING",
-          "metadata_reference_status": "UNAUDITED_AGREED_FOLIO",
+          "metadata_gold_audit_flag": "FAITHFUL",
+          "metadata_reference_status": "TRUSTED_AGREED",
           "metadata_strata": {
             "words": 7,
             "n_quant": 1,
@@ -202,12 +263,13 @@
             "text_conditions": 1,
             "exception_type": null,
             "source_stratum": "CTRL",
-            "ctrl_len_bin": "0-11"
+            "ctrl_len_bin": "0-11",
+            "l25_topup_batch": false
           },
           "metadata_disguised_text": "When babobing is gunining, it is milup.",
           "metadata_disguised_fol": "∀x ((Gunining(x) → Milup(x)))",
           "metadata_class_id": "0000c2274e80:c0",
-          "metadata_class_size": 12,
+          "metadata_class_size": 13,
           "metadata_cost_usd": 4.99e-05,
           "metadata_finish_reason": "stop",
           "metadata_provider": "DeepInfra",
@@ -221,15 +283,32 @@
       "examples": [
         {
           "input": "{\"text\": \"When something is depressing, it is sad.\", \"reference_fol\": \"∀x (Depressing(x) → Sad(x))\"}",
-          "output": "UNAUDITED_AGREED_FOLIO",
+          "output": "TRUSTED_AGREED",
           "metadata_fold": "heldout",
           "metadata_sentence_id": "0000c2274e80",
           "metadata_source": "FOLIO-v2-train",
           "metadata_original_reference_fol": "∀x (Depressing(x) → Sad(x))",
           "metadata_ctrl_original_fol": "∀x (Depressing(x) → Sad(x))",
           "metadata_agreement_type": "IDENTICAL_STRING",
-          "metadata_gold_audit_flag": "PENDING",
-          "metadata_gold_audit_votes": null,
+          "metadata_gold_audit_flag": "FAITHFUL",
+          "metadata_gold_audit_votes": {
+            "P1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "P3": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "R1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            }
+          },
+          "metadata_topup_batch": false,
           "metadata_reading_choice": false,
           "metadata_strata": {
             "words": 7,
@@ -239,13 +318,14 @@
             "text_conditions": 1,
             "exception_type": null,
             "source_stratum": "CTRL",
-            "ctrl_len_bin": "0-11"
+            "ctrl_len_bin": "0-11",
+            "l25_topup_batch": false
           },
-          "metadata_n_candidates": 13,
+          "metadata_n_candidates": 14,
           "metadata_n_classes": 2,
           "metadata_auto_label_counts": {
             "TIMEOUT_UNKNOWN": 1,
-            "CORRECT": 11,
+            "CORRECT": 12,
             "COMPOUND": 1
           },
           "metadata_disguised_text": "When babobing is gunining, it is milup.",
@@ -255,15 +335,37 @@
         },
         {
           "input": "{\"text\": \"A location is classified as a desert if it experiences low precipitation, has extreme temperature variations, and supports minimal vegetation.\", \"reference_fol\": \"∀x (Location(x) ∧ LowPrecipitation(x) ∧ ExtremeTemperatureVariations(x) ∧ MinimalVegetation(x) → Desert(x))\"}",
-          "output": "UNAUDITED_MALLS_GPT4_GOLD",
+          "output": "NO_TRUSTED_REFERENCE",
           "metadata_fold": "heldout",
           "metadata_sentence_id": "000969d4c50f",
           "metadata_source": "MALLS-v0.1-train",
           "metadata_original_reference_fol": "∀x (Location(x) ∧ LowPrecipitation(x) ∧ ExtremeTemperatureVariations(x) ∧ MinimalVegetation(x) → Desert(x))",
           "metadata_ctrl_original_fol": null,
           "metadata_agreement_type": null,
-          "metadata_gold_audit_flag": "PENDING",
-          "metadata_gold_audit_votes": null,
+          "metadata_gold_audit_flag": "UNFAITHFUL",
+          "metadata_gold_audit_votes": {
+            "P1": {
+              "faithful": true,
+              "ops": [],
+              "conf": 5
+            },
+            "P3": {
+              "faithful": false,
+              "ops": [
+                "DROP",
+                "ADD"
+              ],
+              "conf": 5
+            },
+            "R1": {
+              "faithful": false,
+              "ops": [
+                "DROP"
+              ],
+              "conf": 4
+            }
+          },
+          "metadata_topup_batch": false,
           "metadata_reading_choice": false,
           "metadata_strata": {
             "words": 20,
@@ -273,12 +375,13 @@
             "text_conditions": 1,
             "exception_type": null,
             "source_stratum": "L20",
-            "ctrl_len_bin": null
+            "ctrl_len_bin": null,
+            "l25_topup_batch": false
           },
-          "metadata_n_candidates": 13,
+          "metadata_n_candidates": 14,
           "metadata_n_classes": 7,
           "metadata_auto_label_counts": {
-            "ERROR": 3,
+            "ERROR": 4,
             "COMPOUND": 7,
             "CORRECT": 3
           },
@@ -289,15 +392,43 @@
         },
         {
           "input": "{\"text\": \"A combustion reaction occurs when a substance, typically a hydrocarbon, reacts with oxygen, generating heat and light energy, and producing water and carbon dioxide as byproducts.\", \"reference_fol\": \"∀x∀y∀z (CombustionReaction(x) ∧ Substance(y) ∧ Hydrocarbon(y) ∧ Oxygen(z) → (ReactsWithOxygen(y, z) ∧ GeneratesHeatAndLightEnergy(x) ∧ ProducesWaterAndCarbonDioxideAsByproducts(x)))\"}",
-          "output": "UNAUDITED_MALLS_GPT4_GOLD",
+          "output": "NO_TRUSTED_REFERENCE",
           "metadata_fold": "heldout",
           "metadata_sentence_id": "0021b577fdd5",
           "metadata_source": "MALLS-v0.1-train",
           "metadata_original_reference_fol": "∀x∀y∀z (CombustionReaction(x) ∧ Substance(y) ∧ Hydrocarbon(y) ∧ Oxygen(z) → (ReactsWithOxygen(y, z) ∧ GeneratesHeatAndLightEnergy(x) ∧ ProducesWaterAndCarbonDioxideAsByproducts(x)))",
           "metadata_ctrl_original_fol": null,
           "metadata_agreement_type": null,
-          "metadata_gold_audit_flag": "PENDING",
-          "metadata_gold_audit_votes": null,
+          "metadata_gold_audit_flag": "UNFAITHFUL",
+          "metadata_gold_audit_votes": {
+            "P1": {
+              "faithful": false,
+              "ops": [
+                "REV",
+                "RESTR"
+              ],
+              "conf": 4
+            },
+            "P3": {
+              "faithful": false,
+              "ops": [
+                "RESTR",
+                "ADD",
+                "DROP",
+                "SWAP",
+                "BIND"
+              ],
+              "conf": 5
+            },
+            "R1": {
+              "faithful": false,
+              "ops": [
+                "REV"
+              ],
+              "conf": 4
+            }
+          },
+          "metadata_topup_batch": false,
           "metadata_reading_choice": false,
           "metadata_strata": {
             "words": 26,
@@ -307,12 +438,13 @@
             "text_conditions": 1,
             "exception_type": null,
             "source_stratum": "L25",
-            "ctrl_len_bin": null
+            "ctrl_len_bin": null,
+            "l25_topup_batch": false
           },
-          "metadata_n_candidates": 13,
-          "metadata_n_classes": 13,
+          "metadata_n_candidates": 14,
+          "metadata_n_classes": 14,
           "metadata_auto_label_counts": {
-            "COMPOUND": 12,
+            "COMPOUND": 13,
             "CORRECT": 1
           },
           "metadata_disguised_text": "A rimezion rateb nidals when a kovote, tipovally a vutig, fonips with midal, gazufating fitip and nunig tiguv, and tutoging nebut and zafob kuruge as ferots.",
@@ -538,7 +670,7 @@
         },
         {
           "input": "{\"text\": \"If Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.\", \"candidate_fol\": \"((Wish(bonnie) ∧ Chaperone(bonnie)) ∨ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ (Inactive(bonnie) ∧ Disinterested(bonnie)))\", \"reference_fol\": \"(((YoungChild(bonnie) ∨ Teenager(bonnie)) ∧ WishToFurther(bonnie, academicCareer) ∧ WishToFurther(bonnie, educationalOpportunity) ∧ Chaperone(bonnie, highSchoolDance)) ⊕ (¬(YoungChild(bonnie) ∨ Teenager(bonnie)) ∧ ¬WishToFurther(bonnie, academicCareer) ∧ ¬WishToFurther(bonnie, educationalOpportunity))) → ((Student(bonnie) ∧ AttendSchool(bonnie)) ⊕ (InActive(bonnie) ∧ Disinterested(bonnie) ∧ MemberOf(bonnie, community)))\", \"system\": \"gpt-3.5-turbo\", \"prompt_variant\": \"logiclm_released\"}",
-          "output": "UNRESOLVED",
+          "output": "ERROR",
           "metadata_fold": "screen_audit",
           "metadata_item_id": "878ffab81c8b4fcb",
           "metadata_track": "L",
@@ -555,10 +687,37 @@
           "metadata_convention_flags": [
             "ARITY_REIFY"
           ],
-          "metadata_panel_votes": null,
-          "metadata_final_label": "UNRESOLVED",
-          "metadata_label_tier": "auto_only",
-          "metadata_label_source": "pending_panel",
+          "metadata_panel_votes": {
+            "P1": {
+              "faithful": false,
+              "ops": [
+                "DROP",
+                "CONN"
+              ],
+              "conf": 3
+            },
+            "P3": {
+              "faithful": false,
+              "ops": [
+                "DROP",
+                "ADD",
+                "RESTR"
+              ],
+              "conf": 5
+            },
+            "R1": {
+              "faithful": false,
+              "ops": [
+                "DROP",
+                "ADD",
+                "CONN"
+              ],
+              "conf": 4
+            }
+          },
+          "metadata_final_label": "ERROR",
+          "metadata_label_tier": "B",
+          "metadata_label_source": "solver+panel",
           "metadata_reading_choice": false,
           "metadata_addrop_only_suspect": false,
           "metadata_ambiguous_curated": true,
@@ -582,7 +741,7 @@
         },
         {
           "input": "{\"text\": \"If Bonnie either chaperones high school dances or, if she does not, she performs in school talent shows often, then Bonnie is both a young child or teenager who wishes to further her academic career and educational opportunities and an inactive and disinterested member of the community.\", \"candidate_fol\": \"(Chaperone(bonnie) ∨ (¬Chaperone(bonnie) ∧ Perform(bonnie))) → (Wish(bonnie) ∧ Young(bonnie) ∧ Inactive(bonnie) ∧ Disinterested(bonnie))\", \"reference_fol\": \"(Chaperone(bonnie, highSchoolDance) ⊕ PerformOftenIn(bonnie, schoolTalentShow)) → ((YoungChild(bonnie) ∨ Teenager(bonnie)) ∧ WishToFurther(bonnie, academicCareer) ∧ WishToFurther(bonnie, educationalOpportunity) ∧ InActive(bonnie) ∧ Disinterested(bonnie) ∧ MemberOf(bonnie, community))\", \"system\": \"gpt-3.5-turbo\", \"prompt_variant\": \"logiclm_released\"}",
-          "output": "UNRESOLVED",
+          "output": "ERROR",
           "metadata_fold": "screen_audit",
           "metadata_item_id": "b9a596c62d8f557f",
           "metadata_track": "L",
@@ -599,10 +758,37 @@
           "metadata_convention_flags": [
             "ARITY_REIFY"
           ],
-          "metadata_panel_votes": null,
-          "metadata_final_label": "UNRESOLVED",
-          "metadata_label_tier": "auto_only",
-          "metadata_label_source": "pending_panel",
+          "metadata_panel_votes": {
+            "P1": {
+              "faithful": false,
+              "ops": [
+                "DROP",
+                "ADD"
+              ],
+              "conf": 4
+            },
+            "P3": {
+              "faithful": false,
+              "ops": [
+                "CONN",
+                "DROP",
+                "ADD"
+              ],
+              "conf": 4
+            },
+            "R1": {
+              "faithful": false,
+              "ops": [
+                "CONN",
+                "DROP",
+                "ADD"
+              ],
+              "conf": 4
+            }
+          },
+          "metadata_final_label": "ERROR",
+          "metadata_label_tier": "B",
+          "metadata_label_source": "solver+panel",
           "metadata_reading_choice": false,
           "metadata_addrop_only_suspect": false,
           "metadata_ambiguous_curated": true,

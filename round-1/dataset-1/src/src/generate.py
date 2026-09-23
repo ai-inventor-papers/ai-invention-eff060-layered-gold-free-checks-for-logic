@@ -59,7 +59,8 @@ def done_keys() -> set:
         for line in GEN.read_text().splitlines():
             if line.strip():
                 r = json.loads(line)
-                if r.get("raw_output") is not None or r.get("final_failure"):
+                # a failure caused by the shared key's daily limit is NOT data: retry it (other final failures are kept)
+                if r.get("raw_output") is not None or (r.get("final_failure") and "Key limit exceeded" not in (r.get("api_error") or "")):
                     keys.add((r["sentence_id"], r["slot"], r["prompt_variant"]))
     return keys
 
@@ -67,6 +68,7 @@ def done_keys() -> set:
 def frontier_subset(sents: list[dict]) -> set:
     q = {"L25": 60, "L20": 50, "EXC": 40, "CTRL": 50}
     out = set()
+    sents = [s for s in sents if not s.get("topup_batch")]  # the L25 top-up batch never enters the frontier subset
     for st, n in q.items():
         out |= {s["sentence_id"] for s in sorted([s for s in sents if s["source_stratum"] == st], key=lambda s: s["sentence_id"])[:n]}
     return out

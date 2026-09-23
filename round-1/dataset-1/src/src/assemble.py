@@ -25,6 +25,7 @@ sys.setrecursionlimit(10000)
 from normalise import normalise  # noqa: E402
 from screen import norm_screen  # noqa: E402
 from disguise import Disguiser  # noqa: E402
+from panel_run import vg_cid, ctrl_full_sample  # noqa: E402
 
 logger.remove()
 logger.add(sys.stdout, level="INFO", format="{time:HH:mm:ss}|{level:<7}|{message}")
@@ -90,7 +91,7 @@ def heldout():
     sents = {s["sentence_id"]: s for s in json.loads((W / "sentences.json").read_text())}
     gens = {}
     for g in load_jsonl(ROOT / "raw" / "generations.jsonl"):
-        if g.get("raw_output") is None or (g["slot"] == "G2" and g["prompt_variant"] == "zeroshot_v1"):
+        if g.get("raw_output") is None:
             continue
         gens[(g["sentence_id"], f"{g['slot']}|{g['prompt_variant']}")] = g
     for c in load_jsonl(ROOT / "raw" / "ccg2lambda_candidates.jsonl"):
@@ -100,6 +101,14 @@ def heldout():
     refs_rep = json.loads((W / "reference_overrides.json").read_text()) if (W / "reference_overrides.json").exists() else {}
     no_ref = set(json.loads((W / "no_trusted_reference.json").read_text())) if (W / "no_trusted_reference.json").exists() else set()
     panel = {r["sentence_id"]: r for r in load_jsonl(W / "panel_heldout.jsonl")}
+    for r in load_jsonl(W / "panel_heldout_adj.jsonl"):  # third member on the two raters' disagreements only
+        pv = panel.get(r["sentence_id"])
+        if pv is None:
+            continue
+        for cid, v in r["votes"].items():
+            pv["votes"].setdefault(cid, {})[r["member"]] = v
+        if r.get("ambiguous") is not None:
+            pv.setdefault("ambiguous", {})[r["member"]] = r["ambiguous"]
     rows, sent_rows = [], []
     for sid in sorted(sents):
         s = sents[sid]
@@ -148,6 +157,7 @@ def heldout():
         cls_size = {c["class_idx"]: c["size"] for c in use_lab["classes"]}
         empty_cls = {c["class_idx"] for c in use_lab["classes"] if not c["rep_fol"].strip()}
         strata = {k: s.get(k) for k in ("words", "n_quant", "depth", "n_conditions", "text_conditions", "exception_type", "source_stratum", "ctrl_len_bin")}
+        strata["l25_topup_batch"] = bool(s.get("topup_batch"))
         for k in cand_keys:
             slot, variant = k.split("|")
             if k == "GOLD|none":
@@ -167,7 +177,11 @@ def heldout():
             cid = f"{sid}:c{cidx}" if cidx is not None else None
             # panel votes are per class of the ORIGINAL class collapse (reference-free); map through the candidate key
             orig_cidx = lab["rows"].get(k, {}).get("class_idx") if k != "GOLD|none" else 0
-            cv = {m: v for m, v in votes.get(f"{sid}:c{orig_cidx}", {}).items() if m in MEMBERS} if orig_cidx is not None else {}
+            if k != "GOLD|none" and lab["rows"].get(k, {}).get("auto_label") == "VOCAB_GRAN":
+                panel_item = vg_cid(sid, fol_of.get(k) or "")  # judged on its own string, not via the reference rep
+            else:
+                panel_item = f"{sid}:c{orig_cidx}" if orig_cidx is not None else None
+            cv = {m: v for m, v in votes.get(panel_item, {}).items() if m in MEMBERS} if panel_item else {}
             fr = final_rule(auto, cv, ref_status)
             if ref_status == "NO_TRUSTED_REFERENCE":
                 auto = "NO_REF" if auto != "UNPARSEABLE" else auto
@@ -199,6 +213,9 @@ def heldout():
                 "metadata_repair_status": lr.get("repair_status"),
                 "metadata_convention_flags": lr.get("convention_flags"),
                 "metadata_panel_votes": cv or None,
+                "metadata_panel_item": panel_item,
+                "metadata_panel_ambiguous": {m: a for m, a in pv.get("ambiguous", {}).items() if m in MEMBERS} or None,
+                "metadata_panel_scope": ("ctrl_reduced_uncertain_only" if s["source_stratum"] == "CTRL" and not ctrl_full_sample(sid) else "full"),
                 "metadata_final_label": fr["final_label"],
                 "metadata_error_ops": fr.get("error_ops") if fr["final_label"] == "ERROR" and fr.get("error_ops") else (lr.get("repair_ops") if fr["final_label"] == "ERROR" else None),
                 "metadata_label_tier": fr["label_tier"],
@@ -230,6 +247,7 @@ def heldout():
             "metadata_agreement_type": s.get("agreement_type"),
             "metadata_gold_audit_flag": audit,
             "metadata_gold_audit_votes": rv or None,
+            "metadata_topup_batch": bool(s.get("topup_batch")),
             "metadata_reading_choice": reading_choice,
             "metadata_strata": strata,
             "metadata_n_candidates": len(cand_keys),
@@ -245,6 +263,8 @@ def screen():
     items = json.loads((W / "screen_items.json").read_text())
     labs = {r["sentence_id"]: r for r in load_jsonl(W / "labels_screen.jsonl")}
     panel = {r["sentence_id"]: r for r in load_jsonl(W / "panel_screen.jsonl")}
+    for r in load_jsonl(W / "panel_screen_vg.jsonl"):  # supplementary VOCAB_GRAN-string pass
+        panel.setdefault(r["sentence_id"], {"votes": {}, "ambiguous": {}})["votes"].update(r["votes"])
     th = {}
     p = W / "trackh_panel_rows.json"
     if p.exists():
@@ -260,7 +280,9 @@ def screen():
         auto = "REF_UNPARSEABLE" if ref_bad else lr.get("auto_label", "UNPARSEABLE")
         cidx = lr.get("class_idx")
         pv = panel.get(it["screen_sentence_id"], {})
-        cv = {m: v for m, v in pv.get("votes", {}).get(f"{it['screen_sentence_id']}:c{cidx}", {}).items() if m in MEMBERS} if cidx is not None else {}
+        pitem = vg_cid(it["screen_sentence_id"], it["candidate_fol_normalised"]) if lr.get("auto_label") == "VOCAB_GRAN" else \
+            (f"{it['screen_sentence_id']}:c{cidx}" if cidx is not None else None)
+        cv = {m: v for m, v in pv.get("votes", {}).get(pitem, {}).items() if m in MEMBERS} if pitem else {}
         if it["track"] == "H":
             t = th.get(str(it["record_id"]), {})
             cv = {m: {"faithful": v["orig_faithful"], "ops": v.get("orig_ops", []), "conf": None} for m, v in t.get("votes", {}).items() if m in MEMBERS}

@@ -38,8 +38,6 @@ def heldout_jobs(refs: dict | None = None) -> list[dict]:
     for g in gens:
         if g.get("raw_output") is None:
             continue
-        if g["slot"] == "G2" and g["prompt_variant"] == "zeroshot_v1":
-            continue  # dropped: key daily limit hit at 59/600; plan fallback 'zero-shot to 1 family' (G1b)
         fol, _ = normalise(g["raw_output"])
         by.setdefault(g["sentence_id"], {})[f"{g['slot']}|{g['prompt_variant']}"] = {"fol": fol, "no_repair": False}
     for c in ccg:
