@@ -13,25 +13,41 @@ from __future__ import annotations
 
 import hashlib
 import re
+from pathlib import Path
 from functools import lru_cache
 
 from repair_census import bound_vars, symbols
 
 TOKRE = re.compile(r"[A-Z]?[a-z]+|[A-Z]+(?![a-z])|\d+")
+NLTK_DIR = Path(__file__).resolve().parent.parent / "data" / "nltk_data"   # nltk.download('wordnet', download_dir=...)
+SYN_STATS = {"wordnet": 0, "nonce": 0}   # how each distinct head token was renamed (reported in summary.json)
+
+
+def wordnet_available() -> bool:
+    try:
+        import nltk
+        if str(NLTK_DIR) not in nltk.data.path:
+            nltk.data.path.insert(0, str(NLTK_DIR))
+        from nltk.corpus import wordnet as wn
+        wn.synsets("dog")
+        return True
+    except LookupError:
+        return False
 
 
 @lru_cache(maxsize=None)
 def _synonym(tok: str) -> str:
-    try:
+    ss = []
+    if wordnet_available():
         from nltk.corpus import wordnet as wn
         ss = wn.synsets(tok.lower())
-    except LookupError:
-        ss = []
     if ss:
         for lem in ss[0].lemma_names():
             w = lem.replace("_", " ").replace("-", " ")
             if w.lower() != tok.lower() and w.split()[0].isalpha():
+                SYN_STATS["wordnet"] += 1
                 return "".join(p.capitalize() for p in w.split())
+    SYN_STATS["nonce"] += 1
     return tok[::-1].capitalize() + "Q"
 
 

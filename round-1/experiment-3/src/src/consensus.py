@@ -275,6 +275,8 @@ def main():
     # ---------------- rewrite + planted + gold pseudo-candidates
     correct = sorted([x for x in items if x["label"] == "CORRECT" and fol_ok(x["candidate_fol"])], key=lambda x: x["item_id"])
     rw_sel = correct[:150]
+    if not RW.wordnet_available():  # without WordNet every RENAME head becomes a nonce and the test silently changes
+        raise RuntimeError(f"WordNet missing: run nltk.download('wordnet', download_dir='{RW.NLTK_DIR}')")
     rewrites = []
     for x in rw_sel:
         e = safe_parse(x["candidate_fol"])
@@ -454,6 +456,7 @@ def main():
            "timing": {"pairs_s": round(t_pairs, 1), "repair_s": round(t_rep, 1), "labels_s": round(t_lab, 1),
                       "total_s": round(time.time() - t_all, 1), "n_pairs": len(pairs), "n_sentences": len(keys),
                       "repair_budget_s": a.budget},
+           "rename_synonym_source": dict(RW.SYN_STATS),
            "sentences": {t: {k: v for k, v in sents[t].items() if k in ("unit", "members", "attempted", "ref")} for t in keys}}
     suffix = f"_mini{a.mini}" if a.mini else ""
     (RES / f"consensus{suffix}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))

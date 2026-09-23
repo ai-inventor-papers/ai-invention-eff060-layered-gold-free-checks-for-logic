@@ -554,6 +554,7 @@ def main():
                         "mean_abs_delta_eq_frac": round(float((g2["eq_frac_full"] - g2["base_eq_frac_full"]).abs().mean()), 4) if len(g2) else None}
         inv["note"] = ("z3-equivalent families (REORDER, DEMORGAN, PRENEX, CONTRAPOSITIVE) are invariant BY CONSTRUCTION of eqmv; "
                        "RENAME (WordNet synonym heads + hashed constants) is the real test of the aligner")
+        inv["rename_head_token_source"] = cons.get("rename_synonym_source")  # distinct head tokens: WordNet synonym vs nonce
     S_["rewrite_invariance"] = inv
     # ------------------------------------------------------------------ label-noise context
     Hh = df[df["track"] == "H"]

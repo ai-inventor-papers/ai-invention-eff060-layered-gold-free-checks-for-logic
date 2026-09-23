@@ -36,7 +36,7 @@ Primary contrast: track L (the released Logic-LM FOLIO-dev outputs), CORRECT (29
 | c_score_llm2 (two other Logic-LM systems) | 0.753 [0.701, 0.806] | a smaller pool that shares the prompt |
 | cluster_entropy | 0.773 [0.724, 0.820] | ΔAUROC vs c_score −0.092 [−0.127, −0.061] |
 | medoid_depth | 0.722 [0.673, 0.774] | quantised (0–3) |
-| sc5_cheap (gpt-4.1-nano K=5) | 0.736 [0.669, 0.804] (n=392) | **ΔAUROC c_score − sc5_cheap = +0.154 [0.095, 0.211]** (same 392 items) |
+| sc5_cheap (gpt-4.1-nano K=5) | 0.725 [0.669, 0.781] (n=546) | **ΔAUROC c_score − sc5_cheap = +0.140 [0.085, 0.197]** (all 546 items) |
 | sc5_same (gpt-3.5 K=5, gpt-3.5 candidates) | 0.716 [0.632, 0.796] (n=167) | ΔAUROC c_score − sc5_same = +0.140 [0.057, 0.227] |
 | predset_instab_pool | 0.770 [0.717, 0.821] | ΔAUROC c_score − it = +0.096 [0.050, 0.144] |
 | fol_length | 0.527 | trivial baseline |
@@ -45,8 +45,8 @@ Primary contrast: track L (the released Logic-LM FOLIO-dev outputs), CORRECT (29
 Pre-registered threshold (flag iff the candidate is not eqmv to the medoid): recall 0.62 [0.56, 0.68], false alarms
 0.14 [0.10, 0.18], precision 0.79. Re-weighted to 10% / 25% prevalence, precision is 0.33 / 0.60.
 Cross-fitted logistic regression (GroupKFold by sentence): [c_score, sc5_cheap] vs [sc5_cheap] alone gives ΔAUROC
-+0.159 [0.107, 0.215]. So **consensus adds signal beyond sampling self-consistency**. SC barely adds anything on top
-of consensus.
++0.147 [0.099, 0.199]. So **consensus adds signal beyond sampling self-consistency**. SC adds nothing on top of
+consensus: the cross-fitted [c_score, sc5_cheap] model scores 0.865, the same as c_score alone (0.866).
 
 **Secondary contrasts.** Lenient contrast (ERROR ∪ COMPOUND): 0.882. Vocab-strict contrast: 0.875. Track H (human
 original gold vs corrected gold, 35 errors): 0.832. Secondary multi-family sample (the 6 peers' own outputs as
@@ -55,7 +55,7 @@ candidates, n=1,686): 0.825, with every family between 0.81 and 0.85.
 **Shared-aligner confound.** The metric and the labeller share `align()`. In the labeller, CORRECT implies
 alignable_frac = 1 (100% of CORRECT items), while only 33% of ERROR items have it. That is why `misalign` alone reaches
 0.835. On the **vocab-clean subset**, where every item has alignable_frac = 1 so the artefact cannot act, c_score
-AUROC is **0.852 [0.765, 0.929]** (82 errors vs 297 correct), against 0.762 for sc5_cheap.
+AUROC is **0.852 [0.765, 0.929]** (82 errors vs 297 correct), against 0.714 for sc5_cheap (paired Δ +0.138 [0.035, 0.236]).
 The partial Spearman of c_score with the label, controlling for alignable_frac, is 0.51. [c_score, misalign] vs
 [misalign] adds +0.132 [0.086, 0.185]. **So c_score is not mainly the alignment artefact.**
 
@@ -91,9 +91,9 @@ sentences. Only these strata are testable (≥50 errors and ≥50 correct items)
 
 | stratum | c_score | sc5_cheap |
 |---|---|---|
-| <12 words | 0.871 | 0.728 |
-| n_cond = 0 | 0.878 | 0.749 |
-| n_cond = 1–2 (54/82) | 0.822 | 0.692 |
+| <12 words | 0.871 | 0.722 |
+| n_cond = 0 | 0.878 | 0.730 |
+| n_cond = 1–2 (54/82) | 0.822 | 0.705 |
 
 The long, heavily conditioned stratum has **5 items (descriptive only)** and is deferred to held-out dataset E, as
 designed. The complexity interaction term is negative for c_score (−0.94 per SD of words) and near zero for SC; this
@@ -106,10 +106,10 @@ mean c_score is 0.87.
 
 | item | cost |
 |---|---|
-| Total OpenRouter spend (logs/cost_log.jsonl) | $1.4168 |
+| Total OpenRouter spend (logs/cost_log.jsonl) | $1.5194 |
 | C's 6 peers, per sentence, amortised over story-level calls | $0.00149 |
 | C's 6 peers, single-sentence (MALLS) prompt | $0.00058 |
-| SC_cheap (gpt-4.1-nano K=5), per unit | $0.00067 |
+| SC_cheap (gpt-4.1-nano K=5), per unit | $0.00087 |
 
 C's per-sentence cost passes the $0.002 gate in both deployment modes. z3 time is 0.15 s per candidate on 4 CPUs
 (cold full run: 15,265 pairwise eqmv calls in 7 s, 599 medoid repairs in 45 s, 1,575 labels in 205 s).
@@ -135,16 +135,16 @@ It does not read `consensus.json` or `summary.json`, except for the final compar
 | quantity | value |
 |---|---|
 | c_score AUROC | 0.8655 |
-| sc5_cheap AUROC | 0.7356 |
-| Δ (n=392) | +0.154 |
+| sc5_cheap AUROC | 0.7254 |
+| Δ (n=546) | +0.140 |
 | vocab-clean AUROC (n=379, 82 errors) | 0.8518 |
 | recall at threshold | 0.6185 |
 | false alarms at threshold | 0.138 |
-| total cost (from the raw response cache as well as the cost log) | $1.4168 |
+| total cost (from the raw response cache as well as the cost log) | $1.5194 |
 
 Placebos:
-- 200 label permutations give mean AUROC 0.5005 (95th percentile 0.536; permutation p = 0.005 for 0.866).
-- Permuted Δ has mean −0.0001 (97.5th percentile 0.042).
+- 200 label permutations give mean AUROC 0.5001 (95th percentile 0.539; permutation p = 0.005 for 0.866).
+- Permuted Δ has mean −0.0007 (97.5th percentile 0.036).
 - A constant score gives AUROC 0.5.
 
 **Not independently re-derived:** the bootstrap CIs, the other contrasts and per-stratum tables, the rewrite-invariance
@@ -152,11 +152,17 @@ rates, the blind-spot / operator-agreement rates, and the secondary peer-as-cand
 
 ## Deviations and limitations (read before citing)
 
-1. **The OpenRouter key hit its shared $50/day limit** (HTTP 403, 13:33 UTC). The limit is shared across runs; this
-   artifact spent $1.42. As a result, **SC_cheap is complete for 231/307 units** (247 have ≥1 sample): 392 of the
-   546 primary items have sc5_cheap. Every SC comparison is paired on the common subset and reports its n.
-   SC_same (117 units) and all peers completed. The SC_cheap retry and the optional F8 vocabulary-shared variant
-   could not be run.
+1. **SC_cheap was completed in a second pass.** The first run hit the shared $50/day OpenRouter key limit (HTTP 403,
+   13:33 UTC), leaving SC_cheap at 231/307 units. After the key was replaced, the missing calls were made (15:12–15:19
+   UTC; +$0.10). Cached responses were not re-billed. SC_cheap now covers **all 307 units and all 546 primary items**.
+   Every number in this README comes from the complete run. Against the partial run, sc5_cheap moved from 0.736
+   (n=392) to 0.725 (n=546), and Δ moved from +0.154 to +0.140; the conclusion is unchanged. SC_same (117 units)
+   and all peers were already complete. The optional F8 vocabulary-shared variant was not run: its trigger (more than
+   80% of items with eq_frac = 0) did not fire (17%).
+   The rerun exposed that WordNet was missing from the environment. Without it, RENAME silently falls back to nonce
+   names, which gave false alarms of 99% instead of 96%. WordNet now lives in `data/nltk_data/`. `consensus.py`
+   refuses to run without it, and `summary.json → rewrite_invariance.rename_head_token_source` records how each head
+   token was renamed: 132 by WordNet synonym, 64 by nonce fallback for tokens WordNet lacks.
 2. **Format-only system message.** Modern chat models do not continue the Logic-LM few-shot pattern: dry run v0
    (kept in `data/peer_raw_dryrun_v0/`) produced prose and re-solved the demo problems. Every peer and SC call
    therefore gets one fixed system message stating the output format. The user prompt is Logic-LM's `FOLIO.txt`
@@ -212,7 +218,8 @@ results/consensus_mini20.json     T3 mini end-to-end run (20 sentences)
 data/logiclm/           Logic-LM FOLIO_dev outputs (3 systems) + FOLIO.txt prompt
 data/peer_raw/          every raw OpenRouter response (JSON with usage/cost), the only copy of paid outputs
 data/peer_raw_dryrun_v0/  dry run without the format system message (documents deviation 2)
-logs/cost_log.jsonl     per-call cost ledger (total = $1.4168)
+logs/cost_log.jsonl     per-call cost ledger (total = $1.5194)
+data/nltk_data/         WordNet (used by the RENAME rewrite; 40 MB, redownloadable)
 ```
 
 The kept artifacts live at
@@ -223,7 +230,7 @@ All of them are small text files.
 
 ```bash
 uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python -r <(python3 -c "import tomllib;print('\n'.join(tomllib.load(open('pyproject.toml','rb'))['project']['dependencies']))")   # exact pinned versions
-.venv/bin/python -c "import nltk; nltk.download('wordnet')"
+.venv/bin/python -c "import nltk; nltk.download('wordnet', download_dir='data/nltk_data'); nltk.download('omw-1.4', download_dir='data/nltk_data')"
 bash run_all.sh      # or: .venv/bin/python method.py [--skip-api]   (cached responses; no re-billing)
 ```
 
@@ -237,4 +244,4 @@ bash run_all.sh      # or: .venv/bin/python method.py [--skip-api]   (cached res
 | `.venv/` | regenerable; see the install command above (`uv venv` + `uv pip install` of the pyproject dependencies) |
 | `__pycache__/` (src/, tests/) | regenerable; recreated automatically by Python |
 | `.pytest_cache/` | regenerable; `.venv/bin/python -m pytest -c /dev/null --rootdir . --noconftest -q tests/test_fol.py` |
-| NLTK WordNet data | redownloadable; `python -c "import nltk; nltk.download('wordnet')"` |
+| `data/nltk_data/` | redownloadable; `.venv/bin/python -c "import nltk; nltk.download('wordnet', download_dir='data/nltk_data'); nltk.download('omw-1.4', download_dir='data/nltk_data')"` |

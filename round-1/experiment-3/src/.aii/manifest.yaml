@@ -11,3 +11,6 @@ entries:
   - path: tests/__pycache__/
     delete: regenerable
     source: "created automatically by: .venv/bin/python -m pytest -c /dev/null --rootdir . --noconftest tests/"
+  - path: data/nltk_data/
+    delete: redownloadable
+    source: ".venv/bin/python -c \"import nltk; nltk.download('wordnet', download_dir='data/nltk_data'); nltk.download('omw-1.4', download_dir='data/nltk_data')\""
