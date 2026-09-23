@@ -1,0 +1,6 @@
+13:46:44|INFO   |[primary] n=546 err=249  c_score=0.8655  medoid_depth=0.7216  cluster_entropy=0.7732  sc5_cheap=0.7356  sc5_same=0.7159  misalign=0.8353
+13:46:55|INFO   |[lenient] n=772 err=475  c_score=0.8823  medoid_depth=0.7514  cluster_entropy=0.817  sc5_cheap=0.7641  sc5_same=0.7474  misalign=0.8484
+13:46:58|INFO   |[vocab_strict] n=485 err=249  c_score=0.8748  medoid_depth=0.7398  cluster_entropy=0.7854  sc5_cheap=0.7355  sc5_same=0.7361  misalign=0.8353
+13:47:00|INFO   |[trackH] n=236 err=35  c_score=0.8323  medoid_depth=0.7696  cluster_entropy=0.7133  sc5_cheap=0.723  sc5_same=None  misalign=0.6857
+13:47:03|INFO   |[vocab_clean] n=379 err=82  c_score=0.8518  medoid_depth=0.7408  cluster_entropy=0.7842  sc5_cheap=0.7616  sc5_same=0.741  misalign=0.5
+13:47:32|INFO   |summary written: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_3/results/summary.json

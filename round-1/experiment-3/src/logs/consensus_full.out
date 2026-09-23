@@ -1,0 +1,7 @@
+13:46:03|INFO   |sentences: 440, candidates: 1169, peer rows: 8599, sc rows: 8468
+13:46:20|INFO   |rewrites: 561 applicable; not-proved-equivalent: 0
+13:46:20|INFO   |[pairs] eqmv pairs to compute: 596 (cached 15345)
+13:46:21|INFO   |[pairs] done in 1s
+13:46:21|INFO   |pairwise stage 1s for 15865 pairs
+13:46:22|INFO   |coverage: {'ok': 1077, 'insufficient_pool': 4, 'candidate_unparseable': 88}; timing {'pairs_s': 1.2, 'repair_s': 0.0, 'labels_s': 0.0, 'total_s': 19.5, 'n_pairs': 15865, 'n_sentences': 440, 'repair_budget_s': 10.0}
+13:46:22|INFO   |per-candidate seconds (z3): mean 0.151

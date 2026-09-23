@@ -1,0 +1,9 @@
+13:22:38|INFO   |running total at start: $0.3972
+13:22:38|INFO   |SC_same units: 117
+13:22:38|INFO   |arm=sc_same jobs=585
+13:23:28|INFO   |sc_same: 100/585 done, running total $0.5099
+13:24:17|INFO   |sc_same: 200/585 done, running total $0.6296
+13:25:03|INFO   |sc_same: 300/585 done, running total $0.7495
+13:25:50|INFO   |sc_same: 400/585 done, running total $0.8707
+13:26:32|INFO   |sc_same: 500/585 done, running total $0.9877
+13:27:06|INFO   |arm=sc_same finished; running total $1.0835

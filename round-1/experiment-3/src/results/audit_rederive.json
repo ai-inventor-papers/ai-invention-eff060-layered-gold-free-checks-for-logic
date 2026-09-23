@@ -1,0 +1,32 @@
+{
+ "n": 546,
+ "n_err": 249,
+ "auroc_c_score": 0.8655,
+ "n_sc": 392,
+ "auroc_c_on_sc_subset": 0.8896,
+ "auroc_sc5_cheap": 0.7356,
+ "delta_c_minus_sc": 0.154,
+ "n_vocab_clean": 379,
+ "n_err_vocab_clean": 82,
+ "auroc_c_vocab_clean": 0.8518,
+ "recall_at_threshold": 0.6185,
+ "false_alarm_at_threshold": 0.138,
+ "placebo_permuted_auroc_c_mean": 0.5005,
+ "placebo_permuted_auroc_c_p95": 0.5364,
+ "placebo_permuted_delta_mean": -0.0001,
+ "placebo_permuted_delta_p97_5": 0.0416,
+ "perm_p_value_c_score": 0.004975124378109453,
+ "placebo_constant_score_auroc": 0.5,
+ "cost_from_raw_cache_usd": 1.4168,
+ "cost_from_cost_log_usd": 1.4168,
+ "pipeline": {
+  "auroc_c_score": 0.8655,
+  "auroc_sc5_cheap": 0.7356,
+  "delta": 0.154,
+  "recall": 0.6185,
+  "false_alarm": 0.138,
+  "cost_total": 1.4168,
+  "auroc_c_vocab_clean": 0.8518,
+  "n_vocab_clean": 379
+ }
+}

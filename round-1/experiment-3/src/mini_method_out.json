@@ -1,0 +1,570 @@
+{
+  "metadata": {
+    "method_name": "Candidate C: cross-system z3 consensus (eq_frac / medoid repair / semantic entropy) vs K=5 self-consistency",
+    "primary_contrast": "track L CORRECT vs ERROR",
+    "headline": {
+      "c_score": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.8655,
+        "auroc_ci95": [
+          0.8211,
+          0.9058
+        ],
+        "auprc": 0.8267,
+        "prevalence": 0.456
+      },
+      "medoid_depth": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.7216,
+        "auroc_ci95": [
+          0.6726,
+          0.7737
+        ],
+        "auprc": 0.622,
+        "prevalence": 0.456
+      },
+      "cluster_entropy": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.7732,
+        "auroc_ci95": [
+          0.7239,
+          0.8203
+        ],
+        "auprc": 0.6906,
+        "prevalence": 0.456
+      },
+      "c_score_peers6": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.8721,
+        "auroc_ci95": [
+          0.8299,
+          0.9112
+        ],
+        "auprc": 0.8247,
+        "prevalence": 0.456
+      },
+      "c_score_nonoai": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.8633,
+        "auroc_ci95": [
+          0.8197,
+          0.9034
+        ],
+        "auprc": 0.8082,
+        "prevalence": 0.456
+      },
+      "c_score_llm2": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.7527,
+        "auroc_ci95": [
+          0.7006,
+          0.8059
+        ],
+        "auprc": 0.6586,
+        "prevalence": 0.456
+      },
+      "sc5_cheap": {
+        "n": 392,
+        "n_err": 161,
+        "auroc": 0.7356,
+        "auroc_ci95": [
+          0.6691,
+          0.8035
+        ],
+        "auprc": 0.5973,
+        "prevalence": 0.4107
+      },
+      "sc5_entropy_cheap": {
+        "n": 392,
+        "n_err": 161,
+        "auroc": 0.6502,
+        "auroc_ci95": [
+          0.5742,
+          0.7251
+        ],
+        "auprc": 0.5046,
+        "prevalence": 0.4107
+      },
+      "sc5_same": {
+        "n": 167,
+        "n_err": 71,
+        "auroc": 0.7159,
+        "auroc_ci95": [
+          0.6316,
+          0.7962
+        ],
+        "auprc": 0.6281,
+        "prevalence": 0.4251
+      },
+      "predset_instab_sc": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.7007,
+        "auroc_ci95": [
+          0.6437,
+          0.7547
+        ],
+        "auprc": 0.593,
+        "prevalence": 0.456
+      },
+      "predset_instab_pool": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.77,
+        "auroc_ci95": [
+          0.7165,
+          0.821
+        ],
+        "auprc": 0.7214,
+        "prevalence": 0.456
+      },
+      "fol_length": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.5274,
+        "auroc_ci95": [
+          0.4695,
+          0.586
+        ],
+        "auprc": 0.4853,
+        "prevalence": 0.456
+      },
+      "misalign": {
+        "n": 546,
+        "n_err": 249,
+        "auroc": 0.8353,
+        "auroc_ci95": [
+          0.7935,
+          0.8761
+        ],
+        "auprc": 0.8209,
+        "prevalence": 0.456
+      }
+    },
+    "summary_file": "results/summary.json",
+    "prereg_file": "results/prereg.json",
+    "label_hash": "0e43cbddb54901f3f1ddfe0ded607948a30b02548ffcbd235f02a39ef2da863a",
+    "cost_total_usd": 1.4168
+  },
+  "datasets": [
+    {
+      "dataset": "folio_val_curated_trackH",
+      "examples": [
+        {
+          "input": "TEXT: Rockie is a turtle.\nCANDIDATE FOL: Turtle(rockie)",
+          "output": "CORRECT",
+          "predict_c_score": "0.0",
+          "predict_medoid_depth": "0",
+          "predict_cluster_entropy": "0.0",
+          "predict_sc5_cheap": "NA",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "False",
+          "predict_c_score_peers6": "0.0",
+          "metadata_item_id": "04b115e19c29230e",
+          "metadata_track": "H",
+          "metadata_system": "human_original",
+          "metadata_kind": "conclusion",
+          "metadata_reference_fol": "Turtle(rockie)",
+          "metadata_auto_class": "EQUIV",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "<12",
+            "words": 4,
+            "nq_bin": "<=1",
+            "depth_bin": "<=3",
+            "ncond_bin": "0",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 1.0,
+          "metadata_eq_frac_peers6": 1.0,
+          "metadata_eq_frac_nonoai": 1.0,
+          "metadata_eq_frac_llm2": null,
+          "metadata_medoid": "P1",
+          "metadata_medoid_fol": "Turtle(rockie)",
+          "metadata_medoid_ops": [],
+          "metadata_medoid_support": 1.0,
+          "metadata_medoid_label": "CORRECT",
+          "metadata_n_peers_parsed": 6,
+          "metadata_n_peers_total": 6,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": null,
+          "metadata_sc5_eq_frac_same": null,
+          "metadata_seconds_z3": 0.001,
+          "metadata_sentence_key": "rockie is a turtle"
+        },
+        {
+          "input": "TEXT: Djokovic does not live in a tax haven.\nCANDIDATE FOL: ¬LiveIn(djokovic, taxHaven)",
+          "output": "UNCERTAIN_COMPOUND",
+          "predict_c_score": "0.222222",
+          "predict_medoid_depth": "2",
+          "predict_cluster_entropy": "0.0",
+          "predict_sc5_cheap": "0.0",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "True",
+          "predict_c_score_peers6": "0.166667",
+          "metadata_item_id": "0a62f8bdd89be4bb",
+          "metadata_track": "H",
+          "metadata_system": "human_original",
+          "metadata_kind": "conclusion",
+          "metadata_reference_fol": "¬ (∃x (TaxHaven(x) ∧ LiveIn(djokovic, x)))",
+          "metadata_auto_class": "COMPOUND",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "<12",
+            "words": 8,
+            "nq_bin": "<=1",
+            "depth_bin": "<=3",
+            "ncond_bin": "0",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.7777777777777778,
+          "metadata_eq_frac_peers6": 0.8333333333333334,
+          "metadata_eq_frac_nonoai": 0.8,
+          "metadata_eq_frac_llm2": 0.6666666666666666,
+          "metadata_medoid": "P1",
+          "metadata_medoid_fol": "¬TaxHaven(djokovic)",
+          "metadata_medoid_ops": [
+            "ADD",
+            "DROP"
+          ],
+          "metadata_medoid_support": 1.0,
+          "metadata_medoid_label": "UNCERTAIN_COMPOUND",
+          "metadata_n_peers_parsed": 9,
+          "metadata_n_peers_total": 9,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": 1.0,
+          "metadata_sc5_eq_frac_same": 0.8,
+          "metadata_seconds_z3": 0.007,
+          "metadata_sentence_key": "djokovic does not live in a tax haven"
+        },
+        {
+          "input": "TEXT: The Hamden Plaza store does not provide take-out service.\nCANDIDATE FOL: ¬Provide(hamdenPlazaSubway, takeOutService)",
+          "output": "CORRECT",
+          "predict_c_score": "1.0",
+          "predict_medoid_depth": "2",
+          "predict_cluster_entropy": "0.796312",
+          "predict_sc5_cheap": "NA",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "True",
+          "predict_c_score_peers6": "1.0",
+          "metadata_item_id": "0abe4a7c91aafe11",
+          "metadata_track": "H",
+          "metadata_system": "human_original",
+          "metadata_kind": "conclusion",
+          "metadata_reference_fol": "¬Provide(hamdenPlazaSubway, takeOutService)",
+          "metadata_auto_class": "EQUIV",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "<12",
+            "words": 9,
+            "nq_bin": "<=1",
+            "depth_bin": "<=3",
+            "ncond_bin": "0",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.0,
+          "metadata_eq_frac_peers6": 0.0,
+          "metadata_eq_frac_nonoai": 0.0,
+          "metadata_eq_frac_llm2": null,
+          "metadata_medoid": "P1",
+          "metadata_medoid_fol": "¬TakeOut(hamdenPlazaSubway)",
+          "metadata_medoid_ops": [
+            "ADD",
+            "DROP"
+          ],
+          "metadata_medoid_support": 0.8,
+          "metadata_medoid_label": "ERROR",
+          "metadata_n_peers_parsed": 6,
+          "metadata_n_peers_total": 6,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": null,
+          "metadata_sc5_eq_frac_same": null,
+          "metadata_seconds_z3": 0.0,
+          "metadata_sentence_key": "the hamden plaza store does not provide takeout service"
+        }
+      ]
+    },
+    {
+      "dataset": "logiclm_folio_dev_trackL",
+      "examples": [
+        {
+          "input": "TEXT: Tom's license plate is from Istanbul.\nCANDIDATE FOL: ¬Istanbul(tom)",
+          "output": "UNCERTAIN_COMPOUND",
+          "predict_c_score": "0.875",
+          "predict_medoid_depth": "2",
+          "predict_cluster_entropy": "1.581094",
+          "predict_sc5_cheap": "1.0",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "True",
+          "predict_c_score_peers6": "0.833333",
+          "metadata_item_id": "00912344968acd65",
+          "metadata_track": "L",
+          "metadata_system": "text-davinci-003",
+          "metadata_kind": "conclusion",
+          "metadata_reference_fol": "∃x (Owns(tom, x) ∧ VehicleRegistrationPlateIn(x, istanbul))",
+          "metadata_auto_class": "COMPOUND",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "<12",
+            "words": 6,
+            "nq_bin": "<=1",
+            "depth_bin": "<=3",
+            "ncond_bin": "0",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.125,
+          "metadata_eq_frac_peers6": 0.16666666666666666,
+          "metadata_eq_frac_nonoai": 0.2,
+          "metadata_eq_frac_llm2": 0.0,
+          "metadata_medoid": "P2",
+          "metadata_medoid_fol": "IstanbulPlate(toms_plate)",
+          "metadata_medoid_ops": [
+            "BIND",
+            "NEG"
+          ],
+          "metadata_medoid_support": 0.14285714285714285,
+          "metadata_medoid_label": "UNCERTAIN_COMPOUND",
+          "metadata_n_peers_parsed": 8,
+          "metadata_n_peers_total": 8,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 0.0,
+          "metadata_sc5_eq_frac_cheap": 0.0,
+          "metadata_sc5_eq_frac_same": 0.0,
+          "metadata_seconds_z3": 0.001,
+          "metadata_sentence_key": "toms license plate is from istanbul"
+        },
+        {
+          "input": "TEXT: If a superhero movie is named after a character, that character is a good guy.\nCANDIDATE FOL: ∀x ∀y (SuperheroMovie(x) ∧ NamedAfter(x, y) → GoodGuy(y))",
+          "output": "CORRECT",
+          "predict_c_score": "0.375",
+          "predict_medoid_depth": "0",
+          "predict_cluster_entropy": "1.002718",
+          "predict_sc5_cheap": "1.0",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "False",
+          "predict_c_score_peers6": "0.166667",
+          "metadata_item_id": "0093af5f8509f6d0",
+          "metadata_track": "L",
+          "metadata_system": "gpt-4",
+          "metadata_kind": "premise",
+          "metadata_reference_fol": "∀x ∀y (SuperheroMovie(x) ∧ NamedAfter(x, y) → GoodGuy(y))",
+          "metadata_auto_class": "EQUIV",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "12-19",
+            "words": 15,
+            "nq_bin": "2",
+            "depth_bin": "4-5",
+            "ncond_bin": "1-2",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.625,
+          "metadata_eq_frac_peers6": 0.8333333333333334,
+          "metadata_eq_frac_nonoai": 0.8,
+          "metadata_eq_frac_llm2": 0.0,
+          "metadata_medoid": "P1",
+          "metadata_medoid_fol": "∀x ∀y (SuperheroMovie(x) ∧ NamedAfter(x, y) → GoodGuy(y))",
+          "metadata_medoid_ops": [],
+          "metadata_medoid_support": 0.5714285714285714,
+          "metadata_medoid_label": "CORRECT",
+          "metadata_n_peers_parsed": 8,
+          "metadata_n_peers_total": 8,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": 0.0,
+          "metadata_sc5_eq_frac_same": 0.0,
+          "metadata_seconds_z3": 0.009,
+          "metadata_sentence_key": "if a superhero movie is named after a character that character is a good guy"
+        },
+        {
+          "input": "TEXT: Walden contains knowledge.\nCANDIDATE FOL: Contain(walden, knowledge)",
+          "output": "CORRECT",
+          "predict_c_score": "0.125",
+          "predict_medoid_depth": "0",
+          "predict_cluster_entropy": "0.0",
+          "predict_sc5_cheap": "NA",
+          "predict_sc5_same": "0.4",
+          "predict_flag_medoid": "False",
+          "predict_c_score_peers6": "0.0",
+          "metadata_item_id": "00b1b9552be255b7",
+          "metadata_track": "L",
+          "metadata_system": "gpt-3.5-turbo",
+          "metadata_kind": "conclusion",
+          "metadata_reference_fol": "Contains(walden, knowledge)",
+          "metadata_auto_class": "VOCAB",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "<12",
+            "words": 3,
+            "nq_bin": "<=1",
+            "depth_bin": "<=3",
+            "ncond_bin": "0",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.875,
+          "metadata_eq_frac_peers6": 1.0,
+          "metadata_eq_frac_nonoai": 1.0,
+          "metadata_eq_frac_llm2": 0.5,
+          "metadata_medoid": "P5",
+          "metadata_medoid_fol": "ContainsKnowledge(walden)",
+          "metadata_medoid_ops": [],
+          "metadata_medoid_support": 1.0,
+          "metadata_medoid_label": "UNCERTAIN_GRAN",
+          "metadata_n_peers_parsed": 8,
+          "metadata_n_peers_total": 8,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": null,
+          "metadata_sc5_eq_frac_same": 0.6,
+          "metadata_seconds_z3": 0.005,
+          "metadata_sentence_key": "walden contains knowledge"
+        }
+      ]
+    },
+    {
+      "dataset": "malls_test_curated_trackH",
+      "examples": [
+        {
+          "input": "TEXT: A product is eco-friendly if it is made from sustainable materials, has a low carbon footprint, or encourages conservation of resources.\nCANDIDATE FOL: ∀x (Product(x) ∧ (SustainableMaterials(x) ∨ LowCarbonFootprint(x) ∨ EncouragesConservation(x)) → EcoFriendly(x))",
+          "output": "CORRECT",
+          "predict_c_score": "0.333333",
+          "predict_medoid_depth": "0",
+          "predict_cluster_entropy": "0.59827",
+          "predict_sc5_cheap": "1.0",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "False",
+          "predict_c_score_peers6": "0.333333",
+          "metadata_item_id": "0039a78a4874a842",
+          "metadata_track": "H",
+          "metadata_system": "human_original",
+          "metadata_kind": "malls",
+          "metadata_reference_fol": "∀x (Product(x) ∧ (SustainableMaterials(x) ∨ LowCarbonFootprint(x) ∨ EncouragesConservation(x)) → EcoFriendly(x))",
+          "metadata_auto_class": "EQUIV",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": ">=20",
+            "words": 21,
+            "nq_bin": "<=1",
+            "depth_bin": "4-5",
+            "ncond_bin": "1-2",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.6666666666666666,
+          "metadata_eq_frac_peers6": 0.6666666666666666,
+          "metadata_eq_frac_nonoai": 0.6,
+          "metadata_eq_frac_llm2": null,
+          "metadata_medoid": "P2",
+          "metadata_medoid_fol": "∀x (Product(x) ∧ (MadeFromSustainableMaterials(x) ∨ HasLowCarbonFootprint(x) ∨ EncouragesConservationOfResources(x)) → EcoFriendly(x))",
+          "metadata_medoid_ops": [],
+          "metadata_medoid_support": 0.6,
+          "metadata_medoid_label": "CORRECT",
+          "metadata_n_peers_parsed": 6,
+          "metadata_n_peers_total": 6,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": 0.0,
+          "metadata_sc5_eq_frac_same": null,
+          "metadata_seconds_z3": 0.016,
+          "metadata_sentence_key": "a product is ecofriendly if it is made from sustainable materials has a low carbon footprint or encourages conservation of resources"
+        },
+        {
+          "input": "TEXT: A beverage is classified as a soft drink if it does not contain alcohol and is typically carbonated.\nCANDIDATE FOL: ∀x (Beverage(x) ∧ ¬ContainsAlcohol(x) ∧ TypicallyCarbonated(x) → SoftDrink(x))",
+          "output": "CORRECT",
+          "predict_c_score": "0.0",
+          "predict_medoid_depth": "0",
+          "predict_cluster_entropy": "0.0",
+          "predict_sc5_cheap": "0.0",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "False",
+          "predict_c_score_peers6": "0.0",
+          "metadata_item_id": "04097a27e3868505",
+          "metadata_track": "H",
+          "metadata_system": "human_original",
+          "metadata_kind": "malls",
+          "metadata_reference_fol": "∀x (Beverage(x) ∧ ¬ContainsAlcohol(x) ∧ TypicallyCarbonated(x) → SoftDrink(x))",
+          "metadata_auto_class": "EQUIV",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "12-19",
+            "words": 18,
+            "nq_bin": "<=1",
+            "depth_bin": "4-5",
+            "ncond_bin": ">=3",
+            "exception": false
+          },
+          "metadata_eq_frac_full": 1.0,
+          "metadata_eq_frac_peers6": 1.0,
+          "metadata_eq_frac_nonoai": 1.0,
+          "metadata_eq_frac_llm2": null,
+          "metadata_medoid": "P1",
+          "metadata_medoid_fol": "∀x (Beverage(x) ∧ ¬ContainsAlcohol(x) ∧ TypicallyCarbonated(x) → SoftDrink(x))",
+          "metadata_medoid_ops": [],
+          "metadata_medoid_support": 1.0,
+          "metadata_medoid_label": "CORRECT",
+          "metadata_n_peers_parsed": 6,
+          "metadata_n_peers_total": 6,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": 1.0,
+          "metadata_sc5_eq_frac_cheap": 1.0,
+          "metadata_sc5_eq_frac_same": null,
+          "metadata_seconds_z3": 0.003,
+          "metadata_sentence_key": "a beverage is classified as a soft drink if it does not contain alcohol and is typically carbonated"
+        },
+        {
+          "input": "TEXT: A clock measures time, and a scale measures weight.\nCANDIDATE FOL: ∀x∀y (Clock(x) ∧ Scale(y) → (Measures(x, Time) ∧ Measures(y, Weight)))",
+          "output": "REF_UNPARSEABLE",
+          "predict_c_score": "1.0",
+          "predict_medoid_depth": "3",
+          "predict_cluster_entropy": "0.410116",
+          "predict_sc5_cheap": "1.0",
+          "predict_sc5_same": "NA",
+          "predict_flag_medoid": "True",
+          "predict_c_score_peers6": "1.0",
+          "metadata_item_id": "04d61a8b451a1317",
+          "metadata_track": "H",
+          "metadata_system": "human_original",
+          "metadata_kind": "malls",
+          "metadata_reference_fol": "∀x (Clock(x)  → (Measures(x, Time)) ∧ ∀y (Scale(y) → Measures(y, Weight))",
+          "metadata_auto_class": "REF_UNPARSEABLE",
+          "metadata_repair_ops": [],
+          "metadata_strata": {
+            "len_bin": "<12",
+            "words": 9,
+            "nq_bin": NaN,
+            "depth_bin": NaN,
+            "ncond_bin": NaN,
+            "exception": false
+          },
+          "metadata_eq_frac_full": 0.0,
+          "metadata_eq_frac_peers6": 0.0,
+          "metadata_eq_frac_nonoai": 0.0,
+          "metadata_eq_frac_llm2": null,
+          "metadata_medoid": "P1",
+          "metadata_medoid_fol": "∀x (Clock(x) → MeasuresTime(x)) ∧ ∀x (Scale(x) → MeasuresWeight(x))",
+          "metadata_medoid_ops": [
+            "COMPOUND"
+          ],
+          "metadata_medoid_support": 1.0,
+          "metadata_medoid_label": null,
+          "metadata_n_peers_parsed": 6,
+          "metadata_n_peers_total": 6,
+          "metadata_coverage_status": "ok",
+          "metadata_alignable_frac": null,
+          "metadata_sc5_eq_frac_cheap": 0.0,
+          "metadata_sc5_eq_frac_same": null,
+          "metadata_seconds_z3": 2.434,
+          "metadata_sentence_key": "a clock measures time and a scale measures weight"
+        }
+      ]
+    }
+  ]
+}

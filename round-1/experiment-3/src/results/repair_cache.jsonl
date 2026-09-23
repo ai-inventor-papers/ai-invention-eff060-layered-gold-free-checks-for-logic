@@ -1,0 +1,798 @@
+{"c": "American(boston)", "m": "City(boston) ∧ American(boston)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "American(boston) ∧ City(boston)", "m": "American(boston)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Cholangiocarcinoma(colorectalCancer) ∧ (MildFlu(colorectalCancer) ∨ BileDuctCancer(colorectalCancer))", "m": "(Cholangiocarcinoma(colorectalCancer) ∧ MildFlu(colorectalCancer)) ∨ BileDuctCancer(colorectalCancer)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "City(boston) ∧ American(boston)", "m": "American(boston)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "City(missoula) ∧ In(missoula, montana)", "m": "InState(missoula, montana)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Contain(mixture, carbon)", "m": "Contain(mixture, carbon)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "FliesFrom(john, LGA)", "m": "FliesFrom(john, LGA)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Fly(john, lga)", "m": "Flies(john, LGA)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Fly(john, lga, z)", "m": "Flies(john, LGA)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "FromIstanbul(joePlate)", "m": "Istanbul(joe)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "HomeTo(montana, missoula)", "m": "InState(missoula, montana)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "In(missoula, montana)", "m": "InState(missoula, montana)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "IsNovel(family_Secrets)", "m": "¬Novel(familySecrets)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "Istanbul(joe)", "m": "Istanbul(joe)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Istanbul(joePlate)", "m": "Istanbul(joe)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "NeedToEarnMoneyToHelpPayFor(hannah, collegeTuition)", "m": "EarnMoney(hannah)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Novel(familySecrets)", "m": "¬Novel(familySecrets)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "Orchestra(viennaMusicSociety) ∧ Premiere(viennaMusicSociety, symphonyNo9)", "m": "Premiere(viennaMusicSociety, symphonNo9)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Plate(joe) ∧ FromIstanbul(joe)", "m": "Istanbul(joe)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Premiere(viennaMusicSociety, symphonyNo9) ∧ Orchestra(viennaMusicSociety)", "m": "Premiere(viennaMusicSociety, symphonNo9)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "State(missoula, montana)", "m": "In(missoula, montana)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Novel(familySecrets)", "m": "¬Novel(familySecrets)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Begin34(x) → ¬Begin35(x)", "m": "∀x (Begin35(x) → ¬Begin34(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "∀x (Begin35(x) → ¬Begin34(x))", "m": "∀x (Begin35(x) → ¬Begin34(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (ArtisticExpression(x) ∧ InvolvesMovement(x) ∧ ¬Dance(x) → TheaterPerformance(x) ⊕ CircusAct(x))", "m": "FOL", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.08}
+{"c": "∀x (Winter(x) → Cold(x)) ∧ ∀y (Summer(y) → Hot(y))", "m": "FOL", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.07}
+{"c": "∀x (Tree(x) → (LosesLeavesInAutumn(x) ∨ RetainsLeavesThroughoutYear(x))) ∧ ∀y (EvergreenTree(y) → RetainsLeavesThroughoutYear(y))", "m": "FOL", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.11}
+{"c": "¬∃y(PartTimeJob(y) ∧ Have(james, y) ∧ OfferedBy(y, university))", "m": "¬HasPartTimeJob(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "∀x∀y (Clock(x) ∧ Scale(y) → (Measures(x, Time) ∧ Measures(y, Weight)))", "m": "FOL", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.19}
+{"c": "((Chaperone(bonnie) ∨ Perform(bonnie)) → (Young(bonnie) ∧ Wish(bonnie) ∧ Inactive(bonnie)))", "m": "(Chaperone(bonnie) ∨ (¬Chaperone(bonnie) ∧ Perform(bonnie))) → (Young(bonnie) ∧ Inactive(bonnie))", "depth": 1, "ops": ["DROP"], "secs": 0.01}
+{"c": "((Wish(bonnie) ∧ Chaperone(bonnie)) ∨ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ (Inactive(bonnie) ∧ Disinterested(bonnie)))", "m": "((Wish(bonnie) ∧ Chaperone(bonnie)) ⊕ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ Inactive(bonnie))", "depth": 1, "ops": ["DROP"], "secs": 0.01}
+{"c": "(CanCompose(george) ∧ WantsToCompose(george)) → WillCompose(george)", "m": "WantsToCompose(george) ∧ Compose(george) → Compose(george)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "(Compose(george) ∧ Wants(george, compose)) → Compose(george)", "m": "(Compose(george) ∧ Wants(george, compose)) → WillCompose(george)", "depth": 1, "ops": ["ADD"], "secs": 0.03}
+{"c": "(Contain(x, excessiveEroticContent) ∧ Contain(x, excessiveViolentContent)) ∨ InfrozenSeries(excessiveViolentContent)", "m": "ExcessiveContent(hachi) ∨ FrozenSeries(hachi)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.15}
+{"c": "((Child(bonnie) ∨ Teenager(bonnie)) ∧ Wish(bonnie) ∧ Chaperone(bonnie)) ⊕ ¬((Child(bonnie) ∨ Teenager(bonnie)) ∧ Wish(bonnie)) → (Student(bonnie) ∨ Inactive(bonnie))", "m": "((Wish(bonnie) ∧ Chaperone(bonnie)) ⊕ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ Inactive(bonnie))", "depth": 2, "ops": ["CONN", "NEG"], "secs": 0.31}
+{"c": "(Chaperone(bonnie) ∨ (¬Chaperone(bonnie) ∧ Perform(bonnie))) → (Wish(bonnie) ∧ Young(bonnie) ∧ Inactive(bonnie) ∧ Disinterested(bonnie))", "m": "(Chaperone(bonnie) ∨ (¬Chaperone(bonnie) ∧ Perform(bonnie))) → (Young(bonnie) ∧ Inactive(bonnie))", "depth": 2, "ops": ["DROP", "DROP"], "secs": 0.29}
+{"c": "(LikeMusic(george) ∧ AccesstoProgram(george)) → WillCompose(george)", "m": "(Likes(george, music) ∧ Access(george, program)) → compose(george)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.12}
+{"c": "(MountainRange(picuris) ∧ (In(picuris, newMexico) ∨ In(picuris, texas)))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.16}
+{"c": "(VisitGym(x) → Fulfill(x, nutritionalDailyIntakes))", "m": "∀x (VisitsGym(x) → FulfillsIntake(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "Alligator(ted)", "m": "Alligator(ted)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "AllowedToMoveInWith(tom, oliveGarden, fluffy)", "m": "AllowedToMoveInWith(tom, oliveGarden, fluffy)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "American(dani) ∧ NovelWriter(dani)", "m": "American(daniShapiro) ∧ Writer(daniShapiro, writer)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri)", "m": "American(yuri) ∧ BasketballPlayer(yuri)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "AmericanWriter(dani)", "m": "American(daniShapiro) ∧ Writer(daniShapiro, writer)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "AmericanWriter(daniShapiro)", "m": "American(daniShapiro) ∧ Writer(daniShapiro, writer)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "Animal(aurochs)", "m": "Animal(aurochs)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Animal(heckCattle)", "m": "∀x (HeckCattle(x) → Animal(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Begin34(joe)", "m": "BeginsWith34(joePlate)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "BingeWatch(karen, x) ↔ Download(x)", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "BingeWatch(karen, x) ↔ Download(x, karen)", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "BingeWatch(x, karen) ↔ Download(x)", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "Book(familyHistory) ∧ Novel(familyHistory)", "m": "Novel(family_history)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Book(familyHistory) ∧ WrittenBy(familyHistory, dani)", "m": "Written(familyHistory, daniShapiro)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Book(familyHistory) ∧ WrittenBy(familyHistory, daniShapiro)", "m": "Written(familyHistory, daniShapiro)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Book(neapolitanChronicles) ∧ In(neapolitanChronicles, english)", "m": "Language(neapolitanChronicles, english)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Book(palaceOfFlies) ∧ PublishHouse(newVesselPress)", "m": "Book(palaceOfFlies) ∧ Published(newVesselPress, palaceOfFlies)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Book(palaceOfFlies) ∧ Published(palaceOfFlies, newVesselPress)", "m": "Book(palaceOfFlies) ∧ Published(newVesselPress, palaceOfFlies)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Book(palaceOfFlies) ∧ PublishedBy(palaceOfFlies, newVesselPress)", "m": "Book(palaceOfFlies) ∧ Published(newVesselPress, palaceOfFlies)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Book(walden) ∧ Read(harry, walden)", "m": "Reads(harry, walden)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Born(ailtonSilva, year1995) ∧ KnownAs(ailtonSilva, ailton)", "m": "Born(ailtonSilva, year1995) ∧ KnownAs(ailtonSilva, ailton)", "depth": 2, "ops": ["CONN", "CONN"], "secs": 0.0}
+{"c": "BreedingBack(breedingBack) ∧ SelectiveBreeding(breedingBack) ∧ DomesticAnimal(breedingBack)", "m": "∀x (BreedingBack(x) → ArtificialSelection(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "BreedingBack(breedingBack) ∧ SelectiveBreeding(breedingBack, domesticAnimal)", "m": "∀x (BreedingBack(x) → ArtificialSelection(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "(MountainRange(picuris) ∧ In(picuris, newMexico)) ⊕ (MountainRange(picuris) ∧ In(picuris, texas))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.35}
+{"c": "BreedingBack(breedingBack) ∧ ∀x (SelectiveBreeding(x, y) → Animal(x))", "m": "∀x (BreedingBack(x) → ArtificialSelection(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.12}
+{"c": "CanBlock(peter, windy)", "m": "CanBlock(peter, windy)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Capital(beijing, china)", "m": "Capital(beijing, china)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Cat(fluffy) ∧ Owner(tom, fluffy)", "m": "Cat(fluffy) ∧ Owns(tom, fluffy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Cat(fluffy) ∧ Tom(fluffy)", "m": "Cat(fluffy) ∧ Owns(tom, fluffy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "((Young(bonnie) ∧ Chaperone(bonnie)) ⊕ ¬(Young(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ⊕ Inactive(bonnie))", "m": "((Wish(bonnie) ∧ Chaperone(bonnie)) ⊕ ¬(Wish(bonnie) ∨ Chaperone(bonnie))) → (Student(bonnie) ∨ Inactive(bonnie))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.76}
+{"c": "Club(fluminense)", "m": "Club(fluminense)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "(MountainRange(picuris) ∧ Location(picuris, newMexico)) ⊕ (MountainRange(picuris) ∧ Location(picuris, texas))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.37}
+{"c": "ComplainAboutOften(luke, annoyingSiblings)", "m": "ComplainOften(luke)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "BreedingBack(breedingBack) ∧ ∀x (SelectiveBreeding(x, y) → BreedingBack(x))", "m": "∀x (BreedingBack(x) → ArtificialSelection(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.12}
+{"c": "Composer(beethoven)", "m": "Composer(beethoven)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Created(dani, familySecrets)", "m": "Created(dani_shapiro, family_secrets) ∧ Podcast(family_secrets)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "Compose(george) ∧ Want(george, compose) → Compose(george)", "m": "(Compose(george) ∧ Wants(george, compose)) → WillCompose(george)", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "DaniShapiro(dani) ∧ American(dani) ∧ Writer(dani)", "m": "American(daniShapiro) ∧ Writer(daniShapiro, writer)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Cat(fluffy) ∧ Tom(tom) ∧ Fluffy(fluffy)", "m": "Cat(fluffy) ∧ Owns(tom, fluffy)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "Donate(hardingPegmatiteMine, picuris) ∧ Mine(hardingPegmatiteMine)", "m": "Mine(harding) ∧ LocatedIn(harding, picuris) ∧ Donated(harding)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "Cupcake(driedThaiChili) ∧ Product(driedThaiChili) ∧ From(driedThaiChili, bakedByMelissa)", "m": "∀x (DriedThaiChilies(x) → ¬(Cupcake(x) ∧ ProductOfBakedByMelissa(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "Duster(duster) ∧ ¬Suck(duster)", "m": "HouseholdAppliance(duster) ∧ Duster(duster) ∧ ¬Suck(duster)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "Duster(duster) ∧ HouseholdAppliance(duster) ∧ ¬Suck(duster)", "m": "∃x (Duster(x) ∧ HouseholdAppliance(x) ∧ ¬Suck(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "Eastern(tom)", "m": "Ocellated(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "EasternWildTurkey(tom)", "m": "Ocellated(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "English(neapolitanChronicles)", "m": "Language(neapolitanChronicles, english)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Duster(duster) ∧ ¬Suck(duster)", "m": "∃x (Duster(x) ∧ HouseholdAppliance(x) ∧ ¬Suck(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "Evocative(x) ∧ Dreamy(x)", "m": "Evocative(max) ∧ Dreamy(max)", "depth": 2, "ops": ["BIND", "BIND"], "secs": 0.01}
+{"c": "Extinct(aurochs)", "m": "Extinct(aurochs)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "False", "m": "OnMondayAt8pm(breakingBad)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Evocative(designByMax) ∨ Dreamy(designByMax)", "m": "∀x (DesignBy(x, max) → Evocative(x) ∨ Dreamy(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "False", "m": "PublishedBy(newVesselPress, harryPotter)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "False", "m": "RomanceLanguage(german)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "False", "m": "TranslateFrom(palaceOfFlies, italian)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "FliesFrom(susan, LGA)", "m": "FliesFrom(susan, LGA)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "FliesTo(john, LGA)", "m": "FliesTo(john, LGA)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Fly(john, lga, lga)", "m": "FliesTo(john, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "FlyFrom(susan, lgaAirport)", "m": "Flies(susan, LGA)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Fly(susan, lga, z)", "m": "Flies(susan, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "FlyTo(john, lgaAirport)", "m": "FliesTo(john, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "From(marvin, earth) → Alien(marvin)", "m": "¬FromEarth(Marvin) → Extraterrestrial(Marvin)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "FromIstanbul(tomPlate)", "m": "¬FromIstanbul(tom)", "depth": 2, "ops": ["BIND", "NEG"], "secs": 0.0}
+{"c": "Gains(harry, knowledge)", "m": "ContainsKnowledge(walden)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "German(heinrichSchmidt) ∨ Russian(heinrichSchmidt)", "m": "German(heinrichSchmidt) ∨ Russian(heinrichSchmidt)", "depth": 2, "ops": ["CONN", "CONN"], "secs": 0.0}
+{"c": "GrandSlam(djokovic) ∧ Champion(djokovic)", "m": "GrandSlam(djokovic)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "From(marvin, earth) → ¬Alien(marvin)", "m": "¬FromEarth(Marvin) → Extraterrestrial(Marvin)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "GreatShooter(windy)", "m": "GreatShooter(windy)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Grumpy(tom)", "m": "Grumpy(tom)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "GymVisitor(taylor)", "m": "VisitsGym(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "HangOut(luke, siblings) ∧ Play(luke, siblings)", "m": "SpendTimeWithSiblings(luke)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Donate(hardingPegmatiteMine, picuris) ∧ Mine(hardingPegmatiteMine) ∧ Location(hardingPegmatiteMine, picuris)", "m": "Mine(harding) ∧ LocatedIn(harding, picuris) ∧ Donated(harding)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "Have(john, largeFamily)", "m": "LargerFamily(John)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "HouseholdAppliance(duster) ∧ ¬Suck(duster)", "m": "HouseholdAppliance(duster) ∧ Duster(duster) ∧ ¬Suck(duster)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "HangOut(luke, y) ∧ Play(luke, y)", "m": "SpendTimeWithSiblings(luke)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Human(humans) ∧ Teeth(humans)", "m": "HasTeeth(human)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "InEnglish(neapolitanChronicles)", "m": "Language(neapolitanChronicles, english)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Includes(diamondMine, creedBrothers) ∧ Includes(diamondMine, ivyNile)", "m": "Includes(diamondMine, creedBrothers) ∧ Includes(diamondMine, ivyNile)", "depth": 2, "ops": ["CONN", "CONN"], "secs": 0.0}
+{"c": "IndoEuropeanLanguage(french)", "m": "IndoEuropeanLanguage(french)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "International(mike) ∧ US(mike)", "m": "InternationalStudent(mike)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "InternationalStudent(mike)", "m": "InternationalStudent(mike)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Istanbul(tomPlate)", "m": "¬FromIstanbul(tom)", "depth": 2, "ops": ["BIND", "NEG"], "secs": 0.0}
+{"c": "InThisClub(bonnie) ∧ (Perform(bonnie, schoolTalentShow))", "m": "Perform(Bonnie)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "LanguageGeneration(machineTranslation)", "m": "LanguageGeneration(machineTranslation)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "LargestUniversityEndowmentOf(yale, anyEducationalInstitution)", "m": "Endowment(yale, largest)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Lead(roderickStrong, diamondMine)", "m": "Lead(roderickStrong, diamondMine)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Leads(roderick, stable)", "m": "Lead(roderickStrong, diamondMine)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "James ∧ WorkInLab(james)", "m": "Student(james) ∧ WorksInLab(james)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Left(robertLewandowski, bayernMunchen)", "m": "Left(robertLewandowski, bayernMunchen)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "LiveInTaxHaven(djokovic)", "m": "LiveInTaxHaven(djokovic)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Located(barutinCove, snowIsland) ∧ Located(snowIsland, southShetlandIslands)", "m": "LocatedIn(barutinCove, snowIsland)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "LiveIn(djokovic, taxHaven)", "m": "TaxHaven(djokovic)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Located(beijing, northernChina)", "m": "Located(beijing, northernChina)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "LocatedIn(barutinCove, snowIsland)", "m": "LocatedIn(barutinCove, snowIsland)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "LocatedIn(barutinCove, snowIsland) ∧ Island(snowIsland)", "m": "LocatedIn(barutinCove, snowIsland)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Location(picuris, newMexico) ∧ Visit(juanDeOnate, picuris)", "m": "∃x (Visit(juan, x) ∧ MountainRange(x) ∧ In(x, newMexico))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "MachineTranslation(machineTranslation)", "m": "NLPTask(machineTranslation)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "MadeBy(fifa22, japaneseGameCompany)", "m": "∃x (JapaneseCompany(x) ∧ Created(x, fifa22))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "MalaHotpot(driedThaiChili)", "m": "MalaHotpot(driedThaiChili)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Mammal(human)", "m": "Mammal(human)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Mammal(humans)", "m": "Mammal(humans)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Location(hardingPegmatiteMine, picuris) ∧ Donate(hardingPegmatiteMine, picuris)", "m": "Mine(harding) ∧ LocatedIn(harding, picuris) ∧ Donated(harding)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "Man(peter) ∧ Taller(peter, michael)", "m": "Taller(peter, michael)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "ManagedBuilding(oliveGarden)", "m": "ManagedBuilding(oliveGarden)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Mammal(platypus) ∧ (¬Have(platypus, teeth))", "m": "∀x (Platypus(x) → (Mammal(x) ∧ ¬HasTeeth(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "Medals(unitedStates, most) ∧ In(most, tokyo)", "m": "MostMedals(unitedStates, tokyo)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.01}
+{"c": "Manager(james) → ¬Work(james, home)", "m": "(Manager(james) ∨ InOtherCountries(james)) → ¬(LunchAtHome(james) ∨ WorkRemote(james))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "Medals(us, mostMedals) ∧ Tokyo(mostMedals)", "m": "MostMedals(unitedStates, tokyo)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "Medals(us, most) ∧ US(us) ∧ Tokyo(lastOlympicGames)", "m": "MostMedals(unitedStates, tokyo)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "Mine(harding) ∧ LocatedIn(harding, picuris) ∧ Donated(harding)", "m": "Mine(harding) ∧ LocatedIn(harding, picuris) ∧ Donated(harding)", "depth": 2, "ops": ["CONN", "CONN"], "secs": 0.0}
+{"c": "Mine(hardingPegmatite) ∧ In(hardingPegmatite, picuris) ∧ Donated(hardingPegmatite)", "m": "Mine(harding) ∧ LocatedIn(harding, picuris) ∧ Donated(harding)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "Member(creedBrothers, diamondMine) ∧ Member(ivyNile, diamondMine)", "m": "Includes(diamondMine, creedBrothers) ∧ Includes(diamondMine, ivyNile)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "Model(stateOfTheArt) ∧ Train(stateOfTheArt, machineLearning)", "m": "∃x (TextSummarization(x) ∧ TrainedWith(x, machineLearning))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "Monday8pm(breakingBad)", "m": "TimeSlot(breakingBad, monday8pm)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Monday8pmRose(breakingBad)", "m": "GivenOutOnTV(breakingBad) ∧ Rose(breakingBad)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "MostActivePlayerIn(cocoGauff, majorTennis)", "m": "ActivePlayer(cocogauff)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "ClumsyFoodie(peter) ∨ (∃y (FamilyOf(y, peter) ∧ Prioritize(y, order) ∧ Prioritize(y, spotlessness)))", "m": "ClumsyFoodie(peter) ⊕ FamilyPrioritizes(peter)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.52}
+{"c": "MountainRange(picuris) ∧ (In(picuris, newMexico) ∨ In(picuris, texas))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.15}
+{"c": "GrowthStock(kO) ∨ BoughtToEarnProfitFrom(kO, earnProfit, rapidPriceAppreciation) → ¬Stock(kO) ∧ ¬BoughtToEarnProfitFrom(kO, rapidPriceAppreciation)", "m": "(GrowthStock(ko) ∨ BoughtForProfit(ko)) → (¬Stock(ko) ∧ ¬Volatile(ko))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.41}
+{"c": "MountainRange(picuris) ∧ (Location(picuris, newMexico) ∨ Location(picuris, texas))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "Move(yale, newHaven)", "m": "Move(yale, newHaven) ∧ year1716", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "Move(yale, newHaven) ∧ Move(yale, year1716)", "m": "MoveTo(yale, newHaven)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Move(yale, newHaven) ∧ Publish(methodOfStudyingGregorianChant, year1716)", "m": "MoveTo(yale, newHaven)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Move(yale, newHaven, year1716)", "m": "Move(yale, newHaven) ∧ year1716", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "Moved(yale, newHaven, year1716)", "m": "Move(yale, newHaven) ∧ year1716", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "NLP(machineTranslation)", "m": "NaturalLanguageProcessing(machineTranslation)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "NLP(machineTranslation) ∧ Translation(machineTranslation)", "m": "NLPTask(machineTranslation)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Name(surprisingAdventuresOfSirDigbyChickenCaesar, sirDigby)", "m": "NamedAfter(surprisingAdventuresOfSirDigbyChickenCaesar, sirDigby)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "NamedAfter(surprisingAdventures, digby)", "m": "NamedAfter(surprisingAdventuresOfSirDigbyChickenCaesar, sirDigby)", "depth": 2, "ops": ["BIND", "SWAP"], "secs": 0.0}
+{"c": "Nemesis(sirDigby, nemesis)", "m": "Fights(sirDigby, nemesis)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "NotablyTidy(peter)", "m": "NotablyTidy(peter)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Ocellated(tom)", "m": "Ocellated(tom)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "OcellatedWildTurkey(tom)", "m": "Ocellated(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "OliveGarden(theOliveGarden)", "m": "ManagedBuilding(oliveGarden)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "MountainRange(picuris) ∧ (Location(picuris, newMexico) ⊕ Location(picuris, texas))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "Orchestra(viennaMusicSociety)", "m": "Orchestra(viennaMusicSociety)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Output(textSequence, machineTranslation)", "m": "OutputIsTextSequence(MachineTranslation)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "OliveGarden(x) ∧ ManagedBuilding(x)", "m": "ManagedBuilding(oliveGarden)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.0}
+{"c": "Owner(tom)", "m": "Owns(tom, pet)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Owns(tom, pet)", "m": "Owner(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Person(harry) ∧ Book(walden) ∧ Read(harry, walden)", "m": "Reads(harry, walden)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Output(textSequence, machineTranslation) ∧ TextSequence(textSequence)", "m": "OutputIsTextSequence(MachineTranslation)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.01}
+{"c": "Pet(ted)", "m": "¬Pet(ted)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "PetOwner(tom)", "m": "Grumpy(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "PetOwner(tom)", "m": "Owns(tom, pet)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Plate(tom) ∧ ¬Begin34(tom)", "m": "BeginsWith35(tomPlate)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "PlayFor(robert, bayernMunchen)", "m": "¬Play(robertLewandowski, bayernMunchen)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "PlaysFor(robertLewandowski, bayernMunchen)", "m": "¬Play(robertLewandowski, bayernMunchen)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "Plunger(plunger) ∧ Suck(plunger)", "m": "Suck(plunger)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Podcast(familySecrets) ∧ Created(familySecrets, dani)", "m": "Created(dani_shapiro, family_secrets) ∧ Podcast(family_secrets)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Podcast(familySecrets) ∧ CreatedBy(familySecrets, dani)", "m": "Created(dani_shapiro, family_secrets) ∧ Podcast(family_secrets)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Popular(blackMirror)", "m": "Netflix(blackMirror)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Popular(blackMirror)", "m": "Popular(blackMirror)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Popular(strangerThings)", "m": "Netflix(strangerThings) ∧ Popular(strangerThings)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "PrivateCompany(harvardWeeklyBookClub) → LegalObligation(harvardWeeklyBookClub) ⊕ CreatedUnderLaw(harvardWeeklyBookClub)", "m": "PrivateCompany(harvardWeeklyBookClub) → LegalObligations(harvardWeeklyBookClub) ∨ CreatedUnderLaw(harvardWeeklyBookClub)", "depth": 1, "ops": ["CONN"], "secs": 0.0}
+{"c": "PrivateIvyLeagueResearchUniversity(yale)", "m": "Private(yaleUniversity) ∧ IvyLeague(yaleUniversity) ∧ ResearchUniversity(yaleUniversity)", "depth": 2, "ops": ["ADD", "ADD"], "secs": 0.0}
+{"c": "Product(driedThaiChili) ∧ From(driedThaiChili, bakedByMelissa)", "m": "ProductOfBakedByMelissa(DriedThaiChilies)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Provide(ETS, financialAid)", "m": "∀x (Applicant(x, gre) ∧ EconomicHardship(x) → FinancialAid(ets, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "ProvidesFinancialAidTo(eTS, tom)", "m": "Provides(ets, financialAid, tom)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "MountainRange(picurisMountains) ∧ (In(picurisMountains, newMexico) ∨ In(picurisMountains, texas))", "m": "(MountainRange(picuris) ∧ LocatedIn(picuris, newmexico)) ∨ (MountainRange(picuris) ∧ LocatedIn(picuris, texas))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.16}
+{"c": "Publish(palaceOfFlies, newVesselPress)", "m": "Book(palaceOfFlies) ∧ Published(newVesselPress, palaceOfFlies)", "depth": 2, "ops": ["ADD", "SWAP"], "secs": 0.0}
+{"c": "PublishedBy(harryPotter, newVesselPress)", "m": "PublishedBy(newVesselPress, harryPotter)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Rated(x, generalAudience)", "m": "RatedGA(hachi)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Read(harry, walden) ∧ Book(walden) ∧ Author(henryThoreau, walden)", "m": "Reads(harry, walden)", "depth": 2, "ops": ["DROP", "DROP"], "secs": 0.01}
+{"c": "RegularlyEat(taylor, salad)", "m": "Salads(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Read(harry, walden) ∧ Book(walden) ∧ Author(walden, henryThoreau)", "m": "Reads(harry, walden)", "depth": 2, "ops": ["DROP", "DROP"], "secs": 0.01}
+{"c": "Reptile(platypus)", "m": "¬∃x (Platypus(x) ∧ Reptile(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "ResidentialCollege(piersonCollege)", "m": "ResidentialCollege(pierson, yale)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Model(textSummarization) ∧ ∃x (Category(x, machineLearning) ∧ Train(x, textSummarization))", "m": "∃x (TextSummarization(x) ∧ TrainedWith(x, machineLearning))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.37}
+{"c": "ResidentialCollege(piersonCollege) ∧ At(piersonCollege, yale)", "m": "ResidentialCollege(pierson)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "RomanceLanguage(basque)", "m": "RomanceLanguage(basque)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "RomanceLanguage(german)", "m": "RomanceLanguage(german)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Russian(vladimir) ∧ FederationOfficial(vladimir)", "m": "RussianFederationOfficial(vladimir)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "SaladEater(taylor)", "m": "EatsSalads(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "ScriptEditor(andrewCollins, badults)", "m": "ScriptEditor(andrewCollins, badults)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "ResidentialCollege(piersonCollege, yale)", "m": "ResidentialCollege(pierson)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "ScriptEditor(andrewCollins, secretDudeSociety)", "m": "ScriptEditor(andrewCollins, badults) ∧ Title(badults, theSecretDudeSociety)", "depth": 2, "ops": ["ADD", "BIND"], "secs": 0.0}
+{"c": "ScriptEditor(andrewCollins, theSecretDudeSociety)", "m": "ScriptEditor(andrewCollins, badults) ∧ Title(badults, theSecretDudeSociety)", "depth": 2, "ops": ["ADD", "BIND"], "secs": 0.01}
+{"c": "SecondLargestChineseCity(beijing)", "m": "¬(Size(beijing, secondLargest))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "SevereCancer(colorectalCancer)", "m": "SevereCancer(colorectalCancer)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "SixWayTie(descampe)", "m": "Tie(descampe, leaderboardDuMaurierClassic1992)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "SoccerPlayer(robertLewandowski)", "m": "SoccerPlayer(robertLewandowski)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "SoloEV(johnsCar) ∧ Car(johnsCar)", "m": "SoloEV(johns_car)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Space(space)", "m": "Vacuum(space)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Space(space) ∧ Vacuum(space)", "m": "Vacuum(space)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "SpendTime(luke, playingWith, siblings)", "m": "SpendTimeWithSiblings(luke)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "SportingEvent(champs)", "m": "SportingEvent(worldChampionships)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "SportingEvent(worldChampionships)", "m": "SportingEvent(worldChampionships)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Stable(diamondMine) ∧ WWE(diamondMine)", "m": "WrestlingStable(diamondMine) ∧ FormedIn(diamondMine, wwe)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Star(robertLewandowski)", "m": "Star(robertLewandowski)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Striker(robert) ∧ Player(robert)", "m": "Striker(robertLewandowski)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Striker(robertLewandowski)", "m": "Striker(robertLewandowski)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Student(james) ∧ LongVacation(james)", "m": "WantLongVacation(james)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Suck(plunger)", "m": "Suck(plunger)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Suck(space)", "m": "Suck(space)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Suck(vacuum)", "m": "Suck(vacuum)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Suck(vampire)", "m": "Suck(vampire)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Season(spring) ∧ Season(summer) ∧ Season(fall) ∧ Season(winter)", "m": "∀y (Seasons(y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "SuperheroMovie(surprisingAdventuresOfSirDigbyChickenCaesar)", "m": "SuperheroMovie(surprisingAdventuresOfSirDigbyChickenCaesar)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Symptom(coughing, monkeypox)", "m": "Symptom(coughing, monkeypox)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Take(james, databaseCourse)", "m": "Database(james)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "TakeDatabaseCourse(james) ⊕ PartTimeJob(james)", "m": "TakesDatabaseCourse(james) ∨ HasPartTimeJob(james)", "depth": 1, "ops": ["CONN"], "secs": 0.0}
+{"c": "SummarizationModel(model) ∧ Train(model, MLAlgorithm)", "m": "∃x (TextSummarization(x) ∧ TrainedWith(x, machineLearning))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "Taller(peter, michael)", "m": "Taller(peter, michael)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.01}
+{"c": "TaxHaven(djokovic)", "m": "TaxHaven(djokovic)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Terricolous(kiki)", "m": "Terricolous(kiki)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "TeslaModel3(johnsCar)", "m": "TeslaModel3(johnsCar)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Tie(descampe, duMaurierClassic1992)", "m": "Tie(descampe, duMaurierClassic1992)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Tie(descampe, leaderboardDuMaurierClassic1992)", "m": "Tie(descampe, six)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "Train(stateOfTheArtTextSummarizationModel, machineLearningAlgorithm) ∧ MachineLearningAlgorithm(machineLearningAlgorithm)", "m": "∃x (TextSummarization(x) ∧ TrainedWith(x, machineLearning))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "Train(supervisedLearning, stateOfTheArtTextSummarizationModel)", "m": "∃x (Supervised(x) ∧ Trains(textSumModel, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Translate(palaceOfFlies, italian, english)", "m": "TranslateFrom(palaceOfFlies, italian)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Uncertain", "m": "Born(daniShapiro, boston)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Uncertain", "m": "Endowment(yale, largest)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Uncertain", "m": "Star(robertLewandowski)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Uncertain", "m": "∃x (JapaneseCompany(x) ∧ Created(x, fifa22))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Understanding(machineTranslation)", "m": "Understanding(machineTranslation)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "UnitedStates(unitedStates) ∧ MostMedals(unitedStates, tokyo)", "m": "MostMedals(unitedStates, tokyo)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "University(yale) ∧ Private(yale) ∧ IvyLeague(yale) ∧ Research(yale)", "m": "Private(yaleUniversity) ∧ IvyLeague(yaleUniversity) ∧ ResearchUniversity(yaleUniversity)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "University(yale) ∧ Private(yale) ∧ IvyLeague(yale) ∧ Research(yale) ∧ Move(yale, newHaven)", "m": "Private(yale) ∧ IvyLeague(yale) ∧ ResearchUniversity(yale) ∧ MoveTo(yale, newHaven)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Vacation(james)", "m": "WantsLongVacation(james)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Vacuum(space)", "m": "Vacuum(space)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Vacuum(vacuum) ∧ Suck(vacuum)", "m": "Suck(vacuum)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Vampire(space)", "m": "Vampire(space)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Vampire(vampire) ∧ Suck(vampire)", "m": "Suck(vampire)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "PickyEater(hannah) ⊕ (Spend(hannah, aLotOfTime, eating) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall))", "m": "AtMarysSchool(hannah) ∧ (¬PickyEater(hannah) ∨ (PickyEater(hannah) → SpendTimeEating(hannah)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.37}
+{"c": "VisitDaily(taylor, gym)", "m": "VisitsGym(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Visited(juan, picuris)", "m": "Visited(juan, picuris)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Visit(juan, y) ∧ MountainRange(y) ∧ In(y, texas)", "m": "Visited(juan, x) ∧ MountainRange(x) ∧ LocatedIn(x, texas)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.15}
+{"c": "WildTurkey(joey)", "m": "WildTurkey(joey)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "WildTurkey(tom)", "m": "WildTurkey(tom)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "Want(george, compose) ∧ Compose(george) → Compose(george)", "m": "(Compose(george) ∧ Wants(george, compose)) → WillCompose(george)", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "WinMost(unitedStates, tokyo)", "m": "MostMedals(unitedStates, tokyo)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Winner(steinhauer, duMaurierClassic1992)", "m": "Winner(steinhauer, duMaurierClassic1992)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "Win(unitedStates, x) ∧ Tokyo(x) ∧ Medals(x)", "m": "MostMedals(unitedStates, tokyo)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "Winner(steinhauer, duMaurierClassic1992) ∧ Participate(steinhauer, duMaurierClassic1992)", "m": "Winner(steinhauer, duMaurierClassic1992)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "WorkInLab(james)", "m": "Student(james) ∧ WorksInLab(james)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "WritesNovel(dani_Shapiro)", "m": "Writer(daniShapiro, novel)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬(AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri))", "m": "¬(ProfessionalBasketballPlayer(yuri) ∧ American(yuri))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "¬(AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri)) → (Professional(yuri) ∧ BasketballPlayer(yuri))", "m": "¬(American(yuri) ∧ BasketballPlayer(yuri)) → BasketballPlayer(yuri)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Taller(michael, x) ∧ ∀x (Class(x, michael) → Taller(michael, x))", "m": "∀x ∀y ((Man(x) ∧ Man(y) ∧ Taller(x, y)) → CanBlock(x, y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.32}
+{"c": "¬(BornIn(luke, multipleBirth) ∨ ComplainAbout(luke, often, annoyingSiblings) )", "m": "¬BornInMultipleBirth(luke) ∧ ¬Complain(luke)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "¬(GrewUpHealthy(taylor) ∨ GymVisitor(taylor))", "m": "¬GrewUpHealthConscious(taylor) ∧ ¬VisitsGym(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬(HealthConscious(taylor) ∧ Gym(taylor))", "m": "¬GrewUpHealthConscious(taylor) ∧ ¬VisitsGym(taylor)", "depth": 1, "ops": ["CONN"], "secs": 0.0}
+{"c": "¬((Contain(x, excessiveEroticContent) ∧ Contain(x, excessiveViolentContent)) ⊕ InfrozenSeries(excessiveViolentContent))", "m": "(ExcessiveContent(hachi) ∧ FrozenSeries(hachi)) ⊕ ¬(ExcessiveContent(hachi) ∨ FrozenSeries(hachi))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.11}
+{"c": "¬(Jump(michael) ∧ Shooting(windy))", "m": "¬CanBlock(michael, windy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "¬(LocatedIn(harding, newMexico) ∧ MountainRange(newMexico))", "m": "¬LocatedIn(harding, newmexico)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "¬(ClumsyFoodie(peter) ⊕ (∃y (FamilyOf(y, peter) ∧ Prioritize(y, order) ∧ Prioritize(y, spotlessness))))", "m": "(ClumsyFoodie(peter) ∧ FamilyPrioritizes(peter)) ⊕ (¬ClumsyFoodie(peter) ∧ ¬FamilyPrioritizes(peter))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.22}
+{"c": "¬(Product(driedThaiChili) ∧ From(driedThaiChili, bakedByMelissa))", "m": "¬ProductOfBakedByMelissa(DriedThaiChilies)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬(Product(driedThaiChili) ∧ From(driedThaiChili, bakedByMelissa)) ∧ ¬BakedSweet(driedThaiChili)", "m": "∀x (DriedThaiChili(x) → ¬ProductOfBakedByMelissa(x) ∧ ¬BakedSweet(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "¬(Russian(vladimir) ∧ FederationOfficial(vladimir))", "m": "¬OfficialRF(vladimir)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬(SoloEV(johnsCar) ∧ Car(johnsCar))", "m": "¬SoloEV(johnsCar)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "¬(Turtle(rockie) ∧ Squirrel(rockie)) → Cute(rockie) ⊕ Skittish(rockie)", "m": "¬(Turtle(rockie) ∧ Squirrel(rockie)) → Cute(rockie) ∨ Skittish(rockie)", "depth": 1, "ops": ["CONN"], "secs": 0.0}
+{"c": "¬(Invertebrate(harry) ⊕ With(harry, backbone)) → ¬Invertebrate(harry) ∧ ¬QueenBee(harry)", "m": "((Vertebrate(harry) ∧ Backbone(harry)) ⊕ ¬(Vertebrate(harry) ∨ Backbone(harry))) → ¬(Invertebrate(harry) ∨ Queen(harry))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.46}
+{"c": "¬Block(peter, windy)", "m": "CanBlock(peter, windy)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Compose(george) → ¬Compose(george)", "m": "¬Will(george, compose) → ¬Can(george, compose)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "¬Conductor(beethoven)", "m": "¬Conductor(beethoven)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Download(blackMirror, karen)", "m": "¬Download(karen, blackMirror)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "¬Download(karen, blackMirror)", "m": "¬Download(karen, blackMirror)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "¬Eastern(tom)", "m": "Ocellated(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Flies(john, LGA)", "m": "FliesTo(john, lga)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Fly(susan, lga)", "m": "Flies(susan, LGA)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬FromEarth(marvin) → Alien(marvin)", "m": "¬FromEarth(Marvin) → Extraterrestrial(Marvin)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬GrowthStock(kO)", "m": "MatureStock(ko) ∧ GrowthStock(ko)", "depth": 2, "ops": ["ADD", "NEG"], "secs": 0.0}
+{"c": "¬Grumpy(tom)", "m": "Grumpy(tom)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬In(hardingPegmatite, newMexico)", "m": "¬LocatedIn(harding, newmexico)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Istanbul(tom)", "m": "IstanbulPlate(toms_plate)", "depth": 2, "ops": ["BIND", "NEG"], "secs": 0.0}
+{"c": "¬J1Visa(mike)", "m": "HasJ1(mike)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬LanguageUnderstanding(machineTranslation)", "m": "LanguageUnderstandingTask(MachineTranslation)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬LastSummerOlympics(tokyo)", "m": "¬In(lastSummerOlympicGames, tokyo)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Lead(roderickStrong, creedBrothers)", "m": "Lead(roderick, creedBrothers)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬LeapStraightIntoAir(yuri) → (AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri))", "m": "(¬Leap(yuri) → (American(yuri) ∧ BasketballPlayer(yuri)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "¬LiveIn(djokovic, taxHaven)", "m": "¬TaxHaven(djokovic)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬LiveInTaxHaven(djokovic)", "m": "¬LiveInTaxHaven(djokovic)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬LoanedOut(ailton, club)", "m": "¬∃y (Loaned(ailton, y) ∧ FootballClub(y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Located(beijing, southernChina)", "m": "Located(beijing, southernChina)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬LocatedIn(barutinCove, antarctica)", "m": "¬Located(barutinCove, antartica)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "¬Location(hardingPegmatiteMine, newMexico)", "m": "¬LocatedIn(harding, newmexico)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬LunchCompany(james)", "m": "¬LunchCompany(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Monkey(rock)", "m": "Monkey(Rock)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Novel(familySecrets)", "m": "¬(Novel(x) ∧ Podcast(x))", "depth": 2, "ops": ["ADD", "BIND"], "secs": 0.0}
+{"c": "¬Novel(familySecrets) ∧ Podcast(familySecrets)", "m": "¬(Novel(x) ∧ Podcast(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "¬On(breakingBad, monday8pm)", "m": "OnMondayAt8pm(breakingBad)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬PartTimeJob(james)", "m": "HasPartTimeJob(james)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Perform(bonnie)", "m": "Perform(Bonnie)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Pet(ted)", "m": "¬Pet(ted)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Play(robertLewandowski, bayernMunchen)", "m": "¬Play(robertLewandowski, bayernMunchen)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "¬Player(robert, bayernMunchen)", "m": "¬PlayFor(robert, bayernMunchen)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Plays(ailtonSilva, fluminense)", "m": "Plays(ailtonSilva, fluminense)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬PlaysFor(ailtonSilva, fluminense)", "m": "Plays(ailtonSilva, fluminense)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Podcast(novel)", "m": "¬(Novel(x) ∧ Podcast(x))", "depth": 2, "ops": ["ADD", "BIND"], "secs": 0.0}
+{"c": "¬Podcast(x) → Novel(x)", "m": "¬(Novel(x) ∧ Podcast(x))", "depth": 1, "ops": ["REV"], "secs": 0.0}
+{"c": "¬Podcast(x) ∧ Novel(x)", "m": "¬(Novel(x) ∧ Podcast(x))", "depth": 2, "ops": ["CONN", "NEG"], "secs": 0.0}
+{"c": "¬Popular(blackMirror)", "m": "Popular(blackMirror)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Provide(hamdenPlazaSubway, takeOutService)", "m": "¬TakeOut(hamdenPlaza)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Romance(basque)", "m": "RomanceLanguage(basque)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Rose(breakingBad)", "m": "GivenOutOnTV(breakingBad) ∧ Rose(breakingBad)", "depth": 2, "ops": ["ADD", "NEG"], "secs": 0.0}
+{"c": "¬Shoot(peter, windy)", "m": "CanBlock(peter, windy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Shoot(windy, michael)", "m": "¬CanBlock(michael, windy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Suck(duster)", "m": "HouseholdAppliance(duster) ∧ Duster(duster) ∧ ¬Suck(duster)", "depth": 2, "ops": ["ADD", "ADD"], "secs": 0.0}
+{"c": "¬Symptom(coughing, monkeypox)", "m": "Symptom(coughing, monkeypox)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Taller(peter, x) ∧ ∃x (Class(x, michael) ∧ Man(x))", "m": "∃x (Man(x) ∧ InClass(x, michaelClass) ∧ Taller(x, peter))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "¬TaxHaven(djokovic)", "m": "¬TaxHaven(djokovic)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Train(model, Reinforcement)", "m": "¬∃x (TextSummarization(x) ∧ TrainedWith(x, reinforcement))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "¬Train(reinforcementLearning, stateOfTheArtTextSummarizationModel)", "m": "¬∃x (TextSummarization(x) ∧ TrainedWith(x, reinforcement))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "¬Understanding(machineTranslation)", "m": "LanguageUnderstandingTask(MachineTranslation)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Vampire(space)", "m": "Vampire(space)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬(PickyEater(hannah) ∧ Spend(hannah, aLotOfTime, eating, diningHall) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall))", "m": "AtMarysSchool(hannah) ∧ ¬PickyEater(hannah) ∧ SpendTimeEating(hannah)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.77}
+{"c": "¬WantToCompose(george) → ¬WillCompose(george)", "m": "¬Will(george, compose) → ¬Can(george, compose)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "¬WillCompose(george) → ¬CanCompose(george)", "m": "¬WillCompose(george) → ¬CanCompose(george)", "depth": 2, "ops": ["REV", "REV"], "secs": 0.0}
+{"c": "¬Win(sirDigbysNemesis)", "m": "¬Win(sirDigbysNemesis)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Wing(rock)", "m": "Wings(Rock)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Wing(rock)", "m": "¬Wing(rock)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.0}
+{"c": "¬Winner(steinhauer, duMaurierClassic1992)", "m": "¬Winner(steinhauer, duMaurierClassic1992)", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.0}
+{"c": "¬WinnerOf(steinhauer, duMaurierClassic, year1992)", "m": "¬Winner(steinhauer, duMaurierClassic1992)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬∀x (Digital(x) → Analog(x))", "m": "¬∃x (Digital(x) ∧ Analog(x))", "depth": 1, "ops": ["QUANT"], "secs": 0.0}
+{"c": "¬∀x (Sad(x))", "m": "∀x (Sad(x))", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬∀x Sad(x)", "m": "∀x (Sad(x))", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Visit(juanDeOnate, x) ∧ Location(x, texas) ∧ MountainRange(x)", "m": "Visited(juan, x) ∧ MountainRange(x) ∧ LocatedIn(x, texas)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "¬(∃x ∃y (Applicant(x, gRE) ∧ ProvidesFinancialAidTo(y, x)))", "m": "¬∃x ∃y (Take(x, gre) ∧ Provide(y, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.6}
+{"c": "¬∃x (Digital(x) ∧ Analog(x))", "m": "¬∃x (Digital(x) ∧ Analog(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "¬∃x (Feud(imperium, x) ∧ Includes(x, ivyNile))", "m": "¬∃x (Stable(x) ∧ Includes(x, ivyNile) ∧ Feud(imperium, x))", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "¬∃x (Human(x) ∧ Horse(x))", "m": "∃x (Human(x) ∧ Horse(x))", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬∃x (Loan(ailton, x) ∧ Club(x))", "m": "¬LoanedTo(ailton, footballClub)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "¬∃x (NaziGermanPolitician(x) ∧ MemberNaziReichstag(x))", "m": "¬∃x (Politician(x) ∧ Member(x, reichstag))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "¬∃x (Player(x) ∧ PlaysFor(x, club))", "m": "¬Plays(ailton, nautico)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "¬∃x (Category(x, reinforcementLearning) ∧ Train(x, textSummarization))", "m": "¬∃x (TextSummarization(x) ∧ TrainedWith(x, reinforcement))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.17}
+{"c": "¬∃x (PlaysFor(x, nautico) ∧ PlaysFor(x, brazilian))", "m": "¬∃x (Play(x, nautico) ∧ Brazilian(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "¬∃x (Book(x) ∧ Publish(newVesselPress, x) ∧ InLanguage(x, english))", "m": "PublishedBy(newVesselPress, harryPotter)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "¬∃x (Related(basque, x))", "m": "¬∃x (Related(basque, x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "¬∃x (Unsupervised(x) ∧ Train(stateOfTheArt, x))", "m": "∃x (Trained(stateOfTheArt, x) ∧ Unsupervised(x))", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬∃x ∃y (Related(x, y))", "m": "¬∃x (Related(basque, x))", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "¬∃y (Player(ailton) ∧ LoanedTo(ailton, y) ∧ Club(y))", "m": "¬∃y (Loaned(ailton, y) ∧ FootballClub(y))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "¬∃y Plays(ailton, y)", "m": "¬Plays(ailton, nautico)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "¬∃y (Player(ailtonSilva) ∧ Club(y) ∧ PlaysFor(ailtonSilva, y))", "m": "¬Plays(ailton, nautico)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.05}
+{"c": "¬∃x (Reinforcement(x) ∧ Train(stateOfTheArt, x))", "m": "¬∃x (TextSummarization(x) ∧ TrainedWith(x, reinforcement))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.15}
+{"c": "∀x (AnimalLover(x) → Nice(x))", "m": "∀x (AnimalLover(x) → Nice(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (AnimalLover(x) → NiceToAnimals(x))", "m": "∀x (AnimalLover(x) → NiceToAnimals(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Apple(x) → (Red(x) ⊕ Green(x)))", "m": "∀x (Apple(x) → (Red(x) ⊕ Green(x)))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (ArtisticExpression(x) ∧ InvolvesMovement(x) ∧ ¬Dance(x) → TheaterPerformance(x) ⊕ CircusAct(x))", "m": "∀x (ArtisticExpression(x) ∧ InvolvesMovement(x) ∧ ¬Dance(x) → TheaterPerformance(x) ∨ CircusAct(x))", "depth": 1, "ops": ["CONN"], "secs": 0.01}
+{"c": "∀x (Auroch(x) → Dead(x))", "m": "Extinct(aurochs)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "∀x (Aurochs(x) → Animal(x))", "m": "Animal(aurochs)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (BachelorRealLife(x) → RealityTV(x))", "m": "∀x (PortraysLives(x, realPeople) → RealityTV(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (Bicycle(x) ∧ ThickTires(x) ∧ ¬DesignedForRoadUse(x) → MountainBike(x))", "m": "∀x (Bicycle(x) ∧ ThickTires(x) ∧ ¬DesignedForRoadUse(x) → MountainBike(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x ((ProfessionalWrestlingStable(x) ∧ Includes(x, ivynile)) → ¬Feuds(imperium, x))", "m": "¬∃x (Stable(x) ∧ Includes(x, ivyNile) ∧ Feud(imperium, x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.17}
+{"c": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 2, "ops": ["ADD", "MOVE"], "secs": 0.04}
+{"c": "∀x (BingeWatch(x, karen) ↔ Download(x, karen))", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "∀x (Bird(x) ∧ HasWings(x) → Flies(x))", "m": "∀x (Bird(x) ∧ HasWings(x) → Flies(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x ((NLP(x) ∧ OutputText(x)) → Generation(x))", "m": "∀x (NaturalLanguageProcessing(x) ∧ Output(x, textSequence) → LanguageGeneration(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.3}
+{"c": "∀x (Block(michael, x) → ¬Jump(x))", "m": "∀x ((Man(x) ∧ ¬Jump(x)) → Block(michael, x))", "depth": 2, "ops": ["ADD", "REV"], "secs": 0.02}
+{"c": "∀x (Book(x) → Knowledge(x))", "m": "∀x (Book(x) → Contains(x, knowledge))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∀x (Book(x) ∧ HighSalesVolume(x) ∧ PositiveReviews(x) → Bestseller(x))", "m": "∀x (Book(x) ∧ HighSalesVolume(x) ∧ PositiveReviews(x) → Bestseller(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (BloomsInSpring(x) ↔ (Flower(x) ∧ RequiresSpecificSunlight(x) ∧ RequiresWarmth(x)))", "m": "∀x (Flower(x) ∧ RequiresSunlightAndWarmth(x) → BloomsInSpring(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.11}
+{"c": "∀x (Book(x) ∧ Publish(newVesselPress, x) → InLanguage(x, english))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Book(x) ∧ Publish(newVesselPress, x) → English(x))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.27}
+{"c": "∀x (Book(x) ∧ PublishedBy(x, newVesselPress) → InEnglish(x))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.28}
+{"c": "∀x (Book(x) ∧ SoldOverOneMillionCopies(x) → Bestseller(x))", "m": "∀x (Book(x) ∧ SoldOverOneMillionCopies(x) → Bestseller(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (Building(x) ∧ ProperInsulation(x) ∧ EnergyEfficientWindows(x) ∧ SolarPanels(x) → EnergyEfficient(x))", "m": "∀x (Building(x) ∧ ProperInsulation(x) ∧ EnergyEfficientWindows(x) ∧ SolarPanels(x) → EnergyEfficient(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (Camera(x) → (CapturePhotos(x) ∨ RecordVideos(x)))", "m": "∀x (Camera(x) → (CapturePhotos(x) ∨ RecordVideos(x)))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (Cat(x) → Mammal(x))", "m": "∀x (Cat(x) → Mammal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Cat(x) → Pets(x))", "m": "∀x (Cat(x) → Pets(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Book(x) ∧ PublishingHouse(newVesselPress) → InLanguage(x, english))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.14}
+{"c": "∀x (Company(x) ∧ ProducesElectronics(x) ∧ GlobalPresence(x) → InternationalElectronicsManufacturer(x))", "m": "∀x (Company(x) ∧ ProducesElectronics(x) ∧ GlobalPresence(x) → InternationalElectronicsManufacturer(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (Composer(x) → MusicPiece(x))", "m": "∀x (Write(x, y) → Composer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "∀x (Composer(x) → ∃y (MusicPiece(y) ∧ Write(x, y)))", "m": "∀x (Write(x, y) → Composer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "∀x (Bird(x) → (PossessFeathers(x) ∧ HasBeak(x) ∧ LaysEggs(x) ∧ LightweightBones(x) ∧ SpecializedMuscles(x) ∧ AbilityToFly(x)))", "m": "∀x (Bird(x) → (PossessFeathers(x) ∧ HaveBeak(x) ∧ LayEggs(x) ∧ (LightweightBones(x) ∧ SpecializedMuscles(x) → AbilityToFly(x))))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.87}
+{"c": "∀x (Composer(x) → ∃y (Write(x, y) ∧ MusicPiece(y)))", "m": "∀x (Write(x, y) → Composer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "∀x (Country(x) → Remote(x))", "m": "∀x (OtherCountries(x) → WorkRemote(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (DesignsAndCreatesVideoGames(x) → GameDeveloper(x))", "m": "∀x ((Person(x) ∧ DesignsVideoGames(x) ∧ CreatesVideoGames(x)) → GameDeveloper(x))", "depth": 2, "ops": ["ADD", "ADD"], "secs": 0.05}
+{"c": "∀x (Dessert(x) ∧ Frozen(x) ↔ (RequiresRefrigeration(x) ∧ ServedCold(x) ∧ ¬BakedGood(x)))", "m": "∀x (Dessert(x) ∧ RequiresRefrigeration(x) ∧ ServedCold(x) ∧ ¬BakedGood(x) → Frozen(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.31}
+{"c": "∀x (Category(x, machineLearning) → (Category(x, supervisedLearning) ∨ Category(x, unsupervisedLearning) ∨ Category(x, reinforcementLearning)))", "m": "∀x (MachineLearning(x) → (SupervisedLearning(x) ∨ UnsupervisedLearning(x) ∨ ReinforcementLearning(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.76}
+{"c": "∀x (Detective(x) → (∃y (Crime(y) ∧ Solves(x, y) ∧ GathersEvidence(x) ∧ AnalyzesClues(x))))", "m": "∀x (Detective(x) → (GathersEvidence(x) ∧ AnalyzesClues(x) ∧ SolvesCrimes(x)))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.65}
+{"c": "∀x (Dog(x) → Animal(x) ∧ Bark(x))", "m": "∀x (Dog(x) → Animal(x) ∧ Bark(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (Dog(x) → Barks(x))", "m": "∀x (Dog(x) → Animal(x) ∧ Barks(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Dogs(x) → Barks(x))", "m": "∀x (Dog(x) → Animal(x) ∧ Barks(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Duster(x) → ¬Suck(x))", "m": "HouseholdAppliance(duster) ∧ Duster(duster) ∧ ¬Suck(duster)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.12}
+{"c": "∀x (Duster(x) → ¬Suck(x)) ∧ HouseholdAppliance(duster)", "m": "HouseholdAppliance(duster) ∧ Duster(duster) ∧ ¬Suck(duster)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "∀x (EconomicHardship(x) → ProvideAid(ETS, x))", "m": "∀x (EconomicHardship(x) → Provides(ets, financialAid, x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.09}
+{"c": "∀x (Electron(x) ∧ (Orbital(x) ⊕ Suborbital(x)))", "m": "∀x (Electron(x) → (InOrbital(x) ⊕ InSuborbital(x)))", "depth": 1, "ops": ["RESTR"], "secs": 0.0}
+{"c": "∀x (Dessert(x) ∧ MadeFromMilk(x) ∧ Sugar(x) ∧ Flavorings(x) ∧ Frozen(x) → IceCream(x))", "m": "∀x (Dessert(x) ∧ MadeFrom(x, Milk) ∧ MadeFrom(x, Sugar) ∧ MadeFrom(x, Flavorings) ∧ Frozen(x) → IceCream(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.92}
+{"c": "∀x (Employee(x) ∧ EligibleForPromotion(x) ↔ ((WorkedAtCompanyForTwoYears(x) ∧ GoodPerformanceRecord(x)) ∨ RecommendationFromSupervisor(x)))", "m": "∀x (Employee(x) ∧ EligibleForPromotion(x) → ((WorkedAtCompanyForAtLeastTwoYears(x) ∧ GoodPerformanceRecord(x)) ∨ RecommendationFromSupervisor(x)))", "depth": 1, "ops": ["CONN"], "secs": 0.0}
+{"c": "∀x (Employee(x) ∧ OtherCountry(x) → Remote(x))", "m": "∀x (OtherCountries(x) → WorkRemote(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Employee(x) ∧ Country(x) → Remote(x, home))", "m": "∀x (OtherCountries(x) → WorkRemote(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.29}
+{"c": "∀x (Event(x) → Sad(x))", "m": "∀x (Sad(x))", "depth": 2, "ops": ["DROP", "RESTR"], "secs": 0.01}
+{"c": "∀x (Fabric(x) ∧ Lightweight(x) ∧ Breathable(x) ∧ AbsorbsMoisture(x) → SuitableForAthleticWear(x))", "m": "∀x (Fabric(x) ∧ Lightweight(x) ∧ Breathable(x) ∧ AbsorbsMoisture(x) → SuitableForAthleticWear(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.01}
+{"c": "∀x (Fir(x) → Evergreen(x))", "m": "∀x (Fir(x) → Evergreen(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Employee(x) ∧ ¬Company(x) → Remote(x, home))", "m": "∀x (OtherCountries(x) → WorkRemote(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.35}
+{"c": "∀x (FootballClub(x) → ¬PlayFor(ailtonSilva, x))", "m": "¬Plays(ailton, nautico)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "∀x (FourSides(x) → Quadrilateral(x))", "m": "∀x (Polygon(x) ∧ HasFourSides(x) → IsQuadrilateral(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (FoodProduct(x) ∧ ProducedWithoutSynthetics(x) ∧ MeetsRegulatoryStandards(x) → LabeledOrganic(x))", "m": "∀x (FoodProduct(x) ∧ (¬SyntheticPesticides(x) ∧ MeetsRegulatoryStandards(x)) → LabeledOrganic(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.35}
+{"c": "∀x (Game(x) ∧ PlayedOnRectangularSurface(x) ∧ InvolvesTwoTeams(x) ∧ ObjectiveIsScoringPoints(x) ∧ PuttingBallInOpposingTeamsGoal(x) → Soccer(x))", "m": "∀x (Game(x) ∧ PlayedOnRectangularSurface(x) ∧ InvolvesTwoTeams(x) ∧ ObjectiveScoringPointsByPuttingBallIntoOpposingTeamGoal(x) → Soccer(x))", "depth": 1, "ops": ["DROP"], "secs": 0.02}
+{"c": "∀x (Greek(x) → Human(x))", "m": "∀x (Greek(x) → Human(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (GrewUp(x, y) → EatSalads(x))", "m": "∀x (HealthConsciousChildhood(x) → Salads(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∀x (GrewUpHealthy(x) → SaladEater(x))", "m": "∀x (HealthConsciousChildhood(x) → Salads(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (Gym(x) → Nutrition(x))", "m": "∀x (VisitsGym(x) → FulfillsIntake(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (GREApplicant(x) ∧ EconomicHardship(x) → FinancialAid(ETS, x))", "m": "∀x (EconomicHardship(x) → Provides(ets, financialAid, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.3}
+{"c": "∀x (Gym(x) → NutritionalIntake(x))", "m": "∀x (VisitsGym(x) → FulfillsIntake(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (GymVisitor(x) → FulfillNutrition(x))", "m": "∀x (VisitsGym(x) → FulfillsIntake(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "∀x (Happy(x) ⊕ Sad(x))", "m": "∀x (Happy(x) ⊕ Sad(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (GymVisitor(x) → NutritionFulfilled(x))", "m": "∀x (VisitsGym(x) → FulfillsIntake(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "∀x (Hardship(x) → ProvideAid(ETS, x))", "m": "∀x (EconomicHardship(x) → Provides(ets, financialAid, x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.08}
+{"c": "∀x (Heck(x) → Animal(x))", "m": "Animal(heckCattle)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (HouseholdAppliance(x) → Suck(x))", "m": "∀x (HouseholdAppliance(x) → Suck(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Human(x) → Mammal(x))", "m": "Mammal(human)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∀x (Human(x) → Mammal(x))", "m": "Mammal(humans)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∀x (Human(x) → Mortal(x))", "m": "∀x (Human(x) → Mortal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Human(x) → ¬Get(x, flu))", "m": "¬∃x (Flu(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.16}
+{"c": "∀x (In(hardingPegmatiteMine, x) → ¬(MountainRange(x) ∧ In(x, newMexico)))", "m": "¬LocatedIn(harding, newmexico)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.38}
+{"c": "∀x (Instrument(x) → ((StringInstrument(x) ∨ WindInstrument(x)) ∧ ¬(StringInstrument(x) ∧ WindInstrument(x))))", "m": "∀x (Instrument(x) → ((StringInstrument(x) ∨ WindInstrument(x)) ∧ ¬(StringInstrument(x) ∧ WindInstrument(x))))", "depth": 1, "ops": ["CONN"], "secs": 0.01}
+{"c": "∀x (Jump(x) → GreatShooter(x))", "m": "∀x ((Shooter(x) ∧ Jumps(x)) → GreatShooter(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Jump(x) → GreatShooter(x))", "m": "∀x (Shooter(x) ∧ Jump(x) → GreatShooter(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (LocatedIn(x, antarctica) → NamedAfter(barutinCove, x))", "m": "∀x (Island(x) ∧ LocatedIn(x, antarctica) → NamedAfter(barutinCove, x))", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "∀x (Lover(x) → Nice(x))", "m": "∀x (LovesAnimals(x) → Nice(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (Mammal(x) → (GivesBirthToLiveYoung(x) ∧ NursesOffspringWithMilk(x)))", "m": "∀x (Mammal(x) → (GivesBirthToLiveYoung(x) ∧ NursesOffspringWithMilk(x)))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (Mammal(x) → Animal(x))", "m": "∀x (Mammal(x) → Animal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Man(x) ∧ ¬Jump(x) → Block(michael, x))", "m": "∀x (Man(x) ∧ ¬Jump(x) → Block(michael, x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (HealthyDiet(x) ∧ ContainsVarietyOfFruitsVegetablesWholeGrainsLeanProteins(x) → PromotesWellBeingAndReducesRiskOfChronicDiseases(x))", "m": "∀x (HealthyDiet(x) ∧ VarietyOfFruits(x) ∧ VarietyOfVegetables(x) ∧ WholeGrains(x) ∧ LeanProteins(x) → PromotesOverallWellBeing(x) ∧ ReducesRiskOfChronicDiseases(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.76}
+{"c": "∀x (ManagedBuilding(x) → Deposit(x, apartment))", "m": "∀x (ManagedBuilding(x) → ∃y (Deposit(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (ManagedBuilding(x) → Deposit(x))", "m": "∀x (ManagedBuilding(x) → ∃y (Deposit(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "∀x (ManagedBuilding(x) → DepositRequired(deposit, x))", "m": "∀x (ManagedBuilding(x) → ∃y (Deposit(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (ManagedBuilding(x) → DepositRequired(x))", "m": "∀x (ManagedBuilding(x) → ∃y (Deposit(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "∀x (MondayAt8PM(x) ∧ On(breakingBad, x))", "m": "OnMondayAt8pm(breakingBad)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∀x (Monkey(x) → Mammal(x))", "m": "∀x (Monkey(x) → Mammal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Mountain(x) → (FormsFromTectonicForces(x) ∧ HasElevation(x) ∧ CanBeClimbed(x)))", "m": "∀x (Mountain(x) → (FormsFromTectonicForces(x) ∧ HasElevation(x) ∧ CanBeClimbed(x)))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.02}
+{"c": "∀x (Manager(x) → ¬Remote(x, home))", "m": "∀x (Manager(x) → ¬WorkRemote(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.06}
+{"c": "∀x (Name(x, y) → GoodGuy(y))", "m": "∀m ∀c (SuperheroMovie(m) ∧ NamedAfter(m, c) → GoodGuy(c))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.09}
+{"c": "∀x (NetflixShow(x) ↔ Download(karen, x))", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 2, "ops": ["ADD", "MOVE"], "secs": 0.03}
+{"c": "∀x (NetflixShow(x) ∧ BingeWatch(karen, x) ↔ Download(karen, x))", "m": "∀x (Netflix(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (NetflixShow(x) ∧ Popular(x) → BingeWatch(x, karen))", "m": "∀x (Netflix(x) ∧ Popular(x) → BingeWatch(karen, x))", "depth": 1, "ops": ["SWAP"], "secs": 0.01}
+{"c": "∀x (Musician(x) ∧ Versatile(x) ∧ (PlaysPiano(x) ∨ PlaysGuitar(x)) ∧ (PerformsInJazz(x) ∨ PerformsInRock(x)))", "m": "∀x (Musician(x) ∧ Versatile(x) → (Plays(x, piano) ∨ Plays(x, guitar)) ∧ (PerformsIn(x, jazz) ∨ PerformsIn(x, rock)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.88}
+{"c": "∀x (Organism(x) ∧ CanProduceOwnFoodThroughPhotosynthesis(x) ∧ ProvidesEnergyForOtherOrganisms(x) ∧ ¬ConsumesOtherOrganisms(x) → PrimaryProducer(x))", "m": "∀x (Organism(x) ∧ CanProduceOwnFoodThroughPhotosynthesis(x) ∧ ProvidesEnergyForOtherOrganisms(x) ∧ ¬ConsumesOtherOrganisms(x) → PrimaryProducer(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.01}
+{"c": "∀x (Output(x, y) → LanguageGeneration(y))", "m": "∀x (NaturalLanguageProcessing(x) ∧ Output(x, textSequence) → LanguageGeneration(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "∀x (Output(x, y) ∧ TextSequence(x) → Generation(y))", "m": "∀x (NaturalLanguageProcessing(x) ∧ Output(x, textSequence) → LanguageGeneration(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.25}
+{"c": "∀x (Oven(x) → (UsedForBaking(x) ∧ UsedForCooking(x)))", "m": "∀x (Oven(x) → (Baking(x) ∧ CookingFood(x)))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.09}
+{"c": "∀x (Person(x) ∧ Gain(x, knowledge) → Smarter(x))", "m": "∀x (GainsKnowledge(x) → BecomesSmarter(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.11}
+{"c": "∀x (Person(x) ∧ StudiesNatureAndPropertiesOfMatterAndEnergy(x) → Physicist(x))", "m": "∀x (Person(x) ∧ StudiesNatureAndPropertiesOfMatterAndEnergy(x) → Physicist(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (Pet(x) → ¬Cat(x))", "m": "∀x (Pet(x) → ¬Cat(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Place(x) ∧ HousesCollectionOfMedia(x) ∧ (Books(x) ∨ Periodicals(x) ∨ OtherMedia(x)) ∧ ForPublicUseAndStudy(x) → Library(x))", "m": "∀x (Place(x) ∧ HousesCollectionOfBooksPeriodicalsAndOtherMedia(x) ∧ ForPublicUseAndStudy(x) → Library(x))", "depth": 1, "ops": ["DROP"], "secs": 0.02}
+{"c": "∀x (Place(x) ∧ VenueForLiveStagePerformances(x) ∧ OftenWithStageCurtainsAndAudienceSeating(x) ∧ HostsPlaysMusicalsOrOtherProductions(x) → Theater(x))", "m": "∀x (Theater(x) ↔ (VenueForLiveStagePerformances(x) ∧ HasStageAndCurtainsAndAudienceSeating(x) ∧ HostsPlaysMusicalsOrOtherProductions(x)))", "depth": 2, "ops": ["CONN", "DROP"], "secs": 0.11}
+{"c": "∀x (Plate(x) ∧ FromIstanbul(x) → Begin34(x))", "m": "∀x (IstanbulPlate(x) → BeginsWith34(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Plate(x) ∧ ¬Begin34(x) → ¬FromIstanbul(x))", "m": "∀x (¬BeginsWith34(x) → ¬IstanbulPlate(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Plunger(x) → Suck(x))", "m": "Suck(plunger)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (Popular(x) → BingeWatch(karen, x))", "m": "∀x (Netflix(x) ∧ Popular(x) → BingeWatch(karen, x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Popular(x) → BingeWatch(x, karen))", "m": "∀x (Netflix(x) ∧ Popular(x) → BingeWatch(karen, x))", "depth": 2, "ops": ["ADD", "SWAP"], "secs": 0.04}
+{"c": "∀x (Portray(x, realPeople) → Reality(x))", "m": "∀s (PortraysLivesOfRealPeople(s) → RealityTVShow(s))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (Portray(x, realPeople) → RealityTV(x))", "m": "∀s (PortraysLivesOfRealPeople(s) → RealityTVShow(s))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (Portrays(x, realPeople) → RealityTV(x))", "m": "∀s (PortraysLivesOfRealPeople(s) → RealityTVShow(s))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (Prove(ets, x) → Hardship(x))", "m": "∀x (Applicant(x, gre) ∧ EconomicHardship(x) → FinancialAid(ets, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "∀x (Prove(x, EconomicHardship) → Provide(ETS, x))", "m": "∀x (Applicant(x, gre) ∧ EconomicHardship(x) → FinancialAid(ets, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "∀x (Publish(x, newVesselPress) → English(x))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "ResidentialCollege(benjaminFranklinCollege, yale) ∧ ResidentialCollege(berkeleyCollege, yale) ∧ ResidentialCollege(branfordCollege, yale) ∧ ResidentialCollege(davenportCollege, yale) ∧ ResidentialCollege(ezraStilesCollege, yale) ∧ ResidentialCollege(graceHopperCollege, yale) ∧ ResidentialCollege(jonathanEdwardsCollege, yale) ∧ ResidentialCollege(morseCollege, yale) ∧ ResidentialCollege(pauliMurrayCollege, yale) ∧ ResidentialCollege(piersonCollege, yale) ∧ ResidentialCollege(saybrookCollege, yale) ∧ ResidentialCollege(sillimanCollege, yale) ∧ ResidentialCollege(timothyDwightCollege, yale) ∧ ResidentialCollege(trumbullCollege, yale)", "m": "ResidentialCollege(benjaminFranklinCollege) ∧ ResidentialCollege(berkeleyCollege) ∧ ResidentialCollege(branfordCollege) ∧ ResidentialCollege(davenportCollege) ∧ ResidentialCollege(ezraStilesCollege) ∧ ResidentialCollege(graceHopperCollege) ∧ ResidentialCollege(jonathanEdwardsCollege) ∧ ResidentialCollege(morseCollege) ∧ ResidentialCollege(pauliMurrayCollege) ∧ ResidentialCollege(piersonCollege) ∧ ResidentialCollege(saybrookCollege) ∧ ResidentialCollege(sillimanCollege) ∧ ResidentialCollege(timothyDwightCollege) ∧ ResidentialCollege(trumbullCollege)", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∀x (PublishHouse(newVesselPress) → Language(x, english))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∀x (Real(x) → Reality(x))", "m": "∀s (PortraysLivesOfRealPeople(s) → RealityTVShow(s))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (PublishedBy(x, newVesselPress) → InEnglish(x))", "m": "∀x (Published(newVesselPress, x) → Language(x, english))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∀x (RealPeople(x) → RealityTV(x))", "m": "∀x (PortraysLives(x, realPeople) → RealityTV(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (RipeFruit(x) ↔ (Fruit(x) ∧ ReadyToBeEaten(x) ∧ FullFlavor(x)))", "m": "∀x (Fruit(x) ∧ ReadyToBeEaten(x) ∧ HasFullFlavor(x) → Ripe(x))", "depth": 2, "ops": ["CONN", "NEG"], "secs": 0.03}
+{"c": "∀x (Rent(x, y) → Deposit(x, y))", "m": "∀x (ManagedBuilding(x) → ∃y (Deposit(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "∀x (Computer(x) → (∃y (InputDevice(y) ∧ (Keyboard(y) ∨ Mouse(y))) ∧ ∃z (OutputDevice(z) ∧ (Monitor(z) ∨ Speakers(z)))))", "m": "∀x (Computer(x) → ∃y ∃z (InputDevice(y) ∧ (Keyboard(y) ∨ Mouse(y)) ∧ OutputDevice(z) ∧ (Monitor(z) ∨ Speakers(z)) ∧ Requires(x,y) ∧ Requires(x,z)))", "depth": 3, "ops": ["COMPOUND"], "secs": 7.61}
+{"c": "∀x (SaladEater(x) → HealthConscious(x))", "m": "∀x (EatsSalads(x) → Conscious(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (RoseTV(x) ∧ BreakingBad(x)) → Monday8pm(x)", "m": "GiveOut(roses, breakingBad) → ∃x (Monday(x) ∧ Time8pm(x) ∧ On(breakingBad, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.26}
+{"c": "∀x (Shooter(x) ∧ Jump(x) → GreatShooter(x))", "m": "∀x (Shooter(x) ∧ Jump(x) → GreatShooter(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.01}
+{"c": "∀x (Shoot(x, michael) → ¬Jump(x))", "m": "∀x ((Man(x) ∧ ¬Jump(x)) → Block(michael, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "∀x (Smartphone(x) → (ConnectsToInternet(x) ∧ MakesCalls(x) ∧ SendsMessages(x)))", "m": "∀x (Smartphone(x) → (ConnectsToInternet(x) ∧ MakesCalls(x) ∧ SendsMessages(x)))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∀x (Space(x) → Vacuum(x))", "m": "Vacuum(space)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∀x (Shooting(x) ∧ Jump(x) → GreatShooter(x))", "m": "∀x (Shooter(x) ∧ Jump(x) → GreatShooter(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.1}
+{"c": "∀x (SportsEvent(x) → (IndoorEvent(x) ⊕ OutdoorEvent(x)))", "m": "∀x (SportsEvent(x) → (PlayedIndoors(x) ⊕ PlayedOutdoors(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.2}
+{"c": "∀x (Square(x) → Shape(x))", "m": "∀x (Square(x) → Shape(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (Striker(x) → SoccerPlayer(x))", "m": "∀x (Striker(x) → SoccerPlayer(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∀x (SpeakMultipleLanguages(x) → (Bilingual(x) ∨ Multilingual(x)))", "m": "∀x (Person(x) ∧ SpeaksMoreThanOneLanguage(x) → Bilingual(x) ∨ Multilingual(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.23}
+{"c": "∀x (SuperheroMovie(x) → GoodGuysWin(x))", "m": "∀x (SuperheroMovie(x) → ∀y (GoodGuy(y) → Wins(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "∀x (SuperheroMovie(x) ∧ NamedAfter(x, character) → GoodGuy(character))", "m": "∀m ∀c (SuperheroMovie(m) ∧ NamedAfter(m, c) → GoodGuy(c))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.1}
+{"c": "∀x (Sun(x) → (RisesInEast(x) ∧ SetsInWest(x) ∧ ShinesDuringDay(x)))", "m": "RisesInEast(Sun) ∧ SetsInWest(Sun) ∧ ShinesDuringDay(Sun)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.21}
+{"c": "∀x (Thunderstorm(x) → (WarmAirRises(x) ∧ AtmosphericInstability(x)))", "m": "∀x (Thunderstorm(x) ↔ (WarmAirRises(x) ∧ CreatesInstability(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.12}
+{"c": "∀x (Triangle(x) ∧ EqualSides(x) → EqualAngles(x))", "m": "∀x (Triangle(x) ∧ EqualSides(x) → EqualAngles(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (Orchestra(x) ∧ Concert(y) ∧ Instrument(z) → (Performs(x, y) ∧ ∃w (Musician(w) ∧ Plays(w, z))))", "m": "∀x (Orchestra(x) → ∃y (Concert(y) ∧ Performs(x, y) ∧ ∃z (Musician(z) ∧ Plays(z, y) ∧ ∃w (Instrument(w) ∧ PlaysWith(z, w, y)))))", "depth": 3, "ops": ["COMPOUND"], "secs": 4.21}
+{"c": "∀x (Vacation(x) ∧ Relaxing(x) → (BeautifulScenery(x) ∧ EnjoyableActivities(x)))", "m": "∀x ((Vacation(x) ∧ BeautifulScenery(x) ∧ EnjoyableActivities(x)) → Relaxing(x))", "depth": 2, "ops": ["MOVE", "MOVE"], "secs": 0.04}
+{"c": "∀x (Vacuum(x) → Suck(x))", "m": "Suck(vacuum)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (Vampire(x) → Suck(x))", "m": "Suck(vampire)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∀x (Vehicle(x) ∧ TwoWheels(x) ∧ HasEngine(x) → Motorcycle(x))", "m": "∀x (Vehicle(x) ∧ TwoWheels(x) ∧ HasEngine(x) → Motorcycle(x))", "depth": 1, "ops": ["MOVE"], "secs": 0.0}
+{"c": "∀x (Tree(x) → (LosesLeavesInAutumn(x) ∨ RetainsLeavesThroughoutYear(x))) ∧ ∀y (EvergreenTree(y) → RetainsLeavesThroughoutYear(y))", "m": "∀x (Tree(x) ∧ ¬Evergreen(x) → LosesLeavesInAutumn(x)) ∧ ∀x (Evergreen(x) → RetainsLeavesThroughoutYear(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.37}
+{"c": "∀x (Volunteer(x) ↔ (Person(x) ∧ OffersTimeAndSkills(x) ∧ ForCause(x) ∧ ¬ExpectsCompensation(x)))", "m": "∀x (Person(x) ∧ OffersTimeAndSkills(x) ∧ ¬ExpectsCompensation(x) → Volunteer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.29}
+{"c": "∀x (River(x) ↔ (∃y (Source(x, y) ∧ Mountains(y)) ∧ FlowsThroughVariousLandscapes(x) ∧ ReachesLargerBodyOfWater(x)))", "m": "∀x (River(x) → (FlowsFromSource(x) ∧ PassesThroughLandscapes(x) ∧ ReachesLargerBodyOfWater(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.56}
+{"c": "∀x (WellInsulatedBuilding(x) → ConservesEnergyByMaintainingStableTemperature(x))", "m": "∀x (WellInsulatedBuilding(x) → (ConservesEnergy(x) ∧ MaintainsStableTemperature(x)))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Tsunami(x) → ∃y (UnderwaterEarthquake(y) ∨ VolcanicEruption(y) ∨ Landslide(y)) ∧ Triggers(x, y) ∧ CausesMassiveWaves(x) ∧ DevastatesCoastalAreas(x))", "m": "∀x (Tsunami(x) → (UnderwaterEarthquakes(x) ∨ VolcanicEruptions(x) ∨ Landslides(x)) ∧ CausesMassiveWaves(x) ∧ DevastatesCoastalAreas(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.98}
+{"c": "∀x (Winter(x) → Cold(x)) ∧ ∀y (Summer(y) → Hot(y))", "m": "WinterIsCold ∧ SummerIsHot", "depth": 3, "ops": ["COMPOUND"], "secs": 0.62}
+{"c": "∀x (WorksInNewsIndustryAndReportsOnEvents(x) → Journalist(x))", "m": "∀x ((Person(x) ∧ WorksInNewsIndustry(x) ∧ ReportsOnEvents(x)) → Journalist(x))", "depth": 2, "ops": ["ADD", "ADD"], "secs": 0.05}
+{"c": "∀x (¬Jump(x) → Block(michael, x))", "m": "∀x ((Man(x) ∧ ¬Jump(x)) → Block(michael, x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Waterfall(x) → NaturalFeature(x) ∧ WaterFlowsOverVerticalDrop(x) ∧ (FoundInMountainousAreas(x) ∨ FoundAlongRivers(x)))", "m": "∀x (Waterfall(x) → (NaturalFeature(x) ∧ (∃y (WaterFlowsOverVerticalDrop(x, y) ∨ WaterFlowsOverSteepDrops(x, y))) ∧ (∃z (FoundInMountainousArea(x, z) ∨ FoundAlongRivers(x, z)))))", "depth": 3, "ops": ["COMPOUND"], "secs": 2.17}
+{"c": "∀x ∀y (Bat(x) ∧ Turtle(y) → ((Mammal(x) ∧ CanFly(x)) ∧ (Reptile(y) ∧ ¬CanFly(y))))", "m": "∀x (Bat(x) → Mammal(x) ∧ CanFly(x)) ∧ ∀x (Turtle(x) → Reptile(x) ∧ ¬CanFly(x))", "depth": 1, "ops": ["UNGLUE"], "secs": 0.01}
+{"c": "∀x ∀y (Bird(x) ∧ SeasonChange(y) ∧ UnsuitableTemperatureForSurvival(x, y) → Migrates(x))", "m": "∀x (Bird(x) → (SeasonChanges(x) ∧ TemperatureUnsuitableForSurvival(x)) → Migrate(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.34}
+{"c": "∀x (WildTurkey(x) ↔ (EasternWildTurkey(x) ∨ OsceolaWildTurkey(x) ∨ GouldsWildTurkey(x) ∨ MerriamsWildTurkey(x) ∨ RioGrandeWildTurkey(x) ∨ OcellatedWildTurkey(x)))", "m": "∀x (WildTurkey(x) → (Eastern(x) ∨ Osceola(x) ∨ Gould(x) ∨ Merriam(x) ∨ RioGrande(x) ∨ Ocellated(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 5.17}
+{"c": "∀x (Vehicle(x) ∧ TwoWheels(x) ∧ PoweredByHumanEffort(x) ∧ RiderSitsOnSeatAndPedals(x) → Bicycle(x))", "m": "∀x (Vehicle(x) ∧ HasTwoWheels(x) ∧ PoweredByHumanEffort(x) ∧ ∃y (Rider(y) ∧ Rides(y, x) ∧ SitsOnSeat(y) ∧ Pedals(y)) → Bicycle(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 5.64}
+{"c": "∀x ∀y (Device(x) ∧ ThermalEnergy(y) ∧ UsesTemperatureDifference(x, y) → ThermoelectricGenerator(x))", "m": "∀x (Device(x) ∧ ConvertsThermalEnergyIntoElectricalEnergy(x) ∧ UsesTemperatureDifference(x) → ThermoelectricGenerator(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 2.15}
+{"c": "∀x ∀y (Family(x) ∧ Romance(y) → Related(y, x))", "m": "∀x ∀y (LanguageFamily(x) ∧ Romance(y) ∧ Romance(z) → Related(y, z))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.43}
+{"c": "∀x ∀y (LanguageFamily(x) ∧ Related(x, y))", "m": "∀x ∀y (LanguageFamily(x) ∧ Romance(y) ∧ Romance(z) → Related(y, z))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "∀x ∀y (LanguageFamily(x) ∧ LanguageFamily(y) → Related(x, y))", "m": "∀x ∀y (LanguageFamily(x) ∧ Romance(y) ∧ Romance(z) → Related(y, z))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.99}
+{"c": "∀x ∀y (MemberOf(x, pappys) ∧ Starring(y, x) → ¬(PilotedOn(y, bBCTwo) ∨ PilotedOn(y, bBCThree)))", "m": "¬∃x ∃y (Member(x, pappys) ∧ Star(x, y) ∧ (Pilot(y, bbcTwo) ∨ Pilot(y, bbcThree)))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 1.03}
+{"c": "∀x ∀y (MondayAt8PM(x) ∧ Rose(y) ∧ GivenOutOn(y, tv) ∧ On(tv, x) ∧ From(y, breakingBad))", "m": "GivenOutOnTV(breakingBad) ∧ Rose(breakingBad)", "depth": 3, "ops": ["COMPOUND"], "secs": 1.69}
+{"c": "∀x ∀y (Object(x) ∧ Liquid(y) ∧ FloatsOnSurface(x, y) → Buoyant(x))", "m": "∀x (Object(x) → (FloatsOnSurfaceOfLiquid(x) ↔ Buoyant(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.38}
+{"c": "∀x ∀y (Read(x, y) → Knowledge(x))", "m": "∀x ∀y (Reads(x, y) ∧ Book(y) → GainsKnowledge(x))", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "∀x ∀y (Person(x) ∧ Read(x, y) → Gain(x, knowledge))", "m": "∀x ∀y (Reads(x, y) ∧ Book(y) → GainsKnowledge(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.09}
+{"c": "∀x ∀y (Read(x, y) → Gain(x, knowledge))", "m": "∀x ∀y (Reads(x, y) ∧ Book(y) → GainsKnowledge(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.34}
+{"c": "∀x ∀y (Write(x, y) → Composer(x))", "m": "∀x (Write(x, y) → Composer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∀x ∀y ((Rose(y) ∧ GivenOutOn(y, tv) ∧ On(tv, x) ∧ From(y, breakingBad)) → MondayAt8PM(x))", "m": "GiveOut(roses, breakingBad) → ∃x (Monday(x) ∧ Time8pm(x) ∧ On(breakingBad, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 8.32}
+{"c": "∀x ∀y (Refrigerator(x) ∧ Perishable(y) → Preserves(x, y)) ∧ ¬(Refrigerator(x) ∧ Electronics(y) → Preserves(x, y))", "m": "∀x (Refrigerator(x) → (Preserves(x, Perishables) ∧ ¬Preserves(x, Electronics)))", "depth": 3, "ops": ["COMPOUND"], "secs": 2.74}
+{"c": "∀x ∀y (Satellite(x) ∧ (OrbitsEarth(x) ∧ TransmitsAndReceivesData(x, y)) ∧ (EnablesWeatherForecasting(y) ∨ EnablesGlobalPositioning(y) ∨ EnablesCommunication(y)))", "m": "∀x (Satellite(x) ∧ OrbitsEarth(x) ∧ (TransmittingData(x) ∧ ReceivingData(x)) → EnablesServices(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 5.19}
+{"c": "∀x ∀y ∀z (Chef(x) ∧ Waiter(y) ∧ Customer(z) → (PreparesMeals(x) ∧ ServesMeals(y, z) ∧ EnjoysMeals(z)))", "m": "∀x (Chef(x) → PrepareMeals(x)) ∧ ∀x (Waiter(x) → ServeMeals(x)) ∧ ∀x (Customer(x) → EnjoyMeals(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∀x ∃y (Composer(x, y) → Write(x, y))", "m": "∀x (Write(x, y) → Composer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.19}
+{"c": "∀x ∃y (Composer(x, y) ∧ MusicPiece(y))", "m": "∀x (Write(x, y) → Composer(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.27}
+{"c": "∀x∀y (Battery(x) ∧ Device(y) → (StoresElectricalEnergy(x) ∧ ProvidesPower(x, y)))", "m": "∀x (Battery(x) → (StoresElectricalEnergy(x) ∧ ProvidesPowerToDevices(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.16}
+{"c": "∀x ∀y ∀z (RedApple(x) ∧ GreenApple(y) ∧ YellowApple(z) → ((IsSweet(x) ∧ IsSour(y)) ∧ (IsSweet(z) ⊕ IsSour(z))))", "m": "∀x ((Apple(x) ∧ Red(x) → Sweet(x)) ∧ (Apple(x) ∧ Green(x) → Sour(x)) ∧ (Apple(x) ∧ Yellow(x) → (Sweet(x) ∧ Sour(x))))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∀x ∀y ∀z (Tool(x) ∧ LongHandle(y) ∧ FlatBlade(z) ∧ Has(x, y) ∧ Has(x, z) ∧ LiftsAndMovesLooseMaterial(x) → Shovel(x))", "m": "∀x (Tool(x) ∧ HasLongHandle(x) ∧ HasFlatBlade(x) ∧ UsedForLiftingAndMovingLooseMaterial(x) → IsShovel(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∀x∀y (Beverage(x) ∧ ContainsCaffeine(x) ∧ ServedHot(x) ∧ RoastedSeeds(y) ∧ MadeFrom(x, y) → Coffee(x))", "m": "∀x ((Beverage(x) ∧ ContainsCaffeine(x) ∧ ServedHot(x) ∧ MadeFromRoastedSeeds(x)) → Coffee(x))", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.99}
+{"c": "∀x∀y (Wolf(x) ∧ Bird(y) → (Howls(x) ∧ Chirps(y)))", "m": "∀x (Wolf(x) → Howl(x)) ∧ ∀x (Bird(x) → Chirp(x))", "depth": 1, "ops": ["UNGLUE"], "secs": 0.01}
+{"c": "∀x∀y (Prism(x) ∧ WhiteLight(y) → DispersesIntoSpectrumOfColors(x, y))", "m": "∀x (Prism(x) → DispersesWhiteLightIntoSpectrumOfColors(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.56}
+{"c": "∀x∀y (Clock(x) ∧ Scale(y) → (Measures(x, Time) ∧ Measures(y, Weight)))", "m": "(∀x (Clock(x) → MeasuresTime(x))) ∧ (∀x (Scale(x) → MeasuresWeight(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 2.32}
+{"c": "∀x∀y∀z (Child(x) ∧ Toy(y) ∧ Playground(z) → PlaysWith(x, y, z))", "m": "∃x ∃y ∃z (Child(x) ∧ Toy(y) ∧ Playground(z) ∧ Plays(x, y, z))", "depth": 1, "ops": ["QUANT"], "secs": 0.01}
+{"c": "∀x∀y∀z (City(x) ∧ Park(y) ∧ Beach(z) → (HasBuildings(x) ∧ HasTrees(y) ∧ HasSand(z)))", "m": "∀x (City(x) → Buildings(x)) ∧ ∀x (Park(x) → Trees(x)) ∧ ∀x (Beach(x) → Sand(x))", "depth": 1, "ops": ["UNGLUE"], "secs": 0.02}
+{"c": "∃x (Affection(x) ∧ Love(x))", "m": "∃x (Affection(x) ∧ Love(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Affection(x) ∧ Positive(x))", "m": "∃x (Affection(x) ∧ Positive(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Animal(x) ∧ ¬Animal(x))", "m": "Extinct(aurochs)", "depth": 2, "ops": ["ADD", "NEG"], "secs": 0.0}
+{"c": "∃x (Animal(x))", "m": "∃x (Animal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Book(x) ∧ Knowledge(x))", "m": "∀x (Book(x) → Contains(x, knowledge))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "∃x (Category(x, unsupervisedLearning) ∧ Train(x, textSummarization))", "m": "∃x (Trained(stateOfTheArt, x) ∧ Unsupervised(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∃x (City(pierre) ∧ In(pierre, x) ∧ City(bismarck) ∧ In(bismarck, x))", "m": "SameState(StPierre, Bismarck)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.06}
+{"c": "∀x ∀y ∀z (Tree(x) ∧ Car(y) ∧ Factory(z) → (AbsorbsCO2(x) ∧ EmitsCO2(y) ∧ ReleasesCO2Byproduct(z)))", "m": "∀x (Tree(x) → AbsorbCarbonDioxide(x)) ∧ ∀x (Car(x) → EmitCarbonDioxide(x)) ∧ ∀x (Factory(x) → ReleaseCarbonDioxide(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∃x (Cove(x) ∧ Located(x, antarctica) ∧ Name(x, y) ∧ Settlement(y))", "m": "∃x (Cove(x) ∧ LocatedIn(x, antarctica) ∧ ∃y (BulgarianSettlement(y) ∧ NamedAfter(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.57}
+{"c": "∃x (Design(x) ∧ ByMax(x) ∧ (Evocative(x) ⊕ Dreamy(x)))", "m": "∀x (DesignBy(x, max) → Evocative(x) ∨ Dreamy(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.36}
+{"c": "∃x (Design(x) ∧ ByMax(x) ∧ BrutalistBuilding(x))", "m": "∃x (Brutalist(x) ∧ Adores(max, x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∃x (Design(x) ∧ ByMax(x) ∧ Evocative(x) ∧ Dreamy(x))", "m": "Evocative(max) ∧ Dreamy(max)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.2}
+{"c": "∃x (DesignStyle(x, max) ∧ (Evocative(x) ⊕ Dreamy(x)))", "m": "∀x (DesignBy(x, max) → Evocative(x) ∨ Dreamy(x))", "depth": 2, "ops": ["CONN", "QUANT"], "secs": 0.02}
+{"c": "∃x (ETS(x) ∧ FinancialAid(x) ∧ Hardship(x))", "m": "∀x (Applicant(x, gre) ∧ EconomicHardship(x) → FinancialAid(ets, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.34}
+{"c": "∃x (Evergreen(x) ∧ ¬Worship(x))", "m": "∃x (Evergreen(x) ∧ ¬Worship(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Greek(x) ∧ Mortal(x))", "m": "∃x (Greek(x) ∧ Mortal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Grumpy(x) ∧ MeanToAnimals(x))", "m": "∃x (Grumpy(x) ∧ MeanToAnimals(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Happy(x))", "m": "∃x (Happy(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Heck(x) ∧ BreedBack(x))", "m": "∃x (HeckCattle(x) ∧ ArtificiallySelected(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "∃x (HeckCattle(x) ∧ SelectiveBreeding(x, domesticAnimal))", "m": "∃x (HeckCattle(x) ∧ ArtificiallySelected(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "∃x (Human(x) ∧ Horse(x))", "m": "∃x (Human(x) ∧ Horse(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (In(butte, x) ∧ In(stPierre, x))", "m": "¬SameState(butte, stPierre)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.11}
+{"c": "∃x (LastSummerOlympics(x) ∧ MostMedals(unitedStates, x))", "m": "WonMostMedals(unitedStates, tokyoOlympics)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∃x (Leads(roderickStrong, x) ∧ Stable(x))", "m": "Lead(roderickStrong, diamondMine)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∃x (Leads(roderickstrong, x) ∧ ProfessionalWrestlingStable(x))", "m": "Lead(roderickStrong, diamondMine)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∃x (Love(x) ∧ Positive(x))", "m": "∃x (Love(x) ∧ Positive(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (MLAlgorithm(x) ∧ Supervised(x)) ∧ ∃x (MLAlgorithm(x) ∧ Unsupervised(x)) ∧ ∃x (MLAlgorithm(x) ∧ Reinforcement(x))", "m": "∀x (MachineLearning(x) → (SupervisedLearning(x) ∨ UnsupervisedLearning(x) ∨ ReinforcementLearning(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.42}
+{"c": "∃x (Man(x) ∧ Class(x) ∧ Taller(x, peter))", "m": "∃x (Man(x) ∧ InClass(x, michaelClass) ∧ Taller(x, peter))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.07}
+{"c": "∃x (Man(x) ∧ SameClass(x, michael) ∧ ¬Taller(peter, x))", "m": "∃x (Man(x) ∧ InClass(x, michaelClass) ∧ Taller(x, peter))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∃x (Man(x) ∧ Taller(x, michael))", "m": "Taller(peter, michael)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∃x (Man(x) ∧ Taller(x, peter))", "m": "∃x (Man(x) ∧ InClass(x, michaelClass) ∧ Taller(x, peter))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∃x (Man(x) ∧ ∀y (Class(y) → Taller(x, y)))", "m": "∀x ∀y ((Man(x) ∧ Man(y) ∧ Taller(x, y)) → CanBlock(x, y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.42}
+{"c": "∃x (ManagedBuilding(x) ∧ Pet(x))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∃x (ManagedBuilding(x) ∧ Pets(x))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∃x (ManagedBuilding(x) ∧ PetsAllowed(x))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∃x (MountainRange(x) ∧ In(x, newMexico) ∧ Visited(juanDeOnate, x))", "m": "Visited(juanDeOnate, x) ∧ MountainRange(x) ∧ LocatedIn(x, newMexico)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.31}
+{"c": "∃x (Cove(x) ∧ LocatedIn(x, antarctica) ∧ ∃y (Place(y) ∧ LocatedAfter(x, y) ∧ Bulgaria(y)))", "m": "∃x (Cove(x) ∧ LocatedIn(x, antarctica) ∧ ∃y (BulgarianSettlement(y) ∧ NamedAfter(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 4.12}
+{"c": "∃x (Owns(joe, x) ∧ BeginWith(x, num34))", "m": "BeginsWith34(joePlate)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "∃x (Owns(tom, x) ∧ VehicleRegistrationPlateIn(x, istanbul))", "m": "¬FromIstanbul(tom)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∃x (Painting(x) ∧ Abstract(x) ∧ CreatedByFamousArtist(x))", "m": "∃x (Painting(x) ∧ Abstract(x) ∧ CreatedByFamousArtist(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.01}
+{"c": "∃x (Pet(x) ∧ ManagedBuilding(x) ∧ Allowed(cat, x))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "∃x (Pet(x) ∧ ¬Mammal(x))", "m": "∃x (Pet(x) ∧ ¬Mammal(x))", "depth": 2, "ops": ["QUANT", "QUANT"], "secs": 0.0}
+{"c": "∃x (Pets(x) ∧ Allowed(x, managedBuilding))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "∃x (Pets(x) ∧ Managed(x))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∃x (PetsAllowed(x) ∧ ManagedBuilding(x))", "m": "∃x (ManagedBuilding(x) ∧ ∃y (Pet(y) ∧ Allowed(y, x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∃x (MountainRange(x) ∧ In(x, texas) ∧ Visited(juanDeOnate, x))", "m": "Visited(juan, x) ∧ MountainRange(x) ∧ LocatedIn(x, texas)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.32}
+{"c": "∃x (PrivateIvyLeagueResearchUniversity(x) ∧ Move(x, newHaven))", "m": "Private(yale) ∧ IvyLeague(yale) ∧ ResearchUniversity(yale) ∧ MoveTo(yale, newHaven)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "∃x (PrivateIvyLeagueResearchUniversity(x) ∧ MovedTo(x, newHaven))", "m": "Private(yale) ∧ IvyLeague(yale) ∧ ResearchUniversity(yale) ∧ MoveTo(yale, newHaven)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.19}
+{"c": "∃x (Provide(hamdenPlazaSubway, takeOutService) ∨ (NegativeReview(x) ∧ ¬Receive(hamdenPlazaSubway, x)))", "m": "TakeOut(hamdenPlazaSubway) ∨ ¬Negative(hamdenPlazaSubway)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "∃x (SelectiveBreeding(x, y) ∧ Animal(x))", "m": "∃x (HeckCattle(x) ∧ ArtificiallySelected(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∃x (ScriptEditorFor(andrewCollins, x) ∧ Series(x) ∧ WorkingTitle(theSecretDudeSociety, x))", "m": "ScriptEditor(andrewCollins, badults) ∧ Title(badults, theSecretDudeSociety)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.25}
+{"c": "∃x (SixWayTie(x) ∧ Leaderboard(descampe, duMaurierClassic1992))", "m": "Tie(descampe, leaderboardDuMaurierClassic1992)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "∃x (Student(x) ∧ PartTimeJob(x) ∧ OfferedByUniversity(x))", "m": "HasPartTimeJob(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∃x (StateOfTheArt(x) ∧ Train(machineLearning, x))", "m": "∃x (TextSummarization(x) ∧ TrainedWith(x, machineLearning))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.1}
+{"c": "∃x (SymptonOf(x, monkeypoxVirus) ∧ Coughing(x))", "m": "Symptom(coughing, monkeypox)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∃x (SupervisedLearningAlgorithm(x) ∧ TrainedWith(stateOfTheArtTextSummarizationModel, x))", "m": "∃x (Supervised(x) ∧ Trains(textSumModel, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.11}
+{"c": "∃x (UnsupervisedLearningAlgorithm(x) ∧ TrainedWith(stateOfTheArtTextSummarizationModel, x))", "m": "∃x (Trained(stateOfTheArt, x) ∧ Unsupervised(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∃x (Train(model, x) ∧ Supervised(x))", "m": "∃x (TextSummarization(x) ∧ TrainedWith(x, supervised))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.11}
+{"c": "∃x (Visited(juanDeOnate, x) ∧ MountainRange(x) ∧ In(x, texas))", "m": "Visited(juan, x) ∧ MountainRange(x) ∧ LocatedIn(x, texas)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.31}
+{"c": "∃x (Visit(juan, x) ∧ MountainRange(x) ∧ In(x, newMexico))", "m": "Visited(juanDeOnate, x) ∧ MountainRange(x) ∧ LocatedIn(x, newMexico)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.32}
+{"c": "∃x ∃y (Orchestra(x) ∧ Premiered(x, y))", "m": "∃x ∃y (Orchestra(x) ∧ Premiered(x, y) ∧ MusicPiece(y))", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "∃x ∃y (Cove(x) ∧ LocatedIn(x, antarctica) ∧ NameAfter(x, y) ∧ LocatedIn(y, bulgaria))", "m": "∃x (Cove(x) ∧ LocatedIn(x, antarctica) ∧ ∃y (BulgarianSettlement(y) ∧ NamedAfter(x, y)))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.46}
+{"c": "∃x(Created(x, fifa22) ∧ Japanese(x) ∧ VideoGameCompany(x))", "m": "∃x (JapaneseCompany(x) ∧ Created(x, fifa22))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∃y (DesignStyle(max, y) ∧ (Evocative(y) ⊕ Dreamy(y)))", "m": "∀x (DesignBy(x, max) → Evocative(x) ∨ Dreamy(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∃y (DesignStyle(max, y) ∧ Evocative(y) ∧ Dreamy(y))", "m": "Evocative(max) ∧ Dreamy(max)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.1}
+{"c": "∃y (MusicPiece(y) ∧ Write(beethoven, y))", "m": "Composer(beethoven)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "∃y (PartTimeJob(y) ∧ Have(james, y) ∧ OfferedBy(y, university))", "m": "HasPartTimeJob(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "∃y (Player(ailtonSilva) ∧ Club(y) ∧ LoanedTo(ailtonSilva, y))", "m": "∃x (FootballClub(x) ∧ Loaned(ailtonSilva, x))", "depth": 1, "ops": ["DROP"], "secs": 0.01}
+{"c": "∃y (ProfessionalWrestlingStable(y) ∧ Leads(roderickStrong, y))", "m": "Lead(roderickStrong, diamondMine)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.02}
+{"c": "∃x ∃y ∃z (Cove(x) ∧ NamedAfter(x, y) ∧ Settlement(y) ∧ LocatedIn(x, z) ∧ PartOf(z, antarctica))", "m": "∃x (Cove(x) ∧ LocatedIn(x, antarctica) ∧ ∃y (BulgarianSettlement(y) ∧ NamedAfter(x, y)))", "depth": 2, "ops": ["BIND", "DROP"], "secs": 1.64}
+{"c": "∀x∀y∀z (BalancedDiet(x) ∧ VarietyOfFruits(y) ∧ Vegetables(z) ∧ LeanProteins(x) ∧ IncludesElements(x, y, z) → ProvidesEssentialNutrients(x) ∧ PromotesOverallHealthAndWellness(x))", "m": "∀x (BalancedDiet(x) ∧ Includes(x, VarietyOfFruitsVegetablesLeanProteins) → (ProvidesEssentialNutrients(x) ∧ PromotesOverallHealthAndWellness(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∀x∀y∀z (Beverage(x) ∧ MadeFromFermentedGrains(x) ∧ SpecificAlcoholContent(y) ∧ Has(x, y) ∧ PopularInRegion(x, z) ∧ ParticularRegion(z) → (Beer(x) ∨ Ale(x)))", "m": "∀x (Beverage(x) ∧ FermentedGrains(x) ∧ SpecificAlcoholContent(x) ∧ PopularInRegion(x) → Beer(x) ∨ Ale(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "American(boston) ∧ City(boston)", "m": "AmericanCity(boston)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "AmericanCity(boston)", "m": "City(boston) ∧ American(boston)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "(VisitGym(x) → Fulfill(x, nutritionalDailyIntakes))", "m": "∀x (Gym(x) → Nutrition(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "BingeWatch(karen, x) ↔ Download(x, karen)", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "Book(familyHistory) ∧ Novel(familyHistory)", "m": "Novel(familyHistory)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Book(walden) ∧ Read(harry, walden)", "m": "Read(harry, walden)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "City(boston) ∧ American(boston)", "m": "AmericanCity(boston)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "City(missoula) ∧ In(missoula, montana)", "m": "In(missoula, montana)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "ComplainAboutOften(luke, annoyingSiblings)", "m": "Complain(luke)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "BingeWatch(karen, x) ↔ Download(x)", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "Created(dani, familySecrets)", "m": "Created(daniShapiro, familySecrets) ∧ Podcast(familySecrets)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "BingeWatch(x, karen) ↔ Download(x)", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "(LikeMusic(george) ∧ AccesstoProgram(george)) → WillCompose(george)", "m": "(Likes(george, music) ∧ HasAccess(george, program)) → WillCompose(george)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.06}
+{"c": "Duster(duster) ∧ HouseholdAppliance(duster) ∧ ¬Suck(duster)", "m": "HouseholdAppliance(duster) ∧ ¬Suck(duster)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "False", "m": "Publish(newVesselPress, harryPotter)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "False", "m": "Romance(german)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "EasternWildTurkey(tom)", "m": "Eastern(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Fly(john, lga)", "m": "FliesFrom(john, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "False", "m": "TranslatedFrom(palaceOfFlies, italian)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Duster(duster) ∧ ¬Suck(duster)", "m": "HouseholdAppliance(duster) ∧ ¬Suck(duster)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "FlyFrom(susan, lgaAirport)", "m": "FliesFrom(susan, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "GymVisitor(taylor)", "m": "VisitGym(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Fly(john, lga, z)", "m": "FliesFrom(john, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Have(john, largeFamily)", "m": "LargerFamily(john)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "HomeTo(montana, missoula)", "m": "In(missoula, montana)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Invertebrate(harry) ∨ QueenBee(harry)", "m": "Invertebrate(harry) ⊕ QueenBee(harry)", "depth": 1, "ops": ["CONN"], "secs": 0.0}
+{"c": "InThisClub(bonnie) ∧ (Perform(bonnie, schoolTalentShow))", "m": "Perform(bonnie)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Knowledge(walden)", "m": "Contain(walden, knowledge)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "James ∧ WorkInLab(james)", "m": "Student(james) ∧ WorkInLab(james)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "From(marvin, earth) → Alien(marvin)", "m": "¬FromEarth(marvin) → Extraterrestrial(marvin)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "Name(surprisingAdventuresOfSirDigbyChickenCaesar, sirDigby)", "m": "NamedAfter(surprisingAdventures, sirDigby)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Nemesis(sirDigby, nemesis)", "m": "Fight(sirDigby, nemesis)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Output(textSequence, machineTranslation)", "m": "OutputTextSequence(machineTranslation)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "From(marvin, earth) → ¬Alien(marvin)", "m": "¬FromEarth(marvin) → Extraterrestrial(marvin)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "Output(textSequence, machineTranslation) ∧ TextSequence(textSequence)", "m": "OutputTextSequence(machineTranslation)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.0}
+{"c": "Owner(tom)", "m": "OwnsPet(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Person(harry) ∧ Book(walden) ∧ Read(harry, walden)", "m": "Read(harry, walden)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Plunger(plunger) ∧ Suck(plunger)", "m": "Suck(plungers)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "PetOwner(tom)", "m": "OwnsPet(tom)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Podcast(familySecrets) ∧ Created(familySecrets, dani)", "m": "Created(daniShapiro, familySecrets) ∧ Podcast(familySecrets)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Podcast(familySecrets) ∧ CreatedBy(familySecrets, dani)", "m": "Created(daniShapiro, familySecrets) ∧ Podcast(familySecrets)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "PrivateIvyLeagueResearchUniversity(yale)", "m": "Private(yale) ∧ IvyLeague(yale) ∧ ResearchUniversity(yale)", "depth": 2, "ops": ["ADD", "ADD"], "secs": 0.0}
+{"c": "PublishedBy(harryPotter, newVesselPress)", "m": "Publish(newVesselPress, harryPotter)", "depth": 1, "ops": ["SWAP"], "secs": 0.0}
+{"c": "Mammal(platypus) ∧ (¬Have(platypus, teeth))", "m": "∀x (Platypus(x) → (Mammal(x) ∧ ¬Teeth(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "Location(picuris, newMexico) ∧ Visit(juanDeOnate, picuris)", "m": "∃x (MountainRange(x) ∧ In(x, newMexico) ∧ Visited(juanDeOnate, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "Read(harry, walden) ∧ Book(walden) ∧ Author(henryThoreau, walden)", "m": "Read(harry, walden)", "depth": 2, "ops": ["DROP", "DROP"], "secs": 0.01}
+{"c": "ResidentialCollege(piersonCollege)", "m": "ResidentialCollege(piersonCollege, yale)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Read(harry, walden) ∧ Book(walden) ∧ Author(walden, henryThoreau)", "m": "Read(harry, walden)", "depth": 2, "ops": ["DROP", "DROP"], "secs": 0.01}
+{"c": "ResidentialCollege(piersonCollege) ∧ At(piersonCollege, yale)", "m": "ResidentialCollege(piersonCollege, yale)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "Russian(vladimir) ∧ FederationOfficial(vladimir)", "m": "RussianOfficial(vladimir)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "SaladEater(taylor)", "m": "EatSalads(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "SixWayTie(descampe)", "m": "Tie(descampe, duMaurierClassic1992)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "SoloEV(johnsCar) ∧ Car(johnsCar)", "m": "SoloEV(johnsCar)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Student(james) ∧ LongVacation(james)", "m": "LongVacation(james)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "SymptonOf(coughing, monkeypox)", "m": "SymptomOf(coughing, monkeypox)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "Taller(peter, michael)", "m": "Man(peter) ∧ Taller(peter, michael)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "Translate(palaceOfFlies, italian, english)", "m": "TranslatedFrom(palaceOfFlies, italian)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "University(yale) ∧ Private(yale) ∧ IvyLeague(yale) ∧ Research(yale)", "m": "Private(yale) ∧ IvyLeague(yale) ∧ ResearchUniversity(yale)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Vacuum(vacuum) ∧ Suck(vacuum)", "m": "Suck(vacuums)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Vampire(vampire) ∧ Suck(vampire)", "m": "Suck(vampires)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Visit(juan, y) ∧ MountainRange(y) ∧ In(y, texas)", "m": "∃x (MountainRange(x) ∧ In(x, texas) ∧ Visited(juanDeOnate, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.06}
+{"c": "VisitDaily(taylor, gym)", "m": "VisitGym(taylor)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "WorkInLab(james)", "m": "Student(james) ∧ WorkInLab(james)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "¬(AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri))", "m": "¬(American(yuri) ∧ BasketballPlayer(yuri))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "Private(yale) ∧ IvyLeague(yale) ∧ Research(yale) ∧ Move(yale, newHaven)", "m": "∃x (PrivateIvyLeagueResearchUniversity(x) ∧ Move(x, newHaven))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.15}
+{"c": "¬(Jump(michael) ∧ Shooting(windy))", "m": "¬Block(michael, windy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬(Podcast(x) ∧ Novel(x))", "m": "¬Novel(podcast)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.01}
+{"c": "¬(BornIn(luke, multipleBirth) ∨ ComplainAbout(luke, often, annoyingSiblings) )", "m": "¬MultipleBirth(luke) ∧ ¬Complain(luke)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.07}
+{"c": "¬(Russian(vladimir) ∧ FederationOfficial(vladimir))", "m": "¬RussianOfficial(vladimir)", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "¬Begin34(x) → ¬Begin35(x)", "m": "∀x (BeginsWith35(x) → ¬BeginsWith34(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "¬Block(peter, windy)", "m": "Block(peter, windy)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Eastern(tom)", "m": "Eastern(tom)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Fly(susan, lga)", "m": "FliesFrom(susan, lga)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬(Product(driedThaiChili) ∧ From(driedThaiChili, bakedByMelissa))", "m": "∀x (DriedThaiChilies(x) → ¬ProductOfBakedByMelissa(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "¬J1Visa(mike)", "m": "J1Visa(mike)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬LanguageUnderstanding(machineTranslation)", "m": "Understanding(machineTranslation)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬FromEarth(marvin) → Alien(marvin)", "m": "¬FromEarth(marvin) → Extraterrestrial(marvin)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.01}
+{"c": "¬LeapStraightIntoAir(yuri) → (AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri))", "m": "¬LeapsStraight(yuri) → (American(yuri) ∧ ProfessionalBasketballPlayer(yuri))", "depth": 1, "ops": ["DROP"], "secs": 0.01}
+{"c": "¬Located(beijing, southernChina)", "m": "LocatedIn(beijing, southernChina)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Monkey(rock)", "m": "Monkey(rock)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Novel(familySecrets)", "m": "Novel(familySecrets)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Novel(familySecrets)", "m": "¬Novel(podcast)", "depth": 1, "ops": ["BIND"], "secs": 0.0}
+{"c": "¬PartTimeJob(james)", "m": "PartTimeJob(james)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Perform(bonnie)", "m": "Perform(bonnie)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Pet(ted)", "m": "Pet(ted)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Novel(familySecrets) ∧ Podcast(familySecrets)", "m": "¬Novel(podcast)", "depth": 2, "ops": ["BIND", "DROP"], "secs": 0.0}
+{"c": "¬Podcast(novel)", "m": "¬Novel(podcast)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Podcast(x) ∧ Novel(x)", "m": "¬Novel(podcast)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "¬Podcast(x) → Novel(x)", "m": "¬Novel(podcast)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.01}
+{"c": "¬Romance(basque)", "m": "Romance(basque)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Shoot(peter, windy)", "m": "Block(peter, windy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Provide(hamdenPlazaSubway, takeOutService)", "m": "¬TakeOut(hamdenPlazaSubway)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Shoot(windy, michael)", "m": "¬Block(michael, windy)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.0}
+{"c": "¬Understanding(machineTranslation)", "m": "Understanding(machineTranslation)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Suck(duster)", "m": "HouseholdAppliance(duster) ∧ ¬Suck(duster)", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "¬Wing(rock)", "m": "Wings(rock)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬∀x (Digital(x) → Analog(x))", "m": "∀x (Digital(x) → ¬Analog(x))", "depth": 1, "ops": ["QUANT"], "secs": 0.01}
+{"c": "¬∀x (Sad(x))", "m": "∀x Sad(x)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬∀x Sad(x)", "m": "∀x Sad(x)", "depth": 1, "ops": ["NEG"], "secs": 0.0}
+{"c": "¬Visit(juanDeOnate, x) ∧ Location(x, texas) ∧ MountainRange(x)", "m": "∃x (MountainRange(x) ∧ In(x, texas) ∧ Visited(juanDeOnate, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.11}
+{"c": "Taller(michael, x) ∧ ∀x (Class(x, michael) → Taller(michael, x))", "m": "∀x ∀y ((Man(x) ∧ Man(y) ∧ Taller(x, y)) → Block(x, y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.34}
+{"c": "¬∃x (PlaysFor(x, nautico) ∧ PlaysFor(x, brazilian))", "m": "¬∃x (PlaysFor(x, nautico) ∧ Brazilian(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "¬∃y (Player(ailtonSilva) ∧ Club(y) ∧ PlaysFor(ailtonSilva, y))", "m": "¬∃y (FootballClub(y) ∧ PlaysFor(ailtonSilva, y))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "¬∃x (Player(x) ∧ PlaysFor(x, club))", "m": "¬∃y (FootballClub(y) ∧ PlaysFor(ailtonSilva, y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "¬∃y Plays(ailton, y)", "m": "¬∃y (FootballClub(y) ∧ PlaysFor(ailtonSilva, y))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (BingeWatch(x, karen) ↔ Download(x, karen))", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 2, "ops": ["SWAP", "SWAP"], "secs": 0.02}
+{"c": "¬∃x (Book(x) ∧ Publish(newVesselPress, x) ∧ InLanguage(x, english))", "m": "Publish(newVesselPress, harryPotter)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.21}
+{"c": "∀x (Block(michael, x) → ¬Jump(x))", "m": "∀x (Man(x) ∧ ¬Jump(x) → Block(michael, x))", "depth": 2, "ops": ["ADD", "REV"], "secs": 0.02}
+{"c": "∀x (Book(x) → Knowledge(x))", "m": "∀x (Book(x) → Contain(x, knowledge))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "¬∃y(PartTimeJob(y) ∧ Have(james, y) ∧ OfferedBy(y, university))", "m": "¬PartTimeJob(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.15}
+{"c": "∀x (BloomsInSpring(x) ↔ (Flower(x) ∧ RequiresSpecificSunlight(x) ∧ RequiresWarmth(x)))", "m": "∀x (Flower(x) ∧ RequiresSpecificSunlightAndWarmth(x) → BloomsInSpring(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.12}
+{"c": "∀x (Composer(x) → MusicPiece(x))", "m": "∀x (Composer(x) → ∃y (MusicPiece(y) ∧ Write(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.04}
+{"c": "∀x (Detective(x) → (∃y (Crime(y) ∧ Solves(x, y) ∧ GathersEvidence(x) ∧ AnalyzesClues(x))))", "m": "∀x (Detective(x) → SolvesCrimesByGatheringEvidenceAndAnalyzingClues(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.58}
+{"c": "∀x (Dog(x) → Barks(x))", "m": "∀x (Dog(x) → Animal(x) ∧ Bark(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Dogs(x) → Barks(x))", "m": "∀x (Dog(x) → Animal(x) ∧ Bark(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Duster(x) → ¬Suck(x))", "m": "HouseholdAppliance(duster) ∧ ¬Suck(duster)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∀x (Duster(x) → ¬Suck(x)) ∧ HouseholdAppliance(duster)", "m": "HouseholdAppliance(duster) ∧ ¬Suck(duster)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.1}
+{"c": "∀x (Electron(x) ∧ (Orbital(x) ⊕ Suborbital(x)))", "m": "∀x (Electron(x) → (Orbital(x) ⊕ Suborbital(x)))", "depth": 1, "ops": ["RESTR"], "secs": 0.0}
+{"c": "∀x (Event(x) → Sad(x))", "m": "∀x Sad(x)", "depth": 2, "ops": ["DROP", "RESTR"], "secs": 0.01}
+{"c": "∀x (FourSides(x) → Quadrilateral(x))", "m": "∀x (Polygon(x) ∧ HasFourSides(x) → Quadrilateral(x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Knowledge(x) → Smarter(x))", "m": "∀x (Gain(x, knowledge) → Smarter(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (Love(x, animals) → Nice(x))", "m": "∀x (AnimalLover(x) → NiceToAnimals(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (ManagedBuilding(x) → Deposit(x, apartment))", "m": "∀x (ManagedBuilding(x) → DepositRequired(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∀x (ManagedBuilding(x) → DepositRequired(deposit, x))", "m": "∀x (ManagedBuilding(x) → DepositRequired(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.05}
+{"c": "∀x (Name(x, y) → GoodGuy(y))", "m": "∀x ∀y (SuperheroMovie(x) ∧ NamedAfter(x, y) → GoodGuy(y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.09}
+{"c": "∀x (NetflixShow(x) → (BingeWatch(karen, x) ↔ Download(karen, x)))", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 2, "ops": ["DROP", "RESTR"], "secs": 0.03}
+{"c": "∀x (NetflixShow(x) ↔ Download(karen, x))", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (NetflixShow(x) ∧ BingeWatch(karen, x) ↔ Download(karen, x))", "m": "∀x (BingeWatch(karen, x) ↔ Download(karen, x))", "depth": 1, "ops": ["DROP"], "secs": 0.01}
+{"c": "∀x (Oven(x) → (UsedForBaking(x) ∧ UsedForCooking(x)))", "m": "∀x (Oven(x) → UsedForBakingAndCookingFood(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Person(x) ∧ Gain(x, knowledge) → Smarter(x))", "m": "∀x (Gain(x, knowledge) → Smarter(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Plunger(x) → Suck(x))", "m": "Suck(plungers)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∀x (Rent(x, y) → Deposit(x, y))", "m": "∀x (ManagedBuilding(x) → DepositRequired(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.1}
+{"c": "∀x (SaladEater(x) → HealthConscious(x))", "m": "∀x (EatSalads(x) → Conscious(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∀x (Shoot(x, michael) → ¬Jump(x))", "m": "∀x (Man(x) ∧ ¬Jump(x) → Block(michael, x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.14}
+{"c": "∀x (Shooter(x) ∧ Jump(x) → GreatShooter(x))", "m": "∀x (Jump(x) → GreatShooter(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (Shooting(x) ∧ Jump(x) → GreatShooter(x))", "m": "∀x (Jump(x) → GreatShooter(x))", "depth": 1, "ops": ["DROP"], "secs": 0.0}
+{"c": "∀x (SuperheroMovie(x) ∧ NamedAfter(x, character) → GoodGuy(character))", "m": "∀x ∀y (SuperheroMovie(x) ∧ NamedAfter(x, y) → GoodGuy(y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.1}
+{"c": "∀x (Vacation(x) ∧ Relaxing(x) → (BeautifulScenery(x) ∧ EnjoyableActivities(x)))", "m": "∀x (Vacation(x) ∧ BeautifulScenery(x) ∧ EnjoyableActivities(x) → Relaxing(x))", "depth": 2, "ops": ["MOVE", "MOVE"], "secs": 0.03}
+{"c": "∀x (Vacuum(x) → Suck(x))", "m": "Suck(vacuums)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.02}
+{"c": "∀x (Vampire(x) → Suck(x))", "m": "Suck(vampires)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.03}
+{"c": "∀x (VisitGym(x) → Fulfill(x))", "m": "∀x (Gym(x) → Nutrition(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.04}
+{"c": "∀x (WorksInNewsIndustryAndReportsOnEvents(x) → Journalist(x))", "m": "∀x (Person(x) ∧ WorksInNewsIndustry(x) ∧ ReportsOnEvents(x) → Journalist(x))", "depth": 2, "ops": ["ADD", "ADD"], "secs": 0.05}
+{"c": "∀x (¬Jump(x) → Block(michael, x))", "m": "∀x (Man(x) ∧ ¬Jump(x) → Block(michael, x))", "depth": 1, "ops": ["ADD"], "secs": 0.0}
+{"c": "∀x (Category(x, machineLearning) → (Category(x, supervisedLearning) ∨ Category(x, unsupervisedLearning) ∨ Category(x, reinforcementLearning)))", "m": "∀x (MachineLearningAlgorithm(x) → (Supervised(x) ∨ Unsupervised(x) ∨ Reinforcement(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 2.62}
+{"c": "∀x ∀y (Object(x) ∧ Liquid(y) ∧ FloatsOnSurface(x, y) → Buoyant(x))", "m": "∀x (Object(x) ∧ FloatsOnSurfaceOfLiquid(x) → Buoyant(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.42}
+{"c": "∀x ∀y (Write(x, y) → Composer(x))", "m": "∀x (Composer(x) → ∃y (MusicPiece(y) ∧ Write(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.21}
+{"c": "∀x ∀y (Refrigerator(x) ∧ Perishable(y) → Preserves(x, y)) ∧ ¬(Refrigerator(x) ∧ Electronics(y) → Preserves(x, y))", "m": "∀x (Refrigerator(x) → (PreservesPerishables(x) ∧ ¬PreservesElectronics(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.53}
+{"c": "∀x ∃y (Composer(x, y) → Write(x, y))", "m": "∀x (Composer(x) → ∃y (MusicPiece(y) ∧ Write(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.32}
+{"c": "∀x ∃y (Composer(x, y) ∧ MusicPiece(y))", "m": "∀x (Composer(x) → ∃y (MusicPiece(y) ∧ Write(x, y)))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.28}
+{"c": "∀x∀y (Beverage(x) ∧ ContainsCaffeine(x) ∧ ServedHot(x) ∧ RoastedSeeds(y) ∧ MadeFrom(x, y) → Coffee(x))", "m": "∀x (Beverage(x) ∧ ContainsCaffeine(x) ∧ ServedHot(x) ∧ MadeFromRoastedSeeds(x) → Coffee(x))", "depth": 2, "ops": ["BIND", "DROP"], "secs": 1.02}
+{"c": "∀x (Computer(x) → (∃y (InputDevice(y) ∧ (Keyboard(y) ∨ Mouse(y))) ∧ ∃z (OutputDevice(z) ∧ (Monitor(z) ∨ Speakers(z)))))", "m": "∀x (Computer(x) → (∃y (InputDevice(y) ∧ (Keyboard(y) ∨ Mouse(y)) ∧ Requires(x,y)) ∧ ∃z (OutputDevice(z) ∧ (Monitor(z) ∨ Speakers(z)) ∧ Requires(x,z))))", "depth": 3, "ops": ["COMPOUND"], "secs": 7.7}
+{"c": "∀x∀y (Clock(x) ∧ Scale(y) → (Measures(x, Time) ∧ Measures(y, Weight)))", "m": "∀x (Clock(x) → MeasuresTime(x)) ∧ ∀x (Scale(x) → MeasuresWeight(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 2.41}
+{"c": "∀x∀y∀z (City(x) ∧ Park(y) ∧ Beach(z) → (HasBuildings(x) ∧ HasTrees(y) ∧ HasSand(z)))", "m": "∀x (City(x) → HasBuildings(x)) ∧ ∀x (Park(x) → HasTrees(x)) ∧ ∀x (Beach(x) → HasSand(x))", "depth": 1, "ops": ["UNGLUE"], "secs": 0.02}
+{"c": "∃x (Book(x) ∧ Knowledge(x))", "m": "∀x (Book(x) → Contain(x, knowledge))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.05}
+{"c": "∃x (City(pierre) ∧ In(pierre, x) ∧ City(bismarck) ∧ In(bismarck, x))", "m": "SameState(stPierre, bismarck)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.06}
+{"c": "∃x (Heck(x) ∧ BreedBack(x))", "m": "∃x (HeckCattle(x) ∧ ArtificialSelection(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "∃x (HeckCattle(x) ∧ SelectiveBreeding(x, domesticAnimal))", "m": "∃x (HeckCattle(x) ∧ ArtificialSelection(x))", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.03}
+{"c": "∃x (In(butte, x) ∧ In(stPierre, x))", "m": "SameState(butte, stPierre)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "ResidentialCollege(benjaminFranklinCollege, yale) ∧ ResidentialCollege(berkeleyCollege, yale) ∧ ResidentialCollege(branfordCollege, yale) ∧ ResidentialCollege(davenportCollege, yale) ∧ ResidentialCollege(ezraStilesCollege, yale) ∧ ResidentialCollege(graceHopperCollege, yale) ∧ ResidentialCollege(jonathanEdwardsCollege, yale) ∧ ResidentialCollege(morseCollege, yale) ∧ ResidentialCollege(pauliMurrayCollege, yale) ∧ ResidentialCollege(piersonCollege, yale) ∧ ResidentialCollege(saybrookCollege, yale) ∧ ResidentialCollege(sillimanCollege, yale) ∧ ResidentialCollege(timothyDwightCollege, yale) ∧ ResidentialCollege(trumbullCollege, yale)", "m": "ResidentialCollege(benjaminFranklin) ∧ ResidentialCollege(berkeley) ∧ ResidentialCollege(branford) ∧ ResidentialCollege(davenport) ∧ ResidentialCollege(ezraStiles) ∧ ResidentialCollege(graceHopper) ∧ ResidentialCollege(jonathanEdwards) ∧ ResidentialCollege(morse) ∧ ResidentialCollege(pauliMurray) ∧ ResidentialCollege(pierson) ∧ ResidentialCollege(saybrook) ∧ ResidentialCollege(silliman) ∧ ResidentialCollege(timothyDwight) ∧ ResidentialCollege(trumbull)", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∃x (Man(x) ∧ Taller(x, michael))", "m": "Man(peter) ∧ Taller(peter, michael)", "depth": 2, "ops": ["BIND", "BIND"], "secs": 0.03}
+{"c": "∃x (Man(x) ∧ ∀y (Class(y) → Taller(x, y)))", "m": "∀x ∀y ((Man(x) ∧ Man(y) ∧ Taller(x, y)) → Block(x, y))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.41}
+{"c": "∃x (MLAlgorithm(x) ∧ Supervised(x)) ∧ ∃x (MLAlgorithm(x) ∧ Unsupervised(x)) ∧ ∃x (MLAlgorithm(x) ∧ Reinforcement(x))", "m": "∀x (MachineLearningAlgorithm(x) → (Supervised(x) ∨ Unsupervised(x) ∨ Reinforcement(x)))", "depth": 3, "ops": ["COMPOUND"], "secs": 1.64}
+{"c": "∃x (SelectiveBreeding(x, y) ∧ Animal(x))", "m": "∃x (HeckCattle(x) ∧ ArtificialSelection(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 0.09}
+{"c": "∃x (SixWayTie(x) ∧ Leaderboard(descampe, duMaurierClassic1992))", "m": "Tie(descampe, duMaurierClassic1992)", "depth": 2, "ops": ["ADD", "DROP"], "secs": 0.02}
+{"c": "∃x (Provide(hamdenPlazaSubway, takeOutService) ∨ (NegativeReview(x) ∧ ¬Receive(hamdenPlazaSubway, x)))", "m": "TakeOut(hamdenPlazaSubway) ∨ ¬NegativeReviews(hamdenPlazaSubway)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.22}
+{"c": "∃x ∃y (Orchestra(x) ∧ Premiered(x, y))", "m": "∃x (Orchestra(x) ∧ ∃y (MusicPiece(y) ∧ Premiere(x, y)))", "depth": 1, "ops": ["ADD"], "secs": 0.01}
+{"c": "∃x (Student(x) ∧ PartTimeJob(x) ∧ OfferedByUniversity(x))", "m": "PartTimeJob(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.08}
+{"c": "∃y (PartTimeJob(y) ∧ Have(james, y) ∧ OfferedBy(y, university))", "m": "PartTimeJob(james)", "depth": 3, "ops": ["COMPOUND"], "secs": 0.13}
+{"c": "∀x ∀y ∀z (Tool(x) ∧ LongHandle(y) ∧ FlatBlade(z) ∧ Has(x, y) ∧ Has(x, z) ∧ LiftsAndMovesLooseMaterial(x) → Shovel(x))", "m": "∀x (Tool(x) ∧ LongHandle(x) ∧ FlatBlade(x) ∧ UsedForLiftingAndMovingLooseMaterial(x) → Shovel(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.0}
+{"c": "∀x∀y∀z (BalancedDiet(x) ∧ VarietyOfFruits(y) ∧ Vegetables(z) ∧ LeanProteins(x) ∧ IncludesElements(x, y, z) → ProvidesEssentialNutrients(x) ∧ PromotesOverallHealthAndWellness(x))", "m": "∀x (BalancedDiet(x) ∧ IncludesVarietyOfFruitsVegetablesAndLeanProteins(x) → ProvidesEssentialNutrients(x) ∧ PromotesOverallHealthAndWellness(x))", "depth": 3, "ops": ["COMPOUND"], "secs": 10.01}
