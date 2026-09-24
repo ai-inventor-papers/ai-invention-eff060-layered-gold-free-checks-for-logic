@@ -50,6 +50,6 @@ python3 scripts/build_output.py      # recreates scripts/__pycache__/
 Everything else is kept (about 10 MB of text). The only
 content kept out of the public repo is `notes/full/` and `notes/raw/` (fetched third-party texts), via upload-ignore patterns.
 They stay on the run volume at
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_research_1/notes/`. They can be rebuilt with
+`./notes/`. They can be rebuilt with
 `bash scripts/restore_fetches.sh`. That re-fetch uses full-text mode even for files that were originally regex greps, and arXiv
 may serve newer versions. Check `notes/QUOTES.md` for the pinned versions.
