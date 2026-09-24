@@ -7,7 +7,7 @@
    "R1": "moonshotai/kimi-k2-0905"
   },
   "artifact": "E2 (run_u75jRHUss0zo iteration 4, gen_art_dataset_4, plan gen_plan_dataset_1_idx3)",
-  "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4",
+  "workspace": "../../../../round-4/dataset-4/src",
   "empty_groups_omitted": [
    "e2_controls"
   ],

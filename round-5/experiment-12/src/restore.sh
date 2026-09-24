@@ -2,7 +2,7 @@
 # Restores every path marked `delete` in .aii/manifest.yaml (run from this directory).
 set -e
 cd "$(dirname "$0")"
-D4=/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4
+D4=../../../round-4/dataset-4/src
 [ -d e2bsrc/data_local ] || cp -r $D4/data_local e2bsrc/
 (cd e2bsrc && uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python -r pyproject.toml scikit-learn)
 (cd exp5src && uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r pyproject.toml)

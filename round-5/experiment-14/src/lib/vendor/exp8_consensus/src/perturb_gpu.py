@@ -27,7 +27,7 @@ sys.path.insert(0, str(ROOT / "vendor_e6"))  # `src.*` = exp 6's package (vendor
 os.environ.setdefault("NLTK_DATA", str(ROOT / "data" / "nltk_data"))
 OUT = ROOT / "results" / "perturb_scores"
 OUT.mkdir(parents=True, exist_ok=True)
-EXPD = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4")
+EXPD = Path("../../../../../../../round-1/experiment-4/src")
 LOCAL_Q8 = "Qwen/Qwen3-8B"
 LOCAL_L8 = "meta-llama/Llama-3.1-8B-Instruct"
 

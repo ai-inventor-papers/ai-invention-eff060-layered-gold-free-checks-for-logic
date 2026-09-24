@@ -79,7 +79,7 @@ def test_v4_oof_folds_disjoint():
 def test_20_rows_reproduce():
     rows = [json.loads(l) for l in (ROOT / "results" / "scores_E_variants.jsonl").read_text().splitlines()]
     mx = {json.loads(l)["sentence_id"]: json.loads(l) for l in Path(
-        "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl").read_text().splitlines()}
+        "../../../../round-3/evaluation-2/src/pairwise_classes_E.jsonl").read_text().splitlines()}
     W = json.loads((ROOT / "results" / "family_weights.json").read_text())["per_fold_holdout"]
     import hashlib
     Z = sorted([r for r in rows if r["in_matrix"] and r["n_peers"] >= 2], key=lambda r: hashlib.sha1(r["row_key"].encode()).hexdigest())[:20]

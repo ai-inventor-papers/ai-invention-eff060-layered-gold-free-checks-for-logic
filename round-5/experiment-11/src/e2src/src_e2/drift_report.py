@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from panel import PROMPT_SHA1  # noqa: E402
 
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path("../../../../../round-1/dataset-1/src")
 MEM = ["P1", "P3", "R1"]
 
 

@@ -15,7 +15,7 @@ cp -r . ~/e2b && cd ~/e2b
 ```
 Scripts derive paths from their own location. The following inputs are referenced by absolute path and must stay reachable
 (all read-only):
-- `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4` (E2; also the source of
+- `../../../round-4/dataset-4/src` (E2; also the source of
   `e2bsrc/data_local`);
 - `.../iter_1/gen_art/gen_art_dataset_1` (dataset E: its 700 sentences, calibration and few-shot items, the exclusion set);
 - `.../iter_1/gen_art/gen_art_experiment_1/screen_items.json` (screen texts, exclusion);

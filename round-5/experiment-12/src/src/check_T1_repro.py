@@ -12,7 +12,7 @@ WS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(WS / "exp6src"))
 from src import api_bar as AB  # noqa: E402
 
-T1 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl")
+T1 = Path("../../../../round-3/experiment-6/src/results/per_item_T1.jsonl")
 rows = [json.loads(l) for l in T1.read_text().splitlines() if l.strip()]
 out = {}
 for cell, strata in (("L25", ("L25",)), ("long", ("L25", "L20", "EXC"))):

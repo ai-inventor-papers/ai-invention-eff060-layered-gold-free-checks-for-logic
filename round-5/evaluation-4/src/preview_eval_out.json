@@ -87,7 +87,7 @@
           "metadata_status": "MATCH",
           "metadata_paper_status": "MATCH",
           "metadata_paper_line": "661",
-          "metadata_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].auroc...",
+          "metadata_source": "../../../round-3/experiment-6/src/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].auroc...",
           "metadata_data_role": "DEV",
           "eval_match_hyp_vs_file": 1.0,
           "eval_match_paper_vs_file": 1.0
@@ -101,7 +101,7 @@
           "metadata_status": "MATCH",
           "metadata_paper_status": "MATCH",
           "metadata_paper_line": "668",
-          "metadata_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].auroc...",
+          "metadata_source": "../../../round-3/experiment-6/src/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].auroc...",
           "metadata_data_role": "DEV",
           "eval_match_hyp_vs_file": 1.0,
           "eval_match_paper_vs_file": 1.0
@@ -115,7 +115,7 @@
           "metadata_status": "MATCH",
           "metadata_paper_status": "MATCH",
           "metadata_paper_line": "648",
-          "metadata_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].delta...",
+          "metadata_source": "../../../round-3/experiment-6/src/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].delta...",
           "metadata_data_role": "DEV",
           "eval_match_hyp_vs_file": 1.0,
           "eval_match_paper_vs_file": 1.0
@@ -130,7 +130,7 @@
           "output": "CLOSED",
           "predict_action": "Apply eval-3 Part 4 in place (§3.3–§3.6, IDs, verdicts, prior art, coverage, iter-1/2 items, held-out E)",
           "metadata_anchor": "record_final.md sections 1–7, 16, 17",
-          "metadata_sources": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/prereg_mech.json; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_e...",
+          "metadata_sources": "../../../round-3/evaluation-2/src/prereg_mech.json; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_e...",
           "metadata_note": "1 targeted original sentence(s) not present in paper_draft.md (nothing to strike): the common-set size must be read from evaluation 1's tables ",
           "eval_closed": 1.0
         },
@@ -139,7 +139,7 @@
           "output": "CLOSED",
           "predict_action": "Re-transcribe §4.2 with verbatim CIs, T9/T9b, prereg gate text, M3 both specs, NET within-arm, n.s. marks",
           "metadata_anchor": "record_final.md section 9 (+ gates in 6, 8)",
-          "metadata_sources": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_ex...",
+          "metadata_sources": "../../../round-4/experiment-9/src/csc_gate_E.json; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_ex...",
           "metadata_note": "",
           "eval_closed": 1.0
         },
@@ -148,7 +148,7 @@
           "output": "CLOSED",
           "predict_action": "Population/selection paragraph, FREE_exact + FREE_ALIGN columns, T8/T10/T14/T15/T17 + HYB_MEAN, 'provisional negative'",
           "metadata_anchor": "record_final.md section 9",
-          "metadata_sources": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json",
+          "metadata_sources": "../../../round-4/experiment-9/src/csc_gate_E.json",
           "metadata_note": "",
           "eval_closed": 1.0
         }

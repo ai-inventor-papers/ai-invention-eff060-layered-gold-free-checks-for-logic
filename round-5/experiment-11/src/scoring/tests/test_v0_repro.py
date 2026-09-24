@@ -4,7 +4,7 @@ Reads E's label-free blind rows and E's stored SCORES only (never E labels)."""
 import json, sys, hashlib
 from pathlib import Path
 WS = Path(__file__).resolve().parents[2]
-E5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+E5 = Path("../../../../../round-2/experiment-5/src")
 sys.path.insert(0, str(WS / "frozen" / "exp5" / "src"))
 sys.path.insert(0, str(WS))
 

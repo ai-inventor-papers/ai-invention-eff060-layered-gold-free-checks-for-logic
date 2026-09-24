@@ -1,7 +1,7 @@
 {
  "figure": "F2",
  "caption": "Left: share of real errors endorsed (e) per class on the completion-selected PRIMARY subset for the same 3 free peers scored exactly, with ALIGN, and for CSC-cued peers. Right: correct-row divergence d, FULL population (exact vs ALIGN) and PRIMARY (exact vs CSC); PRIMARY and FULL are different populations.",
- "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json e_anchoring_by_error_class.PRIMARY, a_ed_FULL.cells.R_AB, a_ed_PRIMARY.cells.R_AB",
+ "source": "# source: ../../../../round-4/experiment-9/src/results/analysis.json e_anchoring_by_error_class.PRIMARY, a_ed_FULL.cells.R_AB, a_ed_PRIMARY.cells.R_AB",
  "data": {
   "e_by_class_PRIMARY": [
    {

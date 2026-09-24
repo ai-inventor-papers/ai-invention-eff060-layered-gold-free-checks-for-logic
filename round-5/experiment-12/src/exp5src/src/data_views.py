@@ -21,7 +21,7 @@ from loguru import logger
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path("../../../../../round-1/dataset-1/src")
 
 ALLOW_META = ["item_id", "sentence_id", "system", "slot", "family", "system_class", "generator_model_id", "prompt_variant"]
 STRATA_KEYS = ["words", "n_quant", "depth", "n_conditions", "text_conditions", "exception_type", "source_stratum",

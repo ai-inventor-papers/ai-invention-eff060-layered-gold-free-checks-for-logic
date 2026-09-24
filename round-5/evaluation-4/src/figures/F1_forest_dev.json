@@ -1,7 +1,7 @@
 {
  "figure": "F1",
  "caption": "Development-set (E) \u0394 strat AUROC with 95% sentence-cluster bootstrap CIs (B = 2000) copied verbatim; L25 and CTRL CIs cover 0 (n.s.). Pooled/long are within-stratum AUROC; single strata are pooled within the stratum.",
- "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json a_head_on.*.deltas",
+ "source": "# source: ../../../../round-3/experiment-6/src/results/analysis_T1.json a_head_on.*.deltas",
  "data": [
   {
    "label": "CTRL",
