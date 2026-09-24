@@ -1,7 +1,7 @@
 # Dataset card: R_COMP-FREE name-free labels (T7b)
 
 Run `run_u75jRHUss0zo`, iteration 4, `gen_art_dataset_5`. The workspace (all paths below are relative to it) is
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5`.
+`.`.
 
 ## Status: read this first
 

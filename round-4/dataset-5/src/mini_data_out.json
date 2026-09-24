@@ -1,7 +1,7 @@
 {
   "metadata": {
     "artifact": "T7b name-free labels for free-vocabulary rule translations (run_u75jRHUss0zo, iter 4, gen_art_dataset_5)",
-    "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5",
+    "workspace": ".",
     "selection": "the three plan groups (chosen as best 3 of 6 standardised candidates; folio / malls_test / logicnli_test were context only: no multi-system candidates, ~36-39% wrong gold, or no FOL; their standardised record is temp/candidates_data_out.json)",
     "label_mode": "search_only",
     "status_note": "SEARCH-ONLY labels: the paid gloss step could not run (deviation D9: run OpenRouter budget exhausted before this artifact's first call; re-probed at packaging, still HTTP 403). ERROR_CERT is final and certificate-backed; MAPPED rows are UNRESOLVED_GLOSS_NOT_RUN until src/resume_gloss.py runs. metadata_label_binary_search_provisional (ERROR vs MAPPED) is a provisional view with audited contamination (results/soundness_audit.json).",

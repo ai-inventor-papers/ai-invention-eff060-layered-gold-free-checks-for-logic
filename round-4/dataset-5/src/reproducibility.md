@@ -10,7 +10,7 @@ paid steps that were written and tested but not run.
 ## 1. Get the folder
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5 ~/t7b && cd ~/t7b
+cp -r . ~/t7b && cd ~/t7b
 ```
 
 The code reads these other run artifacts **read-only**, by absolute path (`src/common.py`). A copy elsewhere needs these

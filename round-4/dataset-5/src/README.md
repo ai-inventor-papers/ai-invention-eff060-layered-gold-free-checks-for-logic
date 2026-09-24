@@ -1,7 +1,7 @@
 # Name-free labels for free-vocabulary rule translations (T7b)
 
 Run `run_u75jRHUss0zo`, iteration 4, `gen_art_dataset_5`. Workspace:
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5`.
+`.`.
 
 This artifact labels the **FREE** condition of R_COMP: 2,652 free-vocabulary FOL translations of 221 templated
 rule sentences, produced by 10 LLM slots from 9 families. The labeller shares **no instrument** with any consensus metric
