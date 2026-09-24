@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold-Free Faithfulness Metrics for NL-to-FOL</title>
+<style>
+:root {
+  --bg: #f7f7f6;
+  --text: #1b1b1b;
+  --text-secondary: #555;
+  --accent: #2b6cb0;
+  --accent-light: #e8f0f8;
+  --border: #d0d0d0;
+  --border-light: #e4e4e4;
+  --card-bg: #fff;
+  --code-bg: #f0f0ee;
+  --nav-bg: #ffffffcc;
+  --measure: 42rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a1a;
+    --text: #e4e4e4;
+    --text-secondary: #aaa;
+    --accent: #5b9bd5;
+    --accent-light: #1e2d3d;
+    --border: #3a3a3a;
+    --border-light: #2a2a2a;
+    --card-bg: #222;
+    --code-bg: #2a2a2a;
+    --nav-bg: #1a1a1acc;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #e4e4e4;
+  --text-secondary: #aaa;
+  --accent: #5b9bd5;
+  --accent-light: #1e2d3d;
+  --border: #3a3a3a;
+  --border-light: #2a2a2a;
+  --card-bg: #222;
+  --code-bg: #2a2a2a;
+  --nav-bg: #1a1a1acc;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 200;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.skip-link:focus { top: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+h1, h2, h3, h4 { line-height: 1.25; font-weight: 700; }
+h1 { font-size: 1.9rem; letter-spacing: -0.02em; margin-bottom: 0.5em; }
+h2 { font-size: 1.45rem; margin-bottom: 0.75em; padding-bottom: 0.3em; border-bottom: 1px solid var(--border-light); }
+h3 { font-size: 1.1rem; margin-bottom: 0.5em; }
+p { margin-bottom: 1em; }
+code {
+  font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.88em;
+  background: var(--code-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+@media (min-width: 900px) {
+  .page-grid { grid-template-columns: 180px 1fr; }
+}
+
+/* --- Side navigation --- */
+.sidenav {
+  display: none;
+}
+@media (min-width: 900px) {
+  .sidenav {
+    display: block;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 2rem 0 2rem 1.25rem;
+    font-size: 0.82rem;
+    border-right: 1px solid var(--border-light);
+    background: var(--bg);
+    z-index: 50;
+    overflow-y: auto;
+  }
+  .sidenav ul { list-style: none; }
+  .sidenav li { margin-bottom: 0.5em; }
+  .sidenav a {
+    display: block;
+    padding: 4px 12px 4px 10px;
+    border-left: 3px solid transparent;
+    color: var(--text-secondary);
+    transition: color 0.15s, border-color 0.15s;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .sidenav a:hover { color: var(--text); }
+  .sidenav a.active {
+    border-left-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-light);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  padding: 0 16px;
+}
+.mobile-nav ul { list-style: none; display: flex; gap: 0; }
+.mobile-nav a {
+  display: block;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.mobile-nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+@media (min-width: 900px) {
+  .mobile-nav { display: none; }
+}
+
+/* --- Main content --- */
+main {
+  max-width: 56rem;
+  padding: 0 16px 3rem;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  main { padding: 0 2.5rem 4rem; }
+}
+section { margin-bottom: 3.5rem; }
+.prose { max-width: var(--measure); }
+.prose p, .prose li { max-width: var(--measure); }
+
+/* --- Hero --- */
+.hero { padding-top: 3rem; margin-bottom: 3.5rem; }
+.hero h1 { max-width: 38rem; }
+.hero .author {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+.hero .tldr {
+  max-width: var(--measure);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-links a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s;
+}
+.hero-links a:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  text-decoration: none;
+}
+
+/* --- Contribution cards --- */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+.card {
+  border-top: 2px solid var(--accent);
+  background: var(--card-bg);
+  padding: 1.25rem 1.25rem 1rem;
+}
+.card h3 { font-size: 1rem; margin-bottom: 0.4em; }
+.card p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+/* --- Tables --- */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.25rem 0 1.5rem;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+thead th {
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+tbody tr:last-child td { border-bottom: none; }
+.numeric { text-align: right; font-variant-numeric: tabular-nums; }
+caption {
+  text-align: left;
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5em;
+  caption-side: top;
+}
+.group-sep td, .group-sep th {
+  border-bottom: 2px solid var(--border);
+}
+
+/* --- Figures / gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.fig-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  padding: 1rem;
+}
+.fig-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid var(--border-light);
+}
+.fig-card img:hover { opacity: 0.92; }
+.fig-caption {
+  margin-top: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.fig-caption strong {
+  color: var(--text);
+}
+.fig-click-hint {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+/* --- Lightbox --- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox-inner {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+}
+.lightbox-inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 2px;
+}
+.lightbox-caption {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+  max-width: 56rem;
+}
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+.lightbox-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* --- Limitations list --- */
+.limitations-list {
+  padding-left: 1.25em;
+  max-width: var(--measure);
+}
+.limitations-list li {
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+.limitations-list li strong {
+  font-weight: 600;
+}
+
+/* --- Code artifacts list --- */
+.code-list {
+  max-width: var(--measure);
+}
+.code-list ul {
+  list-style: none;
+  padding: 0;
+}
+.code-list li {
+  padding: 5px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--border-light);
+}
+.code-list li:last-child { border-bottom: none; }
+
+/* --- Footer --- */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: 56rem;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  footer { padding: 2rem 2.5rem; }
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 1.5rem;
+}
+.footer-links a { font-weight: 500; }
+.citation-block {
+  font-size: 0.82rem;
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 3px;
+  line-height: 1.55;
+  max-width: var(--measure);
+}
+
+/* Inline code links */
+.code-ref {
+  font-size: 0.78rem;
+  font-weight: 500;
+  vertical-align: baseline;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}
+
+/* --- Method step list --- */
+.method-steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  max-width: var(--measure);
+}
+.method-steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.5em;
+  margin-bottom: 1em;
+}
+.method-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+}
+
+/* Result highlight */
+.result-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.result-cell {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.result-cell .big-num {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.result-cell .big-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.2em;
+  line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="page-grid">
+
+<!-- Desktop side nav -->
+<nav class="sidenav" aria-label="Section navigation">
+<ul>
+  <li><a href="#hero">Overview</a></li>
+  <li><a href="#contributions">Contributions</a></li>
+  <li><a href="#method">Method</a></li>
+  <li><a href="#results">Results</a></li>
+  <li><a href="#figures">Figures</a></li>
+  <li><a href="#limitations">Limitations</a></li>
+  <li><a href="#code-artifacts">Code</a></li>
+</ul>
+</nav>
+
+<div>
+
+<!-- Mobile top nav -->
+<nav class="mobile-nav" aria-label="Section navigation">
+<ul>
+  <li><a href="#hero">Overview</a></li>
+  <li><a href="#contributions">Contributions</a></li>
+  <li><a href="#method">Method</a></li>
+  <li><a href="#results">Results</a></li>
+  <li><a href="#figures">Figures</a></li>
+  <li><a href="#limitations">Limitations</a></li>
+  <li><a href="#code-artifacts">Code</a></li>
+</ul>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="hero">
+<h1>Cross-Family Solver Consensus as a Gold-Free Faithfulness Metric for NL-to-FOL Translation</h1>
+<p class="author">Anonymous &middot; A Preliminary Study</p>
+
+<div class="tldr">
+<p>
+Translating natural language into first-order logic is useful for formal verification and reasoning, but checking
+whether a formula actually captures a sentence's meaning normally requires a gold-standard reference. Gold references
+are expensive and often wrong: audits find roughly 40% of annotations in standard benchmarks contain errors.
+This paper tests a gold-free alternative. Several independent LLM families translate the same sentence, and an
+SMT solver checks whether the candidate formula agrees with the majority. On a development dataset of 2,686
+labelled items, this consensus metric achieved stratified AUROC 0.741, beating the best cheap LLM judge
+by +0.099. Three peer families are enough for 97% of the signal. Confirmation on fresh data failed across
+every test cell, and the metric has a fundamental rename vulnerability: a 76.5% false-alarm rate when
+predicate names are changed.
+</p>
+</div>
+
+<div class="hero-links">
+  <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@main/paper.pdf">Read the paper (PDF)</a>
+  <a href="interactive.html">Explore the website</a>
+  <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@main/report.pdf">Read the full research report</a>
+  <a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic">Code repository</a>
+</div>
+</header>
+
+
+<!-- ============ CONTRIBUTIONS ============ -->
+<section id="contributions">
+<h2>Contributions</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Head-to-head meta-evaluation</h3>
+<p>Cross-family solver consensus tested against API judges and a 28-feature baseline stack on
+NL-to-FOL faithfulness prediction. The consensus score outperforms the best cheap judge on development data
+and adds signal beyond all baselines combined.</p>
+</div>
+
+<div class="card">
+<h3>Mechanistic decomposition</h3>
+<p>The consensus signal decomposes into endorsement (peers that agree with wrong formulas) and divergence
+(peers that disagree with correct ones). Errors scatter across equivalence classes while correct translations
+cluster, but this pattern degrades with sentence length.</p>
+</div>
+
+<div class="card">
+<h3>Negative results on fresh data</h3>
+<p>The confirmation attempt produced no testable positive cell in the long-sentence stratum. The one testable
+stratum (short deterministic sentences) showed no advantage over a local judge. Every pre-registered criterion
+returned not testable or unfavourable.</p>
+</div>
+
+<div class="card">
+<h3>Rename tradeoff documented</h3>
+<p>A 76.5% false-alarm rate under nonce predicate renames, which no variant eliminated without
+sacrificing error recall. The tradeoff is structural: any vocabulary bridge that lowers divergence
+also raises error endorsement.</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- ============ METHOD ============ -->
+<section id="method">
+<h2>Method</h2>
+
+<div class="prose">
+<h3>Consensus scoring</h3>
+<p>
+Given a sentence <var>s</var> and a candidate FOL formula <var>c</var>, the method
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/experiment-1">[code]</a>
+collects peer translations from <var>k</var> independent LLM families (Gemini, Claude, GPT, Llama, Qwen, Phi, Mistral),
+each using the same few-shot prompt but a different base model.
+The score is <code>c_score_align = 1 &minus; (1/k) &sum; equiv(c, p<sub>i</sub>)</code>,
+where <code>equiv</code> checks logical equivalence via the Z3 SMT solver after aligning predicate names.
+Higher scores mean greater divergence from the peer pool, and thus higher predicted error probability.
+</p>
+
+<h3>Predicate alignment</h3>
+<p>
+Independent translators choose different predicate names for the same concept
+(e.g. <code>Runs(x)</code> vs. <code>IsRunner(x)</code>).
+Before checking equivalence, predicates are aligned using a cost function that combines three signals:
+</p>
+<ol class="method-steps">
+<li><strong>Structural cost.</strong> Polarity profile, argument-count match, and nesting depth.</li>
+<li><strong>Text-anchor cost.</strong> Overlap between predicate-name words and source-sentence tokens, using Porter stemming and WordNet synonyms.</li>
+<li><strong>Semantic signature.</strong> Truth-value profiles over random finite interpretations.</li>
+</ol>
+<p>
+The cheapest bijections (within equal arity for predicates, separately for constants) are evaluated, and the
+pair is declared equivalent if any bijection yields a Z3-verified equivalence.
+</p>
+
+<h3>Variants</h3>
+<p>
+Four variants are evaluated alongside the primary <code>c_score_align</code>:
+<strong>c_exact</strong> (no alignment, exact-match equivalence only),
+<strong>c_nf</strong> (name-free alignment by structural and semantic signatures, ignoring text anchoring),
+<strong>g_score</strong> (graded, decomposes the candidate into claim units and scores the fraction unsupported by peers),
+and <strong>p_peer_text</strong>
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-2/experiment-5">[code]</a>
+(logistic fusion of consensus features with text-side features including bag-of-words coverage and Z3 structural match).
+</p>
+
+<h3>Evaluation framework</h3>
+<p>
+The development dataset contains 8,507 rows from 700 sentences drawn from the MALLS corpus and ProverQA.
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/experiment-3">[code]</a>
+Each sentence was translated by 9 LLM families. Labels come from a three-person expert panel (adjudicated as
+ERROR or CORRECT). The primary evaluation population (R_AB, both panellists agree) contains 2,686 items
+(1,822 ERROR / 864 CORRECT, 292 sentences) with complexity strata for long sentences, exception clauses,
+and short controls. The primary metric is stratified AUROC: items are paired only within the same source
+stratum, eliminating confounds from stratum-level base rates. Confidence intervals use sentence-cluster
+percentile bootstrap (B = 2,000).
+</p>
+</div>
+</section>
+
+
+<!-- ============ RESULTS ============ -->
+<section id="results">
+<h2>Results</h2>
+
+<div class="prose">
+
+<h3>Development set comparison</h3>
+<p>
+All metrics were evaluated on the same development population.
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/experiment-6">[code]</a>
+The table below reports stratified AUROC with bootstrap confidence intervals.
+Baselines
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/experiment-4">[code]</a>
+include API judges (disguised and original), local judges, round-trip NLI, self-consistency,
+and cross-validated feature stacks.
+</p>
+</div>
+
+<div class="table-wrap">
+<table>
+<caption>Table 1. Stratified AUROC on development set E (R_AB, n = 2,686). Higher is better.</caption>
+<thead>
+<tr><th>Metric</th><th class="numeric">Strat AUROC [95% CI]</th><th class="numeric">$/item</th></tr>
+</thead>
+<tbody>
+<tr><td>c_score_align</td><td class="numeric">0.741 [0.705, 0.775]</td><td class="numeric">1.21e-4</td></tr>
+<tr><td>p_peer_text (fused)</td><td class="numeric">0.753 [0.720, 0.784]</td><td class="numeric">1.21e-4</td></tr>
+<tr><td>g_score (graded)</td><td class="numeric">0.694 [0.653, 0.730]</td><td class="numeric">&mdash;</td></tr>
+<tr><td>c_nf (name-free)</td><td class="numeric">0.686 [0.647, 0.720]</td><td class="numeric">&mdash;</td></tr>
+<tr class="group-sep"><td>c_exact (no alignment)</td><td class="numeric">0.694 [0.653, 0.730]</td><td class="numeric">&mdash;</td></tr>
+<tr><td>flash-lite judge (disg.)</td><td class="numeric">0.642 [0.607, 0.676]</td><td class="numeric">4.88e-5</td></tr>
+<tr><td>flash-lite judge (orig.)</td><td class="numeric">0.623 [0.593, 0.651]</td><td class="numeric">4.88e-5</td></tr>
+<tr><td>nano judge (disg.)</td><td class="numeric">0.644 [0.609, 0.680]</td><td class="numeric">2.01e-5</td></tr>
+<tr class="group-sep"><td>local judge Qwen-8B (disg.)</td><td class="numeric">0.674 [0.646, 0.703]</td><td class="numeric">&mdash;</td></tr>
+<tr><td>round-trip NLI (min)</td><td class="numeric">0.606 [0.569, 0.645]</td><td class="numeric">2.75e-5</td></tr>
+<tr class="group-sep"><td>self-consistency (5-sample)</td><td class="numeric">0.598 [0.559, 0.637]</td><td class="numeric">6.65e-5</td></tr>
+<tr><td>28-feature stack</td><td class="numeric">0.735 [0.699, 0.766]</td><td class="numeric">&mdash;</td></tr>
+<tr><td>28-feature stack + c_score_align</td><td class="numeric">0.774 [0.743, 0.802]</td><td class="numeric">&mdash;</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="prose">
+
+<div class="result-row">
+<div class="result-cell">
+  <div class="big-num">+0.099</div>
+  <div class="big-label">Consensus vs. best cheap judge<br>[+0.049, +0.146] on full R_AB</div>
+</div>
+<div class="result-cell">
+  <div class="big-num">+0.116</div>
+  <div class="big-label">Consensus advantage on<br>long-sentence pool [+0.070, +0.163]</div>
+</div>
+<div class="result-cell">
+  <div class="big-num">+0.039</div>
+  <div class="big-label">Signal added to 28-feature stack<br>[+0.021, +0.057], p<sub>95</sub> = 0.009</div>
+</div>
+</div>
+
+<p>
+On the 284-row subsample scored by the frontier judge (Gemini 3.1 Pro), c_score_align achieves 95.7%
+of the frontier judge's AUROC (ratio 0.957 [0.887, 1.034]) at 30&times; lower cost per item.
+Adding consensus to the frontier judge improves AUROC by +0.037 [+0.008, +0.066].
+</p>
+
+<p>
+The consensus metric achieves Kendall &tau;<sub>b</sub> = 0.692 [+0.513, +0.795] between system mean
+score and R_AB error rate across 13 system&times;variant configurations. On the vocabulary-exact
+subset (where candidate and gold share the same predicates), consensus still outperforms the judge
+(&Delta; = +0.306 [+0.232, +0.376]), ruling out the possibility that the advantage depends on
+vocabulary differences between good and bad candidates.
+</p>
+
+<h3>Mechanism</h3>
+<p>
+The consensus signal
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/evaluation-2">[code]</a>
+decomposes into two components: <strong>endorsement</strong> <var>e</var> (fraction of ERROR items
+endorsed by the peer majority) and <strong>divergence</strong> <var>d</var> (fraction of CORRECT items
+that diverge from peers). The scatter index (ratio of pairwise disagreement among correct vs. error
+items per sentence) is 4.45 [3.57, 5.77]: error translations are far more diverse than correct ones.
+</p>
+
+<p>
+The net consensus degradation from short to long sentences is &Delta;(e+d) = +0.356 [+0.198, +0.493],
+driven almost entirely by divergence (&Delta;d = +0.608, &Delta;e = &minus;0.252). Correct
+translations of long sentences increasingly disagree with peers because independent models make
+different structural choices for complex quantifier scopes and exception clauses.
+</p>
+
+<p>
+Three peer families suffice for 97% of the full-pool AUROC (k<sub>95</sub> = 3), but the
+long-sentence tercile requires k<sub>95</sub> = 5.
+</p>
+</div>
+
+<div class="table-wrap">
+<table>
+<caption>Table 2. AUROC by number of peer families on development set E.</caption>
+<thead>
+<tr><th class="numeric"><var>k</var></th><th class="numeric">AUROC (overall)</th><th class="numeric">AUROC (long, T3)</th></tr>
+</thead>
+<tbody>
+<tr><td class="numeric">1</td><td class="numeric">0.685</td><td class="numeric">0.581</td></tr>
+<tr><td class="numeric">3</td><td class="numeric">0.757</td><td class="numeric">0.651</td></tr>
+<tr><td class="numeric">5</td><td class="numeric">0.776</td><td class="numeric">0.698</td></tr>
+<tr><td class="numeric">7</td><td class="numeric">0.784</td><td class="numeric">0.726</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="prose">
+
+<h3>Confirmation attempt</h3>
+<p>
+The development results cannot confirm the metric's value because the development set was used to
+design the scoring pipeline. Two independent test sets were constructed.
+</p>
+<p>
+<strong>E2-A</strong>
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/dataset-4">[code]</a>
+(550 fresh sentences) was budget-stopped before enough correct items accumulated. On the one testable stratum
+(DT, short sentences from ProverQA), consensus achieves stratified AUROC 0.916, tying the local judge
+(&Delta; = +0.003 [&minus;0.042, +0.052]). On L25 sentences (&ge;25 words), c_score_align falls to
+0.443 (below chance), with only 42 items.
+</p>
+<p>
+<strong>R_COMP FREE</strong>
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/experiment-7">[code]</a>
+(long composed sentences with independent vocabulary
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-5/experiment-13">[code]</a>)
+required a gloss gate for confirmatory labels. This gate failed twice (balanced accuracy 0.776 and 0.561,
+below the 0.90 threshold), producing zero confirmed CORRECT rows. Under provisional non-confirmatory labels,
+c_score_align achieves within-template AUROC 0.801 [0.770, 0.834] vs. the disguised judge's
+0.584 [0.550, 0.618] (&Delta; = 0.217 [0.175, 0.260]).
+</p>
+</div>
+
+<div class="table-wrap">
+<table>
+<caption>Table 3. Confirmation results. DT = short deterministic sentences; L25 = sentences &ge;25 words.</caption>
+<thead>
+<tr><th>Dataset</th><th>Cell</th><th class="numeric"><var>n</var> (E/C)</th><th class="numeric">AUROC</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>E2-A</td><td>DT</td><td class="numeric">179 (74/105)</td><td class="numeric">0.916</td><td>Ties local judge</td></tr>
+<tr><td>E2-A</td><td>L25</td><td class="numeric">42 (35/7)</td><td class="numeric">0.443</td><td>Unfavourable</td></tr>
+<tr><td>E2-A</td><td>LONG</td><td class="numeric">94 (76/18)</td><td class="numeric">0.603</td><td>Not testable</td></tr>
+<tr><td>R_COMP</td><td>FREE (prov.)</td><td class="numeric">1706 (602/1104)</td><td class="numeric">0.801</td><td>Non-confirmatory</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="prose">
+<h3>The rename tradeoff</h3>
+<p>
+The predicate aligner
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/experiment-8">[code]</a>
+introduces a fundamental false-alarm vulnerability. When correct formulas are copied with
+meaning-preserving predicate renames, the consensus score should not change. In practice, the
+false-alarm rate is high.
+</p>
+</div>
+
+<div class="table-wrap">
+<table>
+<caption>Table 4. False-alarm rates on meaning-preserving renames of CORRECT candidates. NONCE = random nonsense names; SYN = WordNet synonyms. Flip = FA induced by the rename alone.</caption>
+<thead>
+<tr><th>Metric</th><th class="numeric">NONCE FA</th><th class="numeric">NONCE flip</th><th class="numeric">SYN FA</th><th class="numeric">SYN flip</th></tr>
+</thead>
+<tbody>
+<tr><td>c_align</td><td class="numeric">0.765</td><td class="numeric">0.605</td><td class="numeric">0.565</td><td class="numeric">0.313</td></tr>
+<tr><td>c_nf (name-free)</td><td class="numeric">0.132</td><td class="numeric">0.000</td><td class="numeric">0.201</td><td class="numeric">0.000</td></tr>
+<tr><td>p_peer_text</td><td class="numeric">1.000</td><td class="numeric">0.821</td><td class="numeric">0.216</td><td class="numeric">0.080</td></tr>
+<tr><td>judge (disg.)</td><td class="numeric">0.229</td><td class="numeric">0.134</td><td class="numeric">0.085</td><td class="numeric">0.058</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="prose">
+<p>
+The name-free variant c_nf eliminates rename sensitivity (flip = 0) but at the cost of blindness to
+meaning-rename errors (within-base AUROC 0.499, chance level) and lower overall discrimination (strat
+AUROC 0.686 vs. 0.741). Every vocabulary bridge that lowers divergence <var>d</var> also raises
+endorsement <var>e</var>: the aligner lowers <var>d</var> from 0.583 to 0.328 but raises
+meaning-rename endorsement from 0.104 to 0.624.
+</p>
+
+<h3>Dead ends</h3>
+<p>
+Several alternatives were investigated and abandoned: a fused structural-feature filter (false-alarm
+gate failure); name-free consensus c_nf (rename-invariant but blind to meaning-rename errors);
+a decomposed solver-based semantic reader (balanced accuracy 0.476); LLM adjudication of disputed
+items (balanced accuracy 0.662 on expert-labelled items); and candidate-signature consensus
+<a class="code-ref" href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/experiment-9">[code]</a>,
+which scored candidates by cueing peers with the candidate's own predicate symbols (provisional
+negative: error endorsement rose to 0.459 because peers were anchored into reproducing the
+candidate's errors).
+</p>
+</div>
+
+</section>
+
+
+<!-- ============ FIGURE GALLERY ============ -->
+<section id="figures">
+<h2>Figures</h2>
+
+<div class="gallery">
+
+<figure class="fig-card">
+<img
+  src="figures/fig_dev_auroc_v0.png"
+  alt="Horizontal bar chart comparing stratified AUROC of consensus-based metrics, LLM judges, and other baselines on the development dataset. Consensus metrics (blue bars) extend further right than LLM judges (orange) and other baselines (gray), with the 28-feature stack plus consensus reaching 0.774."
+  tabindex="0"
+  role="button"
+  aria-label="Enlarge figure: Development Set AUROC Comparison"
+  data-caption="Stratified AUROC on the development dataset for the main metrics and baselines. Error bars are 95% sentence-cluster bootstrap confidence intervals. Consensus-based metrics (blue) outperform API judges (orange) and other gold-free baselines (gray)."
+>
+<figcaption class="fig-caption">
+<strong>Figure 1. Development Set AUROC Comparison.</strong>
+Stratified AUROC on the development dataset for the main metrics and baselines. Error bars are 95% sentence-cluster bootstrap confidence intervals. Consensus-based metrics (blue) outperform API judges (orange) and other gold-free baselines (gray).
+</figcaption>
+<p class="fig-click-hint">Click to enlarge</p>
+</figure>
+
+<figure class="fig-card">
+<img
+  src="figures/fig_complexity_v0.png"
+  alt="Bar chart showing endorsement rate e (red) decreasing from 0.29 to 0.04 and divergence rate d (blue) increasing from 0.31 to 0.91 across short, medium, and long sentence-length terciles, with the net e+d line rising from 0.60 to 0.95."
+  tabindex="0"
+  role="button"
+  aria-label="Enlarge figure: Consensus Degradation with Sentence Length"
+  data-caption="Decomposition of consensus error rates by sentence-length tercile. Endorsement rate e (errors incorrectly endorsed by peers) decreases with length, but divergence rate d (correct items incorrectly flagged) increases sharply, producing net degradation of +0.356 from the shortest to the longest tercile."
+>
+<figcaption class="fig-caption">
+<strong>Figure 2. Consensus Degradation with Sentence Length.</strong>
+Decomposition of consensus error rates by sentence-length tercile. Endorsement rate <var>e</var> (errors incorrectly endorsed by peers) decreases with length, but divergence rate <var>d</var> (correct items incorrectly flagged) increases sharply, producing net degradation of +0.356 from the shortest to the longest tercile.
+</figcaption>
+<p class="fig-click-hint">Click to enlarge</p>
+</figure>
+
+<figure class="fig-card">
+<img
+  src="figures/fig_k_curve_v0.png"
+  alt="Line chart with two curves showing AUROC rising steeply from k=1 to k=3 then leveling off. The overall curve (blue solid) reaches 0.757 at k=3 (97 percent of k=7 value). The long-sentence curve (orange dashed) rises more slowly and needs k=5 to reach 95 percent of its k=7 value."
+  tabindex="0"
+  role="button"
+  aria-label="Enlarge figure: AUROC vs Number of Peer Families"
+  data-caption="Stratified AUROC as a function of the number of peer families k, for the full development set (solid blue) and the long-sentence tercile (dashed red). Three families capture 97% of the full-pool signal, but long sentences require five families to reach 95%."
+>
+<figcaption class="fig-caption">
+<strong>Figure 3. AUROC vs. Number of Peer Families.</strong>
+Stratified AUROC as a function of the number of peer families <var>k</var>, for the full development set (solid blue) and the long-sentence tercile (dashed red). Three families capture 97% of the full-pool signal, but long sentences require five families to reach 95%.
+</figcaption>
+<p class="fig-click-hint">Click to enlarge</p>
+</figure>
+
+</div>
+</section>
+
+
+<!-- ============ LIMITATIONS ============ -->
+<section id="limitations">
+<h2>Limitations</h2>
+
+<ol class="limitations-list">
+<li><strong>Development data only.</strong> Every positive result reported above is on data used to design the metric. The confirmation attempt produced no testable positive cell.</li>
+<li><strong>Rename vulnerability.</strong> A 76.5% false-alarm rate on nonce renames means the metric will systematically penalise any translation that uses non-standard predicate names, even if semantically correct.</li>
+<li><strong>Length degradation.</strong> Consensus discrimination degrades with sentence length (NET +0.356), driven by correct-translation divergence. The metric is weakest on the longest, most complex sentences, precisely the cases where gold-free evaluation is most needed.</li>
+<li><strong>Label dependence.</strong> All development results depend on a three-person panel whose agreement is imperfect. The metric's advantage could partly reflect alignment with panel biases rather than with ground-truth faithfulness.</li>
+<li><strong>Cost.</strong> While cheaper than a frontier judge, the consensus metric requires generating <var>k</var> peer translations per sentence, costing $0.95 per 1,000 sentences at k = 3.</li>
+<li><strong>Domain.</strong> All results are on English-to-FOL from MALLS and ProverQA sources. Generalisation to other logic formalisms, languages, or sentence distributions is untested.</li>
+</ol>
+</section>
+
+
+<!-- ============ CODE ARTIFACTS ============ -->
+<section id="code-artifacts" class="code-list">
+<h2>Code Artifacts</h2>
+<p>Every experiment, dataset, and evaluation produced in this investigation is published with its code.</p>
+<ul>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/dataset-1">Held-out logic translation test set, panel-checked</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-2/dataset-3">Long logic sentences and FOL error suite</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-2/evaluation-1">Re-checking earlier logic-metric results across label sets</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/research-1">What is new about peer agreement for logic</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/experiment-10">Do symbol hints help model agreement checks?</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/dataset-5">Name-free labels for free-vocabulary logic translations</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/evaluation-3">Can shared vocabulary fix consensus blind spots?</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-5/experiment-11">Consensus vs LLM judges on fresh logic data</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-5/experiment-12">Second fresh sample of long logic sentences</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-5/experiment-14">Screening fixes for model-agreement false alarms</a></li>
+<li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-5/evaluation-4">Corrected record: every paper number checked</a></li>
+</ul>
+</section>
+
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+<div class="footer-links">
+  <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@main/paper.pdf">Read the paper (PDF)</a>
+  <a href="interactive.html">Explore the website</a>
+  <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@main/report.pdf">Read the full research report</a>
+  <a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic">Code repository</a>
+</div>
+<div class="citation-block">
+Anonymous. <em>Cross-Family Solver Consensus as a Gold-Free Faithfulness Metric
+for Natural-Language-to-First-Order-Logic Translation: A Preliminary Study.</em> 2026.
+</div>
+</footer>
+
+</div><!-- end content column -->
+</div><!-- end page-grid -->
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure" hidden>
+<div class="lightbox-inner">
+  <button class="lightbox-close" aria-label="Close enlarged figure">&times;</button>
+  <img id="lightbox-img" src="figures/fig_dev_auroc_v0.png" alt="">
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* --- Section navigation active state --- */
+  var sections = document.querySelectorAll('main > section, main > header');
+  var navLinksDesktop = document.querySelectorAll('.sidenav a');
+  var navLinksMobile = document.querySelectorAll('.mobile-nav a');
+
+  function setActive(id) {
+    navLinksDesktop.forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+    navLinksMobile.forEach(function(a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    sections.forEach(function(s) { observer.observe(s); });
+  }
+
+  /* --- Lightbox --- */
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightbox-img');
+  var lightboxCaption = document.getElementById('lightbox-caption');
+  var lightboxClose = lightbox.querySelector('.lightbox-close');
+  var triggerEl = null;
+  var focusableInLightbox = [lightboxClose];
+
+  function openLightbox(img) {
+    triggerEl = img;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = img.getAttribute('data-caption') || '';
+    lightbox.hidden = false;
+    requestAnimationFrame(function() {
+      lightbox.classList.add('open');
+    });
+    lightboxClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    lightbox.hidden = true;
+    lightboxImg.removeAttribute('src');
+    if (triggerEl) {
+      triggerEl.focus();
+      triggerEl = null;
+    }
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.hidden && e.key === 'Escape') {
+      closeLightbox();
+      e.preventDefault();
+    }
+    /* Focus trap */
+    if (!lightbox.hidden && e.key === 'Tab') {
+      e.preventDefault();
+      lightboxClose.focus();
+    }
+  });
+
+  /* Attach click/enter to gallery images */
+  var galleryImgs = document.querySelectorAll('.fig-card img');
+  galleryImgs.forEach(function(img) {
+    img.addEventListener('click', function() { openLightbox(img); });
+    img.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(img);
+      }
+    });
+  });
+
+  /* --- Smooth scroll for nav links (respects reduced-motion) --- */
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var allNavLinks = document.querySelectorAll('.sidenav a, .mobile-nav a');
+  allNavLinks.forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var href = a.getAttribute('href');
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
+          block: 'start'
+        });
+        history.replaceState(null, '', href);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
