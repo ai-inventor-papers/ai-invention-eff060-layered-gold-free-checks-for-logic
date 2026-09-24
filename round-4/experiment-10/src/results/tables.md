@@ -345,7 +345,7 @@ Signature-preserving (100% share the base signature, so CSC peers for them ARE t
 
 Reference rows copied from exp 8 (different thresholds; cited, not recomputed):
 
-# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/invariance_table.csv
+# source: ../../../../round-3/experiment-8/src/results/invariance_table.csv
 
 | metric | family | threshold | n_rows | FA_on_correct | base_FA | flip_rate |
 |---|---|---|---|---|---|---|
@@ -364,7 +364,7 @@ Reference rows copied from exp 8 (different thresholds; cited, not recomputed):
 
 ## T6. Same-vocabulary typed repair: error-type identification
 
-# source: results/typing_csc.csv, results/typing_summary.json (exp-8 baselines cited from /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/analysis_typing.json)
+# source: results/typing_csc.csv, results/typing_summary.json (exp-8 baselines cited from ../../../../round-3/experiment-8/src/results/analysis_typing.json)
 
 Exp-8 baselines on E-base mutants: majority class ADD 0.177, chance 0.116, ALIGN-medoid typing 0.328, flash-lite judge 0.326, local Qwen3-8B judge 0.098, exp-8 oracle 0.802. Recomputed here: majority 0.177, chance 0.116.
 

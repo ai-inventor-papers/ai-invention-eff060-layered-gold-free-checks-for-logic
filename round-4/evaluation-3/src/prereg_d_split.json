@@ -36,7 +36,7 @@
  "vocab_discount": {
   "value": 0.38764044943820225,
   "accept_prob": 0.6123595505617978,
-  "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/analysis_hyb.json :: new_agreement_audit.label_discordance.NEW_hyb_not_align.rate",
+  "source": "../../../round-3/experiment-8/src/results/analysis_hyb.json :: new_agreement_audit.label_discordance.NEW_hyb_not_align.rate",
   "align_reference_rate": 0.12695257029253054
  },
  "outputs": {
@@ -70,7 +70,7 @@
    "sentences": 10,
    "source": "mechanism.MIN_ROWS / MIN_SENT"
   },
-  "copied_from": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/prereg_mech.json"
+  "copied_from": "../../../round-3/evaluation-2/src/prereg_mech.json"
  },
  "slopes": {
   "model": "not_endorsed ~ z(words) + C(stratum) among CORRECT rows, per rule (mechanism.gee_fit: binomial logit, exchangeable, robust SE, sentence clusters)",

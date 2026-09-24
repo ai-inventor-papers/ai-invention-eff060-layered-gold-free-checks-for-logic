@@ -1,4 +1,4 @@
-"""Extracted verbatim from /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/src/vendor_a/fol_triage.py (sha256 560368c934b3f80f13a72e54344fdf4f1507c5f445401de519d7e023009ec951): _occurrences, formula_role_profile."""
+"""Extracted verbatim from ../../../../round-2/experiment-5/src/src/vendor_a/fol_triage.py (sha256 560368c934b3f80f13a72e54344fdf4f1507c5f445401de519d7e023009ec951): _occurrences, formula_role_profile."""
 from __future__ import annotations
 from collections import Counter, defaultdict  # noqa: F401
 from fol import parse, profile, prenex_blocks  # noqa: F401

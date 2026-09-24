@@ -13,7 +13,7 @@
    "hyp_literal_found": false,
    "source_value": 0.00011640721628959276,
    "match": false,
-   "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/results/rcomp_candidates.jsonl :: mean cost_usd"
+   "source": "../../../../round-3/experiment-7/src/results/rcomp_candidates.jsonl :: mean cost_usd"
   }
  ],
  "tables_written": [

@@ -23,7 +23,7 @@ import views as V  # noqa: E402
 
 DATA = ROOT / "data"
 RES = ROOT / "results"
-E9_PILOT = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/pilot.json")
+E9_PILOT = Path("../../../experiment-9/src/results/pilot.json")
 
 
 def main() -> None:

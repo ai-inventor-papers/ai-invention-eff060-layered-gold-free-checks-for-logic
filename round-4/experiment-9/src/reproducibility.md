@@ -5,7 +5,7 @@ These are the steps that were actually run on 2026-09-24 (UTC). The machine was 
 ## 1. Copy the artifact
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9 ~/csc_e && cd ~/csc_e
+cp -r . ~/csc_e && cd ~/csc_e
 ```
 
 Some inputs are read in place from absolute paths under `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/` (read-only, with sha256 in `inputs_manifest.json`):

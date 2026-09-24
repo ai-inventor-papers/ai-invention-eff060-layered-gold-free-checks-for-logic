@@ -1,45 +1,45 @@
 {
  "dataset_E": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json",
+  "path": "../../../round-1/dataset-1/src/full_data_out.json",
   "sha256": "1177d0c25e245a287f02bff249f944532356c670ca33eb07d97eb5e71791f850",
   "bytes": 27714491
  },
  "fewshot_iter1": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/prompts/fewshot_v1.txt",
+  "path": "../../../round-1/dataset-1/src/prompts/fewshot_v1.txt",
   "sha256": "cdfd524edca37a619668943b9b6e7ef8b3fae91f5e0432e8b270e0bf2f847a9e",
   "bytes": 1976,
   "copied_to": "inputs/fewshot_iter1__fewshot_v1.txt"
  },
  "fewshot_iter2_ds3": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/prompts/fewshot_v1.txt",
+  "path": "../../../round-2/dataset-3/src/prompts/fewshot_v1.txt",
   "sha256": "cdfd524edca37a619668943b9b6e7ef8b3fae91f5e0432e8b270e0bf2f847a9e",
   "bytes": 1976,
   "copied_to": "inputs/fewshot_iter2_ds3__fewshot_v1.txt"
  },
  "per_item_T1": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl",
+  "path": "../../../round-3/experiment-6/src/results/per_item_T1.jsonl",
   "sha256": "21bd56f088b4b818a6df199543944db6e2eb6bcd0797c00ed35eab11418102ba",
   "bytes": 21937774
  },
  "tables_T1": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/tables_T1.md",
+  "path": "../../../round-3/experiment-6/src/results/tables_T1.md",
   "sha256": "256c9fdc7998bdb666ceed5347f17213ed6a69b56da2699916b3194f868648d7",
   "bytes": 33205,
   "copied_to": "inputs/tables_T1__tables_T1.md"
  },
  "per_item_E_exp5": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/per_item_E.jsonl",
+  "path": "../../../round-2/experiment-5/src/results/per_item_E.jsonl",
   "sha256": "bb9d59d2f7b28ddf45cdda09601d1cf2c3c4ba2a2870fb6857f78561c119458d",
   "bytes": 22016065
  },
  "E_disguise_map": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/E_disguise_map.jsonl",
+  "path": "../../../round-2/experiment-5/src/results/E_disguise_map.jsonl",
   "sha256": "132d9bc149b7e0105570e9336324504c779d9224bdfa0667f96969cdc1eb0fca",
   "bytes": 3569130,
   "copied_to": "inputs/E_disguise_map__E_disguise_map.jsonl"
  },
  "exp5_prereg": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/prereg.json",
+  "path": "../../../round-2/experiment-5/src/results/prereg.json",
   "sha256": "b9f28b1bf6bfd29c99d03eb128f2ad64fd2d14d40356a4c5f1fdd16a415838ab",
   "bytes": 17167,
   "copied_to": "inputs/exp5_prereg__prereg.json"
@@ -68,48 +68,48 @@
   "copied_to": "inputs/s4_py__s4.py"
  },
  "pairwise_classes_E": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl",
+  "path": "../../../round-3/evaluation-2/src/pairwise_classes_E.jsonl",
   "sha256": "64047200a7180593911c8cea98261f0ad7081d5280329104a03d15c1c15435fa",
   "bytes": 3597729,
   "copied_to": "inputs/pairwise_classes_E__pairwise_classes_E.jsonl"
  },
  "m4_fixed_pools_k3": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/m4_fixed_pools_k3.csv",
+  "path": "../../../round-3/evaluation-2/src/tables/m4_fixed_pools_k3.csv",
   "sha256": "ed23bb9c4d6959edea76990ca3a4dd2e80b212ee579687fb037b72e70afcdd0b",
   "bytes": 3361,
   "copied_to": "inputs/m4_fixed_pools_k3__m4_fixed_pools_k3.csv"
  },
  "ev2_stats_py": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/src/stats.py",
+  "path": "../../../round-3/evaluation-2/src/src/stats.py",
   "sha256": "443086975fc4d4b419a5f3cbbe1cf216b2f11e5e5b0490556e5d76414ddb8b0f",
   "bytes": 4517,
   "copied_to": "inputs/ev2_stats_py__stats.py"
  },
  "ev2_mechanism_py": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/src/mechanism.py",
+  "path": "../../../round-3/evaluation-2/src/src/mechanism.py",
   "sha256": "e5389ec6fdbd59d6d0d7a46adc70107216ab3c99a742a103c0f1188acf6ab04d",
   "bytes": 25039,
   "copied_to": "inputs/ev2_mechanism_py__mechanism.py"
  },
  "exp8_consensus_lib": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/src/consensus_lib.py",
+  "path": "../../../round-3/experiment-8/src/src/consensus_lib.py",
   "sha256": "5a65c781e1d94e01b8838834916e1b9ce1e2609c5dc2c057458a9e6a496a7178",
   "bytes": 12881,
   "copied_to": "inputs/exp8_consensus_lib__consensus_lib.py"
  },
  "exp8_pairs_E": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/pairs_E.jsonl",
+  "path": "../../../round-3/experiment-8/src/results/pairs_E.jsonl",
   "sha256": "1830ed7c3c033e901f17410fa147fef8b680a05299fa4fc4393cccbc21b7d279",
   "bytes": 19505375
  },
  "ds3_perturb_py": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/src/perturb.py",
+  "path": "../../../round-2/dataset-3/src/src/perturb.py",
   "sha256": "256d5937eb710159f1c6377e319e7db775f5547a0ffa3bf8a5660a93a254a155",
   "bytes": 23621,
   "copied_to": "inputs/ds3_perturb_py__perturb.py"
  },
  "s4_full_coefs_T1": {
-  "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/s4_full_coefs.json",
+  "path": "../../../round-3/experiment-6/src/results/s4_full_coefs.json",
   "sha256": "cf0b81e0f4e575d45cb731c64fce57fd0cc1fbbd5cdca569d86fd15edbda04f0",
   "bytes": 86177,
   "copied_to": "inputs/s4_full_coefs_T1__s4_full_coefs.json"

@@ -128,4 +128,4 @@ WordNet for RENAME_SYN is read from the exp 8 `data/nltk_data` directory (read-o
 | `.venv/` (delete: regenerable) | the `uv venv` + `uv pip install` commands above |
 | `.pytest_cache/` (delete: regenerable) | `PYTHONHASHSEED=0 .venv/bin/python -m pytest -q -c pytest.ini tests` |
 
-Nothing else is deleted. `results/` is kept because it holds the only copy of the paid peer generations, at `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/llm_cache.jsonl`.
+Nothing else is deleted. `results/` is kept because it holds the only copy of the paid peer generations, at `./results/llm_cache.jsonl`.
