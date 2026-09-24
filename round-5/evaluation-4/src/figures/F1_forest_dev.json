@@ -1,0 +1,61 @@
+{
+ "figure": "F1",
+ "caption": "Development-set (E) \u0394 strat AUROC with 95% sentence-cluster bootstrap CIs (B = 2000) copied verbatim; L25 and CTRL CIs cover 0 (n.s.). Pooled/long are within-stratum AUROC; single strata are pooled within the stratum.",
+ "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json a_head_on.*.deltas",
+ "data": [
+  {
+   "label": "CTRL",
+   "id": "t1_ctrl",
+   "value": -0.06913884405176562,
+   "ci": [
+    -0.23209395724327353,
+    0.09780506135821655
+   ]
+  },
+  {
+   "label": "EXC",
+   "id": "t1_exc",
+   "value": 0.1968961148648649,
+   "ci": [
+    0.1236777858529562,
+    0.2689240783337272
+   ]
+  },
+  {
+   "label": "L20",
+   "id": "t1_l20",
+   "value": 0.10793476336598606,
+   "ci": [
+    0.031113155779998347,
+    0.18296153385628933
+   ]
+  },
+  {
+   "label": "L25",
+   "id": "t1_l25",
+   "value": 0.06942089474370672,
+   "ci": [
+    -0.019780765838617136,
+    0.14780487429803624
+   ]
+  },
+  {
+   "label": "long pool L25+L20+EXC",
+   "id": "t1_long",
+   "value": 0.11625879215576673,
+   "ci": [
+    0.06991415990284278,
+    0.16265250895731315
+   ]
+  },
+  {
+   "label": "pooled (R_AB, strat)",
+   "id": "t1_delta",
+   "value": 0.09897545149036036,
+   "ci": [
+    0.049345245474241926,
+    0.14599146000544172
+   ]
+  }
+ ]
+}

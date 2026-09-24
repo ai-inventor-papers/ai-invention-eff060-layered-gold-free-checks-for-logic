@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "evaluation_name": "corrected record and paper-ready fixes (iter 5, eval 4)",
+    "description": "File-sourced verification of every hypothesis §0.2-0.3 and review number; paste-ready corrected sections; claims ledger; iter-5 skeleton; independent audit; checker mutation test. CPU only, $0.",
+    "record": "record_final.md",
+    "numbers": "numbers.csv",
+    "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_evaluation_4"
+  },
+  "metrics_agg": {
+    "n_numbers_rows": 554.0,
+    "n_claims_checked": 244.0,
+    "n_match": 244.0,
+    "n_mismatch_hyp_vs_file": 0.0,
+    "n_not_found": 0.0,
+    "n_ambiguous": 0.0,
+    "n_transcribed_rows": 258.0,
+    "n_computed_rows": 52.0,
+    "n_paper_value_found": 168.0,
+    "n_match_paper_vs_file": 153.0,
+    "n_mismatch_paper_vs_file": 15.0,
+    "n_not_in_paper": 76.0,
+    "sec_0_2_match": 57.0,
+    "sec_2_match": 3.0,
+    "sec_0_3A_match": 77.0,
+    "sec_crit_match": 14.0,
+    "sec_0_3B_match": 26.0,
+    "sec_0_3C_match": 15.0,
+    "sec_plan_match": 1.0,
+    "sec_13_match": 1.0,
+    "sec_0_3D_match": 16.0,
+    "sec_0_1_match": 3.0,
+    "sec_0_3E_match": 28.0,
+    "sec_0_3F_match": 3.0,
+    "paper_sec_3_2_match": 17.0,
+    "paper_sec_3_3_match": 4.0,
+    "paper_sec_4_5_match": 8.0,
+    "paper_sec_3_4_match": 6.0,
+    "paper_sec_3_5_match": 7.0,
+    "paper_sec_4_6_match": 18.0,
+    "paper_sec_4_2_match": 17.0,
+    "paper_sec_4_2_mismatch": 10.0,
+    "paper_sec_4_3_match": 12.0,
+    "paper_sec_4_4_match": 3.0,
+    "paper_sec_3_6_mismatch": 1.0,
+    "paper_sec_3_5_mismatch": 3.0,
+    "paper_sec_3_3_mismatch": 1.0,
+    "reviewer_items_closed": 9.0,
+    "reviewer_items_partial": 2.0,
+    "reviewer_items_total": 11.0,
+    "n_placeholders_resolved": 4.0,
+    "n_placeholders_unresolved": 0.0,
+    "n_corrections_markers": 43.0,
+    "n_corrections_markers_original_found": 42.0,
+    "lint_failures": 0.0,
+    "audit_rederive_pass": 17.0,
+    "audit_rederive_checks": 17.0,
+    "audit_placebo_ci_covers_0_5": 1.0,
+    "checker_mutation_caught": 10.0,
+    "checker_untouched_match": 10.0,
+    "spend_iter4_evidenced_usd": 0.349164,
+    "spend_window_evidenced_all_artifacts_usd": 4.687055,
+    "spend_iter4_unaccounted_usd": 2.312945,
+    "n_claims_ledger_DEV": 23.0,
+    "n_claims_ledger_CONFIRM_PENDING": 7.0,
+    "n_claims_ledger_DESCRIPTIVE": 11.0,
+    "n_claims_ledger_OUT_OF_SCOPE_SIG": 2.0,
+    "n_claims_ledger_GOLD_USING_ORACLE": 2.0,
+    "n_claims_ledger": 45.0,
+    "skeleton_shell_fields": 42.0,
+    "skeleton_fields_present": 7.0,
+    "skeleton_files_found": 9.0,
+    "n_figures": 4.0,
+    "n_numbers_rows_used_in_record": 509.0,
+    "llm_calls": 0.0,
+    "spend_usd_this_artifact": 0.0
+  },
+  "datasets": [
+    {
+      "dataset": "numbers_check",
+      "examples": [
+        {
+          "input": "[hyp §0.2 T1] c_score_align strat AUROC on E R_AB — claimed 0.741",
+          "output": "0.741",
+          "predict_paper_value": "0.741",
+          "predict_hypothesis_value": "0.741",
+          "metadata_claim_id": "t1_strat_c",
+          "metadata_status": "MATCH",
+          "metadata_paper_status": "MATCH",
+          "metadata_paper_line": "661",
+          "metadata_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].auroc...",
+          "metadata_data_role": "DEV",
+          "eval_match_hyp_vs_file": 1.0,
+          "eval_match_paper_vs_file": 1.0
+        },
+        {
+          "input": "[hyp §0.2 T1] flash-lite disguised strat AUROC on E R_AB — claimed 0.642",
+          "output": "0.642",
+          "predict_paper_value": "0.642",
+          "predict_hypothesis_value": "0.642",
+          "metadata_claim_id": "t1_strat_j",
+          "metadata_status": "MATCH",
+          "metadata_paper_status": "MATCH",
+          "metadata_paper_line": "668",
+          "metadata_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].auroc...",
+          "metadata_data_role": "DEV",
+          "eval_match_hyp_vs_file": 1.0,
+          "eval_match_paper_vs_file": 1.0
+        },
+        {
+          "input": "[hyp §0.2 T1] Δ c_score_align − flash-lite disguised, strat, R_AB — claimed +0.099 [0.049, 0.146]",
+          "output": "+0.099 [0.049, 0.146]",
+          "predict_paper_value": "+0.099",
+          "predict_hypothesis_value": "+0.099",
+          "metadata_claim_id": "t1_delta",
+          "metadata_status": "MATCH",
+          "metadata_paper_status": "MATCH",
+          "metadata_paper_line": "648",
+          "metadata_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on.R_AB pooled.deltas.c_score_align - judge_cheap_disg [strat].delta...",
+          "metadata_data_role": "DEV",
+          "eval_match_hyp_vs_file": 1.0,
+          "eval_match_paper_vs_file": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "reviewer_checklist",
+      "examples": [
+        {
+          "input": "critique 1 (evidence, major): Most of the previous round's BLOCKING MUST-FIX items are still unaddressed, even though the corrected material now exists on disk twice. (1) The iter-3 hypothes",
+          "output": "CLOSED",
+          "predict_action": "Apply eval-3 Part 4 in place (§3.3–§3.6, IDs, verdicts, prior art, coverage, iter-1/2 items, held-out E)",
+          "metadata_anchor": "record_final.md sections 1–7, 16, 17",
+          "metadata_sources": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/prereg_mech.json; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_e...",
+          "metadata_note": "1 targeted original sentence(s) not present in paper_draft.md (nothing to strike): the common-set size must be read from evaluation 1's tables ",
+          "eval_closed": 1.0
+        },
+        {
+          "input": "critique 2 (rigor, major): §4.2 (exp 9, art_D7k2ZWgE3nVd) has numbers that do not match the artifact, and gates that are misdefined. I recomputed from results/per_item_csc_E.jsonl (audit/",
+          "output": "CLOSED",
+          "predict_action": "Re-transcribe §4.2 with verbatim CIs, T9/T9b, prereg gate text, M3 both specs, NET within-arm, n.s. marks",
+          "metadata_anchor": "record_final.md section 9 (+ gates in 6, 8)",
+          "metadata_sources": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_ex...",
+          "metadata_note": "",
+          "eval_closed": 1.0
+        },
+        {
+          "input": "critique 3 (methodology, major): §4.2 leaves out the facts needed to judge the CSC negative result, and its framing overstates the anchoring mechanism. (1) PRIMARY is a completion-selected subs",
+          "output": "CLOSED",
+          "predict_action": "Population/selection paragraph, FREE_exact + FREE_ALIGN columns, T8/T10/T14/T15/T17 + HYB_MEAN, 'provisional negative'",
+          "metadata_anchor": "record_final.md section 9",
+          "metadata_sources": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json",
+          "metadata_note": "",
+          "eval_closed": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "claims_ledger",
+      "examples": [
+        {
+          "input": "H-PRIMARY (a): frozen c_score_align beats the disguised flash-lite judge on the long pool (strat Δ)",
+          "output": "+0.116 [0.070, 0.163]",
+          "predict_data_role": "DEV",
+          "predict_confirming_file": "iter_5/gen_art/*/confirm_verdict_E2A.json",
+          "metadata_confirming_field": "longpool.delta_strat_flashlite_disg.ci",
+          "metadata_verdict_rule": "CONFIRM iff E2 long-pool CI > 0 AND point > 0 vs flash-lite original and nano",
+          "metadata_n": "2686 (1822/864; 292 sentences)",
+          "metadata_numbers_ids": "t1_long;t1_delta",
+          "eval_is_confirmatory": 0.0,
+          "eval_has_confirming_file": 1.0
+        },
+        {
+          "input": "H-PRIMARY (a), pooled E2 + E2-B long pool",
+          "output": "+0.116 [0.070, 0.163]",
+          "predict_data_role": "CONFIRM-PENDING",
+          "predict_confirming_file": "iter_5/gen_art/*/union_longpool.json",
+          "metadata_confirming_field": "union.delta_strat_flashlite_disg.ci",
+          "metadata_verdict_rule": "union CI > 0; heterogeneity reported",
+          "metadata_n": "pending",
+          "metadata_numbers_ids": "t1_long",
+          "eval_is_confirmatory": 1.0,
+          "eval_has_confirming_file": 1.0
+        },
+        {
+          "input": "H-PRIMARY (a) replication on E2-B (second L25 sample)",
+          "output": "+0.069 [−0.020, 0.148]",
+          "predict_data_role": "CONFIRM-PENDING",
+          "predict_confirming_file": "iter_5/gen_art/*/confirm_verdict_E2B.json",
+          "metadata_confirming_field": "longpool.delta_strat_flashlite_disg.ci",
+          "metadata_verdict_rule": "same rule as E2-A",
+          "metadata_n": "pending",
+          "metadata_numbers_ids": "t1_l25",
+          "eval_is_confirmatory": 1.0,
+          "eval_has_confirming_file": 1.0
+        }
+      ]
+    }
+  ]
+}
