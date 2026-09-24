@@ -1,6 +1,6 @@
 # E2 dataset card: fresh, untouched NL→FOL faithfulness confirmation set
 
-run_u75jRHUss0zo · invention iteration 4 · `gen_art_dataset_4` (plan `gen_plan_dataset_1_idx3`). Workspace: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4`.
+run_u75jRHUss0zo · invention iteration 4 · `gen_art_dataset_4` (plan `gen_plan_dataset_1_idx3`). Workspace: `.`.
 
 **No metric is computed in this artifact. Iteration-4 experiments must not read E2.** Labels are sealed (`seal.json`); iteration 5 must hash its metric scores on `candidates_E2_nolabels.jsonl` before joining `sealed/labels_E2.jsonl`.
 

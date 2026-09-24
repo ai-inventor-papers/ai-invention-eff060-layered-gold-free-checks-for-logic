@@ -11,7 +11,7 @@ non-determinism can then change individual outputs.
 ## 1. Copy the artifact
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4 ~/e2
+cp -r . ~/e2
 cd ~/e2
 ```
 Every script derives its paths from its own file location (`ROOT = Path(__file__).resolve().parents[1]`). Four
