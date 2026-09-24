@@ -1,0 +1,31 @@
+{
+ "title": "Addendum 1 to prereg_csc_E.json -- written BEFORE any CSC score was computed or joined to labels",
+ "prereg_sha256": "d1f51857f17b0d27c7ef09af84c6554fadd4d680f669ed5fb515b5d7a4e6b017",
+ "event": "At 07:26:41 UTC the platform refused every further paid OpenRouter call: HTTP 403 aii_run_budget_exhausted ('AI Inventor per-run OpenRouter budget reached for Test idea: $7.00 of $7.00 spent by this run in that phase ... does not reset while this run goes on: retrying will not help'). This phase budget is shared with the sibling artifacts of this iteration; this artifact itself spent only $0.1082. The only remaining route, ':free' models, returned HTTP 429 free-models-per-day-high-balance (1000/day shared quota exhausted; reset 2026-09-25 00:00 UTC, after this task's time budget). No local GPU exists (cpu_plus profile), so no local peer substitute of adequate quality is possible.",
+ "consequence": "The pre-declared sweep cannot be completed. The OWN floor of 1,500 rows is NOT met. Arms FORMAT-ONLY, PLACEBO, RENAME_SYN, RENAME_NONCE are NOT_RUN (0 peer calls). OTHER-SIG and K4 have only incidental partial coverage (calls shared with OWN keys) and are reported as EXPLORATORY, never gated.",
+ "salvage_populations (fixed now, before scoring)": {
+  "PRIMARY_CSC_SUBSET": {
+   "rule": "R_AB rows whose 3 CSC-OWN peer calls all completed (includes rows that share (text, signature, model) keys with the 30-row pilot and the 200-row stratified mini-sweep)",
+   "n_rows": 354,
+   "rows_sha1": "af2dbe7878453c8ef4ccd8056c7f9c158e523d4c"
+  },
+  "SENS_GE2": {
+   "rule": "rows with >= 2 of 3 CSC-OWN calls completed (a missing call is treated like an unparseable peer)",
+   "n_rows": 475,
+   "rows_sha1": "320a21dcd61ab755851fa9db7b2295c2afbbad55"
+  },
+  "SENS_MINI200": {
+   "rule": "the pre-declared 200-row stratified mini sample (sha1('MINI|'+row_key) order) intersected with PRIMARY",
+   "n_rows": 180
+  },
+  "FULL_2686_$0": "FREE-MATCHED exact vs ALIGN, the pairs_E vocabulary decomposition and every $0 comparator run on all 2,686 rows"
+ },
+ "analysis_rules": [
+  "all comparators are evaluated on exactly the same rows as CSC (paired)",
+  "cells with < 50 ERROR or < 50 CORRECT rows are NOT_READ (the L25 cell is expected to be NOT_READ)",
+  "gates are computed on PRIMARY_CSC_SUBSET and labelled SUBSET; G3-E is NOT_RUN; no gate result can make CSC ELIGIBLE by itself because the population is not the pre-registered one (the iteration-5 rule must treat E-side gates as PROVISIONAL)",
+  "the PRIMARY subset over-represents sentences whose candidates share signatures (short CTRL sentences); stratified AUROC is primary and the MINI200 sensitivity is reported"
+ ],
+ "disclosure": "Before this addendum, label COUNTS (not scores) per stratum of the >=2 subset were printed once to size the cells; no score existed at that time.",
+ "written_ts": 1790234990.3209891
+}
