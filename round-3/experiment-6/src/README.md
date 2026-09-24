@@ -159,7 +159,7 @@ All ten are in `results/deviations.json`. The ones that matter for reading the n
 | `data/` | Frozen inputs, copied read-only. `E_units.json` (label-free units), `exp5/` (frozen consensus scores `per_item_E.jsonl`, prereg, analysis), `exp6_*` (local baselines, results, scores), `folds_E.json`, `frontier_frame.json`, `vex_rows.json`, `t1_priority.json`. |
 
 Kept artifacts live at
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/`, for example
+`./`, for example
 `…/results/llm_cache.jsonl` and `…/results/per_item_T1.jsonl`. Dataset E itself is at
 `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json`.
 

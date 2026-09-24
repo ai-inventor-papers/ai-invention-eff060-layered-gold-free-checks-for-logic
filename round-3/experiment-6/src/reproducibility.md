@@ -7,7 +7,7 @@ platform restarts. Every stage is cached and idempotent, so re-runs resumed wher
 ## 1. Copy the artifact
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6 ~/t1
+cp -r . ~/t1
 cd ~/t1
 ```
 
