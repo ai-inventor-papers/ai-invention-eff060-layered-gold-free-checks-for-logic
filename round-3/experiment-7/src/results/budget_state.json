@@ -1,0 +1,19 @@
+{
+ "spent": 0.991535,
+ "by_component": {
+  "judge_cheap_primary": 0.3297260999999999,
+  "strong": 0.6618079999999998
+ },
+ "cap_total": 9.5,
+ "caps": {
+  "judge_cheap_primary": 0.6,
+  "judge_cheap_secondary": 0.6,
+  "roundtrip": 1.0,
+  "gold_recall_probe": 0.3,
+  "prompt_dev": 0.3,
+  "strong": 5.0,
+  "strong_dryrun": 0.6,
+  "setup_probe": 0.05
+ },
+ "ts": 1790220463.3567214
+}
