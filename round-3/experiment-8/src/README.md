@@ -1,7 +1,7 @@
 # Rename-invariant consensus (PEER_HYB) and per-error-type sensitivity of gold-free NL→FOL metrics
 
 Iteration 3, tasks T3 + T5 of the AI-Inventor run `run_u75jRHUss0zo`. Workspace (all paths below are relative to it):
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8`
+`.`
 
 **What was tested.** Iteration 2 left one held-out survivor: cross-family solver consensus
 (`c_score_align`: share of other model families' formalisations of the same sentence that are z3-equivalent to the

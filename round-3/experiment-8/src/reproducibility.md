@@ -1,7 +1,7 @@
 # Reproducing this artifact (what was actually run)
 
 Artifact: rename-invariant cross-family consensus (PEER_HYB) and per-error-type PERTURB sensitivity (iteration 3, T3+T5).
-Original workspace: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8`.
+Original workspace: `.`.
 
 ## 1. Copy the artifact
 
