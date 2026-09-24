@@ -759,13 +759,13 @@
   },
   {
    "copy": "freeze_copy/consensus_variants.py",
-   "original": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/consensus_variants.py",
+   "original": "../../experiment-14/src/freeze/consensus_variants.py",
    "sha256_copy": "6730a63b2d7612c3d44fd92019bceff8e72a68220c3fa0c65acbbb2a9463f429",
    "identical": true
   },
   {
    "copy": "freeze_copy/gg.py",
-   "original": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/gg.py",
+   "original": "../../experiment-14/src/freeze/gg.py",
    "sha256_copy": "80e6d98e990e969c5eb7640e946f52da6e7ecebb8292bfd6003817d8778f3120",
    "identical": true
   },

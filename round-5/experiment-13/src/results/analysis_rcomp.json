@@ -39,10 +39,10 @@
  "m1_poll": {
   "utc": "2026-09-24T11:43:34Z",
   "hits": [
-   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/CONSENSUS_FREEZE_READY.json"
+   "../../../experiment-14/src/freeze/CONSENSUS_FREEZE_READY.json"
   ],
   "marker": {
-   "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/CONSENSUS_FREEZE_READY.json",
+   "path": "../../../experiment-14/src/freeze/CONSENSUS_FREEZE_READY.json",
    "token_ok": true,
    "content": {
     "token": "aii_iter5_consensus_freeze_v1",
@@ -71,7 +71,7 @@
      "gg_gate": "freeze/gg_gate.json",
      "gg_dev": "results/gg_dev.json"
     },
-    "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14"
+    "workspace": "../../../experiment-14/src"
    }
   }
  },

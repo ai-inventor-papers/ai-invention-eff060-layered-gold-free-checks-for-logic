@@ -2,7 +2,7 @@
 
 AI-Inventor run `run_u75jRHUss0zo`, iteration 5, `gen_art_experiment_14` (plan `gen_plan_experiment_4_idx4`).
 Workspace, and the location of every kept artifact:
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14`
+`.`
 
 **Everything here is computed on dataset E, which is DEVELOPMENT data.** Its labels were seen in iterations 2–4. The
 numbers below screen candidates; they confirm nothing. E2 / R_COMP FREE does the confirming.

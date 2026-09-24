@@ -5,7 +5,7 @@ This is what was actually run, on Ubuntu (Linux 6.17). It used 4 CPU cores and n
 ## 1. Get the folder
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_evaluation_4 ~/record_eval4
+cp -r . ~/record_eval4
 cd ~/record_eval4
 ```
 

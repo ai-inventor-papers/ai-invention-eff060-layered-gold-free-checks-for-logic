@@ -30,7 +30,7 @@
         "gg_gate": "freeze/gg_gate.json",
         "gg_dev": "results/gg_dev.json"
       },
-      "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14",
+      "workspace": ".",
       "GG_B_secondary": {
         "status": "UNTESTED(budget)",
         "note": "SECONDARY row; does not change GG status",

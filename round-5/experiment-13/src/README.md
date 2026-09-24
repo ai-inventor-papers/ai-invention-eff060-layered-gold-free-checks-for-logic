@@ -1,7 +1,7 @@
 # R_COMP FREE: finish the free-vocabulary labels, then test consensus vs the LLM judge
 
 Run `run_u75jRHUss0zo`, iteration 5, `gen_art_experiment_13`.
-Workspace: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13`.
+Workspace: `.`.
 
 This artifact resumed the frozen dataset-5 labeller (art_Ia_FT284H33j) once, to give R_COMP FREE a CORRECT class. R_COMP FREE
 has 2,652 free-vocabulary FOL translations of 221 **templated** long rule sentences, from 10 LLM slots and 9 families. The

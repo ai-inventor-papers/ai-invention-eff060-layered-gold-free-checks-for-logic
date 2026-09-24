@@ -50,7 +50,7 @@
  "c": {
   "status": "NOT_TESTABLE",
   "reason": "FALLBACK B: the gloss gate failed twice (gloss_v1 half A, gloss_v2 half B); every MAPPED row is UNRESOLVED_GLOSS_GATE_FAILED, so the gated label set has 0 CORRECT rows",
-  "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13/results/confirm_verdict_rcomp.json",
+  "source": "../../../experiment-13/src/results/confirm_verdict_rcomp.json",
   "summary": {
    "criterion": "(c) c_score_align - flash-lite judge, within-template AUROC, both views, both 95% CIs > 0, on the untouched gated set",
    "VERDICT": "NOT_TESTABLE",

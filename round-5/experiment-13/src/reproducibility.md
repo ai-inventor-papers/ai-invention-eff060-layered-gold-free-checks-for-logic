@@ -5,7 +5,7 @@ This file describes what was ACTUALLY run on 2026-09-24, between 11:06 and 11:50
 ## 1. Copy the folder
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13 ~/rcomp_confirm && cd ~/rcomp_confirm
+cp -r . ~/rcomp_confirm && cd ~/rcomp_confirm
 ```
 
 Read-only absolute inputs, under `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/`:

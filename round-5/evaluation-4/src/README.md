@@ -69,4 +69,4 @@ The sources are read-only at absolute paths under `/ai-inventor/aii_data/runs/ru
 | `.venv/` | `uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r pyproject.toml` (or `./run_all.sh`) |
 | `src/__pycache__/` | regenerated automatically on the next `.venv/bin/python eval.py` |
 
-Nothing heavy is kept. All deliverables are small text or figure files in this workspace (`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_evaluation_4`).
+Nothing heavy is kept. All deliverables are small text or figure files in this workspace (`.`).

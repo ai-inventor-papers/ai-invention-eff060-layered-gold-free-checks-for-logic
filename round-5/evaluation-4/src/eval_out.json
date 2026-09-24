@@ -4,7 +4,7 @@
   "description": "File-sourced verification of every hypothesis §0.2-0.3 and review number; paste-ready corrected sections; claims ledger; iter-5 skeleton; independent audit; checker mutation test. CPU only, $0.",
   "record": "record_final.md",
   "numbers": "numbers.csv",
-  "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_evaluation_4"
+  "workspace": "."
  },
  "metrics_agg": {
   "n_numbers_rows": 554.0,

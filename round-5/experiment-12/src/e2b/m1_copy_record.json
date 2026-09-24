@@ -1,5 +1,5 @@
 {
- "marker_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/CONSENSUS_FREEZE_READY.json",
+ "marker_path": "../../../experiment-14/src/freeze/CONSENSUS_FREEZE_READY.json",
  "marker_sha256": "3c538ad41554ad0d48b0f99097cad0d13eb0a3b94d85ad89d26760a87a1dcb45",
  "files": {
   "CONSENSUS_FREEZE_READY.json": {
