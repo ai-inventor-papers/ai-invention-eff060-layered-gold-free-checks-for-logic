@@ -1,6 +1,6 @@
 # Held-out NL→FOL faithfulness meta-evaluation set (run_u75jRHUss0zo, invention iter 1, dataset E)
 
-Workspace (absolute): `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1`
+Workspace (absolute): `.`
 
 This is the one-shot **confirmation** population for gold-free NL→FOL faithfulness metrics. **Iteration 2 must not tune any
 threshold on it.**
@@ -46,9 +46,9 @@ the known biases.
 ## Deliverables
 | Path | What |
 |---|---|
-| `full_data_out.json` | **THE DATASET** (aii-json `exp_sel_data_out`, validated; 27.7 MB, one file). Groups: `heldout_candidates` (8,507), `heldout_sentences` (700), `panel_calibration` (173), `screen_audit` (1,173). Absolute path: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json` |
+| `full_data_out.json` | **THE DATASET** (aii-json `exp_sel_data_out`, validated; 27.7 MB, one file). Groups: `heldout_candidates` (8,507), `heldout_sentences` (700), `panel_calibration` (173), `screen_audit` (1,173). Absolute path: `./full_data_out.json` |
 | `mini_data_out.json`, `preview_data_out.json` | First 3 rows per group; the preview truncates strings to 200 chars |
-| `screen_adjudicated_labels.json` | `{item_id: {track, system, auto_label, repair_ops, panel_votes, final_label, label_tier, reading_choice, join_keys, ...}}` for the screen. Absolute path: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/screen_adjudicated_labels.json` |
+| `screen_adjudicated_labels.json` | `{item_id: {track, system, auto_label, repair_ops, panel_votes, final_label, label_tier, reading_choice, join_keys, ...}}` for the screen. Absolute path: `./screen_adjudicated_labels.json` |
 | `prereg_strata.json` | Strata definitions and exclusion counts (frozen at selection), the L25 top-up execution record, and the testability declaration (`testability_declaration.primary_pool`, made before any metric run) |
 | `dataset_card.md` | Data-quality statistics, the label rule, gate and real-error tables, deviations, licences |
 | `work/label_report.json` | Every statistic in the card, machine-readable |
