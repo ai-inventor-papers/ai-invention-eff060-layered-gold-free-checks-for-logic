@@ -1,0 +1,61 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://www.csc.kth.se/utbildning/kth/kurser/DA2210/vettig13/Seminarier/KnightLeveson.pdf
+Type: PDF
+Pattern: identical|same (wrong|incorrect)|difficult|coincident|independen.*reject|99%|1,255|1255|similar (5 matches in 7566 chars)
+
+--- Content ---
+
+453:...
+on Software Engineering 12(1): 96-109. 
+ 
+N-version programming has been proposed as a method of incorporating fault tolerance into software. 
+Multiple versions of a program (i.e. 'N') are prepared and executed in parallel. Their outputs are collected 
+and examined by a voter, and, if they are not identical, it is assumed that the majority is correct. This method 
+depends for its reliability improvement on the assumption that programs that have been developed 
+independently will fail independently. An experiment is described in which the fundamental axiom is tested. 
+In all, 27 versions of a program w...
+--
+1474:...und in the programs. Background information on the programmers used is also summarized. 
+ 
+The Problem 
+ 
+Critical software applications, such as mission-critical and, in particular, safety-critical 
+applications, have the constraint that they cannot fail.  The nature of software makes this 
+a very difficult objective to achieve in most cases.  In hardware design, one approach is 
+to introduce redundant hardware components into highly reliable hardware based 
+systems.  These redundancies of the components are taken advantage of by asking each 
+component to do a computation.  The individual results are ...
+--
+5065:...rms comparison of real-number values was provided to 
+each student with instructions to use the function.  This was necessary to avoid 
+programs with numerical rounding. 
+• There was no description of what measures were taken to insure that the Pascal 
+version of the oracle program was behaviorally identical to the FORTRAN version.  
+Presumably, the same tests used to conclude that the FORTRAN program was highly 
+reliable were run against the Pascal version, but this was not mentioned. 
+
+• The approach, as described, appears reasonable and sound.  A question, though, is 
+how was the development of the ...
+--
+6813:.... 
+ 
+ 
+Experimental Results 
+ 
+• Failure for a given n-version program was defined as a discrepancy between the 241 
+data values collected for that program and those values collected from the oracle 
+program. 
+• Of the 27 programs, 6 reported no failure whatsoever; 21 were successful for more 
+than 99% of the test cases; 23 out of the 27 programs were successful for more than 
+99.9% of the test cases. 
+• Several programs failed on the same test case; most common failures were where two 
+programs failed on the same test case (551); the most extreme common failure 
+occurred when eight programs failed on a common test case twice. 
+• The results of the statistical analysis were significance at α = 0.01 for a 99% 
+confidence interval (z-score was 100.55).  Thus, the null hypothesis was rejected in 
+favor of the alternate hypothesis. 
+ 
+Presentation 
+ 
+The presentation of the experiment was done very well.   However, a description of the 
+controls placed on the oracle program and test driver should have been...

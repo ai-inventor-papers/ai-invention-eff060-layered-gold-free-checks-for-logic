@@ -1,0 +1,139 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://dspace.mit.edu/server/api/core/bitstreams/1331578f-65c1-4665-a0be-1bc3cdc001d5/content
+Type: PDF
+Pattern: identical|same (wrong|incorrect)|difficult|coincident|1255|independen.*reject|output (35 matches in 70128 chars)
+
+--- Content ---
+
+507:...Virginia 
+ 
+Charlottesville, Virginia, 22903 
+Nancy G. Lev eson 
+Department of Computer Science 
+University of California 
+Irvine, California, 92717 
+ABSTRACT 
+N-version programming has been proposed as a method of incorporating fault tolerance into software. 
+Multiple versions of a program (i.e. ‘‘N’’) are prepared and executed in parallel. Their outputs are collected 
+and examined by a voter, and, if they are not identical, it is assumed that the majority is correct. This 
+method depends for its reliability improvement on the assumption that programs that have been developed 
+independently will fail independently. In this paper an experiment is described in which the fundamental 
+axiom is tested. A total of twenty seven versions of a program were prepared independen...
+--
+2248:...CTION 
+Multi-version or N-version programming [1] has been proposed as a method of providing fault 
+tolerance in software. The approach requires the separate, independent preparation of multiple (i.e. ‘‘N’’) 
+versions of a piece of software for some application. These versions are executed in parallel in the 
+application environment; each receives identical inputs and each produces its version of the required 
+outputs. The outputs are collected by a voter and, in principle, they should all be the same. In practice 
+there may be some disagreement. If this occurs, the results of the majority (assuming there is one) are 
+assumed to be the correct output, and this is the output used by the system. 
+Separate development can start at different points in the software development process. Since each 
+version of the software must provide the same functional capability, there must exist some common form of 
+system requirements document. Coordination must also exist if the versions are to provide data to the 
+voter, especially if intermediate data is compared as well as the ﬁnal output data. Obviously, all design 
+speciﬁcation must be redundant and independent for the versions to have any chance of avoiding common 
+design faults. An interesting approach to dual speciﬁcation was used by Ramamoorthy et al. [2] where two 
+independent speciﬁcations were written in a formal speciﬁcation language and then formal mathematical 
+techniqu...
+--
+6058:.... Common Failure Mode Analysis is used in critical hardware systems in an attempt to 
+determine and minimize common failure modes. 
+If the assumption of independence is not born out in practice for an N-version software system, it 
+would cause the analysis to overestimate the reliability. Recent work [7] has shown that even small 
+probabilities of coincident errors cause a substantial reduction in reliability. This could be an important 
+practical problem since N-version programming is being used in existing crucial systems and is planned for 
+others. For instance, dual programming has been used in the slat and ﬂap control system of the Airbus 
+Industrie A310 aircraft [8]. The two programs are executed by different microprocessors operating 
+- 2 ­ 
+
+asynchronously. The outputs of the two microprocessors are compared continuously, and any difference 
+greater than a deﬁned threshold causes the system to disconnect after a preset time delay. On the A310, it 
+is sufﬁcient to know that there has been a failure as backup procedures allow the continued safe ﬂight and 
+landing of the aircraft. Dual programming has also been ap...
+--
+7857:...ment 
+methodologies for the design of nuclear reactor safety systems. 
+A common argument [2,10,12] in favor of dual programming is that testing of safety-critical real-
+time software can be simpliﬁed by producing two versions of the software and executing them on large 
+numbers of test cases without manual or independent veriﬁcation of the correct output. The output is 
+assumed correct as long as both versions of the programs agree. The argument is made that preparing test 
+data and determining correct output is difﬁcult and expensive for much real-time software. Since it is 
+assumed ‘‘unlikely’’ that two programs will contain identical faults, a large number of test cases can be run 
+in a relatively short time and with a large reduction in effort required for validation of test results. 
+In addition, it has been argued that each individual version of the software can have lower reliability 
+than would be necessary if only one version were produced. The higher required software r...
+--
+9101:...] that elaborate software development environments and procedures will be unnecessary 
+- 3 ­ 
+
+and that mail-order software could be obtained from hobbyist programmers. 
+The important point to note is that all of the above arguments in favor of using redundant 
+programming hinge on the basic assumption that the probability of common mode failures (identical 
+incorrect output given the same input) is very low for independently developed software. Therefore, it is 
+important to know whether this assumption is correct. 
+Several previous experiments have inv olved N-version programming, but none have focused on the 
+issue of independence. In two [2,11] independence was assumed and therefore not tested. In each of these, 
+the two versions developed were assumed to be correct if the two outputs from the test cases agreed and no 
+attempt was made to verify independently the correctness of the output. Thus common errors would not 
+necessarily have been detected. In other experiments, common errors were observed but since 
+independence was not the hypothesis being tested, the design of the experiments make it impossible to draw 
+any statistically valid conclusions. Kelly and Avizienis [3,4] report ﬁnding 21 related faults, one common 
+fault was...
+--
+12394:... 
+In graduate and senior level classes in computer science at the University of Virginia (UVA) and the 
+University of California at Irvine (UCI), students were asked to write programs from a single requirements 
+speciﬁcation. The result was a total of twenty seven programs (nine from UVA and eighteen from UCI) all 
+of which should produce the same output from the same input. Each of these programs was then subjected 
+to one million randomly-generated test cases. 
+In order to make the experiment realistic, an attempt was made to choose an application that would 
+normally be a candidate for the inclusion of fault tolerance. The problem that was selected for 
+programming is a simple (but realistic) a...
+--
+15888:...possibility of information being inadvertently transmitted by an informal verbal 
+response, these few questions were submitted and answered by electronic mail. If a question revealed a 
+general ﬂaw in the speciﬁcations, the response was broadcast to all the programmers. 
+- 6 ­
+
+Each student was supplied with ﬁfteen input data sets and the expected outputs for use in debugging. 
+Once a program was debugged using these tests and any other tests the student developed, it was subjected 
+to an acceptance test. The acceptance test was a set of two hundred randomly-generated test cases; a 
+different set of two hundred tests were generated for each program. Different data sets were used for each 
+program ...
+--
+17978:...ere subjected to the 
+experimental treatment which consisted of simulation of a production environment. A test driver was built 
+which generated random radar reﬂections and random values for all the parameters in the problem. All 
+twenty seven programs were executed on these test cases, and the determination of success was made by 
+comparing their output with a twenty-eighth version, referred to as the gold program. This program was 
+originally written in FORTRAN for the RTI experiment and was rewritten in Pascal for this experiment. As 
+part of the RTI experiment, the gold program has been subjected to several million test cases and we have 
+- 7 ­ 
+
+considerable conﬁdence in its accuracy. It was also subjected to an extensive structured walkthrough at 
+UVA after translation to Pascal. 
+A gold version was used so that a larger number of test cases could be executed than would be 
+possible if manual checking of the outputs was performed. Naturally, it is possible (but very unlikely) that 
+a common undetected fault existed in all 28 versions, including the gold version. This would have no effect 
+on our ﬁnal results, however, and any additional undetected common faults would only strengthen our 
+conclusion. 
+A total of one million tests were run on the twenty seven ...
+--
+22436:...executed, each program produces a 15 by 15 Boolean array, a 15 element Boolean 
+vector, and a single Boolean launch decision, for a total of 241 results. The program calculates these results 
+from the simulated radar tracking data and various parameters, all of which are randomly generated for 
+each test case. The launch condition is the only true output in this application. The other results are really 
+intermediate although they must be produced since the speciﬁcations require them as part of the 
+determination of the launch condition. For the programs written for this experiment, all these results must 
+be supplied to the driver program during testing to allow for error detection. We record fai...
+--
+29247:... experiment, our null hypothesis is that the above is a correct model of the data. We can 
+estimate the quantity Pmore from the observed probabilities of failure shown in table 1. There were twenty 
+seven versions (i.e. N = 27), one million tests were executed (i.e. n = 1,000,000), and the number of tests in 
+which more than one version failed was 1255 (i.e. K = 1255). With these parameters, the statistic z has the 
+value 100.51. This is greater than 2.33 which is the 99% point in the the standard normal distribution, and 
+so we reject the null hypothesis with a conﬁdence level of 99%. We conclude that the model does not hold. 
+However, clearly the only potential problem with the model is that it is derived fr...
+--
+[10 more matches not shown]

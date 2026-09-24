@@ -1,0 +1,62 @@
+URL: https://arxiv.org/abs/2609.11085 | FETCH | 2026-09-24T01:35:31Z
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://arxiv.org/abs/2609.11085
+Type: HTML
+Length: 8410 chars (truncated)
+
+--- Content ---
+
+Skip to main content [](https://arxiv.org/IgnoreMe) [ ](https://arxiv.org/) [ Search ](https://arxiv.org/search) [Submit](https://arxiv.org/user/create) [Donate](https://info.arxiv.org/about/donate.html) [Log in](https://arxiv.org/login)
+
+Search arXiv
+
+Press Enter to search * [Advanced search](https://arxiv.org/search/advanced)
+
+# Computer Science > Machine Learning
+
+**arXiv:2609.11085** (cs) 
+
+[Submitted on 10 Sep 2026 ([v1](https://arxiv.org/abs/2609.11085v1)), last revised 11 Sep 2026 (this version, v2)]
+
+# Title:Beyond Solver Verdicts: Generative Reward Models for Autoformalization
+
+Authors:[Vikash Singh](https://arxiv.org/search/cs?searchtype=author&query=Singh,+V), [Debargha Ganguly](https://arxiv.org/search/cs?searchtype=author&query=Ganguly,+D), [Aman Goel](https://arxiv.org/search/cs?searchtype=author&query=Goel,+A), [Ali Torkamani](https://arxiv.org/search/cs?searchtype=author&query=Torkamani,+A), [Xiaoxue Han](https://arxiv.org/search/cs?searchtype=author&query=Han,+X), [Joseph Lilien](https://arxiv.org/search/cs?searchtype=author&query=Lilien,+J), [Ferhat Erata](https://arxiv.org/search/cs?searchtype=author&query=Erata,+F), [Vipin Chaudhary](https://arxiv.org/search/cs?searchtype=author&query=Chaudhary,+V)
+
+View a PDF of the paper titled Beyond Solver Verdicts: Generative Reward Models for Autoformalization, by Vikash Singh and Debargha Ganguly and Aman Goel and Ali Torkamani and Xiaoxue Han and Joseph Lilien and Ferhat Erata and Vipin Chaudhary
+
+[View PDF](/pdf/2609.11085) [HTML (experimental)](https://arxiv.org/html/2609.11085v2)
+
+> Abstract:Neurosymbolic systems rely on mathematical solvers to guarantee reasoning correctness, yet solvers are fundamentally blind to whether a formal translation maintains strict reference-equivalence to a designated formalization. We formalize this vulnerability as Verdict-Preserving-Unfaithfulness (VPU): a failure mode where an incorrect encoding executes successfully and matches the expected verdict. We theoretically prove that structural, verdict-only verification heuristics are mathematically bounded to chance-level detection on these deceptively valid traces. To resolve this, we introduce Generative Verification (GenV), which distills an offline Z3-equivalence oracle into a reference-free, continuous reference-equivalence score by repurposing the language model's native vocabulary space. Mechanistic analysis via decision-projected logit lenses and sparse autoencoders shows this generative readout natively extracts precise spatial error coordinates without explicit localization training. Empirically, our oracle-mined verifier (GenV+HN) achieves 0.961 AUROC in reference-equivalence verification, generalizes zero-shot across unseen translators and divergent formal styles, and yields an 11.3-point downstream accuracy gain in agentic test-time compute allocation. 
+
+Subjects: |  Machine Learning (cs.LG); Computation and Language (cs.CL)  
+---|---  
+Cite as: | [arXiv:2609.11085](https://arxiv.org/abs/2609.11085) [cs.LG]  
+  | (or  [arXiv:2609.11085v2](https://arxiv.org/abs/2609.11085v2) [cs.LG] for this version)   
+  |  <https://doi.org/10.48550/arXiv.2609.11085> Focus to learn more arXiv-issued DOI via DataCite  
+  
+## Submission history
+
+From: Vikash Singh [[view email](/show-email/3cd29460/2609.11085)]   
+**[[v1]](/abs/2609.11085v1)** Thu, 10 Sep 2026 04:47:55 UTC (1,422 KB)  
+**[v2]** Fri, 11 Sep 2026 17:19:24 UTC (1,422 KB)  
+
+
+Full-text links:
+
+## Access Paper:
+
+View a PDF of the paper titled Beyond Solver Verdicts: Generative Reward Models for Autoformalization, by Vikash Singh and Debargha Ganguly and Aman Goel and Ali Torkamani and Xiaoxue Han and Joseph Lilien and Ferhat Erata and Vipin Chaudhary
+
+  * [View PDF](/pdf/2609.11085)
+  * [HTML (experimental)](https://arxiv.org/html/2609.11085v2)
+  * [TeX Source ](/src/2609.11085)
+
+
+
+[ view license ](http://creativecommons.org/licenses/by/4.0/ "Rights to this article")
+
+### Current browse context:
+
+cs.LG
+
+[< prev](/prevnext?id=26

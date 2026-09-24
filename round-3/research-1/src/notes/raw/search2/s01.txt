@@ -1,0 +1,12 @@
+QUERY: "similar errors" N-version programming Avizienis identical erroneous results | MODE: general | 2026-09-24T02:59:31Z
+Search: "similar errors" N-version programming Avizienis identical erroneous results  [general via ddgs]
+Found: 2 results
+
+1. Assuring Design Diversity in N-Version Software: A Design Paradigm for N-Version Programming | Springer Nature Link
+   https://link.springer.com/chapter/10.1007/978-3-7091-9198-9_10
+   The N-Version Programming (NVP) approach achieves fault-tolerant software units, called N-version Software (NVS) units, through the development and use of software diversity. To maximize the effective...
+
+2. ACM SIGSOFT SOFTWARE ENGINEERING NOTES vol 15 no 1 Jan 1990 Page 24
+   https://dl.acm.org/doi/pdf/10.1145/382294.382710
+   The primary argument for the attainment ... a low probability that residual software design faults will lead to an · erroneous decision by causing similar errors to occur at the same c[ross]c[heck]-po...
+

@@ -1,0 +1,44 @@
+QUERY: LLM judge accuracy first-order logic equivalence formula length complexity degrade | MODE: general | 2026-09-24T02:59:31Z
+Search: LLM judge accuracy first-order logic equivalence formula length complexity degrade  [general via ddgs]
+Found: 10 results
+
+1. Published as a conference paper at ICLR 2025 AUTONOMOUS EVALUATION OF LLMS FOR
+   https://proceedings.iclr.cc/paper_files/paper/2025/file/1a7a22152cd21f0ca3c0f8139bb32905-Paper-Conference.pdf
+   Moreover, even with CoT prompting, LLMs cannot serve as accurate verifiers of logical equivalence · (§A3) for anything but toy expressions (low descriptional complexity), after which F1 scores fall...
+
+2. Advancing Natural Language Formalization to First Order ...
+   https://arxiv.org/pdf/2509.22338
+   Yang et al. defined a new metric called “Logical Equivalence” which is also · used in other experiments [30,16]. In contrast to the previous methods, which · rate a prediction either “correct” or “inc...
+
+3. Under review as submission to TMLR On the Fundamental Limits of LLMs at Scale
+   https://openreview.net/pdf/b1a63c4f0cdc5cd78698b347b7cb018706ead05e.pdf
+   When LLMs ingest such data, they learn both correct and · incorrect associations with no inherent process to distinguish truth from falsehood during pretraining. ... examples with incorrect labels or ...
+
+4. Advancing Natural Language Formalization to First Order Logic with Fine-tuned LLMs
+   https://arxiv.org/html/2509.22338
+   Table 4 compares the accuracy of the evaluated LLMs in the baseline setup. As expected, GPT-4o, DeepSeek-R1-0528, DeepSeek-V3-0324 and LogicLLaMA perform better than the other models, particularly in ...
+
+5. Divide and Translate: Compositional First-Order Logic Translation and Verification for Complex Logical Reasoning
+   https://arxiv.org/html/2410.08047v2
+   February 25, 2025 - These approaches take advantages by considering an LLM only as a semantic parser (i.e., a first-order logic translator), which can avoid planning and execution errors by using a sy...
+
+6. LLM-as-a-judge: a complete guide to using LLMs for evaluations
+   https://www.evidentlyai.com/llm-guide/llm-as-a-judge
+   This complexity can lead to errors. Evaluating responses is generally more straightforward. We're not asking the LLM to fix or correct itself; but simply to assess what has already been produced....
+
+7. Evaluating LLMs Capabilities at Natural Language to Logic ...
+   https://ceur-ws.org/Vol-3904/paper13.pdf
+   Evaluating LLMs Capabilities at Natural Language to Logic ... Translating natural language (NL) into logical formalisms like First-Order Logic (FOL) has long been a challenge · across multiple discipl...
+
+8. Less Is More for Multi-Step Logical Reasoning of LLM Generalisation Under Rule Removal, Paraphrasing, and Compression
+   https://arxiv.org/html/2512.06393v2/
+   December 12, 2025 - We compose 2–5 equivalence laws simultaneously to create structurally more complex but logically equivalent rule sets, testing robustness under composed transformations. We evaluat...
+
+9. Examining LLM Judges on Mathematical Reasoning Tasks
+   https://aclanthology.org/2025.gem-1.65.pdf
+   LLM judges, should be unbiased and logical....
+
+10. LLM-as-a-judge: can AI systems evaluate human responses and model outputs?
+   https://toloka.ai/blog/llm-as-a-judge-can-ai-systems-evaluate-model-outputs/
+   Can they be trusted to assess nuanced arguments, complex math problems, or even moral questions? An overview of the data construction pipeline of AUTO-J—an open-source model for LLMs evaluation. Sourc...
+
