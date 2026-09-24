@@ -1,0 +1,105 @@
+{
+ "utc": "2026-09-24T11:17:45Z",
+ "n_rows": 2652,
+ "n_untouched": 2198,
+ "columns": {
+  "c_score_align": {
+   "all": "f0e602dce49887a52b8cb738b55b78b8885801610d940b7e44f396ca17fbc334",
+   "untouched": "def4bcac89c81611cf73c1eb491763f22fc74b1d19752706288e296a59dd45f9"
+  },
+  "c_exact": {
+   "all": "319dcb1cbb38f96a3a69b66159e436425bf95bedd089bf6df6747e40135043f1",
+   "untouched": "4d390772abacb6b29a929d43ea98d6fa9b8915a882ebf1c9c0f7b58bb6de5a3e"
+  },
+  "c_re": {
+   "all": "f0e602dce49887a52b8cb738b55b78b8885801610d940b7e44f396ca17fbc334",
+   "untouched": "def4bcac89c81611cf73c1eb491763f22fc74b1d19752706288e296a59dd45f9"
+  },
+  "c_score_nf": {
+   "all": "fcc7f7f1dd2c67644ce35c9048a8055b46561dbcf6ddf20659fcdef0dbf2fdd7",
+   "untouched": "3169213d0fadc0fd6fba446ac747da47c140758fff7a9bca208e58316a21eed8"
+  },
+  "c_score_hyb": {
+   "all": "cc2d1a255214c3e866db87489458a21d2e1a7e1c38bb99370d1ea721f38ded43",
+   "untouched": "a7d7cf39d9ac822511998d6b6d6722e7a1a9cce0cb02bbc9a76859f90e720706"
+  },
+  "g_align": {
+   "all": "9b82694a1f0fe49ee4e77b362ad5e0bb49c3311fb49548fdea890d6e2f6e487a",
+   "untouched": "117a01de6e9d36594a48f164d60cc65249c93382c645bc826b75e03e82a012bf"
+  },
+  "g_nf": {
+   "all": "2ff91b7d2864367ab5ee22f3700df2c305463000f34c056ad9971e797f71fc82",
+   "untouched": "3d30263a1e7c5ea1f4d35106b9b4b7996c4d225b6b779f81a236b24fc09cd139"
+  },
+  "judge_cheap_disg": {
+   "all": "dfc07bbd4635499d04e5e852d5ba23298e738d8e919efc7580ce97b957173b0d",
+   "untouched": "8f0e93e3f1a8588eb0cdad072d35dd9e49f6edd34acf30ae7b441dee4a716242"
+  },
+  "judge_cheap_orig": {
+   "all": "e1834882486235f1cda00131f031cbe7a62f95ecccb8223bf4c8a7a8431329ba",
+   "untouched": "b1b87b4a81cce22687a5e25a5711b66075a3e1094e61861a6c62129aa10acbc9"
+  },
+  "judge_cheap_orig_exp7": {
+   "all": "ac2948b8cdaf6a7d8bcd8ea323d1e4ee17bd01ad099ab41bc339356794ab675e",
+   "untouched": "1f9deb24eebc1e1160b1d0ece6c05a306b240f93f80650b5263e6e19d9298bed"
+  },
+  "judge_local_disg": {
+   "all": "37b7116488aac05990fee8a0016a55255ad8a7d35b0aab7cbef1e604fa28c371",
+   "untouched": "c3b31fd386572927bd1fa226c841426add8f87642bac689fe81a245dd9d656c1"
+  },
+  "judge_local_orig": {
+   "all": "e4d45f0ed95131eb1e313c11541d6ebfff3b20fd6faea2d9d0f8a157edaba07b",
+   "untouched": "3e87bb35b5349bf063ad1461aef8c05d0492be2aff65d80aa2c3d9148ae9bd0e"
+  },
+  "end_maj_align": {
+   "all": "9895016dd196c558fe2d9af921dda9c3b1f0542ea9dc74c45d252f57a9bada03",
+   "untouched": "bd3d12e3ccbd8e3fc524ae37c54358f1bd800b276fefaa65f7f22442ff4a07bb"
+  },
+  "end_maj_exact": {
+   "all": "d58223a201a9545ea605d7c8eb6bd790939871fe8e6ac3e1e6a47ffe7bbc08a0",
+   "untouched": "8019e25a2a2660f4b53cbadd87bd9300cd1339008ece002133980f0d1a00a0ca"
+  },
+  "V1_c_pn": {
+   "all": "f756877e1c55b9cd4bd3e12bffa2026eb5b1749f0d2410579f335e09af30cf97",
+   "untouched": "84996994f5b9dcfd318e23419d48fa1099218f3734e8d725934e3032a800e34c"
+  },
+  "V2_c_rw": {
+   "all": "fc35373eecd910e095fad31104fe95e656eb66ce962ed6528335a326dd2b124a",
+   "untouched": "7045f9275e0a497ae31296ef41f37ff81dabd67255adf03c67e2dba44efffade"
+  },
+  "V3_c_pn_rw": {
+   "all": "04ea361682a8f153ae9d6eb51f7b655de67d9411a942882057060ee3d0bab6b3",
+   "untouched": "02454eac6556fcdcabb93c3ddc5656422ac4e2e230965f818366cc1b84391918"
+  },
+  "V5_c_v5": {
+   "all": "c5215ff6fcbc696b91194d9d363476bf9f119c4cfff68c381c0f1837e33a65bf",
+   "untouched": "5feda2b3993e5c93cb0d3b1a98a3d3aab596a4e5097d4f9670666de1ccf953b5"
+  },
+  "npc": {
+   "all": "8c72cfd7f7684ea55059bf5e68784906babbaf33edf891f808cb6631a9374360",
+   "untouched": "7b68efc74deb9a3065ca507856e8b4080ab276d9a876190c1a2349afb5f66936"
+  },
+  "plur_top_share": {
+   "all": "0ad9329bd118e6d5bd0aeeda1ef6c90f802ab28fb53962e871faf549e10dff32",
+   "untouched": "2f10bcc0754a92a2576b44cc5a7461ca3e802907d1cf5cc3121fa975589350fc"
+  },
+  "s1_flag": {
+   "all": "61a06b177d735f1ebb03054d9888ddc38c189f38d882a4597a3ff1543bbf89e1",
+   "untouched": "81bc5790b35f05a2ab96792aa9467ea5fed1c3a8e295e51424df0723d4d1a021"
+  }
+ },
+ "untouched_row_keys_sha256": "5e31a1bd4af77da4a9d978e0e2f35a5a7a7ed618526e185328e7323dcb56cce0",
+ "scores_file_sha256": "c2fa1ba1f5e5ec28364fcd4120c3a51da70da7570e2ce63a8b6a86f1f8b66079",
+ "inputs_sha256": {
+  "rcomp_candidates.jsonl": "adc43bf118f5b6707ad18c46e78f467f1945cc7703612004315e420708ebaacc",
+  "pairwise_classes_RCOMP.jsonl": "ae9b67fc607dcf7f00778f68a3d39747372d19bd342fa589051ad365a377fb3d",
+  "judge_orig_iter5_FREE.jsonl": "2a0f0bb59bfe43775466def09e4affb232a93e4eddfe609ed8a304110b67bdb2",
+  "consensus_variants.py (prelim copy)": "6730a63b2d7612c3d44fd92019bceff8e72a68220c3fa0c65acbbb2a9463f429"
+ },
+ "code_sha256": {
+  "confirm/scores.py": "22608258fb8eaa9fe62e5a5e4465aa29e2447f1e3710370e9cc945acd4607a13",
+  "confirm/cc.py": "a137a39f8f74f27df83d788169d2a612620b9886fe4488b46d145ddd64f2a71e",
+  "confirm/judge_orig_complete.py": "c28ddbe51d3749e11ddfd2e9823239856ab865d33acfc54a9d57f26fee8bd632"
+ },
+ "note": "sealed BEFORE the first gloss call; labels are joined only after this seal and the label seal both verify"
+}
