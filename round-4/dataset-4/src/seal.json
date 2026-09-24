@@ -1,0 +1,54 @@
+{
+ "sealed_at_utc": "2026-09-24T07:32:48Z",
+ "files": {
+  "sealed/labels_E2.jsonl": {
+   "sha256": "00c2592c8c648c172490a13913e8e9d502cf2f6c4f3cbd450e33effb64d2cdac",
+   "n_rows": 330
+  },
+  "sealed/references_E2.jsonl": {
+   "sha256": "f7d1fd746f009ea211cd2c980f93caf0b164c1d27f31d69c776c7bbddac30277",
+   "n_rows": 550
+  },
+  "candidates_E2_nolabels.jsonl": {
+   "sha256": "a220238626e2fbe2847d5bda1078a7c227dde05f08f2c31826aa7032ab60fd99",
+   "n_rows": 300
+  },
+  "controls_E2_nolabels.jsonl": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "n_rows": 0
+  }
+ },
+ "prereg_E2.json_sha256": "36957fcb5b46812260cb6ea26439d2a7d5ba49c8bd5a247122fdb682afca3259",
+ "code_freeze.json_sha256": "986334dc05d1c2be2543b010ba3ed072236d75c89ff52b174cd800669a2d706d",
+ "forbidden_keys_in_nolabel_files": [
+  "label",
+  "final_label",
+  "output",
+  "label_tier",
+  "reference_fol",
+  "reference",
+  "gold_fol",
+  "reference_status",
+  "auto_label",
+  "equiv_status",
+  "repair_ops",
+  "repair_status",
+  "error_ops",
+  "panel_votes",
+  "panel_item",
+  "panel_ambiguous",
+  "class_id",
+  "class_size",
+  "convention_flags",
+  "correct_not_equivalent",
+  "reading_choice",
+  "vex",
+  "vex_eq",
+  "gold_audit_flag",
+  "label_source",
+  "addrop_only_suspect",
+  "solver_lenient_label",
+  "control_type_label"
+ ],
+ "protocol": "iteration 5 freezes and hashes its metric scores on candidates_E2_nolabels.jsonl (and controls_E2_nolabels.jsonl) BEFORE joining sealed/labels_E2.jsonl by row_key; verify with `.venv/bin/python src_e2/verify_seal.py`"
+}
