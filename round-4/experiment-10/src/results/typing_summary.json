@@ -1,0 +1,36 @@
+{
+ "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/analysis_typing.json",
+ "majority_class": "ADD",
+ "majority_acc_exp8": 0.17708333333333334,
+ "marginal_chance_exp8": 0.11568113573554421,
+ "medoid_align_exp8": {
+  "acc": 0.32849702380952384,
+  "ci": [
+   0.2765030067509913,
+   0.3867487259890833
+  ],
+  "above_majority": true,
+  "above_chance": true
+ },
+ "judge_flashlite_exp8": {
+  "acc": 0.32621951219512196,
+  "ci": [
+   0.31093670918432553,
+   0.3423928767157982
+  ],
+  "above_majority": true,
+  "above_chance": true
+ },
+ "judge_local_qwen8b_exp8": {
+  "acc": 0.0978422619047619,
+  "ci": [
+   0.08532911821662191,
+   0.11068776955671958
+  ],
+  "above_majority": false,
+  "above_chance": false
+ },
+ "oracle_strict_exp8": 0.8024553571428571,
+ "majority_acc_recomputed": 0.177,
+ "chance_recomputed": 0.116
+}

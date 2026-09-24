@@ -1,0 +1,1353 @@
+{
+"0000c2274e80": {
+"G4": "∀x (Depressing(x) → Sad(x))",
+"G6": "∀x (Depressing(x) → Sad(x))",
+"G7": "∀x (Depressing(x) → Sad(x))"
+},
+"004f8eafeefa": {
+"G4": "∀x ((Painting(x) ∧ CreatedUsing(x, waterSolublePigments) ∧ AppliedTo(x, specificPaper) ∧ ArtFormFrom(x, particularRegion)) → WatercolorPainting(x))",
+"G6": "∀x ((CreatedUsing(x, waterSolublePigments) ∧ AppliedTo(x, specificTypeOfPaper) ∧ FormOfArt(x, particularRegion)) → UsuallyWatercolorPainting(x))",
+"G7": "∀x ((Painting(x) ∧ CreatedUsing(x, waterSolublePigments) ∧ AppliedTo(x, SpecificPaper) ∧ FormOfArtFromRegion(x)) → UsuallyWatercolorPainting(x))"
+},
+"0051666e48f8": {
+"G4": "∀x ((Plant(x) ∧ GrowsWellIn(x, partialShade) ∧ Has(x, colorfulFlowers) ∧ Requires(x, moderateWater)) → SuitableFor(x, shadedGarden))",
+"G6": "∀x ((GrowsWellIn(x, partialShade) ∧ HasColorfulFlowers(x) ∧ RequiresModerateWater(x)) → SuitableFor(x, shadedGarden))",
+"G7": "∀x ((Plant(x) ∧ GrowsWellIn(x, partialShade) ∧ HasColorfulFlowers(x) ∧ Requires(x, moderateWater)) → SuitableFor(x, shadedGarden))"
+},
+"005a27391925": {
+"G4": "∀x ((Artwork(x) ∧ CreatedUsing(x, digitalTools) ∧ CanBeDisplayedOn(x, electronicDevices) ∧ Interactive(x)) → DigitalInteractiveArtwork(x))",
+"G6": "∀x ((CreatedUsing(x, digitalTools) ∧ CanBeDisplayedOn(x, electronicDevices) ∧ Interactive(x)) → DigitalInteractiveArtwork(x))",
+"G7": "∀x ((Artwork(x) ∧ CreatedUsing(x, digitalTools) ∧ CanBeDisplayedOn(x, electronicDevices) ∧ Interactive(x)) → DigitalInteractiveArtwork(x))"
+},
+"0081ff295cda": {
+"G4": "∀x ((MusicalComposition(x) ∧ TypicallyConsistsOf(x, multipleMovements) ∧ OftenFeatures(x, soloInstrumentAccompaniedByOrchestra)) → Concerto(x))",
+"G6": "∀x ((MusicalComposition(x) ∧ TypicallyConsistsOf(x, multipleMovements) ∧ OftenFeatures(x, soloInstrument) ∧ AccompaniedBy(x, orchestra)) → Concerto(x))",
+"G7": "∀x ((MusicalComposition(x) ∧ TypicallyConsistsOfMultipleMovements(x) ∧ OftenFeaturesSoloInstrumentWithOrchestra(x)) → Concerto(x))"
+},
+"00ab814ec349": {
+"G4": "∀x ((GeologicalFormation(x) ∧ CreatedByDeposition(x, sediment) ∧ FormsLayersOverTime(x) ∧ Contains(x, fossils)) → SedimentaryRock(x))",
+"G6": "∀x ((GeologicalFormation(x) ∧ CreatedByDepositionOf(x, sediment) ∧ FormsLayersOverTime(x) ∧ Contains(x, fossils)) → SedimentaryRock(x))",
+"G7": "∀x ((GeologicalFormation(x) ∧ CreatedBy(x, DepositionOfSediment) ∧ FormsLayersOverTime(x) ∧ Contains(x, Fossils)) → SedimentaryRock(x))"
+},
+"00c40ad04640": {
+"G4": "∀x (WorkoutRoutine(x) → (Effective(x) ↔ (Includes(x, cardioExercises) ∧ Includes(x, strengthTraining) ∧ Includes(x, flexibilityExercises) ∧ ¬LeadsTo(x, overtraining))))",
+"G6": "∀x (WorkoutRoutine(x) ∧ Includes(x, cardioExercises) ∧ Includes(x, strengthTraining) ∧ Includes(x, flexibilityExercises) ∧ ¬LeadsTo(x, overtraining) → Effective(x))",
+"G7": "∀x (WorkoutRoutine(x) → (Includes(x, cardioExercises) ∧ Includes(x, strengthTraining) ∧ Includes(x, flexibilityExercises) ∧ ¬LeadsTo(x, overtraining) → Effective(x)))"
+},
+"00ddad96098f": {
+"G4": "∀x (Material(x) ∧ UnderStress(x) ∧ ¬Exceed(x, elasticLimit) ∧ ¬Removed(load) → DeformsElastically(x))",
+"G6": "∀x ((Material(x) ∧ UnderStress(x) ∧ ¬ExceedsElasticLimit(x) ∧ LoadNotRemoved(x)) → DeformsElastically(x))",
+"G7": "∀x (Material(x) ∧ UnderStress(x) ∧ ¬ExceedsElasticLimit(x) ∧ ¬LoadRemoved(x) → DeformsElastically(x))"
+},
+"012ce802a2e5": {
+"G4": "∀x (Laptop(x) → ((Lightweight(x) ∧ LongBatteryLife(x) → Portable(x)) ∧ (Heavy(x) ∧ ShortBatteryLife(x) → LessPortable(x))))",
+"G6": "∀x (Laptop(x) ∧ Lightweight(x) ∧ LongBatteryLife(x) → Portable(x)) ∧ ∀x (Laptop(x) ∧ Heavy(x) ∧ ShortBatteryLife(x) → ¬Portable(x))",
+"G7": "∀x ((Laptop(x) ∧ Lightweight(x) ∧ LongBatteryLife(x)) → Portable(x)) ∧ ((Laptop(x) ∧ Heavy(x) ∧ ShortBatteryLife(x)) → ¬Portable(x))"
+},
+"014b94f74ccf": {
+"G4": "∀x (Computer(x) → (ElectronicDevice(x) ∧ Process(x, data) ∧ Store(x, data) ∧ Retrieve(x, data) ∧ OftenUsedFor(x, wordProcessing) ∧ OftenUsedFor(x, internetBrowsing) ∧ OftenUsedFor(x, softwareDevelopment)))",
+"G6": "∀x (Computer(x) → (ElectronicDevice(x) ∧ ProcessesData(x) ∧ StoresData(x) ∧ RetrievesData(x) ∧ OftenUsedFor(x, wordProcessing) ∧ OftenUsedFor(x, internetBrowsing) ∧ OftenUsedFor(x, softwareDevelopment)))",
+"G7": "∀x (Computer(x) → (ElectronicDevice(x) ∧ ProcessesData(x) ∧ StoresData(x) ∧ RetrievesData(x) ∧ UsedFor(x, wordProcessing) ∧ UsedFor(x, internetBrowsing) ∧ UsedFor(x, softwareDevelopment)))"
+},
+"0155490485cc": {
+"G4": "∀x (DeciduousTree(x) → ShedsLeavesAnnually(x)) ∧ ∀y (EvergreenTree(y) → RetainsLeavesYearRound(y)) ∧ ∀z (SemiEvergreenTree(z) → PartiallyLosesLeavesInUnfavorableConditions(z))",
+"G6": "∀x ((DeciduousTree(x) → ShedsLeavesAnnually(x)) ∧ (EvergreenTree(x) → RetainsLeavesYearRound(x)) ∧ (SemiEvergreenTree(x) → PartiallyLosesLeavesInUnfavorableConditions(x)))",
+"G7": "∀x ((DeciduousTree(x) → ShedsLeavesAnnually(x)) ∧ (EvergreenTree(x) → RetainsLeavesYearRound(x)) ∧ (SemiEvergreenTree(x) → PartiallyLosesLeavesInUnfavorableConditions(x)))"
+},
+"019944b7ae56": {
+"G4": "Team(bostonCeltics) ∧ Lost(bostonCeltics, nbaFinals)",
+"G6": "Team(bostonCeltics) ∧ Lost(bostonCeltics, nbaFinals)",
+"G7": "Team(bostonCeltics) ∧ Lost(bostonCeltics, nbaFinals)"
+},
+"01abdf1337a1": {
+"G4": "∀x (RecyclingProgram(x) ∧ EfficientlyProcesses(x, wasteMaterials) ∧ Promotes(x, sustainablePractices) ∧ Raises(x, communityAwareness) → (Reduces(x, landfillWaste) ∧ Conserves(x, naturalResources)))",
+"G6": "∀x ((RecyclingProgram(x) ∧ EfficientlyProcesses(x, wasteMaterials) ∧ Promotes(x, sustainablePractices) ∧ Raises(x, communityAwareness)) → (Reduces(x, landfillWaste) ∧ Conserves(x, naturalResources)))",
+"G7": "∃x (RecyclingProgram(x) ∧ EfficientlyProcesses(x, wasteMaterials) ∧ Promotes(x, sustainablePractices) ∧ Raises(x, communityAwareness) → (Reduces(x, landfillWaste) ∧ Conserves(x, naturalResources)))"
+},
+"01e2ba7aab85": {
+"G4": "∀x (Book(x) → (Bestseller(x) ↔ (SoldLargeCopies(x) ∧ ReceivedWidespreadAcclaim(x))))",
+"G6": "∀x (Book(x) ∧ HasSold(x, largeNumberOfCopies) ∧ ReceivedWidespreadAcclaim(x) → Bestseller(x))",
+"G7": "∀x (Book(x) ∧ SoldLargeNumberCopies(x) ∧ ReceivedWidespreadAcclaim(x) → Bestseller(x))"
+},
+"020e91e8240f": {
+"G4": "BornIn(rosa, santiago)",
+"G6": "BornIn(rosa, santiago)",
+"G7": "BornIn(rosa, santiago)"
+},
+"0211d771fd73": {
+"G4": "∀x (ChemicalReaction(x) ∧ Releases(x, heat) ∧ IncreaseIn(x, entropy) ∧ Favors(x, formationOfProducts) → ConsideredSpontaneous(x))",
+"G6": "∀x (ChemicalReaction(x) ∧ ReleasesHeat(x) ∧ IncreaseInEntropy(x) ∧ FavorsFormationOf(x, products) → Spontaneous(x))",
+"G7": "∀x ((ChemicalReaction(x) ∧ ReleasesHeat(x) ∧ IncreasesEntropy(x) ∧ FavorsFormationOfProducts(x)) → Spontaneous(x))"
+},
+"02585b75d02e": {
+"G4": "UnincorporatedCommunity(ordinary)",
+"G6": "UnincorporatedCommunity(ordinary)",
+"G7": "UnincorporatedCommunity(ordinary)"
+},
+"025e45bba5ad": {
+"G4": "∃x (ArtificialSatellite(x) ∧ ¬USInvention(x))",
+"G6": "∃x (ArtificialSatellite(x) ∧ ¬USInvention(x))",
+"G7": "∃x (ArtificialSatellite(x) ∧ ¬USInvention(x))"
+},
+"02998766df83": {
+"G4": "∀x (Animal(x) ∧ ((Has(x, fur) ∨ Has(x, hair)) ∧ GivesBirthToLiveYoung(x) ∧ ProducesMilkToNourish(x, offspring)) → Mammal(x))",
+"G6": "∀x (Animal(x) ∧ (HasFur(x) ∨ HasHair(x)) ∧ GivesBirthToLiveYoung(x) ∧ ProducesMilkToNourishOffspring(x) → Mammal(x))",
+"G7": "∀x (Animal(x) ∧ ((Has(x, fur) ∨ Has(x, hair)) ∧ GivesBirthToLiveYoung(x) ∧ ProducesMilkToNourishOffspring(x)) → Mammal(x))"
+},
+"02cf19522608": {
+"G4": "∀x ((NaturalFormation(x) ∧ ConsistsOf(x, largeBodyOfWater) ∧ SurroundedBy(x, land) ∧ Contains(x, saltwater) ∧ Covers(x, vastArea) ∧ Has(x, significantDepth)) → Ocean(x))",
+"G6": "∀x ((NaturalFormation(x) ∧ ConsistsOf(x, largeBodyOfWater) ∧ SurroundedBy(x, land) ∧ Contains(x, saltwater) ∧ CoversVastArea(x) ∧ HasSignificantDepth(x)) → Ocean(x))",
+"G7": "∀x ((NaturalFormation(x) ∧ ConsistsOf(x, largeBodyOfWater) ∧ SurroundedBy(x, land) ∧ Contains(x, saltwater) ∧ Covers(x, vastArea) ∧ Has(x, significantDepth)) → Ocean(x))"
+},
+"02ea4275866d": {
+"G4": "∀x ((Furniture(x) ∧ Has(x, flatSurface) ∧ SupportedBy(x, legs) ∧ UsedFor(x, eating) ∧ UsedFor(x, writing) ∧ UsedFor(x, working)) → Table(x))",
+"G6": "∀x ((PieceOfFurniture(x) ∧ HasFlatSurface(x) ∧ SupportedByLegs(x) ∧ (UsedFor(x, eating) ∨ UsedFor(x, writing) ∨ UsedFor(x, working))) → Table(x))",
+"G7": "∀x ((Furniture(x) ∧ HasFlatSurface(x) ∧ SupportedBy(x, legs) ∧ UsedFor(x, eating ∨ writing ∨ working)) → Table(x))"
+},
+"02f64a0b7500": {
+"G4": "HasHighSalary(john)",
+"G6": "HighSalary(john)",
+"G7": "HasSalary(john, high)"
+},
+"02fe3cadce8f": {
+"G4": "∀x (FoodItem(x) ∧ TypicallyConsumedAfter(x, meal) ∧ SweetTaste(x) ∧ ¬ProvidesSignificantNutritionalValue(x) → Dessert(x))",
+"G6": "∀x (FoodItem(x) ∧ TypicallyConsumedAfterMeal(x) ∧ SweetInTaste(x) ∧ ¬ProvidesSignificantNutritionalValue(x) → Dessert(x))",
+"G7": "∀x ((FoodItem(x) ∧ TypicallyConsumedAfterMeal(x) ∧ SweetTaste(x) ∧ ¬ProvidesSignificantNutrition(x)) → Dessert(x))"
+},
+"0329a257b89f": {
+"G4": "∀x (ShoppingMall(x) ∧ OffersVarietyOfStores(x) ∧ HostsEvents(x) ∧ IncludesRecreationalFacilities(x) → CommunityHub(x))",
+"G6": "∀x (ShoppingMall(x) ∧ Offers(x, varietyOfStores) ∧ Hosts(x, events) ∧ Includes(x, recreationalFacilities) → CommunityHub(x))",
+"G7": "∀x ((ShoppingMall(x) ∧ OffersVarietyOfStores(x) ∧ HostsEvents(x) ∧ IncludesRecreationalFacilities(x)) → BecomesCommunityHub(x))"
+},
+"032a518dd21a": {
+"G4": "∀x ∀y ∀z (Software(x) ∧ OperatingSystem(y) ∧ Device(z) ∧ MeetsMinimumRequirements(x, y, z) ∧ TestedForCompatibility(x, y, z) → CompatibleWithOn(x, y, z))",
+"G6": "∀x ∀y ∀z (Software(x) ∧ OperatingSystem(y) ∧ Device(z) ∧ MeetsMinimumSystemRequirements(x, y, z) ∧ TestedForCompatibility(x, y, z) → CompatibleWith(x, y, z))",
+"G7": "∀x ∀y ∀z ((Software(x) ∧ OperatingSystem(y) ∧ Device(z) ∧ MeetsMinReqs(x, y, z) ∧ TestedForCompatibility(x, y, z)) → CompatibleWithOn(x, y, z))"
+},
+"033386687394": {
+"G4": "∀x (Husky(x) → Dog(x))",
+"G6": "∀x (Husky(x) → Dog(x))",
+"G7": "∀x (Husky(x) → Dog(x))"
+},
+"03523ae8741c": {
+"G4": "∀x ((Measures(x, time) ∧ HasDisplayFor(x, hours) ∧ HasDisplayFor(x, minutes) ∧ HasDisplayFor(x, seconds) ∧ (Analog(x) ∨ Digital(x))) → Clock(x))",
+"G6": "∀x (Object(x) ∧ MeasuresTime(x) ∧ HasDisplayFor(x, hours) ∧ HasDisplayFor(x, minutes) ∧ HasDisplayFor(x, seconds) ∧ (Analog(x) ∨ Digital(x)) → Clock(x))",
+"G7": "∀x (Object(x) ∧ Measures(x, time) ∧ HasDisplay(x, hours) ∧ HasDisplay(x, minutes) ∧ HasDisplay(x, seconds) ∧ (Analog(x) ∨ Digital(x)) → Clock(x))"
+},
+"0372b6d71457": {
+"G4": "∀x (Performance(x) → (Captivating(x) ↔ (Evokes(x, strongEmotions) ∧ HoldsAttention(x, audience) ∧ ¬(Dull(x) ∨ Monotonous(x)))))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x (Performance(x) ∧ Evokes(x, strongEmotions) ∧ HoldsAttention(x, audience) ∧ ¬Dull(x) ∧ ¬Monotonous(x) → Captivating(x))"
+},
+"03760808f25c": {
+"G4": "DonatedTo(theWatch, homelessCharity)",
+"G6": "DonatedTo(watch, homelessCharity)",
+"G7": "DonatedTo(watch, homelessCharity)"
+},
+"038d5d83553a": {
+"G4": "∀x (Computer(x) → (∃y (CPU(y) ∧ PartOf(y, x) ∧ Executes(y, instructions)) ∧ ∃z (Memory(z) ∧ PartOf(z, x) ∧ Stores(z, data) ∧ Stores(z, instructions)) ∧ ∃w (IOSystem(w) ∧ PartOf(w, x) ∧ CommunicatesWith(w, externalDevices))))",
+"G6": "∀x (Computer(x) → (HasCPU(x) ∧ ExecutesInstructions(CPU(x)) ∧ HasMemory(x) ∧ StoresDataAndInstructions(Memory(x)) ∧ HasIOSystem(x) ∧ CommunicatesWithExternalDevices(IOSystem(x))))",
+"G7": "∃x (Computer(x) ∧ ∃y (CPU(y) ∧ HasPart(x, y) ∧ Executes(y, instructions)) ∧ ∃z (Memory(z) ∧ HasPart(x, z) ∧ Stores(z, data) ∧ Stores(z, instructions)) ∧ ∃w (IOSystem(w) ∧ HasPart(x, w) ∧ CommunicatesWith(w, externalDevices)))"
+},
+"0397ad4ec126": {
+"G4": "∀x ∀y (Plant(x) ∧ SoilType(y) ∧ CanGrowAndDevelopOptimallyInConditionsProvidedBy(x, y) → ThrivesIn(x, y))",
+"G6": "∀x ∀y (Plant(x) ∧ SoilType(y) → (ThrivesIn(x, y) ↔ (CanGrowOptimally(x, y) ∧ CanDevelopOptimally(x, y))))",
+"G7": "∀x ∀y (Plant(x) ∧ SoilType(y) ∧ CanGrowDevelopOptimallyIn(x, y) → ThrivesIn(x, y))"
+},
+"03b3caa8df10": {
+"G4": "∀x (Material(x) → (GoodConductor(x) ↔ (AllowsFlowOf(x, electricCurrent) ∧ ¬ProvidesSignificant(x, resistance))))",
+"G6": "∀x ((Material(x) ∧ AllowsFlowOf(x, electricCurrent) ∧ ¬ProvidesSignificantResistance(x)) → GoodConductor(x))",
+"G7": "∀x (Material(x) ∧ AllowsFlow(x, electricCurrent) ∧ ¬ProvidesSignificantResistance(x) → GoodConductor(x))"
+},
+"03c3dacb1745": {
+"G4": "∀x (DietaryPattern(x) → (Vegetarian(x) ↔ (Excludes(x, meat) ∧ ReliesOn(x, plantBasedFoods) ∧ (MayInclude(x, dairy) ∨ MayInclude(x, eggs)))))",
+"G6": "∀x (DietaryPattern(x) ∧ Excludes(x, meat) ∧ ReliesPrimarilyOn(x, plantBasedFoods) ∧ (Includes(x, dairy) ∨ Includes(x, eggs)) → Vegetarian(x))",
+"G7": "∀x (DietaryPattern(x) ∧ Excludes(x, meat) ∧ ReliesPrimarilyOn(x, plantBasedFoods) ∧ (Includes(x, dairy) ∨ Includes(x, eggs)) → ConsideredVegetarian(x))"
+},
+"03caf1d83215": {
+"G4": "∀x (Artwork(x) ∧ ThreeDimensionalWorkOfArt(x) ∧ CreatedByCarvingModelingOrAssembling(x) ∧ MadeOfMaterials(x, stoneWoodOrMetal) → Sculpture(x))",
+"G6": "∀x (Artwork(x) ∧ ThreeDimensionalWorkOfArt(x) ∧ (Carved(x) ∨ Modeled(x) ∨ Assembled(x, stone) ∨ Assembled(x, wood) ∨ Assembled(x, metal)) → Sculpture(x))",
+"G7": "∀x (Artwork(x) ∧ ThreeDimensionalWorkOfArt(x) ∧ CreatedByCarvingModelingOrAssembling(x) ∧ Materials(x, stone ∨ wood ∨ metal) → Sculpture(x))"
+},
+"03eaf87b800e": {
+"G4": "LivingBeing(jumbo) → ¬(Elephant(jumbo) ∧ Mammal(jumbo))",
+"G6": "LivingBeing(jumbo) → ¬(Elephant(jumbo) ∧ Mammal(jumbo))",
+"G7": "LivingBeing(jumbo) → ¬(Elephant(jumbo) ∧ Mammal(jumbo))"
+},
+"03ef3b6d12db": {
+"G4": "∀x (Car(x) → ((Electric(x) → ¬Use(x, gasoline)) ∧ (¬Electric(x) → (Use(x, gasoline) ∨ Use(x, diesel)))))",
+"G6": "∀x (Car(x) → ((Electric(x) → ¬UsesGasoline(x)) ∧ (¬Electric(x) → (UsesGasoline(x) ∨ UsesDiesel(x))))",
+"G7": "∀x (Car(x) → ((Electric(x) → ¬Uses(x, gasoline)) ∧ (¬Electric(x) → (Uses(x, gasoline) ∨ Uses(x, diesel)))))"
+},
+"04078bb0c9be": {
+"G4": "∀x ((StringedInstrument(x) ∧ PlayedWith(x, bow) ∧ HollowBody(x) ∧ ProducesSoundThrough(x, vibrationOfStrings)) → Violin(x))",
+"G6": "∀x ((StringedInstrument(x) ∧ PlayedWithBow(x) ∧ HasHollowBody(x) ∧ ProducesSoundThroughVibration(x, strings)) → Violin(x))",
+"G7": "∀x ((StringedInstrument(x) ∧ PlayedWith(x, bow) ∧ Has(x, hollowBody) ∧ ProducesSoundThrough(x, VibrationOfStrings)) → Violin(x))"
+},
+"041807d4a821": {
+"G4": "∀x (Film(x) → (Blockbuster(x) ↔ (HighBoxOfficeRevenue(x) ∧ WidelyPopularAmong(x, viewers))))",
+"G6": "∀x (Film(x) ∧ HasHighBoxOfficeRevenue(x) ∧ WidelyPopularAmongViewers(x) → Blockbuster(x))",
+"G7": "∀x (Film(x) ∧ HighBoxOfficeRevenue(x) ∧ WidelyPopular(x) → Blockbuster(x))"
+},
+"041eeb687f15": {
+"G4": "∀x (Person(x) ∧ CaptureUsing(x, images, camera) ∧ ProcessFor(x, images, artisticPurposes) ∧ ProcessFor(x, images, commercialPurposes) → Photographer(x))",
+"G6": "∀x (Person(x) ∧ CaptureImagesUsing(x, camera) ∧ ProcessImagesFor(x, artistic ∨ commercial) → Photographer(x))",
+"G7": "∀x ((Person(x) ∧ CaptureUsing(x, images, camera) ∧ ProcessFor(x, images, artistic ∨ commercial)) → Photographer(x))"
+},
+"04290c877061": {
+"G4": "∀x ((Building(x) ∧ Has(x, solarPanel)) → GeneratesFrom(x, electricity, sunlight)) ∧ ∀y ((Building(y) ∧ Has(y, windTurbine)) → GeneratesFrom(y, electricity, wind))",
+"G6": "∀x ((Building(x) ∧ HasSolarPanel(x)) → GeneratesElectricityFrom(x, sunlight)) ∧ ∀y ((Building(y) ∧ HasWindTurbine(y)) → GeneratesElectricityFrom(y, wind))",
+"G7": "∀x ((Building(x) ∧ Has(x, solarPanel)) → GeneratesFrom(x, electricity, sunlight)) ∧ ∀x ((Building(x) ∧ Has(x, windTurbine)) → GeneratesFrom(x, electricity, wind))"
+},
+"043668f2e30b": {
+"G4": "∀x (Restaurant(x) ∧ Food(x, exceptional) ∧ Service(x, outstanding) ∧ Ambiance(x, unique) → CanReceive(x, michelinStar))",
+"G6": "∀x (Restaurant(x) ∧ ExceptionalFood(x) ∧ OutstandingService(x) ∧ UniqueAmbiance(x) → CanReceiveMichelinStar(x))",
+"G7": "∀x ((Restaurant(x) ∧ Exceptional(FoodOf(x)) ∧ Outstanding(ServiceOf(x)) ∧ Unique(AmbianceOf(x))) → CanReceive(x, michelinStar))"
+},
+"04580ed5a431": {
+"G4": "∀x ((UsedToProduce(x, musicalSounds) ∧ PlayedBy(x, musician)) → MusicalInstrument(x))",
+"G6": "∀x ((UsedToProduce(x, musicalSounds) ∧ PlayedBy(x, musician)) → MusicalInstrument(x))",
+"G7": "∀x ((UsedToProduce(x, musicalSounds) ∧ PlayedBy(x, musician)) → MusicalInstrument(x))"
+},
+"047a7ec38281": {
+"G4": "Animal(ron) ∧ Animal(henry)",
+"G6": "Animal(ron) ∧ Animal(henry)",
+"G7": "Animal(ron) ∧ Animal(henry)"
+},
+"04b438316624": {
+"G4": "∀x ((FriendOf(x, emily) ∧ AwardWinningNovelist(x)) → Publish(x, journals))",
+"G6": "∀x ((FriendOfEmily(x) ∧ AwardWinningNovelist(x)) → PublishesJournals(x))",
+"G7": "∀x ((FriendOf(x, emily) ∧ AwardWinningNovelist(x)) → Publish(x, journal))"
+},
+"04bf33670a62": {
+"G4": "∀x (ScientificStudy(x) → (Credible(x) ↔ (HasLargeSampleSize(x) ∧ UsesRigorousMethodology(x) ∧ (PeerReviewed(x) ∨ SupportedByIndependentResearch(x)))))",
+"G6": "∀x (ScientificStudy(x) ∧ LargeSampleSize(x) ∧ RigorousMethodology(x) ∧ (PeerReviewed(x) ∨ SupportedByIndependentResearch(x)) → Credible(x))",
+"G7": "∀x ((ScientificStudy(x) ∧ HasLargeSampleSize(x) ∧ UsesRigorousMethodology(x) ∧ (PeerReviewed(x) ∨ SupportedByIndependentResearch(x))) → Credible(x))"
+},
+"04cb343a5ee7": {
+"G4": "∀x (Movie(x) ∧ Has(x, highGrossingRevenue) ∧ PositiveReviewsFrom(x, critics) ∧ PositiveReviewsFrom(x, audiences) → BoxOfficeSuccess(x))",
+"G6": "∀x (Movie(x) → (HasHighGrossingRevenue(x) ∧ PositiveReviewsFromCritics(x) ∧ PositiveReviewsFromAudiences(x) → BoxOfficeSuccess(x)))",
+"G7": "∀x ((Movie(x) ∧ HighGrossingRevenue(x) ∧ PositiveReviewsFrom(x, critics) ∧ PositiveReviewsFrom(x, audiences)) → BoxOfficeSuccess(x))"
+},
+"050194abc41b": {
+"G4": "∀x ((MusicalInstrument(x) ∧ Uses(x, vibratingStrings) ∧ Has(x, woodenBody) ∧ PlayedWith(x, bow)) → Violin(x))",
+"G6": "∀x ((MusicalInstrument(x) ∧ UsesVibratingStrings(x) ∧ HasWoodenBody(x) ∧ PlayedWithBow(x)) → Violin(x))",
+"G7": "∀x ((MusicalInstrument(x) ∧ Uses(x, vibratingStrings) ∧ Has(x, woodenBody) ∧ PlayedWith(x, bow)) → Violin(x))"
+},
+"050df4fe82a4": {
+"G4": "∀x (Dress(x) → Clothes(x))",
+"G6": "∀x (Dress(x) → Clothes(x))",
+"G7": "∀x (Dress(x) → Clothes(x))"
+},
+"0513a22623c1": {
+"G4": "∀p ∀a ∀c1 ∀c2 ((Pilot(p) ∧ Airplane(a) ∧ City(c1) ∧ City(c2) ∧ EstablishedRouteBetween(c1, c2) ∧ HasEnoughFuel(a)) → FliesBetween(p, a, c1, c2))",
+"G6": "∀x ∀y ∀z ((Pilot(x) ∧ Airplane(z) ∧ City(y) ∧ City(w) ∧ EstablishedRoute(y, w) ∧ HasEnoughFuel(z)) → Flies(x, z, y, w))",
+"G7": "∀x ∀y ∀z ∀a ((Pilot(x) ∧ Airplane(a) ∧ City(y) ∧ City(z) ∧ EstablishedRoute(y, z) ∧ HasEnoughFuel(a)) → FliesBetween(x, a, y, z))"
+},
+"0534502ab739": {
+"G4": "∀x ((CommunicationDevice(x) ∧ Transmits(x, voice) ∧ Transmits(x, data) ∧ Receives(x, voice) ∧ Receives(x, data) ∧ ConnectsTo(x, network) ∧ Portable(x)) → MobilePhone(x))",
+"G6": "∀x ((CommunicationDevice(x) ∧ Transmits(x, voice) ∧ Receives(x, voice) ∧ Transmits(x, data) ∧ Receives(x, data) ∧ ConnectsToNetwork(x) ∧ Portable(x)) → MobilePhone(x))",
+"G7": "∀x ((CommunicationDevice(x) ∧ Transmits(x, voice) ∧ Transmits(x, data) ∧ Receives(x, voice) ∧ Receives(x, data) ∧ ConnectsTo(x, network) ∧ Portable(x)) → MobilePhone(x))"
+},
+"053970099870": {
+"G4": "∀x ((Vehicle(x) ∧ Has(x, fourWheels) ∧ Has(x, internalCombustionEngine) ∧ DesignedFor(x, transportingPeople)) → Car(x))",
+"G6": "∀x ((Vehicle(x) ∧ HasFourWheels(x) ∧ HasInternalCombustionEngine(x) ∧ DesignedForTransportingPeople(x)) → Car(x))",
+"G7": "∀x ((Vehicle(x) ∧ HasWheels(x, 4) ∧ HasEngine(x, internalCombustion) ∧ DesignedFor(x, transportingPeople)) → Car(x))"
+},
+"0553de9ca905": {
+"G4": "∀x ∀y ∀t (Train(t) ∧ City(x) ∧ City(y) ∧ x ≠ y ∧ HasDirectRoute(t, x, y) ∧ OperatesOnFrequentSchedule(t) ∧ OffersComfortableAccommodations(t) → Connects(t, x, y))",
+"G6": "∀x ∀y ((Train(x) ∧ HasDirectRoute(x, y) ∧ OperatesFrequently(x) ∧ OffersComfortableAccommodations(x)) → Connects(x, y))",
+"G7": "∀t ∀c1 ∀c2 ((Train(t) ∧ City(c1) ∧ City(c2) ∧ HasDirectRoute(t, c1, c2) ∧ OperatesFrequently(t) ∧ OffersComfortableAccommodations(t)) → Connects(t, c1, c2))"
+},
+"056e358acd33": {
+"G4": "∀x ((AstronomicalObject(x) ∧ Has(x, strongGravitationalPull) ∧ Accumulates(x, matter) ∧ Emits(x, intenseRadiation)) → ActiveGalacticNucleus(x))",
+"G6": "∀x ((AstronomicalObject(x) ∧ HasStrongGravitationalPull(x) ∧ AccumulatesMatter(x) ∧ EmitsIntenseRadiation(x)) → ActiveGalacticNucleus(x))",
+"G7": "∀x ((AstronomicalObject(x) ∧ HasStrongGravitationalPull(x) ∧ AccumulatesMatter(x) ∧ EmitsIntenseRadiation(x)) → ActiveGalacticNucleus(x))"
+},
+"0577037f035f": {
+"G4": "∀x ∀y (Plant(x) ∧ SoilType(y) ∧ Provides(y, essentialNutrients) ∧ Has(y, appropriatePHLevel) ∧ AppropriateFor(x, y) → ThrivesIn(x, y))",
+"G6": "∀x ∀y (Plant(x) ∧ Soil(y) ∧ ProvidesEssentialNutrients(y) ∧ AppropriatePHLevel(y, x) → ThrivesIn(x, y))",
+"G7": "∀p ∀s ((Plant(p) ∧ SoilType(s) ∧ Provides(s, essentialNutrients) ∧ AppropriatePH(s, p)) → ThrivesIn(p, s))"
+},
+"058a65a90ab8": {
+"G4": "∀x (LiteraryWork(x) ∧ LongNarrative(x) ∧ TellsFictionalStory(x) ∧ InvolvesMultipleCharacters(x) ∧ ExploresThemes(x) → Novel(x))",
+"G6": "∀x (LiteraryWork(x) ∧ LongNarrative(x) ∧ TellsFictionalStory(x) ∧ InvolvesMultipleCharacters(x) ∧ ExploresThemes(x, love) ∨ ExploresThemes(x, crime) ∨ ExploresThemes(x, adventure) → Novel(x))",
+"G7": "∀x ((LiteraryWork(x) ∧ LongNarrative(x) ∧ TellsFictionalStoryWithMultipleCharacters(x) ∧ ExploresThemes(x, love ∨ crime ∨ adventure)) → Novel(x))"
+},
+"059b6b26aa72": {
+"G4": "∀x (Shoe(x) → ¬Food(x))",
+"G6": "∀x (Shoe(x) → ¬Food(x))",
+"G7": "∀x (Shoes(x) → ¬Food(x))"
+},
+"05c8b71f28f9": {
+"G4": "∀x (Food(x) ∧ DerivedFrom(x, plants) ∧ ¬Contain(x, animalProducts) ∧ RichIn(x, nutrients) → (Fruit(x) ∨ Vegetable(x)))",
+"G6": "∀x ((DerivedFromPlants(x) ∧ ¬ContainsAnimalProducts(x) ∧ RichInNutrients(x)) → (Fruit(x) ∨ Vegetable(x)))",
+"G7": "∀x ((Food(x) ∧ DerivedFrom(x, plants) ∧ ¬Contains(x, animalProducts) ∧ RichIn(x, nutrients)) → (Fruit(x) ∨ Vegetable(x)))"
+},
+"05d072e1b35a": {
+"G4": "∃x (NeocrepidoderaCorpulenta(x))",
+"G6": "∃x (NeocrepidoderaCorpulenta(x))",
+"G7": "∃x NeocrepidoderaCorpulenta(x)"
+},
+"05dc54e39ee5": {
+"G4": "∀x ((Landscape(x) ∧ CharacterizedBy(x, presenceOfWater) ∧ Supports(x, varietyOfPlantAndAnimalSpecies) ∧ ActsAs(x, naturalFilterForPollutants)) → Wetland(x))",
+"G6": "∀x (Landscape(x) ∧ CharacterizedBy(x, presenceOfWater) ∧ Supports(x, varietyOfPlantSpecies) ∧ Supports(x, varietyOfAnimalSpecies) ∧ ActsAs(x, naturalFilterForPollutants) → Wetland(x))",
+"G7": "∀x ((Landscape(x) ∧ CharacterizedByPresenceOf(x, water) ∧ SupportsVarietyOfSpecies(x, plants, animals) ∧ ActsAsNaturalFilterFor(x, pollutants)) → Wetland(x))"
+},
+"0604f65f8d9d": {
+"G4": "¬ForProfit(nationalLobsterHatchery)",
+"G6": "¬ForProfit(NationalLobsterHatchery)",
+"G7": "¬ForProfit(nationalLobsterHatchery)"
+},
+"06414625e8eb": {
+"G4": "We need to translate: \"A celestial body that revolves around a star, has a nearly spherical shape, ∧ has cleared its orbit of other debris is a planet if it has ¬achieved nuclear fusion in its core.\"",
+"G6": "∀x ((CelestialBody(x) ∧ RevolvesAround(x, star) ∧ NearlySpherical(x) ∧ ClearedOrbit(x) ∧ ¬AchievedNuclearFusion(x)) → Planet(x))",
+"G7": "∀x ((CelestialBody(x) ∧ RevolvesAround(x, star) ∧ NearlySphericalShape(x) ∧ ClearedOrbit(x)) ∧ ¬AchievedNuclearFusionInCore(x) → Planet(x))"
+},
+"0654fa383ae4": {
+"G4": "(∀x (Tomato(x) → (Fruit(x) ∧ UsedIn(x, salads) ∧ UsedIn(x, sandwiches)))) ∧ (∀y (Potato(y) → (Vegetable(y) ∧ UsedIn(y, soups) ∧ UsedIn(y, stews)))) ∧ (∀z (Onion(z) → (Vegetable(z) ∧ UsedFor(z, seasoning) ∧ UsedFor(z, flavoring))))",
+"G6": "∀x ((Tomato(x) → (Fruit(x) ∧ UsedIn(x, salads) ∧ UsedIn(x, sandwiches))) ∧ (Potato(x) → (Vegetable(x) ∧ UsedIn(x, soups) ∧ UsedIn(x, stews))) ∧ (Onion(x) → (Vegetable(x) ∧ UsedFor(x, seasoning) ∧ UsedFor(x, flavoring))))",
+"G7": "(∀x (Tomato(x) → (Fruit(x) ∧ UsedIn(x, salads) ∧ UsedIn(x, sandwiches)))) ∧ (∀x (Potato(x) → (Vegetable(x) ∧ UsedIn(x, soups) ∧ UsedIn(x, stews)))) ∧ (∀x (Onion(x) → (Vegetable(x) ∧ UsedFor(x, seasoning) ∧ UsedFor(x, flavoring))))"
+},
+"066141261638": {
+"G4": "∀x (TransportationMethod(x) → (EcoFriendly(x) ↔ ((ProducesLowEmissions(x) ∧ UtilizesRenewableResources(x) ∧ MinimizesWaste(x)) ∧ ¬HasHighNoiseLevel(x))))",
+"G6": "∀x (TransportationMethod(x) ∧ ProducesLowEmissions(x) ∧ UtilizesRenewableResources(x) ∧ MinimizesWaste(x) ∧ ¬HasHighNoiseLevel(x) → EcoFriendly(x))",
+"G7": "∀x ((TransportationMethod(x) ∧ Produces(x, lowEmissions) ∧ Utilizes(x, renewableResources) ∧ Minimizes(x, waste) ∧ ¬Has(x, highNoiseLevel)) → EcoFriendly(x))"
+},
+"06688f59a38c": {
+"G4": "PoliceProceduralTelevisionSeries(diRay)",
+"G6": "PoliceProceduralTelevisionSeries(diRay))",
+"G7": "PoliceProceduralTelevisionSeries(diRay)"
+},
+"066c7df20196": {
+"G4": "We need to translate the given sentence into one FOL formula. The sentence is: \"A cactus can survive in arid conditions because it stores water in its thick stem, while a fern can thrive in damp environments because it absorbs moisture through its leaves.\"",
+"G6": "∀x ((Cactus(x) ∧ SurviveIn(x, aridConditions)) ↔ StoreWaterInThickStem(x)) ∧ ∀y ((Fern(y) ∧ ThriveIn(y, dampEnvironments)) ↔ AbsorbMoistureThroughLeaves(y))",
+"G7": "∀x ((Cactus(x) → (CanSurviveIn(x, aridConditions) ∧ StoresIn(x, water, thickStem))) ∧ (Fern(x) → (CanThriveIn(x, dampEnvironments) ∧ AbsorbsThrough(x, moisture, leaves))))"
+},
+"0671c1a826cd": {
+"G4": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+"G6": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+"G7": "∀x ((Person(x) ∧ RegularlyDrinks(x, coffee)) → DependentOn(x, caffeine))"
+},
+"068105d2bed0": {
+"G4": "BornIn(asaHoffmann, newYorkCity)",
+"G6": "BornIn(asaHoffmann, newYorkCity)",
+"G7": "BornIn(asaHoffmann, newYorkCity)"
+},
+"0685c65a97a8": {
+"G4": "∀x (Macbook(x) → Has(x, appleLogo))",
+"G6": "∀x (Macbook(x) → HasLogo(x, appleLogo))",
+"G7": "∀x (Macbook(x) → Have(x, appleLogo))"
+},
+"06a1a85a4b08": {
+"G4": "∀x (Professor(x) → ¬UndergraduateStudent(x))",
+"G6": "∀x (Professor(x) → ¬UndergraduateStudent(x))",
+"G7": "¬∃x (Professor(x) ∧ UndergraduateStudent(x))"
+},
+"06a6ab129078": {
+"G4": "∀x (Plant(x) ∧ Has(x, tallWoodyStem) ∧ Has(x, branches) ∧ (GrowsIn(x, forests) ∨ GrowsIn(x, parks)) → Tree(x))",
+"G6": "∀x (Plant(x) ∧ HasTallWoodyStem(x) ∧ HasBranches(x) ∧ TypicallyGrowsIn(x, forests) ∨ TypicallyGrowsIn(x, parks) → Tree(x))",
+"G7": "∀x (Plant(x) ∧ Has(x, tallWoodyStem) ∧ Has(x, branches) ∧ (GrowsIn(x, forest) ∨ GrowsIn(x, park)) → Tree(x))"
+},
+"06b9106bfa46": {
+"G4": "∀x ((Vehicle(x) ∧ PoweredBy(x, electricMotor) ∧ Uses(x, rechargeableBattery)) → ElectricVehicle(x))",
+"G6": "∀x (Vehicle(x) ∧ PoweredBy(x, electricMotor) ∧ Uses(x, rechargeableBattery) → ElectricVehicle(x))",
+"G7": "∀x ((Vehicle(x) ∧ PoweredBy(x, electricMotor) ∧ Uses(x, rechargeableBattery)) → ElectricVehicle(x))"
+},
+"06c0f59360f7": {
+"G4": "∀x (FoodItem(x) → (Perishable(x) ↔ ((LimitedShelfLife(x) ∧ (RequiresFor(x, refrigeration, preservation) ∨ RequiresFor(x, freezing, preservation))))))",
+"G6": "∀x (FoodItem(x) ∧ HasLimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x)) → Perishable(x))",
+"G7": "∀x (FoodItem(x) ∧ LimitedShelfLife(x) ∧ (Requires(x, refrigeration) ∨ Requires(x, freezing)) → Perishable(x))"
+},
+"06cccfa94cb4": {
+"G4": "∀x ((Object(x) ∧ DesignedToHold(x, liquid) ∧ Has(x, handle) ∧ UsedFor(x, drinking)) → (Mug(x) ∨ Cup(x)))",
+"G6": "∀x ((DesignedToHoldLiquid(x) ∧ HasHandle(x) ∧ UsedForDrinking(x)) → (Mug(x) ∨ Cup(x)))",
+"G7": "∀x ((Object(x) ∧ DesignedToHold(x, liquid) ∧ Has(x, handle) ∧ UsedFor(x, drinking)) → (Mug(x) ∨ Cup(x)))"
+},
+"06d6c8db56ea": {
+"G4": "∀x ((LargeBodyOfSaltwater(x) ∧ PartiallyEnclosedBy(x, land) ∧ ConnectsTo(x, oceanOrSea)) → Bay(x))",
+"G6": "∀x ((LargeBodyOfSaltwater(x) ∧ PartiallyEnclosedByLand(x) ∧ ConnectsTo(x, ocean) ∨ ConnectsTo(x, sea)) → Bay(x))",
+"G7": "∀x ((LargeBodyOfSaltwater(x) ∧ PartiallyEnclosedByLand(x) ∧ ConnectsTo(x, ocean) ∨ ConnectsTo(x, sea)) → Bay(x))"
+},
+"072096705c6b": {
+"G4": "∀x (Substance(x) ∧ HasFixedShape(x) ∧ HasFixedVolume(x) ∧ ParticlesCloselyPacked(x) → Solid(x))",
+"G6": "∀x (Substance(x) ∧ HasFixedShape(x) ∧ HasFixedVolume(x) ∧ ParticlesCloselyPacked(x) → Solid(x))",
+"G7": "∀x ((Substance(x) ∧ HasFixedShape(x) ∧ HasFixedVolume(x) ∧ ParticlesCloselyPacked(x)) → Solid(x))"
+},
+"0735186af337": {
+"G4": "Supported(WilliamDickinson, portlandWhigs)",
+"G6": "Support(williamDickinson, portlandWhigs)",
+"G7": "Supported(williamDickinson, portlandWhigs)"
+},
+"075aa5b7074d": {
+"G4": "∀x (Violin(x) → PlayedWith(x, bow)) ∧ ∀y (Piano(y) → PlayedWith(y, keys)) ∧ ∀z (Guitar(z) → PlayedByPlucking(z, strings))",
+"G6": "∀x ((Violin(x) → PlayedWith(x, bow)) ∧ (Piano(x) → PlayedWith(x, keys)) ∧ (Guitar(x) → PlayedBy(x, pluckingStrings)))",
+"G7": "PlayedWith(violin, bow) ∧ PlayedWith(piano, keys) ∧ PlayedBy(guitar, pluckStrings)"
+},
+"07701983fe13": {
+"G4": "Teacher(nancy) → OnPayroll(nancy)",
+"G6": "Teacher(nancy) → OnPayroll(nancy)",
+"G7": "Teacher(nancy) → OnPayroll(nancy)"
+},
+"077a4b3b9196": {
+"G4": "∀x (Artwork(x) ∧ Conveys(x, strongMessage) ∧ Evokes(x, emotionalResponse) ∧ Demonstrates(x, technicalMastery) → Considered(x, impactful))",
+"G6": "∀x ((Artwork(x) ∧ ConveysStrongMessage(x) ∧ EvokesEmotionalResponse(x) ∧ DemonstratesTechnicalMastery(x)) → Impactful(x))",
+"G7": "∀x ((Artwork(x) ∧ Conveys(x, strongMessage) ∧ Evokes(x, emotionalResponseFromViewer) ∧ Demonstrates(x, technicalMastery)) → Impactful(x))"
+},
+"0784f4b57b88": {
+"G4": "∀x (Building(x) ∧ Utilizes(x, insulation) ∧ Utilizes(x, energySavingAppliances) ∧ Utilizes(x, renewableEnergySources) ∧ Reduces(x, energyConsumption) ∧ Minimizes(x, environmentalImpact) → EnergyEfficient(x))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x (Building(x) ∧ Utilizes(x, insulation) ∧ Utilizes(x, energySavingAppliances) ∧ Utilizes(x, renewableEnergySources) → EnergyEfficient(x))"
+},
+"078d448a2263": {
+"G4": "∀x ((Musician(x) ∧ In(x, orchestra) ∧ Play(x, stringInstruments)) → SitOn(x, leftSide)) ∧ ∀y ((Musician(y) ∧ In(y, orchestra) ∧ Play(y, brassInstruments)) → SitOn(y, rightSide))",
+"G6": "∀x ((Musician(x) ∧ In(x, orchestra) ∧ Plays(x, stringInstrument)) → SitsOn(x, leftSide)) ∧ ∀y ((Musician(y) ∧ In(y, orchestra) ∧ Plays(y, brassInstrument)) → SitsOn(y, rightSide))",
+"G7": "∀x ((Musician(x) ∧ In(x, orchestra) ∧ Plays(x, stringInstrument)) → SitOn(x, leftSide)) ∧ ∀x ((Musician(x) ∧ In(x, orchestra) ∧ Plays(x, brassInstrument)) → SitOn(x, rightSide))"
+},
+"07a3adf6d4c1": {
+"G4": "∀x (River(x) ∧ FreeOf(x, pollution) ∧ Supports(x, diverseAquaticLife) ∧ Maintains(x, stableWaterFlow) → (CanProvide(x, ecosystemServices) ∧ CanProvide(x, recreationalOpportunities)))",
+"G6": "∀x ((River(x) ∧ FreeOfPollution(x) ∧ SupportsDiverseAquaticLife(x) ∧ MaintainsStableWaterFlow(x)) → (CanProvide(x, ecosystemServices) ∧ CanProvide(x, recreationalOpportunities)))",
+"G7": "∀x ((River(x) ∧ FreeOfPollution(x) ∧ Supports(x, diverseAquaticLife) ∧ MaintainsStableFlow(x)) → (Provides(x, ecosystemServices) ∧ Provides(x, recreationalOpportunities)))"
+},
+"07d40cb53353": {
+"G4": "∀x ((Bird(x) ∧ Has(x, curvedBeak) ∧ Has(x, brightlyColoredFeathers) ∧ CanMimic(x, varietyOfSounds) ∧ CanMimic(x, humanSpeech)) → Parrot(x))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((Bird(x) ∧ HasBeak(x, curved) ∧ HasFeathers(x, brightlyColored) ∧ CanMimic(x, varietyOfSounds) ∧ CanMimic(x, humanSpeech)) → Parrot(x))"
+},
+"07d7078c4d72": {
+"G4": "∀x ((Film(x) ∧ DurationMoreThan(x, 150Minutes) ∧ Won(x, oscar) ∧ Drama(x)) → EpicDrama(x))",
+"G6": "∀x ((Film(x) ∧ Duration(x, moreThan150Minutes) ∧ WonOscar(x) ∧ Drama(x)) → EpicDrama(x))",
+"G7": "∀x ((Film(x) ∧ Duration(x, d) ∧ d > 150 ∧ Won(x, oscar) ∧ Drama(x)) → EpicDrama(x))"
+},
+"080cafa5d31f": {
+"G4": "∀x (OakTree(x) → (Tree(x) ∧ Produces(x, acorns))) ∧ ∀y (PalmTree(y) → (Tree(y) ∧ Has(y, largeLeaves))) ∧ ∀z (PineTree(z) → (Tree(z) ∧ Has(z, needles) ∧ Has(z, cones)))",
+"G6": "∀x ((OakTree(x) → (Tree(x) ∧ Produces(x, acorns))) ∧ (PalmTree(x) → (Tree(x) ∧ HasLargeLeaves(x))) ∧ (PineTree(x) → (Tree(x) ∧ HasNeedlesAndCones(x))))",
+"G7": "OakTree(oak) ∧ Tree(oak) ∧ Produces(oak, acorns) ∧ PalmTree(palm) ∧ Tree(palm) ∧ Has(palm, largeLeaves) ∧ PineTree(pine) ∧ Tree(pine) ∧ Has(pine, needles) ∧ Has(pine, cones)"
+},
+"0820201d762e": {
+"G4": "∀x ∀l (Book(x) ∧ Language(l) ∧ AvailableIn(x, l) ∧ AdaptedFromOriginal(x) → TranslatedInto(x, l))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ∀y ((Book(x) ∧ Language(y) ∧ AvailableIn(x, y) ∧ AdaptedFromOriginal(x)) → TranslatedInto(x, y))"
+},
+"0836800b4538": {
+"G4": "∀x (CarnivorousPlant(x) → Consumes(x, insects)) ∧ ∀y (HerbivorousAnimal(y) → Consumes(y, plants)) ∧ ∀z (OmnivorousAnimal(z) → (Consumes(z, plants) ∧ Consumes(z, otherAnimals)))",
+"G6": "∀x ((CarnivorousPlant(x) → Consumes(x, insects)) ∧ (HerbivorousAnimal(x) → Consumes(x, plants)) ∧ (OmnivorousAnimal(x) → (Consumes(x, plants) ∧ Consumes(x, animals))))",
+"G7": "∀x ((CarnivorousPlant(x) → Consumes(x, insects)) ∧ (HerbivorousAnimal(x) → Consumes(x, plants)) ∧ (OmnivorousAnimal(x) → (Consumes(x, plants) ∧ Consumes(x, otherAnimals))))"
+},
+"084c74bfddd2": {
+"G4": "∀x (Ecosystem(x) → (Stable(x) ↔ (HasDiverseSpecies(x) ∧ HasBalancedFoodWeb(x) ∧ HasMinimalDisturbance(x))))",
+"G6": "∀x (Ecosystem(x) ∧ DiverseSpecies(x) ∧ BalancedFoodWeb(x) ∧ MinimalDisturbance(x) → Stable(x))",
+"G7": "∀x (Ecosystem(x) ∧ DiverseRangeOfSpecies(x) ∧ BalancedFoodWeb(x) ∧ MinimalDisturbanceFromExternalFactors(x) → Stable(x))"
+},
+"0853af54f68a": {
+"G4": "∀x ∀y (ParasiticRelationship(x) ∧ Involves(x, y) ∧ Parasite(y) ∧ HostOrganism(z) ∧ LivesOnOrIn(y, z) ∧ DrawsNutrientsFrom(y, z) ∧ OftenCausesHarm(y, z) → (¬ReceiveBenefits(z) ∨ ReceiveBenefits(z)))",
+"G6": "∀x ∀y (ParasiticRelationship(x, y) ↔ (Parasite(x) ∧ Host(y) ∧ LivesOnOrIn(x, y) ∧ DrawsNutrientsFrom(x, y) ∧ OftenCausesHarm(x, y) ∧ (HostMayReceiveBenefits(y) ∨ ¬HostMayReceiveBenefits(y))))",
+"G7": "∀x (ParasiticRelationship(x) → ∃p ∃h (Parasite(p) ∧ Host(h) ∧ Involves(x, p, h) ∧ (LivesOnOrIn(p, h) ∧ DrawsNutrientsFrom(p, h) ∧ OftenCausesHarm(p, h) ∧ (MayReceiveBenefits(h) ∨ ¬MayReceiveBenefits(h)))))"
+},
+"0860e4ee976f": {
+"G4": "∀x ((Fruit(x) ∧ ProvidedAt(x, party)) → (Strawberry(x) ∨ Orange(x) ∨ Blueberry(x) ∨ Grape(x) ∨ Cherry(x)))",
+"G6": "Provides(party, strawberry) ∧ Provides(party, orange) ∧ Provides(party, blueberry) ∧ Provides(party, grape) ∧ Provides(party, cherry)",
+"G7": "∀x (Fruit(x) ∧ KindOf(x, party) → (x = strawberry ∨ x = orange ∨ x = blueberry ∨ x = grape ∨ x = cherry))"
+},
+"086cc39a5a1e": {
+"G4": "∀x (WorkoutRoutine(x) → ((Include(x, cardio) ∨ Include(x, strength) ∨ Include(x, flexibility)) ∧ Improve(x, overallFitness) ∧ (Target(x, weightLoss) ⊕ Target(x, muscleGain)) → Effective(x)))",
+"G6": "∀x ((Includes(x, cardio) ∨ Includes(x, strength) ∨ Includes(x, flexibility)) ∧ ImprovesOverallFitness(x) ∧ ((Targets(x, weightLoss) ⊕ Targets(x, muscleGain))) → Effective(x))",
+"G7": "∀x ((WorkoutRoutine(x) ∧ (Includes(x, cardio) ∨ Includes(x, strength) ∨ Includes(x, flexibility)) ∧ Improves(x, overallFitness) ∧ (Targets(x, weightLoss) ⊕ Targets(x, muscleGain))) → Effective(x))"
+},
+"0892ff7a33ed": {
+"G4": "∀x ((Artist(x) ∧ WorkInVariousMediums(x) ∧ Possess(x, uniqueStyle) ∧ Have(x, strongPortfolio)) → OftenAchieve(x, recognitionInArtWorld))",
+"G6": "∀x ((Artist(x) ∧ WorksInVariousMediums(x) ∧ PossessesUniqueStyle(x) ∧ HasStrongPortfolio(x)) → OftenAchieveRecognitionInArtWorld(x))",
+"G7": "∀x ((Artist(x) ∧ WorksInVariousMediums(x) ∧ HasUniqueStyle(x) ∧ HasStrongPortfolio(x)) → AchievesRecognitionInArtWorld(x))"
+},
+"08b6c8231aae": {
+"G4": "∀x ((MusicalInstrument(x) ∧ ProducesSoundBy(x, vibratingStrings) ∧ Has(x, woodenBody)) → (Guitar(x) ∨ Violin(x)))",
+"G6": "∀x ((MusicalInstrument(x) ∧ ProducesSoundBy(x, vibratingStrings) ∧ Has(x, woodenBody)) → (Guitar(x) ∨ Violin(x)))",
+"G7": "∀x ((MusicalInstrument(x) ∧ ProducesSoundByVibratingStrings(x) ∧ HasWoodenBody(x)) → (Guitar(x) ∨ Violin(x)))"
+},
+"08d8d5fb7a45": {
+"G4": "∀x (Film(x) ∧ Has(x, captivatingStoryline) ∧ Has(x, exceptionalActingPerformances) ∧ Has(x, impressiveCinematography) → (CanReceive(x, positiveReviews) ∧ CanBecome(x, boxOfficeHit)))",
+"G6": "∀x ((Film(x) ∧ Has(x, captivatingStoryline) ∧ Has(x, exceptionalActingPerformances) ∧ Has(x, impressiveCinematography)) → (CanReceive(x, positiveReviews) ∧ CanBecome(x, boxOfficeHit)))",
+"G7": "∀x ((Film(x) ∧ Has(x, captivatingStoryline) ∧ Has(x, exceptionalActingPerformances) ∧ Has(x, impressiveCinematography)) → (CanReceive(x, positiveReviews) ∧ CanBecome(x, boxOfficeHit)))"
+},
+"08f3679e8eac": {
+"G4": "∀x ((SustainableFashionBrand(x) ∧ Uses(x, ethicallySourcedMaterials) ∧ Follows(x, fairLaborPractices) ∧ Supports(x, environmentalConservationInitiatives)) → CanAppealTo(x, ecoConsciousConsumers))",
+"G6": "∀x ((SustainableFashionBrand(x) ∧ UsesEthicallySourcedMaterials(x) ∧ FollowsFairLaborPractices(x) ∧ SupportsEnvironmentalConservationInitiatives(x)) → CanAppealTo(x, ecoConsciousConsumers))",
+"G7": "∀x ((SustainableFashionBrand(x) ∧ Uses(x, ethicallySourcedMaterials) ∧ Follows(x, fairLaborPractices) ∧ Supports(x, environmentalConservationInitiatives)) → CanAppealTo(x, ecoConsciousConsumers))"
+},
+"09095d1d5661": {
+"G4": "∀x (Book(x) → (Bestseller(x) ↔ (Has(x, highSalesRank) ∧ (BelongsTo(x, fictionGenre) ∨ BelongsTo(x, nonFictionGenre)))))",
+"G6": "∀x (Book(x) ∧ HasHighSalesRank(x) ∧ (Fiction(x) ∨ NonFiction(x)) → Bestseller(x))",
+"G7": "∀x ((Book(x) ∧ HighSalesRank(x) ∧ (BelongsTo(x, fiction) ∨ BelongsTo(x, nonFiction))) → Bestseller(x))"
+},
+"090994e458c2": {
+"G4": "∀x (Day(x) → (Holiday(x) ↔ (NonWorkingDay(x) ∧ ∃y (Commemorates(x, y) ∧ (SpecificEvent(y) ∨ SpecificPerson(y))))))",
+"G6": "∀x ((Day(x) ∧ NonWorkingDay(x) ∧ (Commemorates(x, event) ∨ Commemorates(x, person))) → Holiday(x))",
+"G7": "∀x (Day(x) ∧ NonWorkingDay(x) ∧ Commemorates(x, y) → Holiday(x))"
+},
+"0939cbeab4c8": {
+"G4": "∀x ((Device(x) ∧ Converts(x, electricalEnergy, mechanicalEnergy) ∧ UsuallyByUsing(x, magneticFields) ∧ UsuallyByUsing(x, rotatingCoil)) → ElectricMotor(x))",
+"G6": "∀x ((Device(x) ∧ ConvertsElectricalToMechanical(x) ∧ UsesMagneticFields(x) ∧ HasRotatingCoil(x)) → ElectricMotor(x))",
+"G7": "∀x ((Device(x) ∧ Converts(x, electricalEnergy, mechanicalEnergy) ∧ UsuallyUses(x, magneticFields) ∧ UsuallyUses(x, rotatingCoil)) → ElectricMotor(x))"
+},
+"093c467afdff": {
+"G4": "∀x (Cell(x) ∧ Reaches(x, endOfCellCycle) ∧ Completed(x, dnaReplication) ∧ ¬InState(x, cellularArrest) → Divides(x))",
+"G6": "∀x (Cell(x) ∧ EndOfCellCycle(x) ∧ CompletedDNAReplication(x) ∧ ¬CellularArrest(x) → Divides(x))",
+"G7": "∀x (Cell(x) ∧ ReachesEndOfCellCycle(x) ∧ CompletedDNAReplication(x) ∧ ¬InCellularArrest(x) → Divides(x))"
+},
+"0946a99ff290": {
+"G4": "∀x (IceCream(x) → (Melts(x) ↔ ¬(In(x, freezer) ∨ TemperatureBelowFreezing))))",
+"G6": "∀x (IceCream(x) → (¬(In(x, freezer) ∨ TemperatureBelowFreezing(x)) → Melts(x)))",
+"G7": "∀x (IceCream(x) → (Melts(x) ↔ ¬(In(x, freezer) ∨ TemperatureBelowFreezing)))"
+},
+"095a1c704928": {
+"G4": "∀x (Student(x) ∧ (ExcellentAcademicRecord(x) ∨ DemonstratedLeadershipSkills(x) ∨ SignificantContributionsToUniversityCommunity(x)) → CanGraduateWithHonors(x))",
+"G6": "∀x (Student(x) ∧ ((ExcellentAcademicRecord(x) ∨ DemonstratedLeadershipSkills(x) ∨ SignificantContributions(x, universityCommunity)) → CanGraduateWithHonors(x)))",
+"G7": "∀x (Student(x) ∧ (ExcellentAcademicRecord(x) ∨ DemonstratedLeadershipSkills(x) ∨ MadeSignificantContributionsToUniversity(x)) → CanGraduateWithHonors(x))"
+},
+"09707b1d246c": {
+"G4": "∀x ((Landform(x) ∧ RisesProminentlyAbove(x, surroundings) ∧ Has(x, distinctPeak) ∧ FormedBy(x, geologicalProcesses)) → Mountain(x))",
+"G6": "∀x ((Landform(x) ∧ RisesProminentlyAbove(x) ∧ HasDistinctPeakOrSummit(x) ∧ FormedByGeologicalProcesses(x)) → Mountain(x))",
+"G7": "∀x ((Landform(x) ∧ RisesProminentlyAboveSurroundings(x) ∧ HasDistinctPeakOrSummit(x) ∧ FormedByGeologicalProcesses(x)) → Mountain(x))"
+},
+"0976856745c2": {
+"G4": "∀x ((Vehicle(x) ∧ DesignedFor(x, travelingOnSnowAndIce) ∧ Has(x, skisOnFront) ∧ Has(x, tracksOnBack)) → Snowmobile(x))",
+"G6": "∀x ((Vehicle(x) ∧ DesignedFor(x, travelingOn(snow ∧ ice)) ∧ Has(x, skis(front)) ∧ Has(x, tracks(back))) → Snowmobile(x))",
+"G7": "∀x ((Vehicle(x) ∧ DesignedForTravelOn(x, snow) ∧ DesignedForTravelOn(x, ice) ∧ HasFeature(x, skisFront) ∧ HasFeature(x, tracksBack)) → Snowmobile(x))"
+},
+"0977be41f213": {
+"G4": "∀x (FriendOf(x, emily) ∧ Publish(x, journals) → ¬WorkIn(x, entertainmentIndustry))",
+"G6": "∀x ((FriendOfEmily(x) ∧ Publishes(x, journals)) → ¬WorksIn(x, entertainmentIndustry))",
+"G7": "∀x ((FriendOf(x, emily) ∧ Publish(x, journals)) → ¬WorksIn(x, entertainmentIndustry))"
+},
+"0991ff0c0873": {
+"G4": "∀x ((Game(x) ∧ PlayedOn(x, rectangularField) ∧ Involves(x, twoOpposingTeams) ∧ Requires(x, useOfSphericalBall) ∧ Purpose(x, scoreGoals)) → SoccerMatch(x))",
+"G6": "∀x ((Game(x) ∧ PlayedOn(x, rectangularField) ∧ Involves(x, twoOpposingTeams) ∧ Requires(x, sphericalBall, scoreGoals)) → SoccerMatch(x))",
+"G7": "∀x ((Game(x) ∧ PlayedOn(x, rectangularField) ∧ Involves(x, twoOpposingTeams) ∧ RequiresUseOf(x, sphericalBall) ∧ ToScoreGoals(x)) → SoccerMatch(x))"
+},
+"09c095840f41": {
+"G4": "∀x (Animal(x) → (Mammal(x) ↔ (WarmBlooded(x) ∧ Vertebrate(x) ∧ (Has(x, hair) ∨ Has(x, fur)) ∧ GivesBirthToLiveYoung(x) ∧ NourishedByMothersMilk(x))))",
+"G6": "∀x (Animal(x) ∧ WarmBlooded(x) ∧ Vertebrate(x) ∧ PossessesHairOrFur(x) ∧ GivesBirthToLiveYoung(x) ∧ NourishedByMilk(x) → Mammal(x))",
+"G7": "∀x (Animal(x) ∧ WarmBloodedVertebrate(x) ∧ (Has(x, hair) ∨ Has(x, fur)) ∧ GivesBirthToLiveYoungNourishedByMilk(x) → Mammal(x))"
+},
+"09c4e1c2e388": {
+"G4": "∀x (CelestialBody(x) → (Planet(x) ↔ (Orbits(x, star) ∧ HasMassForShape(x) ∧ ClearedOrbit(x))))",
+"G6": "∀x (CelestialBody(x) ∧ Orbits(x, star) ∧ HasEnoughMassForRoundShape(x) ∧ ClearedOrbit(x) → Planet(x))",
+"G7": "∀x (CelestialBody(x) ∧ Orbits(x, star) ∧ HasMassToAssumeRoundShape(x) ∧ ClearedOrbit(x) → Planet(x))"
+},
+"09d4b877e0f5": {
+"G4": "∀x ((Employee(x) ∧ InTown(x, jamesTown) ∧ WorksFor(x, thisCompany)) → ¬From(x, china))",
+"G6": "∀x ((Employee(x) ∧ InTown(x, jamesTown) ∧ WorksFor(x, thisCompany)) → ¬From(x, china))",
+"G7": "¬∃x (Employee(x) ∧ LivesIn(x, jamesTown) ∧ WorksFor(x, thisCompany) ∧ From(x, china))"
+},
+"0a0c453be0f1": {
+"G4": "∀x ((LivingOrganism(x) ∧ CanSynthesizeOwnFoodThrough(x, photosynthesis) ∧ AbsorbsNutrientsFrom(x, soil) ∧ GrowsIn(x, fixedLocation)) → Plant(x))",
+"G6": "∀x ((LivingOrganism(x) ∧ CanSynthesizeOwnFoodThrough(x, photosynthesis) ∧ AbsorbsNutrientsFrom(x, soil) ∧ GrowsInFixedLocation(x)) → Plant(x))",
+"G7": "∀x ((LivingOrganism(x) ∧ CanSynthesizeOwnFoodThroughPhotosynthesis(x) ∧ AbsorbsNutrientsFromSoil(x) ∧ GrowsInFixedLocation(x)) → Plant(x))"
+},
+"0a2b4732e758": {
+"G4": "∀x (ScientificStudy(x) → (DeemedReliable(x) ↔ (Follows(x, scientificMethod) ∧ ¬(ConductedByWith(x, researchers, conflictsOfInterest) ∨ CherryPicked(x, data)))))",
+"G6": "∀x (ScientificStudy(x) ∧ FollowsScientificMethod(x) ∧ ¬ConductedBy(x, researchersWithConflictsOfInterest) ∧ ¬CherryPickedData(x) → Reliable(x))",
+"G7": "∀x (ScientificStudy(x) → (Follows(x, ScientificMethod) ∧ ¬(ConductedByWithConflict(x) ∨ DataIsCherryPicked(x)) → Reliable(x)))"
+},
+"0a36329654d6": {
+"G4": "∀x (Setting(x) → (Rainforest(x) ↔ (DenseForest(x) ∧ (TropicalForest(x) ∨ SubtropicalForest(x)) ∧ CharacterizedBy(x, highRainfall) ∧ CharacterizedBy(x, highBiodiversity) ∧ ServesAs(x, significantCarbonSink) ∧ ServesAs(x, oxygenProducer))))",
+"G6": "∀x (Setting(x) ∧ DenseForest(x) ∧ (Tropical(x) ∨ Subtropical(x)) ∧ HighRainfall(x) ∧ HighBiodiversity(x) ∧ CarbonSink(x) ∧ OxygenProducer(x) → Rainforest(x))",
+"G7": "∀x (Setting(x) ∧ Dense(x) ∧ (TropicalForest(x) ∨ SubtropicalForest(x)) ∧ HighRainfall(x) ∧ HighBiodiversity(x) ∧ CarbonSink(x) ∧ OxygenProducer(x) → Rainforest(x))"
+},
+"0a59f1d0428f": {
+"G4": "∀x (Solid(x) → ((HasFlatFaces(x) ∧ HasStraightEdges(x) ∧ HasSharpCorners(x) ↔ Polyhedron(x)) ∧ (HasCurvedSurface(x) ↔ NonPolyhedron(x))))",
+"G6": "∀x ((Solid(x) ∧ FlatFaces(x) ∧ StraightEdges(x) ∧ SharpCorners(x)) → Polyhedron(x)) ∧ ∀y ((Solid(y) ∧ CurvedSurface(y)) → NonPolyhedron(y))",
+"G7": "∀x ((Solid(x) ∧ FlatFaces(x) ∧ StraightEdges(x) ∧ SharpCorners(x)) → Polyhedron(x)) ∧ ∀x ((Solid(x) ∧ CurvedSurface(x)) → ¬Polyhedron(x))"
+},
+"0a6d987e1c56": {
+"G4": "∀x (MusicalInstrument(x) → (StringInstrument(x) ↔ (ProduceSoundThrough(x, vibrationOfStretchedStrings) ∧ (PlayedByPlucking(x) ∨ PlayedByBowing(x) ∨ PlayedByStriking(x)))))",
+"G6": "∀x (MusicalInstrument(x) ∧ ProducesSoundThrough(x, vibrationOfStretchedStrings) ∧ (Plucked(x) ∨ Bow(x) ∨ Struck(x)) → StringInstrument(x))",
+"G7": "∀x ((MusicalInstrument(x) ∧ ProducesSoundThroughVibrationOfStretchedStrings(x) ∧ (PlayedByPlucking(x) ∨ PlayedByBowing(x) ∨ PlayedByStriking(x))) → StringInstrument(x))"
+},
+"0a6e4ea53549": {
+"G4": "∀x (Film(x) ∧ Features(x, engagingPlot) ∧ Features(x, talentedCast) ∧ Features(x, highQualitySpecialEffects) → (OftenReceives(x, positiveReviews) ∧ OftenAttracts(x, largeAudience)))",
+"G6": "∀x ((Film(x) ∧ Features(x, engagingPlot) ∧ Features(x, talentedCast) ∧ Features(x, highQualitySpecialEffects)) → (Often(PositiveReviews(x)) ∧ Often(AttractsLargeAudience(x))))",
+"G7": "∀x ((Film(x) ∧ Features(x, engagingPlot) ∧ Features(x, talentedCast) ∧ Features(x, highQualitySpecialEffects)) → (Receives(x, positiveReviews) ∧ Attracts(x, largeAudience)))"
+},
+"0aa6f7691ee8": {
+"G4": "∀x ((ScientificStudy(x) ∧ BasedOn(x, largeSampleSize) ∧ Utilizes(x, robustMethodology) ∧ Employs(x, accurateDataAnalysis)) → CanProduce(x, reliableResults))",
+"G6": "∀x ((ScientificStudy(x) ∧ BasedOnLargeSampleSize(x) ∧ UtilizesRobustMethodology(x) ∧ EmploysAccurateDataAnalysis(x)) → ProducesReliableResults(x))",
+"G7": "∀x ((ScientificStudy(x) ∧ BasedOnLargeSampleSize(x) ∧ UtilizesRobustMethodology(x) ∧ EmploysAccurateDataAnalysis(x)) → CanProduce(x, ReliableResults))"
+},
+"0acda88a1201": {
+"G4": "∀x (Building(x) ∧ Provides(x, medicalCare) ∧ Houses(x, healthcareProfessionals) ∧ Houses(x, medicalEquipment) ∧ Offers(x, inpatientServices) ∧ Offers(x, outpatientServices) → Hospital(x))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((Building(x) ∧ Provides(x, medicalCare) ∧ Houses(x, healthcareProfessionals) ∧ Houses(x, medicalEquipment) ∧ Offers(x, inpatientServices) ∧ Offers(x, outpatientServices)) → Hospital(x))"
+},
+"0ad5a5f2632b": {
+"G4": "∀x ((Device(x) ∧ UsedToControlFlow(x, liquidOrGas, pipe) ∧ (OpenFlow(x) ∨ CloseFlow(x) ∨ PartiallyObstructFlow(x))) → Valve(x))",
+"G6": "∀x ((Device(x) ∧ UsedToControlFlow(x, liquid) ∨ UsedToControlFlow(x, gas)) ∧ (Opens(x) ∨ Closes(x) ∨ PartiallyObstructs(x)) ∧ ThroughPipe(x) → Valve(x))",
+"G7": "∀x ((Device(x) ∧ UsedToControlFlow(x, liquidOrGas, pipe) ∧ (Opens(x) ∨ Closes(x) ∨ PartiallyObstructs(x, flow))) → Valve(x))"
+},
+"0b8c676308aa": {
+"G4": "∀x (Movie(x) → ((Has(x, highBoxOfficeRevenue) ∧ Has(x, positiveCriticReviews) → Blockbuster(x)) ∧ (Has(x, lowBoxOfficeRevenue) ∧ Has(x, negativeCriticReviews) → ¬Blockbuster(x))))",
+"G6": "∀x (Movie(x) ∧ HighBoxOfficeRevenue(x) ∧ PositiveCriticReviews(x) → Blockbuster(x)) ∧ ∀x (Movie(x) ∧ LowBoxOfficeRevenue(x) ∧ NegativeCriticReviews(x) → ¬Blockbuster(x))",
+"G7": "∀x ((Movie(x) ∧ HighBoxOfficeRevenue(x) ∧ PositiveCriticReviews(x)) ↔ Blockbuster(x)) ∧ ((Movie(x) ∧ LowBoxOfficeRevenue(x) ∧ NegativeCriticReviews(x)) → ¬Blockbuster(x))"
+},
+"0bb32092754a": {
+"G4": "We need to translate: \"A recipe is successful if it has simple ingredients ∧ either quick preparation time ∨ a delicious result, yet ¬if it's overly complicated.\"",
+"G6": "∀x (Recipe(x) ∧ HasSimpleIngredients(x) ∧ ((QuickPreparationTime(x) ∨ DeliciousResult(x)) ∧ ¬OverlyComplicated(x)) → Successful(x))",
+"G7": "∀x (Recipe(x) → (Successful(x) ↔ (HasSimpleIngredients(x) ∧ (QuickPreparationTime(x) ∨ DeliciousResult(x)) ∧ ¬OverlyComplicated(x))))"
+},
+"0bf3633b46f3": {
+"G4": "∀x (Plant(x) → (CharacterizedAs(x, succulent) ↔ (StoresWaterIn(x, leaves) ∨ StoresWaterIn(x, stems) ∨ StoresWaterIn(x, roots)) ∧ ThrivesIn(x, aridConditions) ∧ Exhibits(x, fleshyAppearance)))",
+"G6": "∀x (Plant(x) ∧ StoresWaterIn(x, leaves) ∧ StoresWaterIn(x, stems) ∧ StoresWaterIn(x, roots) ∧ ThrivesIn(x, aridConditions) ∧ Exhibits(x, fleshyAppearance) → Succulent(x))",
+"G7": "∀x ((Plant(x) ∧ StoresIn(x, water, leaves) ∨ StoresIn(x, water, stems) ∨ StoresIn(x, water, roots)) ∧ ThrivesIn(x, aridConditions) ∧ Exhibits(x, fleshyAppearance) → Succulent(x))"
+},
+"0bfb7191e3b1": {
+"G4": "∀x (Computer(x) → (Supports(x, windows) ∧ Supports(x, macOS) ∧ Supports(x, linux) ∧ CompatibleWith(x, keyboards) ∧ CompatibleWith(x, mice) ∧ CompatibleWith(x, printers)))",
+"G6": "∀x ((Computer(x) ∧ SupportsOperatingSystems(x, windows) ∧ SupportsOperatingSystems(x, macOS) ∧ SupportsOperatingSystems(x, linux)) → ∀y ((Peripheral(y) ∧ (Keyboard(y) ∨ Mouse(y) ∨ Printer(y)) → CompatibleWith(x, y)))",
+"G7": "∀x (Computer(x) → (Supports(x, windows) ∧ Supports(x, macOS) ∧ Supports(x, linux) ∧ CompatibleWith(x, keyboard) ∧ CompatibleWith(x, mouse) ∧ CompatibleWith(x, printer)))"
+},
+"0c03bbe2620d": {
+"G4": "∀x ((Object(x) ∧ ReflectsAllWavelengths(x, light) ∧ AbsorbsNoLight(x)) → Appears(x, white)) ∧ ∀x ((Object(x) ∧ AbsorbsAllWavelengths(x, light) ∧ ReflectsNoLight(x)) → Appears(x, black))",
+"G6": "∀x ((ReflectsAllWavelengths(x) ∧ ¬AbsorbsLight(x)) → AppearsWhite(x)) ∧ ∀y ((AbsorbsAllWavelengths(y) ∧ ¬ReflectsLight(y)) → AppearsBlack(y))",
+"G7": "∀x ((ReflectsAll(x, lightWavelengths) ∧ ¬AbsorbsAny(x, light)) → Appears(x, white)) ∧ ((AbsorbsAll(x, lightWavelengths) ∧ ¬ReflectsAny(x, light)) → Appears(x, black))"
+},
+"0c8e8fc837a6": {
+"G4": "∀x ∀y ((Vehicle(x) ∧ Road(y) ∧ Permits(y, x) ∧ InWorkingCondition(x)) → CanDriveOn(x, y))",
+"G6": "∀x ∀y (Vehicle(x) ∧ Road(y) ∧ Permits(y, x) ∧ WorkingCondition(x) → CanDriveOn(x, y))",
+"G7": "∀v ∀r ((RoadPermits(r, v) ∧ WorkingCondition(v)) → CanDriveOn(v, r))"
+},
+"0c9b7fee771e": {
+"G4": "∀x ((Artwork(x) ∧ EvokesStrongEmotions(x) ∧ DisplaysTechnicalMastery(x) ∧ ResonatesWith(x, wideAudience)) → LikelyToBeInfluentialIn(x, artWorld))",
+"G6": "∀x ((Artwork(x) ∧ EvokesStrongEmotions(x) ∧ DisplaysTechnicalMastery(x) ∧ ResonatesWithWideAudience(x)) → LikelyToBeInfluentialInArtWorld(x))",
+"G7": "∀x ((Artwork(x) ∧ Evokes(x, strongEmotions) ∧ Displays(x, technicalMastery) ∧ ResonatesWith(x, wideAudience)) → LikelyInfluentialIn(x, artWorld))"
+},
+"0caaece5b349": {
+"G4": "∀x (Product(x) → ((MadeOf(x, biodegradableMaterials) ∨ Has(x, lowCarbonFootprint)) ∧ ¬Has(x, excessivePackaging) → MoreEcoFriendly(x)))",
+"G6": "∀x (Product(x) ∧ ((MadeOf(x, biodegradableMaterials) ∨ HasLowCarbonFootprint(x)) ∧ ¬HasExcessivePackaging(x)) → MoreEcoFriendly(x))",
+"G7": "∀x (Product(x) ∧ ((MadeOf(x, biodegradableMaterials) ∨ Has(x, lowCarbonFootprint)) ∧ ¬Has(x, excessivePackaging)) → MoreEcoFriendly(x))"
+},
+"0cd8674bf13f": {
+"G4": "∀t ∀s1 ∀s2 ∀p (Operational(t) ∧ ConnectedBy(s1, s2, railwayTrack) ∧ HasCapacityFor(t, p) → CanTransportBetween(t, p, s1, s2))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀t ∀p ∀s1 ∀s2 ((Train(t) ∧ Operational(t) ∧ Station(s1) ∧ Station(s2) ∧ ConnectedByRailway(s1, s2) ∧ EnoughCapacity(t, p)) → CanTransportBetween(t, p, s1, s2))"
+},
+"0cff17e7ce5b": {
+"G4": "∀x ((SpeciesOfPlant(x) ∧ Produces(x, flowers) ∧ (PollinatedBy(x, insects) ∨ PollinatedBy(x, wind)) ∧ Has(x, seedsEnclosedInFruit)) → ClassifiedAs(x, angiosperm))",
+"G6": "∀x ((SpeciesOfPlant(x) ∧ ProducesFlowers(x) ∧ (PollinatedBy(x, insects) ∨ PollinatedBy(x, wind)) ∧ HasSeedsEnclosedInFruit(x)) → ClassifiedAs(x, angiosperm))",
+"G7": "∀x ((SpeciesOfPlant(x) ∧ Produces(x, flowers) ∧ (PollinatedBy(x, insects) ∨ PollinatedBy(x, wind)) ∧ HasSeedsEnclosedIn(x, fruit)) → ClassifiedAs(x, angiosperm))"
+},
+"0d16f7daf4bf": {
+"G4": "∀x ∀y (Animal(x) ∧ Ecosystem(y) ∧ FoundIn(x, habitat(y)) ∧ SupportsSurvival(y, x) → LivesIn(x, y))",
+"G6": "∀x ∀y (Animal(x) ∧ Ecosystem(y) → (FoundIn(x, y'sHabitat) ∧ SupportsSurvival(y, x) → LivesIn(x, y)))",
+"G7": "∀x ∀y ((Animal(x) ∧ Ecosystem(y) ∧ FoundIn(x, HabitatOf(y)) ∧ Supports(y, SurvivalOf(x))) → LivesIn(x, y))"
+},
+"0d1c78192e57": {
+"G4": "∀x ∀y ((Company(x) ∧ Candidate(y) ∧ Job(z) ∧ Has(y, requiredSkills) ∧ Has(y, goodAttitude) ∧ ¬Undergoing(x, layoffs)) → HiresFor(x, y, z))",
+"G6": "∀x ∀y ((Candidate(y) ∧ Job(z) ∧ HasSkills(y, requiredSkills) ∧ GoodAttitude(y) ∧ ¬UndergoingLayoffs(x)) → Hires(x, y, z))",
+"G7": "∀c ∀d ∀j ((Company(c) ∧ Candidate(d) ∧ Job(j) ∧ HasSkills(d, requiredSkills) ∧ HasAttitude(d, good) ∧ ¬UndergoingLayoffs(c)) → Hires(c, d, j))"
+},
+"0dd4532f56da": {
+"G4": "∀x ((CelestialBody(x) ∧ Emits(x, light) ∧ HighSurfaceTemperature(x) ∧ GeneratesEnergyThrough(x, nuclearFusion)) → Star(x))",
+"G6": "∀x ((CelestialBody(x) ∧ EmitsLight(x) ∧ HighSurfaceTemperature(x) ∧ GeneratesEnergyThrough(x, nuclearFusion)) → Star(x))",
+"G7": "∀x ((CelestialBody(x) ∧ Emits(x, light) ∧ HighSurfaceTemperature(x) ∧ GeneratesEnergyThrough(x, nuclearFusion)) → Star(x))"
+},
+"0df2e5eef7a0": {
+"G4": "∀x (Fruit(x) ∧ ¬CoveredIn(x, sugar) → Healthy(x))",
+"G6": "∀x (Fruit(x) → (¬CoveredIn(x, sugar) → Healthy(x)))",
+"G7": "∀x (Fruit(x) → (¬CoveredIn(x, sugar) → Healthy(x)))"
+},
+"0e011c6bf867": {
+"G4": "∀x (Smartphone(x) ∧ CanWithstandExposureTo(x, water) ∧ ¬SufferDamage(x) ∧ ¬Malfunction(x) → WaterResistant(x))",
+"G6": "∀x (Smartphone(x) ∧ CanWithstandExposureToWaterWithoutDamageOrMalfunction(x) → WaterResistant(x))",
+"G7": "∀x (Smartphone(x) ∧ CanWithstandExposureTo(x, water) ∧ ¬SufferDamageOrMalfunction(x) → WaterResistant(x))"
+},
+"0e33fabbea91": {
+"G4": "∀x (TeaKettle(x) → (Boils(x, water) ∧ (¬Has(x, builtInInfuser) → ¬Make(x, tea))))",
+"G6": "∀x ((TeaKettle(x) ∧ BoilsWater(x)) ∧ (¬HasBuiltInInfuser(x) → ¬MakesTea(x)))",
+"G7": "∃x (TeaKettle(x) ∧ Boils(x, water) ∧ (¬HasBuiltIn(x, infuser) → ¬Makes(x, tea)))"
+},
+"0eb31fdb1d83": {
+"G4": "∀x ∀y (Planet(x) ∧ LifeForm(y) ∧ SuitableForSurvival(atmosphericConditions, y) ∧ SuitableForSurvival(temperature, y) → Supports(x, y))",
+"G6": "∀x ∀y (Planet(x) ∧ LifeForm(y) → (Supports(x, y) ↔ (SuitableAtmosphericConditions(x, y) ∧ SuitableTemperature(x, y))))",
+"G7": "∀x ∀y ((Planet(x) ∧ LifeForm(y) ∧ SuitableAtmosphereAndTemperatureFor(x, y)) → Supports(x, y))"
+},
+"0ebc7e44366f": {
+"G4": "∀x ∀y ((Scientist(x) ∧ (Studies(x, astronomy) ⊕ Studies(x, astrophysics)) ∧ Scientist(y) ∧ StudiesOnly(y, geology)) → BroaderKnowledgeOf(x, y, celestialObjects))",
+"G6": "∀x ((Scientist(x) ∧ ((Studies(x, astronomy) ⊕ Studies(x, astrophysics)) ∧ ¬(Studies(x, astronomy) ∧ Studies(x, astrophysics))) → HasBroaderKnowledgeOfCelestialObjects(x, y)) ∧ ∀y (Scientist(y) ∧ Studies(y, geology) ∧ ¬(Studies(y, astronomy) ∨ Studies(y, astrophysics)) → ¬HasBroaderKnowledgeOfCelestialObjects(x, y)))",
+"G7": "∀x ((Scientist(x) ∧ ((Studies(x, astronomy) ∨ Studies(x, astrophysics)) ∧ ¬(Studies(x, astronomy) ∧ Studies(x, astrophysics)))) → BroaderKnowledgeCelestialObjects(x)) ∧ ∀y ((Scientist(y) ∧ Studies(y, geology) ∧ ¬Studies(y, astronomy) ∧ ¬Studies(y, astrophysics))) → ¬BroaderKnowledgeCelestialObjects(y))"
+},
+"0eead024c9ba": {
+"G4": "∀x (Person(x) ∧ Think(x, santaClausIsMadeUp) → SurprisedToSeeIn(x, santaClaus, houseOf(x)))",
+"G6": "∀x (Person(x) ∧ ThinksMadeUp(x, santaClaus) → WouldBeSurprised(x, See(santaClaus, House(x))))",
+"G7": "∀x (Person(x) ∧ Thinks(x, MadeUp(santaClaus)) → SurprisedToSeeInHouse(x, santaClaus))"
+},
+"0ef71f65ea70": {
+"G4": "FootballPlayer(andyWinter) ∧ SonOf(andyWinter, brianWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+"G6": "SonOf(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+"G7": "Son(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)"
+},
+"0f700e9a2062": {
+"G4": "We need to translate: \"A structure that supports the weight of a bridge, has a vertical column, ∧ connects the bridge deck to the ground is a bridge pier if it is made of reinforced concrete.\"",
+"G6": "∀x ((SupportsWeightOf(x, bridge) ∧ HasVerticalColumn(x) ∧ Connects(x, bridgeDeck, ground) ∧ MadeOf(x, reinforcedConcrete)) → BridgePier(x))",
+"G7": "∀x ((Structure(x) ∧ SupportsWeightOf(x, bridge) ∧ HasVerticalColumn(x) ∧ Connects(x, bridgeDeck, ground) ∧ MadeOf(x, reinforcedConcrete)) → BridgePier(x))"
+},
+"0f995c93155d": {
+"G4": "∀x ((ElectronicDevice(x) ∧ Receives(x, broadcastSignals) ∧ Displays(x, broadcastSignals) ∧ Provides(x, audiovisualEntertainment) ∧ Provides(x, information)) → Television(x))",
+"G6": "∀x (ElectronicDevice(x) ∧ ReceivesAndDisplays(x, broadcastSignals) ∧ Provides(x, audiovisualEntertainment) ∧ Provides(x, information) → Television(x))",
+"G7": "∀x (Object(x) ∧ ElectronicDevice(x) ∧ ReceivesBroadcastSignals(x) ∧ DisplaysBroadcastSignals(x) ∧ ProvidesEntertainmentAndInformation(x) → Television(x))"
+},
+"0fc7c6943cfd": {
+"G6": "∀x ((Book(x) ∧ Contains(x, imaginaryEvents) ∧ Contains(x, imaginaryCharacters)) → Fiction(x)) ∧ ∀y ((Book(y) ∧ BasedOn(y, facts) ∧ BasedOn(y, realEvents)) → NonFiction(y))"
+},
+"0fe3576f7421": {
+"G4": "∀x ((Building(x) ∧ ContainsCollection(x) ∧ (CollectionOf(x, books) ∨ CollectionOf(x, manuscripts) ∨ CollectionOf(x, otherMaterials)) ∧ ForPurpose(x, readingAndResearch)) → (Library(x) ∨ Archive(x)))",
+"G6": "∀x (Contains(x, books) ∧ Contains(x, manuscripts) → (Library(x) ∨ Archive(x)))",
+"G7": "∀x ((Building(x) ∧ ContainsCollectionForReadingOrResearch(x)) → (Library(x) ∨ Archive(x)))"
+},
+"1069224f7355": {
+"G4": "∀x ((ElectronicComponent(x) ∧ StoresEnergyIn(x, electricField) ∧ Has(x, twoConductivePlatesSeparatedByInsulator) ∧ CanBlock(x, directCurrent) ∧ CanAllowToPass(x, alternatingCurrent)) → Capacitor(x))",
+"G6": "∀x ((ElectronicComponent(x) ∧ StoresEnergyInElectricField(x) ∧ HasTwoConductivePlatesSeparatedByInsulator(x) ∧ BlocksDirectCurrent(x) ∧ AllowsAlternatingCurrentToPass(x)) → Capacitor(x))",
+"G7": "∀x ((ElectronicComponent(x) ∧ StoresEnergyInElectricField(x) ∧ HasTwoConductivePlatesSeparatedByInsulator(x) ∧ BlocksDirectCurrentAllowsAlternatingCurrent(x)) → Capacitor(x))"
+},
+"113b00880c5c": {
+"G4": "Play(psyche) ∧ BasedOn(psyche, lifeOfJamesMirandaBarry)",
+"G6": "Play(psyche) ∧ BasedOn(psyche, lifeOf(jamesMirandaBarry))",
+"G7": "Play(psyche) ∧ BasedOn(psyche, LifeOf(jamesMirandaBarry))"
+},
+"115253ee533b": {
+"G4": "∀x ((InFamily(x, ourFamily) ∧ Scientist(x)) → Adult(x))",
+"G6": "∀x ((InFamily(x) ∧ Scientist(x)) → Adult(x))",
+"G7": "∀x ((InFamily(x, ourFamily) ∧ Scientist(x)) → Adult(x))"
+},
+"132224828c30": {
+"G4": "∀x (Place(x) ∧ OpenSpace(x) ∧ (OftenWith(x, grass) ∨ OftenWith(x, trees) ∨ OftenWith(x, naturalFeatures)) ∧ (UsedFor(x, recreation) ∨ UsedFor(x, relaxation) ∨ UsedFor(x, conservation)) → Park(x))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((AreaOfOpenSpace(x) ∧ (HasFeature(x, grass) ∨ HasFeature(x, trees) ∨ HasFeature(x, otherNaturalFeatures)) ∧ UsedFor(x, recreation) ∧ UsedFor(x, relaxation) ∧ UsedFor(x, conservation)) → Park(x))"
+},
+"13fa60553e8e": {
+"G6": "∀x ∀y ((Predator(x) ∧ Prey(y) ∧ Catches(x, y)) → (ObtainsEnergyFrom(x, y) ∧ LosesEnergy(y) ∧ RemovedFromFoodChain(y)))"
+},
+"14d3f68599ec": {
+"G4": "∃x (Book(x) ∧ PublishedByInYear(x, miroslavVenhoda, 1946) ∧ Called(x, methodOfStudyingGregorianChant))",
+"G6": "Published(miroslavVenhoda, book, 1946) ∧ Called(book, MethodOfStudyingGregorianChant)",
+"G7": "∃b (Book(b) ∧ PublishedBy(b, miroslavVenhoda) ∧ PublishedInYear(b, 1946) ∧ Title(b, methodOfStudyingGregorianChant))"
+},
+"14d8aea91a51": {
+"G4": "∀x (Cell(x) → ((Prokaryote(x) ⊕ Eukaryote(x) ⊕ Archaea(x)) ∨ (UniqueHybridCell(x) ∧ ¬(Prokaryote(x) ⊕ Eukaryote(x) ⊕ Archaea(x)))))",
+"G6": "∀x ((Cell(x) ∧ ¬UniqueHybrid(x)) → ((Prokaryote(x) ⊕ Eukaryote(x) ⊕ Archaea(x)) ∧ ¬(Prokaryote(x) ∧ Eukaryote(x)) ∧ ¬(Prokaryote(x) ∧ Archaea(x)) ∧ ¬(Eukaryote(x) ∧ Archaea(x))))",
+"G7": "∀x (Cell(x) → ((Prokaryote(x) ⊕ Eukaryote(x) ⊕ Archaea(x)) ∨ UniqueHybridCell(x)))"
+},
+"14e3bc90ab75": {
+"G4": "∀x (Vehicle(x) → (EcoFriendly(x) ↔ (Utilizes(x, renewableFuelSources) ∧ EmitsLowLevels(x, pollutants) ∧ HasMinimalImpactDuring(x, production, environment))))",
+"G6": "∀x (Vehicle(x) ∧ UtilizesRenewableFuel(x) ∧ EmitsLowPollutants(x) ∧ MinimalEnvironmentalImpactDuringProduction(x) → EcoFriendly(x))",
+"G7": "∀x (Vehicle(x) ∧ Utilizes(x, renewableFuelSources) ∧ EmitsLowPollutants(x) ∧ MinimalEnvironmentalImpactDuringProduction(x) → EcoFriendly(x))"
+},
+"15a538493e0c": {
+"G6": "∀x ∀y ((River(x) ∧ Lake(y) ∧ WaterLevel(x) > WaterLevel(y) ∧ ContinuousPath(x, y)) → FlowsInto(x, y))"
+},
+"169971c6fe54": {
+"G4": "∀x (Animal(x) → ((Has(x, hair) ∨ Has(x, fur)) ∧ GivesBirthToLiveYoung(x) ∧ FeedsOffspringWith(x, milk) → Mammal(x)))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x (Animal(x) ∧ (Has(x, hair) ∨ Has(x, fur)) ∧ GivesBirthToLiveYoung(x) ∧ FeedsOffspringWithMilk(x) → Mammal(x))"
+},
+"177a38d58d18": {
+"G4": "∀x ((OpticalInstrument(x) ∧ Magnifies(x, distantObjects) ∧ (GathersLightThrough(x, lens) ∨ GathersLightThrough(x, mirror)) ∧ Forms(x, image) ∧ DesignedFor(x, observingCelestialObjects)) → Telescope(x))",
+"G6": "∀x ((OpticalInstrument(x) ∧ MagnifiesDistantObjects(x) ∧ GathersLightThroughLensOrMirror(x) ∧ FormsImage(x)) ∧ DesignedForObservingCelestialObjects(x) → Telescope(x))",
+"G7": "∀x ((OpticalInstrument(x) ∧ Magnifies(x, distantObjects) ∧ (GathersLightThrough(x, lens) ∨ GathersLightThrough(x, mirror)) ∧ FormsImage(x) ∧ DesignedFor(x, observingCelestialObjects)) → Telescope(x))"
+},
+"17ff324a8bf4": {
+"G6": "∀x ((ElectronicDevice(x) ∧ Portable(x) ∧ HasTouchscreenInterface(x) ∧ UsedPrimarilyFor(x, internetBrowsing) ∨ UsedPrimarilyFor(x, communication) ∨ UsedPrimarilyFor(x, mediaConsumption)) → (Smartphone(x) ∨ Tablet(x)))"
+},
+"1a57e97d7ad9": {
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))"
+},
+"1a59bf33bfe5": {
+"G6": "∀x ((Landform(x) ∧ HasConicalShape(x) ∧ FormedByVolcanicActivity(x) ∧ HasOpening(x) ∧ AllowsEscape(x, magma) ∧ AllowsEscape(x, ash) ∧ AllowsEscape(x, gas)) → Volcano(x))"
+},
+"1a6cd4add3ea": {
+"G4": "∀x (Mammal(x) → (LayEggs(x) ↔ Monotreme(x)))",
+"G6": "∀x ((Mammal(x) ∧ ¬Monotreme(x)) → ¬LayEggs(x))",
+"G7": "∀x ((Mammal(x) ∧ LaysEggs(x)) → Monotreme(x))"
+},
+"1a9a0140a082": {
+"G6": "∀x ((Vehicle(x) ∧ DesignedForOffRoad(x) ∧ HasFourWheelDrive(x) ∧ BuiltForRuggedTerrain(x)) → (Jeep(x) ∨ PickupTruck(x)))"
+},
+"1ab9537a0a4a": {
+"G6": "∀x ((OrbitsAround(x, star) ∧ SphericalShape(x) ∧ ClearedOrbit(x)) → RecognizedAsPlanet(x))"
+},
+"1b387f62b170": {
+"G6": "∀x ((CelestialBody(x) ∧ MadeOf(x, ice) ∧ MadeOf(x, dust) ∧ MadeOf(x, rockyMaterial) ∧ FollowsElongatedOrbit(x, sun)) → Comet(x))"
+},
+"203fddc52abf": {
+"G4": "∀x ((Toy(x) ∧ Requires(x, batteries)) → ¬FunctionWithout(x, batteries)) ∧ ∀y ((Toy(y) ∧ WindUp(y)) → OperateWithout(y, batteries))",
+"G6": "∀x ((Toy(x) ∧ RequiresBatteries(x)) → ¬FunctionWithout(x, batteries)) ∧ ∀y ((Toy(y) ∧ WindUp(y)) → FunctionWithout(y, batteries))",
+"G7": "∀x ((Toy(x) ∧ Requires(x, batteries)) → (¬FunctionWithout(x, batteries))) ∧ ∀y ((Toy(y) ∧ WindUp(y)) → OperateWithout(y, batteries))"
+},
+"24cd2f339ac6": {
+"G4": "∀x (Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering) → ¬SuitableFor(x, indoorEnvironmentsWithoutSufficientLightAndRegularCare))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering)) → ¬SuitableFor(x, IndoorEnvironmentWithoutSufficientLightAndRegularCare)))"
+},
+"259e92a820ab": {
+"G4": "∀x ∀y ∀z ((Software(x) ∧ Team(y) ∧ Company(z) ∧ WritesCodeFor(y, x) ∧ Funds(z, project) ∧ EmployedBy(y, z)) → DevelopedByFor(x, y, z))",
+"G6": "∀x ∀y ∀z (DevelopedBy(x, y, z) ↔ (WritesCode(y, x) ∧ FundsProject(z, x) ∧ EmployedBy(y, z)))",
+"G7": "∀x ∀y ∀z ((Software(x) ∧ Team(y) ∧ Company(z) ∧ WritesCodeFor(y, x) ∧ Funds(z, x) ∧ EmployedBy(y, z)) → DevelopedByFor(x, y, z))"
+},
+"2aedbbba40e5": {
+"G4": "∀x (University(x) ↔ (InstitutionOfHigherLearning(x) ∧ OffersWideRangeOfAcademicPrograms(x) ∧ GrantsDegreesUponSuccessfulCompletion(x)))",
+"G6": "∀x (University(x) ↔ (InstitutionOfHigherLearning(x) ∧ OffersWideRangeOfAcademicPrograms(x) ∧ GrantsDegreesUponCompletion(x)))",
+"G7": "∀x (Entity(x) ∧ InstitutionOfHigherLearning(x) ∧ OffersWideRangeAcademicPrograms(x) ∧ GrantsDegreesUponCompletion(x) → University(x))"
+},
+"2b2a6c4b9d1a": {
+"G4": "∀x ∀y ∀z (Athlete(x) ∧ Medal(y) ∧ Competition(z) ∧ ParticipatesIn(x, z) ∧ AwardedForTopPerformanceIn(y, z) ∧ MeetsCriteriaFor(x, y) → Wins(x, y, z))",
+"G6": "∀x ∀y ∀z (Athlete(x) ∧ Medal(y) ∧ Competition(z) ∧ ParticipatesIn(x, z) ∧ AwardedFor(y, z) ∧ MeetsCriteria(x, y, z) → WinsMedal(x, y, z))",
+"G7": "∀x ∀y ∀z ((Athlete(x) ∧ Medal(y) ∧ Competition(z) ∧ ParticipatesIn(x, z) ∧ AwardedFor(y, topPerformance, z) ∧ MeetsCriteria(x, y)) → Wins(x, y, z))"
+},
+"2e7e7246d8e6": {
+"G4": "∀x (Device(x) ∧ (ApparatusForCapturing(x, stillImages) ∨ ApparatusForCapturing(x, movingImages)) ∧ (OftenUses(x, photographicFilm) ∨ OftenUses(x, digitalSensors)) ∧ (UtilizedFor(x, artisticPurposes) ∨ UtilizedFor(x, commercialPurposes) ∨ UtilizedFor(x, personalPurposes)) → Camera(x))",
+"G6": "∀x (Device(x) ∧ ApparatusFor(x, capturingStillImages) ∨ ApparatusFor(x, capturingMovingImages) ∧ (UsesPhotographicFilm(x) ∨ UsesDigitalSensors(x)) ∧ (UsedForArtistic(x) ∨ UsedForCommercial(x) ∨ UsedForPersonal(x)) → Camera(x))",
+"G7": "∀x (Device(x) ∧ ApparatusForCapturingImages(x) ∧ (CapturesStillImages(x) ∨ CapturesMovingImages(x)) ∧ (UsesFilmOrDigitalSensors(x)) ∧ (UsedForArtisticOrCommercialOrPersonalPurposes(x)) → Camera(x))"
+},
+"2f1d65c8c973": {
+"G4": "∀x ((ComputerSystem(x) ∧ DesignedFor(x, highPerformanceCalculations) ∧ Has(x, multipleProcessors) ∧ UsedFor(x, scientificResearch) ∧ CanProcess(x, largeAmountOfData)) → Supercomputer(x))",
+"G6": "∀x ((ComputerSystem(x) ∧ DesignedFor(x, highPerformanceCalculations) ∧ HasMultipleProcessors(x) ∧ UsedFor(x, scientificResearch) ∧ CanProcessLargeAmountOfData(x)) → Supercomputer(x))",
+"G7": "∀x ((ComputerSystem(x) ∧ DesignedFor(x, highPerformanceCalculations) ∧ Has(x, multipleProcessors) ∧ UsedFor(x, scientificResearch) ∧ CanProcess(x, largeAmountOfData)) → Supercomputer(x))"
+},
+"332ff0d272f9": {
+"G4": "∀x (Shop(x) → (OpenForBusiness(x) ↔ (OperatesBetween(x, 9AM, 5PM) ∧ ¬(OnWeekend(x) ∨ OnPublicHoliday(x)))))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ∀t ((Shop(x) ∧ OperatesBetween(x, t, 9AM, 5PM) ∧ ¬Weekend(t) ∧ ¬PublicHoliday(t)) → OpenForBusiness(x, t))"
+},
+"3ae1f0a805e4": {
+"G4": "∀x (Clothing(x) ∧ OnePieceGarment(x) ∧ (For(x, women) ∨ For(x, girls)) ∧ (ExtendFromTo(x, shoulders, legs) ∨ ExtendFromTo(x, neck, legs)) ∧ (WornForOccasion(x, variousOccasions) ∨ WornForPurpose(x, variousPurposes)) → Dress(x))",
+"G6": "∀x (Clothing(x) ∧ OnePieceGarment(x) ∧ (ForWomen(x) ∨ ForGirls(x)) ∧ ExtendsFromTo(x, shouldersOrNeck, legs) ∧ WornFor(x, variousOccasionsOrPurposes) → Dress(x))",
+"G7": "∀x (PieceOfClothing(x) ∧ OnePieceGarmentForWomenOrGirls(x) ∧ ExtendsFromShouldersOrNeckToLegs(x) ∧ WornForVariousOccasions(x) → Dress(x))"
+},
+"412b525bcb65": {
+"G6": "∀x (Object(x) ∧ OpticalInstrument(x) ∧ DesignedToObserveDistantObjects(x) ∧ CollectsAndFocusesElectromagneticRadiation(x) ∧ UsedForStudyingCelestialBodies(x) → Telescope(x))"
+},
+"439e4bdd3501": {
+"G4": "∀x (Computer(x) → ((Desktop(x) ⊕ Laptop(x) ⊕ Tablet(x)) ∨ (ConvertibleDevice(x) ∧ (Desktop(x) ∨ Laptop(x) ∨ Tablet(x)))))",
+"G6": "∀x (Computer(x) → ((Desktop(x) ⊕ Laptop(x) ⊕ Tablet(x)) ∨ ConvertibleDevice(x)))",
+"G7": "∀x (Computer(x) → ((Desktop(x) ∨ Laptop(x) ∨ Tablet(x)) ∧ ((Desktop(x) ⊕ Laptop(x) ⊕ Tablet(x)) ∨ ConvertibleDevice(x))))"
+},
+"444cf16a5b26": {
+"G4": "Friend(taylor, emily)",
+"G6": "Friend(taylor, emily)",
+"G7": "FriendOf(taylor, emily)"
+},
+"4719291d0f22": {
+"G6": "∀x ((CelestialBody(x) ∧ Orbits(x, star) ∧ ClearedOrbit(x) ∧ SufficientMassForSphericalShape(x)) → Planet(x))"
+},
+"481d4a2414a0": {
+"G4": "¬∀x (Insect(x) → CanFly(x)) ∧ ∀x (Bird(x) ∧ ¬Ostrich(x) ∧ ¬Penguin(x) → CanFly(x))",
+"G6": "(∃x (Insect(x) ∧ ¬CanFly(x))) ∧ ∀x ((Bird(x) ∧ ¬(Ostrich(x) ∨ Penguin(x))) → CanFly(x))",
+"G7": "(¬∀x (Insect(x) → CanFly(x))) ∧ (∀x ((Bird(x) ∧ x ≠ ostrich ∧ x ≠ penguin) → CanFly(x)))"
+},
+"49027fcd5817": {
+"G6": "∀x ((AstronomicalObject(x) ∧ ProducesJet(x, particles) ∧ PowerfulAndEnergetic(x, jet) ∧ HasSupermassiveBlackHole(x) ∧ EmitsRadiation(x, electromagneticSpectrum)) → ActiveGalacticNucleus(x))"
+},
+"49e85f9ad458": {
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))"
+},
+"4c0bae5b3543": {
+"G6": "∀x (Sport(x) ∧ RequiresGroup(x) ∧ HasObjectiveToScore(x) ∧ InvolvesCompetitionAgainstTeam(x) → ClassifiedAsTeamSport(x))"
+},
+"4e01d55a22c8": {
+"G4": "We need to express: All birds can fly, except for ostriches ∧ penguins. That is: All birds that are ¬ostriches ∧ ¬penguins can fly. Alternatively: For all birds, if it is ¬an ostrich ∧ ¬a penguin, then it can fly. But careful: \"except for ostriches ∧ penguins\" means ostriches ∧ penguins are birds that cannot fly. So we can say: For all x, if Bird(x) ∧ ¬Ostrich(x) ∧ ¬Penguin(x), then CanFly(x). But we also might want to assert that ostriches ∧ penguins are birds? Possibly, but the sentence doesn't explicitly say ostriches ∧ penguins are birds, but it's implied. However, we can just treat them as subtypes. So:",
+"G6": "∀x ((Bird(x) ∧ ¬(Ostrich(x) ∨ Penguin(x))) → CanFly(x))",
+"G7": "∀x ((Bird(x) ∧ ¬(x = ostrich ∨ x = penguin)) → CanFly(x))"
+},
+"50fda2e9c44e": {
+"G6": "∀x ∀y ∀z ((AI(x) ∧ Problem(y) ∧ Domain(z) ∧ TrainedOn(x, RelevantData(y, z)) ∧ Possesses(x, AdequateProcessingPower) ∧ CanAdapt(x, NewInformation)) → CanSolve(x, y, z))"
+},
+"5264e4ae79ae": {
+"G6": "∀x (Vehicle(x) ∧ ReliesOn(x, electricPower, propulsion) ∧ HasBatteryStorage(x) ∧ Uses(x, electricMotor) ∧ ¬Uses(x, internalCombustionEngine) → ElectricVehicle(x))"
+},
+"52f7ae1a6800": {
+"G6": "∀x ((Orbits(x, star) ∧ ShapedByGravity(x) ∧ ClearedOrbit(x)) → ClassifiedAsPlanet(x))"
+},
+"5a66e71850a0": {
+"G4": "∀x (Refrigerator(x) → (Preserve(x, food) ∧ (Freeze(x, food) → Has(x, freezerCompartment))))",
+"G6": "∀x (Refrigerator(x) → (PreservesFood(x) ∧ (FreezesFood(x) → HasFreezerCompartment(x))))",
+"G7": "∃x (Refrigerator(x) ∧ Preserves(x, food) ∧ (¬Freezes(x, food) ∨ Has(x, freezerCompartment)))"
+},
+"5b7e628a8fac": {
+"G4": "∀x (Enter(x, building) → (Have(x, key) ∨ Have(x, pass)))",
+"G6": "∀x (EnterBuilding(x) → (HasKey(x) ∨ HasPass(x)))",
+"G7": "∀x (¬CanEnter(x, building) → ¬(Has(x, key) ∨ Has(x, pass)))"
+},
+"68da60d8ec78": {
+"G4": "∀x ((Tree(x) ∧ ¬Evergreen(x)) → LoseIn(x, leaves, autumn))",
+"G6": "∀x ((Tree(x) ∧ LoseLeavesIn(x, autumn) ∧ ¬Evergreen(x)) → True)",
+"G7": "∀x ((Tree(x) ∧ ¬Evergreen(x)) → LoseLeavesIn(x, autumn))"
+},
+"68fc8afd90fb": {
+"G4": "∀x ∀y ((DemocraticElection(x) ∧ Candidate(y, x) ∧ MostVotes(y, x) ∧ ¬∃z (Tie(z, x) ∨ LegalDispute(z, x))) → Wins(y, x))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀e ∀c ((DemocraticElection(e) ∧ Candidate(c, e) ∧ HasMostVotes(c, e) ∧ ¬Tie(e) ∧ ¬LegalDispute(e)) → Wins(c, e))"
+},
+"692ea8c67916": {
+"G4": "∀x ((Employee(x) ∧ WorksMoreThan(x, 40HoursPerWeek) ∧ ¬Manager(x)) → EligibleFor(x, overtimePay))",
+"G6": "∀x ((Employee(x) ∧ WorksMoreThan(x, 40) ∧ ¬Manager(x)) → EligibleForOvertimePay(x))",
+"G7": "∀x ((Employee(x) ∧ WorksMoreThan(x, 40, hoursPerWeek) ∧ ¬Manager(x)) → EligibleForOvertimePay(x))"
+},
+"7745ec1c39cf": {
+"G4": "∀x (Product(x) ∧ BiologicalPreparation(x) ∧ DevelopedToProvideImmunityAgainstInfectiousDiseases(x) ∧ ContainsWeakenedOrInactivatedPathogens(x) ∧ StimulateImmuneResponse(x) → Vaccine(x))",
+"G6": "∀x (Product(x) ∧ BiologicalPreparation(x) ∧ DevelopedToProvideImmunityAgainstInfectiousDiseases(x) ∧ ContainsWeakenedOrInactivatedPathogens(x) → Vaccine(x))",
+"G7": "∀x (Product(x) ∧ BiologicalPreparation(x) ∧ DevelopedToProvideImmunity(x) ∧ ContainsWeakenedOrInactivatedPathogens(x) → Vaccine(x))"
+},
+"8681dfaac4bf": {
+"G4": "∀x (Bird(x) → (CanFly(x) ↔ (¬Flightless(x) ∧ ¬Injured(x))))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x (Bird(x) → (¬Flightless(x) ∧ ¬Injured(x) → CanFly(x)))"
+},
+"8863f5f99f1c": {
+"G4": "∀x (Disease(x) → (Affect(x, females) ∨ Affect(x, males)))",
+"G6": "∀x (Disease(x) → (Affects(x, females) ∨ Affects(x, males)))",
+"G7": "∃x (Disease(x) ∧ (Affects(x, female) ∨ Affects(x, male)))"
+},
+"8d457b15d50a": {
+"G4": "∀x (Bird(x) ∧ ¬(Ostrich(x) ∨ Penguin(x)) → CanFly(x))",
+"G6": "∀x ((Bird(x) ∧ ¬(Ostrich(x) ∨ Penguin(x))) → CanFly(x))",
+"G7": "∀x ((Bird(x) ∧ ¬(x = ostrich ∨ x = penguin)) → CanFly(x))"
+},
+"8e0912c25261": {
+"G4": "∀x (Camera(x) → Takes(x, photos) ∧ (Record(x, videos) → Has(x, videoMode)))",
+"G6": "∀x (Camera(x) → (TakesPhotos(x) ∧ (¬CanRecordVideos(x) ∨ HasVideoMode(x))))",
+"G7": "∃x (Camera(x) ∧ Takes(x, photos) ∧ (¬CanRecord(x, videos) ∨ Has(x, videoMode)))"
+},
+"8e2af60603a6": {
+"G4": "∀x (Habitat(x) → (Wetland(x) ↔ (AreaOfLandSaturatedWithWater(x) ∧ SupportsDiverseRangeOfPlantAndAnimalLife(x) ∧ ServesAsVitalResourceForWaterFiltrationAndFloodControl(x))))",
+"G6": "∀x (Habitat(x) ∧ AreaOfLandSaturatedWithWater(x) ∧ SupportsDiverseRangeOfLife(x) ∧ ServesAsVitalResourceForWaterFiltrationAndFloodControl(x) → Wetland(x))",
+"G7": "∀x (Habitat(x) ∧ AreaOfLandSaturatedWithWater(x) ∧ SupportsDiverseLife(x) ∧ VitalForWaterFiltrationAndFloodControl(x) → Wetland(x))"
+},
+"91d5c2226fce": {
+"G4": "∀x (Bird(x) ∧ ¬(Ostrich(x) ∨ Penguin(x)) → CanFly(x))",
+"G6": "∀x ((Bird(x) ∧ ¬(Ostrich(x) ∨ Penguin(x))) → CanFly(x))",
+"G7": "∀x (Bird(x) ∧ ¬(x = ostrich ∨ x = penguin) → CanFly(x))"
+},
+"a8162ac21e89": {
+"G4": "∀x (Shape(x) → ((Triangle(x) ⊕ Square(x) ⊕ Circle(x)) ∨ MorphingShape(x)))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x (Shape(x) → ((Triangle(x) ∨ Square(x) ∨ Circle(x)) ∧ (¬MorphingShape(x) → ((Triangle(x) ∧ ¬Square(x) ∧ ¬Circle(x)) ∨ (¬Triangle(x) ∧ Square(x) ∧ ¬Circle(x)) ∨ (¬Triangle(x) ∧ ¬Square(x) ∧ Circle(x))))))"
+},
+"a829cff9f455": {
+"G4": "∀x (Bird(x) → (Flightless(x) ↔ ¬CanFly(x)))",
+"G6": "∀x (Bird(x) → (¬Flightless(x) → CanFly(x)))",
+"G7": "∀x (Bird(x) → (¬Flightless(x) → CanFly(x)))"
+},
+"ad9b0d8861ae": {
+"G4": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+"G6": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+"G7": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)"
+},
+"b1072e062626": {
+"G4": "Played(daveedDiggs, thomasJefferson)",
+"G6": "Played(daveedDiggs, thomasJefferson)",
+"G7": "Played(daveedDiggs, thomasJefferson)"
+},
+"c30e5b8245f0": {
+"G4": "∀x ((ElectronicDevice(x) ∧ ∃y (ReceiveFrom(x, y) ∧ Process(x, y) ∧ Signal(y) ∧ ExternalSource(y)) ∧ ConvertInto(x, images) ∧ ConvertInto(x, sounds) ∧ DisplayOn(x, screen)) → Television(x))",
+"G6": "∀x ((ElectronicDevice(x) ∧ ReceivesAndProcessesSignals(x, externalSource) ∧ ConvertsToImagesAndSounds(x) ∧ DisplaysOnScreen(x)) → Television(x))",
+"G7": "∀x ((ElectronicDevice(x) ∧ ReceivesAndProcessesSignalsFromExternalSource(x) ∧ ConvertsToImagesAndSoundsForDisplay(x)) → Television(x))"
+},
+"d90e2b28a98d": {
+"G4": "∀x (CitizenOf(x, lawtonPark) → UseZipCode(x, 98199))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x (CitizenOf(x, lawtonPark) → UsesZipCode(x, 98199))"
+},
+"e8808eed361f": {
+"G4": "∀x (Bird(x) → (¬Flightless(x) ↔ CanFly(x)))",
+"G6": "∀x (Flightless(x) → ¬CanFly(x))",
+"G7": "∀x (Bird(x) ∧ ¬Flightless(x) → CanFly(x))"
+},
+"e996b5cf8e04": {
+"G4": "∀x ((TouringMusician(x) ∧ PerformAt(x, newHavenSymphonyOrchestra)) → HasTemporaryRoleAt(x, newHavenSymphonyOrchestra))",
+"G6": "∀x ((TouringMusician(x) ∧ PerformAt(x, newHavenSymphonyOrchestra)) → TemporaryRoleAt(x, orchestra))",
+"G7": "∀x ((TouringMusician(x) ∧ PerformAt(x, newHavenSymphonyOrchestra)) → HasTemporaryRoleAt(x, newHavenSymphonyOrchestra))"
+},
+"00287aa4eb43": {
+"G4": "∀x ((Singer(x) ∧ ¬AttendInPerson(x, conference) ∧ Steal(x, governmentFunds) ∧ TrulyInnocent(x)) → (MakeLotOfMoney(x) ∨ ContributeTo(x, country)))",
+"G6": "∀x ((Singer(x) ∧ ¬AttendInPerson(x, conference) ∧ StealsFunds(x, government) ∧ TrulyInnocent(x) ∧ ¬Contributes(x, country)) → MakesLotOfMoney(x))",
+"G7": "∀x ((Singer(x) ∧ ¬AttendsInPerson(x, conference) ∧ Steals(x, governmentFunds)) → ((TrulyInnocent(x) ∧ ¬ContributesTo(x, country)) → MakesALotOfMoney(x)))"
+},
+"003098943647": {
+"G4": "∀x ((Advocate(x) ∧ From(x, china) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ RewardedWith(x, thirtyDollarGiftCard) ∧ ¬(Student(x) ∧ InClass(x))) → KnowsMagic(x))",
+"G6": "∀x (((Advocate(x) ∧ From(x, china) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ RewardedWith(x, 30GiftCard)) → (KnowsMagic(x) ∧ ¬StudentInClass(x))) ∧ ((Advocate(x) ∧ From(x, china) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ StudentInClass(x)) → ¬KnowsMagic(x)))",
+"G7": "∀x ((Advocate(x) ∧ From(x, china) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ RewardedWith(x, giftCard30)) → (Knows(x, magic) ↔ ¬StudentInClass(x)))"
+},
+"003dea3bbb1e": {
+"G4": "∀x ((Photographer(x) ∧ Commits(x, crime) ∧ LivesIn(x, y) ∧ LargeCity(y) ∧ HasTalent(x, cooking) ∧ ¬TakesMoreThanNormalFinancialRisks(x)) → BornIn(x, newYorkCity))",
+"G6": "∀x ((Photographer(x) ∧ CommitsCrime(x) ∧ LivesIn(x, largeCity) ∧ HasTalent(x, cooking) ∧ ¬TakesMoreThanNormalFinancialRisks(x)) → BornIn(x, newYorkCity))",
+"G7": "∀x ((Photographer(x) ∧ CommitsCrime(x) ∧ LivesIn(x, largeCity) ∧ HasTalent(x, cooking)) → (BornIn(x, newYorkCity) ∨ TakesMoreThanNormalFinancialRisks(x)))"
+},
+"001a7f0caf5a": {
+"G4": "∀x ((Legislator(x) ∧ At(x, boardGameNight) ∧ ∃y (CoffeeShop(y) ∧ VisitsRegularly(x, y)) ∧ CanDistinguishTasteOf(x, differentCondiments)) → (¬ElectedOfficial(x) → FriendOf(x, emily)))",
+"G6": "∀x ((Legislator(x) ∧ AtBoardGameNight(x) ∧ VisitsCoffeeShopRegularly(x) ∧ CanDistinguishTaste(x, condiments) ∧ ¬ElectedOfficial(x)) → FriendOfEmily(x))",
+"G7": "∀x ((Legislator(x) ∧ At(x, boardGameNight) ∧ VisitsRegularly(x, coffeeShop) ∧ CanDistinguishTaste(x, condiments)) → (FriendOf(x, emily) ↔ ¬ElectedOfficial(x)))"
+},
+"003f5ae91385": {
+"G4": "∀x ((Device(x) ∧ ForReading(x) ∧ UsedPrimarilyFor(x, mediaConsumption) ∧ SupportedBy(x, legs) ∧ ¬SoldAt(x, appleStores)) → In(x, french))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins) ∧ ¬SoldAt(x, appleStores)) → Baker(x))",
+"G7": "∀x ((Device(x) ∧ ForReading(x) ∧ UsedPrimarilyForMediaConsumption(x) ∧ SupportedBy(x, legs) ∧ ¬SoldAt(x, appleStores)) → InLanguage(x, french))"
+},
+"005470910ea0": {
+"G4": "∀x ((CommercialVessel(x) ∧ HasAtCenter(x, supermassiveBlackHole) ∧ WrittenBy(x, tolkien) ∧ HasBody(x, wooden)) → (Interactive(x) ∨ StoresEnergyIn(x, electricField)))",
+"G6": "∀x ((CommercialVessel(x) ∧ HasSupermassiveBlackHoleAtCenter(x) ∧ WrittenBy(x, tolkien) ∧ HasWoodenBody(x) ∧ ¬StoresEnergyInElectricField(x)) → Interactive(x))",
+"G7": "∀x ((CommercialVessel(x) ∧ HasCenter(x, supermassiveBlackHole) ∧ WrittenBy(x, tolkien) ∧ HasBody(x, wooden) ∧ ¬StoresEnergyIn(x, electricField)) → Interactive(x))"
+},
+"006ae9b9eefa": {
+"G4": "∀x ((AstronomicalObject(x) ∧ UsedFor(x, communication) ∧ Won(x, oscar) ∧ Sold(x, largeNumberOfCopies) ∧ CoveredIn(x, sugar)) → Grass(x))",
+"G6": "∀x ((AstronomicalObject(x) ∧ UsedPrimarilyFor(x, communication) ∧ WonOscar(x) ∧ SoldManyCopies(x) ∧ CoveredInSugar(x)) → Grass(x))",
+"G7": "∀x ((AstronomicalObject(x) ∧ UsedPrimarilyFor(x, communication) ∧ WonOscar(x) ∧ SoldLargeNumberOfCopies(x) ∧ CoveredIn(x, sugar)) → Grass(x))"
+},
+"0044c79e8635": {
+"G4": "∀x ((DigitalInteractiveArtwork(x) ∧ Freezes(x, food) ∧ FormedBy(x, volcanicActivity) ∧ (WornFor(x, variousOccasions) ∨ WornFor(x, variousPurposes)) ∧ ¬By(x, phoenix)) → MadeIn(x, maranello))",
+"G6": "∀x ((DigitalInteractiveArtwork(x) ∧ FreezesFood(x) ∧ FormedByVolcanicActivity(x) ∧ (WornForVariousOccasions(x) ∨ WornForVariousPurposes(x)) ∧ ¬ByPhoenix(x)) → MadeIn(x, maranello))",
+"G7": "∀x ((DigitalInteractiveArtwork(x) ∧ FreezesFood(x) ∧ FormedByVolcanicActivity(x) ∧ (WornForVariousOccasionsOrPurposes(x) ∧ ¬By(x, phoenix))) → MadeIn(x, maranello))"
+},
+"00724409fa14": {
+"G4": "∀x ((AwardWinningNovelist(x) ∧ ¬SentencedTo(x, punishment) ∧ CitizenOf(x, lawtonPark) ∧ Harmful(x) ∧ ¬Male(x)) → In(x, chemicalEndangerment))",
+"G6": "∀x ((AwardWinningNovelist(x) ∧ ¬SentencedToPunishment(x) ∧ CitizenOf(x, lawtonPark) ∧ Harmful(x) ∧ ¬Male(x)) → InChemicalEndangerment(x))",
+"G7": "∀x ((AwardWinningNovelist(x) ∧ ¬SentencedToPunishment(x) ∧ CitizenOf(x, lawtonPark) ∧ Harmful(x) ∧ ¬Male(x)) → InChemicalEndangerment(x))"
+},
+"00824710c7e8": {
+"G4": "∀x ((AmericanAirlinesAircraft(x) ∧ Food(x) ∧ Makes(x, tea) ∧ DisplayedOn(x, homepage) ∧ Has(x, highCarbohydrateContent)) → AdaptedFrom(x, originalVersion(x)))",
+"G6": "∀x ((Aircraft(x) ∧ Food(x) ∧ MakesTea(x) ∧ DisplayedOnHomepage(x) ∧ HighCarbohydrateContent(x) ∧ AmericanAirlines(x)) → AdaptedFromOriginal(x))",
+"G7": "∀x ((AmericanAirlinesAircraft(x) ∧ Food(x) ∧ Makes(x, tea) ∧ DisplayedOnHomepage(x) ∧ HighCarbohydrateContent(x)) → AdaptedFromOriginalVersion(x))"
+},
+"00828ce5e4a5": {
+"G4": "∀x (Wetland(x) ∧ UnderStress(x) ∧ ForReading(x) ∧ CoveredIn(x, sugar) → (¬DesignedFor(x, highPerformanceCalculations) → HelpSlowDown(x, globalWarming)))",
+"G6": "∀x ((Wetland(x) ∧ UnderStress(x) ∧ ForReading(x) ∧ CoveredInSugar(x) ∧ ¬DesignedForHighPerformanceCalculations(x)) → CanHelpSlowDownGlobalWarming(x))",
+"G7": "∀x ((Wetland(x) ∧ UnderStress(x) ∧ ForReading(x) ∧ CoveredIn(x, sugar) ∧ ¬DesignedFor(x, highPerformanceCalculations)) → CanHelpSlowDown(x, globalWarming))"
+},
+"00bd45f348e4": {
+"G4": "∀x ((ElectedOfficial(x) ∧ CanGetRhythmsRight(x) ∧ AttendsInPerson(x, conference)) → (LiveInColdPlace(x) ∨ AlwaysTiredInMorning(x)))",
+"G6": "∀x ((ElectedOfficial(x) ∧ CanGetRhythmsRight(x) ∧ AttendsInPerson(x, conference)) → (LivesInColdPlace(x) ∨ AlwaysTiredInMorning(x)))",
+"G7": "∀x ((ElectedOfficial(x) ∧ CanGetRhythmsRight(x) ∧ AttendsConferenceInPerson(x)) → (LivesInColdPlace(x) ∨ AlwaysTiredInMorning(x)))"
+},
+"00b5c2d6e5fd": {
+"G4": "∀x ((CertifiedPublicAccountant(x) ∧ LivesIn(x, california) ∧ ¬PlayALotOf(x, chess) ∧ LosesTime(x) ∧ WorksFromHome(x)) → BornIn(x, newYorkCity))",
+"G6": "∀x ((CertifiedPublicAccountant(x) ∧ LivesIn(x, california) ∧ ¬PlaysChess(x, aLot) ∧ LosesTime(x) ∧ WorksFromHome(x)) → BornIn(x, newYorkCity))",
+"G7": "∀x ((CertifiedPublicAccountant(x) ∧ LivesIn(x, california) ∧ ¬PlaysALotOf(x, chess) ∧ LosesTime(x) ∧ WorksFromHome(x)) → BornIn(x, newYorkCity))"
+},
+"00c2a7bcd3e2": {
+"G4": "∀x ((FacultyMember(x) ∧ OnPayroll(x) ∧ EligibleForOvertime(x) ∧ FamiliarWithLaws(x) ∧ ¬CriticizedBy(x, bossOf(x))) → InvitedToJoin(x, club))",
+"G6": "∀x ((FacultyMember(x) ∧ OnPayroll(x) ∧ EligibleForOvertimePay(x) ∧ FamiliarWithLaws(x) ∧ ¬CriticizedByBoss(x)) → InvitedToJoinClub(x))",
+"G7": "∀x ((FacultyMember(x) ∧ OnPayroll(x) ∧ EligibleForOvertimePay(x) ∧ FamiliarWithLaws(x) ∧ ¬CriticizedBy(x, BossOf(x))) → InvitedToJoinClub(x))"
+},
+"00c3eb560413": {
+"G4": "∀x ((EpicDrama(x) ∧ Possesses(x, adequateProcessingPower) ∧ OrbitsAround(x, star) ∧ ¬Changing(x) ∧ ¬UnderStress(x)) → ¬Unstable(x))",
+"G6": "∀x ((EpicDrama(x) ∧ Possesses(x, adequateProcessingPower) ∧ OrbitsAround(x, star) ∧ ¬Changing(x)) → (Unstable(x) → UnderStress(x)))",
+"G7": "∀x ((EpicDrama(x) ∧ Has(x, adequateProcessingPower) ∧ Orbits(x, star) ∧ ¬Changing(x) ∧ ¬UnderStress(x)) → ¬Unstable(x))"
+},
+"00ca15d23f32": {
+"G4": "∀x ((CenterbackPlayer(x) ∧ BadAt(x, chess) ∧ CriticizedBy(x, boss) ∧ ¬PublishJournals(x) ∧ YoungWorkingProfessional(x)) → RelaxedSchedule(x))",
+"G6": "∀x ((CenterbackPlayer(x) ∧ BadAtChess(x) ∧ CriticizedByBoss(x) ∧ ¬PublishesJournals(x) ∧ YoungWorkingProfessional(x)) → HasRelaxedSchedule(x))",
+"G7": "∀x ((CenterbackPlayer(x) ∧ BadAt(x, chess) ∧ CriticizedBy(x, boss) ∧ ¬Publishes(x, journals)) → (RelaxedSchedule(x) ↔ YoungWorkingProfessional(x)))"
+},
+"00c4d36cc3bf": {
+"G4": "∀x ((ProfessionalBasketballPlayer(x) ∧ FriendOf(x, emily) ∧ FlexibleSchedule(x) ∧ WorksFullTime(x) ∧ ¬EnjoysStateOwnership(x)) → CanGetRhythmsRight(x))",
+"G6": "∀x ((ProfessionalBasketballPlayer(x) ∧ FriendOf(x, emily) ∧ HasFlexibleSchedule(x) ∧ WorksFullTime(x) ∧ ¬Enjoys(x, stateOwnershipOfMeansOfProduction)) → CanGetRhythmsRight(x))",
+"G7": "∀x ((ProfessionalBasketballPlayer(x) ∧ FriendOf(x, emily) ∧ FlexibleSchedule(x) ∧ WorksFullTime(x)) → (CanGetRhythmsRight(x) ∧ ¬Enjoys(x, StateOwnershipOfMeansOfProduction)))"
+},
+"00c5a5381415": {
+"G4": "∀x ((MobilePhone(x) ∧ ¬MadeFrom(x, grain) ∧ Requires(x, frequentWatering) ∧ Has(x, twoConductivePlates) ∧ Emits(x, lowPollutants)) → WrittenBy(x, tolkien))",
+"G6": "∀x ((MobilePhone(x) ∧ ¬MadeFrom(x, grain) ∧ RequiresFrequentWatering(x) ∧ HasConductivePlates(x, two) ∧ EmitsLowPollutants(x)) → WrittenBy(x, tolkien))",
+"G7": "∀x ((MobilePhone(x) ∧ ¬MadeFrom(x, grain) ∧ RequiresFrequentWatering(x) ∧ HasTwoConductivePlates(x) ∧ EmitsLowLevelsOfPollutants(x)) → WrittenBy(x, tolkien))"
+},
+"010511ee5701": {
+"G4": "∀x ((Bulbophyllum(x) ∧ FreezesFood(x) ∧ MinimalEnvironmentalImpactDuringProduction(x) ∧ EvergreenTree(x) ∧ In(x, sizeTown)) → WrittenBy(x, tolkien))",
+"G6": "∀x ((Bulbophyllum(x) ∧ FreezesFood(x) ∧ MinimalEnvironmentalImpact(x) ∧ EvergreenTree(x) ∧ In(x, sizeTown)) → WrittenBy(x, tolkien))",
+"G7": "∀x ((Bulbophyllum(x) ∧ FreezesFood(x) ∧ MinimalEnvironmentalImpactDuringProduction(x) ∧ EvergreenTree(x) ∧ In(x, sizeTown)) → WrittenBy(x, tolkien))"
+},
+"00d090880e9c": {
+"G4": "∀x (Planet(x) ∧ ReadBy(x, tomas) ∧ HasHighCarbohydrateContent(x) ∧ PlayedByBowing(x) ∧ ¬HasCherryPickedData(x) → CanBeDisplayedOnElectronicDevices(x))",
+"G6": "∀x ((Planet(x) ∧ ReadBy(x, tomas) ∧ HighCarbohydrateContent(x) ∧ PlayedByBowing(x) ∧ ¬CherryPickedData(x)) → CanBeDisplayedOnElectronicDevices(x))",
+"G7": "∀x ((Planet(x) ∧ ReadBy(x, tomas) ∧ HighCarbohydrateContent(x) ∧ PlayedBy(x, bowing)) → (CanBeDisplayedOnElectronicDevices(x) ∧ ¬HasCherryPickedData(x)))"
+},
+"00eaa5d73256": {
+"G4": "∀x ((BigFanOf(x, popBands) ∧ BigFanOf(x, singers) ∧ ¬LoseTime(x) ∧ CatchSunrise(x)) → (PreferPlannedEconomy(x) ∨ Cool(x)))",
+"G6": "∀x ((FanOf(x, popBands) ∧ FanOf(x, singers) ∧ ¬LoseTime(x) ∧ CatchesSunrise(x) → (Prefers(x, plannedEconomy) ⊕ Cool(x)))",
+"G7": "∀x ((BigFanOfPopBandsAndSingers(x) ∧ ¬LoseTime(x) ∧ CatchSunrise(x)) → (Cool(x) ∨ Prefers(x, plannedEconomy)))"
+},
+"00fff2b05799": {
+"G4": "∀x ((Habitat(x) ∧ Has(x, companyLogo) ∧ In(x, urbanArea) ∧ ProducesSoundBy(x, vibratingStrings) ∧ Has(x, videoFeatures)) → SocialMediaApplication(x))",
+"G6": "∀x ((HasLogo(x, companyLogo) ∧ In(x, urbanArea) ∧ ProducesSoundByVibratingStrings(x) ∧ HasVideoFeatures(x)) → SocialMediaApplication(x))",
+"G7": "∀x ((Habitat(x) ∧ HasLogo(x, companyLogo) ∧ In(x, urbanArea) ∧ ProducesSoundByVibratingStrings(x) ∧ HasVideoFeatures(x)) → SocialMediaApplication(x))"
+},
+"00fabe2670a3": {
+"G4": "∀x ((OpenSourceSoftware(x) ∧ HasHighEngagementMetrics(x) ∧ StoresEnergyIn(x, electricField)) → (HasMinimalEnvironmentalImpactDuring(x, production) ∨ CanBeDisplayedOn(x, electronicDevices)))",
+"G6": "∀x ((OpenSourceSoftware(x) ∧ HighEngagementMetrics(x) ∧ StoresEnergyInElectricField(x)) → (MinimalEnvironmentalImpactDuringProduction(x) ∨ CanBeDisplayedOnElectronicDevices(x)))",
+"G7": "∀x ((Road(x) ∧ OpenSourceSoftware(x) ∧ HighEngagementMetrics(x) ∧ StoresEnergyIn(x, electricField)) → (HasMinimalEnvironmentalImpactDuringProduction(x) ↔ ¬CanBeDisplayedOn(x, electronicDevices)))"
+},
+"0107d16f9b58": {
+"G4": "∀x (MuseumShip(x) ∧ Electronic(x) ∧ Has(x, hollowBody) ∧ ¬DeemedReliable(x) → (AdaptedFromOriginal(x) ∨ MinimalEnvironmentalImpactDuringProduction(x)))",
+"G6": "∀x ((MuseumShip(x) ∧ Electronic(x) ∧ HollowBody(x) ∧ ¬Reliable(x)) → (AdaptedFromOriginal(x) ∨ MinimalEnvironmentalImpactDuringProduction(x)))",
+"G7": "∀x ((MuseumShip(x) ∧ Electronic(x) ∧ HollowBody(x) ∧ ¬DeemedReliable(x)) → (AdaptedFromOriginal(x) ↔ ¬MinimalEnvironmentalImpactDuringProduction(x)))"
+},
+"00fe89136f9e": {
+"G4": "∀x ((ArdentCommunist(x) ∧ ¬Has(x, earlyMorningHabits) ∧ ∃y (Committed(x, y) ∧ Crime(y)) ∧ WorksAt(x, pool) ∧ GoodAt(x, planning)) → ∃z (Stonefish(z) ∧ StungBy(x, z)))",
+"G6": "∀x ((ArdentCommunist(x) ∧ ¬HasEarlyMorningHabits(x) ∧ HasCommittedCrime(x) ∧ WorksAt(x, pool) ∧ GoodAt(x, planning)) → StungBy(x, stonefish))",
+"G7": "∀x ((ArdentCommunist(x) ∧ ¬HasHabit(x, earlyMorning) ∧ CommittedCrime(x) ∧ WorksAt(x, pool) ∧ GoodAt(x, planning)) → StungBy(x, stonefish))"
+},
+"01136b175063": {
+"G4": "∀x ((Cell(x) ∧ HighEngagementMetrics(x) ∧ MadeFrom(x, grain) ∧ Has(x, flatSurface) ∧ ¬UsedIn(x, labComputer)) → AreaOfLandSaturatedWithWater(x))",
+"G6": "∀x ((Cell(x) ∧ HighEngagementMetrics(x) ∧ MadeFromGrain(x) ∧ FlatSurface(x) ∧ ¬UsedInLabComputer(x)) → AreaOfLandSaturatedWithWater(x))",
+"G7": "∀x ((Cell(x) ∧ HasHighEngagementMetrics(x) ∧ MadeFrom(x, grain) ∧ HasFlatSurface(x) ∧ ¬UsedIn(x, labComputer)) → AreaOfLandSaturatedWithWater(x))"
+},
+"011b55b1b570": {
+"G4": "∀x ((LinearFunction(x) ∧ DesignedBy(x, apple) ∧ DevelopedToProvideImmunityAgainst(x, infectiousDiseases) ∧ CanOnlyUseContentFrom(x, inputDocuments) ∧ Food(x)) → Perfect(x))",
+"G6": "∀x ((LinearFunction(x) ∧ DesignedBy(x, apple) ∧ DevelopedToProvideImmunity(x, infectiousDiseases) ∧ CanOnlyUseContentFromInputDocuments(x) ∧ Food(x)) → Perfect(x))",
+"G7": "∀x ((LinearFunction(x) ∧ DesignedBy(x, apple) ∧ DevelopedToProvide(x, immunityAgainstInfectiousDiseases) ∧ CanOnlyUseContentFromInputDocuments(x) ∧ Food(x)) → Perfect(x))"
+},
+"01c976b4558e": {
+"G4": "∀x ((AlwaysTiredInMorning(x) ∧ LivesIn(x, largeCity) ∧ EnrolledIn(x, academicProgram) ∧ ¬WorksFullTime(x)) → InvitedToJoin(x, club))",
+"G6": "∀x ((AlwaysTiredInMorning(x) ∧ LivesIn(x, largeCity) ∧ EnrolledInAcademicProgram(x) ∧ ¬WorksFullTime(x)) → InvitedToJoin(x, club))",
+"G7": "∀x ((AlwaysTiredInMorning(x) ∧ LivesInLargeCity(x) ∧ EnrolledInAcademicProgram(x) ∧ ¬WorksFullTime(x)) → InvitedToJoinClub(x))"
+},
+"01364a85e266": {
+"G4": "∀x ((ProfessionalBasketballPlayer(x) ∧ Has(x, relaxedSchedule) ∧ NeighborOf(x, michael) ∧ ¬American(x)) → (WorksRegularly(x) → Has(x, temporaryRoleAtOrchestra)))",
+"G6": "∀x ((ProfessionalBasketballPlayer(x) ∧ HasRelaxedSchedule(x) ∧ NeighborOf(x, michael) ∧ ¬American(x)) → ((WorksRegularly(x) → HasTemporaryRoleAt(x, orchestra)) ∧ ¬WorksRegularly(x) → ¬HasTemporaryRoleAt(x, orchestra)))",
+"G7": "∀x ((ProfessionalBasketballPlayer(x) ∧ HasSchedule(x, relaxed) ∧ NeighborOf(x, michael) ∧ ¬American(x)) → (TemporaryRoleAtOrchestra(x) ↔ WorksRegularly(x)))"
+},
+"0128c50e163a": {
+"G4": "∀x ((OperaSinger(x) ∧ LivesIn(x, northAmerica) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ ¬KnowAbout(x, breathFirstSearch) ∧ ¬Uncomfortable(x)) → ¬PublishesJournals(x))",
+"G6": "∀x ((OperaSinger(x) ∧ LivesIn(x, northAmerica) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ ¬KnowsAbout(x, breathFirstSearch) ∧ ¬Uncomfortable(x)) → ¬PublishesJournals(x))",
+"G7": "∀x ((OperaSinger(x) ∧ LivesIn(x, northAmerica) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ ¬Knows(x, breathFirstSearch) ∧ ¬Uncomfortable(x)) → ¬Publishes(x, journals))"
+},
+"02105739cb96": {
+"G4": "∀x ((CenterbackPlayer(x) ∧ Commits(x, crime) ∧ NeighborOf(x, michael) ∧ VisitsRegularly(x, coffeeShop) ∧ ¬WorksIn(x, entertainmentIndustry)) → Catches(x, sunrise))",
+"G6": "∀x ((CenterbackPlayer(x) ∧ CommitsCrime(x) ∧ NeighborOf(x, michael) ∧ VisitsRegularly(x, coffeeShop) ∧ ¬WorksIn(x, entertainmentIndustry)) → CatchesSunrise(x))",
+"G7": "∀x ((CenterbackPlayer(x) ∧ CommitsCrime(x) ∧ NeighborOf(x, michael) ∧ VisitsRegularly(x, coffeeShop) ∧ ¬WorksIn(x, entertainmentIndustry)) → CatchesSunrise(x))"
+},
+"0204779a7f56": {
+"G4": "∀x ((Game(x) ∧ RequiresToScore(x, sphericalBall, goals) ∧ PrecededBy(x, dataProcessing) ∧ Involves(x, twoOpposingTeams) ∧ ¬HasTie(x)) → Releases(x, heat))",
+"G6": "∀x ((Game(x) ∧ Requires(x, sphericalBall) ∧ ToScoreGoals(x) ∧ PrecededBy(x, dataProcessing) ∧ Involves(x, twoOpposingTeams) ∧ ¬HasTie(x)) → ReleasesHeat(x))",
+"G7": "∀x ((Game(x) ∧ RequiresUseOf(x, sphericalBall) ∧ PrecededBy(x, dataProcessing) ∧ Involves(x, twoOpposingTeams)) → (Releases(x, heat) ↔ HasTie(x)))"
+},
+"0202157e6350": {
+"G4": "∀x ((PhDStudent(x) ∧ WorksMoreThanHoursPerWeek(x, 40) ∧ ¬EmployeeOf(x, governmentAgency) ∧ PresentsAtConference(x, theirWork)) → (Uncomfortable(x) ↔ ¬YoungWorkingProfessional(x)))",
+"G6": "∀x ((PhDStudent(x) ∧ WorksMoreThan(x, 40) ∧ ¬EmployeeOf(x, governmentAgency) ∧ PresentsAtConference(x)) → (Uncomfortable(x) ∧ ¬YoungWorkingProfessional(x)))",
+"G7": "∀x ((PhDStudent(x) ∧ WorksMoreThan(x, 40, hoursPerWeek) ∧ ¬EmployeeOf(x, governmentAgency) ∧ PresentsWorkAt(x, conference) ∧ ¬YoungWorkingProfessional(x)) → Uncomfortable(x))"
+},
+"0250fbebd403": {
+"G4": "∀x ((Movie(x) ∧ Has(x, fourWheelDrive) ∧ Exceeds(x, itsElasticLimit) ∧ IntendedToBeDrivenAt(x, moderateSpeeds) ∧ ¬In(x, manhattan)) → UsedFor(x, writing))",
+"G6": "∀x ((HasFourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ IntendedForModerateSpeeds(x) ∧ ¬InManhattan(x)) → UsedForWriting(x))",
+"G7": "∀x ((Movie(x) ∧ HasFeature(x, fourWheelDrive) ∧ ExceedsElasticLimit(x) ∧ IntendedFor(x, moderateSpeeds)) → (UsedForWriting(x) ∧ ¬In(x, manhattan)))"
+},
+"027127d81a31": {
+"G4": "∀x (ElectronicComponent(x) ∧ Dustless(x) ∧ Requires(x, moderateWater) ∧ AreaOfLandSaturatedWithWater(x) ∧ ¬SoldAt(x, appleStores) → CoveredIn(x, sugar))",
+"G6": "∀x ((ElectronicComponent(x) ∧ Dustless(x) ∧ RequiresModerateWater(x) ∧ AreaOfLandSaturatedWithWater(x) ∧ ¬SoldAt(x, appleStores)) → CoveredInSugar(x))",
+"G7": "∀x ((ElectronicComponent(x) ∧ Dustless(x) ∧ Requires(x, moderateWater) ∧ AreaOfLandSaturatedWithWater(x) ∧ ¬SoldAt(x, appleStores)) → CoveredIn(x, sugar))"
+},
+"02aa04e03420": {
+"G4": "∀x ((UndergraduateStudent(x) ∧ WritingNovel(x) ∧ British(x) ∧ ¬Hardworking(x) ∧ ¬Steals(x, governmentFunds)) → ¬European(x))",
+"G6": "∀x ((UndergraduateStudent(x) ∧ WritingNovel(x) ∧ British(x) ∧ ¬Hardworking(x) ∧ ¬StealsGovernmentFunds(x)) → ¬European(x))",
+"G7": "∀x ((UndergraduateStudent(x) ∧ Writing(x, novel) ∧ British(x) ∧ ¬Hardworking(x) ∧ ¬Steals(x, governmentFunds)) → ¬European(x))"
+},
+"0272bb5a14c7": {
+"G4": "∀x (Vaccine(x) ∧ Receives(x, voice) ∧ Receives(x, data) ∧ UsedFor(x, drinking) ∧ Emits(x, light) → (Preserves(x, food) → DesignedFor(x, highPerformanceCalculations)))",
+"G6": "∀x ((ReceivesVoice(x) ∧ ReceivesData(x) ∧ UsedForDrinking(x) ∧ EmitsLight(x)) → (PreservesFood(x) → DesignedForHighPerformanceCalculations(x)))",
+"G7": "∀x ((Vaccine(x) ∧ Receives(x, voice) ∧ Receives(x, data) ∧ UsedFor(x, drinking) ∧ Emits(x, light)) → (Preserves(x, food) → DesignedFor(x, highPerformanceCalculations)))"
+},
+"02724fb8360d": {
+"G4": "∀x ((Tablet(x) ∧ ¬By(x, phoenix) ∧ In(x, sizeTown) ∧ RisesProminentlyAbove(x, itsSurroundings) ∧ ¬Orbits(x, star)) → InvolvesCompetitionAgainst(x, anotherTeam))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((Tablet(x) ∧ ¬By(x, phoenix) ∧ In(x, sizeTown) ∧ RisesProminentlyAbove(x, surroundings)) → ( (∃y (Team(y) ∧ CompetesAgainst(x, y))) ∨ Orbits(x, star) ))"
+},
+"02b1d2977904": {
+"G4": "∀x ((WhiteCollarWorker(x) ∧ European(x) ∧ AttendsYogaClassesRegularly(x) ∧ In(x, big3) ∧ ¬ThinksMadeUp(x, santaClaus)) → At(x, boardGameNight))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((WhiteCollarWorker(x) ∧ European(x) ∧ AttendsYogaRegularly(x) ∧ InBig3(x) ∧ ¬Thinks(x, MadeUp(santaClaus))) → AtBoardGameNight(x))"
+},
+"02d4b57e2c60": {
+"G4": "∀x ((MobilePhone(x) ∧ FormedByVolcanicActivity(x) ∧ ¬HasSphericalShape(x) ∧ SocialMedia(x)) → (FreeToModify(x) → RequiresRefrigeration(x)))",
+"G6": "∀x ((FormedBy(x, volcanicActivity) ∧ ¬Spherical(x) ∧ SocialMedia(x)) → (RequiresRefrigeration(x) ↔ FreeToModify(x)))",
+"G7": "∀x ((MobilePhone(x) ∧ FormedBy(x, volcanicActivity) ∧ ¬SphericalShape(x) ∧ SocialMedia(x) ∧ FreeToModify(x)) → Requires(x, refrigeration))"
+},
+"02f7bb8e913c": {
+"G4": "∀x ((Bestseller(x) ∧ ¬WornForVariousOccasionsOrPurposes(x) ∧ Popular(x) ∧ CanBeDisplayedOnElectronicDevices(x) ∧ Software(x)) → ShippedFrom(x, colombia))",
+"G6": "∀x ((Bestseller(x) ∧ ¬WornForVariousOccasionsOrPurposes(x) ∧ Popular(x) ∧ CanBeDisplayedOnElectronicDevices(x) ∧ Software(x)) → ShippedFromColombia(x))",
+"G7": "∀x ((Bestseller(x) ∧ ¬WornForVariousOccasionsOrPurposes(x) ∧ Popular(x) ∧ CanBeDisplayedOnElectronicDevices(x)) → (Software(x) → ShippedFrom(x, colombia)))"
+},
+"0318564696af": {
+"G4": "∀x ((ConvictedCriminal(x) ∧ ¬FriendOf(x, emily) ∧ DependentOn(x, caffeine) ∧ Has(x, relaxedSchedule) ∧ ¬KnowsHowToUse(x, queue)) → ¬Famous(x))",
+"G6": "∀x ((ConvictedCriminal(x) ∧ ¬FriendOf(x, emily) ∧ CaffeineDependent(x) ∧ RelaxedSchedule(x) ∧ ¬KnowsHowToUse(x, queue) → ¬Famous(x)))",
+"G7": "∀x ((ConvictedCriminal(x) ∧ ¬FriendOf(x, emily) ∧ DependentOn(x, caffeine) ∧ HasSchedule(x, relaxed) ∧ ¬KnowsHowToUse(x, queue)) → ¬Famous(x))"
+},
+"0324eb417815": {
+"G4": "∀x ((Furniture(x) ∧ OpenToPublic(x) ∧ ControlledBy(x, managers) ∧ ReliesOnFor(x, electricPower, propulsion) ∧ ¬MadeIn(x, maranello)) → ¬CreatedUsing(x, digitalTools))",
+"G6": "∀x ((PieceOfFurniture(x) ∧ OpenToPublic(x) ∧ ControlledByManagers(x) ∧ ReliesOnElectricPowerForPropulsion(x)) → (CreatedUsingDigitalTools(x) → MadeIn(x, maranello)))",
+"G7": "∀x ((PieceOfFurniture(x) ∧ OpenToPublic(x) ∧ ControlledBy(x, managers) ∧ ReliesOn(x, electricPower, propulsion) ∧ ¬MadeIn(x, maranello)) → ¬CreatedUsing(x, digitalTools))"
+},
+"0361da11ed5a": {
+"G4": "∀x ((CelestialBody(x) ∧ WrittenIn(x, python) ∧ HasAtCenter(x, supermassiveBlackHole) ∧ CanHelpSlowDown(x, globalWarming) ∧ ¬DeemedReliable(x)) → ¬AreaOfLandSaturatedWithWater(x))",
+"G6": "∀x ((WrittenInPython(x) ∧ HasSupermassiveBlackHoleAtCenter(x) ∧ CanHelpSlowDownGlobalWarming(x) ∧ ¬Reliable(x)) → ¬AreaOfLandSaturatedWithWater(x))",
+"G7": "∀x ((CelestialBody(x) ∧ WrittenIn(x, python) ∧ HasCenter(x, supermassiveBlackHole) ∧ CanHelp(x, slowDownGlobalWarming)) → (¬AreaOfLandSaturatedWithWater(x) ∨ Reliable(x)))"
+},
+"0355148f70a7": {
+"G4": "∀x (Rapper(x) ∧ AttendsInPerson(x, conference) ∧ ¬RewardedWith(x, giftCard30) ∧ (∀t (Morning(t) → TiredAt(x, t))) → (¬At(x, businessConference) → ShortSighted(x)))",
+"G6": "∀x ((Rapper(x) ∧ AttendsInPerson(x, conference) ∧ ¬RewardedWith(x, giftCard30) ∧ ¬ShortSighted(x) ∧ AlwaysTiredInMorning(x)) → ¬AtBusinessConference(x))",
+"G7": "∀x ((Rapper(x) ∧ AttendsInPerson(x, conference) ∧ ¬RewardedWith(x, giftCard30)) ∧ (∀t (AlwaysTiredInMorning(x, t)) → (ShortSighted(x) ↔ ¬At(x, businessConference))))"
+},
+"036df52e8178": {
+"G4": "∀x (Sloth(x) ∧ GivesBirthTo(x, liveYoung) ∧ (Possesses(x, hair) ∨ Possesses(x, fur)) ∧ EatsALot(x) ∧ Needs(x, largeTerritory) → Nonflying(x))",
+"G6": "∀x ((Sloth(x) ∧ GivesBirthToLiveYoung(x) ∧ (PossessesHair(x) ∨ PossessesFur(x)) ∧ EatsALot(x) ∧ NeedsLargeTerritory(x)) → NonFlying(x))",
+"G7": "∀x ((Sloth(x) ∧ GivesBirthToLiveYoung(x) ∧ (HasHair(x) ∨ HasFur(x)) ∧ EatsALot(x) ∧ NeedsLargeTerritory(x)) → Nonflying(x))"
+},
+"0380e043eaae": {
+"G4": "∀x (Game(x) ∧ PublicHoliday(x) ∧ IncreaseIn(x, entropy) ∧ PrecededBy(x, dataProcessing) → (¬FavorFormationOf(x, products) → RequireToScore(x, sphericalBall, goals)))",
+"G6": "∀x ((Game(x) ∧ PublicHoliday(x) ∧ IncreaseInEntropy(x) ∧ PrecededByDataProcessing(x) ∧ ¬FavorsFormationOfProducts(x)) → RequiresSphericalBallToScoreGoals(x))",
+"G7": "∀x (((Game(x) ∧ PublicHoliday(x) ∧ IncreaseEntropy(x) ∧ PrecededBy(x, DataProcessing)) ∧ ¬FavorsFormationOfProducts(x)) → RequiresUseOf(x, SphericalBallToScoreGoals))"
+},
+"03a899789a95": {
+"G4": "∀x ((InBig3(x) ∧ FoundGuilty(x) ∧ CriticizedBy(x, bossOf(x))) → (¬CanUseVeryEfficiently(x, rightFoot) → LivesIn(x, crampedResidentialBuildings)))",
+"G6": "∀x ((In(x, big3) ∧ FoundGuilty(x) ∧ CriticizedByBoss(x)) → (LivesIn(x, crampedResidentialBuildings) ∨ CanUseRightFootVeryEfficiently(x)))",
+"G7": "∀x ((In(x, big3) ∧ FoundGuilty(x) ∧ CriticizedBy(x, BossOf(x))) → (LivesIn(x, crampedResidentialBuildings) ∨ CanUseRightFootEfficiently(x)))"
+},
+"03cd9aca7a23": {
+"G4": "∀x ((BadAt(x, chess) ∧ CitizenOf(x, lawtonPark) ∧ ¬FriendOf(emily, x)) → (European(x) ∨ RegularlyVisit(x, coffeeShop)))",
+"G6": "∀x ((BadAt(x, chess) ∧ CitizenOf(x, lawtonPark) ∧ ¬FriendOf(emily, x) → (European(x) ∨ RegularlyVisits(x, coffeeShop)))",
+"G7": "∀x (((BadAt(x, chess) ∧ CitizenOf(x, lawtonPark) ∧ ¬FriendOf(x, emily)) ∧ ¬VisitsRegularly(x, coffeeShop)) → European(x))"
+},
+"03d891228729": {
+"G4": "∀x ((TypeOfLandform(x) ∧ In(x, manhattan) ∧ Has(x, verticalColumn)) → ((In(x, urbanArea) → Magnifies(x, distantObjects)) ∨ StapleInManyCultures(x)))",
+"G6": "∀x ((Landform(x) ∧ In(x, manhattan) ∧ HasVerticalColumn(x) ∧ In(x, urbanArea) ∧ ¬StapleInManyCultures(x)) → MagnifiesDistantObjects(x))",
+"G7": "∃x (LandformType(x) ∧ In(x, manhattan) ∧ HasVerticalColumn(x) ∧ (In(x, urbanArea) ∧ ¬StapleInManyCultures(x)) → MagnifiesDistantObjects(x))"
+},
+"040b61ebc9c3": {
+"G4": "∀x ((Artwork(x) ∧ Water(x) ∧ ¬HasFixedShape(x) ∧ ¬HasFixedVolume(x) ∧ MeasurementOf(x, brainActivity) ∧ ¬DesignedBy(x, apple)) → ¬PlayedByBowing(x))",
+"G6": "∀x ((Artwork(x) ∧ Water(x) ∧ ¬HasFixedShape(x) ∧ ¬HasFixedVolume(x) ∧ MeasuresBrainActivity(x) ∧ PlayedByBowing(x)) → ¬∃y (DesignedBy(y, apple) ∧ x = y))",
+"G7": "∀x ((Artwork(x) ∧ Water(x) ∧ ¬HasFixedShapeAndVolume(x) ∧ MeasuresBrainActivity(x) ∧ ¬DesignedBy(x, apple)) → ¬PlayedByBowing(x))"
+},
+"044e78afc300": {
+"G4": "∀x ((Plane(x) ∧ DesignedBy(x, apple) ∧ SoldIn(x, uS) ∧ Fruit(x) ∧ ¬Requires(x, refrigeration)) → Extractive(x))",
+"G6": "∀x ((DesignedBy(x, apple) ∧ SoldIn(x, uS) ∧ Fruit(x) ∧ ¬RequiresRefrigeration(x)) → Extractive(x))",
+"G7": "∀x ((Plane(x) ∧ DesignedBy(x, apple) ∧ SoldIn(x, uS) ∧ Fruit(x) ∧ ¬Requires(x, refrigeration)) → Extractive(x))"
+},
+"0468677948c7": {
+"G4": "∀x ((Habitat(x) ∧ Portable(x) ∧ Extractive(x) ∧ Noninvasive(x) ∧ ¬In(x, crotonRiverWatershed)) → ¬Has(x, skisOnTheFront))",
+"G6": "∀x ((Portable(x) ∧ Extractive(x) ∧ NonInvasive(x) ∧ HasSkisOnFront(x)) → ∃y (Habitat(y) ∧ In(y, crotonRiverWatershed) ∧ x = y))",
+"G7": "∀x ((Habitat(x) ∧ Portable(x) ∧ Extractive(x) ∧ Noninvasive(x) ∧ ¬In(x, crotonRiverWatershed)) → ¬HasSkisOnFront(x))"
+},
+"0478ee92b867": {
+"G4": "∀x ((Camera(x) ∧ ¬OrbitAround(x, star) ∧ DesignedBy(x, apple) ∧ ProducesSoundThrough(x, vibrationOfStretchedStrings)) → (Has(x, sphericalShape) ↔ Has(x, skisOnFront)))",
+"G6": "∀x ((¬OrbitsAround(x, star) ∧ DesignedBy(x, apple) ∧ ProducesSoundThrough(x, vibrationOfStretchedStrings) ∧ HasSkisOn(x, front)) → SphericalShape(x))",
+"G7": "∀x ((Camera(x) ∧ ¬OrbitsAround(x, star) ∧ DesignedBy(x, apple) ∧ ProducesSoundThrough(x, vibrationOfStretchedStrings)) → (HasSphericalShape(x) ↔ HasSkisOnFront(x)))"
+},
+"04b49203d97c": {
+"G4": "∀x (NonConvexFunction(x) ∧ By(x, phoenix) ∧ ¬In(x, french) ∧ MadeFrom(x, metal) ∧ ¬CanBeDeployedOn(x, artilleryFortifications) → Biodegradable(x))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((NonConvexFunction(x) ∧ By(x, phoenix) ∧ ¬In(x, french) ∧ MadeFrom(x, metal) ∧ ¬CanBeDeployedOn(x, artilleryFortifications)) → Biodegradable(x))"
+},
+"04c80c3dfa74": {
+"G4": "∀x ((Mountain(x) ∧ MadeFrom(x, grain) ∧ ProducesSoundThrough(x, vibrationOfStrings) ∧ Addictive(x) ∧ PlayedBy(x, plucking)) → Receives(x, voice) ∧ Receives(x, data))",
+"G6": "∀x ((Mountain(x) ∧ MadeFrom(x, grain) ∧ ProducesSoundThroughVibration(x, strings) ∧ Addictive(x) ∧ PlayedByPlucking(x)) → ReceivesVoiceAndData(x))",
+"G7": "∀x ((Mountain(x) ∧ MadeFrom(x, grain) ∧ ProducesSoundThroughVibrationOfStrings(x) ∧ Addictive(x) ∧ PlayedByPlucking(x)) → Receives(x, voiceAndData))"
+},
+"04f1114d2955": {
+"G4": "∀x ((Drug(x) ∧ FlowsTo(x, bronx) ∧ ¬Has(x, colorfulFlowers) ∧ Has(x, batteryStorageSystem) ∧ ¬PlayedWith(x, bow)) → PeerReviewed(x))",
+"G6": "∀x ((Drug(x) ∧ FlowsTo(x, bronx) ∧ ¬HasColorfulFlowers(x) ∧ HasBatteryStorageSystem(x) ∧ ¬PlayedWithBow(x)) → PeerReviewed(x))",
+"G7": "∀x ((Drug(x) ∧ FlowsTo(x, bronx) ∧ ¬HasColorfulFlowers(x) ∧ HasBatteryStorageSystem(x) ∧ ¬PlayedWithBow(x)) → PeerReviewed(x))"
+},
+"05418cf3cdd8": {
+"G4": "∀x ((Plane(x) ∧ Labeled(x) ∧ FixedShape(x) ∧ FixedVolume(x) ∧ MadeOf(x, reinforcedConcrete) ∧ ¬Big(x)) → ¬OpenSourceSoftware(x))",
+"G6": "∀x ((Plane(x) ∧ Labeled(x) ∧ HasFixedShape(x) ∧ HasVolume(x) ∧ MadeOf(x, reinforcedConcrete) ∧ ¬OpenSourceSoftware(x)) → ¬Big(x))",
+"G7": "∀x ((Plane(x) ∧ Labeled(x) ∧ HasFixedShapeAndVolume(x) ∧ MadeOf(x, reinforcedConcrete)) → (¬OpenSourceSoftware(x) ∨ Big(x)))"
+},
+"04d0f8fd3c5a": {
+"G4": "∀x ((ComesToWorkEveryDayWith(x, positiveAttitude) ∧ CanPackAndMoveOutOfRoomEasily(x) ∧ LivesIn(x, northAmerica)) → (¬Female(x) → Uncomfortable(x)))",
+"G6": "∀x ((ComesToWorkEveryDay(x) ∧ PositiveAttitude(x) ∧ CanPackAndMoveOut(x) ∧ LivesIn(x, northAmerica)) → (Uncomfortable(x) ↔ ¬Female(x)))",
+"G7": "∀x ((ComesToWorkEveryDayWithPositiveAttitude(x) ∧ CanPackAndMoveOutOfRoomEasily(x) ∧ LivesIn(x, northAmerica)) → (Uncomfortable(x) ↔ Female(x)))"
+},
+"04f8c0a7da92": {
+"G4": "∀x ((Cup(x) ∧ Provides(x, spatialResolutionOfBrains) ∧ Stimulates(x, bodyImmuneResponse) ∧ AcquiredBy(x, delta) ∧ ¬ConsumedAsPrimaryEnergySource(x)) → Exceeds(x, elasticLimit))",
+"G6": "∀x (CanMake(x, cookies) ∧ CanMake(x, muffins) → Baker(x))",
+"G7": "∀x ((Cup(x) ∧ Provides(x, spatialResolutionOfBrains) ∧ Stimulates(x, bodysImmuneResponse) ∧ AcquiredBy(x, delta)) → (ExceedsElasticLimit(x) ∨ ConsumedAsPrimaryEnergySource(x)))"
+},
+"051abd925b40": {
+"G4": "∀x ((Invertebrate(x) ∧ ¬ProduceMilkToNourish(x, offspring) ∧ CanRead(x) ∧ In(x, antarctica) ∧ ¬(WarmBlooded(x) ∧ Vertebrate(x))) → Sleep(x))",
+"G6": "∀x ((Invertebrate(x) ∧ ¬ProducesMilk(x) ∧ CanRead(x) ∧ In(x, antarctica) ∧ ¬WarmBloodedVertebrate(x)) → Sleeps(x))",
+"G7": "∀x ((Invertebrate(x) ∧ ¬ProducesToNourish(x, milk) ∧ CanRead(x) ∧ In(x, antarctica) ∧ ¬(WarmBlooded(x) ∧ Vertebrate(x))) → Sleeps(x))"
+},
+"05453fff17a7": {
+"G4": "∀x ((Eukaryote(x) ∧ Has(x, twoConductivePlates) ∧ CanHelpSlowDown(x, globalWarming) ∧ UsedPrimarilyFor(x, mediaConsumption) ∧ ¬Heavy(x)) → Possesses(x, adequateProcessingPower))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∃x (Eukaryote(x) ∧ Has(x, twoConductivePlates) ∧ CanHelpSlowDown(x, globalWarming) ∧ ((UsedPrimarilyFor(x, mediaConsumption) ∧ ¬Heavy(x)) → Possesses(x, adequateProcessingPower)))"
+},
+"05949124f502": {
+"G4": "∀x ((Project(x) ∧ ¬In(x, sizeTown) ∧ Contains(x, vitaminC) ∧ Perfect(x) ∧ ¬Extractive(x)) → Produces(x, powerfulEnergeticJetOfParticles))",
+"G6": "∀x ((Project(x) ∧ ¬In(x, sizeTown) ∧ Contains(x, vitaminC) ∧ Perfect(x) ∧ ¬Extractive(x)) → Produces(x, powerfulAndEnergeticJetOfParticles))",
+"G7": "∀x ((Project(x) ∧ ¬In(x, sizeTown) ∧ Contains(x, vitaminC) ∧ Perfect(x) ∧ ¬Extractive(x)) → Produces(x, powerfulEnergeticJetOfParticles))"
+},
+"059cba71f341": {
+"G4": "∀x ((MakesLotOfMoney(x) ∧ FamiliarWithLaws(x) ∧ American(x) ∧ ¬FriendOf(x, emily)) → EnjoysStateOwnershipOfMeansOfProduction(x))",
+"G6": "∀x ((MakesLotOfMoney(x) ∧ FamiliarWithLaws(x) ∧ American(x) ∧ ¬FriendOfEmily(x)) → Enjoys(x, stateOwnershipOfMeansOfProduction))",
+"G7": "∀x ((MakesALotOfMoney(x) ∧ FamiliarWith(x, laws) ∧ American(x) ∧ ¬FriendOf(x, emily)) → Enjoys(x, stateOwnershipOfMeansOfProduction))"
+},
+"059c7e0fc656": {
+"G4": "∀x ((Essayist(x) ∧ Attend(x, conference) ∧ ¬AddictedTo(x, coffee) ∧ Love(x, opera)) → (DependentOn(x, caffeine) ∨ (HasALotOf(x, musicDecorations) ∧ In(x, theirRoom))))",
+"G6": "∀x ((Attends(x, conference) ∧ ¬AddictedTo(x, coffee) ∧ Loves(x, opera)) → CaffeineDependent(x))",
+"G7": "∀x ((Essayist(x) ∧ Attends(x, conference) ∧ ¬AddictedTo(x, coffee) ∧ Loves(x, opera) ∧ ¬HasALotOfMusicDecorationsInRoom(x)) → DependentOn(x, caffeine))"
+},
+"05abac564515": {
+"G4": "∀x ((Tablet(x) ∧ UsesMethodology(x, rigorous) ∧ UsedFor(x, internetBrowsing) ∧ HasAtCenter(x, supermassiveBlackHole) ∧ ¬Round(x)) → ¬UsedFor(x, mediaConsumption))",
+"G6": "∀x ((Tablet(x) ∧ UsesRigorousMethodology(x) ∧ PrimarilyForInternetBrowsing(x) ∧ HasSupermassiveBlackHoleAtCenter(x) ∧ ¬Round(x)) → ¬PrimarilyForMediaConsumption(x))",
+"G7": "∀x ((Tablet(x) ∧ Uses(x, rigorousMethodology) ∧ UsedPrimarilyFor(x, internetBrowsing) ∧ HasCenter(x, supermassiveBlackHole)) → (¬UsedPrimarilyFor(x, mediaConsumption) ∨ Round(x)))"
+},
+"05e5ebb6a5f9": {
+"G4": "∀x ((HasHighWinRatio(x) ∧ ProvidedWith(x, deliciousMeals) ∧ HasJobAt(x, school)) → (AttendsRemotely(x, conference) ∨ AddictedTo(x, coffee)))",
+"G6": "∀x (((HighWinRatio(x) ∧ DeliciousMeals(x) ∧ JobAtSchool(x)) ∧ ¬AddictedToCoffee(x)) → AttendsRemotely(x, conference))",
+"G7": "∀x ((HasHighWinRatio(x) ∧ ProvidedWithDeliciousMeals(x) ∧ HasJobAt(x, school)) → (AttendsConferenceRemotely(x) ↔ ¬AddictedToCoffee(x)))"
+},
+"05cf69aef8e2": {
+"G4": "∀x ((Capacitor(x) ∧ ¬SeparatedBy(x, insulator) ∧ TakesPhotos(x) ∧ EnvironmentFriendly(x) ∧ ¬RequiresGroup(x)) → IntendedToBeDrivenAt(x, moderateSpeeds))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∀x ((Capacitor(x) ∧ ¬SeparatedBy(x, insulator) ∧ TakesPhotos(x) ∧ EnvironmentFriendly(x) ∧ ¬Requires(x, GroupOfPlayersToWorkTogether)) → IntendedToBeDrivenAt(x, moderateSpeeds))"
+},
+"0720c89f812b": {
+"G4": "∀x ((ElectronicDevice(x) ∧ FlowsTo(x, bronx) ∧ SoldAt(x, appleStores) ∧ BoilsWater(x) ∧ ¬Portable(x)) → RisesAbove(x, surroundings))",
+"G6": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+"G7": "∃x (ElectronicDevice(x) ∧ FlowsTo(x, bronx) ∧ SoldAt(x, appleStores) ∧ (BoilsWater(x) ∧ ¬Portable(x) → RisesProminentlyAboveSurroundings(x)))"
+},
+"0785cb0fc18a": {
+"G4": "∀x ((InterestingSoloist(x) ∧ ProvidedWith(x, deliciousMeals) ∧ In(x, potterville) ∧ ContributesTo(x, country) ∧ Writing(x, novel)) → Male(x))",
+"G6": "∀x ((InterestingSoloist(x) ∧ ProvidedWith(x, deliciousMeals) ∧ In(x, potterville) ∧ ContributesTo(x, country)) → (Male(x) ↔ WritingNovel(x)))",
+"G7": "∀x ((InterestingSoloist(x) ∧ ProvidedWith(x, deliciousMeals) ∧ In(x, potterville) ∧ ContributesTo(x, country)) → (Male(x) ↔ WritingNovel(x)))"
+},
+"073225dcdf02": {
+"G4": "∀x ((Vaccine(x) ∧ ¬HasTracksOnBack(x) ∧ MadeOf(x, reinforcedConcrete) ∧ PreservesFood(x) ∧ HasMinimalEnvironmentalImpactDuringProduction(x)) → HasSufficientMassForSelfGravity(x))",
+"G6": "∀x ((Vaccine(x) ∧ ¬HasTracksOnBack(x) ∧ MadeOf(x, reinforcedConcrete) ∧ PreservesFood(x) ∧ MinimalEnvironmentalImpactDuringProduction(x)) → HasSufficientMassForSelfGravity(x))",
+"G7": "∀x ((Vaccine(x) ∧ ¬HasTracksOnBack(x) ∧ MadeOf(x, reinforcedConcrete) ∧ PreservesFood(x) ∧ MinimalEnvironmentalImpactDuringProduction(x)) → HasSufficientMassForSelfGravity(x))"
+},
+"078c23aea59e": {
+"G4": "∀x ((Rapper(x) ∧ Treated(x) ∧ DependentOn(x, caffeine) ∧ British(x) ∧ ¬PresentWorkAt(x, conference)) → Has(x, flexibleSchedule))",
+"G6": "∀x ((Rapper(x) ∧ Treated(x) ∧ CaffeineDependent(x) ∧ British(x) ∧ ¬PresentsAtConference(x)) → FlexibleSchedule(x))",
+"G7": "∀x ((Rapper(x) ∧ Treated(x) ∧ DependentOn(x, caffeine) ∧ British(x)) → (FlexibleSchedule(x) ↔ PresentsWorkAt(x, conference)))"
+},
+"00b34f38e8ee": {
+"G4": "We need to translate: \"If an adult will be late for work ∧ is invited to join the club, ∧ the adult also does ¬steal government funds, then the adult is always tired in the morning, except when the adult loves the opera.\"",
+"G6": "∀x ((Adult(x) ∧ WillBeLateForWork(x) ∧ InvitedToJoinClub(x) ∧ ¬StealGovernmentFunds(x) ∧ ¬LovesOpera(x)) → AlwaysTiredInMorning(x))",
+"G7": "∀x ((Adult(x) ∧ WillBeLateForWork(x) ∧ InvitedToJoinClub(x) ∧ ¬StealGovernmentFunds(x)) → (AlwaysTiredInMorning(x) ↔ ¬LovesOpera(x)))"
+},
+"02964e8108c8": {
+"G4": "We need to translate: \"Anybody who will attend in person at the conference, is dependent on caffeine, ∧ is provided with souvenirs is born in New York City unless they know how to use a queue.\"",
+"G6": "∀x ((AttendInPerson(x, conference) ∧ DependentOnCaffeine(x) ∧ ProvidedWith(x, souvenirs) ∧ ¬BornIn(x, newYorkCity)) → KnowsHowToUse(x, queue))",
+"G7": "∀x ((WillAttendInPerson(x, conference) ∧ DependentOn(x, caffeine) ∧ ProvidedWith(x, souvenirs)) → (BornIn(x, newYorkCity) ∨ KnowHowToUse(x, queue)))"
+},
+"03da5664fba8": {
+"G4": "We need to translate: \"Anybody who loses time, is invited to join the club, ∧ does ¬contribute to the country is hardworking unless they are born in New York City.\"",
+"G6": "∀x ((LosesTime(x) ∧ InvitedToJoinClub(x) ∧ ¬ContributesToCountry(x) ∧ ¬BornIn(x, newYorkCity)) → Hardworking(x))",
+"G7": "∀x ((Loses(x, time) ∧ InvitedToJoin(x, club) ∧ ¬ContributesTo(x, country)) ∧ ¬BornIn(x, newYorkCity) → Hardworking(x))"
+},
+"06faf7d4f343": {
+"G4": "We need to translate: \"A wetland that is ¬by Phoenix ∧ that receives voice ∧ data follows the scientific method as long as the wetland orbits a star, unless the wetland boils water.\"",
+"G6": "∀x ((Wetland(x) ∧ ¬By(x, phoenix) ∧ Receives(x, voice) ∧ Receives(x, data) ∧ Orbits(x, star) ∧ ¬BoilsWater(x)) → FollowsScientificMethod(x))",
+"G7": "∀x ((Wetland(x) ∧ ¬By(x, phoenix) ∧ Receives(x, voice) ∧ Receives(x, data) ∧ Orbits(x, star) ∧ ¬Boils(x, water)) → Follows(x, scientificMethod))"
+},
+"070e18881461": {
+"G4": "We need to translate: \"A manager who performs at the New Haven Symphony Orchestra ∧ who steals government funds is a citizen of the European Union as long as the manager is ¬in Potterville, unless the manager captures images using a camera.\"",
+"G6": "∀x ((Manager(x) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ Steals(x, governmentFunds) ∧ ¬In(x, potterville) ∧ ¬CapturesImagesUsing(x, camera)) → CitizenOf(x, europeanUnion))",
+"G7": "∀x ((Manager(x) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ Steals(x, governmentFunds)) → ((¬In(x, potterville) ∨ CapturesImagesUsing(x, camera)) → CitizenOf(x, europeanUnion)))"
+}
+}
