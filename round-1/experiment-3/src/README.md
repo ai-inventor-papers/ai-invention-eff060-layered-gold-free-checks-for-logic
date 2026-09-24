@@ -223,7 +223,7 @@ data/nltk_data/         WordNet (used by the RENAME rewrite; 40 MB, redownloadab
 ```
 
 The kept artifacts live at
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_3/`.
+`./`.
 All of them are small text files.
 
 ## How to run
