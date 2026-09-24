@@ -1,0 +1,368 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, amssymb, hyperref, url, natbib, booktabs, xcolor, listings}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+\title{Cross-Family Solver Consensus as a Gold-Free Faithfulness Metric\\for Natural-Language-to-First-Order-Logic Translation:\\A Preliminary Study}
+
+\author{Anonymous}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Evaluating the faithfulness of natural-language-to-first-order-logic (NL$\to$FOL) translations is hampered by the expense and unreliability of gold-standard references: recent audits find that roughly 40\% of annotations in standard benchmarks contain errors~\citep{Brunello2026}.
+We study a gold-free alternative based on cross-family solver consensus: collect translations of the same sentence from multiple independent LLM families, check pairwise equivalence with an SMT solver, and score each candidate by the fraction of cross-family peers that disagree with it.
+On a development dataset, this consensus metric significantly outperforms disguised API judges at distinguishing faithful translations from errors, and adds predictive signal beyond a multi-feature baseline stack.
+However, confirmation on held-out data failed: every fresh-data cell was either not testable or unfavourable.
+The metric also exhibits a fundamental rename tradeoff: any predicate-name alignment needed to compare independently generated formulas produces a high false-alarm rate on meaning-preserving renames.
+Its discriminative power degrades with sentence length.
+We present these results as a preliminary lead and identify the conditions under which the approach may or may not generalise.
+\end{abstract}
+
+\section{Introduction}
+
+Translating natural-language sentences into first-order logic (NL$\to$FOL) is a core task in computational semantics and formal verification~\citep{Yang2023,Han2022}.
+A correct translation must faithfully capture the meaning of the source sentence: its quantifier scope, polarity, argument structure, and exception clauses.
+Evaluating faithfulness is difficult because the same sentence admits many logically equivalent formalizations that differ in predicate names, variable bindings, and structural layout.
+
+Gold-standard references are the default evaluation method, but they are expensive and often wrong.
+\citet{Brunello2026} audit two standard benchmarks and find 39--42\% of their annotations contain errors.
+This unreliability is not just noise: when the gold reference itself is unfaithful, every metric calibrated against it is miscalibrated.
+
+An alternative is to have a strong LLM judge each translation~\citep{Chiang2024}.
+However, LLM judges share failure modes with the translators they evaluate: both are autoregressive models operating on the same distributional statistics, so systematic blind spots tend to be correlated.
+As we show in Section~\ref{sec:dev_results}, even a frontier-class judge fails to distinguish meaning-preserving predicate renames from genuine errors, and costs an order of magnitude more per item than the consensus approach.
+
+We study a gold-free metric based on cross-family solver consensus.
+The idea is simple: if a candidate translation is correct, translations produced independently by other LLM families should be logically equivalent to it (modulo vocabulary alignment).
+If the candidate is wrong, independent translators are unlikely to make the same mistake, so their translations will diverge.
+We formalise this intuition, measure its strength on a development dataset, attempt confirmation on fresh data, and report both the positive development-set signal and the failed confirmation transparently.
+
+Our contributions, all preliminary:
+\begin{itemize}
+\item A meta-evaluation of cross-family solver consensus as a gold-free faithfulness score for NL$\to$FOL, tested head-to-head against API judges and a 28-feature baseline stack (Section~\ref{sec:dev_results}).
+\item A mechanistic decomposition of the consensus signal into endorsement (errors recruited by the majority) and divergence (correct items that disagree), showing that errors scatter while correct translations cluster, but this pattern degrades with sentence length (Section~\ref{sec:mechanism}).
+\item Negative results on fresh data: the confirmation attempt produced no testable cell in the long-sentence stratum, and the one testable stratum showed no advantage over a local judge (Section~\ref{sec:confirmation}).
+\item Documentation of the rename tradeoff: a 76.5\% false-alarm rate under nonce predicate renames that no variant we tested could eliminate without sacrificing error recall (Section~\ref{sec:rename}).
+\end{itemize}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_dev_auroc_v0.pdf}
+  \caption{Stratified AUROC on the development dataset for the main metrics and baselines. Error bars are 95\% sentence-cluster bootstrap confidence intervals. Consensus-based metrics (blue) outperform API judges (orange) and other gold-free baselines (gray).}
+  \label{fig:dev_auroc}
+\end{figure}
+
+\section{Related Work}
+
+\paragraph{NL\texorpdfstring{$\to$}{-to-}FOL evaluation.}
+Standard benchmarks such as FOLIO~\citep{Han2022} and the MALLS corpus~\citep{Yang2023} provide NL--FOL pairs, but gold-annotation error rates are high~\citep{Brunello2026}.
+\citet{Vossel2025} map predicates by normalised Levenshtein distance before equivalence checking.
+\citet{Thatikonda2025} evaluate n-gram, graph, embedding, and LLM-based closeness metrics on controlled FOL perturbations, finding that no single metric is sensitive to all perturbation types.
+
+\paragraph{Cross-model consensus.}
+The idea of using agreement among multiple independently trained models as a quality signal appears in several domains.
+\citet{Wang2022} show that sampling multiple chain-of-thought reasoning paths~\citep{Wei2022} from a single model and taking the majority answer (self-consistency) improves accuracy.
+\citet{Bayless2025} collect $k$ translations over a fixed shared schema and score each by the fraction of $k$ translations that entail it.
+\citet{Zhang2023} detect hallucinations in black-box LLMs by sampling diverse perturbations of a query and checking consistency across answers.
+Our work differs from these in evaluating the consensus score against adjudicated faithfulness labels on NL$\to$FOL, head-to-head with API judges.
+
+\paragraph{LLM-as-judge.}
+\citet{Chiang2024} propose using LLMs as evaluators.
+In NL$\to$FOL, an LLM judge reads the sentence and the candidate formula and predicts faithfulness.
+The disguised variant (nonce predicate names) controls for memorisation of known benchmarks.
+
+\paragraph{Diverse redundancy.}
+N-version programming, where independent implementations of the same specification are compared by majority vote, was proposed in the late 1970s for software fault tolerance.
+The key insight, that identical wrong outputs can outvote correct results when independent teams encounter the same logical gap, applies directly: our endorsement rate $e$ measures exactly this failure mode.
+\citet{Eckhardt1985} predict that coincident failures rise with input difficulty; our finding that the consensus advantage does not grow with sentence complexity is consistent with this prediction.
+
+\section{Method}\label{sec:method}
+
+\subsection{Consensus scoring}
+
+Given a sentence $s$ and a candidate FOL translation $c$, we collect peer translations $\{p_1, \ldots, p_k\}$ from $k$ independent LLM families.\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/experiment-1}}
+Each peer uses the same few-shot prompt but a different base model (e.g., one from each of Gemini, Claude, GPT, Llama, Qwen, Phi, Mistral).
+We compute:
+\begin{equation}
+\text{c\_score\_align}(c, s) = 1 - \frac{1}{k} \sum_{i=1}^{k} \mathbf{1}[\text{equiv}(c, p_i)]
+\end{equation}
+where $\text{equiv}(c, p_i)$ checks logical equivalence between $c$ and $p_i$ using the Z3 SMT solver~\citep{Moura2008}, after aligning predicate names between the two formulas.
+
+\subsection{Predicate alignment}
+
+Independent translators choose different predicate names for the same concept (e.g., \texttt{Runs(x)} vs.\ \texttt{IsRunner(x)}).
+To compare formulas across families, we align predicates using a cost function that combines:
+\begin{enumerate}
+\item \textbf{Structural cost}: polarity profile, argument-count match, and nesting depth.
+\item \textbf{Text-anchor cost}: overlap between predicate-name words and source-sentence tokens (Porter stemming, WordNet synonyms/derivations).
+\item \textbf{Semantic signature}: truth-value profiles over random finite interpretations.
+\end{enumerate}
+The $k$ cheapest bijections (predicates within equal arity; constants separately) are evaluated, and the pair is declared equivalent if any bijection yields a Z3-verified equivalence.
+
+\subsection{Score orientation and variants}
+
+Higher scores indicate greater divergence from peers and thus higher predicted error probability.
+Variants include:
+\begin{itemize}
+\item \textbf{c\_exact}: no alignment; exact-match equivalence only.
+\item \textbf{c\_nf} (name-free): alignment by structural and semantic signatures only, ignoring text anchoring.
+\item \textbf{g\_score} (graded): decomposes the candidate into claim units and scores the fraction unsupported by peers.
+\item \textbf{p\_peer\_text}: a logistic fusion of consensus features with text-side features (bag-of-words coverage, role accounting, Z3 structural match).\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-2/experiment-5}}
+\end{itemize}
+
+\subsection{Evaluation framework}
+
+All evaluations use labels from a three-person expert panel (adjudicated as ERROR or CORRECT), with disputed items counted according to the reliability assignment (R\_AB: both panellists agree; R\_A: at least one agrees).
+The primary evaluation metric is stratified AUROC: items are paired only within the same source stratum (sentence complexity bin), eliminating confounds from stratum-level base rates.
+Confidence intervals use sentence-cluster percentile bootstrap ($B = 2{,}000$).
+
+\section{Experiments}\label{sec:experiments}
+
+\subsection{Dataset and setup}
+
+The development dataset $E$ contains 8,507~rows from 700~sentences drawn from the MALLS corpus~\citep{Yang2023} and ProverQA~\citep{Qi2025}.\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/experiment-3}}
+Each sentence was translated by 9~LLM families using a frozen few-shot prompt.
+The primary evaluation population (R\_AB, both panellists agree) contains 2,686~items (1,822~ERROR / 864~CORRECT, 292~sentences) with complexity strata L25 ($\geq$25 words), L20 (20--24), EXC (exception clauses), and CTRL (short control sentences).
+
+Baselines include: (1)~\textbf{flash-lite judge} (Gemini Flash Lite, disguised and original views); (2)~\textbf{nano judge} (Gemini Flash 2.0); (3)~\textbf{local judges} (Qwen3-8B, Llama-8B); (4)~\textbf{round-trip NLI} (translate back to NL, compare via NLI model); (5)~\textbf{self-consistency} (5-sample within-model agreement); (6)~\textbf{structural features} (arity consistency, dangling predicates, rerun Jaccard); (7)~\textbf{feature stacks}: cross-validated logistic regressions over subsets of these features.\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-1/experiment-4}}
+
+\subsection{Development results}\label{sec:dev_results}
+
+We evaluate all metrics on the same population and report stratified AUROC with bootstrap confidence intervals.\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/experiment-6}}
+
+\begin{table}[!htbp]
+\centering
+\caption{Stratified AUROC on development set $E$ (R\_AB population, $n = 2{,}686$). Higher is better. CIs are 95\% sentence-cluster bootstrap.}
+\label{tab:main}
+\small
+\begin{tabular}{lcc}
+\toprule
+Metric & Strat AUROC [95\% CI] & \$/item \\
+\midrule
+c\_score\_align & 0.741 [0.705, 0.775] & 1.21e-4 \\
+p\_peer\_text (fused) & 0.753 [0.720, 0.784] & 1.21e-4 \\
+g\_score (graded) & 0.694 [0.653, 0.730] & -- \\
+c\_nf (name-free) & 0.686 [0.647, 0.720] & -- \\
+c\_exact (no alignment) & 0.694 [0.653, 0.730] & -- \\
+\midrule
+flash-lite judge (disg.) & 0.642 [0.607, 0.676] & 4.88e-5 \\
+flash-lite judge (orig.) & 0.623 [0.593, 0.651] & 4.88e-5 \\
+nano judge (disg.) & 0.644 [0.609, 0.680] & 2.01e-5 \\
+local judge Qwen-8B (disg.) & 0.674 [0.646, 0.703] & -- \\
+\midrule
+round-trip NLI (min) & 0.606 [0.569, 0.645] & 2.75e-5 \\
+self-consistency (5-sample) & 0.598 [0.559, 0.637] & 6.65e-5 \\
+\midrule
+28-feature stack & 0.735 [0.699, 0.766] & -- \\
+28-feature stack + c\_score\_align & 0.774 [0.743, 0.802] & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:dev_auroc} and Table~\ref{tab:main} summarise the main development-set comparison.
+Cross-family consensus (c\_score\_align) outperforms the disguised flash-lite judge by $\Delta = +0.099$ [+0.049, +0.146] on the full R\_AB population and by $\Delta = +0.116$ [+0.070, +0.163] on the long-sentence pool (L25+L20+EXC).
+Adding c\_score\_align to the 28-feature baseline stack increases stratified AUROC by +0.039 [+0.021, +0.057]; a permutation null test gives $p_{95} = 0.009$, confirming the signal is not explained by the existing features.
+
+However, on L25 sentences alone ($\geq$25 words), the advantage narrows to $\Delta = +0.069$ [$-$0.020, +0.148], not significant at the 95\% level.
+This foreshadows the length-dependent degradation described below.
+
+\paragraph{Frontier judge comparison.}
+On the 284-row subsample scored by the frontier judge (Gemini~3.1~Pro), c\_score\_align achieves 95.7\% of the frontier judge's AUROC (ratio 0.957 [0.887, 1.034]) at 30$\times$ lower cost per item (\$1.21$\times 10^{-4}$ vs.\ \$3.65$\times 10^{-3}$).
+Adding consensus to the frontier judge improves AUROC by +0.037 [+0.008, +0.066].
+
+\paragraph{System-level ranking.}
+The consensus metric achieves Kendall $\tau_b = 0.692$ [+0.513, +0.795] between system mean score and R\_AB error rate across 13 system$\times$variant configurations, comparable to the best judges.
+
+\paragraph{Vocabulary-exact confound control (VEX).}
+On the 183/433 (ERROR/CORRECT) subset where candidate and gold share the same predicate vocabulary, consensus still outperforms the judge ($\Delta = +0.306$ [+0.232, +0.376]), ruling out the possibility that the development-set advantage depends on vocabulary differences between good and bad candidates.
+
+\subsection{Mechanism}\label{sec:mechanism}
+
+We decompose the consensus signal\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/evaluation-2}} into two components at a fixed decision threshold:
+\begin{itemize}
+\item \textbf{Endorsement} $e$: fraction of ERROR items endorsed by the peer majority (false negatives of consensus).
+\item \textbf{Divergence} $d$: fraction of CORRECT items that diverge from the peer majority (false positives of consensus).
+\end{itemize}
+The consensus AUROC at a binary threshold equals $1 - (e + d)/2$, so both quantities must be small for the metric to work.
+
+\paragraph{Errors scatter, correct translations cluster.}
+The scatter index (ratio of pairwise disagreement among correct vs.\ error items per sentence) is 4.45 [3.57, 5.77], confirming that error translations are more diverse than correct translations.
+
+\paragraph{Length degradation.}
+As Figure~\ref{fig:complexity} shows, the net consensus degradation from short to long sentences is $\Delta(e+d) = +0.356$ [+0.198, +0.493], driven almost entirely by divergence ($\Delta d = +0.608$, $\Delta e = -0.252$): correct translations of long sentences increasingly disagree with their peers, not because of vocabulary mismatches, but because independent models make different structural choices for complex quantifier scopes and exception clauses.
+Among the peers that disagree with a correct candidate, 77\% (9 families) are themselves labelled ERROR, and only 9\% of correct--correct disagreements are vocabulary-resolvable.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_complexity_v0.pdf}
+  \caption{Decomposition of consensus error rates by sentence-length tercile. Endorsement rate $e$ (errors incorrectly endorsed by peers) decreases with length, but divergence rate $d$ (correct items incorrectly flagged) increases sharply, producing net degradation of +0.356 from the shortest to the longest tercile.}
+  \label{fig:complexity}
+\end{figure}
+
+\paragraph{Family sufficiency.}
+Three peer families suffice for 97\% of full-pool AUROC ($k_{95} = 3$), but the long-sentence tercile requires $k_{95} = 5$ (Table~\ref{tab:k_families} and Figure~\ref{fig:k_curve}).
+
+\begin{table}[!htbp]
+\centering
+\caption{AUROC by number of peer families on development set $E$.}
+\label{tab:k_families}
+\small
+\begin{tabular}{ccc}
+\toprule
+$k$ & AUROC (overall) & AUROC (long, T3) \\
+\midrule
+1 & 0.685 & 0.581 \\
+3 & 0.757 & 0.651 \\
+5 & 0.776 & 0.698 \\
+7 & 0.784 & 0.726 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_k_curve_v0.pdf}
+  \caption{Stratified AUROC as a function of the number of peer families $k$, for the full development set (solid blue) and the long-sentence tercile (dashed red). Three families capture 97\% of the full-pool signal, but long sentences require five families to reach 95\%.}
+  \label{fig:k_curve}
+\end{figure}
+
+\paragraph{Mechanism hypotheses.}
+The endorsement rate does not fall significantly with the number of conditions in a sentence (inconclusive).
+Divergence rises with sentence length (confirmed, but non-specific: a shuffled-label placebo also passes).
+Whether the consensus advantage over the judge grows with sentence complexity could not be settled: two pre-registered specifications conflict (bootstrap $\Delta = +0.146$ [$-$0.051, +0.361] vs.\ stacked GEE $+0.274$ [+0.190, +0.359]).
+These mixed results support the view that the mechanism is real but not well characterised.
+
+\subsection{Confirmation attempt}\label{sec:confirmation}
+
+The development-set results are encouraging but cannot confirm the metric's value, because the development set was used to design the scoring pipeline.
+We constructed two independent test sets to seek confirmation.
+
+\paragraph{E2-A (fresh held-out sentences).}\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/dataset-4}}
+A new set of 550~sentences (from MALLS and ProverQA sources not seen during development) was generated and labelled by the same panel protocol.
+However, the confirmation was budget-stopped: only 94 long-sentence items (76~ERROR / 18~CORRECT, 12~sentences) were available with labels, and no cell met the pre-registered testability threshold of $\geq$50 items per class and $\geq$25 sentences.
+The pre-registered flash-lite judge baseline could not be scored (almost no API-judge calls completed).
+
+On the one testable stratum (DT, short sentences from ProverQA), consensus achieves a stratified AUROC of 0.916, tying the local Qwen-8B judge ($\Delta = +0.003$ [$-$0.042, +0.052]).
+On L25 sentences, c\_score\_align falls to 0.443, below chance, with only 42 items (35~ERROR / 7~CORRECT).
+Every pre-registered criterion returned NOT\_TESTABLE or unfavourable.
+
+\paragraph{R\_COMP FREE (long composed sentences with independent vocabulary).}\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/experiment-7}}\textsuperscript{,}\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-5/experiment-13}}
+R\_COMP is a set of long, templated sentences with trusted structural references.
+The FREE condition requires each translator to choose its own predicate names independently (no shared vocabulary).
+Confirmatory labels required a gloss gate (LLM-checked semantic alignment of predicate mappings).
+This gate failed twice (balanced accuracy 0.776 and 0.561, below the 0.90 threshold), producing zero confirmed CORRECT rows and rendering the confirmatory test not testable.
+
+Under provisional non-confirmatory labels (ERROR\_CERT vs.\ MAPPED, where MAPPED is an upper bound on CORRECT), c\_score\_align achieves a within-template AUROC of 0.801 [0.770, 0.834] against the disguised judge's 0.584 [0.550, 0.618] ($\Delta = 0.217$ [0.175, 0.260]).
+These provisional numbers are large but cannot count as confirmation because the labels conflate vocabulary-alignment failures with genuine correctness.
+Table~\ref{tab:confirm} summarises these results.
+
+\begin{table}[!htbp]
+\centering
+\caption{Confirmation results. DT = short deterministic sentences; L25 = sentences $\geq$25 words. E2-A uses adjudicated panel labels; R\_COMP FREE uses provisional (non-confirmatory) search-based labels.}
+\label{tab:confirm}
+\small
+\begin{tabular}{llccl}
+\toprule
+Dataset & Cell & $n$ (E/C) & AUROC & Status \\
+\midrule
+E2-A & DT & 179 (74/105) & 0.916 & Ties local judge \\
+E2-A & L25 & 42 (35/7) & 0.443 & Unfavourable \\
+E2-A & LONG & 94 (76/18) & 0.603 & Not testable \\
+\midrule
+R\_COMP & FREE (prov.) & 1706 (602/1104) & 0.801 & Non-confirmatory \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The rename tradeoff}\label{sec:rename}
+
+The predicate aligner\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-3/experiment-8}} that enables cross-family comparison also introduces a fundamental false-alarm vulnerability.
+When correct formulas are copied with meaning-preserving predicate renames (same semantics, different symbol names), the consensus score should not change.
+Table~\ref{tab:rename} shows the false-alarm rates in practice.
+
+\begin{table}[!htbp]
+\centering
+\caption{False-alarm (FA) rates on meaning-preserving renames of CORRECT candidates. NONCE = random nonsense names; SYN = WordNet synonyms. Flip = FA induced by the rename alone (FA minus base FA).}
+\label{tab:rename}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Metric & NONCE FA & NONCE flip & SYN FA & SYN flip \\
+\midrule
+c\_align & 0.765 & 0.605 & 0.565 & 0.313 \\
+c\_nf (name-free) & 0.132 & 0.000 & 0.201 & 0.000 \\
+p\_peer\_text & 1.000 & 0.821 & 0.216 & 0.080 \\
+judge (disg.) & 0.229 & 0.134 & 0.085 & 0.058 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The name-free variant c\_nf eliminates rename sensitivity (flip = 0) but at the cost of blindness to meaning-rename errors (within-base AUROC 0.499, chance level) and lower overall discrimination (strat AUROC 0.686 vs.\ 0.741).
+The pre-registered rename-invariant selection rule was applied to several hybrid variants but none passed: the best (c\_hyb) had synonym-rename FA of 0.841 and nonce-rename FA of 0.700, both above the eligibility threshold.
+Every vocabulary bridge, whether a text-anchored aligner or peers cued with the candidate's own symbols, trades divergence $d$ for endorsement $e$: the aligner lowers $d$ from 0.583 to 0.328 but raises meaning-rename endorsement from 0.104 to 0.624.
+
+\subsection{Per-type sensitivity and error typing}
+
+On the PERTURB suite (4,234 typed mutants + 868 controls from development data), consensus recall at the primary threshold is flat across error operators: NEG 0.761, SWAP 0.758, DROP 0.721, ADD 0.763, MEANING\_RENAME 0.762.
+Per-operator within-base AUROC cannot be meaningfully computed for consensus scores (94--100\% of mutants sit at the maximum score, an artefact of the base-endorsement structure).
+
+Error typing outside a shared vocabulary is negative: the free-vocabulary typing accuracy is 0.123 [0.081, 0.169] on $E$, comparable to the judge (0.326) and the peer-medoid baseline (0.328) only when all metrics are near chance.
+
+\subsection{Dead ends}
+
+Several alternatives were investigated and abandoned during development: a fused structural-feature filter (false-alarm gate failure); name-free consensus c\_nf (rename-invariant but blind to meaning-rename errors, as described in Section~\ref{sec:rename}); a decomposed solver-based semantic reader (balanced accuracy 0.476); LLM adjudication of disputed items (balanced accuracy 0.662 on expert-labelled items); and candidate-signature consensus, which scores candidates by cueing peers with the candidate's own predicate symbols rather than letting them choose independently (provisional negative: error endorsement rose to 0.459 because peers were anchored into reproducing the candidate's errors).\footnote{Code: \url{https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/main/round-4/experiment-9}}
+
+\section{Discussion}
+
+\subsection{Summary of findings}
+
+On development data, cross-family solver consensus is a strong gold-free signal for NL$\to$FOL faithfulness, outperforming cheap API judges and adding information beyond a multi-feature stack.
+The mechanism, errors scatter across the solution space while correct translations cluster, is consistent with the observed discrimination.
+Three peer families suffice for most of the full-pool performance, making the approach practical at roughly 2.5$\times$ the cost of a single cheap judge call.
+
+\subsection{Why confirmation failed}
+
+The confirmation attempt was defeated by two independent problems: (1)~insufficient fresh data (the E2-A budget was stopped before enough correct items accumulated in the long-sentence strata), and (2)~a broken labelling gate (the gloss-based semantic alignment required for R\_COMP FREE labels failed quality checks twice).
+Neither failure refutes the development-set signal, but neither allows us to confirm it.
+
+The E2-A L25 result (AUROC 0.443, near chance, on 42~items) is concerning but difficult to interpret: with only 7~CORRECT items from 3~sentences, the estimate has extreme variance and a single sentence can dominate.
+We report it for completeness but note that it does not meet any standard testability criterion.
+
+\subsection{The rename tradeoff as a fundamental limit}
+
+The rename tradeoff is not a bug in our aligner but a structural property of cross-family consensus under independent vocabulary.
+Any alignment procedure that maps independently chosen predicate names to a common vocabulary will sometimes map semantically distinct predicates together, endorsing meaning-rename errors.
+Eliminating the alignment (c\_exact, c\_nf) preserves rename invariance but sacrifices the structural comparison that drives error detection.
+This tradeoff is analogous to the bias--variance tradeoff: the aligner reduces divergence variance at the cost of endorsement bias.
+
+We conjecture that resolving this tradeoff requires either (a)~a shared predicate vocabulary supplied to all translators, which eliminates the problem entirely but restricts the evaluation to controlled settings~\citep{Bayless2025,Vossel2025}, or (b)~a semantic disambiguation step (such as natural-language glosses of each predicate) that could break the alignment ambiguity.
+Our attempt at option~(b), a gloss gate using LLM-generated explanations of predicate meanings, failed quality checks, leaving this direction open.
+
+\subsection{Limitations}\label{sec:limitations}
+
+\begin{enumerate}
+\item \textbf{Development data only.} Every positive result reported in Table~\ref{tab:main} is on data used to design the metric. The confirmation attempt produced no testable positive cell.
+\item \textbf{Rename vulnerability.} A 76.5\% false-alarm rate on nonce renames means the metric will systematically penalise any translation that uses non-standard predicate names, even if semantically correct.
+\item \textbf{Length degradation.} Consensus discrimination degrades with sentence length (NET $+0.356$), driven by correct-translation divergence. The metric is weakest on the longest, most complex sentences, precisely the cases where gold-free evaluation is most needed.
+\item \textbf{Label dependence.} All development results depend on a three-person panel whose agreement is imperfect (disputed items exist in every stratum). The metric's advantage could partly reflect alignment with panel biases rather than with ground-truth faithfulness.
+\item \textbf{Cost.} While cheaper than a frontier judge, the consensus metric requires generating $k$ peer translations per sentence, costing \$0.95 per 1{,}000 sentences at $k=3$.
+\item \textbf{Domain.} All results are on English$\to$FOL from MALLS and ProverQA sources. Generalisation to other logic formalisms, languages, or sentence distributions is untested.
+\end{enumerate}
+
+\section{Conclusion}
+
+Cross-family solver consensus is a preliminary but promising gold-free metric for NL$\to$FOL faithfulness evaluation.
+On development data, it outperforms cheap LLM judges by a significant margin and adds information beyond structural and statistical baselines.
+The mechanism, errors scatter while correct translations cluster, provides an intuitive explanation grounded in the diversity of independent formalizations.
+
+However, the metric remains unconfirmed on fresh data, exhibits a fundamental rename tradeoff that limits its applicability to settings where predicate names are not independently chosen, and degrades on long, complex sentences.
+We release the full evaluation code and data to enable reproduction and further investigation.
+The immediate open problems are: (1)~completing the fresh-data confirmation with adequate sample sizes; (2)~breaking the rename tradeoff, perhaps through semantic predicate glossing; and (3)~understanding why correct translations of complex sentences diverge even when no vocabulary mismatch exists.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

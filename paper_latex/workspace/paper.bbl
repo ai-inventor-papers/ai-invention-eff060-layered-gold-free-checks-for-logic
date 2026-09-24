@@ -1,0 +1,129 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bayless et~al.(2025)Bayless, Buliani, Cassel, Cook, Clough, Delmas,
+  Diallo, Erata, Feng, Giannakopoulou, Goel, Gokhale, Hendrix, Hudak,
+  Jovanovic, Kent, Kiesl-Reiter, Kuna, Labai, Lilien, Raghunathan, Rakamarić,
+  Razavi, Tautschnig, Torkamani, Weir, Whalen, and Yao]{Bayless2025}
+Sam Bayless, Stefano Buliani, Darion Cassel, Byron Cook, D.~Clough, R.~Delmas,
+  N.~Diallo, Ferhat Erata, Nick Feng, D.~Giannakopoulou, Aman Goel, Aditya
+  Gokhale, Joe Hendrix, Marc Hudak, Dejan Jovanovic, Andrew~M. Kent, Benjamin
+  Kiesl-Reiter, J.~Kuna, Nadia Labai, Joseph Lilien, Divya Raghunathan,
+  Zvonimir Rakamarić, Niloofar Razavi, Michael Tautschnig, Ali Torkamani,
+  Nathaniel Weir, Michael~W. Whalen, and Jianan Yao.
+\newblock A neurosymbolic approach to natural language formalization and
+  verification.
+\newblock In \emph{International Conference on Computer Aided Verification},
+  pages 601--617, 2025.
+\newblock \doi{10.48550/arXiv.2511.09008}.
+
+\bibitem[Brunello et~al.(2026)Brunello, Curaba, Geatti, Mignani, Montanari, and
+  Saccomanno]{Brunello2026}
+Andrea Brunello, Cristian Curaba, Luca Geatti, Michele Mignani, Angelo
+  Montanari, and N.~Saccomanno.
+\newblock Fixing folio and malls: Verified annotations and an llm-assisted
+  framework to focus human relabeling.
+\newblock \emph{ArXiv}, abs/2606.02837, 2026.
+\newblock \doi{10.48550/arXiv.2606.02837}.
+
+\bibitem[Chiang et~al.(2024)Chiang, Zheng, Sheng, Angelopoulos, Li, Li, Zhang,
+  Zhu, Jordan, Gonzalez, and Stoica]{Chiang2024}
+Wei-Lin Chiang, Lianmin Zheng, Ying Sheng, Anastasios~Nikolas Angelopoulos,
+  Tianle Li, Da-Cheng Li, Hao Zhang, Banghua Zhu, Michael~I. Jordan, Joseph~E.
+  Gonzalez, and Ion Stoica.
+\newblock Chatbot arena: An open platform for evaluating llms by human
+  preference.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  8359--8388, 2024.
+\newblock \doi{10.48550/arXiv.2403.04132}.
+
+\bibitem[de~Moura and Bjørner(2008)]{Moura2008}
+L.~D. de~Moura and Nikolaj~S. Bjørner.
+\newblock Z3: An efficient smt solver.
+\newblock In \emph{International Conference on Tools and Algorithms for
+  Construction and Analysis of Systems}, pages 337--340, 2008.
+\newblock \doi{10.1007/978-3-540-78800-3_24}.
+
+\bibitem[Eckhardt and Lee(1985)]{Eckhardt1985}
+D.~Eckhardt and Larry~D. Lee.
+\newblock A theoretical basis for the analysis of multiversion software subject
+  to coincident errors.
+\newblock In \emph{IEEE Transactions on Software Engineering}, volume SE-11,
+  pages 1511--1517, 1985.
+\newblock \doi{10.1109/TSE.1985.231895}.
+
+\bibitem[Han et~al.(2022)Han, Schoelkopf, Zhao, Qi, Riddell, Benson, Sun,
+  Zubova, Qiao, Burtell, Peng, Fan, Liu, Wong, Sailor, Ni, Nan, Kasai, Yu,
+  Zhang, Joty, Fabbri, Kryscinski, Lin, Xiong, and Radev]{Han2022}
+Simeng Han, Hailey Schoelkopf, Yilun Zhao, Zhenting Qi, Martin Riddell, Luke
+  Benson, Lucy Sun, E.~Zubova, Yujie Qiao, Matthew Burtell, David Peng,
+  Jonathan~A. Fan, Yixin Liu, Brian Wong, Malcolm Sailor, Ansong Ni, Linyong
+  Nan, Jungo Kasai, Tao Yu, Rui Zhang, Shafiq~R. Joty, Alexander~R. Fabbri,
+  Wojciech Kryscinski, Xi~Victoria Lin, Caiming Xiong, and Dragomir~R. Radev.
+\newblock Folio: Natural language reasoning with first-order logic.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/2209.00840, 2022.
+\newblock \doi{10.48550/arXiv.2209.00840}.
+
+\bibitem[Qi et~al.(2025)Qi, Ma, Li, Du, Hui, Wu, Laili, and He]{Qi2025}
+Cheng-Wen Qi, Ren Ma, Bowen Li, He~Du, Binyuan Hui, Jin-Wang Wu, Yuanjun Laili,
+  and Conghui He.
+\newblock Large language models meet symbolic provers for logical reasoning
+  evaluation.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2502.06563, 2025.
+\newblock \doi{10.48550/arXiv.2502.06563}.
+
+\bibitem[Thatikonda et~al.(2025)Thatikonda, Buntine, and
+  Shareghi]{Thatikonda2025}
+Ramya~Keerthy Thatikonda, W.~Buntine, and Ehsan Shareghi.
+\newblock Assessing the sensitivity and alignment of fol closeness metrics.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 16775--16785, 2025.
+\newblock \doi{10.18653/v1/2025.findings-emnlp.910}.
+
+\bibitem[Vossel et~al.(2025)Vossel, Mossakowski, and Gehrke]{Vossel2025}
+Felix Vossel, Till Mossakowski, and Björn Gehrke.
+\newblock Advancing natural language formalization to first order logic with
+  fine-tuned llms.
+\newblock \emph{ArXiv}, abs/2509.22338, 2025.
+\newblock \doi{10.48550/arXiv.2509.22338}.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Le, Chi, and Zhou]{Wang2022}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~H. Chi, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2203.11171, 2022.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and
+  Zhou]{Wei2022}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed~H. Chi, F.~Xia, Quoc
+  Le, and Denny Zhou.
+\newblock Chain of thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2201.11903, 2022.
+\newblock \doi{10.52202/068431-1800}.
+
+\bibitem[Yang et~al.(2023)Yang, Xiong, Payani, Shareghi, and Fekri]{Yang2023}
+Yuan Yang, Siheng Xiong, Ali Payani, Ehsan Shareghi, and F.~Fekri.
+\newblock Harnessing the power of large language models for natural language to
+  first-order logic translation.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, volume abs/2305.15541, 2023.
+\newblock \doi{10.48550/arXiv.2305.15541}.
+
+\bibitem[Zhang et~al.(2023)Zhang, Li, Das, Malin, and Sricharan]{Zhang2023}
+Jiaxin Zhang, Zhuohang Li, Kamalika Das, Bradley Malin, and Kumar Sricharan.
+\newblock Sac3: Reliable hallucination detection in black-box language models
+  via semantic-aware cross-check consistency.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 15445--15458, 2023.
+\newblock \doi{10.48550/arXiv.2311.01740}.
+
+\end{thebibliography}

@@ -1,0 +1,43 @@
+{
+  "figure_id": "fig_k_curve",
+  "renderer": "render_fig_k_curve.py (hand-written matplotlib on the aii-data-fig-gen house style; the catalogue 'line' type has no asymmetric CI band, reference lines or k95 markers)",
+  "provenance": {
+    "source_file": "3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/results/part_a.json :: M4.random_k_primary",
+    "mirror": "3_invention_loop/iter_5/gen_art/gen_art_evaluation_4/figures/F4_k_curve_cost.json",
+    "code": "3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/src/m4.py :: auroc_k",
+    "metric": "pooled AUROC of the peer-consensus score c (fraction of k randomly drawn other model families whose formalization is NOT prover-equivalent to the candidate) for flagging incorrect candidates (y_AB); mean over 50 reproducible random k-family draws per row. NOT the stratified AUROC (strat_auroc_mean is a different, lower quantity).",
+    "population": "development set E rows with all 7 other families available: n = 2014 candidate formalizations (1309 incorrect, 705 correct) from 186 sentences",
+    "long_tercile": "T3 = longest-sentence tercile by word count (words_t)",
+    "ci": "95% sentence-cluster bootstrap CI (B = 2000) of the draw-mean AUROC; available for the overall series only (the artifact stores no CI for tercile curves)",
+    "k95_rule": "k95 = smallest k with mean AUROC(k) >= 0.95 * AUROC(k = 7)"
+  },
+  "title": "",
+  "xlabel": "Number of peer model families k",
+  "ylabel": "AUROC for flagging incorrect FOL",
+  "aspect": "21:9",
+  "width_in": 7.0,
+  "x": [1, 2, 3, 4, 5, 6, 7],
+  "ylim": [0.48, 0.85],
+  "yticks": [0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85],
+  "chance": 0.5,
+  "series": [
+    {
+      "label": "Overall (n = 2014)",
+      "key": "overall",
+      "values": [0.6850071138706934, 0.7375590267054598, 0.7571991504532178, 0.7698660555131143, 0.7758615910580867, 0.7804354469060351, 0.7838055144688437],
+      "ci_lo": [0.6491352794426594, 0.6952608903797737, 0.7130891663939686, 0.7248867717492239, 0.730393299016309, 0.7350706196332034, 0.7386389190336727],
+      "ci_hi": [0.72134487956718, 0.7790587211054143, 0.7995025260714578, 0.8130146117628262, 0.8193188881514468, 0.8236462322190449, 0.8272861867378787],
+      "k95": 3,
+      "marker": "o",
+      "linestyle": "-"
+    },
+    {
+      "label": "Long sentences (T3)",
+      "key": "T3",
+      "values": [0.5813449958471759, 0.6175908430232558, 0.6512131436877077, 0.6821547965116278, 0.6979318936877077, 0.7144149709302324, 0.7264586794019934],
+      "k95": 5,
+      "marker": "^",
+      "linestyle": "--"
+    }
+  ]
+}
