@@ -1,0 +1,75 @@
+{
+ "E": {
+  "c_hyb": 0.7375072927473793,
+  "c_align": 0.7414618757606236,
+  "c_nf": 0.6859960770958894,
+  "hyb_minus_align": -0.003954583013244362,
+  "n": 2686,
+  "placebo": {
+   "c_hyb": 0.5147861278085327,
+   "c_align": 0.5148547654309255,
+   "c_nf": 0.5082008759216581
+  },
+  "hyb_minus_align_ci_B300": [
+   -0.012019034547535608,
+   0.0035477038250138777
+  ],
+  "hyb_vs_placebo_ci_excludes_0.5": null
+ },
+ "E_compare": {
+  "c_hyb": {
+   "raw": 0.7375072927473793,
+   "reported": 0.7375072927473793,
+   "abs_diff": 0.0
+  },
+  "c_align": {
+   "raw": 0.7414618757606236,
+   "reported": 0.7414618757606236,
+   "abs_diff": 0.0
+  },
+  "c_nf": {
+   "raw": 0.6859960770958894,
+   "reported": 0.6859960770958894,
+   "abs_diff": 0.0
+  }
+ },
+ "audit": {
+  "new": 0.38764044943820225,
+  "align": 0.12695257029253054
+ },
+ "audit_placebo_labels_permuted": {
+  "new": 0.3880597014925373,
+  "align": 0.4101910828025478
+ },
+ "rename_endorser_retention": {
+  "RENAME_NONCE|align_eq": 0.0,
+  "RENAME_NONCE|nf_eq": 1.0,
+  "RENAME_NONCE|hyb_eq": 0.7401129943502824,
+  "RENAME_SYN|align_eq": 0.32978723404255317,
+  "RENAME_SYN|nf_eq": 1.0,
+  "RENAME_SYN|hyb_eq": 0.7491408934707904
+ },
+ "perturb_within_base_auroc_all_ops_c_align": {
+  "raw": 0.8655530335677395,
+  "placebo_permuted_within_base": 0.47925492071362535,
+  "n_bases": 198
+ },
+ "perturb_within_base_auroc_all_ops_c_hyb": {
+  "raw": 0.8467735370030379,
+  "placebo_permuted_within_base": 0.4977166899032615,
+  "n_bases": 198
+ },
+ "perturb_within_base_auroc_all_ops_c_nf": {
+  "raw": 0.7853130675935935,
+  "placebo_permuted_within_base": 0.4957607204172118,
+  "n_bases": 198
+ },
+ "typing_strict_acc": {
+  "medoid_align": 0.32849702380952384,
+  "oracle": 0.8024553571428571
+ },
+ "typing_placebo_true_labels_permuted": {
+  "medoid_align": 0.04650297619047619,
+  "oracle": 0.10602678571428571
+ }
+}
