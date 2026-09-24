@@ -28,11 +28,11 @@
    "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/budget_state.json"
   ],
   [
-   "../../../experiment-11/src/e2src/.aii_cost_ledger.jsonl",
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2src/.aii_cost_ledger.jsonl",
    "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/.aii_cost_ledger.jsonl"
   ],
   [
-   "../../../experiment-11/src/e2src/cost_ledger_iter4.jsonl",
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2src/cost_ledger_iter4.jsonl",
    "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/cost_ledger.jsonl"
   ],
   [
@@ -86,7 +86,7 @@
    "utc": "2026-09-24T07:32:40Z"
   },
   {
-   "file": "../../../experiment-13/src/labeller/cost_ledger.jsonl",
+   "file": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13/labeller/cost_ledger.jsonl",
    "note": "run-level Test-idea budget $12.08 of $12.00 spent by the run (all parallel artifacts); nothing billed",
    "code": "aii_run_budget_exhausted",
    "utc": "2026-09-24T11:39:30Z"
