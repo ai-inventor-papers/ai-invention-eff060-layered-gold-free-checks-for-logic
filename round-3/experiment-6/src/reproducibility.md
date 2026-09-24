@@ -19,7 +19,7 @@ The workspace is self-contained. `data/` holds every frozen input, copied from e
 
 The labels come from dataset E. The code reads it from its original path, shown below; to use it elsewhere, copy the
 file and edit `src/e_pool.py`'s path and the `E_FULL` constant in `tests/audit_raw_T1.py`:
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json`
+`../../../round-1/dataset-1/src/full_data_out.json`
 
 ## 2. System, Python, environment
 

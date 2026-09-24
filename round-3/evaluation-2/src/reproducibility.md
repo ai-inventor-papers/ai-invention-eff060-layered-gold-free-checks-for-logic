@@ -5,7 +5,7 @@ These are the steps that were actually run to produce the files in this folder (
 ## 1. Get the folder
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2 ~/work/consensus_audit
+cp -r . ~/work/consensus_audit
 cd ~/work/consensus_audit
 ```
 

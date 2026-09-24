@@ -333,7 +333,7 @@
           "id": "C1c",
           "claim_as_reported": "exp 5 contamination arm: disguise IMPROVES the Qwen judge on E (orig - disg)",
           "corrected_value": "-0.064 [-0.098, -0.032]",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/analysis.json",
+          "source_path": "../../../round-2/experiment-5/src/results/analysis.json",
           "key_path": "i_contamination.judge_local_qwen8b.orig_minus_disg",
           "verified": true
         },
@@ -341,7 +341,7 @@
           "id": "C2_R_SOLVER_CONS",
           "claim_as_reported": "report: disguise 'forces structural reading' (disguised judge better)",
           "corrected_value": "ORIGINAL judge ahead at matched FA 0.10: recall orig - disg +0.106 [0.033, 0.178] (R_SOLVER_CONS)",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/judge_matched_fa.csv",
+          "source_path": "../../../round-2/evaluation-1/src/tables/judge_matched_fa.csv",
           "key_path": "regime=R_SOLVER_CONS, judge=judge_cheap, cell=ALL, fa_target=0.1 :: diff_orig_minus_disg",
           "verified": true
         },
@@ -349,7 +349,7 @@
           "id": "C2_R_ADJ_AB",
           "claim_as_reported": "report: disguise 'forces structural reading' (disguised judge better)",
           "corrected_value": "ORIGINAL judge ahead at matched FA 0.10: recall orig - disg +0.198 [0.130, 0.260] (R_ADJ_AB)",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/judge_matched_fa.csv",
+          "source_path": "../../../round-2/evaluation-1/src/tables/judge_matched_fa.csv",
           "key_path": "regime=R_ADJ_AB, judge=judge_cheap, cell=ALL, fa_target=0.1 :: diff_orig_minus_disg",
           "verified": true
         },
@@ -357,7 +357,7 @@
           "id": "C3",
           "claim_as_reported": "report: fusion fit on AGREE items (screen) 0.943 presented as the fused metric's quality",
           "corrected_value": "screen AGREE-item fusion OOF AUROC 0.943 shrinks to held-out E R_AB 0.790",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/screen_fit.json ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/analysis.json",
+          "source_path": "../../../round-2/experiment-5/src/results/screen_fit.json ; ../../../round-2/experiment-5/src/results/analysis.json",
           "key_path": "models.fusion.oof_auroc ; a_tables.R_AB pooled.metrics.p_peer_text.auroc",
           "verified": true
         },
@@ -365,7 +365,7 @@
           "id": "C4",
           "claim_as_reported": "report: frontier-judge advantage weakens under panel labels",
           "corrected_value": "STRENGTHENS: solver labels +0.077 [0.006, 0.154] -> panel A+B +0.166 [0.08577985739750449, 0.24360389976262184] n=90",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4/results/method_out.json ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/frontier_same_item.csv",
+          "source_path": "../../../round-1/experiment-4/src/results/method_out.json ; ../../../round-2/evaluation-1/src/tables/frontier_same_item.csv",
           "key_path": "metadata.analysis.paired_strong_subset.L_strong_subset.judge_cheap_orig.judge_strong_orig ; regime=R_ADJ_AB strong=judge_strong_orig cheap=judge_cheap_orig",
           "verified": true
         },
@@ -373,7 +373,7 @@
           "id": "C5",
           "claim_as_reported": "report: P1 group names mixed (PEER_ENDORSED vs PEER_ENDORSED_NF); judge column omitted",
           "corrected_value": "local judge recall at FA 0.10: PEER_ENDORSED 0.169, PEER_ENDORSED_NF 0.199 (highest recall on both endorsed groups)",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/analysis.json",
+          "source_path": "../../../round-2/experiment-5/src/results/analysis.json",
           "key_path": "b_P1.R_AB.FA0.10_fractional.groups.{PEER_ENDORSED,PEER_ENDORSED_NF}.recall.judge_local_qwen8b_disg",
           "verified": true
         },
@@ -381,7 +381,7 @@
           "id": "C6",
           "claim_as_reported": "report: P4 compared fused RENAME FA 0.385 with FOL-Triage '0.013'",
           "corrected_value": "FA vs FA: PEER+TEXT fused RENAME FA 0.385 vs FOL-Triage fused RENAME FA 0.22; 0.013 was FOL-Triage's FLIP rate (0.0133)",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/analysis.json ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/results/metrics.json",
+          "source_path": "../../../round-2/experiment-5/src/results/analysis.json ; ../../../round-1/experiment-1/src/results/metrics.json",
           "key_path": "e_P4.families.RENAME.fused.FA ; invariance.RENAME.fused_flag.{FA,flip_rate}",
           "verified": true
         },
@@ -389,7 +389,7 @@
           "id": "C7",
           "claim_as_reported": "iteration-2 report spend statement",
           "corrected_value": "total $4.229 = exp5 (costs.jsonl judge 0.0008 + E_l3_q.jsonl L3 0.1544; README states $0.155) $0.155 + exp6 (analysis_E.json api_spend_total_usd) $0.000 + dataset2 (cost_ledger.jsonl sum cost_usd) $3.660 + dataset3 (cost_ledger.jsonl sum cost_usd) $0.414 + evaluation1 (no LLM calls; no ledger) $0.000",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/costs.jsonl + /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/E_l3_q.jsonl ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/analysis_E.json ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_2/cost_ledger.jsonl ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/cost_ledger.jsonl ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1",
+          "source_path": "../../../round-2/experiment-5/src/results/costs.jsonl + ../../../round-2/experiment-5/src/results/E_l3_q.jsonl ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/analysis_E.json ; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_2/cost_ledger.jsonl ; ../../../round-2/dataset-3/src/cost_ledger.jsonl ; ../../../round-2/evaluation-1/src",
           "key_path": "sums as named",
           "verified": true
         }
@@ -403,7 +403,7 @@
           "n_cor": 165,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": true,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_AB.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_AB.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -414,7 +414,7 @@
           "n_cor": 283,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": true,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_ALL.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_ALL.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -425,7 +425,7 @@
           "n_cor": 47,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": false,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_A.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_A.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -436,7 +436,7 @@
           "n_cor": 179,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": true,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_AB_CONT_C.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_AB_CONT_C.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -447,7 +447,7 @@
           "n_cor": 165,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": true,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_AB_CONT_E.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_AB_CONT_E.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -458,7 +458,7 @@
           "n_cor": 8,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": false,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_H_ADJ_AB.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_H_ADJ_AB.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         }
       ],

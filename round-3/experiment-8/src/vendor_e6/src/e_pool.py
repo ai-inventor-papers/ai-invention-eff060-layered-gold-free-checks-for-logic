@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .common import ROOT, sha1
 
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path("../../../../../round-1/dataset-1/src")
 PREREG = ROOT / "prereg_baselines.json"
 PREREG_SHA = ROOT / "prereg_baselines.sha256"
 SCORES = ROOT / "results" / "scores"

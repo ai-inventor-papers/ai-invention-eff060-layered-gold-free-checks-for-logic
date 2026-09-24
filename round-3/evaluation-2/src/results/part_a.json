@@ -5291,7 +5291,7 @@
    "frontier_judge_reference": {
     "usd_per_call": 0.0028561202749140895,
     "n_calls": 582,
-    "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4/results/method_out.json :: metadata.analysis.cost['judge_strong (API, per condition)'].usd_per_call"
+    "source": "../../../../round-1/experiment-4/src/results/method_out.json :: metadata.analysis.cost['judge_strong (API, per condition)'].usd_per_call"
    }
   }
  }

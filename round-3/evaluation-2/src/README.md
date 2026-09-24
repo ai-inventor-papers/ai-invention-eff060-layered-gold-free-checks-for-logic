@@ -2,7 +2,7 @@
 
 This is an iteration-3 evaluation artifact of the AI-Inventor run `run_u75jRHUss0zo`. It is **CPU only and spent $0 on OpenRouter: it makes no LLM calls.**
 Workspace (kept artifacts live here, by absolute path):
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2`
+`.`
 
 The artifact has two parts, both computed in one pass over dataset E:
 

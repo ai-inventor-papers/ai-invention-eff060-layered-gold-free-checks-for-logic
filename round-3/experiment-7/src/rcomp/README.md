@@ -1,6 +1,6 @@
 # R_COMP + PERTURB: long composed sentences with trusted answers (run_u75jRHUss0zo, invention iter 2, dataset_3)
 
-Workspace (absolute): `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3`
+Workspace (absolute): `../../../../round-2/dataset-3/src`
 
 This repository builds two held-out tables for evaluating gold-free NL→FOL faithfulness metrics. It deepens dataset E
 (`iter_1/gen_art/gen_art_dataset_1`). E's code is copied into `labeller/` and `src_e/`; E itself is never written to.

@@ -161,7 +161,7 @@ All ten are in `results/deviations.json`. The ones that matter for reading the n
 Kept artifacts live at
 `./`, for example
 `…/results/llm_cache.jsonl` and `…/results/per_item_T1.jsonl`. Dataset E itself is at
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json`.
+`../../../round-1/dataset-1/src/full_data_out.json`.
 
 ## How to run
 

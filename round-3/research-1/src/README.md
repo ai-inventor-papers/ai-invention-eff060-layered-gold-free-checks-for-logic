@@ -29,7 +29,7 @@ on NL→FOL).
 | `scripts/restore_fetches.sh` | Re-fetches every page in `FETCH_INDEX.md` |
 
 Our own numbers in the "this work" row were read, read-only, from:
-- `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/tables.md`
+- `../../../round-2/experiment-5/src/results/tables.md`
 - `…/iter_1/gen_art/gen_art_experiment_3/README.md`
 - `…/iter_1/gen_art/gen_art_experiment_4/results/summary.md`
 - `…/iter_2/gen_art/gen_art_evaluation_1/README.md`

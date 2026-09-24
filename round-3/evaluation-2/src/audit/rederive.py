@@ -18,7 +18,7 @@ import statsmodels.formula.api as smf
 from sklearn.metrics import roc_auc_score
 
 ROOT = Path(__file__).resolve().parent.parent
-E5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+E5 = Path("../../../../round-2/experiment-5/src")
 A = json.loads((ROOT / "results" / "part_a.json").read_text())  # the values being audited (compared, never reused)
 
 

@@ -1,5 +1,5 @@
 {
- "sibling_file": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/E_judge_local.jsonl",
+ "sibling_file": "../../../../../../../../../round-2/experiment-5/src/results/E_judge_local.jsonl",
  "disg": {
   "n": 7283,
   "spearman": 0.9887160400584399,

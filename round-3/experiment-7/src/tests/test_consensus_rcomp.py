@@ -11,7 +11,7 @@ for p in (ROOT / "src" / "vendor_x5", ROOT / "src", ROOT / "rcomp" / "src_e"):
 import consensus_rcomp as CR  # noqa: E402
 import score_consensus as SC  # noqa: E402
 
-X5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+X5 = Path("../../../../round-2/experiment-5/src")
 BASE = "∀x (Dog(x) ∧ Barks(x) ∧ ¬Young(x) → Loud(x))"
 CONTRA = "∀x (¬Loud(x) → ¬(Dog(x) ∧ Barks(x) ∧ ¬Young(x)))"
 MUT = "∀x (Dog(x) ∧ Barks(x) ∧ Young(x) → Loud(x))"
