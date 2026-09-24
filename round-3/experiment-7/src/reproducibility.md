@@ -8,7 +8,7 @@ from scratch re-calls the LLMs at temperature 0; provider-side non-determinism c
 ## 1. Copy the artifact
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7 ~/rcomp_exp7
+cp -r . ~/rcomp_exp7
 cd ~/rcomp_exp7
 ```
 

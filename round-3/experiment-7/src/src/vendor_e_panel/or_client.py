@@ -18,7 +18,7 @@ import aiohttp
 from loguru import logger
 
 import sys as _sys  # PATCH iter3 exp7: artifact-wide budget (src/artifact_budget.py)
-_sys.path.insert(0, os.environ.get("ART_SRC", "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/src"))
+_sys.path.insert(0, os.environ.get("ART_SRC", "../../src"))
 import artifact_budget as ART  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]

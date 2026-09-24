@@ -75,7 +75,7 @@ is flagging correct translations that follow the minority (strong) reading of th
 | `cost_ledger.jsonl` | artifact API ledger (every call: utc, phase, model, usd, tokens) |
 
 All kept artifacts stay at their workspace path:
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/<path>`.
+`./<path>`.
 
 ## How to run
 
