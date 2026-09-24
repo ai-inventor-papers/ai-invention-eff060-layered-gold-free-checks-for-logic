@@ -13,7 +13,7 @@ and LOCAL2. To run the missing part, raise the budget and follow step 5b.
 ## 1. Copy the artifact
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10 ~/csc && cd ~/csc
+cp -r . ~/csc && cd ~/csc
 ```
 The code reads these inputs **read-only by absolute path**. To reproduce elsewhere, place them at the same paths:
 * `iter_3/gen_art/gen_art_experiment_8/{data/perturb_rows.jsonl, results/perturb_scores.jsonl, results/invariance_table.csv, results/analysis_typing.json, src/, tests/, data/nltk_data/}`

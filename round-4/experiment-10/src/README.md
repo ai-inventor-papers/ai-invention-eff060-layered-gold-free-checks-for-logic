@@ -1,7 +1,7 @@
 # Candidate-Signature Consensus (CSC) on PERTURB and R_COMP: anchoring, rename invariance, typing
 
 Run `run_u75jRHUss0zo`, iteration 4, `gen_art_experiment_10` (plan `gen_plan_experiment_2_idx2`, task T6-P).
-Workspace: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10`
+Workspace: `.`
 (every path below is relative to it). Every number in this README is copied from `results/tables.md`, which is generated
 from the result files by `src/csc_tables.py`.
 
@@ -189,10 +189,10 @@ Only these rows need their own peers: 2,254 unique (text, signature) pairs out o
 ## For iteration 5 (paths to cite)
 
 * **CSC FREE peer cache:** NOT GENERATED. `results/csc_rcomp_free_peers.jsonl` does not exist.
-* **Firewall record:** `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/firewall.json`.
+* **Firewall record:** `./results/firewall.json`.
   It holds the whitelist, the fact that `free_labels.jsonl` was never opened, and the sha256 of the firewalled view.
 * **Job list** (the FREE stage has 1,813 unique signatures and 6,712 calls, projected $1.21):
-  `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/data/csc_jobs.jsonl`.
+  `./data/csc_jobs.jsonl`.
 * **Prompt:** block template sha256 `227e0db8…a460`, prompt file sha256 `cdfd524e…7a9e` (byte-identical to the dataset E
   and dataset 3 copies).
 
