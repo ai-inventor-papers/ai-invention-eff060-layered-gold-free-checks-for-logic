@@ -2,7 +2,7 @@
   "metadata": {
     "name": "R_COMP + PERTURB (run_u75jRHUss0zo, invention iter 2, gen_art_dataset_3)",
     "description": "Long composed sentences with references trusted by construction (weak/strong exception readings) and a typed-perturbation suite with matched DOWN/UP positions; see dataset_card.md.",
-    "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3",
+    "workspace": ".",
     "prereg": "prereg_rcomp.json",
     "item_id_recipe": "sha1(system|norm(text)|raw_output)[:16]",
     "groups": {
