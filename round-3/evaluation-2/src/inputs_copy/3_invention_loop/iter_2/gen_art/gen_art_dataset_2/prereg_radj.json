@@ -1,0 +1,442 @@
+{
+ "created_utc": "2026-09-23T17:54:33Z",
+ "artifact": "R_ADJ label regime (run_u75jRHUss0zo iter 2, gen_art_dataset_2)",
+ "prompt_files": {
+  "V1": {
+   "file": "adjudication_prompt.txt",
+   "sha256": "32bcc0f9a0cd35dbd3ec6a4f7726f8094bca3a7785f2e9f0fbe509df7cbb3011"
+  },
+  "V2": {
+   "file": "adjudication_prompt_v2.txt",
+   "sha256": "8806818fbb5fe262c62f4caf6edfb3a79e9b32b0ff1c6402b8f56414ab720766"
+  }
+ },
+ "user_message_template": "SENTENCE: <text>\\nCANDIDATE FOL: <fol>\\nREFERENCE FOL (<VERIFIED|UNVERIFIED>): <ref>",
+ "adjudicator_input": "exactly {sentence, candidate FOL, reference FOL, VERIFIED/UNVERIFIED tag}; no metric score, panel vote, solver label or repair op; no disguise; no reasoning trace requested",
+ "calibration": {
+  "file": "calibration_split.json",
+  "sha256": "c5380f56dfd13db3c731448e2b0a0e03071f78eaf2d10e92151b748481115da6",
+  "n_items": 269,
+  "composition": "77 synthetic (z3-verified, VERIFIED ref) + 96 track-H pairs x 2 directions (H-orig: orig vs VERIFIED corr, gold UNFAITHFUL; H-corr: corr vs UNVERIFIED orig, gold FAITHFUL, expected reference_wrong=true); 21 curator-ambiguous pairs (42 items) reported separately, excluded from the gate"
+ },
+ "gate_rule": {
+  "primary": "point estimates on the GATE half, unambiguous items: balanced accuracy >= 0.85 AND recall_faithful >= 0.80 AND recall_unfaithful >= 0.80",
+  "ambiguous_reading_on_unambiguous_item": "counts as WRONG; rate reported",
+  "parse_failure": "after 1 retry counts as WRONG",
+  "robust_pass": "secondary flag: full-set (dev+gate, unambiguous, chosen variant) Wilson 95% lower bound on EACH class recall >= 0.75",
+  "frozen": "thresholds, items and prompt NEVER change after the gate half is scored"
+ },
+ "variant_selection_rule": "run V1 and V2 on DEV half with the primary model; higher dev balanced accuracy wins; a tie within 0.01 goes to V1",
+ "verdict_to_label": {
+  "FAITHFUL": "CORRECT",
+  "UNFAITHFUL": "ERROR",
+  "AMBIGUOUS_READING": "AMBIGUOUS_READING"
+ },
+ "op_classes": {
+  "polarity": [
+   "NEG",
+   "REV",
+   "QUANT"
+  ],
+  "coverage": [
+   "ADD",
+   "DROP"
+  ],
+  "structural": [
+   "RESTR",
+   "CONN",
+   "MOVE",
+   "SWAP",
+   "BIND",
+   "SCOPE",
+   "UNGLUE",
+   "OTHER"
+  ],
+  "reported_separately": [
+   "MEANING_RENAME"
+  ]
+ },
+ "census_predictions": {
+  "polarity_share_of_ERROR_rows_with_ops": "<= 0.20",
+  "coverage_share_of_ERROR_rows_with_ops": ">= 0.40",
+  "definition": "share of R_ADJ ERROR rows having >=1 op that contain >=1 op of the class"
+ },
+ "E_design": {
+  "frame": "heldout_candidates rows with system_class == 'llm' and final_label != UNPARSEABLE (UNPARSEABLE = ERROR by rule, never adjudicated, counted in the card)",
+  "solver_binary": "CORRECT/VOCAB_GRAN -> faithful; ERROR/COMPOUND/TIMEOUT_UNKNOWN -> error",
+  "panel_majority": ">=2 agreeing votes among P1/P3/R1 in metadata_panel_votes",
+  "trusted_ref": "reference_status in {GOLD_PANEL_OK, PANEL_REPAIRED, TRUSTED_AGREED}",
+  "cells_first_match": [
+   "D: trusted_ref & panel majority exists & solver_binary != panel_majority",
+   "U: final_label UNRESOLVED, or trusted_ref without a panel majority",
+   "B: tier B, solver and panel agreeing",
+   "L: stratum L25, tier A, agreeing",
+   "A: tier A (L20/EXC/CTRL), agreeing",
+   "C: everything else (tier C / NO_TRUSTED_REFERENCE / DISPUTED_REFERENCE / unaudited refs); reference tagged UNVERIFIED"
+  ],
+  "targets": {
+   "D": "min(N_D, 640)",
+   "U": 40,
+   "B": 150,
+   "L": 100,
+   "A": "150 = 75 auto-CORRECT(solver faithful) + 75 auto-ERROR(solver error)",
+   "C": 150,
+   "total_max": 1200,
+   "trim": "D first to keep total <= 1200"
+  },
+  "selection": "sha1(item_id)-ordered within cell x stratum, n allocated proportional to stratum sizes (largest remainder); inclusion_prob = n_h/N_h per cell x stratum (x solver side for A)",
+  "tags": "VERIFIED for trusted_ref rows; UNVERIFIED for cell C and UNAUDITED_* references",
+  "dedupe": "same sentence + identical normalised candidate + same reference reuses the queried label (metadata_dedup_of); inclusion_prob unchanged",
+  "freeze": "sampling_frame.json written and sha256 logged BEFORE the first E call",
+  "order": "D -> A -> L -> B -> C -> U, concurrency 8; if the phase cap bites, the untouched remainder of the current cell is not_labelled and inclusion_prob = n_labelled/N_h"
+ },
+ "screen_design": {
+  "S_dis": "exp-A label in {CORRECT, ERROR} & screen final_label in {CORRECT, ERROR} & differ; inclusion 1",
+  "D1": "exp-D judge-vs-label disagreements with a reference, <=120 sha1(item_id)-first; inclusion 1",
+  "control": "60 agreeing items (30 CORRECT / 30 ERROR) sha1-first; inclusion n/N per class",
+  "reference": "E2.reference_fol (D1 csv reference if the item is absent from E2), tag VERIFIED; NO_REFERENCE items skipped and counted",
+  "reuse": "track-H items identical (text, candidate, reference) to an H-orig calibration item reuse its verdict"
+ },
+ "fallback_ladder": [
+  "primary passes -> R_ADJ = primary",
+  "primary fails and Grok passes on its gate half -> R_ADJ = Grok (rerun Steps 5-6 with Grok)",
+  "both fail -> no E regime; dual-label (primary + Grok) design cell D only as fold E_dual_ungated, label 'UNGATED'; card states 'R_ADJ dropped'"
+ ],
+ "budget": {
+  "hard_stop_usd": 9.5,
+  "phase_caps_usd": {
+   "pilot": 0.1,
+   "gate_primary": 1.8,
+   "gate_grok": 0.9,
+   "E": 4.6,
+   "screen": 1.2,
+   "retest": 0.45,
+   "grok_E": 0.5
+  },
+  "sacrifice_order": [
+   "grok_E",
+   "cell U",
+   "cell C -> 100",
+   "cell B -> 100",
+   "cell D -> 500"
+  ],
+  "never_sacrificed": [
+   "gate",
+   "cell A",
+   "screen disagreements"
+  ]
+ },
+ "models": {
+  "primary": {
+   "config": "sonnet5_off",
+   "model": "anthropic/claude-sonnet-5",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 300,
+    "reasoning": {
+     "enabled": false
+    }
+   },
+   "model_returned": [
+    "anthropic/claude-sonnet-5"
+   ],
+   "pilot_mean_cost": 0.002761,
+   "family": "anthropic",
+   "rule": "claude-sonnet-5: mean cost/call <= $0.0055 and JSON parse 10/10"
+  },
+  "fallback_primary": {
+   "model": "anthropic/claude-sonnet-4.6",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 300,
+    "reasoning": {
+     "enabled": false
+    }
+   }
+  },
+  "grok_check": {
+   "config": "grok420_off",
+   "model": "x-ai/grok-4.20",
+   "params": {
+    "temperature": 0.0,
+    "max_tokens": 300,
+    "reasoning": {
+     "enabled": false
+    }
+   },
+   "model_returned": [
+    "x-ai/grok-4.20"
+   ],
+   "pilot_mean_cost": 0.000851,
+   "family": "xai",
+   "rule": "cheapest x-ai model with pilot mean cost/call <= $0.004 at lowest reasoning effort"
+  }
+ },
+ "log": [
+  {
+   "ts_utc": "2026-09-23T17:56:56Z",
+   "event": "step1_models_chosen",
+   "primary": "sonnet5_off",
+   "grok_check": "grok420_off",
+   "pilot_summary": {
+    "sonnet5_off": {
+     "n": 10,
+     "n_parsed": 10,
+     "mean_cost": 0.002761,
+     "mean_prompt_tokens": 1098.4,
+     "mean_completion_tokens": 56.4,
+     "mean_reasoning_tokens": 0
+    },
+    "sonnet5_low": {
+     "n": 1,
+     "n_parsed": 1,
+     "mean_cost": 0.002604,
+     "mean_prompt_tokens": 1112,
+     "mean_completion_tokens": 38,
+     "mean_reasoning_tokens": 0
+    },
+    "sonnet46_off": {
+     "n": 10,
+     "n_parsed": 10,
+     "mean_cost": 0.004158,
+     "mean_prompt_tokens": 764.8,
+     "mean_completion_tokens": 78.3,
+     "mean_reasoning_tokens": 0
+    },
+    "grok43_off": {
+     "n": 10,
+     "n_parsed": 10,
+     "mean_cost": 0.000975,
+     "mean_prompt_tokens": 824.4,
+     "mean_completion_tokens": 31.4,
+     "mean_reasoning_tokens": 0
+    },
+    "grok420_off": {
+     "n": 10,
+     "n_parsed": 10,
+     "mean_cost": 0.000851,
+     "mean_prompt_tokens": 824.4,
+     "mean_completion_tokens": 30.2,
+     "mean_reasoning_tokens": 0
+    },
+    "grok47_off": {
+     "n": 1,
+     "n_parsed": 0,
+     "mean_cost": 0.0,
+     "mean_prompt_tokens": null,
+     "mean_completion_tokens": null,
+     "mean_reasoning_tokens": null
+    },
+    "grok47_low": {
+     "n": 10,
+     "n_parsed": 10,
+     "mean_cost": 0.004492,
+     "mean_prompt_tokens": 1897.1,
+     "mean_completion_tokens": 703.5,
+     "mean_reasoning_tokens": 674
+    }
+   }
+  },
+  {
+   "ts_utc": "2026-09-23T17:59:36Z",
+   "event": "step4a_variant_chosen",
+   "chosen": "V1",
+   "chosen_prompt_sha256": "32bcc0f9a0cd35dbd3ec6a4f7726f8094bca3a7785f2e9f0fbe509df7cbb3011",
+   "dev_bal_acc": {
+    "V1": 0.7303,
+    "V2": 0.73
+   },
+   "dev_scores": {
+    "V1": {
+     "n": 115,
+     "n_faithful": 58,
+     "n_unfaithful": 57,
+     "k_faithful": 43,
+     "k_unfaithful": 41,
+     "recall_faithful": [
+      0.7414,
+      0.6162,
+      0.8365
+     ],
+     "recall_unfaithful": [
+      0.7193,
+      0.5917,
+      0.8192
+     ],
+     "balanced_accuracy": 0.7303,
+     "accuracy": [
+      0.7304,
+      0.6429,
+      0.8031
+     ],
+     "ambiguous_reading_rate": [
+      0.0435,
+      0.0187,
+      0.0978
+     ],
+     "parse_fail": 0
+    },
+    "V2": {
+     "n": 115,
+     "n_faithful": 58,
+     "n_unfaithful": 57,
+     "k_faithful": 45,
+     "k_unfaithful": 39,
+     "recall_faithful": [
+      0.7759,
+      0.6534,
+      0.8641
+     ],
+     "recall_unfaithful": [
+      0.6842,
+      0.5552,
+      0.79
+     ],
+     "balanced_accuracy": 0.73,
+     "accuracy": [
+      0.7304,
+      0.6429,
+      0.8031
+     ],
+     "ambiguous_reading_rate": [
+      0.0261,
+      0.0089,
+      0.0739
+     ],
+     "parse_fail": 3
+    }
+   },
+   "adjudication_prompt_txt_sha256_now": "32bcc0f9a0cd35dbd3ec6a4f7726f8094bca3a7785f2e9f0fbe509df7cbb3011"
+  },
+  {
+   "ts_utc": "2026-09-23T18:00:30Z",
+   "event": "step4_gate_scored_VOID",
+   "primary_gate_half": {
+    "n": 112,
+    "n_faithful": 57,
+    "n_unfaithful": 55,
+    "k_faithful": 34,
+    "k_unfaithful": 30,
+    "recall_faithful": [
+     0.5965,
+     0.467,
+     0.7138
+    ],
+    "recall_unfaithful": [
+     0.5455,
+     0.4152,
+     0.6697
+    ],
+    "balanced_accuracy": 0.571,
+    "accuracy": [
+     0.5714,
+     0.4789,
+     0.6592
+    ],
+    "ambiguous_reading_rate": [
+     0.0268,
+     0.0092,
+     0.0758
+    ],
+    "parse_fail": 34
+   },
+   "primary_gate_pass": false,
+   "primary_robust_pass": false,
+   "grok_gate_pass": false,
+   "radj_regime": "none_dual_ungated",
+   "void_reason": "key outage: the shared OpenRouter key hit its $50/day limit at 18:00:18 UTC mid-gate; 36/134 gate calls and 259/269 Grok calls returned HTTP 403 and were counted as parse failures. Not a gate result. Prompt, items and thresholds unchanged; the gate half is re-scored when the key resets."
+  },
+  {
+   "ts_utc": "2026-09-23T18:02:27Z",
+   "event": "step5_frame_frozen",
+   "sampling_frame_sha256": "7ad39a339eb4e37c660bc23393f5673acc1c9f8141832faa3792628835b741b4",
+   "n_frame": 6838,
+   "n_selected": 1200,
+   "n_calls_after_dedupe": 1070,
+   "cell_sizes": {
+    "A": 578,
+    "B": 1343,
+    "C": 3681,
+    "U": 450,
+    "L": 116,
+    "D": 670
+   },
+   "cell_targets": {
+    "D": 610,
+    "U": 40,
+    "B": 150,
+    "L": 100,
+    "A": 150,
+    "C": 150
+   },
+   "note": "frozen before any E call"
+  },
+  {
+   "ts_utc": "2026-09-23T18:03:06Z",
+   "event": "step6_screen_set_built",
+   "join_coverage": {
+    "A1_items": 1055,
+    "E2_items": 1173,
+    "joined": 979,
+    "A1_not_in_E2": 76,
+    "E2_not_in_A1": 194
+   },
+   "n_S_dis": 73,
+   "n_D1_total": 163,
+   "n_D1_with_ref": 163,
+   "n_D1_selected": 120,
+   "control_pool_sizes": {
+    "CORRECT": 381,
+    "ERROR": 130
+   },
+   "skipped": {},
+   "n_items": 250,
+   "n_reused_from_calibration": 22,
+   "groups": {
+    "S_dis": 70,
+    "S_dis+D1": 3,
+    "D1": 117,
+    "control_CORRECT": 30,
+    "control_ERROR": 30
+   }
+  },
+  {
+   "ts_utc": "2026-09-24T00:03:43Z",
+   "event": "step4_gate_scored",
+   "primary_gate_half": {
+    "n": 112,
+    "n_faithful": 57,
+    "n_unfaithful": 55,
+    "k_faithful": 47,
+    "k_unfaithful": 39,
+    "recall_faithful": [
+     0.8246,
+     0.7063,
+     0.9018
+    ],
+    "recall_unfaithful": [
+     0.7091,
+     0.5786,
+     0.8123
+    ],
+    "balanced_accuracy": 0.7668,
+    "accuracy": [
+     0.7679,
+     0.6816,
+     0.8364
+    ],
+    "ambiguous_reading_rate": [
+     0.0357,
+     0.014,
+     0.0882
+    ],
+    "parse_fail": 1
+   },
+   "primary_gate_pass": false,
+   "primary_robust_pass": false,
+   "grok_gate_pass": false,
+   "radj_regime": "none_dual_ungated"
+  }
+ ],
+ "chosen_prompt_sha256": "32bcc0f9a0cd35dbd3ec6a4f7726f8094bca3a7785f2e9f0fbe509df7cbb3011"
+}
