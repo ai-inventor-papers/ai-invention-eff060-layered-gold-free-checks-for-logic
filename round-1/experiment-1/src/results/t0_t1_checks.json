@@ -1,0 +1,99 @@
+{
+ "T0": {
+  "iter3_counts": {
+   "repaired": 42,
+   "COMPOUND": 36,
+   "VOCAB/GRAN": 21
+  },
+  "now_counts": {
+   "repaired": 42,
+   "COMPOUND": 33,
+   "VOCAB/GRAN": 21
+  },
+  "n_changed": 3,
+  "changes": [
+   {
+    "id": "concl_166_95",
+    "iter3": "COMPOUND",
+    "now": "EQUIV",
+    "cand": "∀x (SecurityDeposit(x, oliveGarden) → MoreThan(x, uSD2000) ⊕ Equal(x, uSD2000))",
+    "ref": "∀x (SecurityDeposit(x, oliveGarden) → (MoreThan(x, uSD2000) ⊕ Equal(x, uSD2000)))"
+   },
+   {
+    "id": "concl_471_20",
+    "iter3": "COMPOUND",
+    "now": "EQUIV",
+    "cand": "¬(Turtle(rockie) ∧ Squirrel(rockie)) → Cute(rockie) ⊕ Skittish(rockie)",
+    "ref": "¬(Turtle(rockie) ∧ Squirrel(rockie)) → (Cute(rockie) ⊕ Skittish(rockie))"
+   },
+   {
+    "id": "concl_352_98",
+    "iter3": "COMPOUND",
+    "now": "EQUIV",
+    "cand": "PrivateCompany(harvardWeeklyBookClub) → LegalObligation(harvardWeeklyBookClub) ⊕ CreatedUnderLaw(harvardWeeklyBookClub)",
+    "ref": "PrivateCompany(harvardWeeklyBookClub) → (LegalObligation(harvardWeeklyBookClub) ⊕ CreatedUnderLaw(harvardWeeklyBookClub))"
+   }
+  ]
+ },
+ "T1": {
+  "n_parseable_corrected_gold": 294,
+  "l1_fa": {
+   "ANY": 5,
+   "z3_unknown": 0,
+   "VACUOUS": 3,
+   "EX_IMP": 1,
+   "ARITY": 1,
+   "TRIVIAL": 1
+  },
+  "l1_fa_rate": 0.017006802721088437,
+  "l1_fa_items": [
+   {
+    "text": "If Yuri is not an American professional basketball player, then Yuri is a professional basketball player.",
+    "fol": "¬(AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri)) → (Professional(yuri) ∧ BasketballPlayer(yuri))",
+    "codes": [
+     "VACUOUS"
+    ]
+   },
+   {
+    "text": "A vaccine that is effective provides immunity, reduces the risk of infection, and often contributes to herd immunity in a population.",
+    "fol": "∀x (Vaccine(x) ∧ Effective(x) → (ProvidesImmunity(x) ∧ ReducesRiskOfInfection(x))) ∧ (∃x (Vaccine(x) ∧ Effective(x) →  ContributesToHerdImmunity(x)))",
+    "codes": [
+     "EX_IMP"
+    ]
+   },
+   {
+    "text": "If the Hamden Plaza Subway store provides take-out service and receives many negative reviews, then its rating is greater than 4 and it does not provide take-out service.",
+    "fol": "(Provide(hamdenPlazaSubway, takeOutService) ∧ ReceiveManyNegativeReviews(hamdenPlazaSubway)) → (∃y (HaveRating(hamdenPlazaSubway, y) ∧ GreaterThan(y, four)) ∧ ¬Provide(hamdenPlazaSubway, takeOutService))",
+    "codes": [
+     "VACUOUS"
+    ]
+   },
+   {
+    "text": "Hannah is at Mary's school and she either is not a picky eater or, if she is, then she spends a lot of her time eating and catching up with friends in the campus dining halls.",
+    "fol": "At(hannah, marysSchool) ∧ (¬PickyEater(hannah) ∨ PickyEater(hannah)) ∧  (PickyEater(hannah) → (Spend(hannah, aLotOfTime, eating) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall)))",
+    "codes": [
+     "ARITY"
+    ]
+   },
+   {
+    "text": "'Hachi: A Dog's Tale' either contains excessive erotic and violent content and is a film in the 'Frozen' series, or it neither contains excessive erotic and violent content nor is a film in the 'Frozen' series.",
+    "fol": "(Contain(hachiADogsTale, excessiveEroticViolentContent) ∧ InFrozenSeries(hachiADogsTale)) ⊕ ¬(Contain(hachiADogsTale, excessiveEroticViolentContent) ∧ InFrozenSeries(hachiADogsTale))",
+    "codes": [
+     "TRIVIAL",
+     "VACUOUS"
+    ]
+   }
+  ],
+  "bow": {
+   "unanchored>=1": 17,
+   "uncarried>0.34": 10,
+   "flag": 25
+  },
+  "bow_rates": {
+   "unanchored>=1": 0.05782312925170068,
+   "uncarried>0.34": 0.034013605442176874,
+   "flag": 0.08503401360544217
+  },
+  "iter3_reference": "L1 5/294 = 1.7%; unanchored FA 5-7%"
+ }
+}

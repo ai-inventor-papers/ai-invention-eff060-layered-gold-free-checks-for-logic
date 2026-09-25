@@ -1,0 +1,223 @@
+15:19:05|INFO   |$ -m pytest -c /dev/null --rootdir . --noconftest -q tests/test_fol.py
+......                                                                   [100%]
+6 passed in 3.10s
+15:19:11|INFO   |$ tests/census_regression.py
+{"n_plain": 20, "n_xor": 10, "plain_changed": 0, "xor_changed": 3, "F7_stop": false}
+{'id': 'concl_166_95', 'src': 'FOLIO-concl', 'old_cls': 'COMPOUND', 'new_cls': 'EQUIV', 'has_xor': True, 'changed': True}
+{'id': 'concl_352_98', 'src': 'FOLIO-concl', 'old_cls': 'COMPOUND', 'new_cls': 'EQUIV', 'has_xor': True, 'changed': True}
+{'id': 'concl_471_20', 'src': 'FOLIO-concl', 'old_cls': 'COMPOUND', 'new_cls': 'EQUIV', 'has_xor': True, 'changed': True}
+15:19:13|INFO   |$ src/screen.py
+15:19:21|INFO   |T1 Logic-LM gpt-3.5-turbo: 204 entries
+15:19:21|INFO   |T1 Logic-LM gpt-4: 204 entries
+15:19:21|INFO   |T1 Logic-LM text-davinci-003: 204 entries
+15:19:21|INFO   |curated: 73 stories, 202 conclusions, 100 MALLS
+15:19:21|INFO   |agreed premises: {'premises': 370, 'agreed': 317, 'premise_unparseable': 41, 'disagreed': 12, 'story_no_refined_row': 1}
+15:19:22|INFO   |T1 conclusion match: 112/202 = 0.554 modes={'question': 108, 'nl_copy': 4}; MATCH-RATE FALLBACK FIRED (agreed premises of matched stories extend track L; included by default)
+15:19:22|INFO   |premise mapping modes: {'nl_copy': 877, 'context_position': 10}
+15:19:22|INFO   |premise sentences with a source unit: 143; track-L premise items without unit: 0
+15:20:51|INFO   |labelled 1169 items in 90s
+15:20:51|INFO   |T1 ('H', 'human_original', 'CORRECT'): 201
+15:20:51|INFO   |T1 ('H', 'human_original', 'ERROR'): 35
+15:20:51|INFO   |T1 ('H', 'human_original', 'READING_CHOICE'): 25
+15:20:51|INFO   |T1 ('H', 'human_original', 'REF_UNPARSEABLE'): 8
+15:20:51|INFO   |T1 ('H', 'human_original', 'UNCERTAIN_COMPOUND'): 22
+15:20:51|INFO   |T1 ('H', 'human_original', 'UNPARSEABLE'): 11
+15:20:51|INFO   |T1 ('L', 'gpt-3.5-turbo', 'CORRECT'): 96
+15:20:51|INFO   |T1 ('L', 'gpt-3.5-turbo', 'ERROR'): 71
+15:20:51|INFO   |T1 ('L', 'gpt-3.5-turbo', 'REF_UNPARSEABLE'): 4
+15:20:51|INFO   |T1 ('L', 'gpt-3.5-turbo', 'UNCERTAIN_COMPOUND'): 60
+15:20:51|INFO   |T1 ('L', 'gpt-3.5-turbo', 'UNCERTAIN_GRAN'): 4
+15:20:51|INFO   |T1 ('L', 'gpt-3.5-turbo', 'UNPARSEABLE'): 27
+15:20:51|INFO   |T1 ('L', 'gpt-4', 'CORRECT'): 119
+15:20:51|INFO   |T1 ('L', 'gpt-4', 'ERROR'): 79
+15:20:51|INFO   |T1 ('L', 'gpt-4', 'REF_UNPARSEABLE'): 4
+15:20:51|INFO   |T1 ('L', 'gpt-4', 'UNCERTAIN_COMPOUND'): 81
+15:20:51|INFO   |T1 ('L', 'gpt-4', 'UNCERTAIN_GRAN'): 11
+15:20:51|INFO   |T1 ('L', 'gpt-4', 'UNPARSEABLE'): 15
+15:20:51|INFO   |T1 ('L', 'text-davinci-003', 'CORRECT'): 82
+15:20:51|INFO   |T1 ('L', 'text-davinci-003', 'ERROR'): 99
+15:20:51|INFO   |T1 ('L', 'text-davinci-003', 'REF_UNPARSEABLE'): 4
+15:20:51|INFO   |T1 ('L', 'text-davinci-003', 'UNCERTAIN_COMPOUND'): 85
+15:20:51|INFO   |T1 ('L', 'text-davinci-003', 'UNCERTAIN_GRAN'): 3
+15:20:51|INFO   |T1 ('L', 'text-davinci-003', 'UNPARSEABLE'): 23
+15:20:51|INFO   |label hash 0e43cbddb54901f3f1ddfe0ded607948a30b02548ffcbd235f02a39ef2da863a
+15:20:52|INFO   |$ src/peers.py call --arm peers
+15:20:55|INFO   |{
+ "n_units": {
+  "U_F": 202,
+  "U_M": 100,
+  "U_P": 5
+ },
+ "peers": {
+  "meta-llama/llama-3.3-70b-instruct": 0.0909859375,
+  "qwen/qwen3-235b-a22b-2507": 0.0903156953125,
+  "deepseek/deepseek-chat-v3.1": 0.25039984375,
+  "mistralai/mistral-small-3.2-24b-instruct": 0.07765431640625,
+  "google/gemini-2.5-flash-lite": 0.1032179375,
+  "openai/gpt-4.1-mini": 0.41287175
+ },
+ "peers_total": 1.02544548046875,
+ "sc_cheap": 0.5160896875,
+ "sc_same": 1.14154765625,
+ "grand_total": 2.68308282421875,
+ "abort_if_peers_over": 3.0,
+ "mean_prompt_tokens": {
+  "U_F": 1811.0225866336634,
+  "U_P": 1821.3125,
+  "U_M": 456.4625
+ }
+}
+15:20:55|INFO   |running total at start: $1.5194
+15:20:55|INFO   |arm=peers jobs=1842
+15:21:21|INFO   |peers: 100/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 200/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 300/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 400/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 500/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 600/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 700/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 800/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 900/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1000/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1100/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1200/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1300/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1400/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1500/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1600/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1700/1842 done, running total $1.5194
+15:21:21|INFO   |peers: 1800/1842 done, running total $1.5194
+15:21:21|INFO   |arm=peers finished; running total $1.5194
+15:21:22|INFO   |$ src/peers.py call --arm sc_cheap
+15:21:23|INFO   |running total at start: $1.5194
+15:21:23|INFO   |arm=sc_cheap jobs=1535
+15:21:50|INFO   |sc_cheap: 100/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 200/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 300/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 400/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 500/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 600/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 700/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 800/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 900/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 1000/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 1100/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 1200/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 1300/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 1400/1535 done, running total $1.5194
+15:21:50|INFO   |sc_cheap: 1500/1535 done, running total $1.5194
+15:21:50|INFO   |arm=sc_cheap finished; running total $1.5194
+15:21:50|INFO   |$ src/peers.py call --arm sc_same
+15:21:51|INFO   |running total at start: $1.5194
+15:21:51|INFO   |SC_same units: 117
+15:21:51|INFO   |arm=sc_same jobs=585
+15:22:00|INFO   |sc_same: 100/585 done, running total $1.5194
+15:22:00|INFO   |sc_same: 200/585 done, running total $1.5194
+15:22:00|INFO   |sc_same: 300/585 done, running total $1.5194
+15:22:00|INFO   |sc_same: 400/585 done, running total $1.5194
+15:22:00|INFO   |sc_same: 500/585 done, running total $1.5194
+15:22:00|INFO   |arm=sc_same finished; running total $1.5194
+15:22:00|INFO   |$ src/peers.py build
+15:23:19|INFO   |built 8599 peer rows, 10339 SC rows
+15:23:19|INFO   |  ('peer', 'deepseek/deepseek-chat-v3.1', 'fol_unparseable'): 50
+15:23:19|INFO   |  ('peer', 'deepseek/deepseek-chat-v3.1', 'parse_ok'): 1376
+15:23:19|INFO   |  ('peer', 'deepseek/deepseek-chat-v3.1', 'position'): 108
+15:23:19|INFO   |  ('peer', 'deepseek/deepseek-chat-v3.1', 'text'): 1301
+15:23:19|INFO   |  ('peer', 'deepseek/deepseek-chat-v3.1', 'unmapped'): 17
+15:23:19|INFO   |  ('peer', 'google/gemini-2.5-flash-lite', 'fol_unparseable'): 84
+15:23:19|INFO   |  ('peer', 'google/gemini-2.5-flash-lite', 'parse_ok'): 1339
+15:23:19|INFO   |  ('peer', 'google/gemini-2.5-flash-lite', 'position'): 9
+15:23:19|INFO   |  ('peer', 'google/gemini-2.5-flash-lite', 'text'): 1367
+15:23:19|INFO   |  ('peer', 'google/gemini-2.5-flash-lite', 'unmapped'): 47
+15:23:19|INFO   |  ('peer', 'meta-llama/llama-3.3-70b-instruct', 'fol_unparseable'): 106
+15:23:19|INFO   |  ('peer', 'meta-llama/llama-3.3-70b-instruct', 'parse_ok'): 1336
+15:23:19|INFO   |  ('peer', 'meta-llama/llama-3.3-70b-instruct', 'position'): 39
+15:23:19|INFO   |  ('peer', 'meta-llama/llama-3.3-70b-instruct', 'text'): 1355
+15:23:19|INFO   |  ('peer', 'meta-llama/llama-3.3-70b-instruct', 'unmapped'): 48
+15:23:19|INFO   |  ('peer', 'mistralai/mistral-small-3.2-24b-instruct', 'fol_unparseable'): 78
+15:23:19|INFO   |  ('peer', 'mistralai/mistral-small-3.2-24b-instruct', 'parse_ok'): 1332
+15:23:19|INFO   |  ('peer', 'mistralai/mistral-small-3.2-24b-instruct', 'position'): 42
+15:23:19|INFO   |  ('peer', 'mistralai/mistral-small-3.2-24b-instruct', 'text'): 1354
+15:23:19|INFO   |  ('peer', 'mistralai/mistral-small-3.2-24b-instruct', 'unmapped'): 14
+15:23:19|INFO   |  ('peer', 'openai/gpt-4.1-mini', 'fol_unparseable'): 59
+15:23:19|INFO   |  ('peer', 'openai/gpt-4.1-mini', 'parse_ok'): 1374
+15:23:19|INFO   |  ('peer', 'openai/gpt-4.1-mini', 'position'): 87
+15:23:19|INFO   |  ('peer', 'openai/gpt-4.1-mini', 'text'): 1310
+15:23:19|INFO   |  ('peer', 'openai/gpt-4.1-mini', 'unmapped'): 36
+15:23:19|INFO   |  ('peer', 'qwen/qwen3-235b-a22b-2507', 'fol_unparseable'): 84
+15:23:19|INFO   |  ('peer', 'qwen/qwen3-235b-a22b-2507', 'parse_ok'): 1381
+15:23:19|INFO   |  ('peer', 'qwen/qwen3-235b-a22b-2507', 'position'): 115
+15:23:19|INFO   |  ('peer', 'qwen/qwen3-235b-a22b-2507', 'text'): 1297
+15:23:19|INFO   |  ('peer', 'qwen/qwen3-235b-a22b-2507', 'unmapped'): 53
+15:23:19|INFO   |  ('sc_cheap', 'openai/gpt-4.1-nano', 'fol_unparseable'): 792
+15:23:19|INFO   |  ('sc_cheap', 'openai/gpt-4.1-nano', 'parse_ok'): 6085
+15:23:19|INFO   |  ('sc_cheap', 'openai/gpt-4.1-nano', 'position'): 1533
+15:23:19|INFO   |  ('sc_cheap', 'openai/gpt-4.1-nano', 'response_unparseable'): 10
+15:23:19|INFO   |  ('sc_cheap', 'openai/gpt-4.1-nano', 'text'): 4153
+15:23:19|INFO   |  ('sc_cheap', 'openai/gpt-4.1-nano', 'unmapped'): 1191
+15:23:19|INFO   |  ('sc_same', 'openai/gpt-3.5-turbo', 'fol_unparseable'): 352
+15:23:19|INFO   |  ('sc_same', 'openai/gpt-3.5-turbo', 'parse_ok'): 3099
+15:23:19|INFO   |  ('sc_same', 'openai/gpt-3.5-turbo', 'position'): 101
+15:23:19|INFO   |  ('sc_same', 'openai/gpt-3.5-turbo', 'response_unparseable'): 1
+15:23:19|INFO   |  ('sc_same', 'openai/gpt-3.5-turbo', 'text'): 3299
+15:23:19|INFO   |  ('sc_same', 'openai/gpt-3.5-turbo', 'unmapped'): 51
+15:23:20|INFO   |$ src/consensus.py --mini 20
+15:23:21|INFO   |sentences: 20, candidates: 54, peer rows: 8599, sc rows: 10339
+15:23:48|INFO   |rewrites: 84 applicable; not-proved-equivalent: 0
+15:23:48|INFO   |[pairs] eqmv pairs to compute: 106 (cached 15983)
+15:23:49|INFO   |[pairs] done in 1s
+15:23:49|INFO   |pairwise stage 1s for 760 pairs
+15:23:49|INFO   |coverage: {'ok': 48, 'candidate_unparseable': 6}; timing {'pairs_s': 1.1, 'repair_s': 0.0, 'labels_s': 0.0, 'total_s': 28.7, 'n_pairs': 760, 'n_sentences': 20, 'repair_budget_s': 10.0}
+15:23:49|INFO   |per-candidate seconds (z3): mean 0.070
+15:23:50|INFO   |$ src/consensus.py
+15:23:51|INFO   |sentences: 440, candidates: 1169, peer rows: 8599, sc rows: 10339
+15:24:08|INFO   |rewrites: 561 applicable; not-proved-equivalent: 0
+15:24:08|INFO   |[pairs] eqmv pairs to compute: 3137 (cached 16089)
+15:24:09|INFO   |[pairs] 50/157 chunks, 1s, eta 3s
+15:24:10|INFO   |[pairs] 100/157 chunks, 1s, eta 1s
+15:24:10|INFO   |[pairs] 150/157 chunks, 2s, eta 0s
+15:24:10|INFO   |[pairs] done in 2s
+15:24:10|INFO   |pairwise stage 2s for 18253 pairs
+15:24:12|INFO   |coverage: {'ok': 1077, 'insufficient_pool': 4, 'candidate_unparseable': 88}; timing {'pairs_s': 2.3, 'repair_s': 0.0, 'labels_s': 0.0, 'total_s': 21.2, 'n_pairs': 18253, 'n_sentences': 440, 'repair_budget_s': 10.0}
+15:24:12|INFO   |per-candidate seconds (z3): mean 0.151
+15:24:12|INFO   |$ src/analysis.py --boot 2000
+15:24:32|INFO   |[primary] n=546 err=249  c_score=0.8655  medoid_depth=0.7216  cluster_entropy=0.7732  sc5_cheap=0.7254  sc5_same=0.7159  misalign=0.8353
+15:24:38|INFO   |[lenient] n=772 err=475  c_score=0.8823  medoid_depth=0.7514  cluster_entropy=0.817  sc5_cheap=0.7472  sc5_same=0.7474  misalign=0.8484
+15:24:41|INFO   |[vocab_strict] n=485 err=249  c_score=0.8748  medoid_depth=0.7398  cluster_entropy=0.7854  sc5_cheap=0.7384  sc5_same=0.7361  misalign=0.8353
+15:24:43|INFO   |[trackH] n=236 err=35  c_score=0.8323  medoid_depth=0.7696  cluster_entropy=0.7133  sc5_cheap=0.7146  sc5_same=None  misalign=0.6857
+15:24:45|INFO   |[vocab_clean] n=379 err=82  c_score=0.8518  medoid_depth=0.7408  cluster_entropy=0.7842  sc5_cheap=0.7143  sc5_same=0.741  misalign=0.5
+15:25:06|INFO   |summary written: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_3/results/summary.json
+15:25:07|INFO   |$ tests/audit_rederive.py
+{
+ "n": 546,
+ "n_err": 249,
+ "auroc_c_score": 0.8655,
+ "n_sc": 546,
+ "auroc_c_on_sc_subset": 0.8655,
+ "auroc_sc5_cheap": 0.7254,
+ "delta_c_minus_sc": 0.1401,
+ "n_vocab_clean": 379,
+ "n_err_vocab_clean": 82,
+ "auroc_c_vocab_clean": 0.8518,
+ "recall_at_threshold": 0.6185,
+ "false_alarm_at_threshold": 0.138,
+ "placebo_permuted_auroc_c_mean": 0.5001,
+ "placebo_permuted_auroc_c_p95": 0.5394,
+ "placebo_permuted_delta_mean": -0.0007,
+ "placebo_permuted_delta_p97_5": 0.0358,
+ "perm_p_value_c_score": 0.004975124378109453,
+ "placebo_constant_score_auroc": 0.5,
+ "cost_from_raw_cache_usd": 1.5194,
+ "cost_from_cost_log_usd": 1.5194,
+ "pipeline": {
+  "auroc_c_score": 0.8655,
+  "auroc_sc5_cheap": 0.7254,
+  "delta": 0.1401,
+  "recall": 0.6185,
+  "false_alarm": 0.138,
+  "cost_total": 1.5194,
+  "auroc_c_vocab_clean": 0.8518,
+  "n_vocab_clean": 379
+ }
+}
+15:25:58|INFO   |done: method_out.json, results/summary.json, results/audit_rederive.json

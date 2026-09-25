@@ -1,0 +1,27 @@
+{
+ "timestamp_utc": "2026-09-23T14:11:46.051483",
+ "note": "full-size DRY run (partial L3 coverage, results_dry/) executed as pipeline test at 14:11 UTC; it joined labels. Code frozen at these hashes before it; no code/threshold change afterwards.",
+ "sha256": {
+  "analysis.py": "07155bb4e2b9281a712ad2187d45b43ec095bd00c3c33c9b84e307c84fafd372",
+  "check_role_href.py": "d6f5d727d8445f356bcd3911eed689ee3cd139c4b02472937b63842c91ecb7de",
+  "check_t0_t1.py": "3d6363da728d3fa4e192b1e5daf46a6063af99a058e7c2269318351c3e27f22c",
+  "content_accounting.py": "f57c2446af6bccb10c13f9b6c8f800fb9f5e2cd4410eaa824e09a71cb846d6e4",
+  "disguise.py": "e1befb187d0136f1c47e37d5cfaf83fdeaedd2c768e42f46c8b164ac4801a79a",
+  "fol.py": "650623887deffa722fb11dd1d994e2d36b815b604f0e98614d36648ff3c7f197",
+  "fol_triage.py": "560368c934b3f80f13a72e54344fdf4f1507c5f445401de519d7e023009ec951",
+  "labeller.py": "ebe912720edc14bc6880d2af2f7835091cebc06879367c3faca44fa754f8e868",
+  "lint_smells.py": "df7fe4ba24f52007b0e15afc21462a3137afd4463c5903f498cba2295eb5c458",
+  "llm.py": "ef138e0d0c7cdd2b18795d776716db06e2d53bd34f06248b4538a3588d7cbdaf",
+  "output.py": "40eeb9bc7c11a79d2790f51cfdd2e3ca4fd0e3971f2f01ca1dc9e97bc2960365",
+  "pipeline.py": "905eb7fe362f6b676cbf685d9ae5403470738e06748f58bc81c25c49ebd62823",
+  "repair_census.py": "fa09ae20f405bd97c8e485669a16df62f80c3009b82906a9827349a264e17464",
+  "rewrites.py": "e4f2e2decd2df4865e6f74a9524a77517bfcd960469ab2e1b4cbc37d9003f318",
+  "run_cpu.py": "c8f675d329690dcd9cef5173bf9fc372f4f534bfc04175b778ca1a322211d87b",
+  "run_local_llm.py": "7574a812b5512cb457e5e774d1ce76e81efb1d9c583c5ba901cbd3ac1d55ffc6",
+  "run_screen.py": "75f15279f943c0e934c4b0dd96f7a22b44ddf15e30c656077d6fa35dcaf161a8",
+  "screen.py": "c91d8f92c53f1a182a2f6281930ba0da8b738e40967f77f797f6bc7903de8ffa",
+  "t5_probe.py": "9d19d277aa02bd1d5853dcb14693186d9d301fa1f877e7d7563e669b2c2de824",
+  "test_units.py": "0d3b50b7490199f43e31e18a90b9f0ff526f00e76dee34697a7a135685b90f24",
+  "method.py": "aaff8e2b8c99b075923229842ca1517878b2dbc5fb3e5039fe8b104031d65d27"
+ }
+}

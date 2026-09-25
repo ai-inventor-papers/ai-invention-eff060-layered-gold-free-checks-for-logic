@@ -1,0 +1,20 @@
+15:12:29|INFO   |screen: H=15 L=15 HREF=15 invariance rows=25
+15:12:30|INFO   |cpu_layers: 50 unique pairs, 0 uncached
+15:12:30|INFO   |prereg.json written (stage 4)
+15:12:31|INFO   |LLM: 642 cached responses, ledger spent so far $0.0264
+15:12:35|INFO   |questionnaires[google/gemini-2.5-flash-lite L3]: 43 texts, new calls 49, ledger $0.0344
+15:12:38|INFO   |L3 gate (HREF, google/gemini-2.5-flash-lite): {"mm_role": 0.9259, "mm_force": 0.8235, "mm_claims": 0.9215, "mm_order": 1.0, "mm_exception": 0.0, "missing_frac": 0.9104, "extra_frac": 0.95}
+15:12:38|INFO   |gated fields ['mm_role', 'mm_force', 'mm_claims', 'mm_order', 'missing_frac', 'extra_frac']; flagged ['mm_force']; excluded ['mm_exception']
+15:12:38|INFO   |LLM: 691 cached responses, ledger spent so far $0.0344
+15:12:40|INFO   |questionnaires[google/gemini-2.5-flash-lite L3retest]: 15 texts, new calls 15, ledger $0.0374
+15:12:40|INFO   |LLM: 706 cached responses, ledger spent so far $0.0374
+15:12:47|INFO   |questionnaires[qwen/qwen3-30b-a3b-instruct-2507 L3]: 15 texts, new calls 15, ledger $0.0393
+15:12:47|INFO   |questionnaires[local/qwen2.5-1.5b-instruct-q4_k_m L3]: 43 texts, new calls 0, ledger $0.0393
+15:12:47|INFO   |calibration appended to prereg.json (stage 5) BEFORE track-L scoring
+15:12:48|INFO   |LLM: 721 cached responses, ledger spent so far $0.0393
+15:12:50|INFO   |decomposed[google/gemini-2.5-flash-lite]: 40 pairs, new calls 40, ledger $0.0426
+15:12:50|INFO   |cascade_llmformula: trained on 27 no-leak H/HREF rows with decomposed answers (3 positive) -> too few rows; cascade_llmformula NOT fitted (single-layer l3_score_llmformula still reported)
+15:13:03|INFO   |LLM: 761 cached responses, ledger spent so far $0.0426
+15:13:05|INFO   |questionnaires[google/gemini-2.5-flash-lite L3disguised]: 29 texts, new calls 31, ledger $0.0485
+15:13:06|INFO   |STAGE 6 done: spend $0.0485; runtime 37s
+15:13:12|INFO   |analysis written: {"primary_L_ERROR_vs_CORRECT": 0.0, "secondary_L_ERRORuCOMPOUND_vs_CORRECT": 0.25, "secondary_L_ERROR_minus_pureADDDROP_vs_CORRECT": 0.0, "track_H": null}

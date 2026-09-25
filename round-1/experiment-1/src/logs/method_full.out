@@ -1,0 +1,20 @@
+15:13:44|INFO   |screen: H=302 L=753 HREF=302 invariance rows=750
+15:13:45|INFO   |cpu_layers: 1182 unique pairs, 0 uncached
+15:13:45|INFO   |prereg.json written (stage 4)
+15:13:46|INFO   |LLM: 792 cached responses, ledger spent so far $0.0485
+15:14:08|INFO   |questionnaires[google/gemini-2.5-flash-lite L3]: 421 texts, new calls 384, ledger $0.1155
+15:14:12|INFO   |L3 gate (HREF, google/gemini-2.5-flash-lite): {"mm_role": 0.913, "mm_force": 0.6896, "mm_claims": 0.8628, "mm_order": 0.9474, "mm_exception": 0.0, "missing_frac": 0.9165, "extra_frac": 0.919}
+15:14:12|INFO   |gated fields ['mm_role', 'mm_claims', 'mm_order', 'missing_frac', 'extra_frac']; flagged []; excluded ['mm_force', 'mm_exception']
+15:14:12|INFO   |LLM: 1176 cached responses, ledger spent so far $0.1155
+15:14:16|INFO   |questionnaires[google/gemini-2.5-flash-lite L3retest]: 60 texts, new calls 49, ledger $0.1246
+15:14:16|INFO   |LLM: 1225 cached responses, ledger spent so far $0.1246
+15:15:23|INFO   |questionnaires[qwen/qwen3-30b-a3b-instruct-2507 L3]: 294 texts, new calls 279, ledger $0.1579
+15:15:23|INFO   |questionnaires[local/qwen2.5-1.5b-instruct-q4_k_m L3]: 421 texts, new calls 0, ledger $0.1579
+15:15:27|INFO   |calibration appended to prereg.json (stage 5) BEFORE track-L scoring
+15:15:30|INFO   |LLM: 1504 cached responses, ledger spent so far $0.1579
+15:16:10|INFO   |decomposed[google/gemini-2.5-flash-lite]: 905 pairs, new calls 885, ledger $0.2187
+15:16:12|INFO   |cascade_llmformula: trained on 346 no-leak H/HREF rows with decomposed answers (43 positive)
+15:16:27|INFO   |LLM: 2389 cached responses, ledger spent so far $0.2187
+15:16:47|INFO   |questionnaires[google/gemini-2.5-flash-lite L3disguised]: 417 texts, new calls 398, ledger $0.2919
+15:16:49|INFO   |STAGE 6 done: spend $0.2919; runtime 184s
+15:20:47|INFO   |analysis written: {"primary_L_ERROR_vs_CORRECT": 0.7588753118108528, "secondary_L_ERRORuCOMPOUND_vs_CORRECT": 0.7779569090841316, "secondary_L_ERROR_minus_pureADDDROP_vs_CORRECT": 0.7311809089313914, "track_H": null}
