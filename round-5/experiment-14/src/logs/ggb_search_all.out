@@ -1,0 +1,16 @@
+11:38:34|INFO   |279 sentences, 11202 pairs not accepted by PRIMARY GG
+11:38:53|INFO   |20/279 sentences, 834 pairs, 19s
+11:40:16|INFO   |40/279 sentences, 1723 pairs, 101s
+11:40:54|INFO   |60/279 sentences, 2450 pairs, 140s
+11:41:29|INFO   |80/279 sentences, 3156 pairs, 175s
+11:42:06|INFO   |100/279 sentences, 3925 pairs, 211s
+11:43:02|INFO   |120/279 sentences, 4736 pairs, 268s
+11:43:21|INFO   |140/279 sentences, 5506 pairs, 286s
+11:43:58|INFO   |160/279 sentences, 6387 pairs, 323s
+11:44:22|INFO   |180/279 sentences, 7144 pairs, 348s
+11:44:50|INFO   |200/279 sentences, 7934 pairs, 376s
+11:45:43|INFO   |220/279 sentences, 8870 pairs, 428s
+11:47:19|INFO   |240/279 sentences, 9579 pairs, 525s
+11:48:03|INFO   |260/279 sentences, 10392 pairs, 569s
+/usr/local/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
