@@ -1,0 +1,25 @@
+{
+ "n": 1264,
+ "n_error": 400,
+ "judge_local_qwen8b_disg": {
+  "auroc_nf4_or_api": 0.664419849537037,
+  "auroc_bf16_exp6": 0.6991362847222222,
+  "spearman_nf4_vs_bf16": 0.8632977829808468
+ },
+ "judge_local_llama8b_disg": {
+  "auroc_nf4_or_api": 0.6234244791666667,
+  "auroc_bf16_exp6": 0.6389453125,
+  "spearman_nf4_vs_bf16": 0.8164084367106008
+ },
+ "judge_cheap_disg": {
+  "auroc_nf4_or_api": 0.6801186342592592
+ },
+ "rt_nli_min_local": {
+  "auroc_nf4": 0.6258101851851852,
+  "auroc_bf16_exp6": 0.6103862847222222
+ },
+ "rt_embed_cos_local": {
+  "auroc_nf4": 0.6102329282407407,
+  "auroc_bf16_exp6": 0.5763382523148148
+ }
+}
