@@ -1,0 +1,22 @@
+{
+ "D-BUDGET": {
+  "what": "Before the pilot, every OpenRouter call returned HTTP 403 aii_run_budget_exhausted (the run-wide 'Test idea' phase budget of $7.00 was spent by other artifacts: $7.03 at 07:26 UTC; the proxy says it does not reset while the run goes on). ':free' models were also exhausted (429 free-models-per-day-high-balance, 1000/day, reset ~16.7 h later). This artifact spent $0.0000088 (one 1-token probe). Hence NO CSC peer (mutant-signature, base-signature or FREE) could be generated.",
+  "fallback_per_plan": "all CPU work runs; no local model substitutes for the CSC peers (plan fallback). Gates G3-P, G4 and MT(E) are declared UNTESTED, not passed or failed.",
+  "zero_cost_arms_added": {
+   "FREE3": "matched-resource UNCUED baseline: dataset-E G4/G6/G7 few-shot outputs (E bases) and exp-7 FREE G4/G6/G7 (R_COMP bases) scored with consensus_lib exact and align (as pre-planned).",
+   "SIGPROXY": "signature-CUED peers that already exist at $0: exp-7 SIG-condition outputs of the SAME four families (G4 deepseek, G6 phi-4, G7 gpt-4.1-mini, G2 qwen) for the 77 R_COMP bases that overlap exp 7. Their cue is the BASE/template signature in a CLOSED, glossed block ('Use only these predicates and constants'), not the candidate's own open list. On signature-preserving rows (base signature == candidate signature) this equals base-signature CSC up to the prompt wording; on new-signature rows it is the 'base-signature peers' term of Delta-anchor only. Same K3/K4 rule, same exact-equivalence, same thresholds.",
+   "SIGPROXY_on_SIG": "exp-7 SIG rows scored with K3/K4 subsets of the same four families (vs the 9-peer c_score_sig): a k=3 family-matched ablation of signature-cued consensus, labelled.",
+   "ORACLE_samevocab": "same-code typing ceiling against the true reference on all mutants."
+  },
+  "never": "no gate verdict is inferred from a proxy arm; proxy rows are labelled 'SIGPROXY' in every table"
+ },
+ "D-PILOT": "pilot (30 signatures x 4 models) returned 403 on every call; prompt variant v1 kept (the v1b rule needs pilot usage data); no projection from own pilot - sibling exp-9 per-call prices used instead",
+ "D-RETEST": "test-retest subsample not run (no API)",
+ "D-FREE-CACHE": "the label-free FREE CSC peer cache for iteration 5 was not generated; job manifest delivered",
+ "D-LOCAL2": "a labelled secondary local-peer arm (qwen2.5-1.5b, gemma-2-2b; llama-3.2-1b dropped after 0/3 parseable in a smoke test) was added on 40 E bases to measure the anchoring mechanism; never used for a gate",
+ "D-SIGPROXY": "signature-cued outputs of the same families from exp 7 (closed glossed template vocabulary) used as a k=3 proxy on R_COMP bases and SIG rows; never used for a gate",
+ "D-TYPING-ADD_ANY": "ADD_ANY also conjoins NEGATED target literals (a dropped '¬P(x)' is otherwise unreachable at depth 1)",
+ "D-TYPING-SHORTCUT": "sound MISSING_PREDS > 2 shortcut (VOCAB_GAP) skips searches that cannot succeed at depth 2",
+ "D-TEXT": "27 exp-7 SIG/FREE sentence ids absent from dataset 3's final export: text taken from exp 7's own rcomp/work/rcomp_sentences.json (plan fallback)",
+ "D-FREE-ROWS": "exp 7 has 2,652 FREE rows (10 few-shot slots + 2 zero-shot) of which 2,265 parse; the planned '2,024' referred to the SIG primary pool"
+}
