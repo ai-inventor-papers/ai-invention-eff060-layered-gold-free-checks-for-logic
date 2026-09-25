@@ -1,4 +1,0 @@
-23c23
-< URL = "https://openrouter.ai/api/v1/chat/completions"
----
-> URL = os.environ["OPENROUTER_BASE_URL"].rstrip("/") + "/chat/completions"  # D0 (E2): transport-only base-URL fix

@@ -1,5 +1,0 @@
-.venv/
-.venv_gpu/
-data/nltk_data/
-__pycache__/
-*.pyc

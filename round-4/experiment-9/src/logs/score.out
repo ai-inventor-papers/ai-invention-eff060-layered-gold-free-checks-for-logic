@@ -1,8 +1,0 @@
-07:29:59|INFO   |tasks: 3350; missing peer calls per arm {'OWN': 6749, 'K4': 2060, 'OTHER': 2495, 'FMT': 8058, 'PLACEBO': 300, 'RENAME_SYN': 1047, 'RENAME_NONCE': 2592}
-07:30:08|INFO   |  scored 50/280 chunks in 9s
-07:30:13|INFO   |  scored 100/280 chunks in 13s
-07:30:17|INFO   |  scored 150/280 chunks in 18s
-07:30:21|INFO   |  scored 200/280 chunks in 21s
-07:30:25|INFO   |  scored 250/280 chunks in 26s
-07:30:47|INFO   |align9 rename re-derivation: 698 tasks done, 48s
-07:30:47|INFO   |scores written: 4048 lines, sha256 cd9f94e88086773d8fba2b976a06cd6228adc206eddc563e49d5716fd70560bf, 48s
