@@ -1,0 +1,49 @@
+{
+ "generation_records": 2851,
+ "free_rows_last_per_key": 2652,
+ "sentences": 221,
+ "by_input_status": {
+  "PARSED": 2265,
+  "UNPARSEABLE": 188,
+  "NO_OUTPUT": 199
+ },
+ "by_slot_variant": {
+  "G1|fewshot_v1": 221,
+  "G1b|fewshot_v1": 221,
+  "G1b|zeroshot_v1": 221,
+  "G2|fewshot_v1": 221,
+  "G2|zeroshot_v1": 221,
+  "G3|fewshot_v1": 221,
+  "G4|fewshot_v1": 221,
+  "G5|fewshot_v1": 221,
+  "G6|fewshot_v1": 221,
+  "G7|fewshot_v1": 221,
+  "G8|fewshot_v1": 221,
+  "G9|fewshot_v1": 221
+ },
+ "by_template": {
+  "T1": 324,
+  "T2": 336,
+  "T3": 252,
+  "T4": 300,
+  "T5": 312,
+  "T6": 288,
+  "T7": 324,
+  "T8": 276,
+  "T9": 240
+ },
+ "reconciliation": "hypothesis text says 2,024 FREE rows (that is the SIG primary pool size); exp 7 testability_FREE.json label_counts_all_rows sums to 2,652 incl. 199 NO_OUTPUT and 188 UNPARSEABLE; this file yields the number above",
+ "dataset3_crosscheck": {
+  "text_match": 203,
+  "missing_in_d3": 18
+ },
+ "sig_rows": 2210,
+ "sig_labels": {
+  "CORRECT": 1595,
+  "ERROR": 429,
+  "UNPARSEABLE": 20,
+  "OFF_SIGNATURE": 50,
+  "READING_CHOICE": 116
+ },
+ "unique_parsed_classes": 2163
+}

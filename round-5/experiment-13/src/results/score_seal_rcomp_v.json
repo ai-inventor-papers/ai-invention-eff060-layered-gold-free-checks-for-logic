@@ -1,0 +1,15 @@
+{
+ "utc": "2026-09-24T11:43:40Z",
+ "column": "V4_c_two_channel",
+ "all": "af18cbc2eb26ec553f6a0f7dfd8c31c8e28d93d94d3b023dd50f8380b62058a6",
+ "untouched": "dfe9ec4b29a444a78eb38d13b9e4d73b56dcfd2637b7a42837a816ecbad930dc",
+ "coefficients": {
+  "intercept": -3.472996682952369,
+  "c_exact": 3.5444565071756204,
+  "c_align": 1.5752543602595768
+ },
+ "selection_sha256": "ed8c1364b0e223c4ebc01aee6fd803577ce13ea8ca25eb8d853bab35ff491a9a",
+ "marker": "freeze_copy/CONSENSUS_FREEZE_READY.json",
+ "flag": "scored after label seal, code frozen externally (coefficients frozen 11:20:44Z, before the 11:23:52Z label seal)",
+ "V1_V2_V3_V5_note": "consensus_variants.py of the marker is byte-identical (6730a63b...) to freeze_copy_prelim/, used before the label seal"
+}
