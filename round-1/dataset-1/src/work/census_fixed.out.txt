@@ -1,0 +1,29 @@
+non-equivalent pairs: 96
+  COMPOUND                33  (0.34)
+  VOCAB                   20  (0.21)
+  ADD+DROP                 8  (0.08)
+  ADD                      6  (0.06)
+  DROP                     5  (0.05)
+  UNGLUE                   4  (0.04)
+  CONN+NEG                 3  (0.03)
+  ADD+ADD                  2  (0.02)
+  ADD+CONN                 2  (0.02)
+  SWAP                     2  (0.02)
+  QUANT                    1  (0.01)
+  MOVE                     1  (0.01)
+  CONN                     1  (0.01)
+  MOVE+MOVE                1  (0.01)
+  RESTR                    1  (0.01)
+  CONN+DROP                1  (0.01)
+  CONN+UNGLUE              1  (0.01)
+  ADD+NEG                  1  (0.01)
+  GRAN                     1  (0.01)
+  BIND                     1  (0.01)
+  REV                      1  (0.01)
+vocabulary/granularity-only (auto): 21/96
+remaining errors: 75  single-op: 23  two-op: 19  compound(>2 or unresolved): 33
+operator mass among repaired errors: {'ADD': 21, 'DROP': 14, 'CONN': 8, 'UNGLUE': 5, 'NEG': 4, 'MOVE': 3, 'SWAP': 2, 'QUANT': 1, 'RESTR': 1, 'BIND': 1, 'REV': 1}
+ambiguous=True: n=21 {'COMPOUND': 11, 'ADD+ADD': 2, 'VOCAB': 2, 'QUANT': 1, 'CONN+DROP': 1, 'CONN+NEG': 1, 'ADD': 1, 'GRAN': 1, 'ADD+CONN': 1}
+ambiguous=False: n=75 {'COMPOUND': 22, 'VOCAB': 18, 'ADD+DROP': 8, 'ADD': 5, 'DROP': 5, 'UNGLUE': 4, 'CONN+NEG': 2, 'SWAP': 2, 'MOVE': 1, 'CONN': 1, 'MOVE+MOVE': 1, 'RESTR': 1, 'CONN+UNGLUE': 1, 'ADD+NEG': 1, 'ADD+CONN': 1, 'BIND': 1, 'REV': 1}
+MALLS: n=41 {'COMPOUND': 19, 'UNGLUE': 4, 'ADD': 3, 'ADD+ADD': 2, 'CONN+NEG': 2, 'VOCAB': 2, 'DROP': 1, 'QUANT': 1, 'MOVE': 1, 'CONN': 1, 'MOVE+MOVE': 1, 'ADD+DROP': 1, 'RESTR': 1, 'CONN+DROP': 1, 'CONN+UNGLUE': 1}
+FOLIO-concl: n=55 {'VOCAB': 18, 'COMPOUND': 14, 'ADD+DROP': 7, 'DROP': 4, 'ADD': 3, 'ADD+CONN': 2, 'SWAP': 2, 'ADD+NEG': 1, 'GRAN': 1, 'CONN+NEG': 1, 'BIND': 1, 'REV': 1}
