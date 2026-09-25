@@ -1,0 +1,99 @@
+{
+ "L_auroc": {
+  "judge_cheap_disg": {
+   "auroc": 0.7774622892635314,
+   "n": 524
+  },
+  "judge_cheap_orig": {
+   "auroc": 0.7488391008577344,
+   "n": 524
+  },
+  "judge_cheap2_orig": {
+   "auroc": 0.7502218278615794,
+   "n": 524
+  },
+  "judge_strong_disg": {
+   "auroc": 0.7302250445632799,
+   "n": 200
+  },
+  "rt_nli_min": {
+   "auroc": 0.7095090209997043,
+   "n": 524
+  },
+  "pilot_rerun_jacc": {
+   "auroc": 0.7197358358294563,
+   "n": 505
+  },
+  "pilot_joint_conflict": {
+   "auroc": 0.5131469979296066,
+   "n": 524
+  }
+ },
+ "L_auroc_judge_cheap_disg_failures_dropped": {
+  "auroc": 0.7845679012345679,
+  "n": 513
+ },
+ "L_auroc_shuffled_labels": {
+  "judge_cheap_disg": 0.4888642413487134,
+  "judge_cheap_orig": 0.4708887902987282,
+  "judge_cheap2_orig": 0.46219313812481516,
+  "judge_strong_disg": 0.5359854236258731,
+  "rt_nli_min": 0.5141378290446613,
+  "pilot_rerun_jacc": 0.4764433811802233,
+  "pilot_joint_conflict": 0.5170215912451938
+ },
+ "contamination_judge_cheap": {
+  "delta_L": 0.02862318840579703,
+  "delta_H_curator": -0.02443876101165099,
+  "DiD": -0.05306194941744802,
+  "DiD_ci": [
+   -0.14518914276459255,
+   0.03883279556210511
+  ]
+ },
+ "contamination_placebo_shuffled": {
+  "DiD": -0.06425164268605987,
+  "DiD_ci": [
+   -0.1446799926454613,
+   0.014026229788810839
+  ]
+ },
+ "S4_combo_refit": {
+  "oof_auroc": 0.8149955634427685,
+  "judge_cheap_disg_auroc": 0.7774622892635314,
+  "delta": 0.03753327417923702,
+  "delta_ci": [
+   -0.009523029109024988,
+   0.08626237549624312
+  ]
+ },
+ "S4_combo_placebo_shuffled": {
+  "oof_auroc": 0.480804495711328,
+  "delta_ci": [
+   -0.0657225144018839,
+   0.08358301685772357
+  ]
+ },
+ "strong_vs_cheap_orig_L_subset": {
+  "n": 200,
+  "auroc_strong": 0.801693404634581,
+  "auroc_cheap": 0.7249888591800356,
+  "delta": 0.07670454545454541,
+  "delta_ci": [
+   0.007802500975514602,
+   0.15283168442415015
+  ]
+ },
+ "strong_vs_cheap_placebo_shuffled": {
+  "delta": -0.04094251336898391,
+  "delta_ci": [
+   -0.11614699967281107,
+   0.0256145455367274
+  ]
+ },
+ "recall_probe_regex_names": {
+  "J_probe_orig_mean": 0.3591301652684909,
+  "J_probe_corr_mean": 0.3892785636812941,
+  "n": 293
+ }
+}

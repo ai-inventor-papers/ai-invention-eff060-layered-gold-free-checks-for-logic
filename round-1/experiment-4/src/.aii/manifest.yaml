@@ -1,0 +1,17 @@
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/user_uploads/dpv_pilot_study.zip
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "bash restore.sh venv"
+  - path: pilot_ref/
+    delete: regenerable
+    source: "python3 -c \"import zipfile; zipfile.ZipFile('/ai-inventor/aii_data/runs/run_u75jRHUss0zo/user_uploads/dpv_pilot_study.zip').extractall('pilot_ref')\""
+  - path: src/__pycache__/
+    delete: regenerable
+    source: "created automatically by python on import"
+  - path: src/labeller/__pycache__/
+    delete: regenerable
+    source: "created automatically by python on import"

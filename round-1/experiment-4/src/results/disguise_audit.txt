@@ -1,0 +1,209 @@
+[0093af5f8509f6d0] L/gpt-4 ok=True [] leak_text=0.0
+  T : If a superhero movie is named after a character, that character is a good guy.
+  T': If a zesuva sipafi is salefued ralzazso a fuduvu, that fuduvu is a sukuga deniga.
+  F : ∀x ∀y (SuperheroMovie(x) ∧ NamedAfter(x, y) → GoodGuy(y))
+  F': ∀x ∀y (ZesuvaSipafi(x) ∧ SalefuRalzazso(x, y) → SukugaDeniga(y))
+  map: {'after': 'ralzazso', 'charact': 'fuduvu', 'good': 'sukuga', 'guy': 'deniga', 'movi': 'sipafi', 'name': 'salefu', 'superhero': 'zesuva'}
+
+[009b69bb1de09130] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : Michael cannot block Windy's shooting.
+  T': Filobto cannot puravri Tolivo's sokmali.
+  F : ¬(Jump(michael) ∧ Shooting(windy))
+  F': ¬(Figninre(filobto) ∧ Sokmali(tolivo))
+  map: {'block': 'puravri', 'jump': 'figninre', 'michael': 'filobto', 'shoot': 'sokmali', 'windi': 'tolivo'}
+
+[00b1b9552be255b7] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : Walden contains knowledge.
+  T': Bulifi fosulos mopkeka.
+  F : Contain(walden, knowledge)
+  F': Fosulo(bulifi, mopkeka)
+  map: {'contain': 'fosulo', 'knowledg': 'mopkeka', 'walden': 'bulifi'}
+
+[00ce390f011b734b] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : A list of residential colleges at Yale: Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College.
+  T': A kurose of nadnefo ralegtus at Mikmivsu: Vudalo Tetede Ralegtu, Sumpebe Ralegtu, Tuzilzo Ralegtu, Lazute Ralegtu, Kalubse Titboba Ralegtu, Bopvisu Lisine Ralegtu, Vadlizu Mengomto Ralegtu, Foseza Ralegtu, Momazu Dipofsa Ralegtu, Suzzefzi Ralegtu, Mikezte Ralegtu, Mofenko Ralegtu, Sabipo Ladufa Ralegtu, and Takofu Ralegtu.
+  F : List(residentialColleges, [benjaminFranklin, berkeley, branford, davenport, ezraStiles, graceHopper, jonathanEdwards, morse, pauliMurray, pierson, saybrook, silliman, timothyDwight, trumbull])
+  F': Kurose(nadneforalegtu, [vudalotetede, sumpebe, tuzilzo, lazute, kalubsetitboba, bopvisulisine, vadlizumengomto, foseza, momazudipofsa, suzzefzi, mikezte, mofenko, sabipoladufa, takofu])
+  map: {'benjamin': 'vudalo', 'berkeley': 'sumpebe', 'branford': 'tuzilzo', 'colleg': 'ralegtu', 'davenport': 'lazute', 'dwight': 'ladufa', 'edward': 'mengomto', 'ezra': 'kalubse', 'franklin': 'tetede', 'grace': 'bopvisu', 'hopper': 'lisine', 'jonathan': 'vadlizu', 'list': 'kurose', 'mors': 'foseza', 'murray': 'dipofsa', 'pauli': 'momazu', 'pierson': 'suzzefzi', 'residenti': 'nadnefo', 'saybrook': 'mikezte', 'silliman': 'mofenko', 'stile': 'titboba', 'timothi': 'sabipo', 'trumbul': 'takofu', 'yale': 'mikmivsu'}
+
+[01cd87c6733f7905] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : Tom is a grumpy person.
+  T': Kedezi is a padudmo person.
+  F : PetOwner(tom)
+  F': DukepuKotepe(kedezi)
+  map: {'grumpi': 'padudmo', 'owner': 'kotepe', 'pet': 'dukepu', 'tom': 'kedezi'}
+
+[027cb8d3905256d2] L/gpt-4 ok=True [] leak_text=0.0
+  T : If the output of a natural language processing task is a text sequence, then it is a language generation task.
+  T': If the bigosfe of a ratusra tarsobu mubuvi nizegu is a guzgaki putali, then it is a tarsobu kipugo nizegu.
+  F : ∀x ((NLP(x) ∧ OutputText(x)) → Generation(x))
+  F': ∀x ((Vizurlo(x) ∧ BigosfeGuzgaki(x)) → Kipugo(x))
+  map: {'gener': 'kipugo', 'languag': 'tarsobu', 'natur': 'ratusra', 'nlp': 'vizurlo', 'output': 'bigosfe', 'process': 'mubuvi', 'sequenc': 'putali', 'task': 'nizegu', 'text': 'guzgaki'}
+
+[0296fa3344b0a744] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : Dani Shapiro was born in Boston.
+  T': Bisore Retego was zumnate in Folmusre.
+  F : Uncertain
+  F': Selibe
+  map: {'bear': 'zumnate', 'boston': 'folmusre', 'dani': 'bisore', 'shapiro': 'retego', 'uncertain': 'selibe'}
+
+[02fcb0d81229e573] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : If Marvin is not from Earth, then Marvin is an extraterrestrial.
+  T': If Sekizi is not from Lubzedo, then Sekizi is an rumodi.
+  F : From(marvin, earth) → ¬Alien(marvin)
+  F': From(sekizi, lubzedo) → ¬Pogubvi(sekizi)
+  map: {'alien': 'pogubvi', 'earth': 'lubzedo', 'extraterrestri': 'rumodi', 'marvin': 'sekizi'}
+
+[034d0878ea48c98e] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : Djokovic lives in a tax haven.
+  T': Radeku kuzputkas in a pikaza nozude.
+  F : TaxHaven(djokovic)
+  F': PikazaNozude(radeku)
+  map: {'djokov': 'radeku', 'haven': 'nozude', 'live': 'kuzputka', 'tax': 'pikaza'}
+
+[0389c9d465f027eb] L/gpt-4 ok=True [] leak_text=0.0
+  T : Michael cannot block Windy's shooting.
+  T': Filobto cannot puravri Tolivo's sokmali.
+  F : ¬Block(michael, windy)
+  F': ¬Puravri(filobto, tolivo)
+  map: {'block': 'puravri', 'michael': 'filobto', 'shoot': 'sokmali', 'windi': 'tolivo'}
+
+[038a2cfeeb417ff0] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : French is an Indo-European language.
+  T': Gafaka is an Kapezmi-Gidimu pesemlu.
+  F : IndoEuropean(french)
+  F': KapezmiGidimu(gafaka)
+  map: {'european': 'gidimu', 'french': 'gafaka', 'indo': 'kapezmi', 'languag': 'pesemlu'}
+
+[0398eaf64475d78f] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : Beijing is the capital of the People's Republic of China.
+  T': Vogtozti is the lamuda of the People's Genugu of Turofe.
+  F : Capital(beijing, china)
+  F': Lamuda(vogtozti, turofe)
+  map: {'beij': 'vogtozti', 'capit': 'lamuda', 'china': 'turofe', 'republ': 'genugu'}
+
+[03af5a29f0267dfd] L/gpt-4 ok=True [] leak_text=0.0
+  T : French is an Indo-European language.
+  T': Gafaka is an Kapezmi-Gidimu pesemlu.
+  F : IndoEuropean(french)
+  F': KapezmiGidimu(gafaka)
+  map: {'european': 'gidimu', 'french': 'gafaka', 'indo': 'kapezmi', 'languag': 'pesemlu'}
+
+[03df2c5be04c824b] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : All dogs are animals that bark.
+  T': All kanlines are novrinnis that kureda.
+  F : ∀x (Dog(x) → Animal(x) ∧ Bark(x))
+  F': ∀x (Kanline(x) → Novrinni(x) ∧ Kureda(x))
+  map: {'anim': 'novrinni', 'bark': 'kureda', 'dog': 'kanline'}
+
+[04097a27e3868505] H/human_original ok=True [] leak_text=0.0
+  T : A beverage is classified as a soft drink if it does not contain alcohol and is typically carbonated.
+  T': A duknezi is ruvinmued as a sopovo galpuna if it does not namepli mifboza and is vupodo leradoed.
+  F : ∀x (Beverage(x) ∧ ¬ContainsAlcohol(x) ∧ TypicallyCarbonated(x) → SoftDrink(x))
+  F': ∀x (Duknezi(x) ∧ ¬NamepliMifboza(x) ∧ VupodoLerado(x) → SopovoGalpuna(x))
+  map: {'alcohol': 'mifboza', 'beverag': 'duknezi', 'carbon': 'lerado', 'classifi': 'ruvinmu', 'contain': 'namepli', 'drink': 'galpuna', 'soft': 'sopovo', 'typic': 'vupodo'}
+
+[04183834fea9e216] L/gpt-4 ok=True [] leak_text=0.0
+  T : Vampires suck.
+  T': Furodes digparva.
+  F : Suck(vampire)
+  F': Digparva(furode)
+  map: {'suck': 'digparva', 'vampir': 'furode'}
+
+[04b115e19c29230e] H/human_original ok=True [] leak_text=0.0
+  T : Rockie is a turtle.
+  T': Fopobi is a zagatu.
+  F : Turtle(rockie)
+  F': Zagatu(fopobi)
+  map: {'rocki': 'fopobi', 'turtl': 'zagatu'}
+
+[04dd12ce3df73749] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : "Black Mirror" is popular.
+  T': "Kufrara Nirbapi" is fedesu.
+  F : Popular(blackMirror)
+  F': Fedesu(kufraranirbapi)
+  map: {'black': 'kufrara', 'mirror': 'nirbapi', 'popular': 'fedesu'}
+
+[052738ebdc4ef431] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : At least one event is happy.
+  T': At least one lalaro is dobtove.
+  F : ∃x (Happy(x))
+  F': ∃x (Dobtove(x))
+  map: {'event': 'lalaro', 'happi': 'dobtove'}
+
+[05589aa50bda1d39] L/gpt-4 ok=True [] leak_text=0.0
+  T : Montana is home to the city of Missoula.
+  T': Reguve is sigtokla to the sezozu of Samato.
+  F : In(missoula, montana)
+  F': In(samato, reguve)
+  map: {'citi': 'sezozu', 'home': 'sigtokla', 'missoula': 'samato', 'montana': 'reguve'}
+
+[05a389bf74f0a19d] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : Beethoven leads the Vienna Music Society.
+  T': Bufummi geztalos the Sopfibu Pimavlo Dibdelku.
+  F : Lead(beethoven, viennaMusicSociety)
+  F': Geztalo(bufummi, sopfibupimavlodibdelku)
+  map: {'beethoven': 'bufummi', 'lead': 'geztalo', 'music': 'pimavlo', 'societi': 'dibdelku', 'vienna': 'sopfibu'}
+
+[05f3af9796cd861c] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : Susan flies to LGA airport.
+  T': Vezepa fedvenies to Guvembi liroru.
+  F : Flies(susan, LGA)
+  F': Fedveni(vezepa, guvembi)
+  map: {'airport': 'liroru', 'fli': 'fedveni', 'lga': 'guvembi', 'susan': 'vezepa'}
+
+[0778a38c6422ad34] L/gpt-4 ok=True [] leak_text=0.0
+  T : Beijing is located in Northern China.
+  T': Ruramo is bipefied in Befito Fufnukvi.
+  F : LocatedIn(beijing, northernChina)
+  F': BipefiIn(ruramo, befitofufnukvi)
+  map: {'beij': 'ruramo', 'china': 'fufnukvi', 'locat': 'bipefi', 'northern': 'befito'}
+
+[078801b4d5e32270] L/gpt-4 ok=True [] leak_text=0.0
+  T : All shows portraying the lives of real people are reality TV shows.
+  T': All zufubfes kebutkaing the suputbees of disvubga people are bazilu Munefa zufubfes.
+  F : ∀x (BachelorRealLife(x) → RealityTV(x))
+  F': ∀x (TasutraDisvubgaSuputbe(x) → BaziluMunefa(x))
+  map: {'bachelor': 'tasutra', 'life': 'suputbe', 'portray': 'kebutka', 'real': 'disvubga', 'realiti': 'bazilu', 'show': 'zufubfe', 'tv': 'munefa'}
+
+[07a86e965863573b] L/gpt-4 ok=True [] leak_text=0.0
+  T : No digital media are analog.
+  T': No tunizva zogapni are vednelu.
+  F : ∀x (Digital(x) → ¬Analog(x))
+  F': ∀x (Tunizva(x) → ¬Vednelu(x))
+  map: {'analog': 'vednelu', 'digit': 'tunizva', 'medium': 'zogapni'}
+
+[07c8ebd03421a146] H/human_original ok=True [] leak_text=0.0
+  T : A camera can capture photos or record videos.
+  T': A gufovma can nifodka bokafis or bofribo puflodus.
+  F : ∀x (Camera(x) → (CapturePhotos(x) ∨ RecordVideos(x)))
+  F': ∀x (Gufovma(x) → (NifodkaBokafi(x) ∨ BofriboPuflodu(x)))
+  map: {'camera': 'gufovma', 'captur': 'nifodka', 'photo': 'bokafi', 'record': 'bofribo', 'video': 'puflodu'}
+
+[07f52246b07a5b8e] L/gpt-4 ok=True [] leak_text=0.0
+  T : Reinforcement learning is not used to train the state-of-the-art text summarization model.
+  T': Sevbupo subami is not kasfifeed to tepikle the mesipi-of-the-pavmune nusodpa difrafi tefvazi.
+  F : ¬Train(reinforcementLearning, stateOfTheArtTextSummarizationModel)
+  F': ¬Tepikle(sevbuposubami, mesipiofthepavmunenusodpadifrafitefvazi)
+  map: {'art': 'pavmune', 'learn': 'subami', 'model': 'tefvazi', 'reinforc': 'sevbupo', 'state': 'mesipi', 'summar': 'difrafi', 'text': 'nusodpa', 'train': 'tepikle', 'use': 'kasfife'}
+
+[08fa4a0a72624273] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : The world championships is a sporting event.
+  T': The golgezze pomkuzes is a lelura bogeku.
+  F : SportingEvent(worldChampionships)
+  F': LeluraBogeku(golgezzepomkuze)
+  map: {'championship': 'pomkuze', 'event': 'bogeku', 'sport': 'lelura', 'world': 'golgezze'}
+
+[093934886802c18d] L/text-davinci-003 ok=True [] leak_text=0.0
+  T : All of New Vessel Press's published books are in English.
+  T': All of Vidtorni Lebepi Tunabu's roderboed gugernos are in Dereve.
+  F : ∀x (PublishHouse(newVesselPress) → Language(x, english))
+  F': ∀x (RoderboNuzugu(vidtornilebepitunabu) → Revudu(x, dereve))
+  map: {'book': 'gugerno', 'english': 'dereve', 'hous': 'nuzugu', 'languag': 'revudu', 'new': 'vidtorni', 'press': 'tunabu', 'publish': 'roderbo', 'vessel': 'lebepi'}
+
+[09fd754e34c889f2] L/gpt-3.5-turbo ok=True [] leak_text=0.0
+  T : The Legend of Zelda sold more than one million copies.
+  T': The Vaggebto of Pemnufa kalabe more than one busmode penolies.
+  F : Sell(legendOfZelda, moreThanOneMillionCopies)
+  F': Kalabe(vaggebtoofpemnufa, morethanonebusmodepenoli)
+  map: {'copi': 'penoli', 'legend': 'vaggebto', 'million': 'busmode', 'sell': 'kalabe', 'zelda': 'pemnufa'}
