@@ -1,0 +1,58 @@
+{
+ "label_counts_all_llm_rows": {
+  "CORRECT": 48,
+  "ERROR": 334,
+  "UNRESOLVED": 3151,
+  "UNPARSEABLE": 467
+ },
+ "population_R_A_UNAUDITED": {
+  "n": 382,
+  "ERROR": 334,
+  "CORRECT": 48,
+  "CORRECT_sentences": 31
+ },
+ "V0_strat_auroc": 0.7372514274463478,
+ "paired": {
+  "n": 276,
+  "n_correct": 31,
+  "V0_auroc": 0.7044011849344054,
+  "flashlite_disg_auroc": 0.49612075045845677,
+  "delta": 0.20828043447594863,
+  "delta_ci": [
+   0.06003142612260072,
+   0.3540250603207486
+  ]
+ },
+ "placebo_permuted_labels": {
+  "null_mean": 0.0011408520242629477,
+  "null_sd": 0.0661079714281817,
+  "permutation_p_two_sided": 0.005,
+  "one_permuted_label_bootstrap_ci": [
+   -0.08664503402775708,
+   0.187551825569526
+  ],
+  "one_permuted_delta": 0.046762589928057485,
+  "ci_includes_0_as_required": true
+ },
+ "placebo_random_score_vs_flashlite": {
+  "delta": -0.01706869798279026,
+  "ci": [
+   -0.17670090558571677,
+   0.15832223394456454
+  ],
+  "ci_includes_0_as_required": true
+ },
+ "V0_decoupled_strat_auroc": 0.6106845179497278,
+ "concordance_spearman_V0_flashlite": 0.29589633244181873,
+ "concordance_n": 2626,
+ "rename_paired_flip": {
+  "RENAME_SYN": {
+   "flip": 0.08759124087591241,
+   "n": 137
+  },
+  "RENAME_NONCE": {
+   "flip": 0.10738255033557047,
+   "n": 298
+  }
+ }
+}
