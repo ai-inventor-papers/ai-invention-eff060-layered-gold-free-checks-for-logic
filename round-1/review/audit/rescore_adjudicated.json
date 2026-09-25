@@ -1,0 +1,50 @@
+{
+ "adj_all_tiers": {
+  "n_items": 743,
+  "n_err": 459,
+  "n_common": 504,
+  "n_common_err": 276,
+  "auroc_common": {
+   "fused_H": 0.868,
+   "l3": 0.7514,
+   "l2_bow": 0.8112,
+   "c_score": 0.8293,
+   "sc5_cheap": 0.734,
+   "judge_cheap_disg": 0.8146,
+   "rt_nli_min": 0.7612,
+   "pilot_rerun_jacc": 0.7053
+  }
+ },
+ "adj_tierAB": {
+  "n_items": 474,
+  "n_err": 308,
+  "n_common": 304,
+  "n_common_err": 170,
+  "auroc_common": {
+   "fused_H": 0.8719,
+   "l3": 0.7181,
+   "l2_bow": 0.817,
+   "c_score": 0.7763,
+   "sc5_cheap": 0.6991,
+   "judge_cheap_disg": 0.7706,
+   "rt_nli_min": 0.75,
+   "pilot_rerun_jacc": 0.6464
+  }
+ },
+ "own_vs_adjudicated": {
+  "D": {
+   "('CORRECT', 'CORRECT')": 210,
+   "('ERROR', 'ERROR')": 174,
+   "('CORRECT', 'ERROR')": 58,
+   "('ERROR', 'CONTESTED')": 12,
+   "('ERROR', 'CORRECT')": 1
+  },
+  "C": {
+   "('CORRECT', 'CORRECT')": 233,
+   "('ERROR', 'ERROR')": 210,
+   "('CORRECT', 'ERROR')": 62,
+   "('ERROR', 'CONTESTED')": 14,
+   "('ERROR', 'CORRECT')": 1
+  }
+ }
+}

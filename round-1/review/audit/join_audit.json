@@ -1,0 +1,87 @@
+{
+ "n_A_trackL": 753,
+ "labels_A_trackL": {
+  "CORRECT": 278,
+  "UNPARSEABLE": 60,
+  "UNCERTAIN": 204,
+  "ERROR": 199,
+  "REF_UNPARSEABLE": 12
+ },
+ "n_C_trackL": 867,
+ "labels_C_trackL": {
+  "UNCERTAIN_COMPOUND": 226,
+  "CORRECT": 297,
+  "UNPARSEABLE": 65,
+  "ERROR": 249,
+  "UNCERTAIN_GRAN": 18,
+  "REF_UNPARSEABLE": 12
+ },
+ "n_D_trackL": 796,
+ "labels_D_trackL": {
+  "CORRECT": 294,
+  "ERROR": 230,
+  "UNPARSEABLE": 56,
+  "UNCERTAIN": 216
+ },
+ "n_common_trackL_ids": 588,
+ "n_LA_only": 14,
+ "n_LD_minus_LA": 167,
+ "n_LC_minus_LD": 183,
+ "label_triples_common_top": {
+  "('CORRECT', 'CORRECT', 'CORRECT')": 235,
+  "('ERROR', 'ERROR', 'ERROR')": 163,
+  "('UNCERTAIN', 'UNCERTAIN_COMPOUND', 'UNCERTAIN')": 134,
+  "('UNPARSEABLE', 'UNPARSEABLE', 'UNPARSEABLE')": 40,
+  "('UNCERTAIN', 'UNCERTAIN_GRAN', 'CORRECT')": 16
+ },
+ "n_common_consistent_binary": 398,
+ "n_err_common": 163,
+ "auroc_on_common_consistent": {
+  "fused_H": {
+   "n": 398,
+   "auroc": 0.7649
+  },
+  "l2_bow": {
+   "n": 398,
+   "auroc": 0.7286
+  },
+  "l3": {
+   "n": 398,
+   "auroc": 0.7459
+  },
+  "c_score": {
+   "n": 398,
+   "auroc": 0.842
+  },
+  "sc5_cheap": {
+   "n": 398,
+   "auroc": 0.7135
+  },
+  "judge_cheap_disg": {
+   "n": 389,
+   "auroc": 0.785
+  },
+  "judge_cheap_orig": {
+   "n": 393,
+   "auroc": 0.7526
+  },
+  "rt_nli_min": {
+   "n": 398,
+   "auroc": 0.7113
+  }
+ },
+ "own_label_recompute": {
+  "c_score_own": [
+   546,
+   0.8655
+  ],
+  "judge_cheap_disg_own_nonmissing": [
+   513,
+   0.7846
+  ],
+  "fused_own": [
+   477,
+   0.7589
+  ]
+ }
+}
