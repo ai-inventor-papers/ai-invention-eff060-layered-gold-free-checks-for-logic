@@ -1,0 +1,3 @@
+# source: record_claims.csv rows with match == False, NOT_IN_FILES or a hypothesis literal not found
+table,item,hypothesis_value,hyp_literal_found,source_value,match,source
+g,exp-7 peer generation $/candidate (plan literal; not in hypothesis),$0.000996,False,0.00011640721628959276,False,/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/results/rcomp_candidates.jsonl :: mean cost_usd
