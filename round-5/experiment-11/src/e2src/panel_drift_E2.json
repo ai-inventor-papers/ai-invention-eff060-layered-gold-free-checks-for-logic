@@ -1,0 +1,194 @@
+{
+ "status": "COMPLETE",
+ "stop_rule_decision": "PASS",
+ "stop_rule": "panel NOT used for E2 if combined majority agreement with E's stored votes < 0.85 or a panel model id is no longer served",
+ "combined_majority_agreement_all_items": 0.9554,
+ "combined_majority_agreement_replayed_items": 0.9554,
+ "passes": true,
+ "combined": {
+  "n_items": 269,
+  "agreement_P1": 1.0,
+  "n_P1": 269,
+  "agreement_P3": 0.9182,
+  "n_P3": 269,
+  "agreement_R1": 0.949,
+  "n_R1": 255,
+  "majority_agreement": 0.9554,
+  "n_no_majority_old": 3,
+  "n_no_majority_new": 0,
+  "n_replayed_with_>=2_new_votes": 269,
+  "majority_agreement_on_replayed_items": 0.9554
+ },
+ "synthetic_gate_77": {
+  "n_items": 77,
+  "agreement_P1": 1.0,
+  "n_P1": 77,
+  "agreement_P3": 1.0,
+  "n_P3": 77,
+  "agreement_R1": 0.961,
+  "n_R1": 77,
+  "majority_agreement": 1.0,
+  "n_no_majority_old": 0,
+  "n_no_majority_new": 0,
+  "n_replayed_with_>=2_new_votes": 77,
+  "majority_agreement_on_replayed_items": 1.0
+ },
+ "synthetic_gate_reference_items": {
+  "n_items": 20,
+  "agreement_P1": 1.0,
+  "n_P1": 20,
+  "agreement_P3": 1.0,
+  "n_P3": 20,
+  "agreement_R1": 0.95,
+  "n_R1": 20,
+  "majority_agreement": 0.95,
+  "n_no_majority_old": 0,
+  "n_no_majority_new": 0,
+  "n_replayed_with_>=2_new_votes": 20,
+  "majority_agreement_on_replayed_items": 0.95
+ },
+ "trackh_192_judgements": {
+  "n_items": 192,
+  "agreement_P1": 1.0,
+  "n_P1": 192,
+  "agreement_P3": 0.8854,
+  "n_P3": 192,
+  "agreement_R1": 0.9438,
+  "n_R1": 178,
+  "majority_agreement": 0.9375,
+  "n_no_majority_old": 3,
+  "n_no_majority_new": 0,
+  "n_replayed_with_>=2_new_votes": 192,
+  "majority_agreement_on_replayed_items": 0.9375
+ },
+ "gate_balanced_accuracy": {
+  "P1": {
+   "today": 0.861,
+   "E": 0.861,
+   "today_passes_gate": true
+  },
+  "P3": {
+   "today": 0.85,
+   "E": 0.85,
+   "today_passes_gate": true
+  },
+  "R1": {
+   "today": 0.875,
+   "E": 0.863,
+   "today_passes_gate": true
+  }
+ },
+ "trackh_majority_vs_experts": {
+  "today": {
+   "unambiguous": {
+    "n_judgements": 150,
+    "accuracy": 0.747
+   },
+   "ambiguous_READING_CHOICE": {
+    "n_judgements": 42,
+    "accuracy": 0.714
+   },
+   "orig_flagged_rate_unamb": 0.827,
+   "corr_accepted_rate_unamb": 0.667
+  },
+  "E": {
+   "unambiguous": {
+    "n_judgements": 150,
+    "accuracy": 0.727
+   },
+   "ambiguous_READING_CHOICE": {
+    "n_judgements": 42,
+    "accuracy": 0.786
+   },
+   "orig_flagged_rate_unamb": 0.84,
+   "corr_accepted_rate_unamb": 0.613
+  }
+ },
+ "trackh_per_member_vs_experts": {
+  "P1": {
+   "today": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.747
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.69
+    },
+    "orig_flagged_rate_unamb": 0.867,
+    "corr_accepted_rate_unamb": 0.627
+   },
+   "E": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.747
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.69
+    },
+    "orig_flagged_rate_unamb": 0.867,
+    "corr_accepted_rate_unamb": 0.627
+   }
+  },
+  "P3": {
+   "today": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.747
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.714
+    },
+    "orig_flagged_rate_unamb": 0.827,
+    "corr_accepted_rate_unamb": 0.667
+   },
+   "E": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.693
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.762
+    },
+    "orig_flagged_rate_unamb": 0.773,
+    "corr_accepted_rate_unamb": 0.613
+   }
+  },
+  "R1": {
+   "today": {
+    "unambiguous": {
+     "n_judgements": 148,
+     "accuracy": 0.757
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.762
+    },
+    "orig_flagged_rate_unamb": 0.773,
+    "corr_accepted_rate_unamb": 0.72
+   },
+   "E": {
+    "unambiguous": {
+     "n_judgements": 142,
+     "accuracy": 0.725
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 38,
+     "accuracy": 0.711
+    },
+    "orig_flagged_rate_unamb": 0.72,
+    "corr_accepted_rate_unamb": 0.653
+   }
+  }
+ },
+ "cohen_kappa_P3_R1": {
+  "today": 0.7399,
+  "n_today": 267,
+  "E_stored": 0.673,
+  "n_E": 257
+ },
+ "cache": "fresh work/panel_cache.jsonl (created empty for E2); no E reply could be served"
+}

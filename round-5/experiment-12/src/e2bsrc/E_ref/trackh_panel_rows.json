@@ -1,0 +1,3696 @@
+[
+ {
+  "id": "1",
+  "src": "MALLS",
+  "text": "A vacation is relaxing if it includes beautiful scenery and enjoyable activities.",
+  "orig": "∀x (Vacation(x) ∧ Relaxing(x) → (BeautifulScenery(x) ∧ EnjoyableActivities(x)))",
+  "corr": "∀x (Vacation(x) → ((BeautifulScenery(x) ∧ EnjoyableActivities(x)) → Relaxing(x)))",
+  "ambiguous": false,
+  "census_cls": "MOVE+MOVE",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "3",
+  "src": "MALLS",
+  "text": "People who speak more than one language are bilingual or multilingual.",
+  "orig": "∀x (SpeakMultipleLanguages(x) → (Bilingual(x) ∨ Multilingual(x)))",
+  "corr": "∀x (Person(x) → (SpeakMultipleLanguages(x) → (Bilingual(x) ∨ Multilingual(x))))",
+  "ambiguous": false,
+  "census_cls": "ADD",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "7",
+  "src": "MALLS",
+  "text": "A place is considered a library if it houses a collection of books, periodicals, and other media for public use and study.",
+  "orig": "∀x (Place(x) ∧ HousesCollectionOfMedia(x) ∧ (Books(x) ∨ Periodicals(x) ∨ OtherMedia(x)) ∧ ForPublicUseAndStudy(x) → Library(x))",
+  "corr": "∀x (Place(x) ∧ Houses(x, books, publicUse) ∧ Houses(x, periodicals, publicUse) ∧ Houses(x, media, publicUse) ∧ Houses(x, books, study) ∧ Houses(x, periodicals, study) ∧ Houses(x, media, study) → Library(x))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "ADD",
+     "DROP",
+     "BIND",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "RESTR",
+     "BIND"
+    ],
+    "ambiguous": true
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "8",
+  "src": "MALLS",
+  "text": "Birds possess feathers, have a beak, and lay eggs, while their ability to fly is facilitated by their lightweight bones and specialized muscles.",
+  "orig": "∀x (Bird(x) → (PossessFeathers(x) ∧ HasBeak(x) ∧ LaysEggs(x) ∧ LightweightBones(x) ∧ SpecializedMuscles(x) ∧ AbilityToFly(x)))",
+  "corr": "∀x (Bird(x) → (PossessFeathers(x) ∧ HasBeak(x) ∧ LaysEggs(x) ∧ LightweightBones(x) ∧ SpecializedMuscles(x)))",
+  "ambiguous": false,
+  "census_cls": "DROP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "9",
+  "src": "MALLS",
+  "text": "A child plays with a toy in a playground.",
+  "orig": "∀x∀y∀z (Child(x) ∧ Toy(y) ∧ Playground(z) → PlaysWith(x, y, z))",
+  "corr": "∃x∃y∃z (Child(x) ∧ Toy(y) ∧ Playground(z) ∧ PlaysWith(x, y, z))",
+  "ambiguous": true,
+  "census_cls": "QUANT",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "12",
+  "src": "MALLS",
+  "text": "To be eligible for a promotion, an employee must have worked at the company for at least two years and have a good performance record, unless they have a recommendation from a supervisor.",
+  "orig": "∀x (Employee(x) ∧ EligibleForPromotion(x) ↔ ((WorkedAtCompanyForTwoYears(x) ∧ GoodPerformanceRecord(x)) ∨ RecommendationFromSupervisor(x)))",
+  "corr": "∀x (Employee(x) → (EligibleForPromotion(x) ↔ ((WorkedAtCompanyForTwoYears(x) ∧ GoodPerformanceRecord(x)) ∨ RecommendationFromSupervisor(x))))",
+  "ambiguous": false,
+  "census_cls": "MOVE",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "15",
+  "src": "MALLS",
+  "text": "Chefs prepare meals, waiters serve meals, and customers enjoy meals at a restaurant.",
+  "orig": "∀x ∀y ∀z (Chef(x) ∧ Waiter(y) ∧ Customer(z) → (PreparesMeals(x) ∧ ServesMeals(y, z) ∧ EnjoysMeals(z)))",
+  "corr": "(∀x (Chef(x) → PreparesMeals(x))) ∧ (∀y (Waiter(y) → ∃z (Customer(z) ∧ ServesMeals(y, z)))) ∧ (∀z (Customer(z) → EnjoysMeals(z)))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN",
+     "RESTR"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "18",
+  "src": "MALLS",
+  "text": "A camera can capture photos or record videos.",
+  "orig": "∀x (Camera(x) → (CapturePhotos(x) ∨ RecordVideos(x)))",
+  "corr": "∀x (Camera(x) → (CanCapturePhotos(x) ∧ CanRecordVideos(x)))",
+  "ambiguous": false,
+  "census_cls": "CONN",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "19",
+  "src": "MALLS",
+  "text": "A balanced diet that includes a variety of fruits, vegetables, and lean proteins can provide essential nutrients and promote overall health and wellness.",
+  "orig": "∀x∀y∀z (BalancedDiet(x) ∧ VarietyOfFruits(y) ∧ Vegetables(z) ∧ LeanProteins(x) ∧ IncludesElements(x, y, z) → ProvidesEssentialNutrients(x) ∧ PromotesOverallHealthAndWellness(x))",
+  "corr": "∀x (BalancedDiet(x) ∧ IncludesFruits(x) ∧ IncludesVegetables(x) ∧ IncludesLeanProteins(x) → ProvidesEssentialNutrients(x) ∧ PromotesOverallHealthAndWellness(x))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "DROP",
+     "SWAP",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "23",
+  "src": "MALLS",
+  "text": "A tsunami can be triggered by underwater earthquakes, volcanic eruptions, or landslides, causing a series of massive waves that devastate coastal areas.",
+  "orig": "∀x (Tsunami(x) → ∃y (UnderwaterEarthquake(y) ∨ VolcanicEruption(y) ∨ Landslide(y)) ∧ Triggers(x, y) ∧ CausesMassiveWaves(x) ∧ DevastatesCoastalAreas(x))",
+  "corr": "∀x (Tsunami(x) → (∃y ((UnderwaterEarthquake(y) ∨ VolcanicEruption(y) ∨ Landslide(y)) ∧ Triggers(y, x)) ∧ CausesMassiveWaves(x) ∧ DevastatesCoastalAreas(x)))",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "25",
+  "src": "MALLS",
+  "text": "If a person works in the news industry and reports on events, they are considered a journalist.",
+  "orig": "∀x (WorksInNewsIndustryAndReportsOnEvents(x) → Journalist(x))",
+  "corr": "∀x (Person(x) ∧ WorksInNewsIndustry(x) ∧ ReportsOnEvents(x) → Journalist(x))",
+  "ambiguous": true,
+  "census_cls": "ADD+ADD",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "RESTR"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "33",
+  "src": "MALLS",
+  "text": "A detective solves crimes by gathering evidence and analyzing clues.",
+  "orig": "∀x (Detective(x) → (∃y (Crime(y) ∧ Solves(x, y) ∧ GathersEvidence(x) ∧ AnalyzesClues(x))))",
+  "corr": "∀x ∀y ((Detective(x) ∧ Crime(y) ∧ Solves(x, y)) → (GathersEvidence(x, y) ∧ AnalyzesClues(x, y)))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "MOVE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "37",
+  "src": "MALLS",
+  "text": "A vaccine that is effective provides immunity, reduces the risk of infection, and often contributes to herd immunity in a population.",
+  "orig": "∀x (Vaccine(x) ∧ Effective(x) → ProvidesImmunity(x) ∧ ReducesRiskOfInfection(x) ∧ ContributesToHerdImmunity(x))",
+  "corr": "∀x (Vaccine(x) ∧ Effective(x) → (ProvidesImmunity(x) ∧ ReducesRiskOfInfection(x))) ∧ (∃x (Vaccine(x) ∧ Effective(x) →  ContributesToHerdImmunity(x)))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "38",
+  "src": "MALLS",
+  "text": "A satellite orbits Earth, transmitting and receiving data, enabling services such as weather forecasting, global positioning, and communication.",
+  "orig": "∀x ∀y (Satellite(x) ∧ (OrbitsEarth(x) ∧ TransmitsAndReceivesData(x, y)) ∧ (EnablesWeatherForecasting(y) ∨ EnablesGlobalPositioning(y) ∨ EnablesCommunication(y)))",
+  "corr": "∀x (Satellite(x) → (OrbitsEarth(x) ∧ TransmitsData(x) ∧ ReceivesData(x) ∧ EnablesWeatherForecasting(x) ∧ EnablesGlobalPositioning(x) ∧ EnablesCommunication(x)))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "DROP",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "SWAP",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "39",
+  "src": "MALLS",
+  "text": "A flower blooms in spring if it requires a specific amount of sunlight and warmth for its growth and development.",
+  "orig": "∀x (BloomsInSpring(x) ↔ (Flower(x) ∧ RequiresSpecificSunlight(x) ∧ RequiresWarmth(x)))",
+  "corr": "∀x (Flower(x) ∧ RequiresSpecificSunlight(x) ∧ RequiresWarmth(x) → BloomsInSpring(x))",
+  "ambiguous": false,
+  "census_cls": "CONN+NEG",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "40",
+  "src": "MALLS",
+  "text": "A tree loses its leaves in the autumn, while an evergreen tree retains its leaves throughout the year.",
+  "orig": "∀x (Tree(x) → (LosesLeavesInAutumn(x) ∨ RetainsLeavesThroughoutYear(x))) ∧ ∀y (EvergreenTree(y) → RetainsLeavesThroughoutYear(y))",
+  "corr": "∀x ((Tree(x) ∧ ¬EvergreenTree(x)) → LosesLeavesInAutumn(x)) ∧ ∀y (EvergreenTree(y) → RetainsLeavesThroughoutYear(y))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "42",
+  "src": "MALLS",
+  "text": "When a bird migrates, it travels long distances, often across continents, and usually follows a seasonal pattern to find resources.",
+  "orig": "∀x (Bird(x) ∧ Migrates(x) → TravelsLongDistances(x) ∧ OftenCrossesContinents(x) ∧ UsuallyFollowsSeasonalPatternToFindResources(x))",
+  "corr": "∀x (Bird(x) ∧ Migrates(x) → (TravelsLongDistances(x) ∧ CrossesContinents(x) ∧ FollowsSeasonalPattern(x) ∧ SeeksResources(x)))",
+  "ambiguous": false,
+  "census_cls": "ADD",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "43",
+  "src": "MALLS",
+  "text": "An electron can be found in either an orbital or a suborbital, but not in both simultaneously.",
+  "orig": "∀x (Electron(x) ∧ (Orbital(x) ⊕ Suborbital(x)))",
+  "corr": "∀x (Electron(x) → (Orbital(x) ⊕ Suborbital(x)))",
+  "ambiguous": false,
+  "census_cls": "RESTR",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "55",
+  "src": "MALLS",
+  "text": "A river flows from its source, often in the mountains, through various landscapes until it reaches a larger body of water, such as an ocean or lake.",
+  "orig": "∀x (River(x) ↔ (∃y (Source(x, y) ∧ Mountains(y)) ∧ FlowsThroughVariousLandscapes(x) ∧ ReachesLargerBodyOfWater(x)))",
+  "corr": "∀x (River(x) → (∃y Source(x, y) ∧ FlowsThroughVariousLandscapes(x) ∧ ReachesLargerBodyOfWater(x)))",
+  "ambiguous": true,
+  "census_cls": "CONN+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "56",
+  "src": "MALLS",
+  "text": "A dessert is frozen if it requires refrigeration, is served cold, and isn't a baked good.",
+  "orig": "∀x (Dessert(x) ∧ Frozen(x) ↔ (RequiresRefrigeration(x) ∧ ServedCold(x) ∧ ¬BakedGood(x)))",
+  "corr": "∀x (Dessert(x) ∧ RequiresRefrigeration(x) ∧ ServedCold(x) ∧ ¬BakedGood(x) → Frozen(x))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV",
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "60",
+  "src": "MALLS",
+  "text": "A computer requires an input device, such as a keyboard or a mouse, and an output device, like a monitor or speakers.",
+  "orig": "∀x (Computer(x) → (∃y (InputDevice(y) ∧ (Keyboard(y) ∨ Mouse(y))) ∧ ∃z (OutputDevice(z) ∧ (Monitor(z) ∨ Speakers(z)))))",
+  "corr": "∀x (Computer(x) → (∃y (InputDevice(y) ∧ (Keyboard(y) ∨ Mouse(y)) ∧ Require(x, y)) ∧ ∃z (OutputDevice(z) ∧ (Monitor(z) ∨ Speakers(z)) ∧ Require(x, z))))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "61",
+  "src": "MALLS",
+  "text": "Trees absorb carbon dioxide, while cars emit carbon dioxide, and factories release carbon dioxide as a byproduct.",
+  "orig": "∀x ∀y ∀z (Tree(x) ∧ Car(y) ∧ Factory(z) → (AbsorbsCO2(x) ∧ EmitsCO2(y) ∧ ReleasesCO2Byproduct(z)))",
+  "corr": "∀x (Tree(x) → AbsorbsCO2(x)) ∧ ∀y (Car(y) → EmitsCO2(y)) ∧ ∀z (Factory(z) → ReleasesCO2Byproduct(z))",
+  "ambiguous": false,
+  "census_cls": "UNGLUE",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "UNGLUE",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "62",
+  "src": "MALLS",
+  "text": "A person who designs and creates video games is called a game developer.",
+  "orig": "∀x (DesignsAndCreatesVideoGames(x) → GameDeveloper(x))",
+  "corr": "∀x (Person(x) ∧ DesignsVideoGames(x) ∧ CreatesVideoGames(x) → GameDeveloper(x))",
+  "ambiguous": true,
+  "census_cls": "ADD+ADD",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "65",
+  "src": "MALLS",
+  "text": "A device that converts thermal energy into electrical energy by using a temperature difference is a thermoelectric generator.",
+  "orig": "∀x ∀y (Device(x) ∧ ThermalEnergy(y) ∧ UsesTemperatureDifference(x, y) → ThermoelectricGenerator(x))",
+  "corr": "∀x (Device(x) ∧ ConvertsThermalToElectricalEnergy(x) ∧ UsesTemperatureDifference(x) → ThermoelectricGenerator(x))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "66",
+  "src": "MALLS",
+  "text": "A dessert that is made from milk, sugar, and flavorings and is frozen is ice cream.",
+  "orig": "∀x (Dessert(x) ∧ MadeFromMilk(x) ∧ Sugar(x) ∧ Flavorings(x) ∧ Frozen(x) → IceCream(x))",
+  "corr": "∀x (Dessert(x) ∧ MadeFromMilk(x) ∧ MadeFromSugar(x) ∧ MadeWithFlavorings(x) ∧ Frozen(x) → IceCream(x))",
+  "ambiguous": true,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "67",
+  "src": "MALLS",
+  "text": "Birds migrate when the season changes and the temperature becomes unsuitable for their survival.",
+  "orig": "∀x ∀y (Bird(x) ∧ SeasonChange(y) ∧ UnsuitableTemperatureForSurvival(x, y) → Migrates(x))",
+  "corr": "∀x ∀y (Bird(x) ∧ SeasonChange(y) ∧ UnsuitableTemperatureForSurvival(y, x) → Migrates(x, y))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "68",
+  "src": "MALLS",
+  "text": "A food product is labeled organic if it is produced without synthetic pesticides and meets certain regulatory standards.",
+  "orig": "∀x (FoodProduct(x) ∧ ProducedWithoutSynthetics(x) ∧ MeetsRegulatoryStandards(x) → LabeledOrganic(x))",
+  "corr": "∀x (FoodProduct(x) ∧ ProducedWithoutSyntheticPesticides(x) ∧ MeetsRegulatoryStandards(x) → LabeledOrganic(x))",
+  "ambiguous": true,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "71",
+  "src": "MALLS",
+  "text": "A healthy diet consisting of a variety of fruits, vegetables, whole grains, and lean proteins promotes overall well-being and reduces the risk of chronic diseases.",
+  "orig": "∀x (HealthyDiet(x) ∧ ContainsVarietyOfFruitsVegetablesWholeGrainsLeanProteins(x) → PromotesWellBeingAndReducesRiskOfChronicDiseases(x))",
+  "corr": "∀x (HealthyDiet(x) ∧ IncludesFruits(x) ∧ IncludesVegetables(x) ∧ IncludesWholeGrains(x) ∧ IncludesLeanProteins(x) → (PromotesWellBeing(x) ∧ ReducesRiskOfChronicDiseases(x)))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "72",
+  "src": "MALLS",
+  "text": "A fruit is ripe if it is ready to be eaten and has reached its full flavor.",
+  "orig": "∀x (RipeFruit(x) ↔ (Fruit(x) ∧ ReadyToBeEaten(x) ∧ FullFlavor(x)))",
+  "corr": "∀x (Fruit(x) ∧ ReadyToBeEaten(x) ∧ ReachedFullFlavor(x) → Ripe(x))",
+  "ambiguous": true,
+  "census_cls": "CONN+NEG",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "74",
+  "src": "MALLS",
+  "text": "A place is considered a theater if it is a venue for live stage performances, often with a stage, curtains, and audience seating, and hosting plays, musicals, or other productions.",
+  "orig": "∀x (Place(x) ∧ VenueForLiveStagePerformances(x) ∧ OftenWithStageCurtainsAndAudienceSeating(x) ∧ HostsPlaysMusicalsOrOtherProductions(x) → Theater(x))",
+  "corr": "∀x (Place(x) ∧ VenueForLiveStagePerformances(x) ∧ HasStage(x) ∧ HasCurtains(x) ∧ HasAudienceSeating(x) ∧ (HostsPlays(x) ∨ HostsMusicals(x) ∨ HostsOtherProductions(x)) → Theater(x))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "81",
+  "src": "MALLS",
+  "text": "A bat is a mammal and can fly, while a turtle is a reptile and cannot fly.",
+  "orig": "∀x ∀y (Bat(x) ∧ Turtle(y) → ((Mammal(x) ∧ CanFly(x)) ∧ (Reptile(y) ∧ ¬CanFly(y))))",
+  "corr": "∀x (Bat(x) → (Mammal(x) ∧ CanFly(x))) ∧ ∀y (Turtle(y) → (Reptile(y) ∧ ¬CanFly(y)))",
+  "ambiguous": false,
+  "census_cls": "UNGLUE",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "UNGLUE",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "83",
+  "src": "MALLS",
+  "text": "A red apple is sweet and a green apple is sour, while a yellow apple is a balance between sweet and sour.",
+  "orig": "∀x ∀y ∀z (RedApple(x) ∧ GreenApple(y) ∧ YellowApple(z) → ((IsSweet(x) ∧ IsSour(y)) ∧ (IsSweet(z) ⊕ IsSour(z))))",
+  "corr": "∀x (RedApple(x) → IsSweet(x)) ∧ ∀y (GreenApple(y) → IsSour(y)) ∧ ∀z (YellowApple(z) → (IsSweet(z) ∧ IsSour(z)))",
+  "ambiguous": false,
+  "census_cls": "CONN+UNGLUE",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "CONN",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN",
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "85",
+  "src": "MALLS",
+  "text": "A refrigerator preserves perishables but not electronics.",
+  "orig": "∀x ∀y (Refrigerator(x) ∧ Perishable(y) → Preserves(x, y)) ∧ ¬(Refrigerator(x) ∧ Electronics(y) → Preserves(x, y))",
+  "corr": "∀x∀y (Refrigerator(x) ∧ Perishable(y) → Preserves(x, y)) ∧ ∀x∀y (Refrigerator(x) ∧ Electronics(y) → ¬Preserves(x, y))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SCOPE",
+     "NEG"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SCOPE",
+     "BIND",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "SCOPE",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "86",
+  "src": "MALLS",
+  "text": "A battery stores electrical energy and provides power to devices.",
+  "orig": "∀x∀y (Battery(x) ∧ Device(y) → (StoresElectricalEnergy(x) ∧ ProvidesPower(x, y)))",
+  "corr": "∀x (Battery(x) → (StoresElectricalEnergy(x) ∧ ∃y (Device(y) ∧ ProvidesPower(x, y))))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "MOVE"
+    ],
+    "ambiguous": true
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "88",
+  "src": "MALLS",
+  "text": "A city has buildings, a park has trees, and a beach has sand.",
+  "orig": "∀x∀y∀z (City(x) ∧ Park(y) ∧ Beach(z) → (HasBuildings(x) ∧ HasTrees(y) ∧ HasSand(z)))",
+  "corr": "∀x (City(x) → HasBuildings(x)) ∧ ∀y (Park(y) → HasTrees(y)) ∧ ∀z (Beach(z) → HasSand(z))",
+  "ambiguous": false,
+  "census_cls": "UNGLUE",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "92",
+  "src": "MALLS",
+  "text": "Wolves howl, while birds chirp.",
+  "orig": "∀x∀y (Wolf(x) ∧ Bird(y) → (Howls(x) ∧ Chirps(y)))",
+  "corr": "∀x (Wolf(x) → Howls(x)) ∧ ∀y (Bird(y) → Chirps(y))",
+  "ambiguous": false,
+  "census_cls": "UNGLUE",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "93",
+  "src": "MALLS",
+  "text": "A person is a volunteer if they offer their time and skills for a cause without expecting compensation.",
+  "orig": "∀x (Volunteer(x) ↔ (Person(x) ∧ OffersTimeAndSkills(x) ∧ ForCause(x) ∧ ¬ExpectsCompensation(x)))",
+  "corr": "∀x (Person(x) → (Volunteer(x) ↔ (OffersTimeAndSkills(x) ∧ ForCause(x) ∧ ¬ExpectsCompensation(x))))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "MOVE",
+     "ADD"
+    ],
+    "ambiguous": true
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "94",
+  "src": "MALLS",
+  "text": "A vehicle is considered a bicycle if it has two wheels, is powered by human effort, and is ridden by a rider who sits on a seat and pedals.",
+  "orig": "∀x (Vehicle(x) ∧ TwoWheels(x) ∧ PoweredByHumanEffort(x) ∧ RiderSitsOnSeatAndPedals(x) → Bicycle(x))",
+  "corr": "∀x (Vehicle(x) ∧ TwoWheels(x) ∧ PoweredByHumanEffort(x) ∧ HasSeat(x) ∧ HasPedals(x) → Bicycle(x))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "MOVE",
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "95",
+  "src": "MALLS",
+  "text": "A versatile musician plays different instruments, such as piano or guitar, and performs in various styles, like jazz or rock.",
+  "orig": "∀x (Musician(x) ∧ Versatile(x) ∧ (PlaysPiano(x) ∨ PlaysGuitar(x)) ∧ (PerformsInJazz(x) ∨ PerformsInRock(x)))",
+  "corr": "∀x (Musician(x) ∧ Versatile(x) → ((PlaysPiano(x) ∨ PlaysGuitar(x)) ∧ (PerformsInJazz(x) ∨ PerformsInRock(x))))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR",
+     "QUANT"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "96",
+  "src": "MALLS",
+  "text": "A polygon with four sides is called a quadrilateral.",
+  "orig": "∀x (FourSides(x) → Quadrilateral(x))",
+  "corr": "∀x (Polygon(x) ∧ FourSides(x) → Quadrilateral(x))",
+  "ambiguous": true,
+  "census_cls": "ADD",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "100",
+  "src": "MALLS",
+  "text": "A thunderstorm occurs when warm air rises, creating instability in the atmosphere.",
+  "orig": "∀x (Thunderstorm(x) → (WarmAirRises(x) ∧ AtmosphericInstability(x)))",
+  "corr": "∀x (WarmAirRises(x) → OccurThunderstorm(x) ∧ AtmosphericInstability(x))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "REV",
+     "RESTR",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "REV",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_380_1",
+  "src": "FOLIO-concl",
+  "text": "Bonnie performs in school talent shows often.",
+  "orig": "InThisClub(bonnie) ∧ (Perform(bonnie, schoolTalentShow))",
+  "corr": "PerformOftenIn(bonnie, schoolTalentShow)",
+  "ambiguous": false,
+  "census_cls": "DROP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_426_6",
+  "src": "FOLIO-concl",
+  "text": "If James is either a manager or in other countries, then James does not either have lunch at home or work remotely from home. If James either has lunch at home or works remotely from home, then he is neither a manager nor does he work in other countries.",
+  "orig": "Manager(james) → ¬Work(james, home)",
+  "corr": "((Manager(james) ∨ ¬In(james, homeCountry)) → ¬(HasLunch(james, home) ∨ Work(james, home))) ∧ ((HasLunch(james, home) ∨ Work(james, home)) → ¬(Manager(james) ∨ ¬In(james, homeCountry)))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "MOVE",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "CONN",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_198_9",
+  "src": "FOLIO-concl",
+  "text": "Symptoms of Monkeypox include coughing.",
+  "orig": "∃x (SymptonOf(x, monkeypoxVirus) ∧ Coughing(x))",
+  "corr": "∃x (SymptomOf(x, monkeypoxVirus) ∧ Coughing(x))",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_20_13",
+  "src": "FOLIO-concl",
+  "text": "The Legend of Zelda is on the Top 10 list.",
+  "orig": "Top10(theLegendofZelda)",
+  "corr": "InTop10(theLegendofZelda)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_20_15",
+  "src": "FOLIO-concl",
+  "text": "The Legend of Zelda is not on the Top 10 list.",
+  "orig": "¬Top10(theLegendofZelda)",
+  "corr": "¬InTop10(theLegendofZelda)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_232_25",
+  "src": "FOLIO-concl",
+  "text": "Beijing hosted both the 2008 Summer Olympics and the Winter Olympics.",
+  "orig": "Hosted(beijing, summerOlympics) ∧ Hosted(beijing, winterOlympics)",
+  "corr": "Hosted(beijing, summerOlympics2008) ∧ Hosted(beijing, winterOlympics)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_340_31",
+  "src": "FOLIO-concl",
+  "text": "Djokovic is a Grand Slam champion.",
+  "orig": "GrandSlam(djokovic) ∧ Champion(djokovic)",
+  "corr": "GrandSlamChampion(djokovic)",
+  "ambiguous": false,
+  "census_cls": "DROP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_340_32",
+  "src": "FOLIO-concl",
+  "text": "Djokovic lives in a tax haven.",
+  "orig": "LiveIn(djokovic, taxHaven)",
+  "corr": "∃x (TaxHaven(x) ∧ LiveIn(djokovic, x))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_340_33",
+  "src": "FOLIO-concl",
+  "text": "Djokovic does not live in a tax haven.",
+  "orig": "¬LiveIn(djokovic, taxHaven)",
+  "corr": "¬ (∃x (TaxHaven(x) ∧ LiveIn(djokovic, x)))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_96_34",
+  "src": "FOLIO-concl",
+  "text": "Roderick Strong leads a professional wrestling stable.",
+  "orig": "∃x (Leads(roderickstrong, x) ∧ ProfessionalWrestlingStable(x))",
+  "corr": "∃x (Leads(roderickStrong, x) ∧ ProfessionalWrestlingStable(x))",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_96_35",
+  "src": "FOLIO-concl",
+  "text": "Roderick Strong leads the Creed Brothers.",
+  "orig": "Leads(roderickstrong, creedbrothers)",
+  "corr": "Leads(roderickStrong, creedBrothers)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_96_36",
+  "src": "FOLIO-concl",
+  "text": "Imperium doesn't have a feud with a professional wrestling stable that includes Ivy Nile.",
+  "orig": "∀x ((ProfessionalWrestlingStable(x) ∧ Includes(x, ivynile)) → ¬Feuds(imperium, x))",
+  "corr": "∀x ((ProfessionalWrestlingStable(x) ∧ Includes(x, ivyNile)) → ¬Feuds(imperium, x))",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "BIND",
+     "NEG"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_79_57",
+  "src": "FOLIO-concl",
+  "text": "Robert Lewandowski is a star.",
+  "orig": "SoccerStar(robertLewandowski)",
+  "corr": "Star(robertLewandowski)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_2_58",
+  "src": "FOLIO-concl",
+  "text": "Butte and St Pierre are in the same state.",
+  "orig": "∃x (In(butte, x) ∧ In(stPierre, x))",
+  "corr": "∃x (State(x) ∧ In(butte, x) ∧ In(stPierre, x))",
+  "ambiguous": false,
+  "census_cls": "ADD",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_2_59",
+  "src": "FOLIO-concl",
+  "text": "St Pierre and Bismarck are in the same state.",
+  "orig": "∃x (City(pierre) ∧ In(pierre, x) ∧ City(bismarck) ∧ In(bismarck, x))",
+  "corr": "∃x (In(stPierre, x) ∧ In(bismarck, x) ∧ State(x))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_234_67",
+  "src": "FOLIO-concl",
+  "text": "Yale University has the largest university endowment of any educational institution.",
+  "orig": "LargestUniversityEndowmentOf(yale, anyEducationalInstitution)",
+  "corr": "LargestUniversityEndowmentOf(yaleUniversity, anyEducationalInstitution)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "BIND",
+     "QUANT",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_234_68",
+  "src": "FOLIO-concl",
+  "text": "Pierson College is a residential college at Yale.",
+  "orig": "ResidentialCollege(piersonCollege) ∧ At(piersonCollege, yale)",
+  "corr": "ResidentialCollege(piersonCollege) ∧ At(piersonCollege, yaleUniversity)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_120_70",
+  "src": "FOLIO-concl",
+  "text": "No members of Pappy's have starred in a show piloting on BBC Two or BBC Three.",
+  "orig": "∀x ∀y (MemberOf(x, pappys) ∧ Starring(y, x) → ¬(PilotedOn(y, bBCTwo) ∨ PilotedOn(y, bBCThree)))",
+  "corr": "∀x ∀y (MemberOf(x, pappys) ∧ Star(x, y) → ¬(PilotedOn(y, bBCTwo) ∨ PilotedOn(y, bBCThree)))",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_322_72",
+  "src": "FOLIO-concl",
+  "text": "KO is a stock and a growth stock.",
+  "orig": "¬GrowthStock(kO)",
+  "corr": "Stock(kO) ∧ Growth(kO)",
+  "ambiguous": false,
+  "census_cls": "ADD+NEG",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_322_73",
+  "src": "FOLIO-concl",
+  "text": "If KO is a growth stock or bought to earn profits from rapid price appreciation, then KO is neither a stock nor is its price volatile.",
+  "orig": "GrowthStock(kO) ∨ BoughtToEarnProfitFrom(kO, earnProfit, rapidPriceAppreciation) → ¬Stock(kO) ∧ ¬BoughtToEarnProfitFrom(kO, rapidPriceAppreciation)",
+  "corr": "((Stock(kO) ∧ Growth(kO)) ∨ BoughtToEarnProfitFrom(kO, rapidPriceAppreciation)) → (¬Stock(kO) ∧ ¬VolatilePrice(kO))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_83_74",
+  "src": "FOLIO-concl",
+  "text": "Joe's license plate begins with the number 34.",
+  "orig": "∃x (Owns(joe, x) ∧ BeginWith(x, num34))",
+  "corr": "∃x (Owns(joe, x) ∧ BeginWith(x, num34) ∧ ∃y VehicleRegistrationPlateIn(x, y))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_368_77",
+  "src": "FOLIO-concl",
+  "text": "Hannah is at Mary's school and she is not a picky eater and spends a lot of her time eating and catching up with friends in the campus dining halls.",
+  "orig": "¬(PickyEater(hannah) ∧ Spend(hannah, aLotOfTime, eating, diningHall) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall))",
+  "corr": "At(hannah, marysSchool) ∧ ¬PickyEater(hannah) ∧ Spend(hannah, aLotOfTime, eating, diningHall) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall)",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_368_78",
+  "src": "FOLIO-concl",
+  "text": "Hannah is at Mary's school and she either is not a picky eater or, if she is, then she spends a lot of her time eating and catching up with friends in the campus dining halls.",
+  "orig": "PickyEater(hannah) ⊕ (Spend(hannah, aLotOfTime, eating) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall))",
+  "corr": "At(hannah, marysSchool) ∧ (¬PickyEater(hannah) ∨ PickyEater(hannah)) ∧  (PickyEater(hannah) → (Spend(hannah, aLotOfTime, eating) ∧ Spend(hannah, aLotOfTime, catchingUpWithFriends, diningHall)))",
+  "ambiguous": false,
+  "census_cls": "ADD+CONN",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_306_85",
+  "src": "FOLIO-concl",
+  "text": "The Hamden Plaza Subway store provides take-out service or does not receive many negative reviews.",
+  "orig": "∃x (Provide(hamdenPlazaSubway, takeOutService) ∨ (NegativeReview(x) ∧ ¬Receive(hamdenPlazaSubway, x)))",
+  "corr": "Provide(hamdenPlazaSubway, takeOutService) ∨ ¬ReceiveManyNegativeReviews(hamdenPlazaSubway)",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP",
+     "ADD",
+     "UNGLUE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_245_87",
+  "src": "FOLIO-concl",
+  "text": "Sir Digby's nemesis does not win.",
+  "orig": "¬Win(sirDigbysNemesis)",
+  "corr": "¬Wins(sirDigbysNemesis)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_58_88",
+  "src": "FOLIO-concl",
+  "text": "Walden contains knowledge.",
+  "orig": "Gains(harry, knowledge)",
+  "corr": "Contains(walden, knowledge)",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_58_90",
+  "src": "FOLIO-concl",
+  "text": "A smarter person has gained knowledge.",
+  "orig": "∀x (Smarter(x) → GainKnowledge(x))",
+  "corr": "∀x (Smarter(x) → Gains(x, knowledge))",
+  "ambiguous": true,
+  "census_cls": "GRAN",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_472_101",
+  "src": "FOLIO-concl",
+  "text": "If Harry is either both a vertebrate and an animal with a backbone, or neither a vertebrate nor an animal with a backbone, then Harry is neither an invertebrate nor a queen bee.",
+  "orig": "¬(Invertebrate(harry) ⊕ With(harry, backbone)) → ¬Invertebrate(harry) ∧ ¬QueenBee(harry)",
+  "corr": "((Vertebrate(harry) ∧ HasBackbone(harry)) ∨ (¬Vertebrate(harry) ∧ ¬HasBackbone(harry))) → (¬Invertebrate(harry) ∧ ¬QueenBee(harry))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "CONN",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "CONN",
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "MOVE"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_379_102",
+  "src": "FOLIO-concl",
+  "text": "Luke spends a lot of time hanging out and playing with his siblings.",
+  "orig": "SpendTime(luke, playingWith, siblings)",
+  "corr": "SpendTimePlayingWith(luke, siblings)",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_379_104",
+  "src": "FOLIO-concl",
+  "text": "Luke is neither born in a multiple birth nor complains often about annoying siblings.",
+  "orig": "¬(BornIn(luke, multipleBirth) ∨ ComplainAbout(luke, often, annoyingSiblings) )",
+  "corr": "¬BornIn(luke, multipleBirth) ∧ ¬ComplainAboutOften(luke, annoyingSiblings)",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_197_105",
+  "src": "FOLIO-concl",
+  "text": "ETS provides financial aid to Tom.",
+  "orig": "ProvidesFinancialAidTo(eTS, tom)",
+  "corr": "ProvideTo(ets, financialAid, tom)",
+  "ambiguous": false,
+  "census_cls": "SWAP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_197_107",
+  "src": "FOLIO-concl",
+  "text": "No one taking the GRE test has financial aid provided to them by something.",
+  "orig": "¬(∃x ∃y (Applicant(x, gRE) ∧ ProvidesFinancialAidTo(y, x)))",
+  "corr": "¬∃x ∃y (ApplicantOf(x, gre) ∧ ProvideTo(y, financialAid, x))",
+  "ambiguous": false,
+  "census_cls": "SWAP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_361_109",
+  "src": "FOLIO-concl",
+  "text": "Peter is either a clumsy foodie who goes out frequently to find new food restaurants to try or he is someone whose family prioritizes order and spotlessness.",
+  "orig": "ClumsyFoodie(peter) ∨ (∃y (FamilyOf(y, peter) ∧ Prioritize(y, order) ∧ Prioritize(y, spotlessness)))",
+  "corr": "(ClumsyFoodie(peter) ∧ GoOutFrequentlyToFindToTry(peter, newFoodRestaurant)) ⊕ (∃y (FamilyOf(y, peter) ∧ Prioritize(y, order) ∧ Prioritize(y, spotlessness)))",
+  "ambiguous": true,
+  "census_cls": "ADD+CONN",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_361_110",
+  "src": "FOLIO-concl",
+  "text": "Peter is either both a clumsy foodie who goes out frequently to find new food restaurants to try and is someone whose family prioritizes order and spotlessness, or he neither is a clumsy foodie who goes out frequently to find new food restaurants to try nor does his family prioritize order and spotlessness.",
+  "orig": "¬(ClumsyFoodie(peter) ⊕ (∃y (FamilyOf(y, peter) ∧ Prioritize(y, order) ∧ Prioritize(y, spotlessness))))",
+  "corr": "¬((ClumsyFoodie(peter) ∧ GoOutFrequentlyToFindToTry(peter, newFoodRestaurant)) ⊕ (∃y (FamilyOf(y, peter) ∧ Prioritize(y, order) ∧ Prioritize(y, spotlessness))))",
+  "ambiguous": false,
+  "census_cls": "ADD",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "CONN"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_183_115",
+  "src": "FOLIO-concl",
+  "text": "Peter is shorter than a man in Michael's class.",
+  "orig": "∃x (Man(x) ∧ SameClass(x, michael) ∧ ¬Taller(peter, x))",
+  "corr": "∃x (Man(x) ∧ SameClass(x, michael) ∧ Taller(x, peter))",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "NEG",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_151_119",
+  "src": "FOLIO-concl",
+  "text": "There is at least one cove in Antarctica named after a place in Bulgaria.",
+  "orig": "∃x ∃y (Cove(x) ∧ LocatedIn(x, antarctica) ∧ NameAfter(x, y) ∧ LocatedIn(y, bulgaria))",
+  "corr": "∃x ∃y (Cove(x) ∧ LocatedIn(x, antarctica) ∧ NamedAfter(x, y) ∧ LocatedIn(y, bulgaria))",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_315_122",
+  "src": "FOLIO-concl",
+  "text": "John's car is a Tesla Model 3.",
+  "orig": "TeslaModel3(johnsCar)",
+  "corr": "TeslaModel3(johnsCar) ∧ Car(johnsCar)",
+  "ambiguous": false,
+  "census_cls": "ADD",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_315_124",
+  "src": "FOLIO-concl",
+  "text": "John's car is not a Solo EV.",
+  "orig": "¬(SoloEV(johnsCar) ∧ Car(johnsCar))",
+  "corr": "¬SoloEV(johnsCar) ∧ Car(johnsCar)",
+  "ambiguous": false,
+  "census_cls": "CONN+NEG",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_330_128",
+  "src": "FOLIO-concl",
+  "text": "John has a larger family.",
+  "orig": "Have(john, largeFamily)",
+  "corr": "Have(john, largerFamily)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_203_137",
+  "src": "FOLIO-concl",
+  "text": "If something is a household appliance, it sucks.",
+  "orig": "∀x (HouseHoldApp(x) → Suck(x))",
+  "corr": "∀x (HouseholdAppliance(x) → Suck(x))",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_460_140",
+  "src": "FOLIO-concl",
+  "text": "'Hachi: A Dog's Tale' is rated General Audience.",
+  "orig": "Rated(x, generalAudience)",
+  "corr": "Rated(hachiADogsTale, generalAudience)",
+  "ambiguous": false,
+  "census_cls": "BIND",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_460_141",
+  "src": "FOLIO-concl",
+  "text": "'Hachi: A Dog's Tale' contains excessive erotic and violent content or is in the 'Frozen' series or both.",
+  "orig": "(Contain(x, excessiveEroticContent) ∧ Contain(x, excessiveViolentContent)) ∨ InfrozenSeries(excessiveViolentContent)",
+  "corr": "Contain(hachiADogsTale, excessiveEroticViolentContent) ∨ InFrozenSeries(hachiADogsTale)",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND",
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "DROP",
+     "BIND",
+     "RESTR"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_460_142",
+  "src": "FOLIO-concl",
+  "text": "'Hachi: A Dog's Tale' either contains excessive erotic and violent content and is a film in the 'Frozen' series, or it neither contains excessive erotic and violent content nor is a film in the 'Frozen' series.",
+  "orig": "¬((Contain(x, excessiveEroticContent) ∧ Contain(x, excessiveViolentContent)) ⊕ InfrozenSeries(excessiveViolentContent))",
+  "corr": "(Contain(hachiADogsTale, excessiveEroticViolentContent) ∧ InFrozenSeries(hachiADogsTale)) ⊕ ¬(Contain(hachiADogsTale, excessiveEroticViolentContent) ∧ InFrozenSeries(hachiADogsTale))",
+  "ambiguous": true,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD",
+     "BIND",
+     "OTHER"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "NEG",
+     "CONN",
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_483_145",
+  "src": "FOLIO-concl",
+  "text": "Vladimir is a Russian Federation official.",
+  "orig": "Russian(vladimir) ∧ FederationOfficial(vladimir)",
+  "corr": "RussianFederationOfficial(vladimir)",
+  "ambiguous": false,
+  "census_cls": "DROP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "CONN"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_483_146",
+  "src": "FOLIO-concl",
+  "text": "Vladimir is not a Russian Federation official.",
+  "orig": "¬(Russian(vladimir) ∧ FederationOfficial(vladimir))",
+  "corr": "¬RussianFederationOfficial(vladimir)",
+  "ambiguous": false,
+  "census_cls": "DROP",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "RESTR"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_217_161",
+  "src": "FOLIO-concl",
+  "text": "If George likes music and has access to a program, he will compose.",
+  "orig": "(LikeMusic(george) ∧ AccesstoProgram(george)) → WillCompose(george)",
+  "corr": "(LikeMusic(george) ∧ AccessToProgram(george)) → WillCompose(george)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "ADD",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_217_162",
+  "src": "FOLIO-concl",
+  "text": "If George will not compose, George cannot compose.",
+  "orig": "¬WantToCompose(george) → ¬WillCompose(george)",
+  "corr": "¬WillCompose(george) → ¬CanCompose(george)",
+  "ambiguous": false,
+  "census_cls": "REV",
+  "census_class": "single-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "REV",
+     "NEG"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "REV"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_318_164",
+  "src": "FOLIO-concl",
+  "text": "Breaking Bad is on Monday at 8 pm.",
+  "orig": "∀x (MondayAt8PM(x) ∧ On(breakingBad, x))",
+  "corr": "AiringAt(breakingBad, eightPMMonday)",
+  "ambiguous": false,
+  "census_cls": "ADD+DROP",
+  "census_class": "two-op",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "QUANT",
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_318_165",
+  "src": "FOLIO-concl",
+  "text": "Breaking Bad is a TV show in which roses are given out on Monday at 8 pm.",
+  "orig": "∀x ∀y (MondayAt8PM(x) ∧ Rose(y) ∧ GivenOutOn(y, tv) ∧ On(tv, x) ∧ From(y, breakingBad))",
+  "corr": "Show(breakingBad) ∧ GivesOutOnTV(breakingBad, rose) ∧ AiringAt(breakingBad, eightPMMonday)",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "DROP",
+     "ADD",
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "QUANT",
+     "RESTR",
+     "ADD",
+     "SWAP",
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_318_166",
+  "src": "FOLIO-concl",
+  "text": "If roses are given out during Breaking Bad, then it is on Monday at 8 pm.",
+  "orig": "∀x ∀y ((Rose(y) ∧ GivenOutOn(y, tv) ∧ On(tv, x) ∧ From(y, breakingBad)) → MondayAt8PM(x))",
+  "corr": "GivesOutOnTV(breakingBad, rose) → AiringAt(breakingBad, eightPMMonday)",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "RESTR",
+     "ADD",
+     "SCOPE"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "ADD",
+     "RESTR",
+     "BIND",
+     "SWAP"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_51_177",
+  "src": "FOLIO-concl",
+  "text": "The last summer Olympic games were not in Tokyo.",
+  "orig": "¬LastSummerOlympics(tokyo)",
+  "corr": "¬LastSummerOlympics(tokyoolympics)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": false,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": false,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": true,
+  "majority_corr_faithful": false
+ },
+ {
+  "id": "concl_64_185",
+  "src": "FOLIO-concl",
+  "text": "Dani Shapiro is a novel writer.",
+  "orig": "WritesNovel(dani_Shapiro)",
+  "corr": "WritesNovel(daniShapiro)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_64_186",
+  "src": "FOLIO-concl",
+  "text": "Family Secrets is a novel.",
+  "orig": "IsNovel(family_Secrets)",
+  "corr": "Novel(familySecrets)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": true,
+    "corr_faithful": true,
+    "orig_ops": [],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_64_187",
+  "src": "FOLIO-concl",
+  "text": "Dani Shapiro was born in Boston.",
+  "orig": "BornIn(dani_Shapiro, boston)",
+  "corr": "BornIn(daniShapiro, boston)",
+  "ambiguous": false,
+  "census_cls": "VOCAB",
+  "census_class": "VOCAB_GRAN",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "BIND"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ },
+ {
+  "id": "concl_140_195",
+  "src": "FOLIO-concl",
+  "text": "Descampe is in the six-way tie in the leaderboard of the 1992 du Maurier Classic.",
+  "orig": "SixWayTie(descampe)",
+  "corr": "∃x (SixWayTie(x) ∧ OnLeaderboardOf(x, duMaurierClassic) ∧ In(descampe, x))",
+  "ambiguous": false,
+  "census_cls": "COMPOUND",
+  "census_class": "COMPOUND",
+  "votes": {
+   "P1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   },
+   "P3": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP",
+     "ADD"
+    ],
+    "ambiguous": false
+   },
+   "R1": {
+    "orig_faithful": false,
+    "corr_faithful": true,
+    "orig_ops": [
+     "DROP"
+    ],
+    "ambiguous": false
+   }
+  },
+  "majority_orig_faithful": false,
+  "majority_corr_faithful": true
+ }
+]

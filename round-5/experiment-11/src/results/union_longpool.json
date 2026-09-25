@@ -1,0 +1,35 @@
+{
+ "marker": "../../../experiment-12/src/e2b/E2B_FINAL_READY.json",
+ "sha256_ok": true,
+ "union_long_pool": {
+  "n_rows": 94,
+  "n_error": 76,
+  "n_correct": 18,
+  "n_sentences": 12,
+  "n_err_sent": 12,
+  "n_cor_sent": 8,
+  "metrics": {
+   "c_score_align": {
+    "n": 94,
+    "strat": 0.603448275862069,
+    "strat_ci": [
+     0.4625514159152033,
+     0.7345736361361361
+    ],
+    "pooled": 0.6136695906432749,
+    "coverage": 1.0
+   },
+   "judge_cheap_disg": {
+    "n": 8,
+    "strat": null
+   },
+   "judge_cheap_orig": {
+    "n": 0,
+    "strat": null
+   }
+  },
+  "deltas": {},
+  "testable": false
+ },
+ "note": "The label regime (the panel) is shared by E2-A and E2-B: the union adds SAMPLING power, not label-regime independence."
+}

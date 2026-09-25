@@ -1,0 +1,12 @@
+{
+ "token_ok": true,
+ "sha256_ok": {
+  "selection.json": true,
+  "consensus_variants.py": true,
+  "gg.py": true,
+  "gg_gate.json": true
+ },
+ "copied_utc": "2026-09-24T11:36:23Z",
+ "winner": "NONE: V0 stands",
+ "GG_status": "FAIL(g3)"
+}

@@ -1,0 +1,10 @@
+{
+ "completed_batches": [],
+ "last_complete_batch": 0,
+ "panel_records_moved_aside_from_incomplete_batches": {
+  "panel_heldout.jsonl": 14,
+  "panel_heldout_adj.jsonl": 0
+ },
+ "utc": "2026-09-24T12:38:19Z",
+ "rule": "a started batch that could not finish end to end is excluded from the panel regime entirely"
+}

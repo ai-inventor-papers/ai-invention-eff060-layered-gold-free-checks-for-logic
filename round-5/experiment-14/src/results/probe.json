@@ -1,0 +1,36 @@
+{
+ "google/gemini-2.5-flash": {
+  "status": 200,
+  "content": "OK",
+  "usage": {
+   "prompt_tokens": 7,
+   "completion_tokens": 1,
+   "total_tokens": 8,
+   "cost": 4.6e-06,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 4.6e-06,
+    "upstream_inference_prompt_cost": 2.1e-06,
+    "upstream_inference_completions_cost": 2.5e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  },
+  "provider": "Google",
+  "extra": {
+   "reasoning": {
+    "max_tokens": 0
+   }
+  },
+  "error": null
+ }
+}

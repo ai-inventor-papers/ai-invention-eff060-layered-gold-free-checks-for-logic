@@ -1,0 +1,8526 @@
+{
+ "metadata": {
+  "source": "iteration-5 FREEZE experiment (art_EU1yuNrRl4od), dataset E held-out rows, population Z",
+  "n_rows": 93,
+  "n_sentences": 12,
+  "orientation": "every score column: higher = more likely ERROR; y = 1 means ERROR",
+  "reference_full_run": {
+   "note": "numbers from the full run on all 2,672 Z rows / 283 sentences (B=2000 bootstrap); the demo recomputes the same statistics on the subset",
+   "auroc": {
+    "ALL-strat": {
+     "V0_frozen": 0.7421654662067422,
+     "V0_rep": 0.7418735705108042,
+     "c_exact": 0.689402986666098,
+     "V1": 0.7288995398977433,
+     "V2": 0.7522898484274952,
+     "V3": 0.7373725122222993,
+     "V4": 0.7582690451945172,
+     "V5": 0.7348467480953472,
+     "judge_cheap_disg": 0.6413481582581158,
+     "judge_cheap_orig": 0.6236638107982747,
+     "judge_cheap2_orig": 0.6525281632696583
+    },
+    "pooled": {
+     "V0_frozen": 0.7836862750124982,
+     "V0_rep": 0.783336644832139,
+     "c_exact": 0.7476833395290408,
+     "V1": 0.7664483213905732,
+     "V2": 0.7899235364243504,
+     "V3": 0.7741914601786928,
+     "V4": 0.7992238274089551,
+     "V5": 0.7749096281293664,
+     "judge_cheap_disg": 0.6955560754252605,
+     "judge_cheap_orig": 0.6360183179295228,
+     "judge_cheap2_orig": 0.7007268205765853
+    },
+    "LONG-strat": {
+     "V0_frozen": 0.7425924729540836,
+     "V0_rep": 0.7423017513772567,
+     "c_exact": 0.6724169828386172,
+     "V1": 0.7391390530111708,
+     "V2": 0.7501424242068293,
+     "V3": 0.7499897219644556,
+     "V4": 0.7513904713800759,
+     "V5": 0.7456200885673006,
+     "judge_cheap_disg": 0.6244758201872365,
+     "judge_cheap_orig": 0.6290627606216156,
+     "judge_cheap2_orig": 0.6436179272432546
+    },
+    "L25": {
+     "V0_frozen": 0.7129847673939893,
+     "V0_rep": 0.7121696171263895,
+     "c_exact": 0.6113050638122685,
+     "V1": 0.7040592836558255,
+     "V2": 0.7176533552902429,
+     "V3": 0.7141292713050638,
+     "V4": 0.7186084808563195,
+     "V5": 0.6939234252778922,
+     "judge_cheap_disg": 0.6413050638122684,
+     "judge_cheap_orig": 0.6526142445450803,
+     "judge_cheap2_orig": 0.6714491560312886
+    },
+    "L20": {
+     "V0_frozen": 0.7237453755532655,
+     "V0_rep": 0.7237453755532655,
+     "c_exact": 0.6517671132331463,
+     "V1": 0.7270297521518968,
+     "V2": 0.7366308078973317,
+     "V3": 0.7433255981198241,
+     "V4": 0.731826573053284,
+     "V5": 0.7709128787597956,
+     "judge_cheap_disg": 0.6149939576367316,
+     "judge_cheap_orig": 0.6111906050518605,
+     "judge_cheap2_orig": 0.6307782415610798
+    },
+    "EXC": {
+     "V0_frozen": 0.8154891272075153,
+     "V0_rep": 0.8154891272075153,
+     "c_exact": 0.7936425933183692,
+     "V1": 0.8091352834289379,
+     "V2": 0.818648234581537,
+     "V3": 0.8123894015510504,
+     "V4": 0.8300138953219083,
+     "V5": 0.7796700751772544,
+     "judge_cheap_disg": 0.6153905535563711,
+     "judge_cheap_orig": 0.6237218085295899,
+     "judge_cheap2_orig": 0.6240424698043966
+    },
+    "CTRL": {
+     "V0_frozen": 0.7379631235188717,
+     "V0_rep": 0.7376596728512803,
+     "c_exact": 0.8565689844517658,
+     "V1": 0.6281284318825502,
+     "V2": 0.7734235015317034,
+     "V3": 0.6132015490434078,
+     "V4": 0.8259638171203977,
+     "V5": 0.6288220334084735,
+     "judge_cheap_disg": 0.8073955262701578,
+     "judge_cheap_orig": 0.5705306051673313,
+     "judge_cheap2_orig": 0.7402173284781226
+    }
+   },
+   "delta_vs_V0": {
+    "ALL-strat": {
+     "V0_rep": {
+      "delta": -0.0002918956959380159,
+      "ci": [
+       -0.000915901954164422,
+       0.0
+      ]
+     },
+     "c_exact": {
+      "delta": -0.05276247954064417,
+      "ci": [
+       -0.08701422407474535,
+       -0.017856484090328164
+      ]
+     },
+     "V1": {
+      "delta": -0.013265926308998921,
+      "ci": [
+       -0.03009016702715173,
+       0.0028483513924635216
+      ]
+     },
+     "V2": {
+      "delta": 0.01012438222075307,
+      "ci": [
+       0.005798269768336464,
+       0.016348518113166906
+      ]
+     },
+     "V3": {
+      "delta": -0.004792953984442905,
+      "ci": [
+       -0.02398648334540084,
+       0.01323609023128608
+      ]
+     },
+     "V4": {
+      "delta": 0.016103578987775036,
+      "ci": [
+       0.0018675243277961081,
+       0.032457422434697146
+      ]
+     },
+     "V5": {
+      "delta": -0.007318718111394951,
+      "ci": [
+       -0.03298906800894048,
+       0.017642279712195043
+      ]
+     }
+    },
+    "pooled": {
+     "V0_rep": {
+      "delta": -0.0003496301803591617,
+      "ci": [
+       -0.0009319125327101413,
+       0.0
+      ]
+     },
+     "c_exact": {
+      "delta": -0.036002935483457454,
+      "ci": [
+       -0.06264672369831281,
+       -0.00984139158088913
+      ]
+     },
+     "V1": {
+      "delta": -0.01723795362192504,
+      "ci": [
+       -0.03231453792187536,
+       -0.0015224309982858027
+      ]
+     },
+     "V2": {
+      "delta": 0.006237261411852213,
+      "ci": [
+       0.003968490305388156,
+       0.00872122318808913
+      ]
+     },
+     "V3": {
+      "delta": -0.009494814833805432,
+      "ci": [
+       -0.024906663397777338,
+       0.007437828172105171
+      ]
+     },
+     "V4": {
+      "delta": 0.015537552396456933,
+      "ci": [
+       0.00560673995803247,
+       0.02604812708403404
+      ]
+     },
+     "V5": {
+      "delta": -0.008776646883131844,
+      "ci": [
+       -0.027471790033319572,
+       0.010801112680446503
+      ]
+     }
+    },
+    "LONG-strat": {
+     "V0_rep": {
+      "delta": -0.00029072157682685784,
+      "ci": [
+       -0.000977778095768947,
+       0.0
+      ]
+     },
+     "c_exact": {
+      "delta": -0.07017549011546642,
+      "ci": [
+       -0.10338709849890972,
+       -0.03807017383525768
+      ]
+     },
+     "V1": {
+      "delta": -0.0034534199429128165,
+      "ci": [
+       -0.014365530478787306,
+       0.009646012607969275
+      ]
+     },
+     "V2": {
+      "delta": 0.0075499512527457124,
+      "ci": [
+       0.0044585604532798445,
+       0.011065518297696688
+      ]
+     },
+     "V3": {
+      "delta": 0.007397249010371976,
+      "ci": [
+       -0.0036916256568550548,
+       0.02004547860912298
+      ]
+     },
+     "V4": {
+      "delta": 0.00879799842599227,
+      "ci": [
+       -0.003526796628767972,
+       0.02109418195417406
+      ]
+     },
+     "V5": {
+      "delta": 0.0030276156132169607,
+      "ci": [
+       -0.02071209965135657,
+       0.026658635716949784
+      ]
+     }
+    },
+    "L25": {
+     "V0_rep": {
+      "delta": -0.0008151502675998179,
+      "ci": [
+       -0.002741251735810915,
+       0.0
+      ]
+     },
+     "c_exact": {
+      "delta": -0.10167970358172085,
+      "ci": [
+       -0.16775623311148233,
+       -0.037829705160757704
+      ]
+     },
+     "V1": {
+      "delta": -0.00892548373816382,
+      "ci": [
+       -0.023687527033518133,
+       0.005399077208245737
+      ]
+     },
+     "V2": {
+      "delta": 0.004668587896253573,
+      "ci": [
+       0.0003669721102786211,
+       0.008997902850422849
+      ]
+     },
+     "V3": {
+      "delta": 0.001144503911074457,
+      "ci": [
+       -0.013520847968451974,
+       0.01568436266762065
+      ]
+     },
+     "V4": {
+      "delta": 0.005623713462330149,
+      "ci": [
+       -0.014524031322545034,
+       0.024432393693980366
+      ]
+     },
+     "V5": {
+      "delta": -0.019061342116097113,
+      "ci": [
+       -0.06257850280737097,
+       0.020298338120651217
+      ]
+     }
+    },
+    "L20": {
+     "V0_rep": {
+      "delta": 0.0,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     },
+     "c_exact": {
+      "delta": -0.07197826232011917,
+      "ci": [
+       -0.12160289043760998,
+       -0.02175915079580017
+      ]
+     },
+     "V1": {
+      "delta": 0.0032843765986313445,
+      "ci": [
+       -0.018082517817014875,
+       0.026546676959450174
+      ]
+     },
+     "V2": {
+      "delta": 0.01288543234406625,
+      "ci": [
+       0.007165612940691591,
+       0.019830253696962407
+      ]
+     },
+     "V3": {
+      "delta": 0.01958022256655867,
+      "ci": [
+       -0.0015570220977524306,
+       0.043052444319399905
+      ]
+     },
+     "V4": {
+      "delta": 0.008081197500018567,
+      "ci": [
+       -0.014932726034879867,
+       0.030099639239644312
+      ]
+     },
+     "V5": {
+      "delta": 0.04716750320653018,
+      "ci": [
+       0.012173928045638568,
+       0.08594046372744729
+      ]
+     }
+    },
+    "EXC": {
+     "V0_rep": {
+      "delta": 0.0,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     },
+     "c_exact": {
+      "delta": -0.021846533889146147,
+      "ci": [
+       -0.06415585279278874,
+       0.016774626974875726
+      ]
+     },
+     "V1": {
+      "delta": -0.006353843778577395,
+      "ci": [
+       -0.027700429918374223,
+       0.016819444055440017
+      ]
+     },
+     "V2": {
+      "delta": 0.003159107374021697,
+      "ci": [
+       -0.0009895471615520956,
+       0.00839844145275038
+      ]
+     },
+     "V3": {
+      "delta": -0.00309972565646488,
+      "ci": [
+       -0.0243145658208801,
+       0.02020315466206854
+      ]
+     },
+     "V4": {
+      "delta": 0.01452476811439296,
+      "ci": [
+       -0.005015137920652266,
+       0.03358873082208002
+      ]
+     },
+     "V5": {
+      "delta": -0.03581905203026092,
+      "ci": [
+       -0.06403812403727938,
+       -0.005997356519380907
+      ]
+     }
+    },
+    "CTRL": {
+     "V0_rep": {
+      "delta": -0.0003034506675914095,
+      "ci": [
+       -0.0018951198626542874,
+       7.522832205608645e-05
+      ]
+     },
+     "c_exact": {
+      "delta": 0.11860586093289405,
+      "ci": [
+       0.027669514511889086,
+       0.20824657707175828
+      ]
+     },
+     "V1": {
+      "delta": -0.10983469163632154,
+      "ci": [
+       -0.22109772655472928,
+       0.012604524599052726
+      ]
+     },
+     "V2": {
+      "delta": 0.03546037801283164,
+      "ci": [
+       -0.0013398809482922823,
+       0.08544202615079094
+      ]
+     },
+     "V3": {
+      "delta": -0.12476157447546388,
+      "ci": [
+       -0.2471415861481243,
+       0.008747194053437502
+      ]
+     },
+     "V4": {
+      "delta": 0.08800069360152596,
+      "ci": [
+       -6.157278276333599e-05,
+       0.1795269306028693
+      ]
+     },
+     "V5": {
+      "delta": -0.10914109011039819,
+      "ci": [
+       -0.22931990626752158,
+       0.020806018797200978
+      ]
+     }
+    }
+   },
+   "ed_ALL": {
+    "V0_frozen": {
+     "e": 0.14033149171270717,
+     "d": 0.4895591647331787
+    },
+    "V0_rep": {
+     "e": 0.1408839779005525,
+     "d": 0.4895591647331787
+    },
+    "c_exact": {
+     "e": 0.017679558011049725,
+     "d": 0.7215777262180975
+    },
+    "V1": {
+     "e": 0.3430939226519337,
+     "d": 0.1740139211136891
+    },
+    "V2": {
+     "e": 0.13701657458563535,
+     "d": 0.48259860788863107
+    },
+    "V3": {
+     "e": 0.3027624309392265,
+     "d": 0.18561484918793503
+    },
+    "V4": {
+     "e": 0.12596685082872927,
+     "d": 0.45707656612529
+    },
+    "V5": {
+     "e": 0.24033149171270718,
+     "d": 0.24013921113689096
+    }
+   },
+   "winner": "NONE: V0 stands",
+   "stability": {
+    "B": 500,
+    "scheme": "sentence-cluster resample within strata",
+    "share_selected": {
+     "NONE: V0 stands": 0.876,
+     "V4": 0.118,
+     "V3": 0.002,
+     "V5": 0.004
+    }
+   },
+   "permutation_null": {
+    "B": 200,
+    "share_any_variant_qualifies": 0.035,
+    "share_per_variant": {
+     "V1": 0.0,
+     "V2": 0.0,
+     "V3": 0.0,
+     "V4": 0.0,
+     "V5": 0.035
+    },
+    "note": "within-stratum label permutation of Z; V4 re-cross-fitted on each permuted label vector"
+   },
+   "GG_g3": {
+    "pass": false,
+    "gg": 0.6964364733668502,
+    "V0": 0.7421654662067422,
+    "delta_ci": [
+     -0.0708974380922907,
+     -0.021226381894754013
+    ]
+   }
+  }
+ },
+ "rows": [
+  {
+   "row_key": "ce029142e9e39ecf|fewshot_v1",
+   "sentence_id": "1a9a0140a082",
+   "text": "A vehicle that is designed for off-road use, has four-wheel drive, and is built for rugged terrain is either a jeep or a pickup truck.",
+   "candidate_fol": "∀x ((DesignedForOffRoad(x) ∧ FourWheelDrive(x) ∧ BuiltForRuggedTerrain(x)) → (Jeep(x) ∨ PickupTruck(x)))",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "L25",
+   "fold": 4,
+   "n_peers": 4,
+   "words": 25,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "ADD"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.75,
+   "V0_rep": 0.75,
+   "c_exact": 0.75,
+   "V1": 0.0,
+   "V2": 0.8495613577439223,
+   "V3": 0.5027450940257064,
+   "V4": 0.6081737363673899,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.75,
+   "gg_allyes": 0.75,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.008578,
+   "p_peer_text": 0.767609
+  },
+  {
+   "row_key": "76fa388e3aef12c0|fewshot_v1",
+   "sentence_id": "1a9a0140a082",
+   "text": "A vehicle that is designed for off-road use, has four-wheel drive, and is built for rugged terrain is either a jeep or a pickup truck.",
+   "candidate_fol": "∀x (Vehicle(x) ∧ DesignedFor(x, offRoadUse) ∧ HasFourWheelDrive(x) ∧ BuiltFor(x, ruggedTerrain) → (Jeep(x) ∨ PickupTruck(x)))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "L25",
+   "fold": 4,
+   "n_peers": 4,
+   "words": 25,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.119202,
+   "p_peer_text": 0.678812
+  },
+  {
+   "row_key": "489326704704ea3e|fewshot_v1",
+   "sentence_id": "1a9a0140a082",
+   "text": "A vehicle that is designed for off-road use, has four-wheel drive, and is built for rugged terrain is either a jeep or a pickup truck.",
+   "candidate_fol": "∀x (DesignedFor(x, offRoadUse) ∧ Has(x, fourWheelDrive) ∧ BuiltFor(x, ruggedTerrain) → (Jeep(x) ∨ PickupTruck(x)))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "L25",
+   "fold": 4,
+   "n_peers": 4,
+   "words": 25,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.8,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.148042,
+   "p_peer_text": 0.860337
+  },
+  {
+   "row_key": "1f3268ca0f4b7bfb|fewshot_v1",
+   "sentence_id": "1a9a0140a082",
+   "text": "A vehicle that is designed for off-road use, has four-wheel drive, and is built for rugged terrain is either a jeep or a pickup truck.",
+   "candidate_fol": "∀x ((Vehicle(x) ∧ DesignedForOffRoad(x) ∧ HasFourWheelDrive(x) ∧ BuiltForRuggedTerrain(x)) → (Jeep(x) ∨ PickupTruck(x)))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L25",
+   "fold": 4,
+   "n_peers": 4,
+   "words": 25,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 0.6266243516243516,
+   "c3_plain": 0.6266243516243516,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.1,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.022978,
+   "p_peer_text": 0.8171
+  },
+  {
+   "row_key": "a30931033ad41e37|fewshot_v1",
+   "sentence_id": "1a9a0140a082",
+   "text": "A vehicle that is designed for off-road use, has four-wheel drive, and is built for rugged terrain is either a jeep or a pickup truck.",
+   "candidate_fol": "∀x ((DesignedForOffRoad(x) ∧ FourWheelDrive(x) ∧ BuiltForRuggedTerrain(x)) → (Jeep(x) ∨ PickupTruck(x)))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "L25",
+   "fold": 4,
+   "n_peers": 4,
+   "words": 25,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "ADD"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.75,
+   "V0_rep": 0.75,
+   "c_exact": 0.75,
+   "V1": 0.0,
+   "V2": 0.7922143103496866,
+   "V3": 0.26347520354964304,
+   "V4": 0.6081737363673899,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.75,
+   "gg_allyes": 0.75,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.008578,
+   "p_peer_text": 0.767609
+  },
+  {
+   "row_key": "d1f48f496aeaf42f|fewshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x (Comet(x) ↔ (ComposedOf(x, ice) ∧ ComposedOf(x, dust) ∧ ComposedOf(x, rock) ∧ Orbits(x, sun) ∧ DevelopsTail(x, sun)))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 8,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "REV"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.952574,
+   "p_peer_text": 0.980225
+  },
+  {
+   "row_key": "480ad2a29f340aad|zeroshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x (Comet(x) ↔ (ComposedOfIce(x) ∧ ComposedOfDust(x) ∧ ComposedOfRock(x) ∧ OrbitsTheSun(x) ∧ DevelopsVisibleTailWhenApproachingSun(x)))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 8,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "REV"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.880797,
+   "p_peer_text": 0.956574
+  },
+  {
+   "row_key": "f40b51c60be9a99f|fewshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x (CelestialBody(x) → (Comet(x) ↔ (ComposedOf(x, ice, dust, rock) ∧ Orbits(x, sun) ∧ DevelopsVisibleTail(x, sun))))",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 8,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.924141,
+   "p_peer_text": 0.886999
+  },
+  {
+   "row_key": "f37025ffeab9ee41|fewshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x (CelestialBody(x) ∧ ComposedOf(x, ice) ∧ ComposedOf(x, dust) ∧ ComposedOf(x, rock) ∧ Orbits(x, sun) ∧ (Approaches(x, sun) → DevelopsVisibleTail(x)) → Comet(x))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.96267,
+   "p_peer_text": 0.829017
+  },
+  {
+   "row_key": "886ba1e5afa85952|fewshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x (CelestialBody(x) ↔ (ComposedOf(x, ice) ∧ ComposedOf(x, dust) ∧ ComposedOf(x, rock) ∧ Orbits(x, sun) ∧ Develops(x, visibleTail, sun)))",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "REV",
+    "SWAP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.15,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.985936,
+   "p_peer_text": 0.944892
+  },
+  {
+   "row_key": "1bfcc64a4d6a8536|fewshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x ((ComposedOf(x, ice) ∧ ComposedOf(x, dust) ∧ ComposedOf(x, rock) ∧ Orbits(x, sun) ∧ DevelopsVisibleTail(x, sun)) → Comet(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "SWAP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.437817,
+   "p_peer_text": 0.968373
+  },
+  {
+   "row_key": "94dcc61e06447df5|fewshot_v1",
+   "sentence_id": "29e3d1e9e9ed",
+   "text": "A celestial body is classified as a comet if it is composed of ice, dust, and rock, and it orbits the sun, developing a visible tail as it approaches the sun.",
+   "candidate_fol": "∀x (CelestialBody(x) → (Comet(x) ↔ (ComposedOf(x, ice) ∧ ComposedOf(x, dust) ∧ ComposedOf(x, rock) ∧ Orbits(x, sun) ∧ (DevelopsVisibleTail(x) ↔ Approaches(x, sun)))))",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 31,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "REV",
+    "SWAP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.817568,
+   "p_peer_text": 0.782299
+  },
+  {
+   "row_key": "d367fa9b242f2982|fewshot_v1",
+   "sentence_id": "5d66a7d7ce28",
+   "text": "A piece of furniture with a flat surface, typically supported by one or more legs, used to hold objects or for activities such as eating or writing, is known as a table.",
+   "candidate_fol": "∀x (FlatSurface(x) ∧ SupportedBy(x, oneOrMoreLegs) ∧ UsedFor(x, holdObjects) ∨ UsedFor(x, eating) ∨ UsedFor(x, writing) → Table(x))",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 32,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "BIND",
+    "CONN",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.8,
+   "judge_cheap2_orig": 0.998674,
+   "p_peer_text": 0.984489
+  },
+  {
+   "row_key": "4b55c32efcc0a542|fewshot_v1",
+   "sentence_id": "5d66a7d7ce28",
+   "text": "A piece of furniture with a flat surface, typically supported by one or more legs, used to hold objects or for activities such as eating or writing, is known as a table.",
+   "candidate_fol": "∀x (Furniture(x) ∧ HasFlatSurface(x) ∧ (∃y Leg(y) ∧ Supports(y, x)) ∧ UsedForHoldingOrActivities(x) → Table(x))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 32,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "BIND",
+    "DROP",
+    "RESTR",
+    "SWAP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.998673,
+   "p_peer_text": 0.994488
+  },
+  {
+   "row_key": "15de7cab3ce165a3|fewshot_v1",
+   "sentence_id": "5d66a7d7ce28",
+   "text": "A piece of furniture with a flat surface, typically supported by one or more legs, used to hold objects or for activities such as eating or writing, is known as a table.",
+   "candidate_fol": "∀x (Furniture(x) ∧ FlatSurface(x) ∧ Supports(x, legs) ∧ UsedFor(x, holdingObjects) ∨ UsedFor(x, eating) ∨ UsedFor(x, writing) → Table(x))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 32,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "BIND",
+    "CONN",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.8,
+   "judge_cheap2_orig": 0.999569,
+   "p_peer_text": 0.961061
+  },
+  {
+   "row_key": "255b55aa2485f334|fewshot_v1",
+   "sentence_id": "5d66a7d7ce28",
+   "text": "A piece of furniture with a flat surface, typically supported by one or more legs, used to hold objects or for activities such as eating or writing, is known as a table.",
+   "candidate_fol": "∀x ((PieceOfFurniture(x) ∧ HasFlatSurface(x) ∧ SupportedByLegs(x) ∧ (UsedToHoldObjects(x) ∨ UsedForActivity(x, eating) ∨ UsedForActivity(x, writing))) → Table(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 32,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 0.6266243516243516,
+   "c3_plain": 0.6266243516243516,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.817561,
+   "p_peer_text": 0.887815
+  },
+  {
+   "row_key": "2953ac8a1c7e343e|fewshot_v1",
+   "sentence_id": "504031bdbefb",
+   "text": "A fuel x is suitable for an engine y in a vehicle z if x meets the performance requirements of y and is compatible with the fuel system of z.",
+   "candidate_fol": "∀x∀y∀z (Fuel(x) ∧ Engine(y) ∧ Vehicle(z) → (Suitable(x, y, z) ↔ (MeetsPerformance(x, y) ∧ CompatibleWithFuelSystem(x, z))))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 2,
+   "words": 30,
+   "n_conditions": 5,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00522,
+   "p_peer_text": 0.82412
+  },
+  {
+   "row_key": "99c0d84da0ece275|fewshot_v1",
+   "sentence_id": "504031bdbefb",
+   "text": "A fuel x is suitable for an engine y in a vehicle z if x meets the performance requirements of y and is compatible with the fuel system of z.",
+   "candidate_fol": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 2,
+   "words": 30,
+   "n_conditions": 5,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "BIND",
+    "DROP",
+    "UNGLUE"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 0.6266243516243516,
+   "c3_plain": 0.6266243516243516,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 1.0,
+   "judge_cheap2_orig": 1.0,
+   "p_peer_text": 1.0
+  },
+  {
+   "row_key": "83663be34ff31322|fewshot_v1",
+   "sentence_id": "504031bdbefb",
+   "text": "A fuel x is suitable for an engine y in a vehicle z if x meets the performance requirements of y and is compatible with the fuel system of z.",
+   "candidate_fol": "∀x (SuitableFor(x, y) ↔ (MeetsPerformanceRequirements(x, y) ∧ CompatibleWith(x, z)))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 2,
+   "words": 30,
+   "n_conditions": 5,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "BIND",
+    "DROP",
+    "QUANT",
+    "RESTR",
+    "SCOPE"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.99883,
+   "p_peer_text": 0.995852
+  },
+  {
+   "row_key": "e757cad1dd096a0a|fewshot_v1",
+   "sentence_id": "137ddac1290b",
+   "text": "A person is considered an architect if they design and plan buildings, often creating detailed drawings and models, and considering factors such as aesthetics, functionality, and safety.",
+   "candidate_fol": "∀x (Person(x) → (Architect(x) ↔ (∃y (Building(y) ∧ Designs(x, y) ∧ Plans(x, y)) ∧ OftenCreates(x, detailedDrawings) ∧ OftenCreates(x, models) ∧ Considers(x, aesthetics) ∧ Considers(x, functionality) ∧ Considers(x, safety))))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 27,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP",
+    "QUANT",
+    "RESTR"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.3,
+   "judge_cheap2_orig": 0.939912,
+   "p_peer_text": 0.876668
+  },
+  {
+   "row_key": "1f8338b2454cbb72|fewshot_v1",
+   "sentence_id": "137ddac1290b",
+   "text": "A person is considered an architect if they design and plan buildings, often creating detailed drawings and models, and considering factors such as aesthetics, functionality, and safety.",
+   "candidate_fol": "∀x (Person(x) ∧ ∀y (Building(y) → (Design(x, y) ∧ Plan(x, y))) ∧ ∀z (Drawing(z) ∧ Model(z) → Create(x, z)) ∧ Considers(x, aesthetics) ∧ Considers(x, functionality) ∧ Considers(x, safety) → Architect(x))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 27,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.15,
+   "judge_cheap2_orig": 0.997525,
+   "p_peer_text": 0.975426
+  },
+  {
+   "row_key": "7746d6c9f0e7a17a|fewshot_v1",
+   "sentence_id": "137ddac1290b",
+   "text": "A person is considered an architect if they design and plan buildings, often creating detailed drawings and models, and considering factors such as aesthetics, functionality, and safety.",
+   "candidate_fol": "∀x (Person(x) ∧ Design(x, buildings) ∧ Plan(x, buildings) ∧ CreateDetailedDrawings(x) ∧ CreateModels(x) ∧ ConsiderAesthetics(x) ∧ ConsiderFunctionality(x) ∧ ConsiderSafety(x) → Architect(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 27,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "MEANING_RENAME",
+    "ADD",
+    "DROP",
+    "RESTR",
+    "UNGLUE"
+   ],
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 0.6266243516243516,
+   "c3_plain": 0.6266243516243516,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.924132,
+   "p_peer_text": 0.926076
+  },
+  {
+   "row_key": "7ba7bd1e6ed8331d|fewshot_v1",
+   "sentence_id": "137ddac1290b",
+   "text": "A person is considered an architect if they design and plan buildings, often creating detailed drawings and models, and considering factors such as aesthetics, functionality, and safety.",
+   "candidate_fol": "∀x (Architect(x) ↔ (DesignsAndPlans(x, buildings) ∧ Creates(x, detailedDrawings) ∧ Creates(x, models) ∧ Considers(x, aesthetics) ∧ Considers(x, functionality) ∧ Considers(x, safety)))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "L25",
+   "fold": 3,
+   "n_peers": 3,
+   "words": 27,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP",
+    "RESTR",
+    "REV"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.3,
+   "judge_cheap2_orig": 0.99929,
+   "p_peer_text": 0.788687
+  },
+  {
+   "row_key": "7f04e9563f693ab0|zeroshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) ∧ SetInPast(x) ∧ (IncludesRealHistoricalEvents(x) ∨ IncludesRealHistoricalCharacters(x)) → ClassifiedAsHistoricalFiction(x))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.888889,
+   "V0_rep": 0.8888888888888888,
+   "c_exact": 1.0,
+   "V1": 0.6666666666666667,
+   "V2": 0.8611803272070889,
+   "V3": 0.5750681633530015,
+   "V4": 0.8153682949324768,
+   "V5": 0.0,
+   "c3_plain": 0.6666666666666667,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.001927,
+   "p_peer_text": 0.672044
+  },
+  {
+   "row_key": "5403ca5d558f7fec|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) → (HistoricalFiction(x) ↔ (SetInPast(x) ∧ (IncludesRealHistoricalEvents(x) ∨ IncludesRealHistoricalCharacters(x)))))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 8,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN",
+    "NEG"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.875,
+   "V0_rep": 0.875,
+   "c_exact": 0.875,
+   "V1": 0.5,
+   "V2": 0.869990130763987,
+   "V3": 0.5011655394449144,
+   "V4": 0.7368489324781691,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.875,
+   "gg_allyes": 0.875,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.001501,
+   "p_peer_text": 0.787188
+  },
+  {
+   "row_key": "5403ca5d558f7fec|zeroshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) → (HistoricalFiction(x) ↔ (SetInPast(x) ∧ (IncludesRealHistoricalEvents(x) ∨ IncludesRealHistoricalCharacters(x)))))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "zeroshot_v1",
+   "family": "qwen",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 8,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN",
+    "NEG"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.875,
+   "V0_rep": 0.875,
+   "c_exact": 0.875,
+   "V1": 0.5,
+   "V2": 0.869990130763987,
+   "V3": 0.5011655394449144,
+   "V4": 0.7368489324781691,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.875,
+   "gg_allyes": 0.875,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.001501,
+   "p_peer_text": 0.787188
+  },
+  {
+   "row_key": "c30620f58d49b71c|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) ∧ SetIn(x, past) ∧ Includes(x, realHistoricalEvents) ∨ Includes(x, realHistoricalCharacters) → HistoricalFiction(x))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "MOVE",
+    "SCOPE"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8364615988711428,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.880822,
+   "p_peer_text": 0.813382
+  },
+  {
+   "row_key": "639cce5ea4ee9cd1|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) → (ClassifiedAs(x, historicalFiction) ↔ (SetIn(x, past) ∧ (Include(x, realHistoricalEvents) ∨ Include(x, realHistoricalCharacters)))))",
+   "system": "G4:deepseek/deepseek-v3.2",
+   "prompt_variant": "fewshot_v1",
+   "family": "deepseek",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8364615988711428,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.003173,
+   "p_peer_text": 0.678812
+  },
+  {
+   "row_key": "6f9003c8156292e3|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) ↔ (HistoricalFiction(x) ↔ (SetIn(x, past) ∧ (Includes(x, historicalEvent) ∨ Includes(x, historicalCharacter)))) )",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 8,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "CONN",
+    "DROP",
+    "RESTR",
+    "REV"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8364615988711428,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.9,
+   "judge_cheap2_orig": 0.982013,
+   "p_peer_text": 0.899885
+  },
+  {
+   "row_key": "6d20259b13b61b84|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) ∧ SetInPast(x) ∧ IncludesRealHistoricalEventsOrCharacters(x) → HistoricalFiction(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8364615988711428,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.095351,
+   "p_peer_text": 0.837276
+  },
+  {
+   "row_key": "e90098457dd08acc|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) ∧ SetIn(x, past) ∧ (Includes(x, realHistoricalEvents) ∨ Includes(x, realHistoricalCharacters)) → HistoricalFiction(x))",
+   "system": "G7:openai/gpt-4.1-mini",
+   "prompt_variant": "fewshot_v1",
+   "family": "openai",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.888889,
+   "V0_rep": 0.8888888888888888,
+   "c_exact": 1.0,
+   "V1": 0.6666666666666667,
+   "V2": 0.9055848352030897,
+   "V3": 0.7251631460730157,
+   "V4": 0.8153682949324768,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.008578,
+   "p_peer_text": 0.732194
+  },
+  {
+   "row_key": "2a88348849942cd4|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) → (HistoricalFiction(x) ↔ (SetInPast(x) ∧ (IncludesRealHistoricalEvents(x) ∨ IncludesRealHistoricalCharacters(x)))))",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 8,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN",
+    "NEG"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.75,
+   "V0_rep": 0.75,
+   "c_exact": 0.75,
+   "V1": 0.0,
+   "V2": 0.7532233193228717,
+   "V3": 0.06979081589051295,
+   "V4": 0.6051992349425344,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.75,
+   "gg_allyes": 0.75,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.001501,
+   "p_peer_text": 0.696642
+  },
+  {
+   "row_key": "ab66a00f3cf3c124|fewshot_v1",
+   "sentence_id": "10e21fa7c93a",
+   "text": "A book is classified as a historical fiction if it is set in the past and includes real historical events or characters.",
+   "candidate_fol": "∀x (Book(x) ∧ (SetIn(x, past) ∧ Includes(x, realHistoricalEvents) ∨ Includes(x, realHistoricalCharacters)) → HistoricalFiction(x))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "L20",
+   "fold": 0,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "ADD",
+    "DROP"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8364615988711428,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.15,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.904645,
+   "p_peer_text": 0.813382
+  },
+  {
+   "row_key": "b92d65cfeadeb196|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (Perishable(x) ↔ (LimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x))))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 9,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.888889,
+   "V0_rep": 0.8888888888888888,
+   "c_exact": 0.8888888888888888,
+   "V1": 0.6666666666666667,
+   "V2": 0.9426338803665388,
+   "V3": 0.8476705473853365,
+   "V4": 0.7432805865884176,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.888889,
+   "gg_allyes": 0.888889,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.014064,
+   "p_peer_text": 0.981707
+  },
+  {
+   "row_key": "b92d65cfeadeb196|zeroshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (Perishable(x) ↔ (LimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x))))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 9,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.888889,
+   "V0_rep": 0.8888888888888888,
+   "c_exact": 0.8888888888888888,
+   "V1": 0.6666666666666667,
+   "V2": 0.9426338803665388,
+   "V3": 0.8476705473853365,
+   "V4": 0.7432805865884176,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.888889,
+   "gg_allyes": 0.888889,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.014064,
+   "p_peer_text": 0.981707
+  },
+  {
+   "row_key": "b0d13c6acbcda035|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) → (LimitedShelfLife(x) ∧ (Refrigeration(x) ∨ Freezing(x)) → Perishable(x)))",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 9,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "MEANING_RENAME",
+    "ADD",
+    "DROP",
+    "MOVE"
+   ],
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.888889,
+   "V0_rep": 0.8888888888888888,
+   "c_exact": 1.0,
+   "V1": 0.6666666666666667,
+   "V2": 0.8788099301058518,
+   "V3": 0.6781930322764875,
+   "V4": 0.806898619960838,
+   "V5": 0.5402225851084528,
+   "c3_plain": 0.6666666666666667,
+   "gg": 1.0,
+   "gg_allyes": 0.888889,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.982012,
+   "p_peer_text": 0.950107
+  },
+  {
+   "row_key": "0a2738a675298323|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) → (Perishable(x) ↔ (HasLimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x)))))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 10,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN",
+    "NEG"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.9,
+   "V0_rep": 0.9,
+   "c_exact": 0.9,
+   "V1": 0.6666666666666666,
+   "V2": 0.8922003980161336,
+   "V3": 0.699878760087663,
+   "V4": 0.753307251232359,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.9,
+   "gg_allyes": 0.9,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.022978,
+   "p_peer_text": 0.902997
+  },
+  {
+   "row_key": "69070c7f491c2bf1|zeroshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) → (Perishable(x) ↔ (LimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x)))))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "zeroshot_v1",
+   "family": "qwen",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 10,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN",
+    "NEG"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.9,
+   "V0_rep": 0.9,
+   "c_exact": 1.0,
+   "V1": 0.6666666666666666,
+   "V2": 0.8922003980161336,
+   "V3": 0.699878760087663,
+   "V4": 0.8094642961976488,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.9,
+   "gg_allyes": 0.9,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.022978,
+   "p_peer_text": 0.902997
+  },
+  {
+   "row_key": "25a0d354f2d02953|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) ∧ LimitedShelfLife(x) ∧ (Requires(x, refrigeration) ∨ Requires(x, freezing)) → Perishable(x))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 11,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.818182,
+   "V0_rep": 0.8181818181818181,
+   "c_exact": 0.9090909090909091,
+   "V1": 0.33333333333333326,
+   "V2": 0.7695347412567406,
+   "V3": 0.1795760702189455,
+   "V4": 0.7358435921071347,
+   "V5": 0.0,
+   "c3_plain": 0.33333333333333337,
+   "gg": 0.909091,
+   "gg_allyes": 0.909091,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.060093,
+   "p_peer_text": 0.807342
+  },
+  {
+   "row_key": "702de8c96579b9f2|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) → (Perishable(x) ↔ ((LimitedShelfLife(x) ∧ (RequiresFor(x, refrigeration, preservation) ∨ RequiresFor(x, freezing, preservation))))))",
+   "system": "G4:deepseek/deepseek-v3.2",
+   "prompt_variant": "fewshot_v1",
+   "family": "deepseek",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 11,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "CONN"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8313868090595229,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.148047,
+   "p_peer_text": 0.813382
+  },
+  {
+   "row_key": "4074e5d969a28701|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) ↔ (LimitedShelfLife(x) ∧ (Requires(x, refrigeration) ∨ Requires(x, freezing))))",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 10,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "CONN",
+    "DROP",
+    "REV"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8313868090595229,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.999842,
+   "p_peer_text": 0.964276
+  },
+  {
+   "row_key": "09afc591b29683cd|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) ∧ HasLimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x)) → Perishable(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 11,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.727273,
+   "V0_rep": 0.7272727272727273,
+   "c_exact": 1.0,
+   "V1": 0.0,
+   "V2": 0.6997212853454593,
+   "V3": 0.0,
+   "V4": 0.7666065227044879,
+   "V5": 0.0,
+   "c3_plain": 0.5,
+   "gg": 1.0,
+   "gg_allyes": 0.909091,
+   "judge_cheap_disg": 0.8,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.010987,
+   "p_peer_text": 0.809801
+  },
+  {
+   "row_key": "ef8dad8d140eef20|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) ∧ LimitedShelfLife(x) ∧ (Requires(x, refrigeration) ∨ Requires(x, freezing)) → Perishable(x))",
+   "system": "G7:openai/gpt-4.1-mini",
+   "prompt_variant": "fewshot_v1",
+   "family": "openai",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 11,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.818182,
+   "V0_rep": 0.8181818181818181,
+   "c_exact": 0.9090909090909091,
+   "V1": 0.33333333333333326,
+   "V2": 0.7898282978342221,
+   "V3": 0.27104178422632186,
+   "V4": 0.7358435921071347,
+   "V5": 0.08008134604443806,
+   "c3_plain": 0.5,
+   "gg": 0.909091,
+   "gg_allyes": 0.909091,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.060093,
+   "p_peer_text": 0.807342
+  },
+  {
+   "row_key": "cb27233d2712144b|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (FoodItem(x) → (Perishable(x) ↔ (HasLimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x)))))",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 10,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN",
+    "NEG"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 0.8,
+   "V0_rep": 0.8,
+   "c_exact": 0.9,
+   "V1": 0.33333333333333326,
+   "V2": 0.7979416826828118,
+   "V3": 0.4470024844678824,
+   "V4": 0.724595918252819,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.8,
+   "gg_allyes": 0.8,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.022978,
+   "p_peer_text": 0.862587
+  },
+  {
+   "row_key": "598e095a9010b7aa|fewshot_v1",
+   "sentence_id": "06c0f59360f7",
+   "text": "A food item is classified as perishable if it has a limited shelf life and requires refrigeration or freezing for preservation.",
+   "candidate_fol": "∀x (Perishable(x) ↔ (LimitedShelfLife(x) ∧ (RequiresRefrigeration(x) ∨ RequiresFreezing(x))))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "L20",
+   "fold": 1,
+   "n_peers": 11,
+   "words": 21,
+   "n_conditions": 4,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.818182,
+   "V0_rep": 0.8181818181818181,
+   "c_exact": 0.8181818181818181,
+   "V1": 0.33333333333333326,
+   "V2": 0.857304004477032,
+   "V3": 0.5455511584481887,
+   "V4": 0.6735512650913026,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.818182,
+   "gg_allyes": 0.818182,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.014064,
+   "p_peer_text": 0.976224
+  },
+  {
+   "row_key": "4fa8e1cd3f9241b7|zeroshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) ∧ ¬Platypus(x) ∧ ¬Echidna(x) → ¬LaysEggs(x))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 6,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.166667,
+   "V0_rep": 0.16666666666666663,
+   "c_exact": 0.6666666666666667,
+   "V1": 0.0,
+   "V2": 0.158876844867619,
+   "V3": 0.0,
+   "V4": 0.30138608640249176,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.166667,
+   "gg_allyes": 0.166667,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.993306,
+   "p_peer_text": 0.24001
+  },
+  {
+   "row_key": "cb91fe1145bcbe7c|fewshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) ∧ LaysEggs(x) → (Platypus(x) ∨ Echidna(x)))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 6,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.166667,
+   "V0_rep": 0.16666666666666663,
+   "c_exact": 0.6666666666666667,
+   "V1": 0.0,
+   "V2": 0.16413785403170245,
+   "V3": 0.0,
+   "V4": 0.30138608640249176,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.166667,
+   "gg_allyes": 0.166667,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.62246,
+   "p_peer_text": 0.24001
+  },
+  {
+   "row_key": "6d5c67ff64a6d3dc|fewshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) → (LayEggs(x) → (Platypus(x) ∨ Echidna(x))))",
+   "system": "G4:deepseek/deepseek-v3.2",
+   "prompt_variant": "fewshot_v1",
+   "family": "deepseek",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 6,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "MEANING_RENAME",
+    "NEG",
+    "REV"
+   ],
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.166667,
+   "V0_rep": 0.16666666666666663,
+   "c_exact": 0.6666666666666667,
+   "V1": 0.0,
+   "V2": 0.16730330657842862,
+   "V3": 0.0,
+   "V4": 0.30138608640249176,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.166667,
+   "gg_allyes": 0.166667,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.562174,
+   "p_peer_text": 0.24001
+  },
+  {
+   "row_key": "1385b3dff7c40068|fewshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) ∧ LayEggs(x) → (Platypus(x) ∨ Echidna(x)))",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 5,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "MEANING_RENAME",
+    "NEG",
+    "REV"
+   ],
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.0,
+   "V0_rep": 0.0,
+   "c_exact": 0.6,
+   "V1": 0.0,
+   "V2": 0.0,
+   "V3": 0.0,
+   "V4": 0.20654303590086565,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.0,
+   "gg_allyes": 0.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.562174,
+   "p_peer_text": 0.135621
+  },
+  {
+   "row_key": "5eee56171e5fd0df|fewshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) → (¬LayEggs(x) ∨ Platypus(x) ∨ Echidna(x)))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 6,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "MEANING_RENAME",
+    "NEG",
+    "REV"
+   ],
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.166667,
+   "V0_rep": 0.16666666666666663,
+   "c_exact": 0.6666666666666667,
+   "V1": 0.0,
+   "V2": 0.16617389178529252,
+   "V3": 0.0,
+   "V4": 0.30138608640249176,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.166667,
+   "gg_allyes": 0.166667,
+   "judge_cheap_disg": 0.15,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.562178,
+   "p_peer_text": 0.24001
+  },
+  {
+   "row_key": "2b2e6fd02b31f2f1|fewshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) → (¬LaysEggs(x) ∨ Platypus(x) ∨ Echidna(x)))",
+   "system": "G7:openai/gpt-4.1-mini",
+   "prompt_variant": "fewshot_v1",
+   "family": "openai",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 6,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.166667,
+   "V0_rep": 0.16666666666666663,
+   "c_exact": 0.6666666666666667,
+   "V1": 0.0,
+   "V2": 0.16990424134893778,
+   "V3": 0.0,
+   "V4": 0.30138608640249176,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.166667,
+   "gg_allyes": 0.166667,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.679166,
+   "p_peer_text": 0.24001
+  },
+  {
+   "row_key": "a5c306b4c4435d4f|fewshot_v1",
+   "sentence_id": "8d543e5cfe0c",
+   "text": "A mammal doesn't lay eggs unless it's a platypus or an echidna.",
+   "candidate_fol": "∀x (Mammal(x) ∧ ¬LaysEggs(x) ∨ Platypus(x) ∨ Echidna(x))",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 5,
+   "words": 12,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "CONN"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.9,
+   "judge_cheap2_orig": 0.999985,
+   "p_peer_text": 0.920642
+  },
+  {
+   "row_key": "9e7341970f7d667c|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x ((Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering)) → ¬SuitableFor(x, indoorEnvironmentsWithoutSufficientLightAndRegularCare))",
+   "system": "F:openai/gpt-5.1",
+   "prompt_variant": "fewshot_v1",
+   "family": "openai-frontier",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 11,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.727273,
+   "V0_rep": 0.7272727272727273,
+   "c_exact": 0.8181818181818181,
+   "V1": 0.0,
+   "V2": 0.7078508299079493,
+   "V3": 0.0,
+   "V4": 0.6506828107357762,
+   "V5": 0.0,
+   "c3_plain": 0.5,
+   "gg": 0.818182,
+   "gg_allyes": 0.727273,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.09535,
+   "p_peer_text": 0.628031
+  },
+  {
+   "row_key": "7a53ce2e39f12db6|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x (Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering) → ¬SuitableFor(x, indoorEnvironment))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.666667,
+   "V0_rep": 0.6666666666666667,
+   "c_exact": 1.0,
+   "V1": 0.0,
+   "V2": 0.6223351204314505,
+   "V3": 0.0,
+   "V4": 0.7518382462929075,
+   "V5": 0.0,
+   "c3_plain": 0.33333333333333337,
+   "gg": 1.0,
+   "gg_allyes": 0.666667,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.148068,
+   "p_peer_text": 0.940835
+  },
+  {
+   "row_key": "da490dabd94f6c08|zeroshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x (RequiresDirectSunlight(x) ∧ RequiresFrequentWatering(x) → ¬SuitableForIndoor(x))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "DROP",
+    "RESTR"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.029313,
+   "p_peer_text": 0.994374
+  },
+  {
+   "row_key": "29f437badbe6b6ef|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x ((Requires(x, directSunlight) ∧ Requires(x, frequentWatering)) → ¬SuitableFor(x, indoorEnvironment, sufficientLight, regularCare))",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 9,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "BIND",
+    "DROP",
+    "RESTR"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.500002,
+   "p_peer_text": 0.913954
+  },
+  {
+   "row_key": "dd441369b2fb1ea6|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x (Plant(x) ∧ RequiresDirectSunlight(x) ∧ RequiresFrequentWatering(x) → ¬SuitableForIndoor(x, withoutSufficientLight, withoutRegularCare))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 10,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "ADD",
+    "DROP"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.8,
+   "judge_cheap2_orig": 0.377538,
+   "p_peer_text": 0.865511
+  },
+  {
+   "row_key": "e6e6e2bebe7ba077|zeroshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x (Plant(x) ∧ (∃y (RequiresDirectSunlight(x) ∧ RequiresFrequentWatering(x))) → ¬SuitableForIndoor(x) ∨ (¬HasSufficientLight(x) ∧ ¬ReceivesRegularCare(x)))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "zeroshot_v1",
+   "family": "qwen",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 10,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP",
+    "QUANT"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.499988,
+   "p_peer_text": 0.865511
+  },
+  {
+   "row_key": "2c3e027981d1fa37|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x (Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering) → ¬SuitableFor(x, indoorEnvironmentsWithoutSufficientLightAndRegularCare))",
+   "system": "G4:deepseek/deepseek-v3.2",
+   "prompt_variant": "fewshot_v1",
+   "family": "deepseek",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 11,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.727273,
+   "V0_rep": 0.7272727272727273,
+   "c_exact": 0.8181818181818181,
+   "V1": 0.0,
+   "V2": 0.701301171434535,
+   "V3": 0.0,
+   "V4": 0.6506828107357762,
+   "V5": 0.0,
+   "c3_plain": 0.5,
+   "gg": 0.818182,
+   "gg_allyes": 0.727273,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.182425,
+   "p_peer_text": 0.628031
+  },
+  {
+   "row_key": "17c71c297bc4c542|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x ((Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering)) → ¬SuitableFor(x, indoorEnvironmentsWithoutSufficientLightAndRegularCare))",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 10,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.7,
+   "V0_rep": 0.7,
+   "c_exact": 0.8,
+   "V1": 0.0,
+   "V2": 0.6610306471099843,
+   "V3": 0.0,
+   "V4": 0.6261474390084686,
+   "V5": 0.0,
+   "c3_plain": 0.33333333333333337,
+   "gg": 0.8,
+   "gg_allyes": 0.7,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.09535,
+   "p_peer_text": 0.603615
+  },
+  {
+   "row_key": "7a0123708d1a432c|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 11,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP",
+    "OTHER"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8435934937971038,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 1.0,
+   "judge_cheap2_orig": 1.0,
+   "p_peer_text": 1.0
+  },
+  {
+   "row_key": "44cfdc79740cdd2c|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x ((Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering)) → ¬SuitableFor(x, indoorEnvironments) ∧ ¬Has(x, sufficientLight) ∧ ¬Has(x, regularCare))",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 10,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.9,
+   "V0_rep": 0.9,
+   "c_exact": 1.0,
+   "V1": 0.6666666666666666,
+   "V2": 0.9419019288857714,
+   "V3": 0.8286037642669145,
+   "V4": 0.8193841430402882,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.8,
+   "judge_cheap2_orig": 0.970685,
+   "p_peer_text": 0.752855
+  },
+  {
+   "row_key": "6aa38cba9686ace7|fewshot_v1",
+   "sentence_id": "24cd2f339ac6",
+   "text": "If a plant requires direct sunlight and frequent watering, it is not suitable for indoor environments without sufficient light and regular care.",
+   "candidate_fol": "∀x (Plant(x) ∧ Requires(x, directSunlight) ∧ Requires(x, frequentWatering) → ¬Suitable(x, indoorEnvironment) ∧ ¬SufficientLight(x) ∧ ¬RegularCare(x))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "EXC",
+   "fold": 4,
+   "n_peers": 11,
+   "words": 22,
+   "n_conditions": 3,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "CONN",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.909091,
+   "V0_rep": 0.9090909090909091,
+   "c_exact": 1.0,
+   "V1": 0.75,
+   "V2": 0.90436862401764,
+   "V3": 0.7526845652742922,
+   "V4": 0.8217004467462412,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.5,
+   "judge_cheap_orig": 0.8,
+   "judge_cheap2_orig": 0.81757,
+   "p_peer_text": 0.786093
+  },
+  {
+   "row_key": "36e56597b0452c26|zeroshot_v1",
+   "sentence_id": "68da60d8ec78",
+   "text": "Trees lose their leaves in autumn, except for evergreen trees.",
+   "candidate_fol": "∀x (Tree(x) ∧ ¬Evergreen(x) → LosesLeavesInAutumn(x))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "EXC",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 10,
+   "n_conditions": 2,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.444444,
+   "V0_rep": 0.4444444444444444,
+   "c_exact": 0.8888888888888888,
+   "V1": 0.0,
+   "V2": 0.42738479928281137,
+   "V3": 0.0,
+   "V4": 0.567312623365405,
+   "V5": 0.0,
+   "c3_plain": 0.6666666666666667,
+   "gg": 0.888889,
+   "gg_allyes": 0.888889,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.222704,
+   "p_peer_text": 0.431226
+  },
+  {
+   "row_key": "e4057cf3a206e1fa|fewshot_v1",
+   "sentence_id": "68da60d8ec78",
+   "text": "Trees lose their leaves in autumn, except for evergreen trees.",
+   "candidate_fol": "∀x (Tree(x) → (Autumn → LoseLeaves(x)) ∧ Evergreen(x) → ¬LoseLeaves(x))",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "EXC",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 10,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "DROP",
+    "MOVE"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.990289,
+   "p_peer_text": 0.946739
+  },
+  {
+   "row_key": "440fc64ea4b0d7e6|zeroshot_v1",
+   "sentence_id": "68da60d8ec78",
+   "text": "Trees lose their leaves in autumn, except for evergreen trees.",
+   "candidate_fol": "∀x (Tree(x) ∧ ¬Evergreen(x) → LosesLeavesInAutumn(x))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "zeroshot_v1",
+   "family": "qwen",
+   "stratum": "EXC",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 10,
+   "n_conditions": 2,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.5,
+   "V0_rep": 0.5,
+   "c_exact": 0.9,
+   "V1": 0.0,
+   "V2": 0.4884836601164474,
+   "V3": 0.0,
+   "V4": 0.6025231082966109,
+   "V5": 0.0,
+   "c3_plain": 0.6666666666666667,
+   "gg": 0.9,
+   "gg_allyes": 0.9,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.222704,
+   "p_peer_text": 0.487857
+  },
+  {
+   "row_key": "312ad0843923d2a2|fewshot_v1",
+   "sentence_id": "68da60d8ec78",
+   "text": "Trees lose their leaves in autumn, except for evergreen trees.",
+   "candidate_fol": "∀x (Tree(x) → (Autumn(x) → LoseLeaves(x) ∧ ¬Evergreen(x)))",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "EXC",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 10,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "CONN",
+    "DROP",
+    "MOVE"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.9,
+   "judge_cheap_orig": 0.8,
+   "judge_cheap2_orig": 0.999877,
+   "p_peer_text": 0.81756
+  },
+  {
+   "row_key": "44cd5712161db3ef|fewshot_v1",
+   "sentence_id": "68da60d8ec78",
+   "text": "Trees lose their leaves in autumn, except for evergreen trees.",
+   "candidate_fol": "∀x ((Tree(x) ∧ LoseLeavesIn(x, autumn) ∧ ¬Evergreen(x)) → True)",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "EXC",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 10,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "DROP",
+    "REV"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.9,
+   "judge_cheap2_orig": 0.999842,
+   "p_peer_text": 0.99998
+  },
+  {
+   "row_key": "7abc0129d38c6968|fewshot_v1",
+   "sentence_id": "68da60d8ec78",
+   "text": "Trees lose their leaves in autumn, except for evergreen trees.",
+   "candidate_fol": "∀x (Tree(x) ∧ In(x, autumn) → ¬Leaves(x) ⊕ Evergreen(x))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "EXC",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 10,
+   "n_conditions": 2,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "CONN",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.9,
+   "judge_cheap2_orig": 0.979643,
+   "p_peer_text": 0.97284
+  },
+  {
+   "row_key": "359ad795a88e9769|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "Son(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 9,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.333333,
+   "V0_rep": 0.33333333333333337,
+   "c_exact": 0.7777777777777778,
+   "V1": 0.0,
+   "V2": 0.28332671142330434,
+   "V3": 0.0,
+   "V4": 0.4482566832947556,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.333333,
+   "gg_allyes": 0.333333,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.037327,
+   "p_peer_text": 0.421385
+  },
+  {
+   "row_key": "79f937f691071c7c|zeroshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "∃x (SonOf(x, brianWinter) ∧ Name(x, andyWinter) ∧ FootballPlayer(x) ∧ PlaysFor(x, hamiltonAcademical))",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 9,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "BIND",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.888889,
+   "V0_rep": 0.8888888888888888,
+   "c_exact": 1.0,
+   "V1": 0.8333333333333334,
+   "V2": 0.8953250234390019,
+   "V3": 0.8539432427168016,
+   "V4": 0.8058386765736126,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.888889,
+   "gg_allyes": 0.888889,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.679177,
+   "p_peer_text": 0.99982
+  },
+  {
+   "row_key": "1d48208b4399b18d|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "Son(brianWinter, andyWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 9,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "SWAP"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8342135203291757,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.037338,
+   "p_peer_text": 0.917853
+  },
+  {
+   "row_key": "f2855008dd63799a|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "Son(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 10,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.4,
+   "V0_rep": 0.4,
+   "c_exact": 0.8,
+   "V1": 0.0,
+   "V2": 0.334441381243861,
+   "V3": 0.0,
+   "V4": 0.49365888263762686,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.4,
+   "gg_allyes": 0.4,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.037327,
+   "p_peer_text": 0.49035
+  },
+  {
+   "row_key": "ff0440261a47cf29|zeroshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "∃x (Son(x, brianWinter) ∧ Name(x, andyWinter) ∧ FootballPlayer(x) ∧ PlaysFor(x, hamiltonAcademical))",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "zeroshot_v1",
+   "family": "qwen",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 10,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "BIND",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 0.9,
+   "V0_rep": 0.9,
+   "c_exact": 1.0,
+   "V1": 0.8333333333333333,
+   "V2": 0.9179463545622,
+   "V3": 0.8767146226862031,
+   "V4": 0.8088342976424823,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 0.9,
+   "gg_allyes": 0.9,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.622478,
+   "p_peer_text": 0.999828
+  },
+  {
+   "row_key": "dd825d4309155879|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "∃x (Person(x) ∧ SonOf(x, brianWinter) ∧ Name(x, andyWinter) ∧ FootballPlayer(x) ∧ PlaysFor(x, hamiltonAcademical))",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 11,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "BIND",
+    "DROP"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8342135203291757,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.500014,
+   "p_peer_text": 0.999878
+  },
+  {
+   "row_key": "49cdb8321ba0803a|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "FootballPlayer(andyWinter) ∧ SonOf(andyWinter, brianWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G4:deepseek/deepseek-v3.2",
+   "prompt_variant": "fewshot_v1",
+   "family": "deepseek",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 11,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.454545,
+   "V0_rep": 0.4545454545454546,
+   "c_exact": 0.7272727272727273,
+   "V1": 0.0,
+   "V2": 0.40212395973583104,
+   "V3": 0.0,
+   "V4": 0.4627149309569138,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.454545,
+   "gg_allyes": 0.454545,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.851954,
+   "p_peer_text": 0.544354
+  },
+  {
+   "row_key": "049a79ea2f16c661|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "SonOf(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 10,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.5,
+   "V0_rep": 0.5,
+   "c_exact": 0.8,
+   "V1": 0.0,
+   "V2": 0.44057341046707577,
+   "V3": 0.0,
+   "V4": 0.5369250013856807,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.5,
+   "gg_allyes": 0.5,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00407,
+   "p_peer_text": 0.589539
+  },
+  {
+   "row_key": "cafb33484f162db7|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "SonOf(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 11,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.454545,
+   "V0_rep": 0.4545454545454546,
+   "c_exact": 0.7272727272727273,
+   "V1": 0.0,
+   "V2": 0.4003281545102416,
+   "V3": 0.0,
+   "V4": 0.4627149309569138,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.454545,
+   "gg_allyes": 0.454545,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00407,
+   "p_peer_text": 0.544354
+  },
+  {
+   "row_key": "78e86665a4ab5994|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "Son(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G7:openai/gpt-4.1-mini",
+   "prompt_variant": "fewshot_v1",
+   "family": "openai",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 11,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.454545,
+   "V0_rep": 0.4545454545454546,
+   "c_exact": 0.8181818181818181,
+   "V1": 0.0,
+   "V2": 0.40786031021665237,
+   "V3": 0.0,
+   "V4": 0.530917815244662,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.454545,
+   "gg_allyes": 0.454545,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.037327,
+   "p_peer_text": 0.544354
+  },
+  {
+   "row_key": "c8881ab1a23dde0f|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "SonOf(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 10,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "A",
+   "error_ops": null,
+   "auto_label": "CORRECT",
+   "V0_frozen": 0.5,
+   "V0_rep": 0.5,
+   "c_exact": 0.8,
+   "V1": 0.0,
+   "V2": 0.44057341046707577,
+   "V3": 0.0,
+   "V4": 0.5369250013856807,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.5,
+   "gg_allyes": 0.5,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00407,
+   "p_peer_text": 0.589539
+  },
+  {
+   "row_key": "c41156f45ad23221|fewshot_v1",
+   "sentence_id": "0ef71f65ea70",
+   "text": "The son of Brian Winter, Andy Winter, is a football player who plays for Hamilton Academical.",
+   "candidate_fol": "FootballPlayer(AndyWinter) ∧ PlaysFor(AndyWinter, hamiltonAccademic)",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "CTRL",
+   "fold": 2,
+   "n_peers": 11,
+   "words": 16,
+   "n_conditions": 0,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "A",
+   "error_ops": [
+    "ADD"
+   ],
+   "auto_label": "ERROR",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8342135203291757,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 1.0,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.995912,
+   "p_peer_text": 0.992105
+  },
+  {
+   "row_key": "ba0bd2fbea11f8e4|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.111111,
+   "V0_rep": 0.11111111111111116,
+   "c_exact": 0.11111111111111116,
+   "V1": 0.0,
+   "V2": 0.0639897762630276,
+   "V3": 0.0,
+   "V4": 0.015492913773512597,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.111111,
+   "gg_allyes": 0.111111,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.121631
+  },
+  {
+   "row_key": "ba0bd2fbea11f8e4|zeroshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G1b:meta-llama/llama-3.3-70b-instruct",
+   "prompt_variant": "zeroshot_v1",
+   "family": "meta",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.111111,
+   "V0_rep": 0.11111111111111116,
+   "c_exact": 0.11111111111111116,
+   "V1": 0.0,
+   "V2": 0.0639897762630276,
+   "V3": 0.0,
+   "V4": 0.015492913773512597,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.111111,
+   "gg_allyes": 0.111111,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.121631
+  },
+  {
+   "row_key": "b45b7a220a50dbcc|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "PlaysPiano(peter) ∧ PlaysViolin(peter) ∧ PlaysSaxophone(peter)",
+   "system": "G1:meta-llama/llama-3.1-8b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "meta",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 9,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.111111,
+   "V0_rep": 0.11111111111111116,
+   "c_exact": 1.0,
+   "V1": 0.0,
+   "V2": 0.0639897762630276,
+   "V3": 0.0,
+   "V4": 0.5715941222450982,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.001501,
+   "p_peer_text": 0.150608
+  },
+  {
+   "row_key": "e0035e875708a307|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "fewshot_v1",
+   "family": "qwen",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.1,
+   "V0_rep": 0.09999999999999998,
+   "c_exact": 0.19999999999999996,
+   "V1": 0.0,
+   "V2": 0.06055223751567085,
+   "V3": 0.0,
+   "V4": 0.02353006655189437,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.2,
+   "gg_allyes": 0.2,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.11529
+  },
+  {
+   "row_key": "e0035e875708a307|zeroshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G2:qwen/qwen3-235b-a22b-2507",
+   "prompt_variant": "zeroshot_v1",
+   "family": "qwen",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.1,
+   "V0_rep": 0.09999999999999998,
+   "c_exact": 0.19999999999999996,
+   "V1": 0.0,
+   "V2": 0.06055223751567085,
+   "V3": 0.0,
+   "V4": 0.02353006655189437,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.2,
+   "gg_allyes": 0.2,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.11529
+  },
+  {
+   "row_key": "5ee69faa597cbb74|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G3:mistralai/mistral-small-3.2-24b-instruct",
+   "prompt_variant": "fewshot_v1",
+   "family": "mistral",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.090909,
+   "V0_rep": 0.09090909090909094,
+   "c_exact": 0.18181818181818177,
+   "V1": 0.0,
+   "V2": 0.05542672283604577,
+   "V3": 0.0,
+   "V4": 0.021224499516652853,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.181818,
+   "gg_allyes": 0.181818,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.111752
+  },
+  {
+   "row_key": "4439e94c8c0677ba|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G4:deepseek/deepseek-v3.2",
+   "prompt_variant": "fewshot_v1",
+   "family": "deepseek",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.090909,
+   "V0_rep": 0.09090909090909094,
+   "c_exact": 0.18181818181818177,
+   "V1": 0.0,
+   "V2": 0.05635423598129696,
+   "V3": 0.0,
+   "V4": 0.021224499516652853,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.181818,
+   "gg_allyes": 0.181818,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.111752
+  },
+  {
+   "row_key": "4b6c4b3f5f671232|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G5:google/gemma-3-27b-it",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemma",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.1,
+   "V0_rep": 0.09999999999999998,
+   "c_exact": 0.19999999999999996,
+   "V1": 0.0,
+   "V2": 0.06174783667765138,
+   "V3": 0.0,
+   "V4": 0.02353006655189437,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.2,
+   "gg_allyes": 0.2,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.11529
+  },
+  {
+   "row_key": "1047386ad9959a05|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G6:microsoft/phi-4",
+   "prompt_variant": "fewshot_v1",
+   "family": "microsoft",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.090909,
+   "V0_rep": 0.09090909090909094,
+   "c_exact": 0.18181818181818177,
+   "V1": 0.0,
+   "V2": 0.055682794396804236,
+   "V3": 0.0,
+   "V4": 0.021224499516652853,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.181818,
+   "gg_allyes": 0.181818,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.111752
+  },
+  {
+   "row_key": "ecdb3e3aa6dc2f4a|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G7:openai/gpt-4.1-mini",
+   "prompt_variant": "fewshot_v1",
+   "family": "openai",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.090909,
+   "V0_rep": 0.09090909090909094,
+   "c_exact": 0.18181818181818177,
+   "V1": 0.0,
+   "V2": 0.05659393410458724,
+   "V3": 0.0,
+   "V4": 0.021224499516652853,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.181818,
+   "gg_allyes": 0.181818,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.111752
+  },
+  {
+   "row_key": "57850dade67e70c7|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "Plays(peter, piano) ∧ Plays(peter, violin) ∧ Plays(peter, saxophone)",
+   "system": "G8:google/gemini-2.5-flash",
+   "prompt_variant": "fewshot_v1",
+   "family": "google-gemini",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 10,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "CORRECT",
+   "y": 0,
+   "label_tier": "B",
+   "error_ops": null,
+   "auto_label": "VOCAB_GRAN",
+   "V0_frozen": 0.1,
+   "V0_rep": 0.09999999999999998,
+   "c_exact": 0.19999999999999996,
+   "V1": 0.0,
+   "V2": 0.06174783667765138,
+   "V3": 0.0,
+   "V4": 0.02353006655189437,
+   "V5": 0.0,
+   "c3_plain": 0.0,
+   "gg": 0.2,
+   "gg_allyes": 0.2,
+   "judge_cheap_disg": 0.0,
+   "judge_cheap_orig": 0.0,
+   "judge_cheap2_orig": 0.00071,
+   "p_peer_text": 0.11529
+  },
+  {
+   "row_key": "62b8be1eb0b58ddf|fewshot_v1",
+   "sentence_id": "ad9b0d8861ae",
+   "text": "Peter plays piano, violin, and saxophone.",
+   "candidate_fol": "∀x (Peter(x) → (Plays(x, piano) ∧ Plays(x, violin) ∧ Plays(x, saxophone)))",
+   "system": "G9:cohere/command-r7b-12-2024",
+   "prompt_variant": "fewshot_v1",
+   "family": "cohere",
+   "stratum": "CTRL",
+   "fold": 3,
+   "n_peers": 11,
+   "words": 6,
+   "n_conditions": 0,
+   "label": "ERROR",
+   "y": 1,
+   "label_tier": "B",
+   "error_ops": [
+    "COMPOUND",
+    "ADD",
+    "QUANT",
+    "RESTR"
+   ],
+   "auto_label": "COMPOUND",
+   "V0_frozen": 1.0,
+   "V0_rep": 1.0,
+   "c_exact": 1.0,
+   "V1": 1.0,
+   "V2": 1.0,
+   "V3": 1.0,
+   "V4": 0.8483644494639307,
+   "V5": 1.0,
+   "c3_plain": 1.0,
+   "gg": 1.0,
+   "gg_allyes": 1.0,
+   "judge_cheap_disg": 0.05,
+   "judge_cheap_orig": 0.05,
+   "judge_cheap2_orig": 0.991419,
+   "p_peer_text": 0.81756
+  }
+ ],
+ "pairwise_matrix": [
+  {
+   "sentence_id": "06c0f59360f7",
+   "source_stratum": "L20",
+   "words": 21,
+   "n_conditions": 4,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 ((((FoodItem(v0) ∧ HasLimitedShelfLife(v0)) ∧ (RequiresRefrigeration(v0) ∨ RequiresFreezing(v0))) → Perishable(v0)))",
+     "rows": [
+      {
+       "row_key": "09afc591b29683cd|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 ((((FoodItem(v0) ∧ LimitedShelfLife(v0)) ∧ (Requires(v0, refrigeration) ∨ Requires(v0, freezing))) → Perishable(v0)))",
+     "rows": [
+      {
+       "row_key": "25a0d354f2d02953|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "ef8dad8d140eef20|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 ((((FoodItem(v0) ∧ LimitedShelfLife(v0)) ∧ (RequiresRefrigeration(v0) ∨ RequiresFreezing(v0))) → Perishable(v0)))",
+     "rows": [
+      {
+       "row_key": "25668e1a7ed77603|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 ((FoodItem(v0) → ((LimitedShelfLife(v0) ∧ (Refrigeration(v0) ∨ Freezing(v0))) → Perishable(v0))))",
+     "rows": [
+      {
+       "row_key": "b0d13c6acbcda035|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 ((FoodItem(v0) → (Perishable(v0) ↔ (HasLimitedShelfLife(v0) ∧ (RequiresRefrigeration(v0) ∨ RequiresFreezing(v0))))))",
+     "rows": [
+      {
+       "row_key": "0a2738a675298323|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "cb27233d2712144b|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∀v0 ((FoodItem(v0) → (Perishable(v0) ↔ (LimitedShelfLife(v0) ∧ (RequiresFor(v0, refrigeration, preservation) ∨ RequiresFor(v0, freezing, preservation))))))",
+     "rows": [
+      {
+       "row_key": "702de8c96579b9f2|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∀v0 ((FoodItem(v0) → (Perishable(v0) ↔ (LimitedShelfLife(v0) ∧ (RequiresRefrigeration(v0) ∨ RequiresFreezing(v0))))))",
+     "rows": [
+      {
+       "row_key": "69070c7f491c2bf1|zeroshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∀v0 ((FoodItem(v0) ↔ (LimitedShelfLife(v0) ∧ (Requires(v0, refrigeration) ∨ Requires(v0, freezing)))))",
+     "rows": [
+      {
+       "row_key": "4074e5d969a28701|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 8,
+     "canon_fol": "∀v0 ((Perishable(v0) ↔ (LimitedShelfLife(v0) ∧ (RequiresRefrigeration(v0) ∨ RequiresFreezing(v0)))))",
+     "rows": [
+      {
+       "row_key": "b92d65cfeadeb196|fewshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "b92d65cfeadeb196|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "598e095a9010b7aa|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     true,
+     "gran",
+     0.0046
+    ],
+    [
+     0,
+     2,
+     true,
+     "align",
+     0.0035
+    ],
+    [
+     0,
+     3,
+     true,
+     "align",
+     0.0053
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.0032
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.0035
+    ],
+    [
+     0,
+     8,
+     false,
+     "none",
+     0.0025
+    ],
+    [
+     1,
+     2,
+     true,
+     "gran",
+     0.0061
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     1,
+     5,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     1,
+     6,
+     false,
+     "none",
+     0.0038
+    ],
+    [
+     1,
+     7,
+     false,
+     "none",
+     0.0025
+    ],
+    [
+     1,
+     8,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     2,
+     3,
+     true,
+     "align",
+     0.0058
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.003
+    ],
+    [
+     2,
+     5,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     2,
+     6,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     2,
+     7,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     2,
+     8,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     3,
+     5,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     3,
+     6,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     3,
+     7,
+     false,
+     "none",
+     0.0025
+    ],
+    [
+     3,
+     8,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     4,
+     5,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     4,
+     6,
+     true,
+     "align",
+     0.0033
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.0032
+    ],
+    [
+     4,
+     8,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     5,
+     6,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     5,
+     7,
+     false,
+     "none",
+     0.0025
+    ],
+    [
+     5,
+     8,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     6,
+     7,
+     false,
+     "none",
+     0.003
+    ],
+    [
+     6,
+     8,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     7,
+     8,
+     false,
+     "none",
+     0.0027
+    ]
+   ],
+   "unparseable_row_keys": [],
+   "components": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "cliques": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     3
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "n_nontransitive_triples": 2,
+   "n_wedges": 8,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "0ef71f65ea70",
+   "source_stratum": "CTRL",
+   "words": 16,
+   "n_conditions": 0,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "((FootballPlayer(andyWinter) ∧ SonOf(andyWinter, brianWinter)) ∧ PlaysFor(andyWinter, hamiltonAcademical))",
+     "rows": [
+      {
+       "row_key": "49cdb8321ba0803a|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "((Son(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter)) ∧ PlaysFor(andyWinter, hamiltonAcademical))",
+     "rows": [
+      {
+       "row_key": "359ad795a88e9769|fewshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "f2855008dd63799a|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "78e86665a4ab5994|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "((Son(brianWinter, andyWinter) ∧ FootballPlayer(andyWinter)) ∧ PlaysFor(andyWinter, hamiltonAcademical))",
+     "rows": [
+      {
+       "row_key": "1d48208b4399b18d|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "((SonOf(andyWinter, brianWinter) ∧ FootballPlayer(andyWinter)) ∧ PlaysFor(andyWinter, hamiltonAcademical))",
+     "rows": [
+      {
+       "row_key": "049a79ea2f16c661|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "cafb33484f162db7|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "c8881ab1a23dde0f|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "(FootballPlayer(AndyWinter) ∧ PlaysFor(AndyWinter, hamiltonAccademic))",
+     "rows": [
+      {
+       "row_key": "c41156f45ad23221|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∃v0 (((((Person(v0) ∧ SonOf(v0, brianWinter)) ∧ Name(v0, andyWinter)) ∧ FootballPlayer(v0)) ∧ PlaysFor(v0, hamiltonAcademical)))",
+     "rows": [
+      {
+       "row_key": "dd825d4309155879|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∃v0 ((((Son(v0) ∧ ∃v1 (((Winter(v1) ∧ Brian(v1)) ∧ Eq(v0, v1)))) ∧ ∃v2 (((Winter(v2) ∧ Andy(v2)) ∧ Eq(v0, v2)))) ∧ ∃v3 ((((Player(v3) ∧ Football(v3)) ∧ ∃v4 (((Play(v4) ∧ Subj(v4, v3)) ∧ ∃v5 (((Academical(v5) ∧ Hamilton(v5)) ∧ For(v4, v5)))))) ∧ Eq(v0, v3)))))",
+     "rows": [
+      {
+       "row_key": "4ef8e405d0b3a5ff|none",
+       "slot": "CCG",
+       "family": "ccg2lambda_never_peer",
+       "family_field": "symbolic",
+       "system_class": "symbolic_eventsem",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∃v0 ((((Son(v0, brianWinter) ∧ Name(v0, andyWinter)) ∧ FootballPlayer(v0)) ∧ PlaysFor(v0, hamiltonAcademical)))",
+     "rows": [
+      {
+       "row_key": "ff0440261a47cf29|zeroshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 8,
+     "canon_fol": "∃v0 ((((SonOf(v0, brianWinter) ∧ Name(v0, andyWinter)) ∧ FootballPlayer(v0)) ∧ PlaysFor(v0, hamiltonAcademical)))",
+     "rows": [
+      {
+       "row_key": "79f937f691071c7c|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     true,
+     "align",
+     0.003
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.001
+    ],
+    [
+     0,
+     3,
+     true,
+     "exact",
+     0.0024
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0008
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0431
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.0021
+    ],
+    [
+     0,
+     8,
+     false,
+     "none",
+     0.0019
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0009
+    ],
+    [
+     1,
+     3,
+     true,
+     "align",
+     0.0023
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0009
+    ],
+    [
+     1,
+     5,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     1,
+     6,
+     false,
+     "none",
+     0.0424
+    ],
+    [
+     1,
+     7,
+     false,
+     "none",
+     0.0021
+    ],
+    [
+     1,
+     8,
+     false,
+     "none",
+     0.002
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0009
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.0007
+    ],
+    [
+     2,
+     5,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     2,
+     6,
+     false,
+     "none",
+     0.0434
+    ],
+    [
+     2,
+     7,
+     false,
+     "none",
+     0.002
+    ],
+    [
+     2,
+     8,
+     false,
+     "none",
+     0.002
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0008
+    ],
+    [
+     3,
+     5,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     3,
+     6,
+     false,
+     "none",
+     0.0427
+    ],
+    [
+     3,
+     7,
+     false,
+     "none",
+     0.0021
+    ],
+    [
+     3,
+     8,
+     false,
+     "none",
+     0.0019
+    ],
+    [
+     4,
+     5,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     4,
+     6,
+     false,
+     "none",
+     0.0415
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.0018
+    ],
+    [
+     4,
+     8,
+     false,
+     "none",
+     0.0018
+    ],
+    [
+     5,
+     6,
+     false,
+     "none",
+     0.0425
+    ],
+    [
+     5,
+     7,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     5,
+     8,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     6,
+     7,
+     false,
+     "none",
+     0.0416
+    ],
+    [
+     6,
+     8,
+     false,
+     "none",
+     0.0415
+    ],
+    [
+     7,
+     8,
+     true,
+     "align",
+     0.004
+    ]
+   ],
+   "unparseable_row_keys": [],
+   "components": [
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "cliques": [
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 3,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "10e21fa7c93a",
+   "source_stratum": "L20",
+   "words": 22,
+   "n_conditions": 4,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 (((((Book(v0) ∧ SetIn(v0, past)) ∧ Includes(v0, realHistoricalEvents)) ∨ Includes(v0, realHistoricalCharacters)) → HistoricalFiction(v0)))",
+     "rows": [
+      {
+       "row_key": "c30620f58d49b71c|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 ((((Book(v0) ∧ SetIn(v0, past)) ∧ (Includes(v0, realHistoricalEvents) ∨ Includes(v0, realHistoricalCharacters))) → HistoricalFiction(v0)))",
+     "rows": [
+      {
+       "row_key": "e90098457dd08acc|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 ((((Book(v0) ∧ SetInPast(v0)) ∧ (IncludesRealHistoricalEvents(v0) ∨ IncludesRealHistoricalCharacters(v0))) → ClassifiedAsHistoricalFiction(v0)))",
+     "rows": [
+      {
+       "row_key": "7f04e9563f693ab0|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 ((((Book(v0) ∧ SetInPast(v0)) ∧ IncludesRealHistoricalEventsOrCharacters(v0)) → HistoricalFiction(v0)))",
+     "rows": [
+      {
+       "row_key": "6d20259b13b61b84|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 ((((Book(v0) ∧ SetInThePast(v0)) ∧ (IncludesRealHistoricalEvents(v0) ∨ IncludesRealHistoricalCharacters(v0))) → HistoricalFiction(v0)))",
+     "rows": [
+      {
+       "row_key": "399f05bc777525f7|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∀v0 (((Book(v0) ∧ ((SetIn(v0, past) ∧ Includes(v0, realHistoricalEvents)) ∨ Includes(v0, realHistoricalCharacters))) → HistoricalFiction(v0)))",
+     "rows": [
+      {
+       "row_key": "ab66a00f3cf3c124|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∀v0 ((Book(v0) → (ClassifiedAs(v0, historicalFiction) ↔ (SetIn(v0, past) ∧ (Include(v0, realHistoricalEvents) ∨ Include(v0, realHistoricalCharacters))))))",
+     "rows": [
+      {
+       "row_key": "639cce5ea4ee9cd1|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∀v0 ((Book(v0) → (HistoricalFiction(v0) ↔ (SetInPast(v0) ∧ (IncludesRealHistoricalEvents(v0) ∨ IncludesRealHistoricalCharacters(v0))))))",
+     "rows": [
+      {
+       "row_key": "5403ca5d558f7fec|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "5403ca5d558f7fec|zeroshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "2a88348849942cd4|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 8,
+     "canon_fol": "∀v0 ((Book(v0) ↔ (HistoricalFiction(v0) ↔ (SetIn(v0, past) ∧ (Includes(v0, historicalEvent) ∨ Includes(v0, historicalCharacter))))))",
+     "rows": [
+      {
+       "row_key": "6f9003c8156292e3|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0046
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0044
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.0041
+    ],
+    [
+     0,
+     8,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     1,
+     2,
+     true,
+     "gran",
+     0.0072
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0044
+    ],
+    [
+     1,
+     4,
+     true,
+     "gran",
+     0.007
+    ],
+    [
+     1,
+     5,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     1,
+     6,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     1,
+     7,
+     false,
+     "none",
+     0.0045
+    ],
+    [
+     1,
+     8,
+     false,
+     "none",
+     0.003
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     2,
+     4,
+     true,
+     "align",
+     0.0043
+    ],
+    [
+     2,
+     5,
+     false,
+     "none",
+     0.0048
+    ],
+    [
+     2,
+     6,
+     false,
+     "none",
+     0.0044
+    ],
+    [
+     2,
+     7,
+     false,
+     "none",
+     0.0032
+    ],
+    [
+     2,
+     8,
+     false,
+     "none",
+     0.004
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     3,
+     5,
+     false,
+     "none",
+     0.0041
+    ],
+    [
+     3,
+     6,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     3,
+     7,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     3,
+     8,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     4,
+     5,
+     false,
+     "none",
+     0.0046
+    ],
+    [
+     4,
+     6,
+     false,
+     "none",
+     0.0044
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.0032
+    ],
+    [
+     4,
+     8,
+     false,
+     "none",
+     0.0038
+    ],
+    [
+     5,
+     6,
+     false,
+     "none",
+     0.0032
+    ],
+    [
+     5,
+     7,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     5,
+     8,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     6,
+     7,
+     false,
+     "none",
+     0.0041
+    ],
+    [
+     6,
+     8,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     7,
+     8,
+     false,
+     "none",
+     0.0035
+    ]
+   ],
+   "unparseable_row_keys": [
+    "d7d52aa752788b5f|fewshot_v1",
+    "6035bcd668ddd8dc|fewshot_v1"
+   ],
+   "components": [
+    [
+     0
+    ],
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     3
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "cliques": [
+    [
+     1,
+     2,
+     4
+    ],
+    [
+     0
+    ],
+    [
+     3
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 3,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "137ddac1290b",
+   "source_stratum": "L25",
+   "words": 27,
+   "n_conditions": 4,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 (((((((((Person(v0) ∧ Design(v0, buildings)) ∧ Plan(v0, buildings)) ∧ CreateDetailedDrawings(v0)) ∧ CreateModels(v0)) ∧ ConsiderAesthetics(v0)) ∧ ConsiderFunctionality(v0)) ∧ ConsiderSafety(v0)) → Architect(v0)))",
+     "rows": [
+      {
+       "row_key": "7746d6c9f0e7a17a|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 (((((((Person(v0) ∧ ∀v1 ((Building(v1) → (Design(v0, v1) ∧ Plan(v0, v1))))) ∧ ∀v2 (((Drawing(v2) ∧ Model(v2)) → Create(v0, v2)))) ∧ Considers(v0, aesthetics)) ∧ Considers(v0, functionality)) ∧ Considers(v0, safety)) → Architect(v0)))",
+     "rows": [
+      {
+       "row_key": "1f8338b2454cbb72|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (((((Person(v0) ∧ DesignsAndPlansBuildings(v0)) ∧ OftenCreatesDetailedDrawingsAndModels(v0)) ∧ ConsidersAestheticsFunctionalityAndSafety(v0)) → Architect(v0)))",
+     "rows": [
+      {
+       "row_key": "d0c8e02506150815|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 ((Architect(v0) ↔ (((((DesignsAndPlans(v0, buildings) ∧ Creates(v0, detailedDrawings)) ∧ Creates(v0, models)) ∧ Considers(v0, aesthetics)) ∧ Considers(v0, functionality)) ∧ Considers(v0, safety))))",
+     "rows": [
+      {
+       "row_key": "7ba7bd1e6ed8331d|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 ((Person(v0) → (Architect(v0) ↔ (((((∃v1 (((Building(v1) ∧ Designs(v0, v1)) ∧ Plans(v0, v1))) ∧ OftenCreates(v0, detailedDrawings)) ∧ OftenCreates(v0, models)) ∧ Considers(v0, aesthetics)) ∧ Considers(v0, functionality)) ∧ Considers(v0, safety)))))",
+     "rows": [
+      {
+       "row_key": "e757cad1dd096a0a|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0386
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0055
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0068
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0102
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0092
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0086
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0108
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0046
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.006
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0058
+    ]
+   ],
+   "unparseable_row_keys": [
+    "e67644c06657dcc1|fewshot_v1"
+   ],
+   "components": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "cliques": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 0,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "1a9a0140a082",
+   "source_stratum": "L25",
+   "words": 25,
+   "n_conditions": 4,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 (((((Vehicle(v0) ∧ DesignedFor(v0, offRoadUse)) ∧ HasFourWheelDrive(v0)) ∧ BuiltFor(v0, ruggedTerrain)) → (Jeep(v0) ∨ PickupTruck(v0))))",
+     "rows": [
+      {
+       "row_key": "76fa388e3aef12c0|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 (((((Vehicle(v0) ∧ DesignedForOffRoad(v0)) ∧ HasFourWheelDrive(v0)) ∧ BuiltForRuggedTerrain(v0)) → (Jeep(v0) ∨ PickupTruck(v0))))",
+     "rows": [
+      {
+       "row_key": "1f3268ca0f4b7bfb|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (((((Vehicle(v0) ∧ DesignedForOffRoadUse(v0)) ∧ FourWheelDrive(v0)) ∧ BuiltForRuggedTerrain(v0)) → (Jeep(v0) ∨ PickupTruck(v0))))",
+     "rows": [
+      {
+       "row_key": "68f26073e0714b1f|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 ((((DesignedFor(v0, offRoadUse) ∧ Has(v0, fourWheelDrive)) ∧ BuiltFor(v0, ruggedTerrain)) → (Jeep(v0) ∨ PickupTruck(v0))))",
+     "rows": [
+      {
+       "row_key": "489326704704ea3e|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 ((((DesignedForOffRoad(v0) ∧ FourWheelDrive(v0)) ∧ BuiltForRuggedTerrain(v0)) → (Jeep(v0) ∨ PickupTruck(v0))))",
+     "rows": [
+      {
+       "row_key": "ce029142e9e39ecf|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "a30931033ad41e37|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0092
+    ],
+    [
+     0,
+     2,
+     true,
+     "gran",
+     0.0147
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0052
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.009
+    ],
+    [
+     1,
+     2,
+     true,
+     "align",
+     0.0096
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0053
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0053
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0045
+    ]
+   ],
+   "unparseable_row_keys": [],
+   "components": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "cliques": [
+    [
+     0,
+     2
+    ],
+    [
+     1
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "n_nontransitive_triples": 1,
+   "n_wedges": 1,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "24cd2f339ac6",
+   "source_stratum": "EXC",
+   "words": 22,
+   "n_conditions": 3,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 ((((Plant(v0) ∧ Requires(v0, directSunlight)) ∧ Requires(v0, frequentWatering)) → ((¬Suitable(v0, indoorEnvironment) ∧ ¬SufficientLight(v0)) ∧ ¬RegularCare(v0))))",
+     "rows": [
+      {
+       "row_key": "6aa38cba9686ace7|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 ((((Plant(v0) ∧ Requires(v0, directSunlight)) ∧ Requires(v0, frequentWatering)) → ((¬SuitableFor(v0, indoorEnvironments) ∧ ¬Has(v0, sufficientLight)) ∧ ¬Has(v0, regularCare))))",
+     "rows": [
+      {
+       "row_key": "44cfdc79740cdd2c|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 ((((Plant(v0) ∧ Requires(v0, directSunlight)) ∧ Requires(v0, frequentWatering)) → ¬SuitableFor(v0, indoorEnvironment)))",
+     "rows": [
+      {
+       "row_key": "7a53ce2e39f12db6|fewshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 ((((Plant(v0) ∧ Requires(v0, directSunlight)) ∧ Requires(v0, frequentWatering)) → ¬SuitableFor(v0, indoorEnvironmentsWithoutSufficientLightAndRegularCare)))",
+     "rows": [
+      {
+       "row_key": "9e7341970f7d667c|fewshot_v1",
+       "slot": "F",
+       "family": "openai",
+       "family_field": "openai-frontier",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "2c3e027981d1fa37|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "17c71c297bc4c542|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 ((((Plant(v0) ∧ RequiresDirectSunlight(v0)) ∧ RequiresFrequentWatering(v0)) → ¬SuitableForIndoor(v0, withoutSufficientLight, withoutRegularCare)))",
+     "rows": [
+      {
+       "row_key": "dd441369b2fb1ea6|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∀v0 ((((Plant(v0) ∧ RequiresDirectSunlight(v0)) ∧ RequiresFrequentWatering(v0)) → ¬SuitableForIndoorWithoutSufficientLightAndCare(v0)))",
+     "rows": [
+      {
+       "row_key": "c4ec52a5e708b8e5|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∀v0 (((CanMake(v0, cookies) ∧ CanMake(v0, muffins)) → Baker(v0)))",
+     "rows": [
+      {
+       "row_key": "7a0123708d1a432c|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∀v0 (((Plant(v0) ∧ ∃v1 ((RequiresDirectSunlight(v0) ∧ RequiresFrequentWatering(v0)))) → (¬SuitableForIndoor(v0) ∨ (¬HasSufficientLight(v0) ∧ ¬ReceivesRegularCare(v0)))))",
+     "rows": [
+      {
+       "row_key": "e6e6e2bebe7ba077|zeroshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 8,
+     "canon_fol": "∀v0 (((Requires(v0, directSunlight) ∧ Requires(v0, frequentWatering)) → ¬SuitableFor(v0, indoorEnvironment, sufficientLight, regularCare)))",
+     "rows": [
+      {
+       "row_key": "29f437badbe6b6ef|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 9,
+     "canon_fol": "∀v0 (((Requires(v0, directSunlight) ∧ Requires(v0, frequentWatering)) → ¬SuitableFor(v0, indoorEnvironmentWithoutSufficientLightAndRegularCare)))",
+     "rows": [
+      {
+       "row_key": "4e40ba3b5e4e22f7|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 10,
+     "canon_fol": "∀v0 (((RequiresDirectSunlight(v0) ∧ RequiresFrequentWatering(v0)) → ¬SuitableForIndoor(v0)))",
+     "rows": [
+      {
+       "row_key": "da490dabd94f6c08|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     true,
+     "gran",
+     0.0065
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0051
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.0054
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0035
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.0077
+    ],
+    [
+     0,
+     8,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     0,
+     9,
+     false,
+     "none",
+     0.0032
+    ],
+    [
+     0,
+     10,
+     false,
+     "none",
+     0.0048
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0038
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0064
+    ],
+    [
+     1,
+     5,
+     false,
+     "none",
+     0.0054
+    ],
+    [
+     1,
+     6,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     1,
+     7,
+     false,
+     "none",
+     0.0079
+    ],
+    [
+     1,
+     8,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     1,
+     9,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     1,
+     10,
+     false,
+     "none",
+     0.0048
+    ],
+    [
+     2,
+     3,
+     true,
+     "align",
+     0.0041
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.0047
+    ],
+    [
+     2,
+     5,
+     false,
+     "none",
+     0.0041
+    ],
+    [
+     2,
+     6,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     2,
+     7,
+     false,
+     "none",
+     0.0063
+    ],
+    [
+     2,
+     8,
+     false,
+     "none",
+     0.0025
+    ],
+    [
+     2,
+     9,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     2,
+     10,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0042
+    ],
+    [
+     3,
+     5,
+     false,
+     "none",
+     0.0042
+    ],
+    [
+     3,
+     6,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     3,
+     7,
+     false,
+     "none",
+     0.0067
+    ],
+    [
+     3,
+     8,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     3,
+     9,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     3,
+     10,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     4,
+     5,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     4,
+     6,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.005
+    ],
+    [
+     4,
+     8,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     4,
+     9,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     4,
+     10,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     5,
+     6,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     5,
+     7,
+     false,
+     "none",
+     0.0051
+    ],
+    [
+     5,
+     8,
+     false,
+     "none",
+     0.0035
+    ],
+    [
+     5,
+     9,
+     false,
+     "none",
+     0.0035
+    ],
+    [
+     5,
+     10,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     6,
+     7,
+     false,
+     "none",
+     0.0049
+    ],
+    [
+     6,
+     8,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     6,
+     9,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     6,
+     10,
+     false,
+     "none",
+     0.0022
+    ],
+    [
+     7,
+     8,
+     false,
+     "none",
+     0.0062
+    ],
+    [
+     7,
+     9,
+     false,
+     "none",
+     0.0057
+    ],
+    [
+     7,
+     10,
+     false,
+     "none",
+     0.0042
+    ],
+    [
+     8,
+     9,
+     false,
+     "none",
+     0.0021
+    ],
+    [
+     8,
+     10,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     9,
+     10,
+     false,
+     "none",
+     0.0028
+    ]
+   ],
+   "unparseable_row_keys": [
+    "f7260b3d63c9b41d|fewshot_v1"
+   ],
+   "components": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ]
+   ],
+   "cliques": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 0,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "29e3d1e9e9ed",
+   "source_stratum": "L25",
+   "words": 31,
+   "n_conditions": 4,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 ((((((((CelestialBody(v0) ∧ ComposedOf(v0, ice)) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ Develops(v0, visibleTail)) ∧ Approaches(v0, sun)) → Comet(v0)))",
+     "rows": [
+      {
+       "row_key": "c73b366589a35e3a|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 (((((((CelestialBody(v0) ∧ ComposedOf(v0, ice)) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ (Approaches(v0, sun) → DevelopsVisibleTail(v0))) → Comet(v0)))",
+     "rows": [
+      {
+       "row_key": "f37025ffeab9ee41|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (((((((CelestialBody(v0) ∧ ComposedOf(v0, ice)) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ DevelopsVisibleTailApproaching(v0, sun)) → ClassifiedAs(v0, comet)))",
+     "rows": [
+      {
+       "row_key": "62b6f7ade5d34518|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 ((((((ComposedOf(v0, ice) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ DevelopsVisibleTail(v0, sun)) → Comet(v0)))",
+     "rows": [
+      {
+       "row_key": "1bfcc64a4d6a8536|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 (((((CelestialBody(v0) ∧ ((ComposedOf(v0, ice) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock))) ∧ OrbitsTheSun(v0)) ∧ DevelopsVisibleTail(v0)) → Comet(v0)))",
+     "rows": [
+      {
+       "row_key": "093114e2515fc3af|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∀v0 (((((CelestialBody(v0) ∧ ComposedOfIceDustAndRock(v0)) ∧ OrbitsSun(v0)) ∧ DevelopsVisibleTailWhenApproachingSun(v0)) → Comet(v0)))",
+     "rows": [
+      {
+       "row_key": "5625078c5d1550fa|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∀v0 ((CelestialBody(v0) → (((((ComposedOf(v0, ice) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ (Approaches(v0, sun) → HasVisibleTail(v0))) ↔ Comet(v0))))",
+     "rows": [
+      {
+       "row_key": "418f11434540be13|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∀v0 ((CelestialBody(v0) → (Comet(v0) ↔ ((((ComposedOf(v0, ice) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ (DevelopsVisibleTail(v0) ↔ Approaches(v0, sun))))))",
+     "rows": [
+      {
+       "row_key": "94dcc61e06447df5|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 8,
+     "canon_fol": "∀v0 ((CelestialBody(v0) → (Comet(v0) ↔ ((ComposedOf(v0, ice, dust, rock) ∧ Orbits(v0, sun)) ∧ DevelopsVisibleTail(v0, sun)))))",
+     "rows": [
+      {
+       "row_key": "f40b51c60be9a99f|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 9,
+     "canon_fol": "∀v0 ((CelestialBody(v0) ↔ ((((ComposedOf(v0, ice) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ Develops(v0, visibleTail, sun))))",
+     "rows": [
+      {
+       "row_key": "886ba1e5afa85952|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 10,
+     "canon_fol": "∀v0 ((Comet(v0) ↔ ((((ComposedOf(v0, ice) ∧ ComposedOf(v0, dust)) ∧ ComposedOf(v0, rock)) ∧ Orbits(v0, sun)) ∧ DevelopsTail(v0, sun))))",
+     "rows": [
+      {
+       "row_key": "d1f48f496aeaf42f|fewshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 11,
+     "canon_fol": "∀v0 ((Comet(v0) ↔ ((((ComposedOfIce(v0) ∧ ComposedOfDust(v0)) ∧ ComposedOfRock(v0)) ∧ OrbitsTheSun(v0)) ∧ DevelopsVisibleTailWhenApproachingSun(v0))))",
+     "rows": [
+      {
+       "row_key": "480ad2a29f340aad|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0078
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0058
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0183
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0241
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.0065
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0052
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.0068
+    ],
+    [
+     0,
+     8,
+     false,
+     "none",
+     0.0047
+    ],
+    [
+     0,
+     9,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     0,
+     10,
+     false,
+     "none",
+     0.0042
+    ],
+    [
+     0,
+     11,
+     false,
+     "none",
+     0.0062
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0194
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0053
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0071
+    ],
+    [
+     1,
+     5,
+     false,
+     "none",
+     0.0061
+    ],
+    [
+     1,
+     6,
+     false,
+     "none",
+     0.005
+    ],
+    [
+     1,
+     7,
+     false,
+     "none",
+     0.005
+    ],
+    [
+     1,
+     8,
+     false,
+     "none",
+     0.0045
+    ],
+    [
+     1,
+     9,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     1,
+     10,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     1,
+     11,
+     false,
+     "none",
+     0.0061
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.005
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.007
+    ],
+    [
+     2,
+     5,
+     false,
+     "none",
+     0.0059
+    ],
+    [
+     2,
+     6,
+     false,
+     "none",
+     0.0051
+    ],
+    [
+     2,
+     7,
+     false,
+     "none",
+     0.0051
+    ],
+    [
+     2,
+     8,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     2,
+     9,
+     false,
+     "none",
+     0.004
+    ],
+    [
+     2,
+     10,
+     false,
+     "none",
+     0.004
+    ],
+    [
+     2,
+     11,
+     false,
+     "none",
+     0.006
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0231
+    ],
+    [
+     3,
+     5,
+     false,
+     "none",
+     0.0053
+    ],
+    [
+     3,
+     6,
+     false,
+     "none",
+     0.0045
+    ],
+    [
+     3,
+     7,
+     false,
+     "none",
+     0.0046
+    ],
+    [
+     3,
+     8,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     3,
+     9,
+     false,
+     "none",
+     0.0048
+    ],
+    [
+     3,
+     10,
+     false,
+     "none",
+     0.0035
+    ],
+    [
+     3,
+     11,
+     false,
+     "none",
+     0.0048
+    ],
+    [
+     4,
+     5,
+     false,
+     "none",
+     0.0087
+    ],
+    [
+     4,
+     6,
+     false,
+     "none",
+     0.0065
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.0064
+    ],
+    [
+     4,
+     8,
+     false,
+     "none",
+     0.0054
+    ],
+    [
+     4,
+     9,
+     false,
+     "none",
+     0.0052
+    ],
+    [
+     4,
+     10,
+     false,
+     "none",
+     0.0051
+    ],
+    [
+     4,
+     11,
+     false,
+     "none",
+     0.0052
+    ],
+    [
+     5,
+     6,
+     false,
+     "none",
+     0.0055
+    ],
+    [
+     5,
+     7,
+     false,
+     "none",
+     0.0054
+    ],
+    [
+     5,
+     8,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     5,
+     9,
+     false,
+     "none",
+     0.0042
+    ],
+    [
+     5,
+     10,
+     false,
+     "none",
+     0.004
+    ],
+    [
+     5,
+     11,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     6,
+     7,
+     false,
+     "none",
+     0.0044
+    ],
+    [
+     6,
+     8,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     6,
+     9,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     6,
+     10,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     6,
+     11,
+     false,
+     "none",
+     0.0057
+    ],
+    [
+     7,
+     8,
+     false,
+     "none",
+     0.0173
+    ],
+    [
+     7,
+     9,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     7,
+     10,
+     false,
+     "none",
+     0.0036
+    ],
+    [
+     7,
+     11,
+     false,
+     "none",
+     0.0055
+    ],
+    [
+     8,
+     9,
+     false,
+     "none",
+     0.0039
+    ],
+    [
+     8,
+     10,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     8,
+     11,
+     false,
+     "none",
+     0.0042
+    ],
+    [
+     9,
+     10,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     9,
+     11,
+     false,
+     "none",
+     0.0041
+    ],
+    [
+     10,
+     11,
+     false,
+     "none",
+     0.0199
+    ]
+   ],
+   "unparseable_row_keys": [
+    "78e5a7e941084342|zeroshot_v1"
+   ],
+   "components": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ],
+    [
+     11
+    ]
+   ],
+   "cliques": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ],
+    [
+     11
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 0,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "504031bdbefb",
+   "source_stratum": "L25",
+   "words": 30,
+   "n_conditions": 5,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 (((CanMake(v0, cookies) ∧ CanMake(v0, muffins)) → Baker(v0)))",
+     "rows": [
+      {
+       "row_key": "99c0d84da0ece275|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 ((SuitableFor(v0, y) ↔ (MeetsPerformanceRequirements(v0, y) ∧ CompatibleWith(v0, z))))",
+     "rows": [
+      {
+       "row_key": "83663be34ff31322|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (∀v1 (∀v2 ((((((Fuel(v0) ∧ Engine(v1)) ∧ Vehicle(v2)) ∧ MeetsPerformanceRequirements(v0, v1)) ∧ CompatibleWithFuelSystem(v0, v2)) → SuitableForEngine(v0, v1, v2)))))",
+     "rows": [
+      {
+       "row_key": "e9b9bb8ca53d0a5c|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 (∀v1 (∀v2 ((((Fuel(v0) ∧ Engine(v1)) ∧ Vehicle(v2)) → (Suitable(v0, v1, v2) ↔ (MeetsPerformance(v0, v1) ∧ CompatibleWithFuelSystem(v0, v2)))))))",
+     "rows": [
+      {
+       "row_key": "2953ac8a1c7e343e|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.002
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0333
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0174
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0163
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0116
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0265
+    ]
+   ],
+   "unparseable_row_keys": [
+    "e3fa99d45bb4a57a|fewshot_v1",
+    "ea11c854f243ee4d|fewshot_v1"
+   ],
+   "components": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "cliques": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 0,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "5d66a7d7ce28",
+   "source_stratum": "L25",
+   "words": 32,
+   "n_conditions": 4,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 (((((((Furniture(v0) ∧ FlatSurface(v0)) ∧ Supports(v0, legs)) ∧ UsedFor(v0, holdingObjects)) ∨ UsedFor(v0, eating)) ∨ UsedFor(v0, writing)) → Table(v0)))",
+     "rows": [
+      {
+       "row_key": "15de7cab3ce165a3|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 ((((((FlatSurface(v0) ∧ SupportedBy(v0, oneOrMoreLegs)) ∧ UsedFor(v0, holdObjects)) ∨ UsedFor(v0, eating)) ∨ UsedFor(v0, writing)) → Table(v0)))",
+     "rows": [
+      {
+       "row_key": "d367fa9b242f2982|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (((((Furniture(v0) ∧ FlatSurface(v0)) ∧ SupportedByLegs(v0)) ∧ UsedForVariousActivities(v0)) → Table(v0)))",
+     "rows": [
+      {
+       "row_key": "9aff407e79d7795b|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 (((((Furniture(v0) ∧ HasFlatSurface(v0)) ∧ (∃v1 (Leg(v1)) ∧ Supports(y, v0))) ∧ UsedForHoldingOrActivities(v0)) → Table(v0)))",
+     "rows": [
+      {
+       "row_key": "4b55c32efcc0a542|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 (((((PieceOfFurniture(v0) ∧ HasFlatSurface(v0)) ∧ SupportedByLegs(v0)) ∧ ((UsedToHoldObjects(v0) ∨ UsedForActivity(v0, eating)) ∨ UsedForActivity(v0, writing))) → Table(v0)))",
+     "rows": [
+      {
+       "row_key": "255b55aa2485f334|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0172
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0037
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0045
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0043
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.004
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0088
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.0041
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0049
+    ]
+   ],
+   "unparseable_row_keys": [
+    "cf196a55b637af41|fewshot_v1"
+   ],
+   "components": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "cliques": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 0,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "68da60d8ec78",
+   "source_stratum": "EXC",
+   "words": 10,
+   "n_conditions": 2,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 ((((Tree(v0) ∧ LoseLeavesIn(v0, autumn)) ∧ ¬Evergreen(v0)) → True))",
+     "rows": [
+      {
+       "row_key": "44cd5712161db3ef|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 (((Tree(v0) ∧ In(v0, autumn)) → (¬Leaves(v0) ⊕ Evergreen(v0))))",
+     "rows": [
+      {
+       "row_key": "7abc0129d38c6968|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (((Tree(v0) ∧ ¬Evergreen(v0)) → LoseIn(v0, leaves, autumn)))",
+     "rows": [
+      {
+       "row_key": "e6572e6ce9426a84|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 (((Tree(v0) ∧ ¬Evergreen(v0)) → LoseLeavesIn(v0, autumn)))",
+     "rows": [
+      {
+       "row_key": "c21efd066e9c9baf|fewshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "c37b2f8c767a963d|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "419d98ab5b7b0ff2|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 (((Tree(v0) ∧ ¬Evergreen(v0)) → LosesLeavesIn(v0, autumn)))",
+     "rows": [
+      {
+       "row_key": "be33f86f05712a8d|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "bce334f4d47095fe|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∀v0 (((Tree(v0) ∧ ¬Evergreen(v0)) → LosesLeavesInAutumn(v0)))",
+     "rows": [
+      {
+       "row_key": "36e56597b0452c26|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "440fc64ea4b0d7e6|zeroshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "c94ab62ac3bb861c|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∀v0 ((Tree(v0) → (((Autumn → LoseLeaves(v0)) ∧ Evergreen(v0)) → ¬LoseLeaves(v0))))",
+     "rows": [
+      {
+       "row_key": "e4057cf3a206e1fa|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∀v0 ((Tree(v0) → (Autumn(v0) → (LoseLeaves(v0) ∧ ¬Evergreen(v0)))))",
+     "rows": [
+      {
+       "row_key": "312ad0843923d2a2|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     1,
+     5,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     1,
+     6,
+     false,
+     "none",
+     0.0034
+    ],
+    [
+     1,
+     7,
+     false,
+     "none",
+     0.0033
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     2,
+     5,
+     false,
+     "none",
+     0.002
+    ],
+    [
+     2,
+     6,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     2,
+     7,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     3,
+     4,
+     true,
+     "align",
+     0.0032
+    ],
+    [
+     3,
+     5,
+     true,
+     "gran",
+     0.0044
+    ],
+    [
+     3,
+     6,
+     false,
+     "none",
+     0.003
+    ],
+    [
+     3,
+     7,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     4,
+     5,
+     true,
+     "gran",
+     0.0041
+    ],
+    [
+     4,
+     6,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.0024
+    ],
+    [
+     5,
+     6,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     5,
+     7,
+     false,
+     "none",
+     0.0023
+    ],
+    [
+     6,
+     7,
+     false,
+     "none",
+     0.003
+    ]
+   ],
+   "unparseable_row_keys": [],
+   "components": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ]
+   ],
+   "cliques": [
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 3,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "8d543e5cfe0c",
+   "source_stratum": "EXC",
+   "words": 12,
+   "n_conditions": 2,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "∀v0 ((((Mammal(v0) ∧ ¬LaysEggs(v0)) ∨ Platypus(v0)) ∨ Echidna(v0)))",
+     "rows": [
+      {
+       "row_key": "a5c306b4c4435d4f|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "∀v0 ((((Mammal(v0) ∧ ¬Platypus(v0)) ∧ ¬Echidna(v0)) → ¬LaysEggs(v0)))",
+     "rows": [
+      {
+       "row_key": "4fa8e1cd3f9241b7|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 (((Mammal(v0) ∧ LayEggs(v0)) → (Platypus(v0) ∨ Echidna(v0))))",
+     "rows": [
+      {
+       "row_key": "1385b3dff7c40068|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∀v0 (((Mammal(v0) ∧ LaysEggs(v0)) → (Platypus(v0) ∨ Echidna(v0))))",
+     "rows": [
+      {
+       "row_key": "cb91fe1145bcbe7c|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 4,
+     "canon_fol": "∀v0 (((Mammal(v0) ∧ ¬LaysEggs(v0)) → (¬Platypus(v0) ∧ ¬Echidna(v0))))",
+     "rows": [
+      {
+       "row_key": "5db44d74e366d1d6|none",
+       "slot": "GOLD",
+       "family": "gold_as_system_never_peer",
+       "family_field": "openai-gpt4-2023",
+       "system_class": "reference_gold_as_system",
+       "is_peer": false
+      }
+     ]
+    },
+    {
+     "node_id": 5,
+     "canon_fol": "∀v0 ((Mammal(v0) → ((¬LayEggs(v0) ∨ Platypus(v0)) ∨ Echidna(v0))))",
+     "rows": [
+      {
+       "row_key": "5eee56171e5fd0df|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 6,
+     "canon_fol": "∀v0 ((Mammal(v0) → ((¬LaysEggs(v0) ∨ Platypus(v0)) ∨ Echidna(v0))))",
+     "rows": [
+      {
+       "row_key": "2b2e6fd02b31f2f1|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 7,
+     "canon_fol": "∀v0 ((Mammal(v0) → (LayEggs(v0) → (Platypus(v0) ∨ Echidna(v0)))))",
+     "rows": [
+      {
+       "row_key": "6d5c67ff64a6d3dc|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     0,
+     4,
+     false,
+     "none",
+     0.0029
+    ],
+    [
+     0,
+     5,
+     false,
+     "none",
+     0.003
+    ],
+    [
+     0,
+     6,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     0,
+     7,
+     false,
+     "none",
+     0.003
+    ],
+    [
+     1,
+     2,
+     true,
+     "align",
+     0.0062
+    ],
+    [
+     1,
+     3,
+     true,
+     "exact",
+     0.005
+    ],
+    [
+     1,
+     4,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     1,
+     5,
+     true,
+     "align",
+     0.0059
+    ],
+    [
+     1,
+     6,
+     true,
+     "exact",
+     0.005
+    ],
+    [
+     1,
+     7,
+     true,
+     "align",
+     0.0059
+    ],
+    [
+     2,
+     3,
+     true,
+     "align",
+     0.0036
+    ],
+    [
+     2,
+     4,
+     false,
+     "none",
+     0.0028
+    ],
+    [
+     2,
+     5,
+     true,
+     "exact",
+     0.0048
+    ],
+    [
+     2,
+     6,
+     true,
+     "align",
+     0.0059
+    ],
+    [
+     2,
+     7,
+     true,
+     "exact",
+     0.0047
+    ],
+    [
+     3,
+     4,
+     false,
+     "none",
+     0.0026
+    ],
+    [
+     3,
+     5,
+     true,
+     "align",
+     0.0058
+    ],
+    [
+     3,
+     6,
+     true,
+     "exact",
+     0.0048
+    ],
+    [
+     3,
+     7,
+     true,
+     "align",
+     0.0057
+    ],
+    [
+     4,
+     5,
+     false,
+     "none",
+     0.0031
+    ],
+    [
+     4,
+     6,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     4,
+     7,
+     false,
+     "none",
+     0.0027
+    ],
+    [
+     5,
+     6,
+     true,
+     "align",
+     0.0042
+    ],
+    [
+     5,
+     7,
+     true,
+     "exact",
+     0.0029
+    ],
+    [
+     6,
+     7,
+     true,
+     "align",
+     0.004
+    ]
+   ],
+   "unparseable_row_keys": [
+    "d23b6b22332c7da0|fewshot_v1",
+    "ea1d7516a001a0be|fewshot_v1",
+    "67ec6eb9a07c89a7|fewshot_v1",
+    "67ec6eb9a07c89a7|zeroshot_v1",
+    "9da5289a6440df17|fewshot_v1"
+   ],
+   "components": [
+    [
+     0
+    ],
+    [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7
+    ],
+    [
+     4
+    ]
+   ],
+   "cliques": [
+    [
+     1,
+     2,
+     3,
+     5,
+     6,
+     7
+    ],
+    [
+     0
+    ],
+    [
+     4
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 60,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  },
+  {
+   "sentence_id": "ad9b0d8861ae",
+   "source_stratum": "CTRL",
+   "words": 6,
+   "n_conditions": 0,
+   "nodes": [
+    {
+     "node_id": 0,
+     "canon_fol": "((Plays(peter, piano) ∧ Plays(peter, violin)) ∧ Plays(peter, saxophone))",
+     "rows": [
+      {
+       "row_key": "ba0bd2fbea11f8e4|fewshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "ba0bd2fbea11f8e4|zeroshot_v1",
+       "slot": "G1b",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "e0035e875708a307|fewshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "e0035e875708a307|zeroshot_v1",
+       "slot": "G2",
+       "family": "qwen",
+       "family_field": "qwen",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "5ee69faa597cbb74|fewshot_v1",
+       "slot": "G3",
+       "family": "mistral",
+       "family_field": "mistral",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "4439e94c8c0677ba|fewshot_v1",
+       "slot": "G4",
+       "family": "deepseek",
+       "family_field": "deepseek",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "4b6c4b3f5f671232|fewshot_v1",
+       "slot": "G5",
+       "family": "google",
+       "family_field": "google-gemma",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "1047386ad9959a05|fewshot_v1",
+       "slot": "G6",
+       "family": "microsoft",
+       "family_field": "microsoft",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "ecdb3e3aa6dc2f4a|fewshot_v1",
+       "slot": "G7",
+       "family": "openai",
+       "family_field": "openai",
+       "system_class": "llm",
+       "is_peer": true
+      },
+      {
+       "row_key": "57850dade67e70c7|fewshot_v1",
+       "slot": "G8",
+       "family": "google",
+       "family_field": "google-gemini",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 1,
+     "canon_fol": "((PlaysPiano(peter) ∧ PlaysViolin(peter)) ∧ PlaysSaxophone(peter))",
+     "rows": [
+      {
+       "row_key": "b45b7a220a50dbcc|fewshot_v1",
+       "slot": "G1",
+       "family": "meta",
+       "family_field": "meta",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 2,
+     "canon_fol": "∀v0 ((Peter(v0) → ((Plays(v0, piano) ∧ Plays(v0, violin)) ∧ Plays(v0, saxophone))))",
+     "rows": [
+      {
+       "row_key": "62b8be1eb0b58ddf|fewshot_v1",
+       "slot": "G9",
+       "family": "cohere",
+       "family_field": "cohere",
+       "system_class": "llm",
+       "is_peer": true
+      }
+     ]
+    },
+    {
+     "node_id": 3,
+     "canon_fol": "∃v0 ((((Peter(v0) ∧ ∃v1 ((Piano(v1) ∧ ∃v2 (((Play(v2) ∧ Subj(v2, v0)) ∧ Acc(v2, v1)))))) ∧ ∃v3 ((Violin(v3) ∧ ∃v4 (((Play(v4) ∧ Subj(v4, v0)) ∧ Acc(v4, v3)))))) ∧ ∃v5 ((Saxophone(v5) ∧ ∃v6 (((Play(v6) ∧ Subj(v6, v0)) ∧ Acc(v6, v5)))))))",
+     "rows": [
+      {
+       "row_key": "90d8f9ab62029f62|none",
+       "slot": "CCG",
+       "family": "ccg2lambda_never_peer",
+       "family_field": "symbolic",
+       "system_class": "symbolic_eventsem",
+       "is_peer": false
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     0,
+     1,
+     true,
+     "gran",
+     0.0028
+    ],
+    [
+     0,
+     2,
+     false,
+     "none",
+     0.0015
+    ],
+    [
+     0,
+     3,
+     false,
+     "none",
+     0.0236
+    ],
+    [
+     1,
+     2,
+     false,
+     "none",
+     0.0021
+    ],
+    [
+     1,
+     3,
+     false,
+     "none",
+     0.0234
+    ],
+    [
+     2,
+     3,
+     false,
+     "none",
+     0.0244
+    ]
+   ],
+   "unparseable_row_keys": [],
+   "components": [
+    [
+     0,
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "cliques": [
+    [
+     0,
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "n_nontransitive_triples": 0,
+   "n_wedges": 0,
+   "eqmv_ms": 3000,
+   "pair_cap_s": 30,
+   "z3_version": "5.1.0",
+   "code_sha": "dd73975642f428cc"
+  }
+ ],
+ "family_weights": {
+  "per_fold_holdout": {
+   "0": {
+    "cohere": 0.10897042479730207,
+    "deepseek": 0.23039440783099735,
+    "google": 0.2057236436643743,
+    "meta": 0.16197508675329478,
+    "microsoft": 0.21301530641674202,
+    "mistral": 0.20613336680429245,
+    "openai": 0.2504335576604296,
+    "qwen": 0.19181315431989507
+   },
+   "1": {
+    "cohere": 0.10155696327156268,
+    "deepseek": 0.23322324967951255,
+    "google": 0.20008869733087373,
+    "meta": 0.15148890617702784,
+    "microsoft": 0.21454641791631915,
+    "mistral": 0.20006184172514443,
+    "openai": 0.2520846321689195,
+    "qwen": 0.1843397563970324
+   },
+   "2": {
+    "cohere": 0.11245616980894459,
+    "deepseek": 0.22018482221392494,
+    "google": 0.19674863820218136,
+    "meta": 0.15089783398726447,
+    "microsoft": 0.21127639550057012,
+    "mistral": 0.20079067198122885,
+    "openai": 0.24811554329583654,
+    "qwen": 0.18353645346609657
+   },
+   "3": {
+    "cohere": 0.11663811084289817,
+    "deepseek": 0.23877829446318888,
+    "google": 0.20978342921403548,
+    "meta": 0.16191588771909438,
+    "microsoft": 0.2138207919376795,
+    "mistral": 0.20414332709398064,
+    "openai": 0.24754443965680678,
+    "qwen": 0.19113491909087202
+   },
+   "4": {
+    "cohere": 0.11125777832501696,
+    "deepseek": 0.23240865183478826,
+    "google": 0.21328843841297465,
+    "meta": 0.16479296946059355,
+    "microsoft": 0.22374395302752154,
+    "mistral": 0.2078225403569054,
+    "openai": 0.2519245269490765,
+    "qwen": 0.19673158080638228
+   }
+  },
+  "full_E": {
+   "cohere": 0.1094893087332289,
+   "deepseek": 0.23126719595175074,
+   "google": 0.20522707678837748,
+   "meta": 0.15796076415559285,
+   "microsoft": 0.2154836821840532,
+   "mistral": 0.2038900729628536,
+   "openai": 0.25055297346296473,
+   "qwen": 0.18950745528831167
+  },
+  "shrink": 20.0,
+  "note": "w^(k) estimated on sentences NOT in fold k; applied to rows of fold k"
+ },
+ "v4_coefs": {
+  "frozen_coefficients_full_Z": {
+   "intercept": -3.472996682952369,
+   "c_exact": 3.5444565071756204,
+   "c_align": 1.5752543602595768
+  },
+  "per_fold": {
+   "0": {
+    "intercept": -3.1876924517236818,
+    "c_exact": 3.49812053105509,
+    "c_align": 1.3217047010838594,
+    "n_train": 2110,
+    "n_test": 562
+   },
+   "1": {
+    "intercept": -3.196095415964957,
+    "c_exact": 3.3020351705702757,
+    "c_align": 1.489548125561367,
+    "n_train": 2098,
+    "n_test": 574
+   },
+   "2": {
+    "intercept": -3.123279391241242,
+    "c_exact": 3.005715817436256,
+    "c_align": 1.7333522696138521,
+    "n_train": 2123,
+    "n_test": 549
+   },
+   "3": {
+    "intercept": -4.885956741177755,
+    "c_exact": 4.995131013728068,
+    "c_align": 1.612656098292133,
+    "n_train": 2171,
+    "n_test": 501
+   },
+   "4": {
+    "intercept": -3.2970687065222575,
+    "c_exact": 3.251963667589233,
+    "c_align": 1.7303173480727925,
+    "n_train": 2186,
+    "n_test": 486
+   }
+  },
+  "features": [
+   "c_exact",
+   "c_align (V0 frozen)"
+  ],
+  "model": "sklearn LogisticRegression(C=1e6, intercept, lbfgs)",
+  "n_Z": 2672
+ }
+}
