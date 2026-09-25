@@ -1,0 +1,104 @@
+{
+ "R_SOLVER_CONS": {
+  "n": 373,
+  "n_err": 155,
+  "n_sent": 140,
+  "auroc_judge_cheap_disg": 0.7821692808523232,
+  "auroc_c_score": 0.8494672980171648,
+  "auroc_p_fused_H": 0.7696211897010949,
+  "auroc_bow_uncarried": 0.7324060372891388,
+  "auroc_l3_score": 0.7608168097070139,
+  "auroc_PT_groupkfold": 0.8682154483575022,
+  "delta_PT_minus_judge": 0.08604616750517902,
+  "delta_PT_minus_judge_ci": [
+   0.01174624931382464,
+   0.1628776670127586
+  ],
+  "delta_fusedH_minus_judge": -0.012548091151228236,
+  "delta_fusedH_minus_judge_ci": [
+   -0.10589503225742611,
+   0.07954008115391033
+  ],
+  "recall_FA010_judge_cheap_orig": 0.5141935483870967,
+  "recall_FA010_judge_cheap_disg": 0.38175115207373267,
+  "placebo_auroc_PT": 0.4471589227582125,
+  "placebo_auroc_judge": 0.5020124297129328,
+  "placebo_delta_PT_minus_judge_ci": [
+   -0.1562484801798259,
+   0.043757286069874
+  ],
+  "placebo_passes_(CI_includes_0)": true,
+  "eval_py": {
+   "n": 373.0,
+   "auroc_judge": 0.7821692808523231,
+   "auroc_c_score": 0.8494672980171649,
+   "auroc_fused_H": 0.769621189701095,
+   "auroc_PT_Dfolds": 0.8709233501035809,
+   "delta_PT": 0.08875406925125784,
+   "delta_PT_ci": [
+    0.010395535600140969,
+    0.1653069140910843
+   ],
+   "delta_fusedH_ci": [
+    -0.11731511736994675,
+    0.07928385695959055
+   ]
+  }
+ },
+ "R_ADJ_AB": {
+  "n": 298,
+  "n_err": 165,
+  "n_sent": 108,
+  "auroc_judge_cheap_disg": 0.7724310776942356,
+  "auroc_c_score": 0.7786511733880155,
+  "auroc_p_fused_H": 0.8681704260651629,
+  "auroc_bow_uncarried": 0.8151287309182046,
+  "auroc_l3_score": 0.7178628389154705,
+  "auroc_PT_groupkfold": 0.8750968329915698,
+  "delta_PT_minus_judge": 0.10266575529733424,
+  "delta_PT_minus_judge_ci": [
+   0.03792974698189639,
+   0.17620254875771757
+  ],
+  "delta_fusedH_minus_judge": 0.09573934837092735,
+  "delta_fusedH_minus_judge_ci": [
+   0.024428244217145775,
+   0.17481050093692577
+  ],
+  "recall_FA010_judge_cheap_orig": 0.5530303030303031,
+  "recall_FA010_judge_cheap_disg": 0.35869696969696974,
+  "placebo_auroc_PT": 0.37634996582365005,
+  "placebo_auroc_judge": 0.49965823650034175,
+  "placebo_delta_PT_minus_judge_ci": [
+   -0.20133438397216888,
+   -0.038948100233263
+  ],
+  "placebo_passes_(CI_includes_0)": false,
+  "eval_py": {
+   "n": 298.0,
+   "auroc_judge": 0.7724310776942355,
+   "auroc_c_score": 0.7786511733880155,
+   "auroc_fused_H": 0.8681704260651628,
+   "auroc_PT_Dfolds": 0.8768967874231032,
+   "delta_PT": 0.1044657097288677,
+   "delta_PT_ci": [
+    0.039201018375238116,
+    0.17450283213977025
+   ],
+   "delta_fusedH_ci": [
+    0.01997995837385426,
+    0.17148309879001325
+   ]
+  }
+ },
+ "label_only_shift_solver_to_ADJ_AB": {
+  "n_shared": 161,
+  "n_label_changes": 36,
+  "bow_uncarried": 0.10228677109640305,
+  "bow_uncarried_eval_py": 0.10228677109640305,
+  "c_score": -0.10622519384445783,
+  "c_score_eval_py": -0.10622519384445794,
+  "p_fused_H": 0.08040063007123432,
+  "p_fused_H_eval_py": 0.08040063007123432
+ }
+}
