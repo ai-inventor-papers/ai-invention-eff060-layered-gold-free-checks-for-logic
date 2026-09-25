@@ -13,7 +13,7 @@ from loguru import logger
 
 import steps_core as sc
 
-FIG_SKILL = Path("/ai-inventor/.claude/skills/aii-data-fig-gen/scripts")
+FIG_SKILL = Path(__file__).resolve().parents[4] / "tools/aii-data-fig-gen/scripts"
 
 
 def jsafe(o):

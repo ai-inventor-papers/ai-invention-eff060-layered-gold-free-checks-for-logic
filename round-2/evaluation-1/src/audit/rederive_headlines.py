@@ -52,11 +52,11 @@ def mw_auc(y, s):
 
 
 # ---------------------------------------------------------------- raw load
-A = {r["item_id"]: r for r in rj(GA / "gen_art_experiment_1/results/per_item.jsonl") if r["track"] == "L"}
-labA = {r["item_id"]: r["label"] for r in json.load(open(GA / "gen_art_experiment_1/screen_items.json"))}
-C = {r["item_id"]: r for r in rj(GA / "gen_art_experiment_3/results/analysis_table.jsonl") if r["track"] == "L"}
-D = {r["item_id"]: r for r in rj(GA / "gen_art_experiment_4/results/per_item_scores.jsonl") if r["track"] == "L"}
-E = json.load(open(GA / "gen_art_dataset_1/screen_adjudicated_labels.json"))
+A = {r["item_id"]: r for r in rj(GA / "experiment-1/src/results/per_item.jsonl") if r["track"] == "L"}
+labA = {r["item_id"]: r["label"] for r in json.load(open(GA / "experiment-1/src/screen_items.json"))}
+C = {r["item_id"]: r for r in rj(GA / "experiment-3/src/results/analysis_table.jsonl") if r["track"] == "L"}
+D = {r["item_id"]: r for r in rj(GA / "experiment-4/src/results/per_item_scores.jsonl") if r["track"] == "L"}
+E = json.load(open(GA / "dataset-1/src/screen_adjudicated_labels.json"))
 
 A_M = ["p_fused_H", "bow_uncarried", "l3_score", "n_smells", "role_count"]
 C_M = ["c_score", "c_score_peers6", "medoid_depth", "cluster_entropy", "sc5_cheap"]

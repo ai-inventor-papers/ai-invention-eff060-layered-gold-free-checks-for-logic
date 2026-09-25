@@ -27,7 +27,7 @@ The pipeline reads the iteration-1 artifact `gen_art_dataset_1` (dataset E). Spe
 **Known portability defect.** The code hard-codes the original server path in `src/common.py` line 10:
 
 ```python
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path("../../../round-1/dataset-1/src")
 ```
 
 `E_DIR` is imported by `src/source_pool.py`, `src/perturb.py` and `src/assemble.py`. In addition, `temp/datasets/E_heldout_dataset1_full_data_out.json` is a symlink to the same absolute path.
@@ -129,7 +129,7 @@ Notes on these commands:
 
 - `src/lexicon.py extract` (Haiku) was run first and is closed. It stopped at its $0.4 cap with 57 of 64 jobs done, and 7 jobs were left unextracted (`job_missing: 7` in `work/lexicon_check_log.json`). Its output is `raw/lexicon_extract.jsonl`.
 - `uv run data.py` writes `full_data_out.json` and `adjudicator_check_out.json`.
-- `mini_data_out.json` and `preview_data_out.json` come from the aii-json skill script `aii_json_format_mini_preview.py --input full_data_out.json --format exp_sel_data_out`, with outputs renamed from `*_full_data_out.json`. That script lives in the server-side skill directory `/ai-inventor/.claude/skills/aii-json` and is not in this repository. Schema validation used `aii_json_validate_schema.py --format exp_sel_data_out`.
+- `mini_data_out.json` and `preview_data_out.json` come from the aii-json skill script `aii_json_format_mini_preview.py --input full_data_out.json --format exp_sel_data_out`, with outputs renamed from `*_full_data_out.json`. That script lives in the server-side skill directory `../../../tools/aii-json` and is not in this repository. Schema validation used `aii_json_validate_schema.py --format exp_sel_data_out`.
 
 **Paid phases** (needs `OPENROUTER_API_KEY`; resumable and cached per call; exit code 3 means key limit or cap reached):
 

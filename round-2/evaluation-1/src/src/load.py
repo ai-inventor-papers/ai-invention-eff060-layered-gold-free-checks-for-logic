@@ -17,10 +17,10 @@ from stats_utils import norm
 
 IT1 = Path(__file__).resolve().parents[4] / "round-1"
 GA = IT1 / "."
-EXP_A = GA / "gen_art_experiment_1"
-EXP_C = GA / "gen_art_experiment_3"
-EXP_D = GA / "gen_art_experiment_4"
-DS_E = GA / "gen_art_dataset_1"
+EXP_A = GA / "experiment-1/src"
+EXP_C = GA / "experiment-3/src"
+EXP_D = GA / "experiment-4/src"
+DS_E = GA / "dataset-1/src"
 AUDIT = IT1 / "review_report" / "review_report" / "audit"
 
 INPUT_FILES = [
