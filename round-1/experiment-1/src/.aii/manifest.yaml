@@ -1,0 +1,13 @@
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r pyproject.toml --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu && .venv/bin/python -m spacy download en_core_web_sm"
+  - path: nltk_data/
+    delete: redownloadable
+    source: ".venv/bin/python -c \"import nltk; nltk.download('wordnet', download_dir='nltk_data'); nltk.download('omw-1.4', download_dir='nltk_data')\""
+  - path: src/__pycache__/
+    delete: regenerable
+    source: "Python bytecode cache; recreated automatically by running .venv/bin/python method.py"
+  - path: __pycache__/
+    delete: regenerable
+    source: "Python bytecode cache; recreated automatically by running .venv/bin/python method.py"
