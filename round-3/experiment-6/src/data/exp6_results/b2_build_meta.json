@@ -1,0 +1,21 @@
+{
+ "n_formulas": 7702,
+ "status": {
+  "ok": 7425,
+  "z3_fail": 277
+ },
+ "mean_worlds_ok": 5.666531986531987,
+ "share_ge4_worlds": 0.906258114775383,
+ "phi_true_share": 0.5322526976279888,
+ "ops": {
+  "CONN": 6910,
+  "RESTR": 3677,
+  "NEG": 8142,
+  "DROP": 6953,
+  "REV": 5473,
+  "QUANT": 6757,
+  "SWAP": 4161,
+  "SCOPE": 1
+ },
+ "seconds": 95.77866172790527
+}

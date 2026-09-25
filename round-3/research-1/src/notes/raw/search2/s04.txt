@@ -1,0 +1,44 @@
+QUERY: cross-model consensus first-order logic translation faithfulness 2026 | MODE: scholarly | 2026-09-24T02:59:31Z
+Search: cross-model consensus first-order logic translation faithfulness 2026  [scholarly via openalex]
+Found: 10 results
+
+1. Western Translation Theory from Herodotus to Nietzsche
+   https://doi.org/10.4324/9781003528753
+   2014 · cited by 140...
+
+2. Three-dimensional (3D) liver cell models - a tool for bridging the gap between animal studies and clinical trials when screening liver accumulation and toxicity of nanobiomaterials
+   https://doi.org/10.1007/s13346-022-01147-0
+   Drug Delivery and Translational Research · 2022 · cited by 60...
+
+3. Abstractive text summarization: State of the art, challenges, and improvements
+   https://doi.org/10.1016/j.neucom.2024.128255
+   Neurocomputing · 2024 · cited by 72...
+
+4. Charting Translation Reception
+   https://doi.org/10.1017/9781009569378
+   Cambridge University Press eBooks · 2025 · cited by 5...
+
+5. Local Interpretations for Explainable Natural Language Processing: A Survey
+   https://doi.org/10.1145/3649450
+   ACM Computing Surveys · 2024 · cited by 35...
+
+6. Large Language Models Hallucination: A Comprehensive Survey
+   https://doi.org/10.48550/arxiv.2510.06265
+   arXiv (Cornell University) · 2025 · cited by 9...
+
+7. Explainable AI in healthcare: a systematic review of XAI use cases in imaging, diagnostics, and rehabilitation
+   https://doi.org/10.3389/frai.2026.1749527
+   Frontiers in Artificial Intelligence · 2026 · cited by 18...
+
+8. Discovering causal relations and equations from data
+   https://doi.org/10.1016/j.physrep.2023.10.005
+   Physics Reports · 2023 · cited by 128...
+
+9. Judging facts, judging norms: Training machine learning models to judge humans requires a modified approach to labeling data
+   https://doi.org/10.1126/sciadv.abq0701
+   Science Advances · 2023 · cited by 15...
+
+10. A Systematic Review of Intelligent Agents, Language Models, and Recurrent Neural Networks in Industrial Maintenance: Driving Value Creation for the Mining Sector
+   https://doi.org/10.1155/int/9953223
+   International Journal of Intelligent Systems · 2025 · cited by 11...
+

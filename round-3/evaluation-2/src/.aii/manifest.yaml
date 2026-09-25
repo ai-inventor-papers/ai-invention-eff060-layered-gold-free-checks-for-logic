@@ -1,0 +1,26 @@
+entries:
+- path: .venv/
+  delete: regenerable
+  source: uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python
+    -r pyproject.toml
+- path: __pycache__/
+  delete: regenerable
+  source: uv run eval.py --stage all --skip-matrix
+- path: src/__pycache__/
+  delete: regenerable
+  source: uv run eval.py --stage all --skip-matrix
+- path: tests/__pycache__/
+  delete: regenerable
+  source: uv run pytest -q tests
+- path: vendor_exp5/__pycache__/
+  delete: regenerable
+  source: uv run eval.py --stage all --skip-matrix
+- path: vendor_exp5/vendor_c/__pycache__/
+  delete: regenerable
+  source: uv run eval.py --stage all --skip-matrix
+- path: vendor_exp5/vendor_e/__pycache__/
+  delete: regenerable
+  source: uv run eval.py --stage all --skip-matrix
+- path: .pytest_cache/
+  delete: regenerable
+  source: uv run pytest -q tests

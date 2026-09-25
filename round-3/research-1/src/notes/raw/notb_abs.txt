@@ -1,0 +1,76 @@
+URL: https://arxiv.org/abs/2608.21962 | FETCH | 2026-09-24T01:35:31Z
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://arxiv.org/abs/2608.21962
+Type: HTML
+Length: 7835 chars (truncated)
+
+--- Content ---
+
+Skip to main content [](https://arxiv.org/IgnoreMe) [ ](https://arxiv.org/) [ Search ](https://arxiv.org/search) [Submit](https://arxiv.org/user/create) [Donate](https://info.arxiv.org/about/donate.html) [Log in](https://arxiv.org/login)
+
+Search arXiv
+
+Press Enter to search * [Advanced search](https://arxiv.org/search/advanced)
+
+# Computer Science > Hardware Architecture
+
+**arXiv:2608.21962** (cs) 
+
+[Submitted on 22 Aug 2026]
+
+# Title:NoTB: Oracle-Free Triage of LLM-Generated RTL via Cross-Model Formal Consensus
+
+Authors:[Elisavet Lydia Alvanaki](https://arxiv.org/search/cs?searchtype=author&query=Alvanaki,+E+L), [Je Yang](https://arxiv.org/search/cs?searchtype=author&query=Yang,+J), [Biruk Seyoum](https://arxiv.org/search/cs?searchtype=author&query=Seyoum,+B), [Luca P. Carloni](https://arxiv.org/search/cs?searchtype=author&query=Carloni,+L+P)
+
+View a PDF of the paper titled NoTB: Oracle-Free Triage of LLM-Generated RTL via Cross-Model Formal Consensus, by Elisavet Lydia Alvanaki and 3 other authors
+
+[View PDF](/pdf/2608.21962) [HTML (experimental)](https://arxiv.org/html/2608.21962v1)
+
+> Abstract:Large language models (LLMs) are increasingly used to generate register-transfer-level (RTL) designs from natural-language specifications. However, assessing functional correctness at early stages remains a fundamental challenge. Existing oracle-free approaches rely either on simulation-based agreement, which depends on LLM-generated testbenches that can fail or vary across models, or on LLM-as-a-judge heuristics, which produce inconsistent predictions. We introduce NoTB, an oracle-free triage framework that infers correctness from cross-model formal consensus. NoTB generates RTL implementations from multiple independently trained LLM families and applies Sequential Equivalence Checking (SEC) to identify designs that are provably equivalent. We show that the diversity of model families within an SEC-equivalent cluster induces a calibrated correctness signal, enabling risk-coverage tradeoffs without requiring testbenches. On 78 CVDP RTL-generation tasks, four-family formal consensus achieves 94.7% precision at 27% coverage; three-family consensus achieves 87% precision at 33% coverage. These operating points give designers a tunable accept/defer rule before a trusted testbench or golden RTL is available. Overall, NoTB demonstrates that formal cross-model agreement provides a reliable basis for high-confidence triage without model-dependent oracles 
+
+Comments: | MLCAD 2026  
+---|---  
+Subjects: |  Hardware Architecture (cs.AR); Artificial Intelligence (cs.AI)  
+Cite as: | [arXiv:2608.21962](https://arxiv.org/abs/2608.21962) [cs.AR]  
+  | (or  [arXiv:2608.21962v1](https://arxiv.org/abs/2608.21962v1) [cs.AR] for this version)   
+  |  <https://doi.org/10.48550/arXiv.2608.21962> Focus to learn more arXiv-issued DOI via DataCite  
+  
+## Submission history
+
+From: Elisavet Lydia Alvanaki [[view email](/show-email/8c682194/2608.21962)]   
+**[v1]** Sat, 22 Aug 2026 13:59:51 UTC (337 KB)  
+
+
+Full-text links:
+
+## Access Paper:
+
+View a PDF of the paper titled NoTB: Oracle-Free Triage of LLM-Generated RTL via Cross-Model Formal Consensus, by Elisavet Lydia Alvanaki and 3 other authors
+
+  * [View PDF](/pdf/2608.21962)
+  * [HTML (experimental)](https://arxiv.org/html/2608.21962v1)
+  * [TeX Source ](/src/2608.21962)
+
+
+
+[ view license ](http://creativecommons.org/licenses/by/4.0/ "Rights to this article")
+
+### Current browse context:
+
+cs.AR
+
+[< prev](/prevnext?id=2608.21962&function=prev&context=cs.AR "previous in cs.AR \(accesskey p\)")   |   [next >](/prevnext?id=2608.21962&function=next&context=cs.AR "next in cs.AR \(accesskey n\)")   
+
+
+[new](/list/cs.AR/new) |  [recent](/list/cs.AR/recent) | [2026-08](/list/cs.AR/2026-08)
+
+Change to browse by: 
+
+[cs](/abs/2608.21962?context=cs)  
+[cs.AI](/abs/2608.21962?context=cs.AI)  
+
+
+### References & Citations
+
+  * [NASA ADS](https://ui.adsabs.harvard.edu/abs/arXiv:2608.21962)
+  * [Google Scholar](https://sch

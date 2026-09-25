@@ -1,0 +1,41 @@
+{
+ "E_strat_delta_hyb_minus_align": {
+  "rederived": -0.003954583013244362,
+  "reported": -0.003954583013244362,
+  "match_1e-9": true,
+  "n_rederived": 2686,
+  "n_reported": 2686,
+  "same_n": true
+ },
+ "perturb_recall_cells": [
+  {
+   "metric": "c_hyb",
+   "operator": "NEG",
+   "rederived": 0.8425888561229244,
+   "reported": 0.8425888561229244,
+   "match_1e-9": true,
+   "n": 379,
+   "same_n": true
+  },
+  {
+   "metric": "l2_bow",
+   "operator": "MEANING_RENAME",
+   "rederived": 0.9486362408857684,
+   "reported": 0.9486362408857684,
+   "match_1e-9": true,
+   "n": 322,
+   "same_n": true
+  },
+  {
+   "metric": "judge_cheap_disg",
+   "operator": "SWAP",
+   "rederived": 0.24986301369863018,
+   "reported": 0.24986301369863018,
+   "match_1e-9": true,
+   "n": 120,
+   "same_n": true
+  }
+ ],
+ "E_paired_same_n": true,
+ "all_pass": true
+}

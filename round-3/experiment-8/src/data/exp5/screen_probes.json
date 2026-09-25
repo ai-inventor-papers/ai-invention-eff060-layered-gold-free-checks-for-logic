@@ -1,0 +1,2588 @@
+[
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "3afa2e6e67b530a9",
+"fol": "BoughtToEarnProfitFrom(karen, strangerThings, lisa)",
+"detail": "ShareWith->BoughtToEarnProfitFrom"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "1d9939888eb5fe03",
+"fol": "Bird(rock)",
+"detail": "Monkey->Bird"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "60bb26f19ef86947",
+"fol": "¬Measures(reinforcementLearning, stateOfTheArtTextSummarizationModel)",
+"detail": "Train->Measures"
+},
+{
+"probe": "SWAP",
+"base_item_id": "60bb26f19ef86947",
+"fol": "¬Train(stateOfTheArtTextSummarizationModel, reinforcementLearning)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "f8910664e311d576",
+"fol": "∀x ((SustainableMaterials(x) → Human(x)))",
+"detail": "Greek->SustainableMaterials"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f8910664e311d576",
+"fol": "∀x ((Human(x) → Greek(x)))",
+"detail": "Greek<->Human"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "1caa4b859f2dab8f",
+"fol": "ParticularRegion(oliveGarden)",
+"detail": "ManagedBuilding->ParticularRegion"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "f6dfa3ce9148f279",
+"fol": "SetsInWest(platypus)",
+"detail": "Reptile->SetsInWest"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "491f514faffd04f9",
+"fol": "Moved(tom, oliveGarden, fluffy)",
+"detail": "AllowedToMoveInWith->Moved"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "db8584d795d827c1",
+"fol": "¬(∃x ((PlaysFor(x, nautico) ∧ IsSweet(x))))",
+"detail": "Brazilian->IsSweet"
+},
+{
+"probe": "SWAP",
+"base_item_id": "db8584d795d827c1",
+"fol": "¬(∃x ((PlaysFor(nautico, x) ∧ Brazilian(x))))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "0de9ea588ce081f2",
+"fol": "MountainRange(space)",
+"detail": "Suck->MountainRange"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "758736d5bf088757",
+"fol": "∃x ((Cat(x) ∧ ¬Mammal(x)))",
+"detail": "Pet->Cat"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "758736d5bf088757",
+"fol": "∃x ((Mammal(x) ∧ ¬Pet(x)))",
+"detail": "Pet<->Mammal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "2752ab52dc191882",
+"fol": "(GreatShooter(peter) ∧ Taller(peter, michael))",
+"detail": "Man->GreatShooter"
+},
+{
+"probe": "SWAP",
+"base_item_id": "2752ab52dc191882",
+"fol": "(Man(peter) ∧ Taller(michael, peter))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "490770590d383d8c",
+"fol": "∀x (((Book(x) ∧ FlyTo(x, newVesselPress)) → InEnglish(x)))",
+"detail": "PublishedBy->FlyTo"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "490770590d383d8c",
+"fol": "∀x (((InEnglish(x) ∧ PublishedBy(x, newVesselPress)) → Book(x)))",
+"detail": "Book<->InEnglish"
+},
+{
+"probe": "SWAP",
+"base_item_id": "490770590d383d8c",
+"fol": "∀x (((Book(x) ∧ PublishedBy(newVesselPress, x)) → InEnglish(x)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "75c7b940db32154a",
+"fol": "RoseTV(champs)",
+"detail": "SportingEvent->RoseTV"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "fc847fbca0e55c05",
+"fol": "At(mia, spring)",
+"detail": "Favorite->At"
+},
+{
+"probe": "SWAP",
+"base_item_id": "fc847fbca0e55c05",
+"fol": "Favorite(spring, mia)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "36df3a789a221ddc",
+"fol": "∀x ((ConnectionWithCommunity(x) → IndoEuropean(x)))",
+"detail": "Romance->ConnectionWithCommunity"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "36df3a789a221ddc",
+"fol": "∀x ((IndoEuropean(x) → Romance(x)))",
+"detail": "Romance<->IndoEuropean"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8c1e06d59bc435db",
+"fol": "Striker(robertLewandowski)",
+"detail": "SoccerPlayer->Striker"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "a352a92a4ca38109",
+"fol": "Rated(neapolitanChronicles, english)",
+"detail": "InLanguage->Rated"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a352a92a4ca38109",
+"fol": "InLanguage(english, neapolitanChronicles)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c92451326bd575fd",
+"fol": "∀x ((CreatedByFamousArtist(x) → ((NaturalFeature(x) ∧ WaterFlowsOverVerticalDrop(x)) ∧ (FoundInMountainousAreas(x) ∨ FoundAlongRivers(x)))))",
+"detail": "Waterfall->CreatedByFamousArtist"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c92451326bd575fd",
+"fol": "∀x ((WaterFlowsOverVerticalDrop(x) → ((NaturalFeature(x) ∧ Waterfall(x)) ∧ (FoundInMountainousAreas(x) ∨ FoundAlongRivers(x)))))",
+"detail": "Waterfall<->WaterFlowsOverVerticalDrop"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "9ae92cc255a98072",
+"fol": "∀x (((((Supervised(x) ∧ ProperInsulation(x)) ∧ EnergyEfficientWindows(x)) ∧ SolarPanels(x)) → EnergyEfficient(x)))",
+"detail": "Building->Supervised"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "9ae92cc255a98072",
+"fol": "∀x (((((EnergyEfficient(x) ∧ ProperInsulation(x)) ∧ EnergyEfficientWindows(x)) ∧ SolarPanels(x)) → Building(x)))",
+"detail": "Building<->EnergyEfficient"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "a3e211bb9089bc56",
+"fol": "(Skirt(neapolitanChronicles) ∧ In(neapolitanChronicles, english))",
+"detail": "Book->Skirt"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a3e211bb9089bc56",
+"fol": "(Book(neapolitanChronicles) ∧ In(english, neapolitanChronicles))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ec3fb9e1223807ed",
+"fol": "Romance(humans)",
+"detail": "HaveTeeth->Romance"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "213519c2d5381b2e",
+"fol": "(¬(((AmericanNational(yuri) ∧ DomesticAnimal(yuri)) ∧ BasketballPlayer(yuri))) → (DomesticAnimal(yuri) ∧ BasketballPlayer(yuri)))",
+"detail": "Professional->DomesticAnimal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d4154bbf5a473985",
+"fol": "SelectiveBreeding(andrewCollins, badults)",
+"detail": "ScriptEditor->SelectiveBreeding"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d4154bbf5a473985",
+"fol": "ScriptEditor(badults, andrewCollins)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8155085605c062a3",
+"fol": "SuitableForAthleticWear(harry)",
+"detail": "Smarter->SuitableForAthleticWear"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d2cf1c3214a76b9c",
+"fol": "∀x ((((Company(x) ∧ ProducesElectronics(x)) ∧ GlobalPresence(x)) → SingleParent(x)))",
+"detail": "InternationalElectronicsManufacturer->SingleParent"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "d2cf1c3214a76b9c",
+"fol": "∀x ((((InternationalElectronicsManufacturer(x) ∧ ProducesElectronics(x)) ∧ GlobalPresence(x)) → Company(x)))",
+"detail": "Company<->InternationalElectronicsManufacturer"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ab6dfe3e9a2aed58",
+"fol": "Remote(german, spanish)",
+"detail": "Related->Remote"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ab6dfe3e9a2aed58",
+"fol": "Related(spanish, german)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4bded6b62a44c7e8",
+"fol": "Language(taylor, salad)",
+"detail": "RegularlyEat->Language"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4bded6b62a44c7e8",
+"fol": "RegularlyEat(salad, taylor)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "fa084d4b6d67e8de",
+"fol": "(Thunderstorm(harvardWeeklyBookClub) ∧ PrivateCompany(harvardWeeklyBookClub))",
+"detail": "LegalObligation->Thunderstorm"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c758cbc1a988eaa5",
+"fol": "CausesMassiveWaves(mike)",
+"detail": "J1Visa->CausesMassiveWaves"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "43eb0123c5018047",
+"fol": "(Man(colorectalCancer) ∧ (MildFlu(colorectalCancer) ∨ BileDuctCancer(colorectalCancer)))",
+"detail": "Cholangiocarcinoma->Man"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d2d90301bb87736e",
+"fol": "¬LoanedTo(john, largerFamily)",
+"detail": "Have->LoanedTo"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d2d90301bb87736e",
+"fol": "¬Have(largerFamily, john)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "64b9f574ae05dff2",
+"fol": "¬(∃x ((Pet(x) ∧ Mammal(x))))",
+"detail": "Cat->Mammal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b75a7dd8d68f9427",
+"fol": "PartTimeJob(kiki)",
+"detail": "Terricolous->PartTimeJob"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "55d6e25941491dd0",
+"fol": "∀x (∀y (∀z (((((((Beverage(x) ∧ MadeFromFermentedGrains(x)) ∧ SpecificAlcoholContent(y)) ∧ Has(x, y)) ∧ PopularInRegion(x, z)) ∧ ParticularRegion(z)) → (ServedCold(x) ∨ Ale(x))))))",
+"detail": "Beer->ServedCold"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "55d6e25941491dd0",
+"fol": "∀x (∀y (∀z (((((((Ale(x) ∧ MadeFromFermentedGrains(x)) ∧ SpecificAlcoholContent(y)) ∧ Has(x, y)) ∧ PopularInRegion(x, z)) ∧ ParticularRegion(z)) → (Beer(x) ∨ Beverage(x))))))",
+"detail": "Beverage<->Ale"
+},
+{
+"probe": "SWAP",
+"base_item_id": "55d6e25941491dd0",
+"fol": "∀x (∀y (∀z (((((((Beverage(x) ∧ MadeFromFermentedGrains(x)) ∧ SpecificAlcoholContent(y)) ∧ Has(x, y)) ∧ PopularInRegion(z, x)) ∧ ParticularRegion(z)) → (Beer(x) ∨ Ale(x))))))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "0abe4a7c91aafe11",
+"fol": "¬NamedAfter(hamdenPlazaSubway, takeOutService)",
+"detail": "Provide->NamedAfter"
+},
+{
+"probe": "SWAP",
+"base_item_id": "0abe4a7c91aafe11",
+"fol": "¬Provide(takeOutService, hamdenPlazaSubway)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "67bec371eb22b453",
+"fol": "Less(tom, oliveGarden)",
+"detail": "RentApartment->Less"
+},
+{
+"probe": "SWAP",
+"base_item_id": "67bec371eb22b453",
+"fol": "RentApartment(oliveGarden, tom)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "3f66906231206a66",
+"fol": "∀x ((Monkey(x) → Animal(x)))",
+"detail": "Mammal->Animal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "3f66906231206a66",
+"fol": "∀x ((Mammal(x) → Monkey(x)))",
+"detail": "Monkey<->Mammal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d2d5fbe6e49c6524",
+"fol": "∀x (((((ElectronicDevice(x) ∧ IsNovel(x)) ∧ ReceivesRadioSignals(x)) ∧ BatteryPowered(x)) → RadioControlledClock(x)))",
+"detail": "DisplaysTime->IsNovel"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "d2d5fbe6e49c6524",
+"fol": "∀x (((((RadioControlledClock(x) ∧ DisplaysTime(x)) ∧ ReceivesRadioSignals(x)) ∧ BatteryPowered(x)) → ElectronicDevice(x)))",
+"detail": "ElectronicDevice<->RadioControlledClock"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "a8239429f49b654d",
+"fol": "∀x ((SecondLargestChineseCity(x) → Shape(x)))",
+"detail": "Square->SecondLargestChineseCity"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "a8239429f49b654d",
+"fol": "∀x ((Shape(x) → Square(x)))",
+"detail": "Square<->Shape"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "97a37322fa129ce3",
+"fol": "ArtisticExpression(french)",
+"detail": "IndoEuropean->ArtisticExpression"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "787321b3321f78b5",
+"fol": "Footballer(fluminense)",
+"detail": "FootballClub->Footballer"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8460295a81c9d88a",
+"fol": "Loan(beijing, southernChina)",
+"detail": "LocatedIn->Loan"
+},
+{
+"probe": "SWAP",
+"base_item_id": "8460295a81c9d88a",
+"fol": "LocatedIn(southernChina, beijing)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "530d98485cae9302",
+"fol": "Created(palaceOfFlies, italian)",
+"detail": "TranslatedFrom->Created"
+},
+{
+"probe": "SWAP",
+"base_item_id": "530d98485cae9302",
+"fol": "TranslatedFrom(italian, palaceOfFlies)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "fa6b8c96c5addca0",
+"fol": "Author(unitedStates, tokyo)",
+"detail": "WinMostMedals->Author"
+},
+{
+"probe": "SWAP",
+"base_item_id": "fa6b8c96c5addca0",
+"fol": "WinMostMedals(tokyo, unitedStates)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "860e50edf98fb002",
+"fol": "MemberOf(emma, summer)",
+"detail": "Favorite->MemberOf"
+},
+{
+"probe": "SWAP",
+"base_item_id": "860e50edf98fb002",
+"fol": "Favorite(summer, emma)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b2d4d7b54ad27eae",
+"fol": "Left(cocoGauff, rafaelNadal)",
+"detail": "LostTo->Left"
+},
+{
+"probe": "SWAP",
+"base_item_id": "b2d4d7b54ad27eae",
+"fol": "LostTo(rafaelNadal, cocoGauff)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "706a0173e969a947",
+"fol": "∃x (((Visited(juanDeOnate, x) ∧ MountainRange(x)) ∧ Hosted(x, newMexico)))",
+"detail": "In->Hosted"
+},
+{
+"probe": "SWAP",
+"base_item_id": "706a0173e969a947",
+"fol": "∃x (((Visited(x, juanDeOnate) ∧ MountainRange(x)) ∧ In(x, newMexico)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4d7ad45b6143d39a",
+"fol": "Includes(roderickStrong, creedBrothers)",
+"detail": "Leads->Includes"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4d7ad45b6143d39a",
+"fol": "Leads(creedBrothers, roderickStrong)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "eafcd64a9001510e",
+"fol": "∀x (∀y (((American(x) ∧ American(y)) → Related(x, y))))",
+"detail": "LanguageFamily->American"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b77f6c9723bca101",
+"fol": "J1(space)",
+"detail": "Suck->J1"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "a4149b3983ee6177",
+"fol": "∃x ((Owns(joe, x) ∧ Download(x, num34)))",
+"detail": "BeginWith->Download"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a4149b3983ee6177",
+"fol": "∃x ((Owns(x, joe) ∧ BeginWith(x, num34)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "90f8f40a5ae2afd2",
+"fol": "(Coat(strangerThings) ∧ Popular(strangerThings))",
+"detail": "NetflixShow->Coat"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "7bb151ccb7cd045b",
+"fol": "Donated(basque)",
+"detail": "RomanceLanguage->Donated"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b41bb1cce2affbd3",
+"fol": "(MostMedals(descampe, Belgium) ∧ Leaderboard(descampe, duMaurierClassic1992))",
+"detail": "From->MostMedals"
+},
+{
+"probe": "SWAP",
+"base_item_id": "b41bb1cce2affbd3",
+"fol": "(From(descampe, Belgium) ∧ Leaderboard(duMaurierClassic1992, descampe))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "32ac1eb5da746d45",
+"fol": "∃x ((Affection(x) ∧ Positive(x)))",
+"detail": "Love->Positive"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ec1093f19ef98d11",
+"fol": "∀x ((WindInstrument(x) → Evergreen(x)))",
+"detail": "FirTree->WindInstrument"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "ec1093f19ef98d11",
+"fol": "∀x ((Evergreen(x) → FirTree(x)))",
+"detail": "FirTree<->Evergreen"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c733bc6fb34f2927",
+"fol": "∀x ((HardcoverBook(x) → MildFlu(x)))",
+"detail": "PrintedText->MildFlu"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c733bc6fb34f2927",
+"fol": "∀x ((PrintedText(x) → HardcoverBook(x)))",
+"detail": "HardcoverBook<->PrintedText"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "6acf25903f1a3f09",
+"fol": "∀x ((FootballClub(x) → ¬Prove(ailtonSilva, x)))",
+"detail": "PlayFor->Prove"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6acf25903f1a3f09",
+"fol": "∀x ((FootballClub(x) → ¬PlayFor(x, ailtonSilva)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "36f3b2b732129903",
+"fol": "(¬Alien(marvin) → Human(marvin))",
+"detail": "FromMars->Alien"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "034d0878ea48c98e",
+"fol": "ShinesDuringDay(djokovic)",
+"detail": "TaxHaven->ShinesDuringDay"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "fd064a06ab90f520",
+"fol": "∃x ((Pet(x) ∧ ¬Refrigerator(x)))",
+"detail": "Mammal->Refrigerator"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "fd064a06ab90f520",
+"fol": "∃x ((Mammal(x) ∧ ¬Pet(x)))",
+"detail": "Pet<->Mammal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8c57bd995e7c65c4",
+"fol": "(¬Human(marvin) ∧ ¬Mortal(marvin))",
+"detail": "FromMars->Mortal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d4210026d53bb766",
+"fol": "Block(walden, knowledge)",
+"detail": "Contain->Block"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d4210026d53bb766",
+"fol": "Contain(knowledge, walden)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "1abbdfc867e80b7c",
+"fol": "FromEarth(marvin)",
+"detail": "Alien->FromEarth"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "56c526fdef3747b7",
+"fol": "(German(heinrichSchmidt) ∨ Square(heinrichSchmidt))",
+"detail": "Russian->Square"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "f7bdb38578b7dff4",
+"fol": "Mortal(windy)",
+"detail": "GreatShooter->Mortal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ecd3b7182f5acdc2",
+"fol": "¬(∃x ((TeslaModel3(x) ∧ Cat(x))))",
+"detail": "Pet->TeslaModel3"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "9e774b626d7aed11",
+"fol": "SupervisedLearning(french)",
+"detail": "IndoEuropean->SupervisedLearning"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c2d588c01dc16b05",
+"fol": "Member(beijing, southernChina)",
+"detail": "LocatedIn->Member"
+},
+{
+"probe": "SWAP",
+"base_item_id": "c2d588c01dc16b05",
+"fol": "LocatedIn(southernChina, beijing)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "28ed94a83c03574b",
+"fol": "∃x ((ManagedBuilding(x) ∧ Professional(x)))",
+"detail": "Pets->Professional"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d6b80606b2f4054e",
+"fol": "(Managed(ted) → ¬Pet(ted))",
+"detail": "BrownSwissCattle->Managed"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "7877eaeb3486f959",
+"fol": "∀x ((Pet(x) → ¬Inactive(x)))",
+"detail": "Cat->Inactive"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "34c5fbf493dafe5d",
+"fol": "(Man(peter) ∧ Block(peter, michael))",
+"detail": "Taller->Block"
+},
+{
+"probe": "SWAP",
+"base_item_id": "34c5fbf493dafe5d",
+"fol": "(Man(peter) ∧ Taller(michael, peter))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b8082d9ec22d81a2",
+"fol": "∃x ((Affection(x) ∧ TakeOut(x)))",
+"detail": "Love->TakeOut"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ccff0aa5c196bab5",
+"fol": "Deposit(susan, lgaAirport)",
+"detail": "FlyFrom->Deposit"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ccff0aa5c196bab5",
+"fol": "FlyFrom(lgaAirport, susan)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "eef9c4e3f92ffdd9",
+"fol": "WorkLab(ted)",
+"detail": "Pet->WorkLab"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "7b7fc4b7ab84b69e",
+"fol": "∀x ((Mammal(x) → ¬LoanedTo(ailton, x)))",
+"detail": "FootballClub->Mammal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "7b7fc4b7ab84b69e",
+"fol": "∀x ((FootballClub(x) → ¬LoanedTo(x, ailton)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "e79f0395b5c2d5f3",
+"fol": "Donate(mia, spring)",
+"detail": "Favorite->Donate"
+},
+{
+"probe": "SWAP",
+"base_item_id": "e79f0395b5c2d5f3",
+"fol": "Favorite(spring, mia)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "6e1f65eb411286e4",
+"fol": "¬GouldsWildTurkey(djokovic)",
+"detail": "LiveInTaxHaven->GouldsWildTurkey"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ee1ed6283f2038ca",
+"fol": "Play(legendOfZelda, million)",
+"detail": "Sell->Play"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ee1ed6283f2038ca",
+"fol": "Sell(million, legendOfZelda)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "47d9e31c27e72014",
+"fol": "(∀x ((Complains(x) → Cold(x))) ∧ ∀y ((Summer(y) → Hot(y))))",
+"detail": "Winter->Complains"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "47d9e31c27e72014",
+"fol": "(∀x ((Winter(x) → Cold(x))) ∧ ∀y ((Hot(y) → Summer(y))))",
+"detail": "Summer<->Hot"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "22ffc02a644cff54",
+"fol": "∀x (((((Coat(x) ∧ Versatile(x)) ∧ Hood(x)) ∧ Insulated(x)) → AppropriateForColdWeather(x)))",
+"detail": "Wool->Versatile"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "22ffc02a644cff54",
+"fol": "∀x (((((Coat(x) ∧ AppropriateForColdWeather(x)) ∧ Hood(x)) ∧ Insulated(x)) → Wool(x)))",
+"detail": "Wool<->AppropriateForColdWeather"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "103a87b11fc6aab3",
+"fol": "Perishable(blackMirror)",
+"detail": "NetflixShow->Perishable"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ba8aea108a073299",
+"fol": "¬(((AmericanNational(yuri) ∧ Hood(yuri)) ∧ BasketballPlayer(yuri)))",
+"detail": "Professional->Hood"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4092293e1a92d714",
+"fol": "∀x ((Smartphone(x) → ((ConnectsToInternet(x) ∧ EmitsLight(x)) ∧ SendsMessages(x))))",
+"detail": "MakesCalls->EmitsLight"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4092293e1a92d714",
+"fol": "∀x ((MakesCalls(x) → ((ConnectsToInternet(x) ∧ Smartphone(x)) ∧ SendsMessages(x))))",
+"detail": "Smartphone<->MakesCalls"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ffd07382e35434b8",
+"fol": "∃x ((Love(x) ∧ LightEmittingDevice(x)))",
+"detail": "Positive->LightEmittingDevice"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8ff54d55241225ba",
+"fol": "∀x ((Orchestra(x) → Mammal(x)))",
+"detail": "Human->Orchestra"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8ff54d55241225ba",
+"fol": "∀x ((Mammal(x) → Human(x)))",
+"detail": "Human<->Mammal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "da52902f4b29e4c8",
+"fol": "IndoEuropeanLanguage(symphonyNo9)",
+"detail": "MusicPiece->IndoEuropeanLanguage"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "3539f56b412b1d22",
+"fol": "CanTravelOnLand(vacuum)",
+"detail": "Suck->CanTravelOnLand"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c6a8e396c1f17a43",
+"fol": "∀x ((((Device(x) ∧ UsesElectricity(x)) ∧ EmitsCO2(x)) → LightEmittingDevice(x)))",
+"detail": "EmitsLight->EmitsCO2"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c6a8e396c1f17a43",
+"fol": "∀x ((((Device(x) ∧ LightEmittingDevice(x)) ∧ EmitsLight(x)) → UsesElectricity(x)))",
+"detail": "UsesElectricity<->LightEmittingDevice"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "f297b3a3f1d69a79",
+"fol": "∃x ((Owns(tom, x) ∧ Portray(x, istanbul)))",
+"detail": "VehicleRegistrationPlateIn->Portray"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f297b3a3f1d69a79",
+"fol": "∃x ((Owns(tom, x) ∧ VehicleRegistrationPlateIn(istanbul, x)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "294082bc28c0b6df",
+"fol": "(∀x ((Farmer(x) → Duster(x))) ∧ ∀y ((Miner(y) → ExtractsMinerals(y))))",
+"detail": "GrowsCrops->Duster"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "294082bc28c0b6df",
+"fol": "(∀x ((Farmer(x) → GrowsCrops(x))) ∧ ∀y ((ExtractsMinerals(y) → Miner(y))))",
+"detail": "Miner<->ExtractsMinerals"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "601fbf4fb9f3b79c",
+"fol": "¬PublishedBy(barutinCove, antarctica)",
+"detail": "LocatedIn->PublishedBy"
+},
+{
+"probe": "SWAP",
+"base_item_id": "601fbf4fb9f3b79c",
+"fol": "¬LocatedIn(antarctica, barutinCove)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8e79aa322a2d0a6c",
+"fol": "InEnglish(oliveGarden)",
+"detail": "ManagedBuilding->InEnglish"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "358cfec1bda615e1",
+"fol": "∃x (((Visit(juan, x) ∧ MountainRange(x)) ∧ LocatedIn(x, newMexico)))",
+"detail": "In->LocatedIn"
+},
+{
+"probe": "SWAP",
+"base_item_id": "358cfec1bda615e1",
+"fol": "∃x (((Visit(x, juan) ∧ MountainRange(x)) ∧ In(x, newMexico)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "04183834fea9e216",
+"fol": "BakedSweet(vampire)",
+"detail": "Suck->BakedSweet"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "3201b7d188b3d41a",
+"fol": "∀x ((SportsEvent(x) → (IndoorEvent(x) ⊕ PerformsInJazz(x))))",
+"detail": "OutdoorEvent->PerformsInJazz"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "3201b7d188b3d41a",
+"fol": "∀x ((OutdoorEvent(x) → (IndoorEvent(x) ⊕ SportsEvent(x))))",
+"detail": "SportsEvent<->OutdoorEvent"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c0110e36051da3df",
+"fol": "¬StrongSenseOfBelonging(djokovic)",
+"detail": "LiveInTaxHaven->StrongSenseOfBelonging"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "54cd1688a59d90bf",
+"fol": "∀x ((YellowApple(x) → ∃y ((Write(x, y) ∧ MusicPiece(y)))))",
+"detail": "Composer->YellowApple"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "54cd1688a59d90bf",
+"fol": "∀x ((MusicPiece(x) → ∃y ((Write(x, y) ∧ Composer(y)))))",
+"detail": "Composer<->MusicPiece"
+},
+{
+"probe": "SWAP",
+"base_item_id": "54cd1688a59d90bf",
+"fol": "∀x ((Composer(x) → ∃y ((Write(y, x) ∧ MusicPiece(y)))))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "1fa8b37d68ab4488",
+"fol": "∀x (((CanCompose(x) ∧ ¬Begin34(x)) → ¬FromIstanbul(x)))",
+"detail": "Plate->CanCompose"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "1fa8b37d68ab4488",
+"fol": "∀x (((Begin34(x) ∧ ¬Plate(x)) → ¬FromIstanbul(x)))",
+"detail": "Plate<->Begin34"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "90d70d6ec0e38d29",
+"fol": "¬UsedForEntertainment(beethoven)",
+"detail": "Conductor->UsedForEntertainment"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4490a179234c5828",
+"fol": "Own(james, summer)",
+"detail": "Favorite->Own"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4490a179234c5828",
+"fol": "Favorite(summer, james)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "6eeb6731dbe7758c",
+"fol": "∀x ((Duster(x) → Suck(x)))",
+"detail": "Vacuum->Duster"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "6eeb6731dbe7758c",
+"fol": "∀x ((Suck(x) → Vacuum(x)))",
+"detail": "Vacuum<->Suck"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8511c593026c040d",
+"fol": "∀x (((((MusicType(x) ∧ OriginatedInAfricanAmericanCommunities(x)) ∧ FeaturesImprovisation(x)) ∧ UsesSyncopation(x)) → Romance(x)))",
+"detail": "Jazz->Romance"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8511c593026c040d",
+"fol": "∀x (((((MusicType(x) ∧ Jazz(x)) ∧ FeaturesImprovisation(x)) ∧ UsesSyncopation(x)) → OriginatedInAfricanAmericanCommunities(x)))",
+"detail": "OriginatedInAfricanAmericanCommunities<->Jazz"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "6907323ad380ed24",
+"fol": "(NetflixShow(strangerThings) ∧ Factory(strangerThings))",
+"detail": "Popular->Factory"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ac9d5cf382bbd89f",
+"fol": "Symptom(james, company)",
+"detail": "Lunch->Symptom"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ac9d5cf382bbd89f",
+"fol": "Lunch(company, james)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "5b8fc0ee2b9251bd",
+"fol": "∀x ((Composer(x) → ∃y ((MusicPiece(y) ∧ Have(x, y)))))",
+"detail": "Write->Have"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "5b8fc0ee2b9251bd",
+"fol": "∀x ((MusicPiece(x) → ∃y ((Composer(y) ∧ Write(x, y)))))",
+"detail": "Composer<->MusicPiece"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5b8fc0ee2b9251bd",
+"fol": "∀x ((Composer(x) → ∃y ((MusicPiece(y) ∧ Write(y, x)))))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "72b0aff0b093dfad",
+"fol": "Category(cocoGauff, majorTennis)",
+"detail": "MostActivePlayerIn->Category"
+},
+{
+"probe": "SWAP",
+"base_item_id": "72b0aff0b093dfad",
+"fol": "MostActivePlayerIn(majorTennis, cocoGauff)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8a9234b7e5b1e400",
+"fol": "(WorkingTitle(stateOfTheArtTextSummarizationModel, machineLearningAlgorithm) ∧ MachineLearningAlgorithm(machineLearningAlgorithm))",
+"detail": "Train->WorkingTitle"
+},
+{
+"probe": "SWAP",
+"base_item_id": "8a9234b7e5b1e400",
+"fol": "(Train(machineLearningAlgorithm, stateOfTheArtTextSummarizationModel) ∧ MachineLearningAlgorithm(machineLearningAlgorithm))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "2fd4864879074301",
+"fol": "∀x ((Building(x) → (TaxHaven(x) ⊕ HasStairs(x))))",
+"detail": "HasElevator->TaxHaven"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "2fd4864879074301",
+"fol": "∀x ((HasStairs(x) → (HasElevator(x) ⊕ Building(x))))",
+"detail": "Building<->HasStairs"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "5e7bd96e3b1e1628",
+"fol": "PartOf(tom, oliveGarden)",
+"detail": "RentApartmentIn->PartOf"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5e7bd96e3b1e1628",
+"fol": "RentApartmentIn(oliveGarden, tom)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "7487b085489adf3d",
+"fol": "∀x ((Owner(x, machineLearning) → ((Owner(x, supervisedLearning) ∨ Owner(x, unsupervisedLearning)) ∨ Owner(x, reinforcementLearning))))",
+"detail": "Category->Owner"
+},
+{
+"probe": "SWAP",
+"base_item_id": "7487b085489adf3d",
+"fol": "∀x ((Category(x, machineLearning) → ((Category(supervisedLearning, x) ∨ Category(x, unsupervisedLearning)) ∨ Category(x, reinforcementLearning))))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "3d12953df0ccee91",
+"fol": "Premiere(german, spanish)",
+"detail": "Related->Premiere"
+},
+{
+"probe": "SWAP",
+"base_item_id": "3d12953df0ccee91",
+"fol": "Related(spanish, german)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "f5f4840431674a60",
+"fol": "(¬Employee(marvin) → Human(marvin))",
+"detail": "FromMars->Employee"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "6577f0b72391d71e",
+"fol": "LoanedTo(emma, summer)",
+"detail": "Favorite->LoanedTo"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6577f0b72391d71e",
+"fol": "Favorite(summer, emma)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "5ba1be42b04bade5",
+"fol": "∀x ((((Flavorings(x) ∧ HighSalesVolume(x)) ∧ PositiveReviews(x)) → Bestseller(x)))",
+"detail": "Book->Flavorings"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "5ba1be42b04bade5",
+"fol": "∀x ((((Book(x) ∧ Bestseller(x)) ∧ PositiveReviews(x)) → HighSalesVolume(x)))",
+"detail": "HighSalesVolume<->Bestseller"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "7e27123449f6352c",
+"fol": "∃x (WrestlingStable(x))",
+"detail": "Animal->WrestlingStable"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "97e82c86e3486d43",
+"fol": "∀x ((Sun(x) → ((RisesInEast(x) ∧ SetsInWest(x)) ∧ LabeledOrganic(x))))",
+"detail": "ShinesDuringDay->LabeledOrganic"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "97e82c86e3486d43",
+"fol": "∀x ((SetsInWest(x) → ((RisesInEast(x) ∧ Sun(x)) ∧ ShinesDuringDay(x))))",
+"detail": "Sun<->SetsInWest"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4ebf277c718ae010",
+"fol": "Formed(james, summer)",
+"detail": "Favorite->Formed"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4ebf277c718ae010",
+"fol": "Favorite(summer, james)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "236bc11bcb7b5527",
+"fol": "∀x (((Dead(x) ∧ Popular(x)) → BingeWatch(karen, x)))",
+"detail": "NetflixShow->Dead"
+},
+{
+"probe": "SWAP",
+"base_item_id": "236bc11bcb7b5527",
+"fol": "∀x (((NetflixShow(x) ∧ Popular(x)) → BingeWatch(x, karen)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4934a9afe0a7b505",
+"fol": "(ThermalEnergy(missoula) ∧ In(missoula, montana))",
+"detail": "City->ThermalEnergy"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4934a9afe0a7b505",
+"fol": "(City(missoula) ∧ In(montana, missoula))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "32ebeb1ffc6e2b75",
+"fol": "∀x ((EmitsLight(x) → Pet(x)))",
+"detail": "Cat->EmitsLight"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "32ebeb1ffc6e2b75",
+"fol": "∀x ((Pet(x) → Cat(x)))",
+"detail": "Cat<->Pet"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "97487abd47d8e3bf",
+"fol": "Park(harry)",
+"detail": "QueenBee->Park"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8e1742fcf28eaa2b",
+"fol": "(SupervisedLearning(rockie) ∨ Cute(rockie))",
+"detail": "Turtle->SupervisedLearning"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b0c2a9e1807a4607",
+"fol": "¬OfferedBy(james, company)",
+"detail": "Lunch->OfferedBy"
+},
+{
+"probe": "SWAP",
+"base_item_id": "b0c2a9e1807a4607",
+"fol": "¬Lunch(company, james)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "e6ca891cde8b49ef",
+"fol": "¬ShareWith(steinhauer, duMaurierClassic, year1992)",
+"detail": "WinnerOf->ShareWith"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "18e9c2c532163b8e",
+"fol": "Celebrity(djokovic)",
+"detail": "GrandSlamChampion->Celebrity"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "b2402a84e7342458",
+"fol": "Horse(space)",
+"detail": "Vampire->Horse"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "1fc3dce5ba247df9",
+"fol": "EasternWildTurkey(joey)",
+"detail": "WildTurkey->EasternWildTurkey"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d6064472e1a22ed3",
+"fol": "∃x ((Affection(x) ∧ NLP(x)))",
+"detail": "Positive->NLP"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "ced459ee3f366260",
+"fol": "∀x ((Event(x) → CreatedByFamousArtist(x)))",
+"detail": "Sad->CreatedByFamousArtist"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "ced459ee3f366260",
+"fol": "∀x ((Sad(x) → Event(x)))",
+"detail": "Event<->Sad"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "acf2aa65a2bd2c9d",
+"fol": "∃x ((AnimalLover(x) ∧ MovedTo(x, newHaven)))",
+"detail": "PrivateIvyLeagueResearchUniversity->AnimalLover"
+},
+{
+"probe": "SWAP",
+"base_item_id": "acf2aa65a2bd2c9d",
+"fol": "∃x ((PrivateIvyLeagueResearchUniversity(x) ∧ MovedTo(newHaven, x)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d3e9288f330bd7bb",
+"fol": "SeparateOpeningsForEachLeg(joey)",
+"detail": "WildTurkey->SeparateOpeningsForEachLeg"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "e313aab26ce9ca59",
+"fol": "EmitsCO2(blackMirror)",
+"detail": "Popular->EmitsCO2"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "9227d5e5aaf8c0a5",
+"fol": "∀x ((Monkey(x) → Squirrel(x)))",
+"detail": "Mammal->Squirrel"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "9227d5e5aaf8c0a5",
+"fol": "∀x ((Mammal(x) → Monkey(x)))",
+"detail": "Monkey<->Mammal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8df90d767d9e76d2",
+"fol": "(American(daniShapiro) ∧ Real(daniShapiro))",
+"detail": "Writer->Real"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c97a361e11ad030c",
+"fol": "Lunch(taylor, gym)",
+"detail": "VisitDaily->Lunch"
+},
+{
+"probe": "SWAP",
+"base_item_id": "c97a361e11ad030c",
+"fol": "VisitDaily(gym, taylor)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "d23868c2a3084885",
+"fol": "∃x (((ScriptEditorFor(andrewCollins, x) ∧ Series(x)) ∧ Fulfill(theSecretDudeSociety, x)))",
+"detail": "WorkingTitle->Fulfill"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d23868c2a3084885",
+"fol": "∃x (((ScriptEditorFor(andrewCollins, x) ∧ Series(x)) ∧ WorkingTitle(x, theSecretDudeSociety)))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "6d36471ff0022d1d",
+"fol": "¬(∃y (((PartTimeJob(y) ∧ Located(james, y)) ∧ OfferedBy(y, university))))",
+"detail": "Have->Located"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6d36471ff0022d1d",
+"fol": "¬(∃y (((PartTimeJob(y) ∧ Have(james, y)) ∧ OfferedBy(university, y))))",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "473dcf58877eb09e",
+"fol": "Vampire(space)",
+"detail": "Vacuum->Vampire"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "1a2acbed29d35a2a",
+"fol": "∀x ((((ArtisticExpression(x) ∧ FourSided(x)) ∧ ¬Dance(x)) → (TheaterPerformance(x) ⊕ CircusAct(x))))",
+"detail": "InvolvesMovement->FourSided"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "1a2acbed29d35a2a",
+"fol": "∀x ((((Dance(x) ∧ InvolvesMovement(x)) ∧ ¬ArtisticExpression(x)) → (TheaterPerformance(x) ⊕ CircusAct(x))))",
+"detail": "ArtisticExpression<->Dance"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "5d1efa7e3581f836",
+"fol": "(City(boston) ∧ Book(boston))",
+"detail": "American->Book"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "18f7bb59636b2428",
+"fol": "(Novel(boston) ∧ City(boston))",
+"detail": "American->Novel"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "4dd09881dc934f2e",
+"fol": "∀x ((Greek(x) → Mortal(x)))",
+"detail": "Human->Mortal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4dd09881dc934f2e",
+"fol": "∀x ((Human(x) → Greek(x)))",
+"detail": "Greek<->Human"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "5e460b658843f6e5",
+"fol": "Famous(djokovic)",
+"detail": "GrandSlamChampion->Famous"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8cf20e469b820a1c",
+"fol": "∀x ((NaturalFeature(x) → Pets(x)))",
+"detail": "Cat->NaturalFeature"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8cf20e469b820a1c",
+"fol": "∀x ((Pets(x) → Cat(x)))",
+"detail": "Cat<->Pets"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "8bcd0ae3f0346736",
+"fol": "∀x ((AnimalLover(x) → Grumpy(x)))",
+"detail": "NiceToAnimals->Grumpy"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8bcd0ae3f0346736",
+"fol": "∀x ((NiceToAnimals(x) → AnimalLover(x)))",
+"detail": "AnimalLover<->NiceToAnimals"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "a912b01fb294f460",
+"fol": "∀x ((SevereCancer(x) → Animal(x)))",
+"detail": "Mammal->SevereCancer"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "a912b01fb294f460",
+"fol": "∀x ((Animal(x) → Mammal(x)))",
+"detail": "Mammal<->Animal"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "00b1b9552be255b7",
+"fol": "Gain(walden, knowledge)",
+"detail": "Contain->Gain"
+},
+{
+"probe": "SWAP",
+"base_item_id": "00b1b9552be255b7",
+"fol": "Contain(knowledge, walden)",
+"detail": "swap"
+},
+{
+"probe": "MEANING_RENAME",
+"base_item_id": "c9c1449850ee80cd",
+"fol": "∀x ((Monkey(x) → Wolf(x)))",
+"detail": "Mammal->Wolf"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c9c1449850ee80cd",
+"fol": "∀x ((Mammal(x) → Monkey(x)))",
+"detail": "Monkey<->Mammal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "554dc3d39f057085",
+"fol": "(Likes(music, george) → WantsToCompose(george))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "16f5e5cbc11b966f",
+"fol": "∀x ((Dead(x) → Auroch(x)))",
+"detail": "Auroch<->Dead"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5e06430ff96ea0d6",
+"fol": "BornIn(boston, dani)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "76edd940dc6c103f",
+"fol": "Premiere(symphonyNo9, viennaMusicSociety)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "95bdcef4949c3107",
+"fol": "∀x ((Animal(x) → Mammal(x)))",
+"detail": "Mammal<->Animal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "03df2c5be04c824b",
+"fol": "∀x ((Bark(x) → (Animal(x) ∧ Dog(x))))",
+"detail": "Dog<->Bark"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "294ae0551a1642ef",
+"fol": "∀x (((Country(x) ∧ (BorderedByOcean(x) ∨ HasCoastline(x))) → BorderedBySea(x)))",
+"detail": "BorderedBySea<->HasCoastline"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "9c5230433eac64e6",
+"fol": "∀x (((CellPhone(x) ∧ NeedsRecharge(x)) → BatteryDepleted(x)))",
+"detail": "BatteryDepleted<->NeedsRecharge"
+},
+{
+"probe": "SWAP",
+"base_item_id": "1d58abe87b637a8b",
+"fol": "∃x (((Visited(x, juanDeOnate) ∧ MountainRange(x)) ∧ In(x, texas)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4e0cf7c0e4ffacb5",
+"fol": "∀x ((Suck(x) → Vampire(x)))",
+"detail": "Vampire<->Suck"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "88dc8fd900794b8c",
+"fol": "∀x (((((Vehicle(x) ∧ DesignedForTravelingOnSnow(x)) ∧ (EquippedWithSkis(x) ∨ EquippedWithTracks(x))) ∧ Snowmobile(x)) → PoweredByEngine(x)))",
+"detail": "PoweredByEngine<->Snowmobile"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "bfd8e34a514bb3e7",
+"fol": "∀x (((Person(x) ∧ Physicist(x)) → StudiesNatureAndPropertiesOfMatterAndEnergy(x)))",
+"detail": "StudiesNatureAndPropertiesOfMatterAndEnergy<->Physicist"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "28336008f96a0dd4",
+"fol": "∀x ((Suck(x) → Vacuum(x)))",
+"detail": "Vacuum<->Suck"
+},
+{
+"probe": "SWAP",
+"base_item_id": "fe5c1b31531b98f7",
+"fol": "(¬From(mars, marvin) → Human(marvin))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "97be19c6cf29af46",
+"fol": "Feud(diamondMine, imperium)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "74dc83e45d6496b5",
+"fol": "∀x (((((Garment(x) ∧ Skirt(x)) ∧ SeparateOpeningsForEachLeg(x)) ∧ MadeOfFabric(x)) → (Pants(x) ∨ WornOnLowerPartOfBody(x))))",
+"detail": "WornOnLowerPartOfBody<->Skirt"
+},
+{
+"probe": "SWAP",
+"base_item_id": "b8da0674d75d288d",
+"fol": "∃x ((FootballClub(x) ∧ LoanedTo(x, ailtonSilva)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8c20ae9e612c830e",
+"fol": "((WillCompose(george) ∧ WantsToCompose(george)) → CanCompose(george))",
+"detail": "CanCompose<->WillCompose"
+},
+{
+"probe": "SWAP",
+"base_item_id": "676f6bba410d19cf",
+"fol": "Lead(diamondMine, roderickStrong)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "700ca7b07191f9c4",
+"fol": "∀x ((Mammal(x) → Cat(x)))",
+"detail": "Cat<->Mammal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4bdd05aabf2a60af",
+"fol": "(Want(george, music) → Like(george, compose))",
+"detail": "Like<->Want"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4bdd05aabf2a60af",
+"fol": "(Like(music, george) → Want(george, compose))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "6692d56e6063ba47",
+"fol": "∀x ((Shape(x) → Square(x)))",
+"detail": "Square<->Shape"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "3f8a5fd01fa4fd49",
+"fol": "∀x ((Evergreen(x) → Fir(x)))",
+"detail": "Fir<->Evergreen"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "2ff8778ea3de02ad",
+"fol": "∀x (((PromotesWellBeingAndReducesRiskOfChronicDiseases(x) ∧ ContainsVarietyOfFruitsVegetablesWholeGrainsLeanProteins(x)) → HealthyDiet(x)))",
+"detail": "HealthyDiet<->PromotesWellBeingAndReducesRiskOfChronicDiseases"
+},
+{
+"probe": "SWAP",
+"base_item_id": "1e2ebca8a4751a6e",
+"fol": "(ResidentialCollege(piersonCollege) ∧ At(yale, piersonCollege))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "802f78580326ce61",
+"fol": "HomeTo(missoula, montana)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "0039a78a4874a842",
+"fol": "∀x (((Product(x) ∧ ((SustainableMaterials(x) ∨ LowCarbonFootprint(x)) ∨ EcoFriendly(x))) → EncouragesConservation(x)))",
+"detail": "EncouragesConservation<->EcoFriendly"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a4178fa0bef1246e",
+"fol": "∀x ((Politician(x) → ¬Member(naziReichstag, x)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "97324e7342c5fb7d",
+"fol": "∀x (∀y (∀z (((((((Tool(x) ∧ LongHandle(y)) ∧ FlatBlade(z)) ∧ Has(x, y)) ∧ Has(x, z)) ∧ Shovel(x)) → LiftsAndMovesLooseMaterial(x)))))",
+"detail": "LiftsAndMovesLooseMaterial<->Shovel"
+},
+{
+"probe": "SWAP",
+"base_item_id": "97324e7342c5fb7d",
+"fol": "∀x (∀y (∀z (((((((Tool(x) ∧ LongHandle(y)) ∧ FlatBlade(z)) ∧ Has(y, x)) ∧ Has(x, z)) ∧ LiftsAndMovesLooseMaterial(x)) → Shovel(x)))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "8d5b87353d8bc5a1",
+"fol": "PlaysFor(fluminense, ailtonSilva)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "6c7beba84409764b",
+"fol": "∀x ((Suck(x) → HouseholdAppliance(x)))",
+"detail": "HouseholdAppliance<->Suck"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c8bdee6e5ca217a6",
+"fol": "∀x ((Swim(x) → Bird(x)))",
+"detail": "Bird<->Swim"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a94b19d655756645",
+"fol": "(Podcast(familySecrets) ∧ CreatedBy(dani, familySecrets))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5a52ab928c1bdc62",
+"fol": "¬HasLunch(company, james)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "df30e8af420bd44a",
+"fol": "∀x ((Human(x) → ¬Get(flu, x)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "a63c012f185f141d",
+"fol": "∀x (((Flies(x) ∧ HasWings(x)) → Bird(x)))",
+"detail": "Bird<->Flies"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "dd7066126e0e3f05",
+"fol": "∀x ((Evergreen(x) → FirTree(x)))",
+"detail": "FirTree<->Evergreen"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c66057d6c02f3f77",
+"fol": "∀x (((EqualAngles(x) ∧ EqualSides(x)) → Triangle(x)))",
+"detail": "Triangle<->EqualAngles"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f7cb96e2966c724c",
+"fol": "∀x ((((AmphibiousVehicle(x) ∧ CanTravelOnLand(x)) ∧ CanTravelOnWater(x)) → Vehicle(x)))",
+"detail": "Vehicle<->AmphibiousVehicle"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "66617157c50b6d98",
+"fol": "∀x ((Suck(x) → Plunger(x)))",
+"detail": "Plunger<->Suck"
+},
+{
+"probe": "SWAP",
+"base_item_id": "8e7a2663be76e028",
+"fol": "PlaysFor(bayernMunchen, robertLewandowski)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "b5ad63dbb307c08b",
+"fol": "¬Download(blackMirror, karen)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "e3c9c310d41d6561",
+"fol": "∀x (∀y ((((((Beverage(x) ∧ Coffee(x)) ∧ ServedHot(x)) ∧ RoastedSeeds(y)) ∧ MadeFrom(x, y)) → ContainsCaffeine(x))))",
+"detail": "ContainsCaffeine<->Coffee"
+},
+{
+"probe": "SWAP",
+"base_item_id": "e3c9c310d41d6561",
+"fol": "∀x (∀y ((((((Beverage(x) ∧ ContainsCaffeine(x)) ∧ ServedHot(x)) ∧ RoastedSeeds(y)) ∧ MadeFrom(y, x)) → Coffee(x))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ce1f5a4d3ada9534",
+"fol": "PlayFor(bayernMunchen, robert)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "357671bb86c7f13d",
+"fol": "(Book(palaceOfFlies) ∧ PublishedBy(newVesselPress, palaceOfFlies))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "d8485ada377553c0",
+"fol": "∃x (((Design(x) ∧ Dreamy(x)) ∧ (Evocative(x) ⊕ ByMax(x))))",
+"detail": "ByMax<->Dreamy"
+},
+{
+"probe": "SWAP",
+"base_item_id": "3b4246025c185ad9",
+"fol": "Favorite(spring, mia)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "9f99a13ecb9ea222",
+"fol": "∀x ((((Student(x) ∧ HonorStudent(x)) ∧ ParticipatesInExtracurricularActivities(x)) → GoodGrades(x)))",
+"detail": "GoodGrades<->HonorStudent"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "100b46d9e56fb714",
+"fol": "∀x ((Equal(x, oliveGarden) → (MoreThan(x, uSD2000) ⊕ SecurityDeposit(x, uSD2000))))",
+"detail": "SecurityDeposit<->Equal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "100b46d9e56fb714",
+"fol": "∀x ((SecurityDeposit(x, oliveGarden) → (MoreThan(x, uSD2000) ⊕ Equal(uSD2000, x))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "4e1c5756a551d9af",
+"fol": "∀x (((NetflixShow(x) ∧ BingeWatch(x, karen)) ↔ Download(karen, x)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "1a536a4769fdd6c7",
+"fol": "LocatedIn(snowIsland, barutinCove)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4e80085adca83afe",
+"fol": "∀x ((SupervisedLearning(x) → ((MachineLearningAlgorithm(x) ∨ UnsupervisedLearning(x)) ∨ ReinforcementLearning(x))))",
+"detail": "MachineLearningAlgorithm<->SupervisedLearning"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4fb01b470323cbfd",
+"fol": "∀x ((UsedForCommunication(x) → ((Smartphone(x) ∧ UsedForEntertainment(x)) ∧ UsedForProductivity(x))))",
+"detail": "Smartphone<->UsedForCommunication"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "0a4cc43fe2e3db84",
+"fol": "∀x ((Shape(x) → FourSided(x)))",
+"detail": "FourSided<->Shape"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f32aaea413c71499",
+"fol": "NamedAfter(sirDigby, surprisingAdventures)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "0778a38c6422ad34",
+"fol": "LocatedIn(northernChina, beijing)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4328c5f705f98642",
+"fol": "∀x ((BileDuctCancer(x) → Cholangiocarcinoma(x)))",
+"detail": "Cholangiocarcinoma<->BileDuctCancer"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a65b07853d7675d9",
+"fol": "Left(bayernMunchen, robertLewandowski)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f25318cccf8aa4f6",
+"fol": "∀x ((Animal(x) → Mammal(x)))",
+"detail": "Mammal<->Animal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "37ecfb09368ccb6d",
+"fol": "(MountainRange(picuris) ∧ (Location(picuris, newMexico) ∨ Location(texas, picuris)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "dcc53700b41cdeb8",
+"fol": "∃x (∃y (((Orchestra(x) ∧ MusicPiece(y)) ∧ Premiered(y, x))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "389da8d5f9b997ef",
+"fol": "∀x (∀y (((Prism(x) ∧ WhiteLight(y)) → DispersesIntoSpectrumOfColors(y, x))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "3db98eef3c8cc81b",
+"fol": "∃y (((PartTimeJob(y) ∧ Have(james, y)) ∧ OfferedBy(university, y)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "30612e7d1c67b86b",
+"fol": "∀x ((Portray(realPeople, x) → RealityTV(x)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6dcc386c681ba8b1",
+"fol": "((Cupcake(driedThaiChili) ∧ Product(driedThaiChili)) ∧ From(bakedByMelissa, driedThaiChili))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f2974c4d5b3fa403",
+"fol": "∃x ((Mammal(x) ∧ ¬Pet(x)))",
+"detail": "Pet<->Mammal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a4ba6ccb3c440f19",
+"fol": "Located(northernChina, beijing)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "160869971de3efa0",
+"fol": "∀x ((SoccerPlayer(x) → Striker(x)))",
+"detail": "Striker<->SoccerPlayer"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5f13d3cb13c9ba3e",
+"fol": "Leads(creedBrothers, roderickStrong)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "ca02caca6441fe8e",
+"fol": "∀x ((Mortal(x) → Human(x)))",
+"detail": "Human<->Mortal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "e937220d24076da3",
+"fol": "∃x ((LastSummerOlympics(x) ∧ MostMedals(x, unitedStates)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "7e7d9f0653f7bf6a",
+"fol": "(Mammal(platypus) ∧ ¬Have(teeth, platypus))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "a275033c6181d8a0",
+"fol": "∀x ((Suck(x) → Plunger(x)))",
+"detail": "Plunger<->Suck"
+},
+{
+"probe": "SWAP",
+"base_item_id": "510240b176fffccf",
+"fol": "ScriptEditor(badults, andrewCollins)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f00490bb7af80a87",
+"fol": "∀x ((Human(x) → Greek(x)))",
+"detail": "Greek<->Human"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f3b3de0c2a1cc94b",
+"fol": "Lead(viennaMusicSociety, beethoven)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8818cda29a641e50",
+"fol": "∀x (((((Fabric(x) ∧ Lightweight(x)) ∧ Breathable(x)) ∧ SuitableForAthleticWear(x)) → AbsorbsMoisture(x)))",
+"detail": "AbsorbsMoisture<->SuitableForAthleticWear"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f71480239bce96cf",
+"fol": "(Wants(george, music) → Likes(george, compose))",
+"detail": "Likes<->Wants"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f71480239bce96cf",
+"fol": "(Likes(music, george) → Wants(george, compose))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "58a5b64e65cb9980",
+"fol": "∀x ((((Bicycle(x) ∧ DesignedForRoadUse(x)) ∧ ¬ThickTires(x)) → MountainBike(x)))",
+"detail": "ThickTires<->DesignedForRoadUse"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "21c4e391306f3021",
+"fol": "∀x ((UsedForBaking(x) → (Oven(x) ∧ UsedForCooking(x))))",
+"detail": "Oven<->UsedForBaking"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f2b61ea5c2459378",
+"fol": "¬((Grumpy(tom) ∧ MeanTo(animal, tom)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c6d6cfd5cf99eed4",
+"fol": "(CreatedUnderLaw(harvardWeeklyBookClub) → (LegalObligation(harvardWeeklyBookClub) ⊕ PrivateCompany(harvardWeeklyBookClub)))",
+"detail": "PrivateCompany<->CreatedUnderLaw"
+},
+{
+"probe": "SWAP",
+"base_item_id": "e6a72e21d335166e",
+"fol": "Favorite(summer, emma)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f58c9758aa854635",
+"fol": "Feud(diamondMine, imperium)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "84115b40240d8db7",
+"fol": "∀x ((Mammal(x) → Human(x)))",
+"detail": "Human<->Mammal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "48ca66bb25528e69",
+"fol": "∀x ((ConservesEnergyByMaintainingStableTemperature(x) → WellInsulatedBuilding(x)))",
+"detail": "WellInsulatedBuilding<->ConservesEnergyByMaintainingStableTemperature"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "b03237e6a5e7e475",
+"fol": "∀x ((Animal(x) → Aurochs(x)))",
+"detail": "Aurochs<->Animal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "e8cc5ccc9bb718b5",
+"fol": "∃y ((ProfessionalWrestlingStable(y) ∧ Leads(y, roderickStrong)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "b48f481d9a8f6930",
+"fol": "∀x ((In(x, hardingPegmatiteMine) → ¬((MountainRange(x) ∧ In(x, newMexico)))))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "bc6e00a30f5321a0",
+"fol": "((Skittish(rockie) ∧ Calm(rockie)) → (Turtle(rockie) ∧ Cute(rockie)))",
+"detail": "Cute<->Skittish"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "d97232a2380ef168",
+"fol": "∀x ((((Vehicle(x) ∧ TwoWheels(x)) ∧ Motorcycle(x)) → HasEngine(x)))",
+"detail": "HasEngine<->Motorcycle"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ab1835b080220e74",
+"fol": "Favorite(summer, james)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "04097a27e3868505",
+"fol": "∀x ((((ContainsAlcohol(x) ∧ ¬Beverage(x)) ∧ TypicallyCarbonated(x)) → SoftDrink(x)))",
+"detail": "Beverage<->ContainsAlcohol"
+},
+{
+"probe": "SWAP",
+"base_item_id": "1b45f3fa4d44e533",
+"fol": "∃x ((Orchestra(x) ∧ ∃y ((MusicPiece(y) ∧ Premiere(y, x)))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f252e227e201fb38",
+"fol": "Favorite(summer, james)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "a60e88810b10780e",
+"fol": "((((University(yale) ∧ Private(yale)) ∧ IvyLeague(yale)) ∧ Research(yale)) ∧ Move(newHaven, yale))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "67e9bb69d05f4b81",
+"fol": "∀x ((CanSwim(x) → ((CanFly(x) ∧ ¬Bird(x)) ∨ (Bird(x) ∧ ¬CanFly(x)))))",
+"detail": "Bird<->CanSwim"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d018f6ac8e79b9ea",
+"fol": "∃x (∃y (((Orchestra(x) ∧ Premiere(y, x)) ∧ MusicPiece(y))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "f212896ba4d5e33d",
+"fol": "PublishedBy(newVesselPress, harryPotter)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "2d194df9fd4335ca",
+"fol": "Related(spanish, german)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "0f71974cc2abafae",
+"fol": "∀x ((IndoEuropean(x) → Romance(x)))",
+"detail": "Romance<->IndoEuropean"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ae94a681066ef476",
+"fol": "(Include(creedBrothers, diamondMine) ∧ Include(diamondMine, ivyNile))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "eafb26f0d253b65e",
+"fol": "Lost(rafael, coco)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "d1dd624ffedba52f",
+"fol": "∀x ((HasElevation(x) → ((FormsFromTectonicForces(x) ∧ Mountain(x)) ∧ CanBeClimbed(x))))",
+"detail": "Mountain<->HasElevation"
+},
+{
+"probe": "SWAP",
+"base_item_id": "1551e57bd9ad5ade",
+"fol": "Lead(diamondMine, roderickStrong)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "bbfba32310d655ac",
+"fol": "∃x ((UnsupervisedLearningAlgorithm(x) ∧ TrainedWith(x, stateOfTheArtTextSummarizationModel)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d1f08f57d31e9a79",
+"fol": "Take(databaseCourse, james)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "9ba429a6f3e2722c",
+"fol": "(Born(year1995, ailtonSilva) ∧ KnownAs(ailtonSilva, ailton))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "3ad06eaa5dba1302",
+"fol": "∀x ((Suck(x) → HouseholdAppliance(x)))",
+"detail": "HouseholdAppliance<->Suck"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6cb9c656c2d84727",
+"fol": "Premiere(symphonyNo9, viennaMusicSociety)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "20f40e74cb241020",
+"fol": "∀x ((Shape(x) → Square(x)))",
+"detail": "Square<->Shape"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "830c1a0f0fd3f514",
+"fol": "∀x ((SoccerPlayer(x) → Striker(x)))",
+"detail": "Striker<->SoccerPlayer"
+},
+{
+"probe": "SWAP",
+"base_item_id": "91932212297c5fae",
+"fol": "¬Download(blackMirror, karen)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "0e3b45374e427d06",
+"fol": "(Product(driedThaiChili) ∧ From(bakedByMelissa, driedThaiChili))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "bc29d29eefd739a7",
+"fol": "∀x ((((Movie(x) ∧ HasRomance(x)) ∧ RomanticComedy(x)) → HasComedy(x)))",
+"detail": "HasComedy<->RomanticComedy"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "85e9cc42a1225824",
+"fol": "∀x (∀y ((((Buoyant(x) ∧ Liquid(y)) ∧ FloatsOnSurface(x, y)) → Object(x))))",
+"detail": "Object<->Buoyant"
+},
+{
+"probe": "SWAP",
+"base_item_id": "85e9cc42a1225824",
+"fol": "∀x (∀y ((((Object(x) ∧ Liquid(y)) ∧ FloatsOnSurface(y, x)) → Buoyant(x))))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "40bf87dba30fa220",
+"fol": "∀x ((SoccerPlayer(x) → Striker(x)))",
+"detail": "Striker<->SoccerPlayer"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "27d9c951419d9553",
+"fol": "∀x ((Mortal(x) → Human(x)))",
+"detail": "Human<->Mortal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6f9f5244c10fdd98",
+"fol": "Train(stateOfTheArtTextSummarizationModel, supervisedLearning)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "6707f3ddb3f4e2aa",
+"fol": "∀x ((Suck(x) → Vampire(x)))",
+"detail": "Vampire<->Suck"
+},
+{
+"probe": "SWAP",
+"base_item_id": "726e826987197af5",
+"fol": "(Includes(creedBrothers, diamondMine) ∧ Includes(diamondMine, ivyNile))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f2a808a56356bffa",
+"fol": "∀x ((Mortal(x) → Human(x)))",
+"detail": "Human<->Mortal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "2b4789169bdcfe6c",
+"fol": "(Wants(george, music) → Likes(george, compose))",
+"detail": "Likes<->Wants"
+},
+{
+"probe": "SWAP",
+"base_item_id": "2b4789169bdcfe6c",
+"fol": "(Likes(george, music) → Wants(compose, george))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5b351d374c72f41e",
+"fol": "(((Private(yale) ∧ IvyLeague(yale)) ∧ Research(yale)) ∧ Move(newHaven, yale))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "4d7b9e4f0261da57",
+"fol": "(¬((Turtle(rockie) ∧ Cute(rockie))) → (Squirrel(rockie) ⊕ Skittish(rockie)))",
+"detail": "Squirrel<->Cute"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "adbd94e47244aa2e",
+"fol": "∀x (((Bestseller(x) ∧ SoldOverOneMillionCopies(x)) → Book(x)))",
+"detail": "Book<->Bestseller"
+},
+{
+"probe": "SWAP",
+"base_item_id": "66914c9b0ee60bea",
+"fol": "Sells(moreThanOneMillionCopies, legendOfZelda)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6a9a43f780a923e2",
+"fol": "HasLunch(company, james)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "30e2a551ad055f4e",
+"fol": "FlyTo(lgaAirport, john)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "8f314a8ebc924b2d",
+"fol": "NeedToEarnMoneyToHelpPayFor(collegeTuition, hannah)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "27f7cadc26060b1d",
+"fol": "∀x ((((((Game(x) ∧ PlayedOnRectangularSurface(x)) ∧ Soccer(x)) ∧ ObjectiveIsScoringPoints(x)) ∧ PuttingBallInOpposingTeamsGoal(x)) → InvolvesTwoTeams(x)))",
+"detail": "InvolvesTwoTeams<->Soccer"
+},
+{
+"probe": "SWAP",
+"base_item_id": "e9bba63220477bce",
+"fol": "Sell(oneMillion, legendOfZelda)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "2c8a719a4173a4fc",
+"fol": "∀x ((GivesBirthToLiveYoung(x) → (Mammal(x) ∧ NursesOffspringWithMilk(x))))",
+"detail": "Mammal<->GivesBirthToLiveYoung"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "0f7339a15615b424",
+"fol": "∀x ((Suck(x) → HouseholdAppliance(x)))",
+"detail": "HouseholdAppliance<->Suck"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "2c6a15dd16103615",
+"fol": "∀x (((((Organization(x) ∧ DistributesProfits(x)) ∧ ¬CharitableMission(x)) ∧ ReliesOnDonations(x)) → NonProfit(x)))",
+"detail": "CharitableMission<->DistributesProfits"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "0093af5f8509f6d0",
+"fol": "∀x (∀y (((GoodGuy(x) ∧ NamedAfter(x, y)) → SuperheroMovie(y))))",
+"detail": "SuperheroMovie<->GoodGuy"
+},
+{
+"probe": "SWAP",
+"base_item_id": "0093af5f8509f6d0",
+"fol": "∀x (∀y (((SuperheroMovie(x) ∧ NamedAfter(y, x)) → GoodGuy(y))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "0ecf43c8059a13c4",
+"fol": "∀x (∀y (∀z (((Taller(y, x) ∧ Taller(y, z)) → Taller(x, z)))))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "9210e8d44550de50",
+"fol": "∀x ((Mammal(x) → Human(x)))",
+"detail": "Human<->Mammal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "10ab3102cfae3e77",
+"fol": "(Suck(duster) ∧ ¬HouseholdAppliance(duster))",
+"detail": "HouseholdAppliance<->Suck"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "be75a91514980aff",
+"fol": "¬(∀x ((BloomsInSpring(x) → Flower(x))))",
+"detail": "Flower<->BloomsInSpring"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ace1835c00a18218",
+"fol": "∀x ((NetflixShow(x) → (Popular(x) → BingeWatch(x, karen))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "547923112aa6ad6d",
+"fol": "((Like(george, music) ∧ Access(program, george)) → Compose(george))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "384b33bf41b14dad",
+"fol": "Feud(diamondMine, imperium)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "c5b79199833ea3b5",
+"fol": "∀x ((Shape(x) → Square(x)))",
+"detail": "Square<->Shape"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "87810a212d282ec4",
+"fol": "(¬((MildFlu(colorectalCancer) ∨ Cholangiocarcinoma(colorectalCancer))) ∨ (MildFlu(colorectalCancer) ∧ BileDuctCancer(colorectalCancer)))",
+"detail": "BileDuctCancer<->MildFlu"
+},
+{
+"probe": "SWAP",
+"base_item_id": "1da7f3d991017f0d",
+"fol": "∃x ((((German(x) ∧ Politician(x)) ∧ Member(x, prussianStateParliament)) ∧ Member(naziReichstag, x)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "5fa6ac377204be4d",
+"fol": "∀x (((((Flower(x) ∧ SingleCotyledon(x)) ∧ ParallelVeinedLeaves(x)) ∧ Monocot(x)) → FlowerPartsInMultiplesOfThree(x)))",
+"detail": "FlowerPartsInMultiplesOfThree<->Monocot"
+},
+{
+"probe": "SWAP",
+"base_item_id": "09fd754e34c889f2",
+"fol": "Sell(moreThanOneMillionCopies, legendOfZelda)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "a30243d7d915fcd1",
+"fol": "∀x (((((Vehicle(x) ∧ Bicycle(x)) ∧ PoweredByHumanEffort(x)) ∧ RiderSitsOnSeatAndPedals(x)) → TwoWheels(x)))",
+"detail": "TwoWheels<->Bicycle"
+},
+{
+"probe": "SWAP",
+"base_item_id": "56164af1f2632f55",
+"fol": "ComplainAboutOften(annoyingSiblings, luke)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "24cdd47855e809cf",
+"fol": "∀x (((Planet(x) ∧ SupportsHumanLife(x)) → AtmosphereContainsOxygen(x)))",
+"detail": "AtmosphereContainsOxygen<->SupportsHumanLife"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "91e03d1a479b017a",
+"fol": "∀x ((Mammal(x) → Cat(x)))",
+"detail": "Cat<->Mammal"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "964cc7f2fb3b161a",
+"fol": "∀x ((IndoEuropean(x) → Romance(x)))",
+"detail": "Romance<->IndoEuropean"
+},
+{
+"probe": "SWAP",
+"base_item_id": "cd17942c55711414",
+"fol": "Favorite(spring, mia)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "cc91f45049c60727",
+"fol": "¬((Product(driedThaiChili) ∧ From(bakedByMelissa, driedThaiChili)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "35d7d08bb31ec675",
+"fol": "CanBlock(windy, peter)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "990e882900c07ca4",
+"fol": "∀x ((Mammal(x) → Cat(x)))",
+"detail": "Cat<->Mammal"
+},
+{
+"probe": "SWAP",
+"base_item_id": "fd9d2f033176e976",
+"fol": "∃x (((MountainRange(x) ∧ In(texas, x)) ∧ Visited(juanDeOnate, x)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "2c6dcc9476cec213",
+"fol": "∀x ((Pets(x) → Cat(x)))",
+"detail": "Cat<->Pets"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "b936981356478a3d",
+"fol": "∀x ((((((GoalBasedSport(x) ∧ PlayedBetweenTwoTeams(x)) ∧ PlayedOnField(x)) ∧ PlayedWithBall(x)) ∧ ObjectiveToScorePointsByGettingBallIntoOpposingTeamsGoal(x)) → Sport(x)))",
+"detail": "Sport<->GoalBasedSport"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "a5837f7bdfa3399d",
+"fol": "∀x ((StringInstrument(x) → ((Instrument(x) ∨ WindInstrument(x)) ∧ ¬((Instrument(x) ∧ WindInstrument(x))))))",
+"detail": "Instrument<->StringInstrument"
+},
+{
+"probe": "SWAP",
+"base_item_id": "ee157a4c23bf91b2",
+"fol": "((Likes(music, george) ∧ HasAccess(george, program)) → Compose(george))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "1c3bb63ff739c8b4",
+"fol": "∀x ((Emerald(x) → (((Diamond(x) ∧ ¬((Ruby(x) ∨ Gemstone(x)))) ∨ (Ruby(x) ∧ ¬((Diamond(x) ∨ Gemstone(x))))) ∨ (Gemstone(x) ∧ ¬((Diamond(x) ∨ Ruby(x)))))))",
+"detail": "Gemstone<->Emerald"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "5e43cc4454d6b27a",
+"fol": "∀x ((Red(x) → (Apple(x) ⊕ Green(x))))",
+"detail": "Apple<->Red"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "1eede8fa2814dce5",
+"fol": "∀x (((((Organism(x) ∧ CanProduceOwnFoodThroughPhotosynthesis(x)) ∧ ConsumesOtherOrganisms(x)) ∧ ¬ProvidesEnergyForOtherOrganisms(x)) → PrimaryProducer(x)))",
+"detail": "ProvidesEnergyForOtherOrganisms<->ConsumesOtherOrganisms"
+},
+{
+"probe": "SWAP",
+"base_item_id": "86188e7736e9d137",
+"fol": "PublishedBy(newVesselPress, harryPotter)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "5f28d44b5b95f83d",
+"fol": "Leads(diamondMine, roderickStrong)",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "6f341cad9f024d6a",
+"fol": "∀x ((MusicPiece(x) → ∃y ((Composer(y) ∧ Write(x, y)))))",
+"detail": "Composer<->MusicPiece"
+},
+{
+"probe": "SWAP",
+"base_item_id": "6f341cad9f024d6a",
+"fol": "∀x ((Composer(x) → ∃y ((MusicPiece(y) ∧ Write(y, x)))))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "fac370180efa2d3d",
+"fol": "PlayFor(fluminense, ailtonSilva)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "d1a452bdb4677cc6",
+"fol": "(¬((Product(driedThaiChili) ∧ From(bakedByMelissa, driedThaiChili))) ∧ ¬BakedSweet(driedThaiChili))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "7f7c3f74974e3dbe",
+"fol": "(¬From(mars, marvin) → Human(marvin))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "17e628eb12f16dc9",
+"fol": "∃x (((Created(fifa22, x) ∧ Japanese(x)) ∧ VideoGameCompany(x)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "368295a254975e2a",
+"fol": "Lead(viennaMusicSociety, beethoven)",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "317d2bd9fd491088",
+"fol": "∀x ((PlayFor(nautico, x) → ¬Brazilian(x)))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "69d9673c17b24615",
+"fol": "∀x ((GainKnowledge(x) → Smarter(x)))",
+"detail": "Smarter<->GainKnowledge"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "69234c963e2f38ce",
+"fol": "∀x ((NamedAfter(x, antarctica) → LocatedIn(barutinCove, x)))",
+"detail": "LocatedIn<->NamedAfter"
+},
+{
+"probe": "SWAP",
+"base_item_id": "69234c963e2f38ce",
+"fol": "∀x ((LocatedIn(x, antarctica) → NamedAfter(x, barutinCove)))",
+"detail": "swap"
+},
+{
+"probe": "SWAP",
+"base_item_id": "3308ee61590b66b1",
+"fol": "((Likes(music, george) ∧ HasAccess(george, program)) → WillCompose(george))",
+"detail": "swap"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "33f81059b5c39d39",
+"fol": "∀x (((Vaccine(x) ∧ ProvidesImmunity(x)) → ((Effective(x) ∧ ReducesRiskOfInfection(x)) ∧ ContributesToHerdImmunity(x))))",
+"detail": "Effective<->ProvidesImmunity"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "f6b09aa44c35830f",
+"fol": "∀x ((StrongSenseOfBelonging(x) → (ParticipatesInCommunityEvents(x) ∧ ConnectionWithCommunity(x))))",
+"detail": "ParticipatesInCommunityEvents<->StrongSenseOfBelonging"
+},
+{
+"probe": "ROLE_PERMUTE",
+"base_item_id": "8954fb4e0e8a9996",
+"fol": "∀x ((BileDuctCancer(x) → Cholangiocarcinoma(x)))",
+"detail": "Cholangiocarcinoma<->BileDuctCancer"
+}
+]

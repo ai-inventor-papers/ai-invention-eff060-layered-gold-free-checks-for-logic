@@ -1,0 +1,44 @@
+QUERY: arxiv 2026 NL-FOL translation evaluation multiple LLMs agreement equivalence z3 without gold | MODE: general | 2026-09-24T02:59:31Z
+Search: arxiv 2026 NL-FOL translation evaluation multiple LLMs agreement equivalence z3 without gold  [general via ddgs]
+Found: 10 results
+
+1. Do LLMs Really Struggle at NL-FOL Translation? Revealing their Strengths via a Novel Benchmarking Strategy
+   https://arxiv.org/html/2511.11816v1
+   November 14, 2025 - Over the past decades, driven by the remarkable efficiency of SAT solvers, SMT solvers have evolved into powerful tools for automated reasoning, and they now play a crucial role in...
+
+2. Do LLMs Really Struggle at NL-FOL Translation? ...
+   https://arxiv.org/pdf/2511.11816
+   Saccomanno, N. 2026. Do LLMs Really Struggle at NL- FOL Translation?...
+
+3. [Paper Note] Do LLMs Really Struggle at NL-FOL Translation? Revealing Their Strengths via a Novel Benchmarking Strategy
+   https://en.papernotes.org/AAAI2026/llm_evaluation/do_llms_really_struggle_at_nl-fol_translation_revealing_their_strengths_via_a_no/
+   May 8, 2026 - Conference: AAAI 2026 arXiv: 2511.11816 Code: dslab-uniud/NL-FOL-LT Area: Natural Language Processing / Formal Logic Reasoning Keywords: NL-FOL translation, autoformalization, first-orde...
+
+4. Multi-MALLS: A Multilingual Benchmark for Natural Language to First-Order Logic Translation | OpenReview
+   https://openreview.net/forum?id=V8cn8M3z1m
+   March 20, 2026 - Translating natural language to ... on English, leaving cross-lingual generalization underexplored. In this study, we present the first comprehensive investigation of cross-lingual ro...
+
+5. [2511.11816] Do LLMs Really Struggle at NL-FOL Translation? Revealing their Strengths via a Novel Benchmarking Strategy
+   https://arxiv.org/abs/2511.11816
+   November 14, 2025 - Abstract page for arXiv paper 2511.11816: Do LLMs Really Struggle at NL-FOL Translation? Revealing their Strengths via a Novel Benchmarking Strategy...
+
+6. Benchmarking LLMs’ Judgments with No Gold Standard
+   https://arxiv.org/html/2411.07127v1
+   November 11, 2024 - We introduce the GEM (Generative Estimator for Mutual Information), an evaluation metric for assessing language generation by Large Language Models (LLMs), particularly in generati...
+
+7. Do LLMs Really Struggle at NL-FOL Translation? Revealing Their Strengths via a Novel Benchmarking Strategy | Proceedings of the AAAI Conference on Artificial Intelligence
+   https://ojs.aaai.org/index.php/AAAI/article/view/40258
+   March 14, 2026 - Brunello, A., Geatti, L., Mignani, M., Montanari, A., & Saccomanno, N. (2026). Do LLMs Really Struggle at NL-FOL Translation? Revealing Their Strengths via a Novel Benchmarking Strate...
+
+8. [2606.02837] Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted Framework to Focus Human Relabeling
+   https://arxiv.org/abs/2606.02837
+   3 weeks ago - Motivated by these findings, we propose an LLM-based framework to support humans in manual reviewing NL-to-FOL datasets. By directing reviewers toward the most error-prone instances, we ...
+
+9. [2608.23961] Evaluating Language Models on Cross-Language Code Functional Equivalence
+   https://arxiv.org/abs/2608.23961
+   1 month ago - GPT-o4-mini also shows substantial run-to-run instability under identical settings, indicating inconsistent rather than absent capability. Conclusions: Current LLMs do not reliably captu...
+
+10. Computation and Language Sep 2026
+   https://arxiv.org/list/cs.CL/current?skip=10&show=2000
+   Title: Same Semantics, Different Outcome: On the Modality Robustness of Multimodal LLMs under Knowledge Conflict...
+

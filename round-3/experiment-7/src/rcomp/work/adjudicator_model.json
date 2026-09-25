@@ -1,0 +1,16 @@
+{
+ "model": "anthropic/claude-sonnet-5",
+ "params": {
+  "temperature": 0.0,
+  "max_tokens": 300,
+  "reasoning": {
+   "enabled": false
+  }
+ },
+ "fallback": "anthropic/claude-sonnet-4.6",
+ "source": "sibling R_ADJ workspace iter_2/gen_art/gen_art_dataset_2: work/pilot_results.json (sonnet5_off, mean $0.00276/call, 0 reasoning tokens) and prereg_radj.json",
+ "system_prompt_file": "adjudication_prompt.txt (verbatim copy of the sibling's V1 = adjudication_prompt.txt)",
+ "system_prompt_sha256": "32bcc0f9a0cd35dbd3ec6a4f7726f8094bca3a7785f2e9f0fbe509df7cbb3011",
+ "sibling_gate_status_at_copy": "VOID (OpenRouter key limit hit mid-gate, work/gate_report_VOID_key_outage.json); sibling dev-half balanced accuracy 0.730 for V1 and V2 (V1 kept by its tie rule) -> gate likely FAIL -> per plan every tier-B R_COMP label is PROVISIONAL unless the sibling gate is later PASSED",
+ "recorded_utc": "2026-09-23T18:20:14Z"
+}

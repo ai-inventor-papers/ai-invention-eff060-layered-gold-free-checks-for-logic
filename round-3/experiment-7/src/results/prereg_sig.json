@@ -1,0 +1,173 @@
+{
+ "title": "R_COMP-SIG pre-registration (run_u75jRHUss0zo iter 3, gen_art_experiment_7)",
+ "frozen_utc": "2026-09-24T01:50:57Z",
+ "frozen_before": "ANY SIG generation call, any label, any metric or judge score",
+ "sentence_set": {
+  "file": "rcomp/work/rcomp_sentences.json",
+  "freeze": {
+   "frozen_utc": "2026-09-24T01:48:38Z",
+   "n": 314,
+   "sha256_sentence_ids": "ba49b4af26005a2b9572c9a406133ecc3589b6b01a486e26a8b677c1a5d9569b",
+   "n_audit_pending": 314,
+   "n_fluency_pending": 0
+  },
+  "n_main": 221,
+  "n_reserve": 93,
+  "note": "final selection after the Haiku fluency phase (75 preselected sentences dropped for fluency < 3); the Sonnet lexicon and reference audits were NOT run (shared-key budget; adjudicator gate failed) -> audit_status PENDING, references verified by construction + z3 unit tests only (plan F6 path)"
+ },
+ "prompt": {
+  "fewshot_v1_sha256": "cdfd524edca37a619668943b9b6e7ef8b3fae91f5e0432e8b270e0bf2f847a9e",
+  "fewshot_v1_sha1": "a1c7ae39f13979a96e6b360f8d3164735c334d80",
+  "sig_prompt_py_sha256": "c4ccc4d724f3358840aa8c5f34d8a827fba263c78c6d07b763220f6f2c94bf3f",
+  "gen_sig_py_sha256": "d27385b2ef9d34a3cf15eae20943e0a5cdd6611a29cccad7853bd95f24d1144a",
+  "label_sig_py_sha256": "390349ae0f20d8f2a288a9e2c96e436dd2de34599f0b8a172168a6a4a1499f3e",
+  "header": "Use only these predicates and constants (do not introduce any others):",
+  "rule": "fewshot_v1 system + 12 exemplars byte-identical; the signature block is appended to the final user message ('Sentence: <text>' + blank line + block); lines sorted alphabetically by predicate name; gloss = lexicon vp_sg_pos of the entry whose pred_final equals the predicate; example atom verbatim from the reference; 'Constants: ...' line when constants exist; atoms taken from weak, strong and (T8) converse readings; no wording about exceptions or readings. Exemplars keep their own vocabulary (disclosed).",
+  "rendered_examples": [
+   {
+    "sentence_id": "001a7f0caf5a",
+    "template_id": "T1",
+    "text": "Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an elected official.",
+    "block": "Use only these predicates and constants (do not introduce any others):\nAt/2: is at Board Game night  e.g. At(x, boardGameNight)\nCan/2: can distinguish the taste of different condiments  e.g. Can(x, distinguishTheTasteOfDifferentCondiments)\nElectedOfficial/1: is an elected official  e.g. ElectedOfficial(x)\nEmilysFriend_2/1: is Emily's friend  e.g. EmilysFriend_2(x)\nLegislator/1: is a legislator  e.g. Legislator(x)\nVisitRegularly/2: visits a coffee shop regularly  e.g. VisitRegularly(x, coffeeShop)\nConstants: boardGameNight, coffeeShop, distinguishTheTasteOfDifferentCondiments"
+   },
+   {
+    "sentence_id": "0044c79e8635",
+    "template_id": "T5",
+    "text": "Each digital interactive artwork that freezes food and that is formed by volcanic activity is made in Maranello, provided that the digital interactive artwork is worn for various occasions or purposes, except if the digital interactive artwork is by Phoenix.",
+    "block": "Use only these predicates and constants (do not introduce any others):\nBy/2: is by Phoenix  e.g. By(phoenix, x)\nDigitalInteractiveArtwork/1: is a digital interactive artwork  e.g. DigitalInteractiveArtwork(x)\nFormedByVolcanicActivity/1: is formed by volcanic activity  e.g. FormedByVolcanicActivity(x)\nFreezeFood/1: freezes food  e.g. FreezeFood(x)\nMadeIn/2: is made in Maranello  e.g. MadeIn(x, maranello)\nWornForVariousOccasionsOrPurposes/1: is worn for various occasions or purposes  e.g. WornForVariousOccasionsOrPurposes(x)\nConstants: maranello, phoenix"
+   },
+   {
+    "sentence_id": "00ca15d23f32",
+    "template_id": "T8",
+    "text": "If a centerback player is bad at chess, is criticized by their boss, and does not publish journals, then the centerback player has a relaxed schedule, but only if the centerback player is a young working professional.",
+    "block": "Use only these predicates and constants (do not introduce any others):\nBadAt/2: is bad at chess  e.g. BadAt(x, chess)\nCriticizedBy/2: is criticized by their boss  e.g. CriticizedBy(x, boss)\nHave/2: has a relaxed schedule  e.g. Have(x, relaxedSchedule)\nProfessionalCenterback/1: is a centerback player  e.g. ProfessionalCenterback(x)\nPublish/2: publishes journals  e.g. Publish(x, journal)\nYoungWorkingProfession/1: is a young working professional  e.g. YoungWorkingProfession(x)\nConstants: boss, chess, journal, relaxedSchedule"
+   }
+  ]
+ },
+ "slots": {
+  "slots": {
+   "G1": "meta-llama/llama-3.1-8b-instruct",
+   "G1b": "meta-llama/llama-3.3-70b-instruct",
+   "G2": "qwen/qwen3-235b-a22b-2507",
+   "G3": "mistralai/mistral-small-3.2-24b-instruct",
+   "G4": "deepseek/deepseek-v3.2 (reasoning disabled)",
+   "G5": "google/gemma-3-27b-it",
+   "G6": "microsoft/phi-4",
+   "G7": "openai/gpt-4.1-mini",
+   "G8": "google/gemini-2.5-flash (reasoning max_tokens 0)",
+   "G9": "cohere/command-r7b-12-2024"
+  },
+  "params": "temperature 0, max_tokens 600 (400 if the pilot projection exceeds the $1.5 cap), extra params as rcomp/src_e/generate.py SLOTS; no re-sampling on parse failure",
+  "prompt_variant": "sig_v1",
+  "output": "rcomp/raw/generations_sig.jsonl"
+ },
+ "label_rule": {
+  "canon_case": "case-insensitive exact symbol mapping onto the signature; unmatched symbol -> OFF_SIGNATURE; arity mismatch -> OFF_SIGNATURE_ARITY",
+  "classes": "per sentence: identical normalised canonical string or plain z3 EQ (ms 3000)",
+  "per_class": "equivalent(class, weak|strong[, converse on T8]) ms 5000, retry 20000 on None; CORRECT if eq weak or strong (matched_reading); READING_CHOICE if T8 and eq converse; ERROR if not eq to weak and strong (and converse on T8); else UNKNOWN; parse failure UNPARSEABLE",
+  "secondary_view_F3": "OFF_SIG_EXACT_RENAME: loose normaliser (lowercase, strip '_' and '-'), reported as label_loose; used as the primary-pool substitute ONLY as a labelled secondary view if OFF_SIGNATURE > 50% of parseable SIG rows",
+  "no_aligner_no_llm": true
+ },
+ "testability_rule": "primary_pool_SIG = few-shot SIG rows labelled CORRECT or ERROR; TESTABLE iff >= 50 CORRECT and >= 50 ERROR rows, each spread over >= 25 distinct sentences; declared in results/testability.json with the sha256 of the sorted (row_key,label) vector BEFORE any score is computed; per-stratum AUROC reported only where >= 30/30 (descriptive). If NOT testable: one top-up on the reserve (gen_sig.py reserve, cap $1.3), re-declare with topup=true; if still short -> SIG_UNTESTABLE, no deltas, no third fix.",
+ "family_map": {
+  "primary": {
+   "G1": "meta",
+   "G1b": "meta",
+   "G2": "qwen",
+   "G3": "mistral",
+   "G4": "deepseek",
+   "G5": "google",
+   "G8": "google",
+   "G6": "microsoft",
+   "G7": "openai",
+   "F": "openai",
+   "G9": "cohere",
+   "GOLD": "gold_as_system_never_peer",
+   "CCG": "ccg2lambda_never_peer"
+  },
+  "note": "exp-5 frozen vendor family map (G1/G1b meta; G5 gemma and G8 gemini both 'google'): meta and google rows get 8 peers, others 9 (when all 10 slots parse). Sensitivity: generate.py family field (google-gemma vs google-gemini separate)."
+ },
+ "metrics": {
+  "c_score_sig": "1 - (# family-disjoint peers z3-equivalent to the candidate after canon_case, ms 5000; None = not equal, counted) / |P_c|; None if |P_c| < 2; off-signature peers count as non-equal (they are in the pool: parseable few-shot rows); off-signature candidates get c_score_sig = None (not in primary pool)",
+  "exp5_frozen": {
+   "variants": [
+    "ALIGN",
+    "NF-anchored"
+   ],
+   "k": 5,
+   "tau": {
+    "NF-pure": null,
+    "NF-anchored": 0.5,
+    "ALIGN": null
+   },
+   "timeout_ms": 2000,
+   "pair_cap_s": 30
+  },
+  "c_score_align": "exp-5 pool_scoring eqmv consensus (iteration-1 aligner)",
+  "c_score_nf": "NF-anchored:c_score_nf",
+  "g_align": "1-ALIGN:g_score oriented",
+  "g_nf": "1-NF-anchored:g_score oriented",
+  "c_score_hyb": "1 - share of P_c where eqmv(r,p) is True OR NF-anchored pair equiv is True",
+  "judge_cheap_disg": "google/gemini-2.5-flash-lite, exp-D RUBRIC_A + USER_JSON_A, max_tokens 150, temperature 0, json_object, on disguise_item(text, fol, seed_text=norm(text)); score = 1 - P(faithful)",
+  "judge_cheap_orig": "same on the original (text, fol)",
+  "judge_frontier_orig/disg": "google/gemini-3.1-pro-preview reasoning effort low, max_tokens 4000, same rubric (exp-D judge_strong config) on a sha1-ordered stratified subsample (target 75 ERROR / 75 CORRECT, >= 5 per template where available); 10-call pilot; if the projection exceeds the frontier allowance, cut to the sha1-first N rows that fit (orig first, then disguised; N >= 50 or report NOT TESTED)",
+  "judge_local_disg": "Qwen3-8B local disguised judge (exp-5 local_judge_E.py), secondary; skipped if wall clock > 4h",
+  "orientation": "every metric higher = more likely ERROR"
+ },
+ "analysis": {
+  "primary": "delta_strat = AUROC_within_template(c_score_sig) - AUROC_within_template(judge_cheap_disg) on primary_pool_SIG rows where both scores exist (n reported); within-template AUROC = concordant/(concordant+discordant) over ERROR x CORRECT pairs sharing template_id, ties 0.5; PASS iff 95% CI lower bound > 0",
+  "bootstrap": {
+   "B": 2000,
+   "seed": 20260924,
+   "resample": "sentence_ids with replacement WITHIN each template; both metrics on the same resample (paired); percentile CI; one-sided p = mean(delta <= 0)"
+  },
+  "secondary": [
+   "pooled delta",
+   "within-sentence delta",
+   "delta vs judge_cheap_orig",
+   "c_score_hyb/c_score_align/c_score_nf vs judge_cheap_disg",
+   "c_score_sig vs c_score_align",
+   "nested adds-signal: 5-fold cross-fitted logistic (folds sha1('RCOMP_folds_v1|'+sentence_id) % 5, L2 C=1, standardized), [judge_cheap_disg] vs [judge_cheap_disg + c_score_sig], OOF AUROC delta, same bootstrap",
+   "frontier (d)-analogue on the subsample (descriptive)",
+   "operating points: consensus flag c >= 0.5, judge flag P(faithful) < 0.5",
+   "per template / clause type (>= 30/30)",
+   "complexity: AUROC by word tercile and nconds bin; GEE binomial exchangeable groups=sentence_id: decision correctness ~ z(words) per metric; stacked metric x z(words) interaction",
+   "mechanism inputs e/d by stratum (descriptive)",
+   "rename invariance (RENAME_NONCE, RENAME_SYN) of each consensus variant on SIG CORRECT rows",
+   "coverage view (UNPARSEABLE = ERROR, max suspicion)",
+   "contamination: judge orig - disg AUROC",
+   "placebos: within-template AUROC of words; 200 within-sentence label permutations of the primary delta (observed must exceed the 95th pct)",
+   "cost"
+  ],
+  "FREE": "sign and CI of c_score_align - judge_cheap_disg and c_score_hyb - judge_cheap_disg under tier A+B and tier-B-only; pre-registered FREE readout = sign"
+ },
+ "caps_usd": {
+  "artifact_hard_stop": 9.5,
+  "S1": 1.0,
+  "S3_sig_generation": 1.5,
+  "S4_free_generation": 1.5,
+  "S7b_judges_sig": 0.7,
+  "S7c_frontier": 1.0,
+  "S8_panel": 1.5,
+  "S8_check": 0.2,
+  "S9_judges_free": 0.6,
+  "sig_topup": 1.3,
+  "shared_key_note": "the shared OpenRouter key showed limit $7.00 / remaining $4.64 at 01:37 UTC for ALL concurrent runs; phases run in priority order S3 SIG gen > S7b SIG judges > S4 FREE gen (few-shot + zero-shot; F gpt-5.1 dropped) > S9 FREE judges > S7c frontier > S8 panel check + panel; each API phase checks the key and stops at a $0.25 floor"
+ },
+ "fallback_triggers": [
+  "F1 key < $2 at a phase start: poll 10 min up to 60 min, then local fallback (R_COMP-LOCAL) / local judge labelled 'API bar untested'",
+  "F2 SIG untestable after one reserve top-up",
+  "F3 OFF_SIGNATURE > 50% of parseable SIG rows -> loose secondary view",
+  "F4 FREE panel coverage too low -> sign-only",
+  "F5 z3 slowness > 90 min -> ms 3000",
+  "F7 frontier unavailable/too expensive -> (d)-analogue NOT TESTED",
+  "F8 disguise failures > 5% -> report + orig-judge robustness row"
+ ],
+ "FREE_addendum": {
+  "adjudicator_swap": "dataset-E panel (P1 claude-haiku-4.5, P3 glm-4.6; R1 kimi-k2-0905 only on P1/P3 disagreement) with E's TEMPLATE/PROMPT_SHA1, disguised with E's Disguiser, replaces the Sonnet-5 adjudicator whose R_ADJ gate failed",
+  "panel_cap_usd": 1.5,
+  "known_label_check": "60 rcomp/work/adjudicator_check_items.json through the same panel, cap $0.2; BA < 0.80 -> every FREE tier-B label provisional",
+  "routing": "prereg_rcomp routing P1 VOCAB_GRAN > P2 COMPOUND/TIMEOUT > P3 flagged ERROR/ONLY_IF_CONVERSE > P4 20% sha1 sample of solver ERROR; sha1(sentence_id) order, sentence-complete; both reference readings shown among the shuffled formulas",
+  "peers": "the 10 few-shot FREE slots; zero-shot rows scored as candidates only; F (gpt-5.1) dropped for budget"
+ }
+}

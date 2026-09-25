@@ -1,0 +1,48 @@
+
+10003:...tly (through linting, symbolic test case generation, and human review) before being reused across many verifications. Regarding translation correctness, most of these systems offer only syntactic error detection and basic consistency checks (e.g., satisfiability of the formalized theory). LINC goes further by sampling multiple translations from a single model and applying majority voting over solver outcomes (Valid, Invalid, Unknown) rather than comparing translations at the logic level. ARc cross-checks per-query translations across diverse models using a notion of symbolic equivalence, with confidence thresholds indicating semantic agreement.
+
+Autoformalization has been studied extensively in mathematics [36, 32, 39, 17]. In contrast to ARc, these efforts typically assume that the background knowledge (the mathematical theory) has been pre-formalized, often by humans, and only the problem to be solved must be formalized by an LLM.
+
+There is also a substantial body of work on dedicated formal languages for capturing policies and legislation, see, e.g., the Programming Languages and the Law (ProLaLa) workshops at POPL. Catala [24] is a notable example: a domain-specific language designed for systemati...
+--
+21932:...res the resulting premise-conclusion pairs semantically using an SMT solver to estimate a confidence score for each pair. Intuitively, the confidence score of a premise-conclusion pair ⟨P,C⟩\langle P,C\rangle is the proportion of the kk translations that non-vacuously entail the implication P⇒CP\Rightarrow C (i.e., entail it without rendering PP contradictory). For example, consider the text from §3 and the policy model in Fig. 2. Redundant translation with three LLMs produces three identical premise-conclusion pairs, thus producing the results in Fig. 3 with confidence score 3/33/3 (1.0). If one LLM instead produced a pair with a different conclusion (isEntryAllowed), AV would return two distinct pairs: the original from Fig. 3 with confidence 2/32/3, and the alternative with confidence 1/31/3.
+
+Algorithm 1 AV Redundant Translation
+
+1: procedure RedundantTranslation(m​s​gmsg, policy, L​L​M​sLLMs) 
+
+2: F←∅F\leftarrow\emptyset; Ts←\textit{Ts}\leftarrow [Translate(m​s​gmsg, policy, l​l​mllm) ∣\mid l​l​m∈LLMsllm\in\textit{LLMs}] 
+
+3: for each ⟨P,C⟩\langle P,C\rangle in every T∈T​sT\in Ts do
+
+4: FF.add(⟨P,C,𝑐𝑓⟩\langle P,C,\mathit{cf}\rangle) where 𝑐𝑓=|{T′∈Ts∣T′⊧(P⇒C)∧T′⊧̸¬P}|/|T​s|\mathit{cf}...
+--
+27534:...s (TP/FP/TN/FN), and error count (Error#). Approaches meeting soundness threshold are highlighted, as well as best and worst values for other metrics. 
+
+Method | S ↑\uparrow | FPR ↓\downarrow | Pr ↑\uparrow | Re ↑\uparrow | F1 ↑\uparrow | Ac ↑\uparrow | TP ↑\uparrow | FP ↓\downarrow | TN ↑\uparrow | FN ↓\downarrow | Error# ↓\downarrow  
+---|---|---|---|---|---|---|---|---|---|---|---  
+ARc (#3-ensemble, threshold=3/3) | 99.4 | 1.8 | 94.4 | 14.9 | 25.8 | 42.4 | 169 | 10 | 548 | 962 | 5  
+ARc (#3-ensemble, threshold=2/3) | 99.2 | 2.5 | 93.2 | 16.9 | 28.6 | 43.5 | 191 | 14 | 544 | 940 | 9  
+ARc (without redundant translation) | 98.4 | 4.8 | 92.2 | 28.0 | 43.0 | 50.2 | 317 | 27 | 531 | 814 | 1  
+LLMaJ (#3-ensemble, threshold=3/3) | 98.2 | 5.4 | 92.4 | 32.4 | 47.9 | 52.9 | 366 | 30 | 528 | 765 | -  
+LLMaJ (#3-ensemble, threshold=2/3) | 97.9 | 6.3 | 92.1 | 36.3 | 52.0 | 55.2 | 410 | 35 | 523 | 721 | -  
+LLMaJ (1x Sonnet4.5) | 97.9 | 6.3 | 92.0 | 35.4 | 51.1 | 54.6 | 400 | 35 | 523 | 731 | -  
+LLMaJ (1x Sonnet4.5 w/ extended thinking) | 97.1 | 8.8 | 92.7 | 55.0 | 69.0 | 67.0 | 622 | 49 | 509 | 509 | -  
+FG Implicit span-level [16] | 95.0 | 15.2 | 90.4 | 70.6 | 79.2 | 75.3 | 798 | 85 | 473 | 333 | -  
+FG J...
+--
+32571:...undness with precision similar to ARc’s (92.4% vs 94.4%), but produces 3 times as many false positives (30 vs 10, or 5.4% vs 1.8% FPR). In contrast, FG Response-level has the highest recall of 87.6%, but this comes at the cost of soundness dropping to just 83.8%, the second-lowest of all methods.
+
+_RQ2: Impact of Redundant Translation._ ARc uses redundant translation (Alg. 1) to increase confidence in NL-to-logic translations. Comparing the first 3 rows of Table 1: soundness rises from 98.4% to 99.4% and FPR drops from 4.8% to 1.8%, at the cost of reduced recall (28.0% to 14.9%). Lowering the confidence threshold from 3/33/3 to 2/32/3 recovers recall to 16.9%, with soundness dropping to 99.2%.
+
+ARc’s recall is low compared to the other techniques in Table 1, meaning that in many cases it returns results other than Valid for content that should be Valid. ARc is intended to be deployed as a guardrail for chatbots in regulated industries, where an incorrect approval (e.g., ‘you qualify at 0% interest’) causes real harm at scale. In this setting, a non-Valid verdict is not a failure: the system can revise the answer using ARc’s feedback (see RQ3) or route to a customer support agent. Low recall thus means...
+--
+72886:...ization.
+
+### 0.A.4 LLM-as-Judge System Prompt
+
+You are an expert document validator. Your task is to determine whether a given answer to a question is correct according to the provided policy document. When a test finishes, you’re provided with a set of validation results to understand how your Automated Reasoning policy is performing. A test includes the following information:   
+Query and Content: A question a user might ask your GenAI application and a possible response. You define these if you manually create the test. Automated Reasoning defines these if you generated test scenarios.   
+Confidence threshold: The minimum confidence level for logic validation that you set for your test. This threshold determines how Automated Reasoning handles uncertainty in translating natural language to formal logic. Content that meets or exceeds the threshold is considered a high-confidence finding that can be validated with a definitive result (VALID or INVALID). Content that falls below the threshold is a low-confidence finding that’s marked as TRANSLATION_AMBIGUOUS, indicating the system detected ambiguity and chose not to provide a potentially incorrect validation result.   
+Validation results:   
+Expected...
