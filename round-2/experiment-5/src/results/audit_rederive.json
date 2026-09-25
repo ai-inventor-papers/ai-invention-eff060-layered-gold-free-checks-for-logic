@@ -1,0 +1,103 @@
+{
+ "checks": {
+  "R_AB pooled:p_peer_text": {
+   "rederived": 0.7900410873277228,
+   "analysis": 0.7900410873277229,
+   "n": 2686,
+   "match": true
+  },
+  "R_AB pooled:p_text": {
+   "rederived": 0.6931596714030166,
+   "analysis": 0.6931596714030166,
+   "n": 2686,
+   "match": true
+  },
+  "R_AB pooled:peer_only": {
+   "rederived": 0.7480644235069318,
+   "analysis": 0.7480644235069317,
+   "n": 2686,
+   "match": true
+  },
+  "R_AB pooled:c_score_align": {
+   "rederived": 0.7823775511241208,
+   "analysis": 0.7823775511241208,
+   "n": 2686,
+   "match": true
+  },
+  "R_AB pooled:l2_bow": {
+   "rederived": 0.7342914659308046,
+   "analysis": 0.7342914659308045,
+   "n": 2686,
+   "match": true
+  },
+  "R_AB pooled:l3_z3": {
+   "rederived": 0.5789336606090174,
+   "analysis": 0.5789336606090174,
+   "n": 2686,
+   "match": true
+  },
+  "R_AB pooled:delta_vs_local_judge": {
+   "rederived": 0.07828508049762162,
+   "analysis": 0.07828508049762173,
+   "n": 2686,
+   "match": true
+  },
+  "R_A pooled L20+EXC:p_peer_text": {
+   "rederived": 0.818456020216842,
+   "analysis": 0.8184560202168419,
+   "n": 449,
+   "match": true
+  },
+  "R_A pooled L20+EXC:p_text": {
+   "rederived": 0.664598108747045,
+   "analysis": 0.664598108747045,
+   "n": 449,
+   "match": true
+  },
+  "R_A pooled L20+EXC:peer_only": {
+   "rederived": 0.8120057878861987,
+   "analysis": 0.8120057878861987,
+   "n": 449,
+   "match": true
+  },
+  "R_A pooled L20+EXC:c_score_align": {
+   "rederived": 0.8598985081927121,
+   "analysis": 0.8598985081927122,
+   "n": 449,
+   "match": true
+  },
+  "R_A pooled L20+EXC:l2_bow": {
+   "rederived": 0.6779163609684519,
+   "analysis": 0.677916360968452,
+   "n": 449,
+   "match": true
+  },
+  "R_A pooled L20+EXC:l3_z3": {
+   "rederived": 0.5868386728621505,
+   "analysis": 0.5868386728621505,
+   "n": 449,
+   "match": true
+  },
+  "R_A pooled L20+EXC:delta_vs_local_judge": {
+   "rederived": 0.2639805983533057,
+   "analysis": 0.2639805983533057,
+   "n": 449,
+   "match": true
+  }
+ },
+ "placebo": {
+  "p_peer_text": {
+   "mean": 0.5900058966159492,
+   "p97.5": 0.6095258059926008
+  },
+  "p_text": {
+   "mean": 0.5523139826503233,
+   "p97.5": 0.5767716369120217
+  },
+  "peer_only": {
+   "mean": 0.5785608540929789,
+   "p97.5": 0.5970038902101882
+  }
+ },
+ "all_match": true
+}

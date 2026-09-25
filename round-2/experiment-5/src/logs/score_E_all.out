@@ -1,0 +1,33 @@
+18:27:53|INFO   |stage all: 700 sentences selected, 600 to score; params {'variants': ['ALIGN', 'NF-anchored'], 'k': 5, 'tau': {'NF-pure': None, 'NF-anchored': 0.5, 'ALIGN': None}, 'timeout_ms': 2000, 'pair_cap_s': 30, 'k6_seeds': 5, 'medoid_budget_s': 2, 'do_align': True, 'do_text': True, 'codes': True, 'famfield': True, 'allpool': False}
+18:28:34|INFO   |E 20/600 sentences, 41s wall
+18:28:39|INFO   |E 40/600 sentences, 46s wall
+18:28:42|INFO   |E 60/600 sentences, 50s wall
+18:28:48|INFO   |E 80/600 sentences, 55s wall
+18:28:53|INFO   |E 100/600 sentences, 60s wall
+18:28:59|INFO   |E 120/600 sentences, 67s wall
+18:29:10|INFO   |E 140/600 sentences, 78s wall
+18:29:33|INFO   |E 160/600 sentences, 100s wall
+18:29:52|INFO   |E 180/600 sentences, 119s wall
+18:30:09|INFO   |E 200/600 sentences, 136s wall
+18:30:35|INFO   |E 220/600 sentences, 162s wall
+18:30:53|INFO   |E 240/600 sentences, 180s wall
+18:31:19|INFO   |E 260/600 sentences, 206s wall
+18:31:45|INFO   |E 280/600 sentences, 232s wall
+18:32:13|INFO   |E 300/600 sentences, 260s wall
+18:32:47|INFO   |E 320/600 sentences, 294s wall
+18:33:18|INFO   |E 340/600 sentences, 325s wall
+18:34:01|INFO   |E 360/600 sentences, 368s wall
+18:34:45|INFO   |E 380/600 sentences, 412s wall
+18:35:34|INFO   |E 400/600 sentences, 461s wall
+18:36:16|INFO   |E 420/600 sentences, 503s wall
+18:37:01|INFO   |E 440/600 sentences, 549s wall
+18:37:39|INFO   |E 460/600 sentences, 586s wall
+18:38:12|INFO   |E 480/600 sentences, 619s wall
+18:38:54|INFO   |E 500/600 sentences, 661s wall
+18:39:26|INFO   |E 520/600 sentences, 694s wall
+18:40:13|INFO   |E 540/600 sentences, 741s wall
+18:41:03|INFO   |E 560/600 sentences, 790s wall
+18:41:45|INFO   |E 580/600 sentences, 833s wall
+18:43:20|INFO   |E 600/600 sentences, 927s wall
+18:43:21|INFO   |stage all done in 928s wall; mean cpu-s per sentence by stratum {'CTRL': (6.143680000000001, 125), 'EXC': (9.91, 75), 'L20': (16.56048, 125), 'L25': (25.086181818181817, 275)}
+18:45:20|INFO   |projection for the remaining 0 sentences: 0.0 min wall
