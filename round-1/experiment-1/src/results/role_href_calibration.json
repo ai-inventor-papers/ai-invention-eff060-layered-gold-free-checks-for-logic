@@ -1,0 +1,176 @@
+{
+ "n": 294,
+ "resolution_rate": 0.701627486437613,
+ "FA": 0.0782312925170068,
+ "codes": {
+  "assert_in_down": 12,
+  "pol_flip": 6,
+  "exc_wrong": 1,
+  "cond_in_up": 4,
+  "slot_swap": 1
+ },
+ "examples": [
+  [
+   "A person is considered a physicist if they study the nature and properties of matter and energy.",
+   "∀x (Person(x) ∧ StudiesNatureAndPropertiesOfMatterAndEnergy(x) → Physicist(x))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "Chefs prepare meals, waiters serve meals, and customers enjoy meals at a restaurant.",
+   "(∀x (Chef(x) → PreparesMeals(x))) ∧ (∀y (Waiter(y) → ∃z (Customer(z) ∧ ServesMeals(y, z)))) ∧ (∀z (Customer(z) → EnjoysM",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A garment that is worn on the lower part of the body, has separate openings for each leg, and is made of fabric is a pai",
+   "∀x (Garment(x) ∧ WornOnLowerPartOfBody(x) ∧ SeparateOpeningsForEachLeg(x) ∧ MadeOfFabric(x) → (Pants(x) ∨ Skirt(x)))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A sport that is played between two teams on a field with a ball and the objective is to score points by getting the ball",
+   "∀x (Sport(x) ∧ PlayedBetweenTwoTeams(x) ∧ PlayedOnField(x) ∧ PlayedWithBall(x) ∧ ObjectiveToScorePointsByGettingBallInto",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A beverage that contains caffeine, is served hot, and is made from roasted seeds is coffee.",
+   "∀x ∀y (Beverage(x) ∧ ContainsCaffeine(x) ∧ ServedHot(x) ∧ RoastedSeeds(y) ∧ MadeFrom(x, y) → Coffee(x))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A building with proper insulation, energy-efficient windows, and solar panels is considered energy efficient.",
+   "∀x (Building(x) ∧ ProperInsulation(x) ∧ EnergyEfficientWindows(x) ∧ SolarPanels(x) → EnergyEfficient(x))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "Organisms that can produce their own food through photosynthesis, provide energy for other organisms, and do not consume",
+   "∀x (Organism(x) ∧ CanProduceOwnFoodThroughPhotosynthesis(x) ∧ ProvidesEnergyForOtherOrganisms(x) ∧ ¬ConsumesOtherOrganis",
+   [
+    "assert_in_down",
+    "pol_flip"
+   ]
+  ],
+  [
+   "Birds migrate when the season changes and the temperature becomes unsuitable for their survival.",
+   "∀x ∀y (Bird(x) ∧ SeasonChange(y) ∧ UnsuitableTemperatureForSurvival(y, x) → Migrates(x, y))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A food product is labeled organic if it is produced without synthetic pesticides and meets certain regulatory standards.",
+   "∀x (FoodProduct(x) ∧ ProducedWithoutSyntheticPesticides(x) ∧ MeetsRegulatoryStandards(x) → LabeledOrganic(x))",
+   [
+    "exc_wrong"
+   ]
+  ],
+  [
+   "An electronic device that displays the time, receives radio signals for accurate timekeeping, and is powered by a batter",
+   "∀x (ElectronicDevice(x) ∧ DisplaysTime(x) ∧ ReceivesRadioSignals(x) ∧ BatteryPowered(x) → RadioControlledClock(x))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A beverage that is made from fermented grains, has a specific alcohol content, and is popular in a particular region is ",
+   "∀x∀y∀z (Beverage(x) ∧ MadeFromFermentedGrains(x) ∧ SpecificAlcoholContent(y) ∧ Has(x, y) ∧ PopularInRegion(x, z) ∧ Parti",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A vehicle is considered a bicycle if it has two wheels, is powered by human effort, and is ridden by a rider who sits on",
+   "∀x (Vehicle(x) ∧ TwoWheels(x) ∧ PoweredByHumanEffort(x) ∧ HasSeat(x) ∧ HasPedals(x) → Bicycle(x))",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A game played on a rectangular surface, involves two teams, and has the objective of scoring points by putting a ball in",
+   "∀x (Game(x) ∧ PlayedOnRectangularSurface(x) ∧ InvolvesTwoTeams(x) ∧ ObjectiveIsScoringPoints(x) ∧ PuttingBallInOpposingT",
+   [
+    "assert_in_down"
+   ]
+  ],
+  [
+   "A thunderstorm occurs when warm air rises, creating instability in the atmosphere.",
+   "∀x (WarmAirRises(x) → OccurThunderstorm(x) ∧ AtmosphericInstability(x))",
+   [
+    "cond_in_up"
+   ]
+  ],
+  [
+   "If Bonnie either chaperones high school dances or, if she does not, she performs in school talent shows often, then Bonn",
+   "(Chaperone(bonnie, highSchoolDance) ⊕ PerformOftenIn(bonnie, schoolTalentShow)) → ((YoungChild(bonnie) ∨ Teenager(bonnie",
+   [
+    "cond_in_up"
+   ]
+  ],
+  [
+   "If James is either a manager or in other countries, then James does not either have lunch at home or work remotely from ",
+   "((Manager(james) ∨ ¬In(james, homeCountry)) → ¬(HasLunch(james, home) ∨ Work(james, home))) ∧ ((HasLunch(james, home) ∨ ",
+   [
+    "pol_flip"
+   ]
+  ],
+  [
+   "Symptoms of Monkeypox include coughing.",
+   "∃x (SymptomOf(x, monkeypoxVirus) ∧ Coughing(x))",
+   [
+    "cond_in_up"
+   ]
+  ],
+  [
+   "Hannah is at Mary's school and she is not a picky eater and spends a lot of her time eating and catching up with friends",
+   "At(hannah, marysSchool) ∧ ¬PickyEater(hannah) ∧ Spend(hannah, aLotOfTime, eating, diningHall) ∧ Spend(hannah, aLotOfTime",
+   [
+    "pol_flip"
+   ]
+  ],
+  [
+   "Hannah is at Mary's school and she either is not a picky eater or, if she is, then she spends a lot of her time eating a",
+   "At(hannah, marysSchool) ∧ (¬PickyEater(hannah) ∨ PickyEater(hannah)) ∧  (PickyEater(hannah) → (Spend(hannah, aLotOfTime,",
+   [
+    "cond_in_up"
+   ]
+  ],
+  [
+   "Harry Potter was published by New Vessel Press.",
+   "PublishedBy(harryPotter, newVesselPress)",
+   [
+    "slot_swap"
+   ]
+  ],
+  [
+   "The last summer Olympic games were not in Tokyo.",
+   "¬LastSummerOlympics(tokyoolympics)",
+   [
+    "pol_flip"
+   ]
+  ],
+  [
+   "If Tom is not both a grumpy person and mean to animals, then Tom is neither a grumpy person nor an animal lover.",
+   "(¬(Grumpy(tom) ∧ MeanTo(tom, animal)) → ¬Grumpy(tom) ∧ ¬AnimalLover(tom))",
+   [
+    "pol_flip"
+   ]
+  ],
+  [
+   "If Yuri does not leap straight into the air, then Yuri is an American professional basketball player.",
+   "¬LeapStraightIntoAir(yuri) → (AmericanNational(yuri) ∧ Professional(yuri) ∧ BasketballPlayer(yuri))",
+   [
+    "pol_flip"
+   ]
+  ]
+ ]
+}

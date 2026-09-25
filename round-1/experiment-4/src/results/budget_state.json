@@ -1,0 +1,24 @@
+{
+ "spent": 2.017115,
+ "by_component": {
+  "prompt_dev": 0.006750799999999999,
+  "strong_dryrun": 0.15247425,
+  "judge_cheap_primary": 0.11190429999999975,
+  "judge_cheap_secondary": 0.03828890000000023,
+  "roundtrip": 0.04051569999999988,
+  "gold_recall_probe": 0.004918999999999996,
+  "strong": 1.6622620000000012
+ },
+ "cap_total": 9.5,
+ "caps": {
+  "judge_cheap_primary": 1.2,
+  "judge_cheap_secondary": 0.6,
+  "roundtrip": 1.0,
+  "gold_recall_probe": 0.3,
+  "prompt_dev": 0.3,
+  "strong": 5.0,
+  "strong_dryrun": 0.6,
+  "setup_probe": 0.05
+ },
+ "ts": 1790177298.765414
+}

@@ -1,0 +1,41 @@
+{
+ "n_base": 150,
+ "family_stats": {
+  "REPRINT": {
+   "applicable": 150,
+   "kept": 12,
+   "not_equiv": 0,
+   "same_string": 138
+  },
+  "REORDER": {
+   "applicable": 150,
+   "kept": 41,
+   "not_equiv": 0,
+   "same_string": 109
+  },
+  "DEMORGAN": {
+   "applicable": 39,
+   "kept": 39,
+   "not_equiv": 0,
+   "same_string": 0
+  },
+  "PRENEX": {
+   "applicable": 1,
+   "kept": 1,
+   "not_equiv": 0,
+   "same_string": 0
+  },
+  "CONTRAPOSITIVE": {
+   "applicable": 39,
+   "kept": 39,
+   "not_equiv": 0,
+   "same_string": 0
+  },
+  "RENAME": {
+   "applicable": 150,
+   "kept": 150,
+   "not_equiv": 0,
+   "same_string": 0
+  }
+ }
+}
