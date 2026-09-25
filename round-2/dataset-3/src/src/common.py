@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
 """Shared paths, imports of dataset E's code, and small helpers for the R_COMP / PERTURB pipeline."""
 from __future__ import annotations
 
@@ -11,7 +7,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src"
 for p in (ROOT / "labeller", ROOT / "src_e", ROOT / "src"):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
