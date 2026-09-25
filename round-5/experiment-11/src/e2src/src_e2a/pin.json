@@ -1,3 +1,0 @@
-{"anthropic/claude-haiku-4.5": {"order": ["Amazon Bedrock"], "allow_fallbacks": false},
- "z-ai/glm-4.6": {"order": ["Venice", "Novita"], "allow_fallbacks": false},
- "moonshotai/kimi-k2-0905": {"order": ["Novita"], "allow_fallbacks": false}}
