@@ -1,0 +1,12 @@
+Q1: first-order logic consensus translation
+Q2: first-order logic agreement multiple LLMs translation
+Q3: autoformalization consensus
+Q4: autoformalization reference-free evaluation
+Q5: NL-FOL
+Q6: NL-to-FOL
+Q7: natural language first-order logic faithfulness metric
+Q8: cross-model formal equivalence
+Q9: autoformalization multiple models equivalence
+Q10: semantic parsing cross-model agreement error detection
+Q11: autoformalization peer agreement
+Q12: logical form translation without gold evaluation

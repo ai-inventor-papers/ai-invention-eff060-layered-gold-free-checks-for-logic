@@ -1,0 +1,53 @@
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/full_method_out.json :: datasets[E_heldout].examples (metadata_in_R_AB, output, predict_S4_local_oof_RAB, predict_S4_local_noLLMjudge_oof_RAB, predict_judge_local_qwen8b_disg, metadata_fold_E)
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/per_item_E.jsonl :: p_peer_text, c_score_align (raw)
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/review_report/review_report/audit/pt_vs_s4.json :: reviewer target values
+# source: method: own join on (item_id, prompt_variant) unique rows; stack = train-fold standardise + LogisticRegression(C=1, max_iter=2000); sentence-cluster bootstrap B=2000 default_rng(0) as multiplicity weights (RNG order differs from the reviewer's)
+subset,statistic,quantity,n,delta,reviewer_delta,point_match_1e-4,n_err,n_sent,ci_lo,ci_hi,reviewer_ci_lo,reviewer_ci_hi,ci_match_0.01
+R_AB pooled,pooled,AUROC pt,2672,0.7903039314968402,0.7903,True,,,,,,,
+R_AB pooled,pooled,AUROC cal,2672,0.7836862750124982,0.7837,True,,,,,,,
+R_AB pooled,pooled,AUROC s4,2672,0.7483191472997398,0.7483,True,,,,,,,
+R_AB pooled,pooled,AUROC s4nj,2672,0.7036824934945072,0.7037,True,,,,,,,
+R_AB pooled,pooled,AUROC jl,2672,0.7102264424247863,0.7102,True,,,,,,,
+R_AB pooled,pooled,AUROC s4_plus_pt,2672,0.8005749189216905,0.8006,True,,,,,,,
+R_AB pooled,pooled,AUROC s4_refit,2672,0.7453653971875761,0.7454,True,,,,,,,
+R_AB long (L25+L20+EXC),pooled,AUROC pt,2289,0.7687293269230769,0.7687,True,,,,,,,
+R_AB long (L25+L20+EXC),pooled,AUROC s4,2289,0.710454326923077,0.7105,True,,,,,,,
+R_AB long (L25+L20+EXC),pooled,AUROC jl,2289,0.6515903846153847,0.6516,True,,,,,,,
+R_AB long (L25+L20+EXC),pooled,AUROC cal,2289,0.7600788461538461,0.7601,True,,,,,,,
+R_AB pooled,stratified,AUROC pt,2672,0.7528509812493669,,,,,,,,,
+R_AB pooled,stratified,AUROC cal,2672,0.7421654662067422,,,,,,,,,
+R_AB pooled,stratified,AUROC s4,2672,0.693906710668721,,,,,,,,,
+R_AB pooled,stratified,AUROC s4nj,2672,0.6444990323457751,,,,,,,,,
+R_AB pooled,stratified,AUROC jl,2672,0.6745842818832737,,,,,,,,,
+R_AB pooled,stratified,AUROC s4_plus_pt,2672,0.7613839321415814,,,,,,,,,
+R_AB pooled,stratified,AUROC s4_refit,2672,0.6892417109619496,,,,,,,,,
+R_AB pooled,pooled,pt - s4,2672,0.04198478419710039,0.042,True,1810.0,283.0,0.013459918732141796,0.06956922612239792,0.0135,0.0696,True
+R_AB pooled,stratified,pt - s4,2672,0.058944270580645886,,,1810.0,283.0,0.023335537313344503,0.09289542354633994,,,
+R_AB long (L25+L20+EXC),pooled,pt - s4,2289,0.058274999999999966,,,1664.0,247.0,0.02395783271051814,0.09411434708380113,,,
+R_AB long (L25+L20+EXC),stratified,pt - s4,2289,0.06664571905136674,,,1664.0,247.0,0.03148038831655301,0.10302866989329994,,,
+R_A L20+EXC,pooled,pt - s4,447,0.0958658988070753,,,260.0,107.0,0.008585156806101153,0.1747172381410101,,,
+R_A L20+EXC,stratified,pt - s4,447,0.09916501322751325,,,260.0,107.0,0.006457203200241193,0.1764436977706274,,,
+R_AB pooled,pooled,cal - s4,2672,0.035367127712758406,0.0354,True,1810.0,283.0,0.005362252246540217,0.06346067816530782,0.0056,0.0641,True
+R_AB pooled,stratified,cal - s4,2672,0.04825875553802117,,,1810.0,283.0,0.013158974312455766,0.08080813955529392,,,
+R_AB long (L25+L20+EXC),pooled,cal - s4,2289,0.04962451923076916,,,1664.0,247.0,0.015541576867999484,0.08341985953299005,,,
+R_AB long (L25+L20+EXC),stratified,cal - s4,2289,0.05122426086241527,,,1664.0,247.0,0.013377807972751263,0.08589031544151697,,,
+R_A L20+EXC,pooled,cal - s4,447,0.13839983545865897,,,260.0,107.0,0.0732272877561369,0.20234359517575462,,,
+R_A L20+EXC,stratified,cal - s4,447,0.13576802248677255,,,260.0,107.0,0.0712799793499821,0.19931860173012594,,,
+R_AB pooled,pooled,pt - s4nj,2672,0.08662143800233302,0.0866,True,1810.0,283.0,0.0530145593405054,0.11945970569470837,0.0525,0.1194,True
+R_AB pooled,stratified,pt - s4nj,2672,0.10835194890359179,,,1810.0,283.0,0.06989560962980443,0.14579774118540215,,,
+R_AB long (L25+L20+EXC),pooled,pt - s4nj,2289,0.10160432692307697,,,1664.0,247.0,0.0638002027454957,0.14042275410402383,,,
+R_AB long (L25+L20+EXC),stratified,pt - s4nj,2289,0.11580115818777681,,,1664.0,247.0,0.07834328787201325,0.1550291065277417,,,
+R_A L20+EXC,pooled,pt - s4nj,447,0.10896750308515013,,,260.0,107.0,0.013719169067498675,0.20041981912481868,,,
+R_A L20+EXC,stratified,pt - s4nj,447,0.11946097883597884,,,260.0,107.0,0.02263983963217761,0.2108223847210918,,,
+R_AB pooled,pooled,pt - jl,2672,0.08007748907205392,0.0801,True,1810.0,283.0,0.04324885868729391,0.11448827373686626,0.0447,0.1148,True
+R_AB pooled,stratified,pt - jl,2672,0.0782666993660932,,,1810.0,283.0,0.040364919925402525,0.11691756984269754,,,
+R_AB long (L25+L20+EXC),pooled,pt - jl,2289,0.11713894230769228,,,1664.0,247.0,0.07433105684158693,0.15774750109849262,,,
+R_AB long (L25+L20+EXC),stratified,pt - jl,2289,0.08942331410851256,,,1664.0,247.0,0.051495488773823796,0.12819288554519406,,,
+R_A L20+EXC,pooled,pt - jl,447,0.2696215549156725,,,260.0,107.0,0.15772693111062688,0.3677342409905515,,,
+R_A L20+EXC,stratified,pt - jl,447,0.2152777777777778,,,260.0,107.0,0.1039110030231716,0.3165448366745733,,,
+R_AB pooled,pooled,s4_plus_pt - s4_refit,2672,0.05520952173411442,0.0552,True,1810.0,283.0,0.0361636801766521,0.07435330747741689,0.0356,0.0742,True
+R_AB pooled,stratified,s4_plus_pt - s4_refit,2672,0.07214222117963176,,,1810.0,283.0,0.04930110711405438,0.09562805724727834,,,
+R_AB long (L25+L20+EXC),pooled,s4_plus_pt - s4_refit,2289,0.0720701923076923,,,1664.0,247.0,0.04924441359132007,0.0939808681779129,,,
+R_AB long (L25+L20+EXC),stratified,s4_plus_pt - s4_refit,2289,0.07892943981769707,,,1664.0,247.0,0.05538857290664153,0.10383683006941584,,,
+R_A L20+EXC,pooled,s4_plus_pt - s4_refit,447,0.112649115590292,,,260.0,107.0,0.0634979366109279,0.1635991109032822,,,
+R_A L20+EXC,stratified,s4_plus_pt - s4_refit,447,0.11404596560846558,,,260.0,107.0,0.06355849607010136,0.16637235103859158,,,

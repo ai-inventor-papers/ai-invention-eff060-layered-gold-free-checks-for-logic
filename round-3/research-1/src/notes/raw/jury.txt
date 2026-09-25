@@ -1,0 +1,178 @@
+URL: https://arxiv.org/html/2607.10139 | PATTERN: floor|scatter|difficult|length|harder|panel size|number of models|famil|correlat|judge|PRM|cost|law | 2026-09-24T01:35:31Z
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://arxiv.org/html/2607.10139
+Type: HTML
+Pattern: floor|scatter|difficult|length|harder|panel size|number of models|famil|correlat|judge|PRM|cost|law (285 matches in 104425 chars)
+
+--- Content ---
+
+959:...ng and sampling-based selection.
+     2. Trained reward and verifier models.
+     3. Multi-model inference and ensembling.
+     4. Self-consistency and selective prediction.
+  4. 3 Cross-Model Consensus as a Verifier
+     1. 3.1 Setup: consensus as a Best-of-NN selector
+     2. 3.2 A parameter-free law for consensus behavior
+        1. Generative model.
+        2. Closed-form law.
+        3. Why decorrelation is decisive.
+  5. 4 Experimental Setup
+     1. Models and panels.
+     2. Benchmarks.
+     3. Grading and statistics.
+  6. 5 Experiments
+     1. 5.1 Cross-model consensus is a strong Best-of-NN verifier
+        1. The advantage does not depend on the generator.
+     2. 5.2 The parameter-free law predicts consensus behavior and its ceiling
+        1. The law forecasts the value of adding a model.
+        2. Agreement is a usable abstention dial.
+     3. 5.3 Cross-model consensus outperforms trained reward models
+        1. On cost.
+        2. The signal generalizes beyond answer-matched selection.
+     4. 5.4 Decorrelation is the mechanism
+        1. Decorrelation beats more samples.
+  7. 6 Conclusion
+     1. Limitations.
+  8. References
+  9. A Experimental Setup
+     1. Models and panels.
+     2. Grading.
+     3. Statistics.
+     4. Selector definitions.
+     5. Prompts.
+  10. B The Predictive Law: Details
+     1. What the law requires, and what it does not.
+  11. C Closed-Form Law and Validation
+     1. Shared-error floor.
+     2. Consensus accuracy.
+     3. Uncertainty in the measured inputs.
+     4. Held-out transfer.
+     5. Transfer across panels.
+     6. Multi-attractor refinement.
+  12. D The Shared-Error Floor: A Case Study
+  13. E Mechanism: Diversity Isolation and the Combinatorial Sweep
+     1. Pairwise error correlation.
+     2. Matched-accuracy diversity isolation.
+     3. Combinatorial subset sweep.
+     4. Leave-one-member-out.
+  14. F Consensus as a Label-Free Training Reward
+     1. Training details.
+     2. The label-free reward scales to a 7B policy.
+  15. G Selective-Prediction Curves
+  16. H Code Domai...
+--
+3720:...Outperform Process Reward Models for LLM Reasoning
+
+Ning Liu  Affiliation: Independent Researcher  Email: [ningliu@umich.edu](mailto:)
+
+###### Abstract
+
+Selecting the correct answer from a pool of candidate reasoning chains is the engine of test-time scaling, yet the standard selectors each carry a cost: self-consistency inherits the errors of the single model it resamples, and trained reward models need labeled data and transfer poorly off-distribution. We study a third signal, free at inference time: cross-model consensus, the degree to which independently trained models, each solving the proble...
+--
+4469:...o model scoring another’s work. Across seven benchmarks it selects correct answers better than self-consistency and far better than a model scoring its own candidates: on competition math it closes the entire gap to an oracle selector, while self-scoring closes almost none. The mechanism is error decorrelation: independently trained models err differently, so their wrong answers scatter while the correct one accumulates agreement. We make this precise with a parameter-free law, derived in closed form, that predicts consensus accuracy from three measured panel statistics to a mean absolute error of 0.030.03 and exposes the method’s ceiling: a _shared-error floor_ where models share a misconception, near zero on math but non-trivial on science. Against four trained verifiers spanning discriminative, outcome, and generative reward models, the free LLM-jury matches the strongest inside their math training domain and is the top selector outside it. Cross-model consensus is thus a verifier we can characterize in advance: a law that says when to trust it, and a floor that marks where it cannot.  
+  
+---  
+  
+## 1 Introduction
+
+Figure 1: The LLM-jury. A generator produces NN candidate solutions. An _independent verification panel_ of cross-family models each solves the same problem once, never seeing the candidates or one another’s work, and the modal answer class is selected, with the agreement fraction gg as a free confidence signal. _Why it works_ (bottom): resampling one model (self-consistency) repeats correlated errors and can raise a wrong answer to the majority, whereas a decorrelated cross-model panel scatters its wrong answers so the correct one prevails. The signal is _predictable_ (a parameter-free law forecasts consensus accuracy from (a,ρ,s)(a,\rho,s)) and _bounded_ (a shared-error floor).
+
+Modern reasoning systems spend compute at inference time by sampling many candidate solutions and selecting among them (Wei et al., 2022; Brown et al., 2024; Snell et al., 2025; Muennighoff et al., 2025). As the sample count grows a correct answer almost always appears somewhere in the pool, so the bottleneck shifts from generation to selection: the _verifier_ that picks which candidate to return increasingly bounds end-to-end accuracy (Zhao et al., 2025; Liu et al., 2025). Yet the two verifiers that dominate practice each carry a structural cost. _Self-consistency_ takes a majority vote over repeated samples of a single model (Wang et al., 2023). Because every sample comes from the same model, it inherits that model’s systematic errors, so a confidently wrong model errs on most samples and votes its own error into the majority. _Trained reward models_ (outcome and process reward models, or PRMs) (Lightman et al., 2023; Wang et al., 2024b; Zhang et al., 2025c; Liu et al., 2024) score candidates with a learned network, but require annotated training data and, as we show, transfer poorly outside the distribution they are trained on. Both leave a gap: a verifier that is at once _label-free_ ...
+--
+7897:...ndently before a verdict, each model solves the problem on its own and the _structure of their agreement_ is the signal, a unanimous panel marking a trustworthy answer and a split one a problem to escalate. Crucially, our jurors never see the candidates or one another’s work, unlike a panel of LLM _judges_ that read and score generations (Verga et al., 2024). This is why, as we show, a model scoring its own candidates is the weakest of the selectors we compare.
+
+Agreement tracks correctness for a simple reason, the classical bias–variance–diversity logic of ensembles (Krogh and Vedelsby, 1994; Dietterich, 2000) made concrete for reasoning: when models’ mistakes are _decorrelated_ , wrong answers scatter while the correct one accumulates agreement, whereas resampling a single model repeats the _same_ mistake and manufactures a confident but wrong majority. The magnitude of this effect is large: on competition math, a model scoring its own twelve candidates captures essentially 0%0\% of the achievab...
+--
+10069:...AIME, p=0.001p{=}0.001), while the self-scoring verifier captures ≈0%\approx 0\% of the oracle gap, so a model cannot adjudicate its own candidates. We show the advantage is robust to the generator and persists even with a frontier-model panel (§5.1).
+
+  * •
+
+We derive a closed-form, parameter-free law that predicts consensus accuracy and its full selective-prediction curve from measured panel statistics to a mean absolute error of 0.030.03, validate it against simulation and under leave-one-benchmark-out transfer, and use it to pin the method’s limit: a _shared-error floor_ of ≈0\approx 0 on math but non-zero on science, set by how alike models’ errors are (§5.2).
+
+  * •
+
+We compare the jury head-to-head against four trained verifiers spanning discriminative PRMs, an outcome RM, and a generative verifier (Qwen2.5-Math-PRM 7B/72B, AceMath-72B, ThinkPRM-14B) on an identical trace pool: the free jury ties the strongest inside their math training domain (MATH-500) and leads outside it (GPQA). We further extend the signal to executable code and a compute-saving agreement cascade (§5.3).
+
+  * •
+
+We isolate error decorrelation, distinct from multi-model combination, as the operative mechanism, through matched-size, matched-accuracy experiments and a direct measurement of pairwise error correlation: four decorrelated models beat self-consistency at 3232 samples of one (§5.4).
+
+
+
+
+## 2 Related Work
+
+#### Test-time scaling and sampling-based selection.
+
+Spending inference compute by sampling many candidates and selecting among them is now a central paradigm: repeated sampling expands coverage of correct answers...
+--
+11950:...rcement learning with verifiable rewards largely surfaces reasoning already reachable by sampling (Yue et al., 2025), a strong label-free _selector_ is the principal lever. This line asks how returns scale. We ask _which signal_ selects best, and contribute a training-free selector with a governing law.
+
+#### Trained reward and verifier models.
+
+The dominant learned verifiers are outcome and process reward models: step-level supervision beats outcome-only supervision (Lightman et al., 2023), automatic labels remove the annotation cost (Wang et al., 2024b), and these extend to frontier mathematical reward models (Zhang et al., 2025c; Liu et al., 2024) and generative and reasoning variants (Zhang et al., 2025b; Khalifa et al., 2025). A training-free alternative instead prompts a capable model to judge candidates (Zheng et al., 2023). Each carries a structural cost: learned reward models require annotated data and stay domain-specialized, and a model adjudicating its _own_ candidates is a weak verifier. We show the LLM-jury matches or exceeds trained verifiers (discriminative PRMs, an outcome RM, a generative verifier) both inside and outside their math training domain, at no training cost (§5.3, §5.1).
+
+#### Multi-model inference and ensembling.
+
+Combining models is an established route to stronger outputs, via ranking and fusion (Jiang et al., 2023), layered refinement (Wang et al., 2024a), debate (Du et al., 2024), or voting over many agents (Li et al., 2024), though the gains over a well-prompted single model remain contested (Wang et al., 2024c). Most related, a _panel_ of models can replace a single judge for evaluation (Verga et al., 2024), its members _scoring_ a generation. All treat cross-model combination as an _aggregation heuristic_ for a better answer. We instead treat agreement as a _measurement_ : members independently _solve_ each problem, and we predict the reliability of their agreement from panel statistics and quantify its failure mode. This grounds the signal in the classical bias–variance–diversity account of ensembles, in which decorrelated errors drive the gain (Krogh and Vedelsby, 1994; Dietterich, 2000; Kuncheva and Whitaker, 2003; Breiman, 2001; Lakshminarayanan et al., 2017). We show the same holds across models (§5.4).
+
+#### Self-consistency and selective prediction.
+
+Self-consistency (Wang et al., 2023) aggregates repeated sa...
+--
+14964:...ify as the operative difference (§5.4), and draw a precise distinction: self-consistency is better _calibrated_ while the cross-model signal is more _accurate_.
+
+## 3 Cross-Model Consensus as a Verifier
+
+We formalise cross-model consensus as a selection verifier (§3.1), then derive a parameter-free law for its behavior from a few panel statistics and make explicit the error-decorrelation mechanism the law predicts to be decisive (§3.2).
+
+### 3.1 Setup: consensus as a Best-of-NN selector
+
+Let a panel of MM independently trained models each produce a final answer to a problem, and let y^i\hat{y}_{i} be the answer of model ii. Answers are compared by task-appropriate equivalence (symbolic equality for ...
+--
+16567:...xed pool of NN candidates from one strong generator, where the selectors differ only in how they score the same candidates (§5.1); and (ii) selection used directly to answer, where the panel-agreement gg doubles as a calibrated confidence for abstention (§5.2, Appendix G).
+
+### 3.2 A parameter-free law for consensus behavior
+
+Cross-model consensus is usually treated as a heuristic. We show its entire selective-prediction behavior follows from three measurable panel statistics: mean member accuracy aa, mean pairwise _error correlation_ ρ\rho, and the _shared-misconception rate_ ss, the probability that, when a model is wrong, it produces the single attractor wrong answer that other erring models also tend to produce.
+
+#### Generative model.
+
+Per problem, draw a latent difficulty p∼Beta⁡(a​k,(1−a)​k)p\sim\mathrm{Beta}(ak,(1{-}a)k), a Beta distribution with mean aa and concentration k=1/ρ−1k{=}1/\rho-1 chosen so the induced pairwise correlation of model errors equals ρ\rho (independence as ρ→0\rho\\!\to\\!0). Each model is correct with probability pp. When wrong, it lands on the shared attractor with probability ss and on an idiosyncratic wrong answer otherwise. This is the minimal model that couples the two forces governing agreement: a shared difficulty that correlates errors, and a shared attractor that makes some errors agree. From (a,ρ,s,M)(a,\rho,s,M) it induces the joint distribution of (agreement level, consensus correctness), and hence the consensus accuracy Pr⁡[modal class correct]\Pr[\text{modal class correct}], the selective-prediction curve (accuracy when accepting the most-agreed fraction of problems), and the shared-error floor Pr⁡[all ​M​ agree on one wrong answer]\Pr[\text{all }M\text{ agree on one wrong answer}], the irreducible error no agreement signal can detect.
+
+#### Closed-form law.
+
+These quantities are not merely simulated: each is an exact function of (a,ρ,s,M)(a,\rho,s,M). Marginalizing the latent difficulty, the number of correct members follows a Beta-Binomial, and the shared-error floor admits the closed form
+
+| Floor⁡(a,ρ,s,M)=sM​∏j=0M−1(1−a)​k+jk+j⏟𝔼⁡[(1−p)M],k=1ρ−1,\mathrm{Floor}(a,\rho,s,M)\;=\;s^{M}\,\underbrace{\prod_{j=0}^{M-1}\frac{(1-a)k+j}{k+j}}_{\mathbb{E}[(1-p)^{M}]},\qquad k=\tfrac{1}{\rho}-1, |  | (1)  
+---|---|---|---  
+  
+the probability that all MM members err (𝔼⁡[(1−p)M]\mathbb{E}[(1-p)^{M}]) times the probability they all land on the shared attractor (sMs^{M}). The consensus accuracy and the full selective-prediction curve have matching closed forms (Appendix C), which agree with Monte-Carlo simulation to within 0.0020.002 across all seven benchmarks. The law is _parameter-free_ : its inputs are _measured_ panel statistics (estimation detailed in Appendix B), never fit to the prediction target. Equation 1 is written for a single shared attractor (the interpretable case in which one misconception dominates and ss is a scalar), but in general the wrong-an...
+--
+19570:...(s_{1},\dots,s_{K}) that reduces to the scalar ss when K=1K{=}1. The predictions we report (Table 2, Figure 2) use this measured profile, which departs from the scalar form only where wrong answers concentrate on several attractors, as in many-option multiple choice (Appendix C). §5.2 validates the law held-out.
+
+#### Why decorrelation is decisive.
+
+The law makes the mechanism explicit and separates two effects that prior aggregation work conflates. Consensus _accuracy_ rises as ρ\rho falls: with decorrelated errors, the modal class is dominated by the (shared) correct answer because wrong answers scatter, whereas correlated errors let a wrong answer accumulate a spurious majority. Consensus _calibration_ , how well the agreement level gg predicts whether the selected answer is correct, depends instead chiefly on member accuracy. The two axes come apart in practice (§5.4): a within-model panel (self-consistency) can be _better calibrated_ yet _less accurate_ than a decorrelated cross-model panel at matched member accuracy, because resampling one model reproduces its errors coherently, a sharp confidence signal even as those repeated errors cap accuracy. The decisive variable for selection accuracy is therefore error decorrelation; multi-model combination helps only insofar as it decorrelates errors. The shared-error floor is what remains when decorrelation cannot help, a property of the models’ shared blind spots measured per domain.
+
+## 4 Experimental Setup
+
+#### Models and panels.
+
+Cross-model panels are drawn from a cross-family pool (Qwen3-235B, DeepSeek-V3.2, Claude Sonnet 4.6, and Kimi-K2.5), with a same-family Qwen size ladder (Qwen3-32B, Qwen3-Next-80B, Qwen3-235B) as a decorrelation control. Unless noted, the Best-of-NN generator is Qwen3-235B and the selection panel is the three remaining cross-family models plus the generator. The generator-robustness study (§5.1) repeats the comparison with a DeepSeek-V3.2 generator. Decoding settings and serving infrastructure are deferred to Appendix A.
+
+#### Benchmarks.
+
+We evaluate on seven benchmarks spanning four reasoning types: competition math (AIME-...
+--
+22718:... resamples), reported in the text and captions and pooling AIME-2024/2025 where noted for power, with per-cell 95%95\% intervals in Appendix A.
+
+## 5 Experiments
+
+We evaluate four claims: cross-model consensus is a strong Best-of-NN verifier (§5.1); its behavior and ceiling match the parameter-free law (§5.2); it outperforms trained verifiers and generalizes beyond them (§5.3); and error decorrelation is the operative mechanism (§5.4).
+
+### 5.1 Cross-model consensus is a strong Best-of-NN verifier
+
+On a _fixed_ pool of N=12N{=}12 candidates from one strong generator (Qwen3-235B), where every sele...
+--
+[205 more matches not shown]

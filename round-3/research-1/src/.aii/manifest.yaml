@@ -1,0 +1,4 @@
+entries:
+  - path: scripts/__pycache__/
+    delete: regenerable
+    source: "python3 scripts/build_output.py"

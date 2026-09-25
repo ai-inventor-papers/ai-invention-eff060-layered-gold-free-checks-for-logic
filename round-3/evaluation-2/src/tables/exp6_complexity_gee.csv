@@ -1,0 +1,16 @@
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/analysis_E.json :: complexity_gee.<metric>.<variable>
+metric,variable,slope_per_sd,se,p,ci_lo,ci_hi
+judge_local_qwen8b_disg,words,-0.5564,0.1526,0.000266,-0.8555,-0.2573
+judge_local_qwen8b_disg,n_conditions,-0.1734,0.1097,0.113967,-0.3883,0.0416
+judge_local_qwen8b_orig,words,-0.6592,0.1579,3e-05,-0.9688,-0.3497
+judge_local_qwen8b_orig,n_conditions,-0.0617,0.1104,0.576578,-0.2781,0.1547
+judge_local_llama8b_disg,words,0.3127,0.1474,0.033887,0.0238,0.6016
+judge_local_llama8b_disg,n_conditions,0.1101,0.1051,0.295114,-0.096,0.3162
+S4_local_oof_RAB,words,-0.2925,0.1312,0.025733,-0.5496,-0.0354
+S4_local_oof_RAB,n_conditions,-0.0464,0.0894,0.604007,-0.2217,0.1289
+sc5_local_eq_frac,words,0.2659,0.1837,0.147726,-0.0941,0.626
+sc5_local_eq_frac,n_conditions,0.1621,0.1145,0.15658,-0.0622,0.3865
+rt_nli_min_local,words,-0.7005,0.1595,1.1e-05,-1.0132,-0.3879
+rt_nli_min_local,n_conditions,-0.2037,0.105,0.052499,-0.4095,0.0022
+b2_score,words,-0.616,0.1719,0.000339,-0.9529,-0.2791
+b2_score,n_conditions,-0.1076,0.1054,0.307361,-0.3141,0.099
