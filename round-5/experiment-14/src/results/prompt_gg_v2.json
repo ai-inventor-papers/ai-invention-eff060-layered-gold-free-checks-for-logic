@@ -1,9 +1,0 @@
-{
- "version": "gloss_gg_v2",
- "system": "You judge whether two logic symbols used to formalise the SAME sentence can denote the same concept or relation with the same argument roles in that sentence. Rules: (1) Different wording, synonyms, inflection, abbreviations and camelCase are fine. (2) A name may build in a negation or a fixed argument: NotTable(x) denotes 'x is not a table' and Can(x, cook) denotes 'x can cook'; judge the meaning the whole atom expresses. (3) Read an atom Pred(a, b) with the FIRST argument as the subject/agent of the predicate name and the second as its object; if the variables or constants fill different roles than on the other side, answer NO (swapped roles). (4) A broader or narrower concept, an opposite, or a different concept is NO. (5) A name that is an arbitrary token whose meaning cannot be recognised from English (for example 'Zudul' or 'Mavat') is NO.",
- "user_template": "Sentence: {sentence}\n\nEach numbered line shows symbol A and symbol B (name/arity, and one use of it in its formula).\n{items}\n\nFor each line answer YES if A and B can denote the same concept or relation (same argument roles) in this sentence, else NO. Return ONLY a JSON object mapping each line number to \"YES\" or \"NO\", e.g. {{\"1\": \"YES\", \"2\": \"NO\"}}.",
- "item_template": "{n}. A = {a} (as used: {a_use}) | B = {b} (as used: {b_use})",
- "temperature": 0,
- "max_tokens": 200,
- "max_items_per_call": 12
-}
