@@ -1,0 +1,27 @@
+{
+ "whitelist_fields": [
+  "row_key",
+  "item_id",
+  "sentence_id",
+  "template_id",
+  "slot",
+  "system",
+  "family",
+  "condition",
+  "candidate_fol",
+  "parse_ok",
+  "prompt_variant",
+  "free_align_class_id",
+  "free_hyb_class_id"
+ ],
+ "files_never_opened": [
+  "free_labels.jsonl"
+ ],
+ "firewalled_view": "data/rcomp_free_view.jsonl",
+ "firewalled_view_sha256": "5020149e843c76ff3045353f991381a2cd1a32dab7a6a7fb396947c855dabdce",
+ "csc_rcomp_free_peers": "NOT GENERATED (D-BUDGET); results/csc_rcomp_free_peers.jsonl does not exist",
+ "n_rows": 2652,
+ "n_parseable": 2265,
+ "created_utc": "2026-09-24T07:45:34Z",
+ "statement": "no FREE label was read: FREE rows were projected to the whitelist at parse time (views.project_free); free_labels.jsonl was never opened; no FREE row enters method_out.json or any labelled analysis"
+}

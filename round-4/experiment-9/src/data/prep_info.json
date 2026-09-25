@@ -1,0 +1,29 @@
+{
+ "label_check": {
+  "target_sha1": "1bfcb30634ab6e9c3f00d40d398584b5892a805f",
+  "computed_sha1": "1bfcb30634ab6e9c3f00d40d398584b5892a805f",
+  "n": 2941,
+  "recipe": "sha1('\\n'.join(sorted(item_id:final_label)))",
+  "pass": true
+ },
+ "n_rows": 2686,
+ "n_sentences": 292,
+ "join_1to1": true,
+ "family_counts": {
+  "openai": 268,
+  "meta": 634,
+  "qwen": 413,
+  "mistral": 249,
+  "deepseek": 208,
+  "google": 421,
+  "microsoft": 246,
+  "cohere": 247
+ },
+ "free_peer_availability": {
+  "deepseek": 251,
+  "microsoft": 292,
+  "openai": 251,
+  "qwen": 292
+ },
+ "prompt_sha256": "cdfd524edca37a619668943b9b6e7ef8b3fae91f5e0432e8b270e0bf2f847a9e"
+}
