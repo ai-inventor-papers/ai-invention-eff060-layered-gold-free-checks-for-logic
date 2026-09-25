@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5
 """Testing plan 6: (1) every file of exp5src/src is byte-identical to iter_2 exp 5 src (sha256); (2) the copied
 pool_scoring.score_sentence with exp-5's frozen scoring_params reproduces the stored exp-5 c_score_align and p_peer_text
 of dataset-E rows (sentences chosen by sha1 order among L25, until >= 50 rows). -> e2b/exp5_repro_check.json"""
@@ -14,7 +10,7 @@ from pathlib import Path
 
 WS = Path(__file__).resolve().parents[1]
 X5 = WS / "exp5src"
-ORIG = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+ORIG = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src"
 sys.path.insert(0, str(X5 / "src"))
 sys.path.insert(0, str(X5 / "src" / "vendor_a"))
 sys.setrecursionlimit(10000)

@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_scores.jsonl
 """GG search unit tests: synthetic pairs, identity-map recovery on RENAME_SYN controls vs their base (z3-equivalent by
 construction), map found for MEANING_RENAME mutants (the gloss must reject them), gloss decision rule and parser."""
 import json
@@ -12,7 +8,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "freeze"))
 import gg  # noqa: E402
 
-PS = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_scores.jsonl")
+PS = Path(__file__).resolve().parents[4] / "round-3/experiment-8/src/results/perturb_scores.jsonl"
 
 
 def test_synthetic():

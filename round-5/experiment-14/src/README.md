@@ -1,8 +1,3 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data
-
 # Screening fixes for model-agreement false alarms (iteration 5 FREEZE, dataset E)
 
 AI-Inventor run `run_u75jRHUss0zo`, iteration 5, `gen_art_experiment_14` (plan `gen_plan_experiment_4_idx4`).
@@ -213,7 +208,7 @@ api.consensus_score(text, fol, peers, mode="align")   # also exact | nf | hyb | 
 - `**/__pycache__/`, `.pytest_cache/` (regenerable): recreated by any `python src/*.py` or `pytest` run.
 
 The NLTK data used by the exp-1 / exp-8 text helpers is not copied (182 MB). `lib/api.py` reads it read-only from
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data`.
+`../../../round-3/experiment-8/src/data/nltk_data`.
 Elsewhere, `python -m nltk.downloader wordnet omw-1.4` restores it.
 
 ## Caveats

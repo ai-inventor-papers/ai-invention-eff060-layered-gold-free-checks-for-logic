@@ -1,9 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv
 """Figures F1-F4, drawn only from numbers.csv rows (asserted), with the aii-data-fig-gen house style.
 Hand-written matplotlib because the forest generator takes symmetric errors and our CIs are
 asymmetric (copied verbatim). Each figure writes <name>.pdf, <name>.png and <name>.json (the plotted
@@ -18,7 +12,7 @@ from src import io_locators as L
 from src.claims_spec import EV2, CU
 from src.ctx import Ctx
 
-SK = "/ai-inventor/.claude/skills/aii-data-fig-gen/scripts"
+SK = str(Path(__file__).resolve().parents[4] / "tools/aii-data-fig-gen/scripts")
 if SK not in sys.path:
     sys.path.insert(0, SK)
 import matplotlib  # noqa: E402
@@ -73,7 +67,7 @@ def f1(c: Ctx, out: Path) -> dict:
     ax.set_xlabel("Δ strat AUROC, c_score_align − flash-lite disguised")
     ax.set_title("DEVELOPMENT (E): consensus vs cheap judge by stratum")
     spec = {"figure": "F1", "caption": "Development-set (E) Δ strat AUROC with 95% sentence-cluster bootstrap CIs (B = 2000) copied verbatim; L25 and CTRL CIs cover 0 (n.s.). Pooled/long are within-stratum AUROC; single strata are pooled within the stratum.",
-            "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json a_head_on.*.deltas", "data": data}
+            "source": "# source: ../../../../round-3/experiment-6/src/results/analysis_T1.json a_head_on.*.deltas", "data": data}
     _finish(fig, out, spec)
     return spec
 
@@ -100,7 +94,7 @@ def f2(c: Ctx, out: Path) -> dict:
     data["d_pooled"] = [dict(label=b, id=i, value=v) for (b, i), v in zip(bars, vals)]
     fig.suptitle("Every vocabulary bridge trades d for e (DEVELOPMENT E)")
     spec = {"figure": "F2", "caption": "Left: share of real errors endorsed (e) per class on the completion-selected PRIMARY subset for the same 3 free peers scored exactly, with ALIGN, and for CSC-cued peers. Right: correct-row divergence d, FULL population (exact vs ALIGN) and PRIMARY (exact vs CSC); PRIMARY and FULL are different populations.",
-            "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json e_anchoring_by_error_class.PRIMARY, a_ed_FULL.cells.R_AB, a_ed_PRIMARY.cells.R_AB", "data": data}
+            "source": "# source: ../../../../round-4/experiment-9/src/results/analysis.json e_anchoring_by_error_class.PRIMARY, a_ed_FULL.cells.R_AB, a_ed_PRIMARY.cells.R_AB", "data": data}
     _finish(fig, out, spec)
     return spec
 
@@ -129,7 +123,7 @@ def f3(c: Ctx, out: Path) -> dict:
     a2.set_title("Non-agreeing peers of CORRECT candidates")
     fig.suptitle("Wrong peers, not words (DEVELOPMENT E)")
     spec = {"figure": "F3", "caption": "Left: eval-3 pair classes over all 9-family (candidate, peer) pairs. Right: among peers that disagree with a CORRECT candidate, the share that are themselves labelled ERROR.",
-            "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv",
+            "source": "# source: ../../../../round-4/evaluation-3/src/tables/p1_class_shares.csv",
             "data": {"pair_classes": [dict(label=n, id=i, value=v) for (n, i), v in zip(cls, vals)], "peer_error_share": [dict(label=x, id=i, value=v) for (x, i), v in zip(b, bv)]}}
     _finish(fig, out, spec)
     return spec

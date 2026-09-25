@@ -12,7 +12,7 @@ cp -r . ~/e2a && cd ~/e2a
 ```
 
 Read-only inputs are referenced by absolute path:
-- dataset E (`iter_1/gen_art/gen_art_dataset_1`): drift replay and E's panel votes;
+- dataset E (`round-1/dataset-1/src`): drift replay and E's panel votes;
 - exp-5 (`iter_2/.../gen_art_experiment_5`): the V0 reproduction test only;
 - the sibling markers: `iter_5/gen_art/gen_art_experiment_{12,13,14}`.
 

@@ -1,9 +1,3 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
-
 # Reproducing E2 (gen_art_dataset_4): fresh NL→FOL faithfulness confirmation set
 
 This file records what was **actually run** (2026-09-24, 07:10–07:45 UTC), in order, and how to finish it.
@@ -17,15 +11,15 @@ non-determinism can then change individual outputs.
 ## 1. Copy the artifact
 
 ```bash
-cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4 ~/e2
+cp -r ../../../../round-4/dataset-4/src ~/e2
 cd ~/e2
 ```
 Every script derives its paths from its own file location (`ROOT = Path(__file__).resolve().parents[1]`). Four
 read-only inputs are referenced by absolute path and must stay reachable:
-- dataset E: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1`
+- dataset E: `../../../../round-1/dataset-1/src`
   (its 700 sentences, calibration items, panel cache and track-H rows for exclusion and the drift check);
-- the screen: `.../iter_1/gen_art/gen_art_experiment_1/screen_items.json`;
-- dataset 3: `.../iter_2/gen_art/gen_art_dataset_3`, whose code is already copied into `src_d3/`.
+- the screen: `.../round-1/experiment-1/src/screen_items.json`;
+- dataset 3: `.../round-2/dataset-3/src`, whose code is already copied into `src_d3/`.
 
 ## 2. System, Python and libraries
 

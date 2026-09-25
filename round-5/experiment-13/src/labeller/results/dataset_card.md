@@ -1,12 +1,7 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5
-
 # Dataset card: R_COMP-FREE name-free labels (T7b)
 
 Run `run_u75jRHUss0zo`, iteration 4, `gen_art_dataset_5`. The workspace (all paths below are relative to it) is
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5`.
+`../../../../../round-4/dataset-5/src`.
 
 ## Status: read this first
 

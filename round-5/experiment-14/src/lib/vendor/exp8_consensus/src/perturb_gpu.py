@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4
 """PART B label-free GPU metrics on the PERTURB suite (4,234 mutants + 868 controls + 300 unmutated bases), with exp 6's
 local code VERBATIM (vendor_e6/src): local Qwen3-8B JSON judge (exp D local rubric + user_json; orig and disguised),
 local Llama-3.1-8B P(YES) judge (orig and disguised), local Qwen3-8B verbaliser (VERBALISE prompt, greedy) followed by
@@ -31,7 +27,7 @@ sys.path.insert(0, str(ROOT / "vendor_e6"))  # `src.*` = exp 6's package (vendor
 os.environ.setdefault("NLTK_DATA", str(ROOT / "data" / "nltk_data"))
 OUT = ROOT / "results" / "perturb_scores"
 OUT.mkdir(parents=True, exist_ok=True)
-EXPD = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4")
+EXPD = Path(__file__).resolve().parents[7] / "round-1/experiment-4/src"
 LOCAL_Q8 = "Qwen/Qwen3-8B"
 LOCAL_L8 = "meta-llama/Llama-3.1-8B-Instruct"
 

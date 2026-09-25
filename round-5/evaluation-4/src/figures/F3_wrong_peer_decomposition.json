@@ -1,7 +1,7 @@
 {
  "figure": "F3",
  "caption": "Left: eval-3 pair classes over all 9-family (candidate, peer) pairs. Right: among peers that disagree with a CORRECT candidate, the share that are themselves labelled ERROR.",
- "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv",
+ "source": "# source: ../../../../round-4/evaluation-3/src/tables/p1_class_shares.csv",
  "data": {
   "pair_classes": [
    {

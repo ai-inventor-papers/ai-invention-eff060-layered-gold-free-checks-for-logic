@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
 """STEP 4 (screen only): compute PEER/TEXT features on the iteration-1 screen, select the NF variant, fit the fusion,
 freeze everything in results/prereg.json (sha256 + UTC timestamp). Dataset E is NOT read here.
 
@@ -535,7 +531,7 @@ def freeze():
     frozen = {"variant": fitres["peer_variant_used"], "tau": {"NF-pure": None, "NF-anchored": 0.5, "ALIGN": None}, "k": 5,
               "timeout_ms": 2000, "fusion": models["fusion"], "text_only": models["text_only"],
               "sensitivity_all_adj": models["sensitivity_all_adj"], "peer_only": models["peer_only"]}
-    card = (Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1") / "dataset_card.md").read_text()
+    card = (Path(__file__).resolve().parents[7] / "round-1/dataset-1/src" / "dataset_card.md").read_text()
     table = card[card.index("| stratum | sents | LLM rows |"):card.index("**Tier-A-only** counts")].strip()
     pre = {
         "title": "PEER+TEXT held-out confirmation on dataset E (run_u75jRHUss0zo iter 2, gen_art_experiment_5)",

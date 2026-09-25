@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl
 """Testing plan 8: the copied exp-6 statistics core (exp6src/src/api_bar.py) reproduces iteration-3 T1's L25 delta
 (c_score_align - flash-lite disguised, strat AUROC, R_AB, E_POOL; power_E2.json observed_delta 0.06942) from
 exp 6's per_item_T1.jsonl. -> e2b/T1_repro_check.json"""
@@ -16,7 +12,7 @@ WS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(WS / "exp6src"))
 from src import api_bar as AB  # noqa: E402
 
-T1 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl")
+T1 = Path(__file__).resolve().parents[4] / "round-3/experiment-6/src/results/per_item_T1.jsonl"
 rows = [json.loads(l) for l in T1.read_text().splitlines() if l.strip()]
 out = {}
 for cell, strata in (("L25", ("L25",)), ("long", ("L25", "L20", "EXC"))):

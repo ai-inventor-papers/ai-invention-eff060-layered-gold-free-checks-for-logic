@@ -82,7 +82,7 @@ def main() -> None:
     res: dict = {"method": __doc__.strip(), "checks": [], "extra": {}}
     C = res["checks"]
     # (1) exp 9 per-item file
-    rows = jl(I4 / "gen_art_experiment_9/results/per_item_csc_E.jsonl")
+    rows = jl(I4 / "experiment-9/src/results/per_item_csc_E.jsonl")
     prim = [r for r in rows if r["in_PRIMARY"]]
     y = np.array([r["y_R_AB"] for r in prim]); st = np.array([r["stratum"] for r in prim]); sid = np.array([r["sentence_id"] for r in prim])
     for key, tv in (("c_csc", 0.614), ("c_free_exact", 0.770), ("c_score_align", 0.774)):
@@ -118,7 +118,7 @@ def main() -> None:
     plc_ci = boot_ci(yp, s, st, sid, B=500, seed=1)
     res["placebo_shuffled_labels_c_csc"] = dict(auroc=plc, ci_B500=plc_ci, covers_0_5=bool(plc_ci[0] <= 0.5 <= plc_ci[1]))
     # (2) exp 10 per-row PERTURB scores: base FA at c > 0.5 and LOCAL2 tie share
-    pr = jl(I4 / "gen_art_experiment_10/results/perturb_csc_scores.jsonl")
+    pr = jl(I4 / "experiment-10/src/results/perturb_csc_scores.jsonl")
     for key, rc, tv, name in (("c_align_exp8", False, 0.712, "c_align E"), ("c_free3_exact", False, 0.803, "FREE3_exact E"),
                               ("c_free3_exact", True, 0.986, "FREE3_exact R_COMP"), ("c_free3_align", True, 0.757, "FREE3_align R_COMP")):
         b = [r[key] for r in pr if r["op_label"] == "BASE" and r["is_rcomp"] == rc and r.get(key) is not None]
@@ -127,20 +127,20 @@ def main() -> None:
     res["extra"]["local2_share_exactly_0_5"] = float(np.mean(np.array(mut) == 0.5))
     res["extra"]["local2_e_all"] = float(np.mean(np.array(mut) <= 0.5))
     # (3) dataset 4 label counts
-    lab = Counter(r["label"] for r in jl(I4 / "gen_art_dataset_4/sealed/labels_E2.jsonl"))
+    lab = Counter(r["label"] for r in jl(I4 / "dataset-4/src/sealed/labels_E2.jsonl"))
     res["extra"]["d4_label_counts"] = dict(lab)
     C.append(check("dataset 4 E2 pilot counts ERROR/UNRESOLVED/UNPARSEABLE/CORRECT == 36/274/20/0",
                    float([lab.get("ERROR", 0), lab.get("UNRESOLVED", 0), lab.get("UNPARSEABLE", 0), lab.get("CORRECT", 0)] == [36, 274, 20, 0]), 1.0, 0))
     # (4) dataset 5 label counts (+ 297/420 SOURCE_ONLY: needs the iter-3 label join)
-    l5 = Counter(r.get("label") for r in jl(I4 / "gen_art_dataset_5/results/free_labels_v2.jsonl"))
+    l5 = Counter(r.get("label") for r in jl(I4 / "dataset-5/src/results/free_labels_v2.jsonl"))
     res["extra"]["d5_label_counts"] = dict(l5)
     C.append(check("dataset 5 counts ERROR_CERT/MAPPED/UNPARSEABLE/NO_OUTPUT == 759/1506/188/199",
                    float([l5.get("ERROR_CERT", 0), l5.get("UNRESOLVED_GLOSS_NOT_RUN", 0), l5.get("UNPARSEABLE", 0), l5.get("NO_OUTPUT", 0)] == [759, 1506, 188, 199]), 1.0, 0))
     res["extra"]["d5_297_of_420"] = "SOURCE_ONLY (old_label_agreement.json); the iter-3 label join is not re-run here"
     # (5) eval-3 77% / 61% from the pair table
     try:
-        pairs = pd.read_pickle(I4 / "gen_art_evaluation_3/results/part1_pairs.pkl")
-        rws = pd.read_pickle(I4 / "gen_art_evaluation_3/results/part1_rows.pkl")
+        pairs = pd.read_pickle(I4 / "evaluation-3/src/results/part1_pairs.pkl")
+        rws = pd.read_pickle(I4 / "evaluation-3/src/results/part1_rows.pkl")
         ycol = "y_AB" if "y_AB" in rws.columns else "final_label"
         yc = dict(zip(rws["row_key"], rws[ycol]))
         pairs = pairs.assign(cy=pairs["cand"].map(yc))
@@ -154,8 +154,8 @@ def main() -> None:
         res["extra"]["eval3_shares"] = f"SOURCE_ONLY ({type(e).__name__}: {e})"
     # (6) iteration-4 spend: sum of the four iter-4 ledgers (independent of src/spend.py)
     tot = 0.0
-    for p, f in ((I4 / "gen_art_experiment_9/results/api_cost_ledger.jsonl", "usd"), (I4 / "gen_art_experiment_10/results/api_cost_ledger.jsonl", "cost_usd"),
-                 (I4 / "gen_art_dataset_4/cost_ledger.jsonl", "cost_usd"), (I4 / "gen_art_dataset_5/cost_ledger.jsonl", "usd")):
+    for p, f in ((I4 / "experiment-9/src/results/api_cost_ledger.jsonl", "usd"), (I4 / "experiment-10/src/results/api_cost_ledger.jsonl", "cost_usd"),
+                 (I4 / "dataset-4/src/cost_ledger.jsonl", "cost_usd"), (I4 / "dataset-5/src/cost_ledger.jsonl", "usd")):
         tot += sum(float(r.get(f) or 0) for r in jl(p))
     C.append(check("iteration-4 spend (four iter-4 ledgers)", tot, 0.35, 2))
     res["n_checks"] = len(C)

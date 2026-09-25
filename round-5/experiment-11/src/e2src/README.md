@@ -1,12 +1,7 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4
-
 # E2: fresh, untouched NL→FOL faithfulness confirmation set
 
 run_u75jRHUss0zo · invention iteration 4 · artifact `gen_art_dataset_4` (plan `gen_plan_dataset_1_idx3`).
-Workspace (absolute): `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4`
+Workspace (absolute): `../../../../round-4/dataset-4/src`
 
 E2 is the first NL→FOL confirmation set that no earlier decision in this run has touched. It is disjoint from dataset
 E's 700 sentences, the screen, FOLIO, the calibration items and the few-shot exemplars, and from any sentence sharing a

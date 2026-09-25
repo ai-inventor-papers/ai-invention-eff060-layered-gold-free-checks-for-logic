@@ -17,8 +17,8 @@ from typing import Any
 RUN = str(Path(__file__).resolve().parents[4])
 I3 = f"{RUN}/iter_3/gen_art"
 I4 = f"{RUN}/iter_4/gen_art"
-PAPER = f"{RUN}/iter_4/gen_report_text/gen_report_text/paper_draft.md"
-REVIEW = f"{RUN}/iter_4/review_report/review_report/.terminal_claude_agent_struct_out.json"
+PAPER = f"{RUN}/round-4/report-text/paper_draft.md"
+REVIEW = f"{RUN}/round-4/review/.terminal_claude_agent_struct_out.json"
 
 HASHES: dict[str, str] = {}
 _JSON_CACHE: dict[str, Any] = {}

@@ -1,14 +1,10 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5
 """V0 reproduction: the frozen exp-5 score_sentence call path used by scoring/score_consensus.py (with its declared
 param overrides) reproduces c_score_align and ALIGN:g_score of dataset-E rows (exp-5 results/per_item_E.jsonl) to 1e-9.
 Reads E's label-free blind rows and E's stored SCORES only (never E labels)."""
 import json, sys, hashlib
 from pathlib import Path
 WS = Path(__file__).resolve().parents[2]
-E5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+E5 = Path(__file__).resolve().parents[5] / "round-2/experiment-5/src"
 sys.path.insert(0, str(WS / "frozen" / "exp5" / "src"))
 sys.path.insert(0, str(WS))
 

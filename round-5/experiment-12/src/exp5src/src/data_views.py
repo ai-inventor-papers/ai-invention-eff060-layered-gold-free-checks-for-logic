@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
 """STEP 1 data views for dataset E (held-out) and the iteration-1 screen.
 
 make_blind_view(rows)  -> data/E_blind.jsonl : ALLOWLIST of label-free fields only (asserted); sha256 written next to it.
@@ -25,7 +21,7 @@ from loguru import logger
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path(__file__).resolve().parents[5] / "round-1/dataset-1/src"
 
 ALLOW_META = ["item_id", "sentence_id", "system", "slot", "family", "system_class", "generator_model_id", "prompt_variant"]
 STRATA_KEYS = ["words", "n_quant", "depth", "n_conditions", "text_conditions", "exception_type", "source_stratum",

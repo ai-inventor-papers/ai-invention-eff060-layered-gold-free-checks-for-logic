@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl
 """Independent re-derivation of the headline numbers from RAW files with a separate code path (plain json + sklearn
 roc_auc_score; nothing imported from src/ or freeze/): (1) Part A: V0 and every variant's LONG-strat / L25 / CTRL AUROC and
 the rule decision; (2) GG gates g1/g2 from scores_gg_perturb.jsonl and g3 from scores_gg_E.jsonl; (3) shuffled-label
@@ -15,7 +11,7 @@ from sklearn.metrics import roc_auc_score
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
-PER = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl")
+PER = Path(__file__).resolve().parents[4] / "round-3/experiment-6/src/results/per_item_T1.jsonl"
 
 
 def rd(p):

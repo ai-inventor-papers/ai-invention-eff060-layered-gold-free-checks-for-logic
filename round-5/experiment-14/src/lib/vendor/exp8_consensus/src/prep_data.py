@@ -14,8 +14,8 @@ from loguru import logger
 
 ROOT = Path(__file__).resolve().parent.parent
 RUN = Path(__file__).resolve().parents[7]
-D3 = RUN / "iter_2/gen_art/gen_art_dataset_3"
-DE = RUN / "iter_1/gen_art/gen_art_dataset_1"
+D3 = RUN / "round-2/dataset-3/src"
+DE = RUN / "round-1/dataset-1/src"
 E6 = RUN / "iter_2/gen_art/gen_art_experiment_6"
 
 logger.remove()

@@ -1,73 +1,14 @@
 > NOTE (published copy): this file names server paths this repository
 > does not publish (a stage it does not ship, or another run's workspace),
 > so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_report_text/gen_report_text/paper_draft.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/perturb_corrected.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_sensitivity.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/selection.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/coverage_perturb.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/t2_record.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/old_label_agreement.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/prereg_mech.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/hypothesis_verdicts.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/results/part_a.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/README.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/artifact_id_map.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/hypothesis_verdicts_iter3.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/csc_gate_P.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/testability_E2.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/testability_FREE_v2.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_research_1/notes/full/vossel.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/prior_art.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_research_1/research_report.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/prereg_csc_E.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/review_report/review_report/.terminal_claude_agent_struct_out.json
 >   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json
 >   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_strat/gen_strat_1/.terminal_claude_agent_struct_out.json
 >   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/tables.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/posthoc_phi_contamination.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/repro_checks.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/d_by_length.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/anchoring.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/typing_csc.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/controls_fa.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/tables.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/rcomp_sig_csc.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/paired_cue_effect.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/api_cost_ledger.jsonl
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/review_report/review_report/audit/recompute_perturb_csc.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/panel_drift_E2.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/dataset_card.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/sealed/labels_E2.jsonl
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/pilot_projection.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/soundness_audit.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/deviations.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/README.md
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_rule_cuts.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part2.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part1.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part1_net.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/power_E2.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p3_planned_E2.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/logs/gate.log
 >   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_2
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/rename_selection_dead_end.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/p_tests.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/b2_dead_end.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/radj_gate.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/coverage_vs_request_iter3.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/function_inventory.csv
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json
 
 # Corrected record and paper-ready fixes (iteration 5, eval 4)
 
-Every number below is read by code from the file named in `numbers.csv` (row id in the HTML comment after it). Struck text (`~~…~~`) is quoted verbatim from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_report_text/gen_report_text/paper_draft.md` with its line number; the marker gives the change and the source path. All E, R_COMP SIG and PERTURB numbers are DEVELOPMENT data.
+Every number below is read by code from the file named in `numbers.csv` (row id in the HTML comment after it). Struck text (`~~…~~`) is quoted verbatim from `../../../round-4/report-text/paper_draft.md` with its line number; the marker gives the change and the source path. All E, R_COMP SIG and PERTURB numbers are DEVELOPMENT data.
 
 
 ## 0. What this record verified
@@ -101,13 +42,13 @@ Sources: `numbers.csv`; `mismatches.csv`
 
 Replaces: paper_draft.md `### 3.4 Tests T3 + T5: PERTURB sensitivity and rename tradeoff`, lines 901-954
 
-~~MEANING_RENAME is the false-alarm diagnostic: it measures how often a metric flags a meaning-preserving predicate renaming as an error.~~ [Correction, iter 4: MEANING_RENAME replaces a predicate by one with a DIFFERENT meaning; it is an ERROR operator, not a meaning-preserving rewrite. A within-base AUROC near chance on it means the metric is BLIND to a real error class (c_nf 0.499<!-- n:e8_cnf_mr -->), not that it is rename-invariant; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/perturb_corrected.csv] (paper_draft.md L929)
+~~MEANING_RENAME is the false-alarm diagnostic: it measures how often a metric flags a meaning-preserving predicate renaming as an error.~~ [Correction, iter 4: MEANING_RENAME replaces a predicate by one with a DIFFERENT meaning; it is an ERROR operator, not a meaning-preserving rewrite. A within-base AUROC near chance on it means the metric is BLIND to a real error class (c_nf 0.499<!-- n:e8_cnf_mr -->), not that it is rename-invariant; source ../../../round-4/evaluation-3/src/tables/perturb_corrected.csv] (paper_draft.md L929)
 
-~~The consensus metric is polarity-symmetric: the absolute difference |DOWN − UP| in within-base AUROC is < 0.01 for all operators and all consensus variants.~~ [Correction, iter 4: deleted: per-operator consensus within-base AUROC is a base-endorsement artefact (most mutants of a flagged base sit at the maximum score), so neither an operator ranking nor a polarity-symmetry claim can be read from it; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/perturb_corrected.csv] (paper_draft.md L933)
+~~The consensus metric is polarity-symmetric: the absolute difference |DOWN − UP| in within-base AUROC is < 0.01 for all operators and all consensus variants.~~ [Correction, iter 4: deleted: per-operator consensus within-base AUROC is a base-endorsement artefact (most mutants of a flagged base sit at the maximum score), so neither an operator ranking nor a polarity-symmetry claim can be read from it; source ../../../round-4/evaluation-3/src/tables/perturb_corrected.csv] (paper_draft.md L933)
 
-~~c_align achieves within-base AUROC ≥ 0.84 on every testable operator except DROP (0.841).~~ [Correction, iter 4: no per-operator ranking is reported for consensus scores (artefact above); the recall at the PRIMARY threshold is flat across operators (c_align NEG 0.761<!-- n:pc_calign_recall_NEG -->, SWAP 0.758<!-- n:pc_calign_recall_SWAP -->, DROP 0.721<!-- n:pc_calign_recall_DROP -->, ADD 0.763<!-- n:pc_calign_recall_ADD -->, MEANING_RENAME 0.762<!-- n:pc_calign_recall_MEANING_RENAME -->); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/perturb_corrected.csv] (paper_draft.md L925)
+~~c_align achieves within-base AUROC ≥ 0.84 on every testable operator except DROP (0.841).~~ [Correction, iter 4: no per-operator ranking is reported for consensus scores (artefact above); the recall at the PRIMARY threshold is flat across operators (c_align NEG 0.761<!-- n:pc_calign_recall_NEG -->, SWAP 0.758<!-- n:pc_calign_recall_SWAP -->, DROP 0.721<!-- n:pc_calign_recall_DROP -->, ADD 0.763<!-- n:pc_calign_recall_ADD -->, MEANING_RENAME 0.762<!-- n:pc_calign_recall_MEANING_RENAME -->); source ../../../round-4/evaluation-3/src/tables/perturb_corrected.csv] (paper_draft.md L925)
 
-~~It is polarity-symmetric (|DOWN − UP| < 0.01).~~ [Correction, iter 4: deleted (same artefact); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/perturb_corrected.csv] (paper_draft.md L1011)
+~~It is polarity-symmetric (|DOWN − UP| < 0.01).~~ [Correction, iter 4: deleted (same artefact); source ../../../round-4/evaluation-3/src/tables/perturb_corrected.csv] (paper_draft.md L1011)
 
 **Corrected text.** The eval-3 note on the source table reads verbatim: "MEANING_RENAME is typed as an ERROR operator; per-operator consensus AUROC is an ARTEFACT (94-100% of mutants at c=1); rt_nli_min_LOCAL = local NLI round-trip"<!-- v:perturb_corrected.csv -->. MEANING_RENAME is therefore typed as an ERROR operator throughout. The name-free score `c_nf` is blind to it (within-base AUROC 0.499<!-- n:e8_cnf_mr -->), which, together with the failed pre-registered selection below, is what ended the name-free line.
 
@@ -128,35 +69,35 @@ Replaces: paper_draft.md `### 3.4 Tests T3 + T5: PERTURB sensitivity and rename 
 
 **Coverage (T11).** 3,419<!-- n:e8_cov_ok --> of 5,402<!-- n:e8_cov_n --> PERTURB rows were scored by the consensus family; the rest are R_COMP rows without peers or rows whose peers were unavailable, counted, not dropped.
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/perturb_corrected.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_sensitivity.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/selection.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/coverage_perturb.csv`
+Sources: `../../../round-4/evaluation-3/src/tables/perturb_corrected.csv`; `../../../round-3/experiment-8/src/results/perturb_sensitivity.csv`; `../../../round-3/experiment-8/src/results/selection.json`; `../../../round-3/experiment-8/src/results/coverage_perturb.csv`
 
 
 ## 2. §3.3 T2 on R_COMP: NOT CONFIRMED (corrected)
 
 Replaces: paper_draft.md `### 3.3 Test T2: R_COMP (long composed sentences)`, lines 823-900
 
-~~**T2 CONFIRMED: consensus dominates on R_COMP.** On long composed sentences with trusted references, c_score_sig achieves within-template AUROC 0.954 vs the judge's 0.587 (Δ = +0.367).~~ [Correction, iter 4: T2 is NOT CONFIRMED under the §3.1 rule: SIG passes (within-template 0.954<!-- n:t2_sig --> vs 0.587<!-- n:t2_judge -->; vs the ORIGINAL judge +0.278<!-- n:t2_vs_orig -->) but SIG is the controlled-vocabulary regime the user excluded, and FREE was NOT_TESTABLE; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/t2_record.csv] (paper_draft.md L1009)
+~~**T2 CONFIRMED: consensus dominates on R_COMP.** On long composed sentences with trusted references, c_score_sig achieves within-template AUROC 0.954 vs the judge's 0.587 (Δ = +0.367).~~ [Correction, iter 4: T2 is NOT CONFIRMED under the §3.1 rule: SIG passes (within-template 0.954<!-- n:t2_sig --> vs 0.587<!-- n:t2_judge -->; vs the ORIGINAL judge +0.278<!-- n:t2_vs_orig -->) but SIG is the controlled-vocabulary regime the user excluded, and FREE was NOT_TESTABLE; source ../../../round-4/evaluation-3/src/tables/t2_record.csv] (paper_draft.md L1009)
 
-~~The FREE tier-A delta is +0.214 [−0.034, +0.377] (c_align vs bar), but the CI includes zero and the sample is too thin for reliable inference.~~ [Correction, iter 4: the FREE tier-A deltas in this section are VOID: those labels over-call ERROR (297<!-- n:t2_free_mapped --> of 420<!-- n:t2_free_err --> old ERROR rows are MAPPED by the name-free search); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/old_label_agreement.json] (paper_draft.md L891)
+~~The FREE tier-A delta is +0.214 [−0.034, +0.377] (c_align vs bar), but the CI includes zero and the sample is too thin for reliable inference.~~ [Correction, iter 4: the FREE tier-A deltas in this section are VOID: those labels over-call ERROR (297<!-- n:t2_free_mapped --> of 420<!-- n:t2_free_err --> old ERROR rows are MAPPED by the name-free search); source ../../../round-4/dataset-5/src/results/old_label_agreement.json] (paper_draft.md L891)
 
-~~The frontier judge costs $0.00605 per call (6.07× the consensus generation cost).~~ [Correction, iter 4: unit error: per ITEM the frontier judge costs 30.2<!-- n:rv_frontier_x -->× the consensus score (FULL, per candidate); see the single cost table (section 13); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv] (paper_draft.md L895)
+~~The frontier judge costs $0.00605 per call (6.07× the consensus generation cost).~~ [Correction, iter 4: unit error: per ITEM the frontier judge costs 30.2<!-- n:rv_frontier_x -->× the consensus score (FULL, per candidate); see the single cost table (section 13); source ../../../round-4/evaluation-3/src/tables/cost_units.csv] (paper_draft.md L895)
 
 **Corrected text.** On R_COMP SIG (out-of-scope controlled vocabulary; development data) `c_score_sig` reaches within-template AUROC 0.954<!-- n:t2_sig --> against the disguised flash-lite judge's 0.587<!-- n:t2_judge -->; against the ORIGINAL (undisguised) judge the gap is +0.278<!-- n:t2_vs_orig -->. This is the regime the user excluded, so it cannot confirm the operating condition. The in-scope FREE condition was NOT_TESTABLE in iteration 3, and the iteration-3 FREE tier-A labels were later shown to over-call ERROR (UP TO 70.7%<!-- n:d5_707 --> of old ERROR rows are MAPPED; MAPPED is an upper bound of CORRECT). Verdict: **T2 NOT CONFIRMED**; criterion (c) is pending on R_COMP FREE in iteration 5 (`confirm_verdict_rcomp.json`).
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/t2_record.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/old_label_agreement.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv`
+Sources: `../../../round-4/evaluation-3/src/tables/t2_record.csv`; `../../../round-4/dataset-5/src/results/old_label_agreement.json`; `../../../round-4/evaluation-3/src/tables/cost_units.csv`
 
 
 ## 3. §3.5 Mechanism verdicts under the PRE-REGISTERED definitions (corrected)
 
 Replaces: paper_draft.md `### 3.5 Test T4: Mechanism verification and hypothesis testing`, lines 955-1000
 
-~~**M1 (Anna Karenina): errors are more diverse than correct translations (more distinct z3-equivalence classes per sentence among ERROR items than CORRECT items).** On E: ERROR items have 2.85 mean distinct classes per sentence vs 1.55 for CORRECT. On R_COMP: ERROR 1.93, CORRECT 1.42. The direction is consistent with M1 in both datasets, but no formal statistical test was pre-registered. Verdict: **INCONCLUSIVE** (direction consistent, not formally tested).~~ [Correction, iter 4: M1 was pre-registered and tested; its pre-registered text is given below with verdict INCONCLUSIVE; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/prereg_mech.json] (paper_draft.md L967)
+~~**M1 (Anna Karenina): errors are more diverse than correct translations (more distinct z3-equivalence classes per sentence among ERROR items than CORRECT items).** On E: ERROR items have 2.85 mean distinct classes per sentence vs 1.55 for CORRECT. On R_COMP: ERROR 1.93, CORRECT 1.42. The direction is consistent with M1 in both datasets, but no formal statistical test was pre-registered. Verdict: **INCONCLUSIVE** (direction consistent, not formally tested).~~ [Correction, iter 4: M1 was pre-registered and tested; its pre-registered text is given below with verdict INCONCLUSIVE; source ../../../round-3/evaluation-2/src/prereg_mech.json] (paper_draft.md L967)
 
-~~**M2 (endorsement/divergence decomposition): the consensus signal decomposes into endorsement (e = fraction of errors endorsed by the majority) and divergence (d = fraction of correct items that diverge from the majority). On E, e should be low and d should be moderate, meaning the consensus works primarily because errors are NOT endorsed, not because correct items converge perfectly.** On E (R_AB, MAJ rule): e = 0.124, d = 0.537. On R_COMP: e = 0.0, d = 0.260. Both datasets show low e and moderate d. Verdict: **CONFIRMED**.~~ [Correction, iter 4: M2 is pre-registered as a slope claim (CONFIRMED but non-specific), not the e/d bookkeeping identity; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/hypothesis_verdicts.csv] (paper_draft.md L969)
+~~**M2 (endorsement/divergence decomposition): the consensus signal decomposes into endorsement (e = fraction of errors endorsed by the majority) and divergence (d = fraction of correct items that diverge from the majority). On E, e should be low and d should be moderate, meaning the consensus works primarily because errors are NOT endorsed, not because correct items converge perfectly.** On E (R_AB, MAJ rule): e = 0.124, d = 0.537. On R_COMP: e = 0.0, d = 0.260. Both datasets show low e and moderate d. Verdict: **CONFIRMED**.~~ [Correction, iter 4: M2 is pre-registered as a slope claim (CONFIRMED but non-specific), not the e/d bookkeeping identity; source ../../../round-3/evaluation-2/src/tables/hypothesis_verdicts.csv] (paper_draft.md L969)
 
-~~| 1 | 0.685 | $0.000024 |~~ [Correction, iter 4: the cost column was per-candidate arithmetic mislabelled as per sentence; per-sentence k-pool costs are in the table below; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv] (paper_draft.md L979)
+~~| 1 | 0.685 | $0.000024 |~~ [Correction, iter 4: the cost column was per-candidate arithmetic mislabelled as per sentence; per-sentence k-pool costs are in the table below; source ../../../round-4/evaluation-3/src/tables/cost_units.csv] (paper_draft.md L979)
 
-~~This has practical significance: a consensus metric with 3 peer families costs $0.000073 per sentence, compared to $0.000049 for the flash-lite judge.~~ [Correction, iter 4: unit error: a 3-family pool costs $0.000946<!-- n:cost_k3 --> per SENTENCE (FULL), vs flash-lite $4.9e-5<!-- n:cost_flash --> per item-call; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv] (paper_draft.md L986)
+~~This has practical significance: a consensus metric with 3 peer families costs $0.000073 per sentence, compared to $0.000049 for the flash-lite judge.~~ [Correction, iter 4: unit error: a 3-family pool costs $0.000946<!-- n:cost_k3 --> per SENTENCE (FULL), vs flash-lite $4.9e-5<!-- n:cost_flash --> per item-call; source ../../../round-4/evaluation-3/src/tables/cost_units.csv] (paper_draft.md L986)
 
 **Corrected text (pre-registered definitions, eval 2 `prereg_mech.json`; development data E):**
 
@@ -174,22 +115,22 @@ Replaces: paper_draft.md `### 3.5 Test T4: Mechanism verification and hypothesis
 | 5 | 0.776<!-- n:ev2_k5 --> | 0.698<!-- n:ev2_k5_T3 --> | $0.001576<!-- n:cost_k5 --> |
 | 7 | 0.784<!-- n:ev2_k7 --> | 0.726<!-- n:ev2_k7_T3 --> | $0.002206<!-- n:cost_k7 --> |
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/results/part_a.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/hypothesis_verdicts.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/prereg_mech.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/README.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv`
+Sources: `../../../round-3/evaluation-2/src/results/part_a.json`; `../../../round-3/evaluation-2/src/tables/hypothesis_verdicts.csv`; `../../../round-3/evaluation-2/src/prereg_mech.json`; `../../../round-3/evaluation-2/src/README.md`; `../../../round-4/evaluation-3/src/tables/cost_units.csv`
 
 
 ## 4. Iteration-1/2 corrections applied in place
 
 Replaces: the listed sentences in paper_draft.md §1.4, §1.5 and §2.5 (line numbers in each marker).
 
-- ~~The ΔAUROC over the cheap judge is +0.024 [−0.075, 0.111], not significant.~~ [Correction, iter 4: C4: under panel labels the frontier-judge advantage STRENGTHENS (see corrections_iter12.csv row C4); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv] (paper_draft.md L274)
+- ~~The ΔAUROC over the cheap judge is +0.024 [−0.075, 0.111], not significant.~~ [Correction, iter 4: C4: under panel labels the frontier-judge advantage STRENGTHENS (see corrections_iter12.csv row C4); source ../../../round-4/evaluation-3/src/tables/corrections_iter12.csv] (paper_draft.md L274)
 
-- ~~The frontier judge (Gemini 3.1 Pro) adds nothing significant over the cheap judge.~~ [Correction, iter 4: C4: the frontier advantage is n.s. only under solver labels; under panel labels it STRENGTHENS; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv] (paper_draft.md L385)
+- ~~The frontier judge (Gemini 3.1 Pro) adds nothing significant over the cheap judge.~~ [Correction, iter 4: C4: the frontier advantage is n.s. only under solver labels; under panel labels it STRENGTHENS; source ../../../round-4/evaluation-3/src/tables/corrections_iter12.csv] (paper_draft.md L385)
 
-- ~~The frontier judge advantage is large under adjudicated labels (+0.166 AUROC over the cheap judge under R_ADJ_AB, p < 0.001), reversing the non-significant iteration-1 finding under solver labels.~~ [Correction, iter 4: 'reversing' overstates: the iteration-1 solver-label advantage was already positive; the panel-label result STRENGTHENS it (C4); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv] (paper_draft.md L572)
+- ~~The frontier judge advantage is large under adjudicated labels (+0.166 AUROC over the cheap judge under R_ADJ_AB, p < 0.001), reversing the non-significant iteration-1 finding under solver labels.~~ [Correction, iter 4: 'reversing' overstates: the iteration-1 solver-label advantage was already positive; the panel-label result STRENGTHENS it (C4); source ../../../round-4/evaluation-3/src/tables/corrections_iter12.csv] (paper_draft.md L572)
 
-- [Correction, iter 4: the common-set size must be read from evaluation 1's tables (corrections_iter12.csv); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv] (original sentence not found in paper_draft.md)
+- [Correction, iter 4: the common-set size must be read from evaluation 1's tables (corrections_iter12.csv); source ../../../round-4/evaluation-3/src/tables/corrections_iter12.csv] (original sentence not found in paper_draft.md)
 
-- ~~(d) Re-fit the PEER+TEXT fusion under R_ADJ labels (the current fusion was fitted under solver labels, which penalise it).~~ [Correction, iter 4: the fused score was calibrated on track H, not 'fitted under solver labels' (corrections_iter12.csv); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv] (paper_draft.md L624)
+- ~~(d) Re-fit the PEER+TEXT fusion under R_ADJ labels (the current fusion was fitted under solver labels, which penalise it).~~ [Correction, iter 4: the fused score was calibrated on track H, not 'fitted under solver labels' (corrections_iter12.csv); source ../../../round-4/evaluation-3/src/tables/corrections_iter12.csv] (paper_draft.md L624)
 
 The corrections table (verbatim; every row machine-verified by eval 3 against its source path):
 
@@ -206,7 +147,7 @@ The corrections table (verbatim; every row machine-verified by eval 3 against it
 | C6 | report: P4 compared fused RENAME FA 0.385 with FOL-Triage '0.013' | FA vs FA: PEER+TEXT fused RENAME FA 0.385 vs FOL-Triage fused RENAME FA 0.22; 0.013 was FOL-Triage's FLIP rate (0.0133) | True |<!-- v:corrections_iter12.csv -->
 | C7 | iteration-2 report spend statement | total $4.229 = exp5 (costs.jsonl judge 0.0008 + E_l3_q.jsonl L3 0.1544; README states $0.155) $0.155 + exp6 (analysis_E.json api_spend_total_usd) $0.000 + dataset2 (cost_ledger.jsonl sum cost_usd) $3.660 + dataset3 (cost_ledger.jsonl sum cost_usd) $0.414 + eva… | True |<!-- v:corrections_iter12.csv -->
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/corrections_iter12.csv`
+Sources: `../../../round-4/evaluation-3/src/tables/corrections_iter12.csv`
 
 
 ## 5. Placeholder → real artifact IDs
@@ -243,7 +184,7 @@ sed -i '957s/\[ARTIFACT:art_evaluation_2\]/[ARTIFACT:art_FWy8D4_y9GBn]/' paper_d
 
 Artifacts with NO marker in the paper (the paper step must add one where their results are cited): `art_VIF75I5R6f0v`. The research artifact `art_VIF75I5R6f0v` gets its own section (section 7 below).
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_report_text/gen_report_text/paper_draft.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/artifact_id_map.csv`
+Sources: `../../../round-4/report-text/paper_draft.md`; `../../../round-4/evaluation-3/src/tables/artifact_id_map.csv`
 
 
 ## 6. §3.7 Hypothesis verdicts (new section)
@@ -277,7 +218,7 @@ Iteration-4 rows (development data E / PERTURB; PROVISIONAL where stated):
 | E2 confirmation cells | NOT TESTABLE (0<!-- n:d4_cor --> CORRECT rows) | `testability_E2.json`, `sealed/labels_E2.jsonl` |
 | R_COMP FREE criterion (c) | NOT TESTABLE (0<!-- n:d5_cor --> CORRECT rows; gloss not run) | `testability_FREE_v2.json` |
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/hypothesis_verdicts_iter3.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/csc_gate_P.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/testability_E2.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/testability_FREE_v2.json`
+Sources: `../../../round-4/evaluation-3/src/tables/hypothesis_verdicts_iter3.csv`; `../../../round-4/experiment-9/src/csc_gate_E.json`; `../../../round-4/experiment-10/src/results/csc_gate_P.json`; `../../../round-4/dataset-4/src/testability_E2.json`; `../../../round-4/dataset-5/src/results/testability_FREE_v2.json`
 
 
 ## 7. Prior-art positioning [ARTIFACT:art_VIF75I5R6f0v] (new section)
@@ -302,17 +243,17 @@ Insert as §3.x. The research artifact's scoop rule, neighbour table and C1–C5
 
 **Two sentences to add under the iteration-4 claims:**
 
-- Under §4.3's shared-vocabulary result: supplying a predicate list is a documented NL→FOL lever — Vossel et al. (`arXiv:2509.22338`) report that "predicate availability boosts performance by 15-20%"<!-- v:vossel.md --> (verbatim quote verified in `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_research_1/notes/full/vossel.md`), and ARc (`arXiv:2511.09008`) scores translations over a fixed shared schema precisely so that k translations can be compared. What SIGPROXY adds is only a measured d reduction (0.149<!-- n:x10_d_cued --> cued vs 0.757<!-- n:x10_d_uncued --> uncued on the same long templated bases, −0.608 [−0.716, −0.500]<!-- n:x10_d_diff -->) in the controlled-vocabulary regime the user excluded.
+- Under §4.3's shared-vocabulary result: supplying a predicate list is a documented NL→FOL lever — Vossel et al. (`arXiv:2509.22338`) report that "predicate availability boosts performance by 15-20%"<!-- v:vossel.md --> (verbatim quote verified in `../../../round-3/research-1/src/notes/full/vossel.md`), and ARc (`arXiv:2511.09008`) scores translations over a fixed shared schema precisely so that k translations can be compared. What SIGPROXY adds is only a measured d reduction (0.149<!-- n:x10_d_cued --> cued vs 0.757<!-- n:x10_d_uncued --> uncued on the same long templated bases, −0.608 [−0.716, −0.500]<!-- n:x10_d_diff -->) in the controlled-vocabulary regime the user excluded.
 - Under §4.2's anchoring result: peers given the candidate's symbols copying its errors is the correlated-failure mode of N-version programming (Chen & Avizienis, `FTCS-8`). The new element is the per-class e measurement; its sharpest contrast, MEANING_RENAME-type, is CSC 0.821<!-- n:x9_t9_MR_CSC --> vs FREE_exact 0.036<!-- n:x9_t9_MR_FREE_exact -->, but against FREE_ALIGN (the aligner c_score_align uses) the difference is only +0.071 [−0.083, 0.269]<!-- n:x9_t9_mr_d --> (n.s.: CI covers 0), NOT_READ.
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/prior_art.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_research_1/research_report.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_research_1/notes/full/vossel.md`
+Sources: `../../../round-4/evaluation-3/src/tables/prior_art.csv`; `../../../round-3/research-1/src/research_report.md`; `../../../round-3/research-1/src/notes/full/vossel.md`
 
 
 ## 8. §4.1 Reasoning block (new; opens §4)
 
 Replaces: paper_draft.md `### 4.1 Strategy`, lines 1031-1036 (the reasoning block below goes before the strategy paragraph).
 
-~~Pre-registered gates for CSC (experiment 9, sha256 in prereg): G1 (d slope non-positive), G2 (strat AUROC ≥ 0.700 on E), G3-E (E2 confirmation), G5 (cost ≤ $0.002/candidate).~~ [Correction, iter 4: the gates are quoted verbatim from the prereg below; G2 is not a fixed-AUROC bar and G3-E is the RENAME_SYN false-alarm gate, not E2 confirmation; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/prereg_csc_E.json] (paper_draft.md L1035)
+~~Pre-registered gates for CSC (experiment 9, sha256 in prereg): G1 (d slope non-positive), G2 (strat AUROC ≥ 0.700 on E), G3-E (E2 confirmation), G5 (cost ≤ $0.002/candidate).~~ [Correction, iter 4: the gates are quoted verbatim from the prereg below; G2 is not a fixed-AUROC bar and G3-E is the RENAME_SYN false-alarm gate, not E2 confirmation; source ../../../round-4/experiment-9/src/prereg_csc_E.json] (paper_draft.md L1035)
 
 **Why iteration 4 did what it did.**
 1. The previous review scored the record 3<!-- n:rv3_score --> (blocking) with 12<!-- n:rv3_n --> critiques; eval 3 Part 4 was built to answer its record items (corrected verdicts, cost units, artifact IDs).
@@ -337,7 +278,7 @@ Replaces: paper_draft.md `### 4.1 Strategy`, lines 1031-1036 (the reasoning bloc
 
    Actual: exp 9 $0.108<!-- n:x9_spend -->, exp 10 $0.0000088<!-- n:x10_spend -->, dataset 4 $0.241<!-- n:d4_spend -->, dataset 5 $0<!-- n:sp_d5 -->, eval 3 no ledger (CPU only). The platform refused paid calls at the first HTTP 403 (section 14 gives the time and the evidenced vs unaccounted spend).
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/review_report/review_report/.terminal_claude_agent_struct_out.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_strat/gen_strat_1/.terminal_claude_agent_struct_out.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/prereg_csc_E.json`
+Sources: `../../../round-3/review/.terminal_claude_agent_struct_out.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_strat/gen_strat_1/.terminal_claude_agent_struct_out.json`; `../../../round-4/experiment-9/src/prereg_csc_E.json`
 
 
 ## 9. §4.2 Experiment 9, CSC on DEVELOPMENT set E: re-transcribed
@@ -346,19 +287,19 @@ Replaces: paper_draft.md `### 4.2 Experiment 9: CSC on held-out E (T6-E) — neg
 
 ~~### 4.2 Experiment 9: CSC on held-out E (T6-E) — negative result~~ [Correction, iter 4: E is DEVELOPMENT data; heading becomes "§4.2 Experiment 9: CSC on development set E — provisional negative"; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json] (paper_draft.md L1037)
 
-~~| **CSC** | **0.614 [0.545, 0.679]** |~~ [Correction, iter 4: every CI in the headline table was narrower than the source; the T4 table below is transcribed from analysis.json; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json] (paper_draft.md L1063)
+~~| **CSC** | **0.614 [0.545, 0.679]** |~~ [Correction, iter 4: every CI in the headline table was narrower than the source; the T4 table below is transcribed from analysis.json; source ../../../round-4/experiment-9/src/results/analysis.json] (paper_draft.md L1063)
 
-~~| COMPOUND | 0.643 | 0.246 |~~ [Correction, iter 4: COMPOUND e_CSC / e_FREE_exact are 0.282<!-- n:x9_t9_COMPOUND_CSC --> / 0.107<!-- n:x9_t9_COMPOUND_FREE_exact --> (T9); the struck values were a different quantity; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json] (paper_draft.md L1079)
+~~| COMPOUND | 0.643 | 0.246 |~~ [Correction, iter 4: COMPOUND e_CSC / e_FREE_exact are 0.282<!-- n:x9_t9_COMPOUND_CSC --> / 0.107<!-- n:x9_t9_COMPOUND_FREE_exact --> (T9); the struck values were a different quantity; source ../../../round-4/experiment-9/src/results/analysis.json] (paper_draft.md L1079)
 
-~~The M3-style length interaction for CSC is negative: −0.232 [−0.417, −0.041] (CSC vs flash-lite judge).~~ [Correction, iter 4: M3 under both specifications: bootstrap −0.232 [−0.770, −0.023]<!-- n:x9_m3_boot -->, stacked GEE −0.351 [−0.694, −0.009]<!-- n:x9_m3_gee -->; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json] (paper_draft.md L1085)
+~~The M3-style length interaction for CSC is negative: −0.232 [−0.417, −0.041] (CSC vs flash-lite judge).~~ [Correction, iter 4: M3 under both specifications: bootstrap −0.232 [−0.770, −0.023]<!-- n:x9_m3_boot -->, stacked GEE −0.351 [−0.694, −0.009]<!-- n:x9_m3_gee -->; source ../../../round-4/experiment-9/src/results/analysis.json] (paper_draft.md L1085)
 
-~~| G2 (strat AUROC ≥ 0.700) | **FAIL** (0.614) |~~ [Correction, iter 4: G2 is NOT_READ (R_AB part FAIL; L25 below the readable cell size); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json] (paper_draft.md L1092)
+~~| G2 (strat AUROC ≥ 0.700) | **FAIL** (0.614) |~~ [Correction, iter 4: G2 is NOT_READ (R_AB part FAIL; L25 below the readable cell size); source ../../../round-4/experiment-9/src/csc_gate_E.json] (paper_draft.md L1092)
 
-~~| G3-E (E2 confirmation) | NOT_RUN (E2 not testable) |~~ [Correction, iter 4: G3-E is the RENAME_SYN false-alarm gate: NOT_RUN; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/prereg_csc_E.json] (paper_draft.md L1093)
+~~| G3-E (E2 confirmation) | NOT_RUN (E2 not testable) |~~ [Correction, iter 4: G3-E is the RENAME_SYN false-alarm gate: NOT_RUN; source ../../../round-4/experiment-9/src/prereg_csc_E.json] (paper_draft.md L1093)
 
-~~CSC degrades the decision boundary relative to the FREE baseline.~~ [Correction, iter 4: NET is the within-arm change from words T1 to T3; every arm degrades (FULL FREE_exact +0.452<!-- n:x9_net_fx -->, FREE_align +0.401<!-- n:x9_net_fa -->); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json] (paper_draft.md L1105)
+~~CSC degrades the decision boundary relative to the FREE baseline.~~ [Correction, iter 4: NET is the within-arm change from words T1 to T3; every arm degrades (FULL FREE_exact +0.452<!-- n:x9_net_fx -->, FREE_align +0.401<!-- n:x9_net_fa -->); source ../../../round-4/experiment-9/src/results/analysis.json] (paper_draft.md L1105)
 
-~~CSC fails both quality gates. It is a dead end for the same reason it was promising: sharing the candidate's vocabulary helps correct candidates converge (reducing d) but also helps incorrect candidates recruit agreement (raising e).~~ [Correction, iter 4: 'dead end' becomes 'provisional negative on a completion-selected subset; L25 and RENAME untested'; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json] (paper_draft.md L1096)
+~~CSC fails both quality gates. It is a dead end for the same reason it was promising: sharing the candidate's vocabulary helps correct candidates converge (reducing d) but also helps incorrect candidates recruit agreement (raising e).~~ [Correction, iter 4: 'dead end' becomes 'provisional negative on a completion-selected subset; L25 and RENAME untested'; source ../../../round-4/experiment-9/src/csc_gate_E.json] (paper_draft.md L1096)
 
 **Population and selection.** The platform refused paid calls after 1,033<!-- n:x9_calls_done --> of ~9,000<!-- n:x9_calls_plan --> planned peer calls, so CSC is scored on a COMPLETION-SELECTED subset: PRIMARY = 354<!-- n:x9_n --> R_AB rows (196<!-- n:x9_nerr --> ERROR / 158<!-- n:x9_ncor --> CORRECT, 144<!-- n:x9_nsent --> sentences). CTRL makes up 44.9%<!-- n:x9_ctrl_prim --> of PRIMARY CORRECT rows vs 27.4%<!-- n:x9_ctrl_full --> on FULL. No stratum reaches `50/50` (L25: 59<!-- n:x9_l25_err --> / 22<!-- n:x9_l25_cor -->), so L25 is NOT_READ. c_csc is almost binary (tie rate 0.986<!-- n:x9_tie -->). The prereg calls every gate PROVISIONAL. CIs: sentence-cluster percentile bootstrap, B = 2000, seed 0, stratified by source stratum (tables.md header).
 
@@ -410,24 +351,24 @@ MEANING_RENAME-type Δe CSC − FREE_ALIGN +0.071 [−0.083, 0.269]<!-- n:x9_t9_
 
 **Verdict wording.** "Provisional negative on a completion-selected subset; L25 and RENAME untested." CSC vs flash-lite and vs S4_full is n.s. on PRIMARY.
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/tables.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/prereg_csc_E.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/posthoc_phi_contamination.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/repro_checks.json`
+Sources: `../../../round-4/experiment-9/src/results/analysis.json`; `../../../round-4/experiment-9/src/tables.md`; `../../../round-4/experiment-9/src/csc_gate_E.json`; `../../../round-4/experiment-9/src/prereg_csc_E.json`; `../../../round-4/experiment-9/src/results/posthoc_phi_contamination.json`; `../../../round-4/experiment-9/src/results/repro_checks.json`
 
 
 ## 10. §4.3 Experiment 10 (CSC on PERTURB, budget-stopped): corrected
 
 Replaces: paper_draft.md `### 4.3 Experiment 10: CSC on PERTURB (T6-P) — budget exhausted`, lines 1107-1183
 
-~~FREE consensus achieves near-perfect recall on PERTURB (e ≈ 0, recall ≈ 1.0).~~ [Correction, iter 4: FREE-consensus recall ≈ 1 comes with base FA on verified-CORRECT bases of 0.712<!-- n:x10_bfa_calign --> / 0.803<!-- n:x10_bfa_fx_e --> / 0.986<!-- n:x10_bfa_fx_r --> / 0.757<!-- n:x10_bfa_fa_r --> (table below): that recall is trivial; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/d_by_length.csv] (paper_draft.md L1171)
+~~FREE consensus achieves near-perfect recall on PERTURB (e ≈ 0, recall ≈ 1.0).~~ [Correction, iter 4: FREE-consensus recall ≈ 1 comes with base FA on verified-CORRECT bases of 0.712<!-- n:x10_bfa_calign --> / 0.803<!-- n:x10_bfa_fx_e --> / 0.986<!-- n:x10_bfa_fx_r --> / 0.757<!-- n:x10_bfa_fa_r --> (table below): that recall is trivial; source ../../../round-4/experiment-10/src/results/d_by_length.csv] (paper_draft.md L1171)
 
-~~LOCAL2 (small 1.5-2B local peers) has substantial endorsement (0.276-0.341), consistent with weaker models failing to distinguish mutants from bases.~~ [Correction, iter 4: every LOCAL2 endorsement is an insufficient-peer tie at `c = 0.5` (tie share 0.341<!-- n:x10_l2_tie -->); excluding ties e is 0.012<!-- n:x10_l2_excl_own --> / 0.007<!-- n:x10_l2_excl_base -->; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/anchoring.csv] (paper_draft.md L1171)
+~~LOCAL2 (small 1.5-2B local peers) has substantial endorsement (0.276-0.341), consistent with weaker models failing to distinguish mutants from bases.~~ [Correction, iter 4: every LOCAL2 endorsement is an insufficient-peer tie at `c = 0.5` (tie share 0.341<!-- n:x10_l2_tie -->); excluding ties e is 0.012<!-- n:x10_l2_excl_own --> / 0.007<!-- n:x10_l2_excl_base -->; source ../../../round-4/experiment-10/src/results/anchoring.csv] (paper_draft.md L1171)
 
-~~The flash-lite judge endorses 12.4% of mutants, matching the iteration-3 E endorsement rate.~~ [Correction, iter 4: the judge misses 0.124<!-- n:x10_judge_e --> of PERTURB mutants; this is NOT END_MAJ e on real errors (a different quantity); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/anchoring.csv] (paper_draft.md L1171)
+~~The flash-lite judge endorses 12.4% of mutants, matching the iteration-3 E endorsement rate.~~ [Correction, iter 4: the judge misses 0.124<!-- n:x10_judge_e --> of PERTURB mutants; this is NOT END_MAJ e on real errors (a different quantity); source ../../../round-4/experiment-10/src/results/anchoring.csv] (paper_draft.md L1171)
 
-~~| free3 (independent vocab) | ALL | 3884 | 0.085 [0.058, 0.118] |~~ [Correction, iter 4: free3 on E is 0.123 [0.081, 0.169]<!-- n:x10_free3 -->; the pooled 0.085<!-- n:x10_free3_pool --> includes R_COMP rows at zero; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/typing_csc.csv] (paper_draft.md L1156)
+~~| free3 (independent vocab) | ALL | 3884 | 0.085 [0.058, 0.118] |~~ [Correction, iter 4: free3 on E is 0.123 [0.081, 0.169]<!-- n:x10_free3 -->; the pooled 0.085<!-- n:x10_free3_pool --> includes R_COMP rows at zero; source ../../../round-4/experiment-10/src/results/typing_csc.csv] (paper_draft.md L1156)
 
-~~All consensus variants flag RENAME controls at 85-100% FA.~~ [Correction, iter 4: most rename FA is base FA: the paired flip rates are the rename effect (c_align E SYN 0.182<!-- n:x10_flip_syn -->, NONCE 0.327<!-- n:x10_flip_nonce -->); controls split by base source below; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/controls_fa.csv] (paper_draft.md L1182)
+~~All consensus variants flag RENAME controls at 85-100% FA.~~ [Correction, iter 4: most rename FA is base FA: the paired flip rates are the rename effect (c_align E SYN 0.182<!-- n:x10_flip_syn -->, NONCE 0.327<!-- n:x10_flip_nonce -->); controls split by base source below; source ../../../round-4/experiment-10/src/results/controls_fa.csv] (paper_draft.md L1182)
 
-~~| FREE3_exact | 1.000 | 1.000 | 0.986 (R_COMP) | 0.986 (R_COMP) |~~ [Correction, iter 4: mixed sources: FREE3_exact REORDER / CONTRA FA on E is 0.842<!-- n:x10_reorder_e --> / 0.840<!-- n:x10_contra_e -->; on R_COMP 0.986<!-- n:x10_contra_r -->; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/controls_fa.csv] (paper_draft.md L1178)
+~~| FREE3_exact | 1.000 | 1.000 | 0.986 (R_COMP) | 0.986 (R_COMP) |~~ [Correction, iter 4: mixed sources: FREE3_exact REORDER / CONTRA FA on E is 0.842<!-- n:x10_reorder_e --> / 0.840<!-- n:x10_contra_e -->; on R_COMP 0.986<!-- n:x10_contra_r -->; source ../../../round-4/experiment-10/src/results/controls_fa.csv] (paper_draft.md L1178)
 
 **Status.** 0 CSC peers were generated (run budget refused the first call; spend $0.0000088<!-- n:x10_spend -->); G3-P, G4 and MT are UNTESTED, not failed. Zero-cost arms follow (development data).
 
@@ -465,16 +406,16 @@ The eval-3 table in section 1 gives a larger c_align NONCE flip (0.605<!-- n:pc_
 
 **T8 (R_COMP FREE, label-free).** ALIGN pairwise agreement among FREE candidates 0.219<!-- n:x10_t8_align -->.
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/tables.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/anchoring.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/controls_fa.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/d_by_length.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/typing_csc.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/rcomp_sig_csc.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/paired_cue_effect.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/api_cost_ledger.jsonl`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/review_report/review_report/audit/recompute_perturb_csc.json`
+Sources: `../../../round-4/experiment-10/src/results/tables.md`; `../../../round-4/experiment-10/src/results/anchoring.csv`; `../../../round-4/experiment-10/src/results/controls_fa.csv`; `../../../round-4/experiment-10/src/results/d_by_length.csv`; `../../../round-4/experiment-10/src/results/typing_csc.csv`; `../../../round-4/experiment-10/src/results/rcomp_sig_csc.json`; `../../../round-4/experiment-10/src/results/paired_cue_effect.csv`; `../../../round-4/experiment-10/src/results/api_cost_ledger.jsonl`; `../../../round-4/review/audit/recompute_perturb_csc.json`
 
 
 ## 11. §4.4 / §4.5 caveats (E2 and R_COMP FREE)
 
 Replaces: paper_draft.md `### 4.4 Dataset 4: E2 confirmation set — partial`, lines 1184-1201; Replaces: paper_draft.md `### 4.5 Dataset 5: R_COMP FREE name-free labels`, lines 1202-1230
 
-~~Gate balanced accuracies (P1 0.861, P3 0.875, R1 0.837) all pass the gate.~~ [Correction, iter 4: the drift stop rule is UNDECIDED (passes = False<!-- n:d4_passes -->): the replay was cut off; the combined agreement 0.394<!-- n:d4_comb --> counts unreplayed items, while on the replayed items majority agreement is 0.9725<!-- n:d4_repl -->; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/panel_drift_E2.json] (paper_draft.md L1198)
+~~Gate balanced accuracies (P1 0.861, P3 0.875, R1 0.837) all pass the gate.~~ [Correction, iter 4: the drift stop rule is UNDECIDED (passes = False<!-- n:d4_passes -->): the replay was cut off; the combined agreement 0.394<!-- n:d4_comb --> counts unreplayed items, while on the replayed items majority agreement is 0.9725<!-- n:d4_repl -->; source ../../../round-4/dataset-4/src/panel_drift_E2.json] (paper_draft.md L1198)
 
-~~Of 420 old tier-A ERROR rows, 297 are MAPPED (70.7%).~~ [Correction, iter 4: 'up to 70.7%<!-- n:d5_707 -->' (MAPPED is an upper bound: in the executor audit only 0.867<!-- n:d5_mapped_f --> of MAPPED rows are faithful); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/old_label_agreement.json] (paper_draft.md L1229)
+~~Of 420 old tier-A ERROR rows, 297 are MAPPED (70.7%).~~ [Correction, iter 4: 'up to 70.7%<!-- n:d5_707 -->' (MAPPED is an upper bound: in the executor audit only 0.867<!-- n:d5_mapped_f --> of MAPPED rows are faithful); source ../../../round-4/dataset-5/src/results/old_label_agreement.json] (paper_draft.md L1229)
 
 **E2 (dataset 4).** 550 sentences are frozen and sealed; a 30-sentence pilot gave 36<!-- n:d4_err --> ERROR / 274<!-- n:d4_unres --> UNRESOLVED (incl. gold-as-system) / 20<!-- n:d4_unp --> UNPARSEABLE / 0<!-- n:d4_cor --> CORRECT: no cell is testable. **Panel drift:** the stop rule is UNDECIDED. The replay was incomplete (32<!-- n:d4_trackh_repl --> of 192<!-- n:d4_trackh_n --> track-H judgements got ≥ 2 new votes); synthetic gate items agree 0.974<!-- n:d4_syn -->; on the 22<!-- n:d4_n22 --> replayed unambiguous track-H judgements today's panel flags 0.12<!-- n:d4_flag_today --> of original errors vs 0.84<!-- n:d4_flag_E --> in E — a drift ALARM on small n that came from the incomplete replay, whose replayed items agree 0.9725<!-- n:d4_repl -->. Iteration 5's E2-A decides it (`e2/E2_DRIFT_DECISION.json`). Spend $0.241<!-- n:d4_spend -->; projected completion $6.79<!-- n:d4_proj -->. Deviations D0–D7 (verbatim from `dataset_card.md`):
 
@@ -498,22 +439,22 @@ Replaces: paper_draft.md `### 4.4 Dataset 4: E2 confirmation set — partial`, l
 - **D8**: T8 reading choice resolved at the gloss level: converse-equivalent maps are stored with reading=converse; label CORRECT if some weak/strong map passes both checkers, else READING_CHOICE if some converse map does, else ERROR_GLOSS / UNRESOLVED_GLOSS<!-- v:deviations.json -->
 - **D9**: NO LLM CALL COULD BE MADE. The first gate call returned HTTP 403 aii_run_budget_exhausted ("AI Inventor per-run OpenRouter budget reached for Test idea: $7.04 of $7.00 spent by this run in that phase ... It does not reset while this run goes on"); the budget h<!-- v:deviations.json -->
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/panel_drift_E2.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/dataset_card.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/sealed/labels_E2.jsonl`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/pilot_projection.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/soundness_audit.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/old_label_agreement.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/deviations.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_5/results/testability_FREE_v2.json`
+Sources: `../../../round-4/dataset-4/src/panel_drift_E2.json`; `../../../round-4/dataset-4/src/dataset_card.md`; `../../../round-4/dataset-4/src/sealed/labels_E2.jsonl`; `../../../round-4/dataset-4/src/pilot_projection.json`; `../../../round-4/dataset-5/src/results/soundness_audit.json`; `../../../round-4/dataset-5/src/results/old_label_agreement.json`; `../../../round-4/dataset-5/src/deviations.json`; `../../../round-4/dataset-5/src/results/testability_FREE_v2.json`
 
 
 ## 12. §4.6 Evaluation 3 rewritten (wrong peers, not words)
 
 Replaces: paper_draft.md `### 4.6 Evaluation 3: T8 vocabulary analysis`, lines 1231-1269
 
-~~The predicted d_floor (0.402) closely matches the observed END_MAJ d (0.415), indicating that the Part-1 model accounts for the observed disagreement among correct translations.~~ [Correction, iter 4: the reverse: the post-hoc instruments predict almost no fix (bracket 0.396<!-- n:e3_br_lo -->–0.415<!-- n:e3_br_hi -->); the pre-registered gap_closed rule is ill-conditioned (denominator 0.013<!-- n:e3_denom -->); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/README.md] (paper_draft.md L1252)
+~~The predicted d_floor (0.402) closely matches the observed END_MAJ d (0.415), indicating that the Part-1 model accounts for the observed disagreement among correct translations.~~ [Correction, iter 4: the reverse: the post-hoc instruments predict almost no fix (bracket 0.396<!-- n:e3_br_lo -->–0.415<!-- n:e3_br_hi -->); the pre-registered gap_closed rule is ill-conditioned (denominator 0.013<!-- n:e3_denom -->); source ../../../round-4/evaluation-3/src/README.md] (paper_draft.md L1252)
 
-~~The R_exact AUROC (0.683) is the theoretical performance of cross-family exact-match consensus on R_COMP under independent vocabulary—substantially below the SIG condition's 0.952.~~ [Correction, iter 4: the struck number is d under the exact rule on E's 3-pool (0.683<!-- n:e3_683 -->); it is a divergence rate on E, not a ranking statistic and not R_COMP; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_rule_cuts.csv] (paper_draft.md L1252)
+~~The R_exact AUROC (0.683) is the theoretical performance of cross-family exact-match consensus on R_COMP under independent vocabulary—substantially below the SIG condition's 0.952.~~ [Correction, iter 4: the struck number is d under the exact rule on E's 3-pool (0.683<!-- n:e3_683 -->); it is a divergence rate on E, not a ranking statistic and not R_COMP; source ../../../round-4/evaluation-3/src/tables/p1_rule_cuts.csv] (paper_draft.md L1252)
 
-~~| R_exact AUROC | 0.683 |~~ [Correction, iter 4: row relabelled "d under R_exact (E 3-pool)"; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_rule_cuts.csv] (paper_draft.md L1248)
+~~| R_exact AUROC | 0.683 |~~ [Correction, iter 4: row relabelled "d under R_exact (E 3-pool)"; source ../../../round-4/evaluation-3/src/tables/p1_rule_cuts.csv] (paper_draft.md L1248)
 
-~~**NOT VALIDATED.** The Part-1 model systematically underestimates d in the FREE regime, because it does not account for vocabulary-driven non-transitivity of equivalence (FREE nontransitivity rate: 0.131; SIG: 0.000).~~ [Correction, iter 4: the method UNDER-COUNTS vocabulary effects (predicted endorsement 0.20<!-- n:e3_pred_rate --> vs actual SIG 0.575<!-- n:e3_sig_rate -->); non-transitivity (0.131<!-- n:e3_nontrans -->) is a separate diagnostic; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part2.json] (paper_draft.md L1260)
+~~**NOT VALIDATED.** The Part-1 model systematically underestimates d in the FREE regime, because it does not account for vocabulary-driven non-transitivity of equivalence (FREE nontransitivity rate: 0.131; SIG: 0.000).~~ [Correction, iter 4: the method UNDER-COUNTS vocabulary effects (predicted endorsement 0.20<!-- n:e3_pred_rate --> vs actual SIG 0.575<!-- n:e3_sig_rate -->); non-transitivity (0.131<!-- n:e3_nontrans -->) is a separate diagnostic; source ../../../round-4/evaluation-3/src/results/part2.json] (paper_draft.md L1260)
 
-~~The Part-1 d_floor model closely matches observed d (0.402 predicted vs 0.415 observed) but is NOT VALIDATED against FREE data (calibration error −0.372).~~ [Correction, iter 4: the instruments are shown to under-count vocabulary effects (calibration error −0.372 [−0.423, −0.323]<!-- n:e3_calib -->); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part2.json] (paper_draft.md L1286)
+~~The Part-1 d_floor model closely matches observed d (0.402 predicted vs 0.415 observed) but is NOT VALIDATED against FREE data (calibration error −0.372).~~ [Correction, iter 4: the instruments are shown to under-count vocabulary effects (calibration error −0.372 [−0.423, −0.323]<!-- n:e3_calib -->); source ../../../round-4/evaluation-3/src/results/part2.json] (paper_draft.md L1286)
 
 **Main finding (label-based; no instrument needed).** Among pairs of a CORRECT candidate and a non-agreeing peer, 77%<!-- n:e3_77 --> (9 families) / 61%<!-- n:e3_61 --> (3-pool) of those peers are labelled ERROR, so d on E is mostly peer error, not vocabulary. Among CORRECT–CORRECT disagreements only 9%<!-- n:e3_9 --> are vocabulary-resolvable. Pair classes (9 families): IRREDUCIBLE 69.4%<!-- n:e3_irr -->, EXACT 13.6%<!-- n:e3_exact -->, ALIGN_ONLY 15.1%<!-- n:e3_align -->, VOCAB 1.6%<!-- n:e3_vocab -->, NAME_ONLY 0.3%<!-- n:e3_name -->.
 
@@ -525,7 +466,7 @@ Replaces: paper_draft.md `### 4.6 Evaluation 3: T8 vocabulary analysis`, lines 1
 
 **Power (iteration 5).** L25 yield 0.37<!-- n:pw_yield -->. MDE80 vs flash-lite disguised at 250 / 300 / 350 / 400 planned L25: 0.130<!-- n:pw_mde_250 --> / 0.119<!-- n:pw_mde_300 --> / 0.110<!-- n:pw_mde_350 --> / 0.103<!-- n:pw_mde_400 -->; power at the observed L25 Δ (+0.069<!-- n:t1_l25 -->): 0.32<!-- n:pw_pow_250 --> / 0.37<!-- n:pw_pow_300 --> / 0.42<!-- n:pw_pow_350 --> / 0.47<!-- n:pw_pow_400 --> (all MARGINAL). Detecting the observed L25 effect needs ~882<!-- n:pw_882 --> planned L25 sentences; the long pool needs ~237<!-- n:pw_237 --> usable sentences. R_COMP FREE needs ≥ 200<!-- n:e3_200 --> CORRECT rows. Eval-3 deviations D1–D10 are in its README; its reusable functions are in `function_inventory.csv` (section 16).
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/README.md`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part1.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part1_net.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/results/part2.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_rule_cuts.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/power_E2.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p3_planned_E2.csv`
+Sources: `../../../round-4/evaluation-3/src/README.md`; `../../../round-4/evaluation-3/src/results/part1.json`; `../../../round-4/evaluation-3/src/results/part1_net.json`; `../../../round-4/evaluation-3/src/results/part2.json`; `../../../round-4/evaluation-3/src/tables/p1_rule_cuts.csv`; `../../../round-4/evaluation-3/src/tables/p1_class_shares.csv`; `../../../round-4/evaluation-3/src/power_E2.json`; `../../../round-4/evaluation-3/src/tables/p3_planned_E2.csv`
 
 
 ## 13. ONE cost table (units explicit)
@@ -553,24 +494,24 @@ Replaces: every cost statement in §3.3, §3.5, §3.6 and §4.6 (markers in sect
 
 The frontier judge costs 30.2<!-- n:rv_frontier_x -->× the consensus score per ITEM (FULL); the ratio struck in section 2 mixed a per-call judge price with a per-candidate generation price.
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/pilot_projection.json`
+Sources: `../../../round-4/evaluation-3/src/tables/cost_units.csv`; `../../../round-4/experiment-9/src/csc_gate_E.json`; `../../../round-4/dataset-4/src/pilot_projection.json`
 
 
 ## 14. Iteration-4 spend table (ledgers only)
 
 Replaces: the three different budget statements in §4.1–§4.4 (`budget event at $0.108`, `run-wide budget exhausted by earlier artifacts`, `exhausted at 07:26 UTC`).
 
-Method: every `*ledger*.json(l)` and `budget_state.json` under the run root was read (60 files; 13 byte-identical copies dropped, e.g. repo clones), and records were de-duplicated across files by (second, model, cost). Window: 2026-09-24T01:13:50+00:00 (earliest iteration-4 ledger record minus 6 h) to 2026-09-24T07:26:41+00:00 (first HTTP 403 budget refusal, `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4/logs/gate.log`).
+Method: every `*ledger*.json(l)` and `budget_state.json` under the run root was read (60 files; 13 byte-identical copies dropped, e.g. repo clones), and records were de-duplicated across files by (second, model, cost). Window: 2026-09-24T01:13:50+00:00 (earliest iteration-4 ledger record minus 6 h) to 2026-09-24T07:26:41+00:00 (first HTTP 403 budget refusal, `../../../round-4/dataset-4/src/logs/gate.log`).
 
 | artifact (ledger dir) | $ in window | records |
 |-|-|-|
-| `3_invention_loop/iter_3/gen_art/gen_art_experiment_6` | $2.3953<!-- n:spend_loop_iter_3_gen_art_gen_art_experiment_6 --> | 36926 |
-| `3_invention_loop/iter_3/gen_art/gen_art_experiment_7` | $1.5974<!-- n:spend_loop_iter_3_gen_art_gen_art_experiment_7 --> | 11389 |
-| `3_invention_loop/iter_3/gen_art/gen_art_experiment_8` | $0.3452<!-- n:spend_loop_iter_3_gen_art_gen_art_experiment_8 --> | 6710 |
-| `3_invention_loop/iter_4/gen_art/gen_art_dataset_4` | $0.2409<!-- n:spend_on_loop_iter_4_gen_art_gen_art_dataset_4 --> | 412 |
-| `3_invention_loop/iter_4/gen_art/gen_art_experiment_9` | $0.1082<!-- n:spend_loop_iter_4_gen_art_gen_art_experiment_9 --> | 1166 |
-| `3_invention_loop/iter_4/gen_art/gen_art_experiment_10` | $0.0000<!-- n:spend_oop_iter_4_gen_art_gen_art_experiment_10 --> | 2 |
-| `3_invention_loop/iter_3/gen_art/gen_art_research_1` | $0.0000<!-- n:spend_n_loop_iter_3_gen_art_gen_art_research_1 --> | 8 |
+| `round-3/experiment-6/src` | $2.3953<!-- n:spend_loop_iter_3_gen_art_gen_art_experiment_6 --> | 36926 |
+| `round-3/experiment-7/src` | $1.5974<!-- n:spend_loop_iter_3_gen_art_gen_art_experiment_7 --> | 11389 |
+| `round-3/experiment-8/src` | $0.3452<!-- n:spend_loop_iter_3_gen_art_gen_art_experiment_8 --> | 6710 |
+| `round-4/dataset-4/src` | $0.2409<!-- n:spend_on_loop_iter_4_gen_art_gen_art_dataset_4 --> | 412 |
+| `round-4/experiment-9/src` | $0.1082<!-- n:spend_loop_iter_4_gen_art_gen_art_experiment_9 --> | 1166 |
+| `round-4/experiment-10/src` | $0.0000<!-- n:spend_oop_iter_4_gen_art_gen_art_experiment_10 --> | 2 |
+| `round-3/research-1/src` | $0.0000<!-- n:spend_n_loop_iter_3_gen_art_gen_art_research_1 --> | 8 |
 
 - Iteration-4 artifacts: $0.349<!-- n:spend_iter4 --> (exp 9 $0.108<!-- n:x9_spend -->, exp 10 $0.0000088<!-- n:x10_spend -->, dataset 4 $0.241<!-- n:d4_spend -->, dataset 5 $0<!-- n:sp_d5 -->; eval 3 has no ledger, CPU only).
 - Other artifacts whose ledger records fall inside the same window: $4.338<!-- n:spend_other --> (iteration-3 experiments). The ledgers do not record which phase budget these calls were charged to; this table does not attribute them.
@@ -585,14 +526,14 @@ Sources: `results/spend_iter4.json`; `src/spend.py`
 
 Replaces: the "Dead ends accumulated across all iterations" table in §4.7.
 
-~~| Name-free consensus (c_nf) | 2-3 | SWAP recall 0.512 (sacrifices structural-error detection) |~~ [Correction, iter 4: the reason is the pre-registered selection failure (PERTURB RENAME_SYN / NONCE FA, selection rule without paired flip, 0.686<!-- n:e8_nf_syn --> / 0.485<!-- n:e8_nf_nonce -->) plus blindness to MEANING_RENAME (0.499<!-- n:e8_cnf_mr -->); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/selection.json] (paper_draft.md L1300)
+~~| Name-free consensus (c_nf) | 2-3 | SWAP recall 0.512 (sacrifices structural-error detection) |~~ [Correction, iter 4: the reason is the pre-registered selection failure (PERTURB RENAME_SYN / NONCE FA, selection rule without paired flip, 0.686<!-- n:e8_nf_syn --> / 0.485<!-- n:e8_nf_nonce -->) plus blindness to MEANING_RENAME (0.499<!-- n:e8_cnf_mr -->); source ../../../round-3/experiment-8/src/results/selection.json] (paper_draft.md L1300)
 
 | dead end | iteration | reason | source |
 |-|-|-|-|
 | Rename-invariant selection (NF-anchored and HYB) | 3 | both INELIGIBLE (FA-only selection rule, no flip): RENAME_SYN / NONCE FA NF 0.686<!-- n:e8_nf_syn --> / 0.485<!-- n:e8_nf_nonce -->, HYB 0.841<!-- n:e8_hyb_syn --> / 0.700<!-- n:e8_hyb_nonce -->; nothing frozen | `rename_selection_dead_end.csv`, `selection.json` |
 | Name-free consensus `c_nf` | 2-3 | pre-registered selection failure + MEANING_RENAME blindness (0.499<!-- n:e8_cnf_mr -->) | `selection.json`, `perturb_sensitivity.csv` |
 | Candidate B1 | 1 | planned, never ran (workspace holds 0<!-- n:b1_files --> files — empty) | `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_2` |
-| FOL-Triage fused score | 1 | fails the rewrite-FA gate (worst-family FA 0.275<!-- n:iter1_triage_fa --> vs a `0.10` bar; equals the FA on originals) | `iter_1/gen_art/gen_art_experiment_1/README.md` |
+| FOL-Triage fused score | 1 | fails the rewrite-FA gate (worst-family FA 0.275<!-- n:iter1_triage_fa --> vs a `0.10` bar; equals the FA on originals) | `round-1/experiment-1/src/README.md` |
 | P2 / P4 (exp 5) | 2 | P2 REFUTED, P4 REFUTED<!-- v:p_tests.json --> | `p_tests.json` |
 | B2 decomposed z3 reader | 2 | gate failure: balanced accuracy 0.476<!-- n:ev2_b2_gate --> | `b2_dead_end.csv`, eval-2 `hypothesis_verdicts.csv` |
 | R_ADJ LLM adjudicator | 2 | gate failure: Sonnet-5 balanced accuracy 0.767<!-- n:ev2_radj_all --> overall, 0.662<!-- n:ev2_radj_h --> on expert track-H | `radj_gate.csv`, eval-2 `hypothesis_verdicts.csv` |
@@ -601,7 +542,7 @@ Replaces: the "Dead ends accumulated across all iterations" table in §4.7.
 | CSC arms and the panel route for R_COMP FREE | 4→5 | CLOSED by the iteration-5 hypothesis | iter_4 `upd_hypo` |
 | Vocabulary-divergence diagnosis of iteration 3 | 3→4 | refuted on E by the label-based decomposition (section 12) | eval 3 `p1_class_shares.csv` |
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/rename_selection_dead_end.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/selection.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_sensitivity.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/p_tests.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/b2_dead_end.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/tables/radj_gate.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/csc_gate_E.json`
+Sources: `../../../round-4/evaluation-3/src/tables/rename_selection_dead_end.csv`; `../../../round-3/experiment-8/src/results/selection.json`; `../../../round-3/experiment-8/src/results/perturb_sensitivity.csv`; `../../../round-2/experiment-5/src/results/p_tests.json`; `../../../round-3/evaluation-2/src/tables/b2_dead_end.csv`; `../../../round-3/evaluation-2/src/tables/radj_gate.csv`; `../../../round-4/experiment-9/src/csc_gate_E.json`
 
 
 ## 16. Coverage against the request (iteration 4 update + iteration-5 pending cells)
@@ -763,7 +704,7 @@ Function inventory (verbatim; `oracle`, `exhaustive_map_label`, `gloss_decision`
 | t8_classes.py | name_only_eq | See module docstring. |<!-- v:function_inventory.csv -->
 | t8_classes.py | work_name_only |  |<!-- v:function_inventory.csv -->
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/coverage_vs_request_iter3.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/function_inventory.csv`
+Sources: `../../../round-4/evaluation-3/src/tables/coverage_vs_request_iter3.csv`; `../../../round-4/evaluation-3/src/tables/function_inventory.csv`
 
 
 ## 17. "What we have learned" (draft replacement)
@@ -772,14 +713,14 @@ Replaces: paper_draft.md `## What we have learned so far`, lines 1307-1326
 
 ~~It achieves stratified AUROC 0.741 on held-out E, beating the best cheap LLM judge (0.642) by +0.099 [+0.049, +0.146] and adding +0.039 [+0.021, +0.057] beyond a 28-feature baseline stack.~~ [Correction, iter 4: E is DEVELOPMENT data (it was used to choose the method); nothing on E is confirmation; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json] (paper_draft.md L1309)
 
-~~On long composed sentences with trusted references (R_COMP), it reaches 0.954 within-template AUROC with zero error endorsement.~~ [Correction, iter 4: out-of-scope SIG (controlled vocabulary) result; not evidence for the user's operating condition; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/t2_record.csv] (paper_draft.md L1309)
+~~On long composed sentences with trusted references (R_COMP), it reaches 0.954 within-template AUROC with zero error endorsement.~~ [Correction, iter 4: out-of-scope SIG (controlled vocabulary) result; not evidence for the user's operating condition; source ../../../round-4/evaluation-3/src/tables/t2_record.csv] (paper_draft.md L1309)
 
-~~It achieves 96% of the frontier judge's discriminative power at 30× lower cost, and three peer families suffice for 97% of full-pool performance.~~ [Correction, iter 4: point estimate only: ratio 0.957 [0.887, 1.034]<!-- n:rv_frontier_ratio -->; and three families suffice overall but the long tercile needs k95 = 5<!-- n:ev2_k95_t3 -->; source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json] (paper_draft.md L1309)
+~~It achieves 96% of the frontier judge's discriminative power at 30× lower cost, and three peer families suffice for 97% of full-pool performance.~~ [Correction, iter 4: point estimate only: ratio 0.957 [0.887, 1.034]<!-- n:rv_frontier_ratio -->; and three families suffice overall but the long tercile needs k95 = 5<!-- n:ev2_k95_t3 -->; source ../../../round-3/experiment-6/src/results/analysis_T1.json] (paper_draft.md L1309)
 
-~~This creates a practical constraint: the consensus metric works well when a shared ontology or template vocabulary is available (as in R_COMP SIG, AUROC 0.954) but degrades when translators choose vocabulary independently (R_COMP FREE d_floor 0.402, theoretical AUROC 0.683).~~ [Correction, iter 4: both numbers are E quantities and neither is an AUROC; the vocabulary-divergence diagnosis is refuted on E (section 12); source /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_rule_cuts.csv] (paper_draft.md L1317)
+~~This creates a practical constraint: the consensus metric works well when a shared ontology or template vocabulary is available (as in R_COMP SIG, AUROC 0.954) but degrades when translators choose vocabulary independently (R_COMP FREE d_floor 0.402, theoretical AUROC 0.683).~~ [Correction, iter 4: both numbers are E quantities and neither is an AUROC; the vocabulary-divergence diagnosis is refuted on E (section 12); source ../../../round-4/evaluation-3/src/tables/p1_rule_cuts.csv] (paper_draft.md L1317)
 
 **Draft.** On DEVELOPMENT data E, frozen cross-family solver consensus (`c_score_align`) beats the disguised cheap API judge: strat Δ +0.099 [0.049, 0.146]<!-- n:t1_delta -->, long pool +0.116 [0.070, 0.163]<!-- n:t1_long -->, and it adds signal over a 28-feature stack only when nested (+0.039 [0.021, 0.057]<!-- n:t1_nested -->). On L25, the user's priority stratum, it is n.s. (+0.069 [−0.020, 0.148]<!-- n:t1_l25 -->). The frontier ratio 0.957 [0.887, 1.034]<!-- n:t1_ratio --> meets the 95% bar on the point estimate only. k95 = 3<!-- n:ev2_k95 --> peer families overall, but the long-sentence tercile needs 5<!-- n:ev2_k95_t3 -->. Consensus degrades with length (NET +0.356 [0.198, 0.493]<!-- n:ev2_net -->).
 
 The iteration-3 explanation — correct translations disagree about WORDS — is refuted on E: 77%<!-- n:e3_77 --> / 61%<!-- n:e3_61 --> of the peers that disagree with a correct candidate are themselves labelled ERROR, and only 9%<!-- n:e3_9 --> of correct–correct disagreement is vocabulary-resolvable. Every vocabulary bridge trades d for e: the aligner lowers FULL d from 0.583<!-- n:x9_full_d_fx --> to 0.328<!-- n:x9_full_d_fa --> but raises meaning-rename e from 0.104<!-- n:x9_t9b_mr_fx --> to 0.624<!-- n:x9_t9b_mr_fa -->; cueing peers with the candidate's symbols (CSC) lowers d to 0.139<!-- n:x9_d_csc --> but raises e to 0.459<!-- n:x9_e_csc -->. CSC is a **provisional negative on a completion-selected subset; L25 and RENAME untested**. Error typing is negative outside a shared vocabulary (free3 0.123<!-- n:x10_free3 -->). The SIG results (0.954<!-- n:t2_sig -->; SIGPROXY 0.930<!-- n:x10_sigproxy -->) are out of scope. Nothing here is confirmed; the confirmation verdict (CONFIRM / PARTIAL / DISCONFIRM) comes from E2, E2-B and R_COMP FREE in iteration 5 (skeleton_iter5.md).
 
-Sources: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/results/part_a.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/analysis.json`; `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_10/results/typing_csc.csv`
+Sources: `../../../round-3/experiment-6/src/results/analysis_T1.json`; `../../../round-3/evaluation-2/src/results/part_a.json`; `../../../round-4/evaluation-3/src/tables/p1_class_shares.csv`; `../../../round-4/experiment-9/src/results/analysis.json`; `../../../round-4/experiment-10/src/results/typing_csc.csv`

@@ -1,10 +1,6 @@
 > NOTE (published copy): this file names server paths this repository
 > does not publish (a stage it does not ship, or another run's workspace),
 > so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/selection.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/results/screen_E.json
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/gg_gate.json
 >   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/*/
 
 # §5 Iteration 5 — skeleton (cells are `{{file::json.path}}` shells)
@@ -74,10 +70,10 @@ ERROR TYPE (the user's 'which kind of error'):
 
 | quantity | value (shell) | resolution |
 |-|-|-|
-| decision (PASS/FAIL) | "PASS" (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
-| drift criteria (track-H flag rates etc.) | {"combined_majority_agreement": {"value": 0.9554, "threshold": 0.85, "n_items": 269, "ok": true}, "every_panel_model_id_ (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
-| replayed judgements / per-member agreement | {"synthetic_gate": 77, "trackh_judgements": 192, "combined": 269, "n_no_majority_new": 0} (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
-| pinned provider per panel model | {"anthropic/claude-haiku-4.5": {"order": ["Amazon Bedrock"], "allow_fallbacks": false}, "z-ai/glm-4.6": {"order": ["Veni (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
+| decision (PASS/FAIL) | "PASS" (from `../../experiment-11/src/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
+| drift criteria (track-H flag rates etc.) | {"combined_majority_agreement": {"value": 0.9554, "threshold": 0.85, "n_items": 269, "ok": true}, "every_panel_model_id_ (from `../../experiment-11/src/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
+| replayed judgements / per-member agreement | {"synthetic_gate": 77, "trackh_judgements": 192, "combined": 269, "n_no_majority_new": 0} (from `../../experiment-11/src/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
+| pinned provider per panel model | {"anthropic/claude-haiku-4.5": {"order": ["Amazon Bedrock"], "allow_fallbacks": false}, "z-ai/glm-4.6": {"order": ["Veni (from `../../experiment-11/src/e2/E2_DRIFT_DECISION.json`) | FIELD_PRESENT; FILLED (seal present) |
 
 ### §5.3 E2-A long-pool confirmation (PRIMARY, pre-declared)
 
@@ -126,15 +122,15 @@ ERROR TYPE (the user's 'which kind of error'):
 
 | quantity | value (shell) | resolution |
 |-|-|-|
-| variants screened / winner or NONE | "NONE: V0 stands" (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/selection.json`) | FIELD_PRESENT; FILLED (seal present) |
-| screen table (E long pool, L25, CTRL) | {"ALL-strat": {"V0_rep": {"delta": -0.0002918956959380159, "ci": [-0.000915901954164422, 0.0], "se": 0.00026602165526958 (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/results/screen_E.json`) | FIELD_PRESENT; FILLED (seal present) |
+| variants screened / winner or NONE | "NONE: V0 stands" (from `../../experiment-14/src/freeze/selection.json`) | FIELD_PRESENT; FILLED (seal present) |
+| screen table (E long pool, L25, CTRL) | {"ALL-strat": {"V0_rep": {"delta": -0.0002918956959380159, "ci": [-0.000915901954164422, 0.0], "se": 0.00026602165526958 (from `../../experiment-14/src/results/screen_E.json`) | FIELD_PRESENT; FILLED (seal present) |
 | winner − V0 on E2 long pool [CI] | {{improve_E2.json::delta_vs_V0.ci}} | FILE_MISSING |
 
 ### §5.8 H-RENAME / GG
 
 | quantity | value (shell) | resolution |
 |-|-|-|
-| GG dev gate PASS/FAIL (gloss model id, prompt sha) | "FAIL(g3)" (from `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/gg_gate.json`) | FIELD_PRESENT; FILLED (seal present) |
+| GG dev gate PASS/FAIL (gloss model id, prompt sha) | "FAIL(g3)" (from `../../experiment-14/src/freeze/gg_gate.json`) | FIELD_PRESENT; FILLED (seal present) |
 | RENAME_SYN paired flip on E2 CORRECT | {{rename_E2.json::RENAME_SYN.flip}} | FILE_MISSING |
 | c_score_align rename FA and flip on E2 | {{rename_E2.json::c_score_align}} | FILE_MISSING |
 

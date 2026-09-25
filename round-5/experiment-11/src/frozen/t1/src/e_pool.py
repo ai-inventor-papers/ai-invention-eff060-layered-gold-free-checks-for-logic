@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
 """Dataset E (held-out, iter-1 gen_art_dataset_1) loader with a LABEL-BLIND default, pool / label-regime definitions,
 deterministic sentence folds and the label-vector hash shared with the sibling PEER+TEXT experiment.
 
@@ -18,7 +14,7 @@ from pathlib import Path
 
 from .common import ROOT, sha1
 
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path(__file__).resolve().parents[6] / "round-1/dataset-1/src"
 PREREG = ROOT / "prereg_baselines.json"
 PREREG_SHA = ROOT / "prereg_baselines.sha256"
 SCORES = ROOT / "results" / "scores"

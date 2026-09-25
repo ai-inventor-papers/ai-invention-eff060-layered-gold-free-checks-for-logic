@@ -1,8 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/prereg.json
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data
 """lib/api.py: one entry point for every reusable NL->FOL faithfulness function of run_u75jRHUss0zo (iterations 1-5).
 
 Every function takes (text, fol) or a set of them. Each docstring states: MEASURES (what the number means),
@@ -33,8 +28,8 @@ LIB = Path(__file__).resolve().parent
 ROOT = LIB.parent
 VEND = LIB / "vendor"
 FREEZE = ROOT / "freeze"
-E5_PREREG = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/prereg.json")
-E8_NLTK = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data")
+E5_PREREG = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src/results/prereg.json"
+E8_NLTK = Path(__file__).resolve().parents[4] / "round-3/experiment-8/src/data/nltk_data"
 if str(FREEZE) not in sys.path:
     sys.path.insert(0, str(FREEZE))
 if E8_NLTK.exists():

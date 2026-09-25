@@ -12,10 +12,10 @@ Read-only absolute inputs, under `../../../`:
 
 | input | path |
 |---|---|
-| exp 7: scores (whitelist loader), judges, generations, sentences, NLTK data | `iter_3/gen_art/gen_art_experiment_7/...` |
-| eval 3: matrix records | `iter_4/gen_art/gen_art_evaluation_3/pairwise_classes_RCOMP.jsonl` |
-| eval 2: `consensus_mx.py`, `mechanism.py`, `stats.py`, imported unchanged | `iter_3/gen_art/gen_art_evaluation_2/src/` |
-| dataset 3: lexicon | `iter_2/gen_art/gen_art_dataset_3/lexicon.json` |
+| exp 7: scores (whitelist loader), judges, generations, sentences, NLTK data | `round-3/experiment-7/src/...` |
+| eval 3: matrix records | `round-4/evaluation-3/src/pairwise_classes_RCOMP.jsonl` |
+| eval 2: `consensus_mx.py`, `mechanism.py`, `stats.py`, imported unchanged | `round-3/evaluation-2/src/src/` |
+| dataset 3: lexicon | `round-2/dataset-3/src/lexicon.json` |
 
 These paths must exist, or the constants in `confirm/cc.py` and `labeller/src/common.py` must be edited.
 

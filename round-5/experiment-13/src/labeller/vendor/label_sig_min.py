@@ -1,8 +1,4 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/src/label_sig.py
-"""Extracted verbatim from /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/src/label_sig.py (sha256 390349ae0f20d8f2a288a9e2c96e436dd2de34599f0b8a172168a6a4a1499f3e): _to_str, _rename, _free_consts."""
+"""Extracted verbatim from ../../../../../round-3/experiment-7/src/src/label_sig.py (sha256 390349ae0f20d8f2a288a9e2c96e436dd2de34599f0b8a172168a6a4a1499f3e): _to_str, _rename, _free_consts."""
 from __future__ import annotations
 
 

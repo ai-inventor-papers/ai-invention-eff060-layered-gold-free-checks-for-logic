@@ -1,8 +1,4 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/src/perturb.py
-"""Extracted verbatim from /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/src/perturb.py (sha256 256d5937eb710159f1c6377e319e7db775f5547a0ffa3bf8a5660a93a254a155): name_tokens, wn_synonyms, meaning_rename, first_sense_synonyms, control_rename."""
+"""Extracted verbatim from ../../../../../../../round-2/dataset-3/src/src/perturb.py (sha256 256d5937eb710159f1c6377e319e7db775f5547a0ffa3bf8a5660a93a254a155): name_tokens, wn_synonyms, meaning_rename, first_sense_synonyms, control_rename."""
 from __future__ import annotations
 import random
 import re

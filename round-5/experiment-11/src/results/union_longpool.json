@@ -1,5 +1,5 @@
 {
- "marker": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_12/e2b/E2B_FINAL_READY.json",
+ "marker": "../../../experiment-12/src/e2b/E2B_FINAL_READY.json",
  "sha256_ok": true,
  "union_long_pool": {
   "n_rows": 94,

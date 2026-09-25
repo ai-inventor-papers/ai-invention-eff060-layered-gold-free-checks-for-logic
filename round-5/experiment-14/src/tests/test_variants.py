@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl
 """Freeze tests for freeze/consensus_variants.py: toy matrices with known answers, fold discipline of V2/V4, and the
 20-row reproduction of results/scores_E_variants.jsonl to 1e-9."""
 import json
@@ -82,8 +78,7 @@ def test_v4_oof_folds_disjoint():
 
 def test_20_rows_reproduce():
     rows = [json.loads(l) for l in (ROOT / "results" / "scores_E_variants.jsonl").read_text().splitlines()]
-    mx = {json.loads(l)["sentence_id"]: json.loads(l) for l in Path(
-        "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl").read_text().splitlines()}
+    mx = {json.loads(l)["sentence_id"]: json.loads(l) for l in (Path(__file__).resolve().parents[4] / "round-3/evaluation-2/src/pairwise_classes_E.jsonl").read_text().splitlines()}
     W = json.loads((ROOT / "results" / "family_weights.json").read_text())["per_fold_holdout"]
     import hashlib
     Z = sorted([r for r in rows if r["in_matrix"] and r["n_peers"] >= 2], key=lambda r: hashlib.sha1(r["row_key"].encode()).hexdigest())[:20]

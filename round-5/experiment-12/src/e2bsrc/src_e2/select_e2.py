@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/screen_items.json
 """E2 STEP 1: sentence pools, exclusion, 12-gram filter, census and deterministic E2 selection ($0, no LLM).
 
 Reuses dataset E's frozen selection functions (src/select_sentences.py: build_exclusion, malls_pool, exception_type,
@@ -42,8 +37,8 @@ from disguise import emit  # noqa: E402
 from loguru import logger  # noqa: E402
 
 W = ROOT / "work"
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
-SCREEN = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/screen_items.json")
+E_DIR = Path(__file__).resolve().parents[5] / "round-1/dataset-1/src"
+SCREEN = Path(__file__).resolve().parents[5] / "round-1/experiment-1/src/screen_items.json"
 PQA = ROOT / "raw" / "hf" / "opendatalab__ProverQA" / "dev"
 PQA_REV = "e2561beed450272690da658d21ae667570dbbafc"
 SEED = "E2_v1|"
