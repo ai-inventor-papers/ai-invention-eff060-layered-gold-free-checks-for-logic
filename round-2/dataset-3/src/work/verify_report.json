@@ -1,0 +1,12 @@
+{
+ "failures": [],
+ "counts": {
+  "rcomp_sentences_rows": 350,
+  "rcomp_sentences_dup_ids": 0,
+  "perturb_suite_rows": 5102,
+  "perturb_suite_dup_ids": 0,
+  "perturb_rows_verified": 5102,
+  "rcomp_sentences_verified": 350
+ },
+ "ok": true
+}
