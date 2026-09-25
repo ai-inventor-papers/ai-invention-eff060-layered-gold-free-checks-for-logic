@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "artifact": "T7b name-free labels for free-vocabulary rule translations (run_u75jRHUss0zo, iter 4, gen_art_dataset_5)",
+    "workspace": ".",
+    "selection": "the three plan groups (chosen as best 3 of 6 standardised candidates; folio / malls_test / logicnli_test were context only: no multi-system candidates, ~36-39% wrong gold, or no FOL; their standardise...",
+    "label_mode": "search_only",
+    "status_note": "SEARCH-ONLY labels: the paid gloss step could not run (deviation D9: run OpenRouter budget exhausted before this artifact's first call; re-probed at packaging, still HTTP 403). ERROR_CERT is final and...",
+    "seal_all_rows_sha256": "9609ebbb725832c467389e9d04b6334ca906ba10d400e7a7dccd976d39ebe3dd",
+    "seal_untouched_sha256": "b364a49a8e21835de660689097b462212f3f72b96ef66b437a14cc60e039f500",
+    "prereg_sha256": "b081c39991f52da2f419a6cefe56da48705d8abddf292d0faa89cec0b393a799",
+    "testability_all_rows": {
+      "n_ERROR": 759,
+      "n_CORRECT": 0,
+      "TESTABLE": false,
+      "label_counts": {
+        "ERROR_CERT": 759,
+        "UNRESOLVED_GLOSS_NOT_RUN": 1506,
+        "UNPARSEABLE": 188,
+        "NO_OUTPUT": 199
+      }
+    },
+    "testability_untouched": {
+      "n_ERROR": 636,
+      "n_CORRECT": 0,
+      "TESTABLE": false,
+      "label_counts": {
+        "ERROR_CERT": 636,
+        "UNRESOLVED_GLOSS_NOT_RUN": 1175,
+        "UNPARSEABLE": 188,
+        "NO_OUTPUT": 199
+      }
+    },
+    "provisional_view_testable": {
+      "all_rows": true,
+      "untouched_subset": true
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "rcomp_free_labels",
+      "examples": [
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "ERROR_CERT",
+          "metadata_row_key": "a81d2862772cd744|FREE|G1|fewshot_v1",
+          "metadata_item_id": "a81d2862772cd744",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_template_id": "T1",
+          "metadata_clause_type": "unless",
+          "metadata_words": 34,
+          "metadata_word_tercile": "W2",
+          "metadata_nconds_weak": 5,
+          "metadata_negated_condition": null,
+          "metadata_nested": false,
+          "metadata_label_binary": "ERROR",
+          "metadata_label_binary_search_provisional": "ERROR",
+          "metadata_label_source": "exhaustive_map_v1",
+          "metadata_search_status": "ERROR_CERT",
+          "metadata_matched_reading": null,
+          "metadata_map_certificate": null,
+          "metadata_n_maps_enumerated": 0,
+          "metadata_n_maps_fingerprint_pass": 0,
+          "metadata_n_equiv_maps": 0,
+          "metadata_n_equiv_map_orbits": 0,
+          "metadata_nonequiv_certificate_type_counts": {
+            "count_prune_subtree": 291,
+            "no_polarity_compatible_target": 10
+          },
+          "metadata_gloss_pairs": null,
+          "metadata_gloss_decision": null,
+          "metadata_unresolved_reason": null,
+          "metadata_irrelevant_symbols": [],
+          "metadata_search_secs": 0.06,
+          "metadata_seen_iter3": false,
+          "metadata_old_label_iter3": "UNRESOLVED",
+          "metadata_fold": "RCOMP_FREE"
+        },
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "UNRESOLVED_GLOSS_NOT_RUN",
+          "metadata_row_key": "94bcb373f89b6d9a|FREE|G1b|fewshot_v1",
+          "metadata_item_id": "94bcb373f89b6d9a",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_template_id": "T1",
+          "metadata_clause_type": "unless",
+          "metadata_words": 34,
+          "metadata_word_tercile": "W2",
+          "metadata_nconds_weak": 5,
+          "metadata_negated_condition": null,
+          "metadata_nested": false,
+          "metadata_label_binary": "EXCLUDED",
+          "metadata_label_binary_search_provisional": "MAPPED",
+          "metadata_label_source": "exhaustive_map_v1",
+          "metadata_search_status": "MAPPED",
+          "metadata_matched_reading": "strong",
+          "metadata_map_certificate": {
+            "status": "z3_equivalent_map_not_gloss_checked",
+            "reading": "strong",
+            "map": [
+              "Attends(x, boardGameNight) => At(x, boardGameNight)",
+              "CanDistinguish(x, condiments) => Can(x, distinguishTheTasteOfDifferentCondiments)",
+              "ElectedOfficial(x) => ElectedOfficial(x)"
+            ],
+            "bridges": [
+              "B2"
+            ]
+          },
+          "metadata_n_maps_enumerated": 48,
+          "metadata_n_maps_fingerprint_pass": 48,
+          "metadata_n_equiv_maps": 48,
+          "metadata_n_equiv_map_orbits": 2,
+          "metadata_nonequiv_certificate_type_counts": {
+            "count_prune_subtree": 360
+          },
+          "metadata_gloss_pairs": [
+            {
+              "cand_atom": "Attends(x, boardGameNight)",
+              "meaning": "x is at Board Game night",
+              "haiku": null,
+              "qwen": null
+            },
+            {
+              "cand_atom": "CanDistinguish(x, condiments)",
+              "meaning": "x can distinguish the taste of different condiments",
+              "haiku": null,
+              "qwen": null
+            },
+            {
+              "cand_atom": "ElectedOfficial(x)",
+              "meaning": "x is an elected official",
+              "haiku": null,
+              "qwen": null
+            }
+          ],
+          "metadata_gloss_decision": null,
+          "metadata_unresolved_reason": "gloss check not run (D9: API budget exhausted)",
+          "metadata_irrelevant_symbols": [],
+          "metadata_search_secs": 0.336,
+          "metadata_seen_iter3": false,
+          "metadata_old_label_iter3": "UNRESOLVED",
+          "metadata_fold": "RCOMP_FREE"
+        },
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "UNRESOLVED_GLOSS_NOT_RUN",
+          "metadata_row_key": "2f66a2d6f14b8e71|FREE|G1b|zeroshot_v1",
+          "metadata_item_id": "2f66a2d6f14b8e71",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_template_id": "T1",
+          "metadata_clause_type": "unless",
+          "metadata_words": 34,
+          "metadata_word_tercile": "W2",
+          "metadata_nconds_weak": 5,
+          "metadata_negated_condition": null,
+          "metadata_nested": false,
+          "metadata_label_binary": "EXCLUDED",
+          "metadata_label_binary_search_provisional": "MAPPED",
+          "metadata_label_source": "exhaustive_map_v1",
+          "metadata_search_status": "MAPPED",
+          "metadata_matched_reading": "weak",
+          "metadata_map_certificate": {
+            "status": "z3_equivalent_map_not_gloss_checked",
+            "reading": "weak",
+            "map": [
+              "AttendsBoardGameNight(x) => At(x, boardGameNight)",
+              "CanDistinguishCondiments(x) => Can(x, distinguishTheTasteOfDifferentCondiments)",
+              "ElectedOfficial(x) => EmilysFriend_2(x)"
+            ],
+            "bridges": [
+              "B1",
+              "B1",
+              "B1"
+            ]
+          },
+          "metadata_n_maps_enumerated": 48,
+          "metadata_n_maps_fingerprint_pass": 48,
+          "metadata_n_equiv_maps": 48,
+          "metadata_n_equiv_map_orbits": 1,
+          "metadata_nonequiv_certificate_type_counts": {
+            "count_prune_subtree": 291,
+            "no_polarity_compatible_target": 10
+          },
+          "metadata_gloss_pairs": [
+            {
+              "cand_atom": "AttendsBoardGameNight(x)",
+              "meaning": "x is at Board Game night",
+              "haiku": null,
+              "qwen": null
+            },
+            {
+              "cand_atom": "CanDistinguishCondiments(x)",
+              "meaning": "x can distinguish the taste of different condiments",
+              "haiku": null,
+              "qwen": null
+            },
+            {
+              "cand_atom": "ElectedOfficial(x)",
+              "meaning": "x is Emily's friend",
+              "haiku": null,
+              "qwen": null
+            }
+          ],
+          "metadata_gloss_decision": null,
+          "metadata_unresolved_reason": "gloss check not run (D9: API budget exhausted)",
+          "metadata_irrelevant_symbols": [],
+          "metadata_search_secs": 0.35,
+          "metadata_seen_iter3": false,
+          "metadata_old_label_iter3": "UNRESOLVED",
+          "metadata_fold": "RCOMP_FREE"
+        }
+      ]
+    },
+    {
+      "dataset": "gloss_gate_items",
+      "examples": [
+        {
+          "input": "{\"sentence\": \"When a customer is not in our family and can cook, and the customer also is writing a novel, the customer is from China, except when the customer is at Board Game night.\", \"candidate_ato...",
+          "output": "YES",
+          "metadata_item_id": "5dce1bab60185c9f",
+          "metadata_class": "YES_IDENT",
+          "metadata_half": "A",
+          "metadata_sentence_id": "13c415817af3",
+          "metadata_template_id": "T2",
+          "metadata_note": "",
+          "metadata_prompt_version": "gloss_v1",
+          "metadata_haiku_verdict": null,
+          "metadata_qwen_verdict": null,
+          "metadata_fold": "GLOSS_GATE"
+        },
+        {
+          "input": "{\"sentence\": \"When a customer is not in our family and can cook, and the customer also is writing a novel, the customer is from China, except when the customer is at Board Game night.\", \"candidate_ato...",
+          "output": "YES",
+          "metadata_item_id": "48d46d0692128ec5",
+          "metadata_class": "YES_SYN",
+          "metadata_half": "A",
+          "metadata_sentence_id": "13c415817af3",
+          "metadata_template_id": "T2",
+          "metadata_note": "China->cathay",
+          "metadata_prompt_version": "gloss_v1",
+          "metadata_haiku_verdict": null,
+          "metadata_qwen_verdict": null,
+          "metadata_fold": "GLOSS_GATE"
+        },
+        {
+          "input": "{\"sentence\": \"When a customer is not in our family and can cook, and the customer also is writing a novel, the customer is from China, except when the customer is at Board Game night.\", \"candidate_ato...",
+          "output": "YES",
+          "metadata_item_id": "85074b3cd9bf6c19",
+          "metadata_class": "YES_FORM",
+          "metadata_half": "A",
+          "metadata_sentence_id": "13c415817af3",
+          "metadata_template_id": "T2",
+          "metadata_note": "lexneg",
+          "metadata_prompt_version": "gloss_v1",
+          "metadata_haiku_verdict": null,
+          "metadata_qwen_verdict": null,
+          "metadata_fold": "GLOSS_GATE"
+        }
+      ]
+    },
+    {
+      "dataset": "sig_soundness_replay",
+      "examples": [
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "CORRECT",
+          "metadata_row_key": "917ac90fc8143e08|SIG|G7",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_slot": "G7",
+          "metadata_template_id": "T1",
+          "metadata_sig_matched_reading": "weak",
+          "metadata_canon_fol": "∀x ((((((Legislator(x) ∧ At(x, boardGameNight)) ∧ VisitRegularly(x, coffeeShop)) ∧ Can(x, distinguishTheTasteOfDifferentCondiments)) ∧ ¬(ElectedOfficial(x))) → EmilysFriend_2(x)))",
+          "metadata_search_status": "MAPPED",
+          "metadata_identity_map_found": {
+            "weak": true,
+            "strong": false,
+            "converse": false
+          },
+          "metadata_non_identity_map_found": true,
+          "metadata_n_equiv_maps": 48,
+          "metadata_n_equiv_map_orbits": 2,
+          "metadata_n_maps_enumerated": 48,
+          "metadata_nonequiv_certificate_type_counts": {
+            "count_prune_subtree": 291,
+            "no_polarity_compatible_target": 10
+          },
+          "metadata_oracle_end_to_end_label": "CORRECT",
+          "metadata_in_e2e_gloss_subsample_300": false,
+          "metadata_e2e_gloss_label": null,
+          "metadata_map_equiv_found": true,
+          "metadata_fold": "SIG_REPLAY_NONCE"
+        },
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "CORRECT",
+          "metadata_row_key": "e0a54dde23a568af|SIG|G1",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_slot": "G1",
+          "metadata_template_id": "T1",
+          "metadata_sig_matched_reading": "weak",
+          "metadata_canon_fol": "∀x ((((((Legislator(x) ∧ At(x, boardGameNight)) ∧ VisitRegularly(x, coffeeShop)) ∧ Can(x, distinguishTheTasteOfDifferentCondiments)) ∧ ¬(ElectedOfficial(x))) → EmilysFriend_2(x)))",
+          "metadata_search_status": "MAPPED",
+          "metadata_identity_map_found": {
+            "weak": true,
+            "strong": false,
+            "converse": false
+          },
+          "metadata_non_identity_map_found": true,
+          "metadata_n_equiv_maps": 48,
+          "metadata_n_equiv_map_orbits": 2,
+          "metadata_n_maps_enumerated": 48,
+          "metadata_nonequiv_certificate_type_counts": {
+            "count_prune_subtree": 291,
+            "no_polarity_compatible_target": 10
+          },
+          "metadata_oracle_end_to_end_label": "CORRECT",
+          "metadata_in_e2e_gloss_subsample_300": false,
+          "metadata_e2e_gloss_label": null,
+          "metadata_map_equiv_found": true,
+          "metadata_fold": "SIG_REPLAY_NONCE"
+        },
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "ERROR",
+          "metadata_row_key": "a76ae0e551a881da|SIG|G9",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_slot": "G9",
+          "metadata_template_id": "T1",
+          "metadata_sig_matched_reading": null,
+          "metadata_canon_fol": "∀x (((((Legislator(x) ∧ At(x, boardGameNight)) ∧ VisitRegularly(x, coffeeShop)) ∧ Can(x, distinguishTheTasteOfDifferentCondiments)) → (¬(ElectedOfficial(x)) ∧ EmilysFriend_2(x))))",
+          "metadata_search_status": "ERROR_CERT",
+          "metadata_identity_map_found": {
+            "weak": false,
+            "strong": false,
+            "converse": false
+          },
+          "metadata_non_identity_map_found": false,
+          "metadata_n_equiv_maps": 0,
+          "metadata_n_equiv_map_orbits": 0,
+          "metadata_n_maps_enumerated": 0,
+          "metadata_nonequiv_certificate_type_counts": {
+            "count_prune_subtree": 291,
+            "no_polarity_compatible_target": 10
+          },
+          "metadata_oracle_end_to_end_label": "ERROR_CERT",
+          "metadata_in_e2e_gloss_subsample_300": false,
+          "metadata_e2e_gloss_label": null,
+          "metadata_map_equiv_found": false,
+          "metadata_fold": "SIG_REPLAY_NONCE"
+        }
+      ]
+    }
+  ]
+}
