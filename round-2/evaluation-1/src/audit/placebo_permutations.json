@@ -1,0 +1,20 @@
+{
+ "R_SOLVER_CONS": {
+  "null_auroc_PT_mean": 0.4703543947913584,
+  "null_auroc_PT_sd": 0.03235293489136875,
+  "null_auroc_judge_mean": 0.5010099141757917,
+  "null_delta_mean": -0.030655519384433273,
+  "null_delta_max": 0.04696655815329981,
+  "observed_delta": 0.08604616750517902,
+  "observed_exceeds_all_20_null_deltas": true
+ },
+ "R_ADJ_AB": {
+  "null_auroc_PT_mean": 0.4848826611984506,
+  "null_auroc_PT_sd": 0.04713993477697288,
+  "null_auroc_judge_mean": 0.5009637730690363,
+  "null_delta_mean": -0.016081111870585554,
+  "null_delta_max": 0.08692185007974484,
+  "observed_delta": 0.10266575529733424,
+  "observed_exceeds_all_20_null_deltas": true
+ }
+}

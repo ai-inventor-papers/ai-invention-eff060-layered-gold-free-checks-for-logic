@@ -1,0 +1,639 @@
+{
+ "timestamp_utc": "2026-09-23T15:13:45.038318+00:00",
+ "note": "written BEFORE any track-L label is joined to any score; analysis.py is the only label join",
+ "code_sha256": {
+  "analysis.py": "d372a721b3725abafb1db2c84cfa276c0fd31ae355a4502550ad08e08daa57ed",
+  "check_role_href.py": "d6f5d727d8445f356bcd3911eed689ee3cd139c4b02472937b63842c91ecb7de",
+  "check_t0_t1.py": "3d6363da728d3fa4e192b1e5daf46a6063af99a058e7c2269318351c3e27f22c",
+  "content_accounting.py": "f57c2446af6bccb10c13f9b6c8f800fb9f5e2cd4410eaa824e09a71cb846d6e4",
+  "disguise.py": "e1befb187d0136f1c47e37d5cfaf83fdeaedd2c768e42f46c8b164ac4801a79a",
+  "fol.py": "650623887deffa722fb11dd1d994e2d36b815b604f0e98614d36648ff3c7f197",
+  "fol_triage.py": "560368c934b3f80f13a72e54344fdf4f1507c5f445401de519d7e023009ec951",
+  "labeller.py": "ebe912720edc14bc6880d2af2f7835091cebc06879367c3faca44fa754f8e868",
+  "lint_smells.py": "df7fe4ba24f52007b0e15afc21462a3137afd4463c5903f498cba2295eb5c458",
+  "llm.py": "ef138e0d0c7cdd2b18795d776716db06e2d53bd34f06248b4538a3588d7cbdaf",
+  "make_report.py": "457805f481e7925ae5fc0d5317480e8fc3522762ab7ef4e4f3c518d5afb9f025",
+  "output.py": "40eeb9bc7c11a79d2790f51cfdd2e3ca4fd0e3971f2f01ca1dc9e97bc2960365",
+  "pipeline.py": "6f8586e9f7aa338a7052bf0479c823a884895972cd819899334374cad62134fb",
+  "repair_census.py": "fa09ae20f405bd97c8e485669a16df62f80c3009b82906a9827349a264e17464",
+  "rewrites.py": "e4f2e2decd2df4865e6f74a9524a77517bfcd960469ab2e1b4cbc37d9003f318",
+  "run_cpu.py": "c8f675d329690dcd9cef5173bf9fc372f4f534bfc04175b778ca1a322211d87b",
+  "run_local_llm.py": "7574a812b5512cb457e5e774d1ce76e81efb1d9c583c5ba901cbd3ac1d55ffc6",
+  "run_screen.py": "75f15279f943c0e934c4b0dd96f7a22b44ddf15e30c656077d6fa35dcaf161a8",
+  "screen.py": "c91d8f92c53f1a182a2f6281930ba0da8b738e40967f77f797f6bc7903de8ffa",
+  "t5_probe.py": "9d19d277aa02bd1d5853dcb14693186d9d301fa1f877e7d7563e669b2c2de824",
+  "test_units.py": "0d3b50b7490199f43e31e18a90b9f0ff526f00e76dee34697a7a135685b90f24",
+  "method.py": "35b059a5ef675a496242ba9965586dc94f43cddba3beefbfb1dcbb470c0b317a"
+ },
+ "screen_labels_sha256": "bf96b8e13428878be8da2de5a4dc17ddb41cd5efe6c149c59c63b3bbe5015ab1",
+ "PRECEDENCE_FIX": "fol.py PREC iff1 imp2 xor3 or3 and4 (iter-3 had xor=1 below ->); T0: exactly 3 track-H COMPOUND -> EQUIV",
+ "L1_smells": [
+  "EX_IMP",
+  "ALL_AND",
+  "IFF_RESTR",
+  "GLUE",
+  "FREE",
+  "VACUOUS",
+  "TRIVIAL",
+  "ARITY",
+  "DANGLING"
+ ],
+ "L1_threshold": "any smell",
+ "L2_bow_threshold": "n_unanchored >= 1 or uncarried_frac > 0.34 (iter-3)",
+ "L2_role_threshold": "cond_in_up + assert_in_down + pol_flip + slot_swap + exc_wrong >= 1",
+ "L2_role_lexicons": {
+  "COND_MARKS": [
+   "if",
+   "when",
+   "whenever",
+   "once",
+   "provided",
+   "as long as",
+   "in case",
+   "assuming",
+   "given that"
+  ],
+  "EXC_MARKS": [
+   "unless",
+   "except",
+   "excluding",
+   "without",
+   "but not",
+   "other than"
+  ],
+  "GENERIC_DETS": [
+   "all",
+   "any",
+   "each",
+   "every",
+   "no"
+  ],
+  "GENERIC_PRON": [
+   "anybody",
+   "anyone",
+   "anything",
+   "everybody",
+   "everyone",
+   "everything",
+   "nobody",
+   "those",
+   "whoever"
+  ],
+  "NEG_WORDS": [
+   "cannot",
+   "n't",
+   "neither",
+   "never",
+   "no",
+   "nobody",
+   "none",
+   "nor",
+   "not",
+   "nothing"
+  ]
+ },
+ "L3_model_primary": "google/gemini-2.5-flash-lite",
+ "L3_model_robustness": "qwen/qwen3-30b-a3b-instruct-2507",
+ "L3_temperature": 0.0,
+ "L3_model_local_row": "local/qwen2.5-1.5b-instruct-q4_k_m",
+ "L3_model_note": "OpenRouter shared key hit its $50 daily limit 13:30-~15:00 UTC 2026-09-23; meanwhile all 421 L3 sentences were answered by local Qwen2.5-1.5B-Instruct Q4_K_M (llama.cpp, CPU, JSON-schema grammar). The key was restored before this prereg, so the planned primary (flash-lite) is used; the local answers are an extra robustness row. The prompt carries a 'compact on ONE line' instruction added for the local model (kept for all models).",
+ "L3_schema": "{\"concepts\": [{\"id\": \"c1\", \"phrase\": \"<exact words copied from the sentence>\", \"role\": \"condition\" | \"asserted\" | \"background\", \"negated\": true | false, \"exception\": true | false, \"force\": \"all\" | \"some\" | \"named\" | \"none\", \"claim\": <int>}], \"relations\": [{\"phrase\": \"<verb or relational words>\", \"first\": \"<concept id>\", \"second\": \"<concept id>\"}]}",
+ "L3_prompt_sha256": "3cdb4c6ce93ee93dc1350aa3d3eaab3b65521a9d79c94040f15ca8c85bf48046",
+ "L3_prompt": "You analyse the logical structure of ONE English sentence. You never see any formula. Return ONLY a JSON object with this schema:\n{\"concepts\": [{\"id\": \"c1\", \"phrase\": \"<exact words copied from the sentence>\", \"role\": \"condition\" | \"asserted\" | \"background\", \"negated\": true | false, \"exception\": true | false, \"force\": \"all\" | \"some\" | \"named\" | \"none\", \"claim\": <int>}], \"relations\": [{\"phrase\": \"<verb or relational words>\", \"first\": \"<concept id>\", \"second\": \"<concept id>\"}]}\n\nField definitions:\n- concepts: every property, class, action, relation word-group or named individual the sentence talks about. \"phrase\" = the SHORTEST span of the sentence's own words naming it (e.g. \"barks\", \"dog\", \"loud\", \"chases\", \"Mia\"). Relation verbs are concepts too.\n- role: \"condition\" = restricts WHO/WHEN the statement applies to (subject class of a general statement such as \"every dog\", words inside a relative clause on that subject, an if/when clause, the restricting part of an \"only ... if\"); \"asserted\" = what the sentence claims holds (main predicate, the then-part); \"background\" = named individuals, or words that are neither.\n- negated: true if the sentence says the concept does NOT hold (not, never, no, none, cannot) for it, taken literally where it appears. For \"No A is B\", A is a condition with negated=false and B is asserted with negated=true.\n- exception: true only for concepts introduced by unless / except / other than / without / but not.\n- force: how the thing the concept is said of is quantified: \"all\" (every, all, any, bare plural generic, if-something), \"some\" (some, a certain, there is, at least one), \"named\" (said of a named individual), \"none\" (does not apply).\n- claim: statements that could be true or false independently get different integers (1, 2, ...); concepts of the same statement share the claim number.\n- relations: for every two-place relation, \"first\" is the concept id of the one who DOES / HAS the relation (logical subject, also in passive voice: \"X is liked by Y\" -> first = Y), \"second\" is the one it is done to. A named individual is its own concept.\n\nWorked examples (not from any benchmark):\n1. \"Every dog that barks is loud unless it is asleep.\"\n{\"concepts\":[{\"id\":\"c1\",\"phrase\":\"dog\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":1},{\"id\":\"c2\",\"phrase\":\"barks\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":1},{\"id\":\"c3\",\"phrase\":\"loud\",\"role\":\"asserted\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":1},{\"id\":\"c4\",\"phrase\":\"asleep\",\"role\":\"condition\",\"negated\":false,\"exception\":true,\"force\":\"all\",\"claim\":1}],\"relations\":[]}\n2. \"No teacher who owns a bicycle drives to work.\"\n{\"concepts\":[{\"id\":\"c1\",\"phrase\":\"teacher\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":1},{\"id\":\"c2\",\"phrase\":\"owns\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":1},{\"id\":\"c3\",\"phrase\":\"bicycle\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"some\",\"claim\":1},{\"id\":\"c4\",\"phrase\":\"drives to work\",\"role\":\"asserted\",\"negated\":true,\"exception\":false,\"force\":\"all\",\"claim\":1}],\"relations\":[{\"phrase\":\"owns\",\"first\":\"c1\",\"second\":\"c3\"}]}\n3. \"Mia is not a painter, and Leo admires Mia.\"\n{\"concepts\":[{\"id\":\"c1\",\"phrase\":\"Mia\",\"role\":\"background\",\"negated\":false,\"exception\":false,\"force\":\"named\",\"claim\":1},{\"id\":\"c2\",\"phrase\":\"painter\",\"role\":\"asserted\",\"negated\":true,\"exception\":false,\"force\":\"named\",\"claim\":1},{\"id\":\"c3\",\"phrase\":\"Leo\",\"role\":\"background\",\"negated\":false,\"exception\":false,\"force\":\"named\",\"claim\":2},{\"id\":\"c4\",\"phrase\":\"admires\",\"role\":\"asserted\",\"negated\":false,\"exception\":false,\"force\":\"named\",\"claim\":2}],\"relations\":[{\"phrase\":\"admires\",\"first\":\"c3\",\"second\":\"c1\"}]}\n4. \"Some kettles are made of copper, and if a kettle is made of copper then it is heavy.\"\n{\"concepts\":[{\"id\":\"c1\",\"phrase\":\"kettles\",\"role\":\"asserted\",\"negated\":false,\"exception\":false,\"force\":\"some\",\"claim\":1},{\"id\":\"c2\",\"phrase\":\"made of copper\",\"role\":\"asserted\",\"negated\":false,\"exception\":false,\"force\":\"some\",\"claim\":1},{\"id\":\"c3\",\"phrase\":\"kettle\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":2},{\"id\":\"c4\",\"phrase\":\"made of copper\",\"role\":\"condition\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":2},{\"id\":\"c5\",\"phrase\":\"heavy\",\"role\":\"asserted\",\"negated\":false,\"exception\":false,\"force\":\"all\",\"claim\":2}],\"relations\":[]}\nOutput the JSON object only, compact on ONE line (no indentation, no newlines).",
+ "L3_fields": [
+  "mm_role",
+  "mm_force",
+  "mm_claims",
+  "mm_order",
+  "mm_exception",
+  "missing_frac",
+  "extra_frac"
+ ],
+ "L3_field_gate": {
+  "target": 0.85,
+  "exclude_below": 0.7,
+  "flag_between": [
+   0.7,
+   0.85
+  ],
+  "measured_on": "HREF (corrected gold as candidate), primary model"
+ },
+ "L3_threshold": "90th percentile of l3_score on HREF (10% FA on known negatives by construction)",
+ "L3_alignment": "overlap coefficient >= 0.5 of phrase content words vs predicate-name words (stem/WordNet), Jaccard tie-break (departure from plan's Jaccard>=0.5: single-token predicate names vs multi-word phrases)",
+ "fusion_features": [
+  "l1_any",
+  "n_smells",
+  "bow_uncarried",
+  "bow_n_unanch",
+  "role_count",
+  "l3_score",
+  "log_words"
+ ],
+ "fusion_model": "StandardScaler + LogisticRegression(l2, C=1.0, class_weight=balanced)",
+ "fusion_training": "positives = track-H ERROR + COMPOUND (non-ambiguous); negatives = track-H CORRECT + HREF; GroupKFold(5) by normalised sentence -> OOF",
+ "fusion_primary_for_L": "refit on H+HREF rows whose norm(text) does NOT occur in track L (sentence-leak guard)",
+ "fusion_secondary": [
+  "refit on all H+HREF",
+  "within-L GroupKFold cross-fit (analysis only)"
+ ],
+ "fused_threshold": "value giving 10% FA on HREF + track-H CORRECT (OOF)",
+ "primary_analysis": "track L, label in {CORRECT, ERROR}",
+ "secondary_analyses": [
+  "ERROR u UNCERTAIN(COMPOUND) vs CORRECT",
+  "ERROR minus pure ADD+DROP (atom substitution; likely vocabulary artefact) vs CORRECT [added after inspecting the screen's label distribution, before any score was joined]",
+  "track H reported separately; READING_CHOICE never pooled"
+ ],
+ "bootstrap": {
+  "B": 2000,
+  "cluster": "normalised sentence",
+  "seed": 0
+ },
+ "prevalences_for_reweighted_precision": [
+  0.1,
+  0.25
+ ],
+ "strata": [
+  "len_bin",
+  "n_quant",
+  "depth",
+  "n_conditions",
+  "exception"
+ ],
+ "strata_untestable_rule": "<50 errors or <50 correct -> descriptive only",
+ "gates": {
+  "coverage": ">= 0.90",
+  "rewrite_FA_per_family": "<= 0.10",
+  "cost_per_item_usd": "<= 0.002",
+  "AUROC": ">= 0.65"
+ },
+ "calibration": {
+  "timestamp_utc": "2026-09-23T15:15:27.378867+00:00",
+  "L3_gate_primary": {
+   "mm_role": {
+    "acc": 0.913,
+    "n": 655,
+    "wilson95": [
+     0.8889,
+     0.9322
+    ]
+   },
+   "mm_force": {
+    "acc": 0.6896,
+    "n": 799,
+    "wilson95": [
+     0.6567,
+     0.7207
+    ]
+   },
+   "missing_frac": {
+    "acc": 0.9165,
+    "n": 814,
+    "wilson95": [
+     0.8954,
+     0.9336
+    ]
+   },
+   "extra_frac": {
+    "acc": 0.919,
+    "n": 765,
+    "wilson95": [
+     0.8975,
+     0.9363
+    ]
+   },
+   "mm_exception": {
+    "acc": 0.0,
+    "n": 1,
+    "wilson95": [
+     0.0,
+     0.7935
+    ]
+   },
+   "mm_order": {
+    "acc": 0.9474,
+    "n": 57,
+    "wilson95": [
+     0.8563,
+     0.9819
+    ]
+   },
+   "mm_claims": {
+    "acc": 0.8628,
+    "n": 182,
+    "wilson95": [
+     0.8051,
+     0.9052
+    ]
+   },
+   "alignment_rate": 0.9062,
+   "n_items": 294
+  },
+  "L3_gate_by_length": {
+   "<12": {
+    "mm_role": {
+     "acc": 0.928,
+     "n": 250,
+     "wilson95": [
+      0.8891,
+      0.954
+     ]
+    },
+    "mm_force": {
+     "acc": 0.7438,
+     "n": 281,
+     "wilson95": [
+      0.6897,
+      0.7913
+     ]
+    },
+    "missing_frac": {
+     "acc": 0.9037,
+     "n": 301,
+     "wilson95": [
+      0.8651,
+      0.9321
+     ]
+    },
+    "extra_frac": {
+     "acc": 0.9167,
+     "n": 288,
+     "wilson95": [
+      0.879,
+      0.9434
+     ]
+    },
+    "mm_order": {
+     "acc": 0.9756,
+     "n": 41,
+     "wilson95": [
+      0.874,
+      0.9957
+     ]
+    },
+    "mm_claims": {
+     "acc": 0.9058,
+     "n": 69,
+     "wilson95": [
+      0.8051,
+      0.95
+     ]
+    },
+    "alignment_rate": 0.911,
+    "n_items": 174
+   },
+   "12-19": {
+    "mm_role": {
+     "acc": 0.9624,
+     "n": 213,
+     "wilson95": [
+      0.9276,
+      0.9808
+     ]
+    },
+    "mm_force": {
+     "acc": 0.6259,
+     "n": 270,
+     "wilson95": [
+      0.5668,
+      0.6815
+     ]
+    },
+    "missing_frac": {
+     "acc": 0.9154,
+     "n": 260,
+     "wilson95": [
+      0.8752,
+      0.9435
+     ]
+    },
+    "extra_frac": {
+     "acc": 0.9173,
+     "n": 254,
+     "wilson95": [
+      0.8769,
+      0.9453
+     ]
+    },
+    "mm_order": {
+     "acc": 0.9,
+     "n": 10,
+     "wilson95": [
+      0.5958,
+      0.9821
+     ]
+    },
+    "mm_claims": {
+     "acc": 0.8584,
+     "n": 67,
+     "wilson95": [
+      0.764,
+      0.9277
+     ]
+    },
+    "alignment_rate": 0.8938,
+    "n_items": 74
+   },
+   ">=20": {
+    "mm_role": {
+     "acc": 0.8385,
+     "n": 192,
+     "wilson95": [
+      0.7799,
+      0.8839
+     ]
+    },
+    "mm_force": {
+     "acc": 0.6976,
+     "n": 248,
+     "wilson95": [
+      0.6378,
+      0.7514
+     ]
+    },
+    "missing_frac": {
+     "acc": 0.9328,
+     "n": 253,
+     "wilson95": [
+      0.895,
+      0.9576
+     ]
+    },
+    "extra_frac": {
+     "acc": 0.9238,
+     "n": 223,
+     "wilson95": [
+      0.8813,
+      0.9519
+     ]
+    },
+    "mm_exception": {
+     "acc": 0.0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ]
+    },
+    "mm_order": {
+     "acc": 0.8333,
+     "n": 6,
+     "wilson95": [
+      0.4365,
+      0.9699
+     ]
+    },
+    "mm_claims": {
+     "acc": 0.8046,
+     "n": 46,
+     "wilson95": [
+      0.6683,
+      0.8935
+     ]
+    },
+    "alignment_rate": 0.9128,
+    "n_items": 46
+   }
+  },
+  "L3_gated_fields": [
+   "mm_role",
+   "mm_claims",
+   "mm_order",
+   "missing_frac",
+   "extra_frac"
+  ],
+  "L3_flagged_fields": [],
+  "L3_excluded_fields": [
+   "mm_force",
+   "mm_exception"
+  ],
+  "L3_gate_second_model": {
+   "model": "qwen/qwen3-30b-a3b-instruct-2507",
+   "mm_role": {
+    "acc": 0.9068,
+    "n": 644,
+    "wilson95": [
+     0.8819,
+     0.9269
+    ]
+   },
+   "mm_force": {
+    "acc": 0.7339,
+    "n": 744,
+    "wilson95": [
+     0.701,
+     0.7644
+    ]
+   },
+   "missing_frac": {
+    "acc": 0.9111,
+    "n": 821,
+    "wilson95": [
+     0.8897,
+     0.9287
+    ]
+   },
+   "extra_frac": {
+    "acc": 0.9111,
+    "n": 765,
+    "wilson95": [
+     0.8888,
+     0.9293
+    ]
+   },
+   "mm_exception": {
+    "acc": 0.3333,
+    "n": 3,
+    "wilson95": [
+     0.0615,
+     0.7923
+    ]
+   },
+   "mm_order": {
+    "acc": 0.9538,
+    "n": 65,
+    "wilson95": [
+     0.8729,
+     0.9842
+    ]
+   },
+   "mm_claims": {
+    "acc": 0.8919,
+    "n": 183,
+    "wilson95": [
+     0.8372,
+     0.9281
+    ]
+   },
+   "alignment_rate": 0.9082,
+   "n_items": 294,
+   "n_href_items_answered": 294,
+   "json_fail_rate": 0.0,
+   "primary_on_same_items": {
+    "mm_role": {
+     "acc": 0.913,
+     "n": 655,
+     "wilson95": [
+      0.8889,
+      0.9322
+     ]
+    },
+    "mm_force": {
+     "acc": 0.6896,
+     "n": 799,
+     "wilson95": [
+      0.6567,
+      0.7207
+     ]
+    },
+    "missing_frac": {
+     "acc": 0.9165,
+     "n": 814,
+     "wilson95": [
+      0.8954,
+      0.9336
+     ]
+    },
+    "extra_frac": {
+     "acc": 0.919,
+     "n": 765,
+     "wilson95": [
+      0.8975,
+      0.9363
+     ]
+    },
+    "mm_exception": {
+     "acc": 0.0,
+     "n": 1,
+     "wilson95": [
+      0.0,
+      0.7935
+     ]
+    },
+    "mm_order": {
+     "acc": 0.9474,
+     "n": 57,
+     "wilson95": [
+      0.8563,
+      0.9819
+     ]
+    },
+    "mm_claims": {
+     "acc": 0.8628,
+     "n": 182,
+     "wilson95": [
+      0.8051,
+      0.9052
+     ]
+    },
+    "alignment_rate": 0.9062,
+    "n_items": 294
+   }
+  },
+  "L3_gate_local_model": {
+   "model": "local/qwen2.5-1.5b-instruct-q4_k_m",
+   "mm_role": {
+    "acc": 0.7603,
+    "n": 701,
+    "wilson95": [
+     0.7274,
+     0.7905
+    ]
+   },
+   "mm_force": {
+    "acc": 0.677,
+    "n": 805,
+    "wilson95": [
+     0.6439,
+     0.7084
+    ]
+   },
+   "missing_frac": {
+    "acc": 0.7998,
+    "n": 1009,
+    "wilson95": [
+     0.774,
+     0.8233
+    ]
+   },
+   "extra_frac": {
+    "acc": 0.9059,
+    "n": 765,
+    "wilson95": [
+     0.8831,
+     0.9246
+    ]
+   },
+   "mm_order": {
+    "acc": 1.0,
+    "n": 4,
+    "wilson95": [
+     0.5101,
+     1.0
+    ]
+   },
+   "mm_claims": {
+    "acc": 0.8887,
+    "n": 183,
+    "wilson95": [
+     0.8372,
+     0.9281
+    ]
+   },
+   "alignment_rate": 0.8242,
+   "n_items": 294
+  },
+  "L3_primary_json_fail_rate": 0.0,
+  "L3_primary_status_counts": {
+   "OK": 533
+  },
+  "L3_test_retest": {
+   "n": 60,
+   "field_agreement": {
+    "concept_phrase_reproduced": 0.9967,
+    "role": 0.9934,
+    "negated": 1.0,
+    "exception": 1.0,
+    "force": 0.9443
+   },
+   "exact_json_identical": 0.9167
+  },
+  "L3_threshold_HREF_p90": 1.0,
+  "L3_impute_value_HREF_median": 0.0,
+  "fusion_train_n": {
+   "pos": 57,
+   "neg": 495,
+   "noleak_pos": 43,
+   "noleak_neg": 303
+  },
+  "fusion_coef_all": {
+   "intercept": -0.516361487434433,
+   "l1_any": 0.8795183175278789,
+   "n_smells": -0.1769330803948526,
+   "bow_uncarried": 0.5307231826254695,
+   "bow_n_unanch": 0.017254218828112056,
+   "role_count": 0.07124637046203966,
+   "l3_score": 0.44815185462003804,
+   "log_words": 0.16237817490339448
+  },
+  "fusion_coef_noleak": {
+   "intercept": -0.4066350496078272,
+   "l1_any": 1.2082613242348024,
+   "n_smells": -0.4856253035600911,
+   "bow_uncarried": 0.5337237633597072,
+   "bow_n_unanch": -0.05686248520547614,
+   "role_count": 0.11140872017117087,
+   "l3_score": 0.3515417692335327,
+   "log_words": -0.02000312919112603
+  },
+  "fused_threshold_all_OOF_10pctFA": 0.6528721413802024,
+  "fused_threshold_noleak_OOF_10pctFA": 0.5586145865403547,
+  "operating_thresholds": {
+   "L1": "any smell",
+   "L2_bow": "flag",
+   "L2_role": "count>=1",
+   "L3": 1.0,
+   "fused_primary(noleak)": 0.5586145865403547,
+   "fused_secondary(all)": 0.6528721413802024
+  }
+ }
+}
