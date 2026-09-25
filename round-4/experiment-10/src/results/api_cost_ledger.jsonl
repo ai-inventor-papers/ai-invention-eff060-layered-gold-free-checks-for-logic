@@ -1,0 +1,2 @@
+{"ts": 1790234120.687, "stage": "probe", "model": "openai/gpt-4.1-mini", "key_hash": "ca39e7751d", "prompt_tokens": null, "completion_tokens": null, "cost_usd": 8.8e-06, "latency_s": 1.003, "status": "ok"}
+{"ts": 1790234813.661, "stage": "probe", "model": "openai/gpt-4.1-mini", "key_hash": "ca39e7751d", "prompt_tokens": null, "completion_tokens": null, "cost_usd": 0.0, "latency_s": 0.187, "status": "http_403"}
