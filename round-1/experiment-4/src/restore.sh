@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/user_uploads/dpv_pilot_study.zip
 # Restore every path marked `delete` in .aii/manifest.yaml.  Usage: bash restore.sh [venv|nltk|pilot|models|all]
 set -euo pipefail
 cd "$(dirname "$0")"

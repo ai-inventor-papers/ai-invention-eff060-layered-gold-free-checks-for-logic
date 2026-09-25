@@ -17,7 +17,7 @@ Paths are relative to this directory.
 
 ## 2. Inputs
 - `data/screen_items.json` (1,090 items: track L 796, track H 294), `data/label_vector.sha1`, `data/folds.json`,
-  `data/invariance_items.json`, `data/iter3_repair_census.rows.json`, `data/logiclm/`, dataset from `../gen_art_dataset_1`.
+  `data/invariance_items.json`, `data/iter3_repair_census.rows.json`, `data/logiclm/`, dataset from `../../dataset-1/src`.
 - Labels are shared with experiments A, B, C via `item_id`; verify with `data/label_vector.sha1`.
 
 ## 3. Running
