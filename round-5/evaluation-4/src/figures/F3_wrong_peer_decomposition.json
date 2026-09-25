@@ -1,0 +1,46 @@
+{
+ "figure": "F3",
+ "caption": "Left: eval-3 pair classes over all 9-family (candidate, peer) pairs. Right: among peers that disagree with a CORRECT candidate, the share that are themselves labelled ERROR.",
+ "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/p1_class_shares.csv",
+ "data": {
+  "pair_classes": [
+   {
+    "label": "IRREDUCIBLE",
+    "id": "e3_irr",
+    "value": 0.6935483870967742
+   },
+   {
+    "label": "EXACT",
+    "id": "e3_exact",
+    "value": 0.13628835081631044
+   },
+   {
+    "label": "ALIGN_ONLY",
+    "id": "e3_align",
+    "value": 0.15095827746667717
+   },
+   {
+    "label": "VOCAB",
+    "id": "e3_vocab",
+    "value": 0.015971291111286378
+   },
+   {
+    "label": "NAME_ONLY",
+    "id": "e3_name",
+    "value": 0.00323369350895181
+   }
+  ],
+  "peer_error_share": [
+   {
+    "label": "9-family",
+    "id": "e3_77",
+    "value": 0.7742161909218531
+   },
+   {
+    "label": "3-pool",
+    "id": "e3_61",
+    "value": 0.6061728395061728
+   }
+  ]
+ }
+}
