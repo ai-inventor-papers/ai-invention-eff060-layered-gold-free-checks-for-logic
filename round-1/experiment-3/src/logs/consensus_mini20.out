@@ -1,0 +1,5 @@
+15:28:02|INFO   |sentences: 20, candidates: 54, peer rows: 8599, sc rows: 10339
+15:28:19|INFO   |rewrites: 84 applicable; not-proved-equivalent: 0
+15:28:19|INFO   |pairwise stage 0s for 760 pairs
+15:28:19|INFO   |coverage: {'ok': 48, 'candidate_unparseable': 6}; timing {'pairs_s': 0.0, 'repair_s': 0.0, 'labels_s': 0.0, 'total_s': 17.1, 'n_pairs': 760, 'n_sentences': 20, 'repair_budget_s': 10.0}
+15:28:19|INFO   |per-candidate seconds (z3): mean 0.070

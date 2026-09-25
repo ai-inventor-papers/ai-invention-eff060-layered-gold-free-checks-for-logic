@@ -1,0 +1,25 @@
+{
+ "n_units": {
+  "U_F": 202,
+  "U_M": 100,
+  "U_P": 5
+ },
+ "peers": {
+  "meta-llama/llama-3.3-70b-instruct": 0.0909859375,
+  "qwen/qwen3-235b-a22b-2507": 0.0903156953125,
+  "deepseek/deepseek-chat-v3.1": 0.25039984375,
+  "mistralai/mistral-small-3.2-24b-instruct": 0.07765431640625,
+  "google/gemini-2.5-flash-lite": 0.1032179375,
+  "openai/gpt-4.1-mini": 0.41287175
+ },
+ "peers_total": 1.02544548046875,
+ "sc_cheap": 0.5160896875,
+ "sc_same": 1.14154765625,
+ "grand_total": 2.68308282421875,
+ "abort_if_peers_over": 3.0,
+ "mean_prompt_tokens": {
+  "U_F": 1811.0225866336634,
+  "U_P": 1821.3125,
+  "U_M": 456.4625
+ }
+}

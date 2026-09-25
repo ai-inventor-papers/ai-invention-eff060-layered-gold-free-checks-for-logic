@@ -1,0 +1,46 @@
+13:20:34|INFO   |{
+ "n_units": {
+  "U_F": 202,
+  "U_M": 100,
+  "U_P": 5
+ },
+ "peers": {
+  "meta-llama/llama-3.3-70b-instruct": 0.0909859375,
+  "qwen/qwen3-235b-a22b-2507": 0.0903156953125,
+  "deepseek/deepseek-chat-v3.1": 0.25039984375,
+  "mistralai/mistral-small-3.2-24b-instruct": 0.07765431640625,
+  "google/gemini-2.5-flash-lite": 0.1032179375,
+  "openai/gpt-4.1-mini": 0.41287175
+ },
+ "peers_total": 1.02544548046875,
+ "sc_cheap": 0.5160896875,
+ "sc_same": 1.14154765625,
+ "grand_total": 2.68308282421875,
+ "abort_if_peers_over": 3.0,
+ "mean_prompt_tokens": {
+  "U_F": 1811.0225866336634,
+  "U_P": 1821.3125,
+  "U_M": 456.4625
+ }
+}
+13:20:34|INFO   |running total at start: $0.0304
+13:20:34|INFO   |arm=peers jobs=1842
+13:20:48|INFO   |peers: 100/1842 done, running total $0.0478
+13:20:54|INFO   |peers: 200/1842 done, running total $0.0664
+13:21:02|INFO   |peers: 300/1842 done, running total $0.0948
+13:21:09|INFO   |peers: 400/1842 done, running total $0.1260
+13:21:16|INFO   |peers: 500/1842 done, running total $0.1529
+13:21:23|INFO   |peers: 600/1842 done, running total $0.1835
+13:21:41|INFO   |peers: 700/1842 done, running total $0.2239
+13:21:57|INFO   |peers: 800/1842 done, running total $0.2644
+13:22:14|INFO   |peers: 900/1842 done, running total $0.3080
+13:22:34|INFO   |peers: 1000/1842 done, running total $0.3532
+13:22:46|INFO   |peers: 1100/1842 done, running total $0.3859
+13:23:04|INFO   |peers: 1200/1842 done, running total $0.4215
+13:23:39|INFO   |peers: 1300/1842 done, running total $0.4514
+13:23:58|INFO   |peers: 1400/1842 done, running total $0.4711
+13:24:20|INFO   |peers: 1500/1842 done, running total $0.4935
+13:24:46|INFO   |peers: 1600/1842 done, running total $0.5117
+13:25:22|INFO   |peers: 1700/1842 done, running total $0.5351
+13:26:06|INFO   |peers: 1800/1842 done, running total $0.5614
+13:26:49|INFO   |arm=peers finished; running total $0.5657
