@@ -1,0 +1,137 @@
+{
+ "label_regime": "NO_PANEL_TIER_A_UNAUDITED",
+ "analysis_population": {
+  "population": "R_A_UNAUDITED",
+  "status": "SECONDARY: R_AB not testable (no panel regime); E2's pre-registered no-panel regime 'tier-A-only' (solver vs UNAUDITED MALLS gold; E's panel judged most MALLS gold wrong, so ERROR means 'not equivalent to the gold' and CORRECT means 'z3-equivalent to the gold')",
+  "testable": false,
+  "R_AB": {
+   "ERROR_rows": 0,
+   "CORRECT_rows": 0,
+   "ERROR_sentences": 0,
+   "CORRECT_sentences": 0,
+   "sentences_with_both": 0,
+   "testable": false
+  },
+  "R_A_UNAUDITED": {
+   "ERROR_rows": 334,
+   "CORRECT_rows": 48,
+   "ERROR_sentences": 138,
+   "CORRECT_sentences": 31,
+   "sentences_with_both": 24,
+   "testable": false
+  }
+ },
+ "population": "L25_E2B R_A_UNAUDITED (LLM systems, tier A_unaudited_ref: solver vs unaudited MALLS gold; SECONDARY)",
+ "testable_under_E_rule": false,
+ "testability_note": "NOT TESTABLE by E's pre-registered rule in any regime (no panel: R_AB has no CORRECT class; R_A_UNAUDITED has 48 CORRECT rows < 50); the numbers below are EXPLORATORY estimates in a gold-equivalence label regime that structurally favours agreement-based metrics. ",
+ "B1_V0_minus_flashlite_disg": {
+  "delta": 0.20828043447594868,
+  "ci": [
+   0.06551897794741308,
+   0.36291368777804556
+  ],
+  "n": 276,
+  "sentences_with_both_classes": 17,
+  "verdict": "NOT TESTABLE (E's rule); exploratory CI > 0",
+  "observed_MDE80_from_bootstrap_SE": 0.21650794499366116,
+  "also_vs": {
+   "V0 - flashlite_orig": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - nano_orig": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - nano_disg": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - costmatched_disg": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - costmatched_orig": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - frontier_orig (unweighted, subsample rows)": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - S4_E2B": {
+    "delta": 0.23794053947627491,
+    "ci": [
+     0.11081918516580626,
+     0.3664903813700249
+    ]
+   },
+   "V0 - flashlite_disg_vfb (T1 sensitivity: verdict-median fill)": {
+    "delta": 0.2059528847510227,
+    "ci": [
+     0.06217154949327271,
+     0.36277517087180533
+    ]
+   },
+   "V0 - costmatched_disg_vfb (T1 sensitivity: verdict-median fill)": {
+    "delta": null,
+    "ci": null
+   },
+   "V0 - flashlite_disg (judge-ok rows only)": {
+    "delta": 0.2064068171058861,
+    "ci": [
+     0.0541140300440445,
+     0.3622504649095073
+    ]
+   }
+  }
+ },
+ "B2_nested_S4_plus_V0_minus_S4": {
+  "delta": 0.11996205181889552,
+  "ci": [
+   0.013260873187767116,
+   0.23665410026737932
+  ],
+  "verdict": "NOT TESTABLE (E's rule); exploratory CI > 0",
+  "substituted": {
+   "judge_local_qwen8b_disg/orig, judge_local_llama8b_disg/orig": "dropped: no GPU on this machine (4 CPUs, no CUDA); exp-6 rule",
+   "rt_nli_* / rt_embed_cos (API and local round trip)": "dropped: NLI/embedding models need a GPU; no local counterpart available",
+   "sc5_* (API and local self-consistency)": "dropped: needs 5 extra samples per sentence + a local model; not in the E2-B budget",
+   "pilot_dangling / pilot_rerun_jacc / pilot_undeclared": "not applicable: a MALLS sentence has no story/document; E2 has no zero-shot rerun",
+   "nano_disg": "ADDED (cheap API judge, disguised view) so the stack holds both views of both cheap judges"
+  }
+ },
+ "label_coupling_diagnostic": {
+  "V0_decoupled": 0.6106845179497277,
+  "V0_same_rows": 0.7372514274463478,
+  "V0_decoupled - flashlite_disg": 0.13288192975031732,
+  "V0_decoupled - V0": -0.12656690949662008,
+  "n_rows_with_decoupled": 381
+ },
+ "B3_V0_minus_costmatched_disg": {
+  "delta": null,
+  "ci": null,
+  "directional_prediction": "none (pre-registered)",
+  "reading": "NOT RUN: every cost-matched call was refused (HTTP 403 run budget exhausted)"
+ },
+ "B4_frontier": {
+  "status": "NOT_TESTABLE",
+  "ratio_V0_over_frontier": null,
+  "delta_V0_minus_frontier": null,
+  "nested_frontier_plus_V0_minus_frontier": null,
+  "n_in_R_AB_complete": 2
+ },
+ "H_IMPROVE": "no carried variant: M1 selection.json winner = 'NONE: V0 stands'; V1-V5 reported as development-only rows",
+ "H_MECH": {
+  "i_share_nonagreeing_peers_ERROR": "UNINFORMATIVE (tautological under gold-equivalence labels)",
+  "ii_scatter_ratio_SI_cor_over_SI_err": "UNINFORMATIVE (tautological under gold-equivalence labels)",
+  "iii_NET_delta_e_plus_d_words_T3_minus_T1": "REFUTED",
+  "iv_exact_vs_ALIGN_e_d": "PARTIAL: tested components hold, MEANING_RENAME component NOT_TESTABLE (no MEANING_RENAME labels without the panel)"
+ },
+ "sensitivity_B1": {
+  "R_A": null,
+  "CONTESTED_as_CORRECT": null,
+  "CONTESTED_as_ERROR": null
+ },
+ "secondary_note": "NO PANEL: the run-level OpenRouter budget was exhausted before any batch completed the panel; labels are E's final rule without votes (tier A against the unaudited MALLS gold). Nothing is confirmatory; every number is exploratory"
+}
