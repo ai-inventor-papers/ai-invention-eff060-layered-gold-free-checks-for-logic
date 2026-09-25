@@ -1,0 +1,12 @@
+07:25:46|INFO   |map_search.jsonl: 100 classes to search over 10 sentences (0 already done), 4 workers
+07:25:49|INFO   |8/100 classes, 2s elapsed, 0.30s/class
+07:25:49|INFO   |20/100 classes, 3s elapsed, 0.13s/class
+07:25:50|INFO   |31/100 classes, 4s elapsed, 0.12s/class
+07:25:50|INFO   |43/100 classes, 4s elapsed, 0.09s/class
+07:25:52|INFO   |55/100 classes, 6s elapsed, 0.10s/class
+07:25:53|INFO   |66/100 classes, 6s elapsed, 0.10s/class
+07:25:53|INFO   |67/100 classes, 7s elapsed, 0.10s/class
+07:25:53|INFO   |78/100 classes, 7s elapsed, 0.09s/class
+07:25:54|INFO   |89/100 classes, 8s elapsed, 0.09s/class
+07:25:56|INFO   |100/100 classes, 10s elapsed, 0.10s/class
+07:25:56|INFO   |done 100 classes in 10s
