@@ -1,0 +1,39 @@
+{
+ "population": {
+  "n": 2686,
+  "n_error": 1822,
+  "n_correct": 864,
+  "n_sentences": 292,
+  "definition": "per_item_T1 in_R_AB & pool == 'E_POOL' & parse_ok (exp 6 keys_for('R_AB'))"
+ },
+ "long_pool_exp6_text": "CI_low > 0 for stratified dAUROC(c_score_align - judge_cheap_disg) on R_AB pooled AND on the long pool (L25+L20+EXC, stratified) AND point estimate > 0 on R_A L20+EXC (intersection-union; no multiplicity correction)",
+ "long_pool_equals_L25_L20_EXC": true,
+ "G0": {
+  "V0_strat": 0.7414618757606236,
+  "delta": 0.09897545149036036,
+  "ci": [
+   0.049345245474241926,
+   0.14599146000544172
+  ],
+  "delta_long": 0.11625879215576673,
+  "ci_long": [
+   0.06991415990284278,
+   0.16265250895731315
+  ],
+  "targets_from_exp6_analysis_T1": {
+   "V0_strat": 0.7414618757606236,
+   "delta": 0.09897545149036036,
+   "ci": [
+    0.049345245474241926,
+    0.14599146000544172
+   ],
+   "delta_long": 0.11625879215576673
+  },
+  "pass": true
+ },
+ "words_tercile_cuts": [
+  20.0,
+  26.0
+ ],
+ "words_tercile_rule": "T1: words<=q1, T2: q1<words<=q2, T3: >q2; cut points = 1/3, 2/3 quantiles of R_AB SENTENCE words (np.quantile, linear)"
+}

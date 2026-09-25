@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "method_name": "cross-family solver consensus (c_score_align) vs LLM judge on R_COMP FREE",
+    "description": "Iteration-5 confirmation attempt of criterion (c). Scores sealed before labels; labels from the dataset-5 labeller resumed once; the gloss gate failed twice -> FALLBACK B -> NOT_TESTABLE. Predict_* ar...",
+    "verdict": "NOT_TESTABLE",
+    "flags": {
+      "gate_failed_twice_fallback_B": true,
+      "gate_v2_used": true,
+      "underpowered": true,
+      "soundness_bar_failed": null,
+      "s6_flip": null,
+      "s3_flip": false,
+      "s1a_flip": false,
+      "partial_budget": false
+    },
+    "provisional_non_confirmatory": {
+      "disg": {
+        "auroc_c_align": 0.8007358664119437,
+        "auroc_judge": 0.5841505695889054,
+        "delta": 0.2165852968230383,
+        "ci": [
+          0.1752971795896373,
+          0.2602777367219074
+        ]
+      },
+      "orig": {
+        "auroc_c_align": 0.8038910396678449,
+        "auroc_judge": 0.6326866969645963,
+        "delta": 0.17120434270324858,
+        "ci": [
+          0.13535299319740351,
+          0.20644188639523636
+        ]
+      }
+    },
+    "label_seal": {
+      "labels_all": "b7916aeae77ecfe2556e0f545bb5813843a36d12ba73043dfc1320c13c45cd5e",
+      "labels_untouched": "79eb623a1a75279c1db96c8d31311b59e16bcc7b911064f04c9909fb4d6afcbb",
+      "scores": "results/score_seal_rcomp.json",
+      "all_verified_before_join": true
+    },
+    "orientation": "higher = more likely ERROR",
+    "templated_text_caveat": "R_COMP is templated English (9 templates)"
+  },
+  "datasets": [
+    {
+      "dataset": "R_COMP_FREE",
+      "examples": [
+        {
+          "input": "{\"text\": \"Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an el...",
+          "output": "ERROR_CERT",
+          "predict_c_score_align": "0.875000",
+          "predict_c_exact": "1.000000",
+          "predict_c_score_hyb": "0.750000",
+          "predict_c_score_nf": "0.750000",
+          "predict_g_align": "0.777778",
+          "predict_g_nf": "0.600000",
+          "predict_judge_cheap_disg": "0.150000",
+          "predict_judge_cheap_orig": "",
+          "predict_judge_local_disg": "0.050000",
+          "predict_V1_c_pn": "0.000000",
+          "predict_V2_c_rw": "0.875665",
+          "predict_V3_c_pn_rw": "0.211768",
+          "predict_V4_c_two_channel": "0.809969",
+          "predict_V5_c_v5": "1.000000",
+          "metadata_row_key": "a81d2862772cd744|FREE|G1|fewshot_v1",
+          "metadata_sentence_id": "001a7f0caf5a",
+          "metadata_template_id": "T1",
+          "metadata_slot": "G1",
+          "metadata_system": "G1:meta-llama/llama-3.1-8b-instruct",
+          "metadata_family": "meta",
+          "metadata_prompt_variant": "fewshot_v1",
+          "metadata_words": 34,
+          "metadata_word_tercile": "W2",
+          "metadata_nconds_weak": 5,
+          "metadata_label_binary": "ERROR",
+          "metadata_label_provisional": "ERROR_CERT",
+          "metadata_untouched": true,
+          "metadata_seen_iter3": false,
+          "metadata_s1_flag": false,
+          "metadata_cert_dominant": "count_prune_subtree",
+          "metadata_coverage_status": "OK",
+          "metadata_judge_cheap_orig_source": null
+        },
+        {
+          "input": "{\"text\": \"Any certified public accountant that lives in California and that does not play a lot of chess is born in New York City, provided that the certified public accountant loses time and works fr...",
+          "output": "UNRESOLVED_GLOSS_GATE_FAILED",
+          "predict_c_score_align": "0.500000",
+          "predict_c_exact": "1.000000",
+          "predict_c_score_hyb": "0.125000",
+          "predict_c_score_nf": "0.375000",
+          "predict_g_align": "0.454545",
+          "predict_g_nf": "0.142857",
+          "predict_judge_cheap_disg": "1.000000",
+          "predict_judge_cheap_orig": "0.050000",
+          "predict_judge_local_disg": "0.100000",
+          "predict_V1_c_pn": "0.000000",
+          "predict_V2_c_rw": "0.431246",
+          "predict_V3_c_pn_rw": "0.000000",
+          "predict_V4_c_two_channel": "0.702470",
+          "predict_V5_c_v5": "0.000000",
+          "metadata_row_key": "f76dcea29a535eec|FREE|G1|fewshot_v1",
+          "metadata_sentence_id": "00b5c2d6e5fd",
+          "metadata_template_id": "T3",
+          "metadata_slot": "G1",
+          "metadata_system": "G1:meta-llama/llama-3.1-8b-instruct",
+          "metadata_family": "meta",
+          "metadata_prompt_variant": "fewshot_v1",
+          "metadata_words": 35,
+          "metadata_word_tercile": "W3",
+          "metadata_nconds_weak": 5,
+          "metadata_label_binary": "EXCLUDED",
+          "metadata_label_provisional": "MAPPED",
+          "metadata_untouched": true,
+          "metadata_seen_iter3": false,
+          "metadata_s1_flag": false,
+          "metadata_cert_dominant": "count_prune_subtree",
+          "metadata_coverage_status": "OK",
+          "metadata_judge_cheap_orig_source": "iter5"
+        },
+        {
+          "input": "{\"text\": \"If an adult will be late for work and is invited to join the club, and the adult also does not steal government funds, then the adult is always tired in the morning, except when the adult lo...",
+          "output": "ERROR_CERT",
+          "predict_c_score_align": "1.000000",
+          "predict_c_exact": "1.000000",
+          "predict_c_score_hyb": "1.000000",
+          "predict_c_score_nf": "1.000000",
+          "predict_g_align": "1.000000",
+          "predict_g_nf": "1.000000",
+          "predict_judge_cheap_disg": "0.900000",
+          "predict_judge_cheap_orig": "1.000000",
+          "predict_judge_local_disg": "0.700000",
+          "predict_V1_c_pn": "1.000000",
+          "predict_V2_c_rw": "1.000000",
+          "predict_V3_c_pn_rw": "1.000000",
+          "predict_V4_c_two_channel": "0.838446",
+          "predict_V5_c_v5": "1.000000",
+          "metadata_row_key": "1e7b735a1beb581e|FREE|G1|fewshot_v1",
+          "metadata_sentence_id": "00b34f38e8ee",
+          "metadata_template_id": "T2",
+          "metadata_slot": "G1",
+          "metadata_system": "G1:meta-llama/llama-3.1-8b-instruct",
+          "metadata_family": "meta",
+          "metadata_prompt_variant": "fewshot_v1",
+          "metadata_words": 40,
+          "metadata_word_tercile": "W3",
+          "metadata_nconds_weak": 5,
+          "metadata_label_binary": "ERROR",
+          "metadata_label_provisional": "ERROR_CERT",
+          "metadata_untouched": true,
+          "metadata_seen_iter3": false,
+          "metadata_s1_flag": false,
+          "metadata_cert_dominant": "no_polarity_compatible_target",
+          "metadata_coverage_status": "OK",
+          "metadata_judge_cheap_orig_source": "iter5"
+        }
+      ]
+    }
+  ]
+}

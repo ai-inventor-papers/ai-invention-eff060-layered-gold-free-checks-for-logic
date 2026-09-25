@@ -1,0 +1,1689 @@
+{
+ "population_Z": {
+  "n": 2672,
+  "n_error": 1810,
+  "n_correct": 862
+ },
+ "auroc": {
+  "ALL-strat": {
+   "c_gg": {
+    "auroc": 0.6964364733668502,
+    "ci": [
+     0.6593869075913343,
+     0.7325637662467749
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.6851605026470541,
+    "ci": [
+     0.6477812650837804,
+     0.7224002779374089
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.689402986666098,
+    "ci": [
+     0.6521886874991049,
+     0.7256701171279417
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7421654662067422,
+    "ci": [
+     0.7074502503344503,
+     0.774130921033457
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.04572899283989196,
+    "ci": [
+     -0.0708974380922907,
+     -0.021226381894754013
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.05700496355968809,
+    "ci": [
+     -0.07946007534037781,
+     -0.03668890311324016
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.05276247954064417,
+    "ci": [
+     -0.08701422407474535,
+     -0.017856484090328164
+    ]
+   }
+  },
+  "pooled": {
+   "c_gg": {
+    "auroc": 0.7509332017279614,
+    "ci": [
+     0.7112386927206481,
+     0.7881016600050388
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.7446247965030572,
+    "ci": [
+     0.7031381401101426,
+     0.7824020467781626
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.7476833395290408,
+    "ci": [
+     0.7070254311118075,
+     0.7837745919137231
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7836862750124982,
+    "ci": [
+     0.7461161457366073,
+     0.8177098470559958
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.032753073284536804,
+    "ci": [
+     -0.05162923951231312,
+     -0.015128272888042317
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.03906147850944097,
+    "ci": [
+     -0.05605783966104978,
+     -0.02345072211729068
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.036002935483457454,
+    "ci": [
+     -0.06264672369831281,
+     -0.00984139158088913
+    ]
+   }
+  },
+  "LONG-strat": {
+   "c_gg": {
+    "auroc": 0.6886665570342875,
+    "ci": [
+     0.6500605367753001,
+     0.7262309460476591
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.6826994232553769,
+    "ci": [
+     0.6437900027484259,
+     0.7215272402305699
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.6724169828386172,
+    "ci": [
+     0.6341961381516903,
+     0.7111593831186117
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7425924729540836,
+    "ci": [
+     0.7061825496731055,
+     0.7758485282757984
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.05392591591979612,
+    "ci": [
+     -0.07970902575405811,
+     -0.029838034821039947
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.05989304969870668,
+    "ci": [
+     -0.08337614945644607,
+     -0.0373415763794124
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.07017549011546642,
+    "ci": [
+     -0.10338709849890972,
+     -0.03807017383525768
+    ]
+   }
+  },
+  "L25": {
+   "c_gg": {
+    "auroc": 0.6569534787978591,
+    "ci": [
+     0.5955131929079831,
+     0.7120359677486703
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.6519226018937835,
+    "ci": [
+     0.5864053667631709,
+     0.710175200578677
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.6113050638122685,
+    "ci": [
+     0.5525634804789544,
+     0.6709477402817299
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7129847673939893,
+    "ci": [
+     0.6493294162748214,
+     0.7695635621419243
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.05603128859613016,
+    "ci": [
+     -0.09694120853492863,
+     -0.017815611168613237
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.06106216550020582,
+    "ci": [
+     -0.0973907437823976,
+     -0.025786042550804075
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.10167970358172085,
+    "ci": [
+     -0.16775623311148233,
+     -0.037829705160757704
+    ]
+   }
+  },
+  "CTRL": {
+   "c_gg": {
+    "auroc": 0.7729033003872608,
+    "ci": [
+     0.638364457882208,
+     0.8955113137056792
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.7093809606381134,
+    "ci": [
+     0.5604469843427374,
+     0.8521737070608078
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.8565689844517658,
+    "ci": [
+     0.7615902278137205,
+     0.9307591501231178
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7379631235188717,
+    "ci": [
+     0.6044001507005539,
+     0.863599297977394
+    ]
+   },
+   "c_gg - V0": {
+    "delta": 0.03494017686838913,
+    "ci": [
+     -0.032273418816705556,
+     0.10144366567307123
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.02858216288075832,
+    "ci": [
+     -0.11552417491909497,
+     0.046286601371347075
+    ]
+   },
+   "c_exact - V0": {
+    "delta": 0.11860586093289405,
+    "ci": [
+     0.027669514511889086,
+     0.20824657707175828
+    ]
+   }
+  }
+ },
+ "ed": {
+  "ALL": {
+   "c_gg": {
+    "e": 0.08066298342541436,
+    "d": 0.62877030162413,
+    "e_ci": [
+     0.04907983581983269,
+     0.11435010998092043
+    ],
+    "d_ci": [
+     0.5442378241043926,
+     0.7209089941231581
+    ]
+   },
+   "c_gg_allyes": {
+    "e": 0.112707182320442,
+    "d": 0.6160092807424594,
+    "e_ci": [
+     0.0767353303480916,
+     0.1532112813684343
+    ],
+    "d_ci": [
+     0.5325691769359501,
+     0.708561703868178
+    ]
+   },
+   "c_exact": {
+    "e": 0.017679558011049725,
+    "d": 0.7215777262180975,
+    "e_ci": [
+     0.004009821910241211,
+     0.03587012039949103
+    ],
+    "d_ci": [
+     0.6402410322999513,
+     0.8112274423658352
+    ]
+   },
+   "V0_frozen": {
+    "e": 0.14033149171270717,
+    "d": 0.4895591647331787,
+    "e_ci": [
+     0.10048747719310545,
+     0.1836789536729365
+    ],
+    "d_ci": [
+     0.41410895505390494,
+     0.5763463405651533
+    ]
+   }
+  },
+  "LONG": {
+   "c_gg": {
+    "e": 0.038461538461538464,
+    "d": 0.8224,
+    "e_ci": [
+     0.018979062811565302,
+     0.062093596739839066
+    ],
+    "d_ci": [
+     0.7538390313390313,
+     0.8928586849247472
+    ]
+   },
+   "c_gg_allyes": {
+    "e": 0.06911057692307693,
+    "d": 0.808,
+    "e_ci": [
+     0.041893917758786946,
+     0.09886086860342262
+    ],
+    "d_ci": [
+     0.7391287364130434,
+     0.8786363636363635
+    ]
+   },
+   "c_exact": {
+    "e": 0.008413461538461538,
+    "d": 0.9184,
+    "e_ci": [
+     0.0006276972863914169,
+     0.019586197156576578
+    ],
+    "d_ci": [
+     0.860527505520087,
+     0.9693102580924549
+    ]
+   },
+   "V0_frozen": {
+    "e": 0.09375,
+    "d": 0.6512,
+    "e_ci": [
+     0.0630609140046838,
+     0.12739545534825472
+    ],
+    "d_ci": [
+     0.5746452626852268,
+     0.7318632241469232
+    ]
+   }
+  },
+  "L25": {
+   "c_gg": {
+    "e": 0.021613832853025938,
+    "d": 0.96,
+    "e_ci": [
+     0.0,
+     0.05500229549248747
+    ],
+    "d_ci": [
+     0.8979533858998144,
+     1.0
+    ]
+   },
+   "c_gg_allyes": {
+    "e": 0.04755043227665706,
+    "d": 0.9428571428571428,
+    "e_ci": [
+     0.013077172516766208,
+     0.08988877158585325
+    ],
+    "d_ci": [
+     0.874251497005988,
+     0.9885073891625615
+    ]
+   },
+   "c_exact": {
+    "e": 0.002881844380403458,
+    "d": 0.9942857142857143,
+    "e_ci": [
+     0.0,
+     0.009274289205995467
+    ],
+    "d_ci": [
+     0.9808589436878911,
+     1.0
+    ]
+   },
+   "V0_frozen": {
+    "e": 0.05043227665706052,
+    "d": 0.8114285714285714,
+    "e_ci": [
+     0.014802371150344391,
+     0.0938932201881798
+    ],
+    "d_ci": [
+     0.6863805276848755,
+     0.9256212307348671
+    ]
+   }
+  },
+  "words_T3": {
+   "c_gg": {
+    "e": 0.026362038664323375,
+    "d": 0.9826086956521739,
+    "e_ci": [
+     0.0,
+     0.06693141038443935
+    ],
+    "d_ci": [
+     0.9411764705882353,
+     1.0
+    ]
+   },
+   "c_gg_allyes": {
+    "e": 0.04745166959578207,
+    "d": 0.9739130434782609,
+    "e_ci": [
+     0.009558565481520924,
+     0.09559015870922358
+    ],
+    "d_ci": [
+     0.9270769817073171,
+     1.0
+    ]
+   },
+   "c_exact": {
+    "e": 0.0035149384885764497,
+    "d": 1.0,
+    "e_ci": [
+     0.0,
+     0.011235955056179775
+    ],
+    "d_ci": [
+     1.0,
+     1.0
+    ]
+   },
+   "V0_frozen": {
+    "e": 0.05272407732864675,
+    "d": 0.9130434782608695,
+    "e_ci": [
+     0.011963696369636964,
+     0.10596984036769788
+    ],
+    "d_ci": [
+     0.8181818181818182,
+     0.9838741935483871
+    ]
+   }
+  }
+ },
+ "t9_e": {
+  "ADD": {
+   "n": 1033,
+   "c_gg": 0.08518877057115198,
+   "c_gg_allyes": 0.1181026137463698,
+   "c_exact": 0.026137463697967087,
+   "V0_frozen": 0.1510164569215876
+  },
+  "DROP": {
+   "n": 1395,
+   "c_gg": 0.08100358422939068,
+   "c_gg_allyes": 0.11612903225806452,
+   "c_exact": 0.01935483870967742,
+   "V0_frozen": 0.15125448028673835
+  },
+  "COMPOUND": {
+   "n": 1141,
+   "c_gg": 0.018404907975460124,
+   "c_gg_allyes": 0.029798422436459245,
+   "c_exact": 0.006134969325153374,
+   "V0_frozen": 0.03155127081507449
+  },
+  "polarity(NEG/REV/QUANT)": {
+   "n": 432,
+   "c_gg": 0.023148148148148147,
+   "c_gg_allyes": 0.03009259259259259,
+   "c_exact": 0.0,
+   "V0_frozen": 0.05555555555555555
+  },
+  "structural(CONN/RESTR/BIND/MOVE/SWAP/SCOPE/UNGLUE)": {
+   "n": 1293,
+   "c_gg": 0.03944315545243619,
+   "c_gg_allyes": 0.061871616395978345,
+   "c_exact": 0.0038669760247486465,
+   "V0_frozen": 0.08197989172467131
+  },
+  "MEANING_RENAME-type (MEANING_RENAME op or tier-B VOCAB_GRAN)": {
+   "n": 219,
+   "c_gg": 0.2237442922374429,
+   "c_gg_allyes": 0.3378995433789954,
+   "c_exact": 0.0091324200913242,
+   "V0_frozen": 0.502283105022831
+  }
+ },
+ "perturb": {
+  "c_gg": {
+   "FA_base_all": 0.8282828282828283,
+   "RENAME_SYN": {
+    "n": 88,
+    "FA": 0.9318181818181818,
+    "FA_paired_bases": 0.8977272727272727,
+    "paired_flip": 0.03409090909090909,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 51,
+      "FA": 0.9803921568627451,
+      "FA_base": 0.9607843137254902,
+      "flip": 0.0196078431372549
+     },
+     "PANEL_REPAIRED": {
+      "n": 30,
+      "FA": 0.9666666666666667,
+      "FA_base": 0.9333333333333333,
+      "flip": 0.03333333333333333
+     },
+     "TRUSTED_AGREED": {
+      "n": 7,
+      "FA": 0.42857142857142855,
+      "FA_base": 0.2857142857142857,
+      "flip": 0.14285714285714285
+     }
+    }
+   },
+   "RENAME_NONCE": {
+    "n": 110,
+    "FA": 1.0,
+    "FA_paired_bases": 0.7727272727272727,
+    "paired_flip": 0.22727272727272727,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 43,
+      "FA": 1.0,
+      "FA_base": 0.8837209302325582,
+      "flip": 0.11627906976744186
+     },
+     "PANEL_REPAIRED": {
+      "n": 39,
+      "FA": 1.0,
+      "FA_base": 0.9230769230769231,
+      "flip": 0.07692307692307693
+     },
+     "TRUSTED_AGREED": {
+      "n": 28,
+      "FA": 1.0,
+      "FA_base": 0.39285714285714285,
+      "flip": 0.6071428571428571
+     }
+    }
+   },
+   "MEANING_RENAME": {
+    "n": 318,
+    "recall": 1.0,
+    "recall_given_base_endorsed": 1.0,
+    "n_base_endorsed": 239,
+    "by_polarity": {
+     "DOWN": 1.0,
+     "UP": 1.0
+    }
+   }
+  },
+  "c_gg_allyes": {
+   "FA_base_all": 0.797979797979798,
+   "RENAME_SYN": {
+    "n": 88,
+    "FA": 0.8636363636363636,
+    "FA_paired_bases": 0.8636363636363636,
+    "paired_flip": 0.0,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 51,
+      "FA": 0.9215686274509803,
+      "FA_base": 0.9215686274509803,
+      "flip": 0.0
+     },
+     "PANEL_REPAIRED": {
+      "n": 30,
+      "FA": 0.9,
+      "FA_base": 0.9,
+      "flip": 0.0
+     },
+     "TRUSTED_AGREED": {
+      "n": 7,
+      "FA": 0.2857142857142857,
+      "FA_base": 0.2857142857142857,
+      "flip": 0.0
+     }
+    }
+   },
+   "RENAME_NONCE": {
+    "n": 110,
+    "FA": 0.7454545454545455,
+    "FA_paired_bases": 0.7454545454545455,
+    "paired_flip": 0.0,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 43,
+      "FA": 0.8837209302325582,
+      "FA_base": 0.8837209302325582,
+      "flip": 0.0
+     },
+     "PANEL_REPAIRED": {
+      "n": 39,
+      "FA": 0.8974358974358975,
+      "FA_base": 0.8974358974358975,
+      "flip": 0.0
+     },
+     "TRUSTED_AGREED": {
+      "n": 28,
+      "FA": 0.32142857142857145,
+      "FA_base": 0.32142857142857145,
+      "flip": 0.0
+     }
+    }
+   },
+   "MEANING_RENAME": {
+    "n": 318,
+    "recall": 0.8207547169811321,
+    "recall_given_base_endorsed": 0.7615062761506276,
+    "n_base_endorsed": 239,
+    "by_polarity": {
+     "DOWN": 0.8402366863905325,
+     "UP": 0.7986577181208053
+    }
+   }
+  },
+  "c_exact_pt": {
+   "FA_base_all": 0.8939393939393939,
+   "RENAME_SYN": {
+    "n": 88,
+    "FA": 1.0,
+    "FA_paired_bases": 0.9318181818181818,
+    "paired_flip": 0.06818181818181818,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 51,
+      "FA": 1.0,
+      "FA_base": 0.9803921568627451,
+      "flip": 0.0196078431372549
+     },
+     "PANEL_REPAIRED": {
+      "n": 30,
+      "FA": 1.0,
+      "FA_base": 1.0,
+      "flip": 0.0
+     },
+     "TRUSTED_AGREED": {
+      "n": 7,
+      "FA": 1.0,
+      "FA_base": 0.2857142857142857,
+      "flip": 0.7142857142857143
+     }
+    }
+   },
+   "RENAME_NONCE": {
+    "n": 110,
+    "FA": 1.0,
+    "FA_paired_bases": 0.8636363636363636,
+    "paired_flip": 0.13636363636363635,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 43,
+      "FA": 1.0,
+      "FA_base": 0.9302325581395349,
+      "flip": 0.06976744186046512
+     },
+     "PANEL_REPAIRED": {
+      "n": 39,
+      "FA": 1.0,
+      "FA_base": 0.9743589743589743,
+      "flip": 0.02564102564102564
+     },
+     "TRUSTED_AGREED": {
+      "n": 28,
+      "FA": 1.0,
+      "FA_base": 0.6071428571428571,
+      "flip": 0.39285714285714285
+     }
+    }
+   },
+   "MEANING_RENAME": {
+    "n": 318,
+    "recall": 1.0,
+    "recall_given_base_endorsed": 1.0,
+    "n_base_endorsed": 239,
+    "by_polarity": {
+     "DOWN": 1.0,
+     "UP": 1.0
+    }
+   }
+  },
+  "c_align": {
+   "FA_base_all": 0.7121212121212122,
+   "RENAME_SYN": {
+    "n": 88,
+    "FA": 0.9431818181818182,
+    "FA_paired_bases": 0.7613636363636364,
+    "paired_flip": 0.18181818181818182,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 51,
+      "FA": 0.9803921568627451,
+      "FA_base": 0.8235294117647058,
+      "flip": 0.1568627450980392
+     },
+     "PANEL_REPAIRED": {
+      "n": 30,
+      "FA": 0.9,
+      "FA_base": 0.7666666666666667,
+      "flip": 0.13333333333333333
+     },
+     "TRUSTED_AGREED": {
+      "n": 7,
+      "FA": 0.8571428571428571,
+      "FA_base": 0.2857142857142857,
+      "flip": 0.5714285714285714
+     }
+    }
+   },
+   "RENAME_NONCE": {
+    "n": 110,
+    "FA": 1.0,
+    "FA_paired_bases": 0.6727272727272727,
+    "paired_flip": 0.32727272727272727,
+    "by_base_status": {
+     "GOLD_PANEL_OK": {
+      "n": 43,
+      "FA": 1.0,
+      "FA_base": 0.813953488372093,
+      "flip": 0.18604651162790697
+     },
+     "PANEL_REPAIRED": {
+      "n": 39,
+      "FA": 1.0,
+      "FA_base": 0.7692307692307693,
+      "flip": 0.23076923076923078
+     },
+     "TRUSTED_AGREED": {
+      "n": 28,
+      "FA": 1.0,
+      "FA_base": 0.32142857142857145,
+      "flip": 0.6785714285714286
+     }
+    }
+   },
+   "MEANING_RENAME": {
+    "n": 318,
+    "recall": 1.0,
+    "recall_given_base_endorsed": 1.0,
+    "n_base_endorsed": 239,
+    "by_polarity": {
+     "DOWN": 1.0,
+     "UP": 1.0
+    }
+   }
+  }
+ },
+ "gates": {
+  "g1": {
+   "pass": true,
+   "paired_flip": 0.03409090909090909,
+   "FA_SYN": 0.9318181818181818,
+   "FA_paired_bases": 0.8977272727272727,
+   "FA_all_bases": 0.8282828282828283,
+   "rule": "flip <= 0.05 AND FA <= FA(base) + 0.05"
+  },
+  "g2": {
+   "pass": true,
+   "recall_gg": 1.0,
+   "recall_c_align": 1.0,
+   "FA_base_gg": 0.8282828282828283,
+   "FA_base_c_align": 0.7121212121212122,
+   "recall_given_base_endorsed_gg": 1.0,
+   "recall_given_base_endorsed_c_align": 1.0
+  },
+  "g3": {
+   "pass": false,
+   "gg": 0.6964364733668502,
+   "V0": 0.7421654662067422,
+   "delta_ci": [
+    -0.0708974380922907,
+    -0.021226381894754013
+   ]
+  },
+  "checker": {
+   "pass": true,
+   "G-A_confirm_BA": 0.9074303405572756,
+   "G-B": "NOT_TESTABLE",
+   "G-B_confirm_BA_descriptive": 0.9406862745098039
+  },
+  "NONCE_expected_failure": {
+   "n": 110,
+   "FA": 1.0,
+   "FA_paired_bases": 0.7727272727272727,
+   "paired_flip": 0.22727272727272727,
+   "by_base_status": {
+    "GOLD_PANEL_OK": {
+     "n": 43,
+     "FA": 1.0,
+     "FA_base": 0.8837209302325582,
+     "flip": 0.11627906976744186
+    },
+    "PANEL_REPAIRED": {
+     "n": 39,
+     "FA": 1.0,
+     "FA_base": 0.9230769230769231,
+     "flip": 0.07692307692307693
+    },
+    "TRUSTED_AGREED": {
+     "n": 28,
+     "FA": 1.0,
+     "FA_base": 0.39285714285714285,
+     "flip": 0.6071428571428571
+    }
+   }
+  },
+  "GG_status": "FAIL"
+ },
+ "pairs_E": {
+  "n_nonexact_pairs": 11889,
+  "why": {
+   "PREFILTER": 10514,
+   "gloss_rejected": 403,
+   "gloss_yes": 675,
+   "identity_map": 12,
+   "NO_MAP": 285
+  },
+  "share_map_found": 0.09168138615526958,
+  "share_gloss_rejected": 0.033896879468416186,
+  "share_capped": 0.0,
+  "crosstab_align_vs_gg": {
+   "align=True,gg=True": 583,
+   "align=True,gg=False": 946,
+   "align=False,gg=True": 104,
+   "align=False,gg=False": 10256
+  }
+ },
+ "examples": {
+  "GG_YES_align_rejected": [
+   {
+    "sid": "004f8eafeefa",
+    "fol_i": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ ArtFormFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "fol_j": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificTypeOfPaper)) ∧ FormOfArtFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "ArtFormFrom/2",
+        "FormOfArtFrom/2",
+        "ArtFormFrom(v0, particularRegion)",
+        "FormOfArtFrom(v0, particularRegion)"
+       ],
+       [
+        "const",
+        "specificPaper",
+        "specificTypeOfPaper",
+        "AppliedTo(v0, specificPaper)",
+        "AppliedTo(v0, specificTypeOfPaper)"
+       ]
+      ],
+      "pred": {
+       "Painting/1": "Painting/1",
+       "WatercolorPainting/1": "WatercolorPainting/1",
+       "AppliedTo/2": "AppliedTo/2",
+       "ArtFormFrom/2": "FormOfArtFrom/2",
+       "CreatedUsing/2": "CreatedUsing/2"
+      },
+      "const": {
+       "particularRegion": "particularRegion",
+       "specificPaper": "specificTypeOfPaper",
+       "waterSolublePigments": "waterSolublePigments"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "004f8eafeefa",
+    "fol_i": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ ArtFormFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "fol_j": "∀v0 (((((Painting(v0) ∧ CreatedWith(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ FromRegion(v0, particularRegion)) → UsuallyWatercolor(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "ArtFormFrom/2",
+        "FromRegion/2",
+        "ArtFormFrom(v0, particularRegion)",
+        "FromRegion(v0, particularRegion)"
+       ],
+       [
+        "pred",
+        "CreatedUsing/2",
+        "CreatedWith/2",
+        "CreatedUsing(v0, waterSolublePigments)",
+        "CreatedWith(v0, waterSolublePigments)"
+       ],
+       [
+        "pred",
+        "WatercolorPainting/1",
+        "UsuallyWatercolor/1",
+        "WatercolorPainting(v0)",
+        "UsuallyWatercolor(v0)"
+       ]
+      ],
+      "pred": {
+       "Painting/1": "Painting/1",
+       "WatercolorPainting/1": "UsuallyWatercolor/1",
+       "AppliedTo/2": "AppliedTo/2",
+       "ArtFormFrom/2": "FromRegion/2",
+       "CreatedUsing/2": "CreatedWith/2"
+      },
+      "const": {
+       "particularRegion": "particularRegion",
+       "specificPaper": "specificPaper",
+       "waterSolublePigments": "waterSolublePigments"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "004f8eafeefa",
+    "fol_i": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ ArtFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "fol_j": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificTypeOfPaper)) ∧ FormOfArtFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "ArtFrom/2",
+        "FormOfArtFrom/2",
+        "ArtFrom(v0, particularRegion)",
+        "FormOfArtFrom(v0, particularRegion)"
+       ],
+       [
+        "const",
+        "specificPaper",
+        "specificTypeOfPaper",
+        "AppliedTo(v0, specificPaper)",
+        "AppliedTo(v0, specificTypeOfPaper)"
+       ]
+      ],
+      "pred": {
+       "Painting/1": "Painting/1",
+       "WatercolorPainting/1": "WatercolorPainting/1",
+       "AppliedTo/2": "AppliedTo/2",
+       "ArtFrom/2": "FormOfArtFrom/2",
+       "CreatedUsing/2": "CreatedUsing/2"
+      },
+      "const": {
+       "particularRegion": "particularRegion",
+       "specificPaper": "specificTypeOfPaper",
+       "waterSolublePigments": "waterSolublePigments"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "004f8eafeefa",
+    "fol_i": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ ArtFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "fol_j": "∀v0 (((((Painting(v0) ∧ CreatedWith(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ FromRegion(v0, particularRegion)) → UsuallyWatercolor(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "ArtFrom/2",
+        "FromRegion/2",
+        "ArtFrom(v0, particularRegion)",
+        "FromRegion(v0, particularRegion)"
+       ],
+       [
+        "pred",
+        "CreatedUsing/2",
+        "CreatedWith/2",
+        "CreatedUsing(v0, waterSolublePigments)",
+        "CreatedWith(v0, waterSolublePigments)"
+       ],
+       [
+        "pred",
+        "WatercolorPainting/1",
+        "UsuallyWatercolor/1",
+        "WatercolorPainting(v0)",
+        "UsuallyWatercolor(v0)"
+       ]
+      ],
+      "pred": {
+       "Painting/1": "Painting/1",
+       "WatercolorPainting/1": "UsuallyWatercolor/1",
+       "AppliedTo/2": "AppliedTo/2",
+       "ArtFrom/2": "FromRegion/2",
+       "CreatedUsing/2": "CreatedWith/2"
+      },
+      "const": {
+       "particularRegion": "particularRegion",
+       "specificPaper": "specificPaper",
+       "waterSolublePigments": "waterSolublePigments"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "004f8eafeefa",
+    "fol_i": "∀v0 (((((Painting(v0) ∧ CreatedUsing(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificTypeOfPaper)) ∧ FormOfArtFrom(v0, particularRegion)) → WatercolorPainting(v0)))",
+    "fol_j": "∀v0 (((((Painting(v0) ∧ CreatedWith(v0, waterSolublePigments)) ∧ AppliedTo(v0, specificPaper)) ∧ FromRegion(v0, particularRegion)) → UsuallyWatercolor(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CreatedUsing/2",
+        "CreatedWith/2",
+        "CreatedUsing(v0, waterSolublePigments)",
+        "CreatedWith(v0, waterSolublePigments)"
+       ],
+       [
+        "pred",
+        "FormOfArtFrom/2",
+        "FromRegion/2",
+        "FormOfArtFrom(v0, particularRegion)",
+        "FromRegion(v0, particularRegion)"
+       ],
+       [
+        "pred",
+        "WatercolorPainting/1",
+        "UsuallyWatercolor/1",
+        "WatercolorPainting(v0)",
+        "UsuallyWatercolor(v0)"
+       ],
+       [
+        "const",
+        "specificTypeOfPaper",
+        "specificPaper",
+        "AppliedTo(v0, specificTypeOfPaper)",
+        "AppliedTo(v0, specificPaper)"
+       ]
+      ],
+      "pred": {
+       "Painting/1": "Painting/1",
+       "WatercolorPainting/1": "UsuallyWatercolor/1",
+       "AppliedTo/2": "AppliedTo/2",
+       "CreatedUsing/2": "CreatedWith/2",
+       "FormOfArtFrom/2": "FromRegion/2"
+      },
+      "const": {
+       "particularRegion": "particularRegion",
+       "specificTypeOfPaper": "specificPaper",
+       "waterSolublePigments": "waterSolublePigments"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "004f8eafeefa",
+    "fol_i": "∀v0 ((((CreatedUsing(v0, waterSolublePigments) ∧ AppliedTo(v0, specificTypeOfPaper)) ∧ FormOfArt(v0, particularRegion)) → UsuallyWatercolorPainting(v0)))",
+    "fol_j": "∀v0 ((((CreatedUsing(v0, waterSolublePigments) ∧ AppliedTo(v0, specificTypePaper)) ∧ FormOfArt(v0, particularRegion)) → Watercolor(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "UsuallyWatercolorPainting/1",
+        "Watercolor/1",
+        "UsuallyWatercolorPainting(v0)",
+        "Watercolor(v0)"
+       ],
+       [
+        "const",
+        "specificTypeOfPaper",
+        "specificTypePaper",
+        "AppliedTo(v0, specificTypeOfPaper)",
+        "AppliedTo(v0, specificTypePaper)"
+       ]
+      ],
+      "pred": {
+       "UsuallyWatercolorPainting/1": "Watercolor/1",
+       "AppliedTo/2": "AppliedTo/2",
+       "CreatedUsing/2": "CreatedUsing/2",
+       "FormOfArt/2": "FormOfArt/2"
+      },
+      "const": {
+       "particularRegion": "particularRegion",
+       "specificTypeOfPaper": "specificTypePaper",
+       "waterSolublePigments": "waterSolublePigments"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "0051666e48f8",
+    "fol_i": "∀v0 (((((Plant(v0) ∧ GrowsWellIn(v0, partialShade)) ∧ HasColorfulFlowers(v0)) ∧ Requires(v0, moderateWater)) → SuitableFor(v0, shadedGarden)))",
+    "fol_j": "∀v0 (((((Plant(v0) ∧ GrowsWellIn(v0, partialShade)) ∧ HasColorfulFlowers(v0)) ∧ RequiresWaterLevel(v0, moderate)) → SuitableFor(v0, shadedGarden)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "Requires/2",
+        "RequiresWaterLevel/2",
+        "Requires(v0, moderateWater)",
+        "RequiresWaterLevel(v0, moderate)"
+       ],
+       [
+        "const",
+        "moderateWater",
+        "moderate",
+        "Requires(v0, moderateWater)",
+        "RequiresWaterLevel(v0, moderate)"
+       ]
+      ],
+      "pred": {
+       "SuitableFor/2": "SuitableFor/2",
+       "GrowsWellIn/2": "GrowsWellIn/2",
+       "HasColorfulFlowers/1": "HasColorfulFlowers/1",
+       "Plant/1": "Plant/1",
+       "Requires/2": "RequiresWaterLevel/2"
+      },
+      "const": {
+       "moderateWater": "moderate",
+       "partialShade": "partialShade",
+       "shadedGarden": "shadedGarden"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "005a27391925",
+    "fol_i": "∀v0 ((((CreatedUsing(v0, digitalTools) ∧ CanBeDisplayedOn(v0, electronicDevices)) ∧ Interactive(v0)) → DigitalInteractiveArtwork(v0)))",
+    "fol_j": "∀v0 ((((CreatedUsing(v0, digitalTools) ∧ DisplayableOn(v0, electronicDevices)) ∧ Interactive(v0)) → DigitalInteractiveArtwork(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CanBeDisplayedOn/2",
+        "DisplayableOn/2",
+        "CanBeDisplayedOn(v0, electronicDevices)",
+        "DisplayableOn(v0, electronicDevices)"
+       ]
+      ],
+      "pred": {
+       "DigitalInteractiveArtwork/1": "DigitalInteractiveArtwork/1",
+       "Interactive/1": "Interactive/1",
+       "CanBeDisplayedOn/2": "DisplayableOn/2",
+       "CreatedUsing/2": "CreatedUsing/2"
+      },
+      "const": {
+       "digitalTools": "digitalTools",
+       "electronicDevices": "electronicDevices"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "00ab814ec349",
+    "fol_i": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedByDeposition(v0)) ∧ FormsLayersOverTime(v0)) ∧ ContainsFossils(v0)) → SedimentaryRock(v0)))",
+    "fol_j": "∀v0 (((((GeologicalFormation(v0) ∧ DepositedBySediment(v0)) ∧ FormsLayersOverTime(v0)) ∧ ContainsFossils(v0)) → SedimentaryRock(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CreatedByDeposition/1",
+        "DepositedBySediment/1",
+        "CreatedByDeposition(v0)",
+        "DepositedBySediment(v0)"
+       ]
+      ],
+      "pred": {
+       "SedimentaryRock/1": "SedimentaryRock/1",
+       "ContainsFossils/1": "ContainsFossils/1",
+       "CreatedByDeposition/1": "DepositedBySediment/1",
+       "FormsLayersOverTime/1": "FormsLayersOverTime/1",
+       "GeologicalFormation/1": "GeologicalFormation/1"
+      },
+      "const": {}
+     }
+    ]
+   },
+   {
+    "sid": "02ea4275866d",
+    "fol_i": "∀v0 (((((Furniture(v0) ∧ FlatSurface(v0)) ∧ SupportedByLegs(v0)) ∧ ((Activities(v0, eating) ∨ Activities(v0, writing)) ∨ Activities(v0, working))) → Table(v0)))",
+    "fol_j": "∀v0 (((((PieceOfFurniture(v0) ∧ HasFlatSurface(v0)) ∧ SupportedByLegs(v0)) ∧ ((UsedFor(v0, eating) ∨ UsedFor(v0, writing)) ∨ UsedFor(v0, working))) → Table(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "Activities/2",
+        "UsedFor/2",
+        "Activities(v0, eating)",
+        "UsedFor(v0, eating)"
+       ],
+       [
+        "pred",
+        "FlatSurface/1",
+        "HasFlatSurface/1",
+        "FlatSurface(v0)",
+        "HasFlatSurface(v0)"
+       ],
+       [
+        "pred",
+        "Furniture/1",
+        "PieceOfFurniture/1",
+        "Furniture(v0)",
+        "PieceOfFurniture(v0)"
+       ]
+      ],
+      "pred": {
+       "Activities/2": "UsedFor/2",
+       "Table/1": "Table/1",
+       "FlatSurface/1": "HasFlatSurface/1",
+       "Furniture/1": "PieceOfFurniture/1",
+       "SupportedByLegs/1": "SupportedByLegs/1"
+      },
+      "const": {
+       "eating": "eating",
+       "working": "working",
+       "writing": "writing"
+      }
+     }
+    ]
+   }
+  ],
+  "GG_NO_align_accepted": [
+   {
+    "sid": "0051666e48f8",
+    "fol_i": "∀v0 (((((Plant(v0) ∧ GrowsWell(v0, partialShade)) ∧ HasColorfulFlowers(v0)) ∧ RequiresWater(v0, moderate)) → SuitableFor(v0, shadedGarden)))",
+    "fol_j": "∀v0 (((((Plant(v0) ∧ GrowsWellIn(v0, partialShade)) ∧ HasColorfulFlowers(v0)) ∧ Requires(v0, moderateWater)) → SuitableFor(v0, shadedGarden)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "GrowsWell/2",
+        "GrowsWellIn/2",
+        "GrowsWell(v0, partialShade)",
+        "GrowsWellIn(v0, partialShade)"
+       ],
+       [
+        "pred",
+        "RequiresWater/2",
+        "Requires/2",
+        "RequiresWater(v0, moderate)",
+        "Requires(v0, moderateWater)"
+       ],
+       [
+        "const",
+        "moderate",
+        "moderateWater",
+        "RequiresWater(v0, moderate)",
+        "Requires(v0, moderateWater)"
+       ]
+      ],
+      "pred": {
+       "SuitableFor/2": "SuitableFor/2",
+       "GrowsWell/2": "GrowsWellIn/2",
+       "HasColorfulFlowers/1": "HasColorfulFlowers/1",
+       "Plant/1": "Plant/1",
+       "RequiresWater/2": "Requires/2"
+      },
+      "const": {
+       "moderate": "moderateWater",
+       "partialShade": "partialShade",
+       "shadedGarden": "shadedGarden"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "0051666e48f8",
+    "fol_i": "∀v0 (((((Plant(v0) ∧ GrowsWellInPartialShade(v0)) ∧ ColorfulFlowers(v0)) ∧ RequiresModerateWater(v0)) → SuitableForShadedGarden(v0)))",
+    "fol_j": "∀v0 (((((Plant(v0) ∧ GrowsWellInPartialShade(v0)) ∧ HasColorfulFlowers(v0)) ∧ RequiresModerateWater(v0)) → SuitableForShadedGarden(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "ColorfulFlowers/1",
+        "GrowsWellInPartialShade/1",
+        "ColorfulFlowers(v0)",
+        "GrowsWellInPartialShade(v0)"
+       ],
+       [
+        "pred",
+        "GrowsWellInPartialShade/1",
+        "HasColorfulFlowers/1",
+        "GrowsWellInPartialShade(v0)",
+        "HasColorfulFlowers(v0)"
+       ]
+      ],
+      "pred": {
+       "SuitableForShadedGarden/1": "SuitableForShadedGarden/1",
+       "ColorfulFlowers/1": "GrowsWellInPartialShade/1",
+       "GrowsWellInPartialShade/1": "HasColorfulFlowers/1",
+       "Plant/1": "Plant/1",
+       "RequiresModerateWater/1": "RequiresModerateWater/1"
+      },
+      "const": {}
+     }
+    ]
+   },
+   {
+    "sid": "005a27391925",
+    "fol_i": "∀v0 (((((Artwork(v0) ∧ CreatedUsing(v0, digitalTools)) ∧ CanBeDisplayedOn(v0, electronicDevices)) ∧ Interactive(v0)) → DigitalInteractiveArtwork(v0)))",
+    "fol_j": "∀v0 (((((Artwork(v0) ∧ CreatedUsing(v0, digitalTools)) ∧ DisplayedOn(v0, electronicDevices)) ∧ Interactive(v0)) → DigitalInteractiveArtwork(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CanBeDisplayedOn/2",
+        "CreatedUsing/2",
+        "CanBeDisplayedOn(v0, electronicDevices)",
+        "CreatedUsing(v0, digitalTools)"
+       ],
+       [
+        "pred",
+        "CreatedUsing/2",
+        "DisplayedOn/2",
+        "CreatedUsing(v0, digitalTools)",
+        "DisplayedOn(v0, electronicDevices)"
+       ],
+       [
+        "const",
+        "digitalTools",
+        "electronicDevices",
+        "CreatedUsing(v0, digitalTools)",
+        "DisplayedOn(v0, electronicDevices)"
+       ],
+       [
+        "const",
+        "electronicDevices",
+        "digitalTools",
+        "CanBeDisplayedOn(v0, electronicDevices)",
+        "CreatedUsing(v0, digitalTools)"
+       ]
+      ],
+      "pred": {
+       "DigitalInteractiveArtwork/1": "DigitalInteractiveArtwork/1",
+       "Artwork/1": "Artwork/1",
+       "CanBeDisplayedOn/2": "CreatedUsing/2",
+       "CreatedUsing/2": "DisplayedOn/2",
+       "Interactive/1": "Interactive/1"
+      },
+      "const": {
+       "digitalTools": "electronicDevices",
+       "electronicDevices": "digitalTools"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "005a27391925",
+    "fol_i": "∀v0 (((((Artwork(v0) ∧ CreatedUsing(v0, digitalTools)) ∧ DisplayedOn(v0, electronicDevices)) ∧ Interactive(v0)) → DigitalInteractiveArtwork(v0)))",
+    "fol_j": "∀v0 (((((Artwork(v0) ∧ CreatedWith(v0, digitalTools)) ∧ CanBeDisplayedOn(v0, electronicDevices)) ∧ Interactive(v0)) → DigitalInteractiveArtwork(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CreatedUsing/2",
+        "CanBeDisplayedOn/2",
+        "CreatedUsing(v0, digitalTools)",
+        "CanBeDisplayedOn(v0, electronicDevices)"
+       ],
+       [
+        "pred",
+        "DisplayedOn/2",
+        "CreatedWith/2",
+        "DisplayedOn(v0, electronicDevices)",
+        "CreatedWith(v0, digitalTools)"
+       ],
+       [
+        "const",
+        "digitalTools",
+        "electronicDevices",
+        "CreatedUsing(v0, digitalTools)",
+        "CanBeDisplayedOn(v0, electronicDevices)"
+       ],
+       [
+        "const",
+        "electronicDevices",
+        "digitalTools",
+        "DisplayedOn(v0, electronicDevices)",
+        "CreatedWith(v0, digitalTools)"
+       ]
+      ],
+      "pred": {
+       "DigitalInteractiveArtwork/1": "DigitalInteractiveArtwork/1",
+       "Artwork/1": "Artwork/1",
+       "CreatedUsing/2": "CanBeDisplayedOn/2",
+       "DisplayedOn/2": "CreatedWith/2",
+       "Interactive/1": "Interactive/1"
+      },
+      "const": {
+       "digitalTools": "electronicDevices",
+       "electronicDevices": "digitalTools"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "0081ff295cda",
+    "fol_i": "∀v0 ((((MusicalComposition(v0) ∧ ConsistsOfMultipleMovements(v0)) ∧ FeaturesSoloInstrumentAccompaniedByOrchestra(v0)) → Concerto(v0)))",
+    "fol_j": "∀v0 ((((MusicalComposition(v0) ∧ TypicallyConsistsOfMultipleMovements(v0)) ∧ OftenFeaturesSoloInstrumentWithOrchestra(v0)) → Concerto(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "ConsistsOfMultipleMovements/1",
+        "MusicalComposition/1",
+        "ConsistsOfMultipleMovements(v0)",
+        "MusicalComposition(v0)"
+       ],
+       [
+        "pred",
+        "FeaturesSoloInstrumentAccompaniedByOrchestra/1",
+        "OftenFeaturesSoloInstrumentWithOrchestra/1",
+        "FeaturesSoloInstrumentAccompaniedByOrchestra(v0)",
+        "OftenFeaturesSoloInstrumentWithOrchestra(v0)"
+       ],
+       [
+        "pred",
+        "MusicalComposition/1",
+        "TypicallyConsistsOfMultipleMovements/1",
+        "MusicalComposition(v0)",
+        "TypicallyConsistsOfMultipleMovements(v0)"
+       ]
+      ],
+      "pred": {
+       "Concerto/1": "Concerto/1",
+       "ConsistsOfMultipleMovements/1": "MusicalComposition/1",
+       "FeaturesSoloInstrumentAccompaniedByOrchestra/1": "OftenFeaturesSoloInstrumentWithOrchestra/1",
+       "MusicalComposition/1": "TypicallyConsistsOfMultipleMovements/1"
+      },
+      "const": {}
+     }
+    ]
+   },
+   {
+    "sid": "0097807c718e",
+    "fol_i": "∀v0 ((Animal(v0) → (Carnivore(v0) ↔ (PrimarilyFeedsOn(v0, otherAnimals) ∧ HasAdaptedDigestiveSystem(v0, meat)))))",
+    "fol_j": "∀v0 ((Animal(v0) → (Carnivore(v0) ↔ (PrimarilyFeedsOn(v0, otherAnimals) ∧ HasDigestiveSystem(v0, adaptedForMeat)))))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "HasAdaptedDigestiveSystem/2",
+        "HasDigestiveSystem/2",
+        "HasAdaptedDigestiveSystem(v0, meat)",
+        "HasDigestiveSystem(v0, adaptedForMeat)"
+       ],
+       [
+        "const",
+        "meat",
+        "adaptedForMeat",
+        "HasAdaptedDigestiveSystem(v0, meat)",
+        "HasDigestiveSystem(v0, adaptedForMeat)"
+       ]
+      ],
+      "pred": {
+       "Animal/1": "Animal/1",
+       "Carnivore/1": "Carnivore/1",
+       "HasAdaptedDigestiveSystem/2": "HasDigestiveSystem/2",
+       "PrimarilyFeedsOn/2": "PrimarilyFeedsOn/2"
+      },
+      "const": {
+       "meat": "adaptedForMeat",
+       "otherAnimals": "otherAnimals"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "0097807c718e",
+    "fol_i": "∀v0 ((Animal(v0) → (Carnivore(v0) ↔ (PrimarilyFeedsOn(v0, otherAnimals) ∧ HasAdaptedDigestiveSystemFor(v0, meat)))))",
+    "fol_j": "∀v0 ((Animal(v0) → (Carnivore(v0) ↔ (PrimarilyFeedsOn(v0, otherAnimals) ∧ HasDigestiveSystem(v0, adaptedForMeat)))))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "HasAdaptedDigestiveSystemFor/2",
+        "HasDigestiveSystem/2",
+        "HasAdaptedDigestiveSystemFor(v0, meat)",
+        "HasDigestiveSystem(v0, adaptedForMeat)"
+       ],
+       [
+        "const",
+        "meat",
+        "adaptedForMeat",
+        "HasAdaptedDigestiveSystemFor(v0, meat)",
+        "HasDigestiveSystem(v0, adaptedForMeat)"
+       ]
+      ],
+      "pred": {
+       "Animal/1": "Animal/1",
+       "Carnivore/1": "Carnivore/1",
+       "HasAdaptedDigestiveSystemFor/2": "HasDigestiveSystem/2",
+       "PrimarilyFeedsOn/2": "PrimarilyFeedsOn/2"
+      },
+      "const": {
+       "meat": "adaptedForMeat",
+       "otherAnimals": "otherAnimals"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "00ab814ec349",
+    "fol_i": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedBy(v0, DepositionOfSediment)) ∧ FormsLayersOverTime(v0)) ∧ Contains(v0, Fossils)) → SedimentaryRock(v0)))",
+    "fol_j": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedByDeposition(v0, sediment)) ∧ FormsLayersOverTime(v0)) ∧ Contains(v0, fossils)) → SedimentaryRock(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CreatedBy/2",
+        "CreatedByDeposition/2",
+        "CreatedBy(v0, DepositionOfSediment)",
+        "CreatedByDeposition(v0, sediment)"
+       ],
+       [
+        "const",
+        "DepositionOfSediment",
+        "sediment",
+        "CreatedBy(v0, DepositionOfSediment)",
+        "CreatedByDeposition(v0, sediment)"
+       ]
+      ],
+      "pred": {
+       "SedimentaryRock/1": "SedimentaryRock/1",
+       "Contains/2": "Contains/2",
+       "CreatedBy/2": "CreatedByDeposition/2",
+       "FormsLayersOverTime/1": "FormsLayersOverTime/1",
+       "GeologicalFormation/1": "GeologicalFormation/1"
+      },
+      "const": {
+       "DepositionOfSediment": "sediment",
+       "Fossils": "fossils"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "00ab814ec349",
+    "fol_i": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedBy(v0, DepositionOfSediment)) ∧ FormsLayersOverTime(v0)) ∧ Contains(v0, Fossils)) → SedimentaryRock(v0)))",
+    "fol_j": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedByDepositionOf(v0, sediment)) ∧ FormsLayersOverTime(v0)) ∧ Contains(v0, fossils)) → SedimentaryRock(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CreatedBy/2",
+        "CreatedByDepositionOf/2",
+        "CreatedBy(v0, DepositionOfSediment)",
+        "CreatedByDepositionOf(v0, sediment)"
+       ],
+       [
+        "const",
+        "DepositionOfSediment",
+        "sediment",
+        "CreatedBy(v0, DepositionOfSediment)",
+        "CreatedByDepositionOf(v0, sediment)"
+       ]
+      ],
+      "pred": {
+       "SedimentaryRock/1": "SedimentaryRock/1",
+       "Contains/2": "Contains/2",
+       "CreatedBy/2": "CreatedByDepositionOf/2",
+       "FormsLayersOverTime/1": "FormsLayersOverTime/1",
+       "GeologicalFormation/1": "GeologicalFormation/1"
+      },
+      "const": {
+       "DepositionOfSediment": "sediment",
+       "Fossils": "fossils"
+      }
+     }
+    ]
+   },
+   {
+    "sid": "00ab814ec349",
+    "fol_i": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedBy(v0, depositionOfSediment)) ∧ FormsLayersOverTime(v0)) ∧ Contains(v0, fossils)) → SedimentaryRock(v0)))",
+    "fol_j": "∀v0 (((((GeologicalFormation(v0) ∧ CreatedByDeposition(v0, sediment)) ∧ FormsLayersOverTime(v0)) ∧ Contains(v0, fossils)) → SedimentaryRock(v0)))",
+    "maps": [
+     {
+      "nonidentity": [
+       [
+        "pred",
+        "CreatedBy/2",
+        "CreatedByDeposition/2",
+        "CreatedBy(v0, depositionOfSediment)",
+        "CreatedByDeposition(v0, sediment)"
+       ],
+       [
+        "const",
+        "depositionOfSediment",
+        "sediment",
+        "CreatedBy(v0, depositionOfSediment)",
+        "CreatedByDeposition(v0, sediment)"
+       ]
+      ],
+      "pred": {
+       "SedimentaryRock/1": "SedimentaryRock/1",
+       "Contains/2": "Contains/2",
+       "CreatedBy/2": "CreatedByDeposition/2",
+       "FormsLayersOverTime/1": "FormsLayersOverTime/1",
+       "GeologicalFormation/1": "GeologicalFormation/1"
+      },
+      "const": {
+       "depositionOfSediment": "sediment",
+       "fossils": "fossils"
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "cost": {
+  "gloss_sweep_usd_total_E_plus_PERTURB": 0.16304509999999994,
+  "n_unique_gloss_pairs": 3481,
+  "usd_per_call": 0.00039287975903614443,
+  "E_candidates_scored": 3490,
+  "E_search_cpu_s_total": 132.71700000000143,
+  "PERTURB_search_cpu_s_total": 48.57000000000003,
+  "FULL_per_E_candidate": {
+   "cpu_s": 0.038027793696275486,
+   "usd_upper": 4.671779369627506e-05,
+   "note": "usd_upper divides the whole sweep (E + PERTURB pairs) by E candidates only"
+  },
+  "MARGINAL_per_candidate": {
+   "cpu_s": 0.10593995223028697,
+   "usd": 1.0097266666666667e-05,
+   "note": "a new candidate needs ~n_peers searches and one gloss call per 12 new mapped pairs; cached pairs cost 0"
+  },
+  "peer_generation_usd_per_sentence": 0.0022064053623312495
+ },
+ "gloss_run": {
+  "n_pairs": 3481,
+  "n_sentences": 245,
+  "n_calls": 415,
+  "first50": {
+   "calls": 50,
+   "unparseable_calls": 0,
+   "reasoning_tokens": 0,
+   "prompt_tokens": 34071,
+   "completion_tokens": 3757,
+   "usd": 0.0196138,
+   "secs": 37.74308180809021
+  },
+  "projection_rest_usd": 0.14318074,
+  "remaining_before_rest": 1.7244412,
+  "prompt": "gloss_gg_v2",
+  "prompt_sha256": "48394616002323cb0608527746812df0a1953264385fff205e4a1b3b9087c46d",
+  "model": "google/gemini-2.5-flash",
+  "rest": {
+   "calls": 365,
+   "unparseable_calls": 0,
+   "reasoning_tokens": 0,
+   "prompt_tokens": 245921,
+   "completion_tokens": 27862,
+   "usd": 0.14343129999999993,
+   "secs": 278.08261132240295
+  },
+  "verdict_counts": {
+   "NO": 2632,
+   "YES": 849
+  },
+  "wall_s": 41.65730929374695,
+  "spend_total_after": 0.2189901
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "method": "Iteration-4 spend from every cost ledger in the run tree (evidence only, never guessed).\n\nMethod (plan PART 2 (14)):\n- glob the run root for *ledger*.json*, .aii_cost_ledger.jsonl and budget_state.json;\n- de-duplicate by file sha256 AND by (ts, model, cost) record key (repo clones hold copies);\n- window = [min ts of any iter_4/gen_art ledger record - 6 h, first HTTP-403 budget refusal];\n- the first-403 time is grepped from logs/*.log and *.jsonl in the iter_4 gen_art dirs;\n- sum by artifact directory; report evidenced total, the $7 phase budget and the difference.",
+ "n_ledger_files_found": 60,
+ "n_duplicate_files_by_sha256": 13,
+ "duplicate_files_examples": [
+  [
+   "../../../../round-3/evaluation-2/src/inputs_copy/3_invention_loop/iter_2/gen_art/gen_art_dataset_2/cost_ledger.jsonl",
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_2/cost_ledger.jsonl"
+  ],
+  [
+   "../../../../round-3/evaluation-2/src/inputs_copy/round-2/dataset-3/src/cost_ledger.jsonl",
+   "../../../../round-2/dataset-3/src/cost_ledger.jsonl"
+  ],
+  [
+   "../../../../round-3/evaluation-2/src/inputs_copy/round-2/experiment-5/src/results/budget_state.json",
+   "../../../../round-2/experiment-5/src/results/budget_state.json"
+  ],
+  [
+   "../../../../round-3/evaluation-2/src/inputs_copy/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/budget_state.json",
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/budget_state.json"
+  ],
+  [
+   "../../../../round-3/experiment-6/src/data/exp5/budget_state.json",
+   "../../../../round-2/experiment-5/src/results/budget_state.json"
+  ],
+  [
+   "../../../../round-3/experiment-6/src/data/exp6_results/budget_state.json",
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/budget_state.json"
+  ],
+  [
+   "../../../experiment-11/src/e2src/.aii_cost_ledger.jsonl",
+   "../../../../round-4/dataset-4/src/.aii_cost_ledger.jsonl"
+  ],
+  [
+   "../../../experiment-11/src/e2src/cost_ledger_iter4.jsonl",
+   "../../../../round-4/dataset-4/src/cost_ledger.jsonl"
+  ],
+  [
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/4_gen_paper_repo/_6_deploy_gh/_repo_clone/round-4/dataset-4/src/cost_ledger.jsonl",
+   "../../../../round-4/dataset-4/src/cost_ledger.jsonl"
+  ],
+  [
+   "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/4_gen_paper_repo/_6_deploy_gh/_repo_clone/round-4/dataset-5/src/cost_ledger.jsonl",
+   "../../../../round-4/dataset-5/src/cost_ledger.jsonl"
+  ]
+ ],
+ "n_duplicate_records_by_key": 16412,
+ "window_utc": [
+  "2026-09-24T01:13:50+00:00",
+  "2026-09-24T07:26:41+00:00"
+ ],
+ "first_403_source": "../../../../round-4/dataset-4/src/logs/gate.log",
+ "by_artifact_usd": {
+  "round-3/experiment-6/src": 2.395262,
+  "round-3/experiment-7/src": 1.5974248,
+  "round-3/experiment-8/src": 0.3452038,
+  "round-4/dataset-4/src": 0.2409125,
+  "round-4/experiment-9/src": 0.1082431,
+  "round-4/experiment-10/src": 8.8e-06,
+  "round-3/research-1/src": 0.0
+ },
+ "records_by_artifact": {
+  "round-3/experiment-6/src": 36926,
+  "round-3/experiment-7/src": 11389,
+  "round-3/experiment-8/src": 6710,
+  "round-3/research-1/src": 8,
+  "round-4/dataset-4/src": 412,
+  "round-4/experiment-10/src": 2,
+  "round-4/experiment-9/src": 1166
+ },
+ "evidenced_total_usd": 4.687055,
+ "evidenced_iter4_artifacts_usd": 0.349164,
+ "evidenced_other_artifacts_in_window_usd": 4.337891,
+ "window_note": "records of other artifacts whose ledger timestamps fall inside the iteration-4 window are listed; the ledgers do not say which phase budget they were charged to",
+ "phase_budget_usd": 7.0,
+ "unaccounted_usd": 2.312945,
+ "unaccounted_note": "unaccounted (no ledger in the run tree records it); not attributed to any process",
+ "iter4_gen_art_dirs_without_ledger": [
+  "../../../../round-4/evaluation-3/src"
+ ],
+ "ledger_budget_notes": [
+  {
+   "file": "../../../../round-4/dataset-5/src/cost_ledger.jsonl",
+   "note": "run Test-idea budget $7.04 of $7.00 already spent by earlier steps; nothing billed",
+   "code": "aii_run_budget_exhausted",
+   "utc": "2026-09-24T07:32:40Z"
+  },
+  {
+   "file": "../../../experiment-13/src/labeller/cost_ledger.jsonl",
+   "note": "run-level Test-idea budget $12.08 of $12.00 spent by the run (all parallel artifacts); nothing billed",
+   "code": "aii_run_budget_exhausted",
+   "utc": "2026-09-24T11:39:30Z"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "prefix_sentences": 110,
+ "n_rows": 1100,
+ "by_stratum": {
+  "EXC": 370,
+  "L25": 370,
+  "DT": 360
+ },
+ "sentences_by_stratum": {
+  "EXC": 37,
+  "L25": 37,
+  "DT": 36
+ }
+}

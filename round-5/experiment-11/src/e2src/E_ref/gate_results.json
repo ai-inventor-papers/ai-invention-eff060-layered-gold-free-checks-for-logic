@@ -1,0 +1,233 @@
+{
+ "synthetic": {
+  "P1": {
+   "model": "anthropic/claude-haiku-4.5",
+   "n_scored": 77,
+   "n_expected": 77,
+   "recall_faithful": 0.75,
+   "recall_unfaithful": 0.973,
+   "balanced_accuracy": 0.861,
+   "recall_unfaithful_DOWN": 1.0,
+   "recall_unfaithful_UP": 0.941,
+   "recall_STRICT": 0.75,
+   "recall_RENAME": 0.75,
+   "by_type": {
+    "ADD": 1.0,
+    "DROP": 1.0,
+    "NEG": 1.0,
+    "QUANT": 0.0,
+    "RENAME_SYNONYM": 0.75,
+    "REV": 1.0,
+    "STRICT_CONTRAPOSITIVE": 0.5,
+    "STRICT_DEMORGAN": 0.0,
+    "STRICT_DOUBLENEG": 1.0,
+    "STRICT_REORDER": 1.0,
+    "STRICT_VARRENAME": 0.8,
+    "SWAP": 1.0
+   },
+   "reference_accepted": 0.95,
+   "passes_gate": true
+  },
+  "P2": {
+   "model": "x-ai/grok-4.3",
+   "n_scored": 77,
+   "n_expected": 77,
+   "recall_faithful": 0.6,
+   "recall_unfaithful": 0.946,
+   "balanced_accuracy": 0.773,
+   "recall_unfaithful_DOWN": 0.95,
+   "recall_unfaithful_UP": 0.941,
+   "recall_STRICT": 0.7,
+   "recall_RENAME": 0.5,
+   "by_type": {
+    "ADD": 1.0,
+    "DROP": 1.0,
+    "NEG": 1.0,
+    "QUANT": 1.0,
+    "RENAME_SYNONYM": 0.5,
+    "REV": 1.0,
+    "STRICT_CONTRAPOSITIVE": 0.333,
+    "STRICT_DEMORGAN": 1.0,
+    "STRICT_DOUBLENEG": 1.0,
+    "STRICT_REORDER": 1.0,
+    "STRICT_VARRENAME": 0.6,
+    "SWAP": 0.75
+   },
+   "reference_accepted": 1.0,
+   "passes_gate": false
+  },
+  "P3": {
+   "model": "z-ai/glm-4.6",
+   "n_scored": 77,
+   "n_expected": 77,
+   "recall_faithful": 0.7,
+   "recall_unfaithful": 1.0,
+   "balanced_accuracy": 0.85,
+   "recall_unfaithful_DOWN": 1.0,
+   "recall_unfaithful_UP": 1.0,
+   "recall_STRICT": 0.75,
+   "recall_RENAME": 0.65,
+   "by_type": {
+    "ADD": 1.0,
+    "DROP": 1.0,
+    "NEG": 1.0,
+    "QUANT": 1.0,
+    "RENAME_SYNONYM": 0.65,
+    "REV": 1.0,
+    "STRICT_CONTRAPOSITIVE": 0.5,
+    "STRICT_DEMORGAN": 1.0,
+    "STRICT_DOUBLENEG": 1.0,
+    "STRICT_REORDER": 1.0,
+    "STRICT_VARRENAME": 0.6,
+    "SWAP": 1.0
+   },
+   "reference_accepted": 0.9,
+   "passes_gate": true
+  },
+  "R1": {
+   "model": "moonshotai/kimi-k2-0905",
+   "n_scored": 77,
+   "n_expected": 77,
+   "recall_faithful": 0.725,
+   "recall_unfaithful": 1.0,
+   "balanced_accuracy": 0.863,
+   "recall_unfaithful_DOWN": 1.0,
+   "recall_unfaithful_UP": 1.0,
+   "recall_STRICT": 0.8,
+   "recall_RENAME": 0.65,
+   "by_type": {
+    "ADD": 1.0,
+    "DROP": 1.0,
+    "NEG": 1.0,
+    "QUANT": 1.0,
+    "RENAME_SYNONYM": 0.65,
+    "REV": 1.0,
+    "STRICT_CONTRAPOSITIVE": 0.833,
+    "STRICT_DEMORGAN": 1.0,
+    "STRICT_DOUBLENEG": 1.0,
+    "STRICT_REORDER": 1.0,
+    "STRICT_VARRENAME": 0.4,
+    "SWAP": 1.0
+   },
+   "reference_accepted": 0.9,
+   "passes_gate": true
+  },
+  "R2": {
+   "model": "minimax/minimax-01",
+   "n_scored": 77,
+   "n_expected": 77,
+   "recall_faithful": 0.375,
+   "recall_unfaithful": 0.973,
+   "balanced_accuracy": 0.674,
+   "recall_unfaithful_DOWN": 0.95,
+   "recall_unfaithful_UP": 1.0,
+   "recall_STRICT": 0.35,
+   "recall_RENAME": 0.4,
+   "by_type": {
+    "ADD": 1.0,
+    "DROP": 1.0,
+    "NEG": 1.0,
+    "QUANT": 1.0,
+    "RENAME_SYNONYM": 0.4,
+    "REV": 1.0,
+    "STRICT_CONTRAPOSITIVE": 0.0,
+    "STRICT_DEMORGAN": 0.0,
+    "STRICT_DOUBLENEG": 0.25,
+    "STRICT_REORDER": 1.0,
+    "STRICT_VARRENAME": 0.4,
+    "SWAP": 0.875
+   },
+   "reference_accepted": 0.95,
+   "passes_gate": false
+  }
+ },
+ "trackh": {
+  "n_pairs": 96,
+  "n_unambiguous": 75,
+  "per_model": {
+   "P1": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.747
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.69
+    },
+    "orig_flagged_rate_unamb": 0.867,
+    "corr_accepted_rate_unamb": 0.627
+   },
+   "P3": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.693
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.762
+    },
+    "orig_flagged_rate_unamb": 0.773,
+    "corr_accepted_rate_unamb": 0.613
+   },
+   "R1": {
+    "unambiguous": {
+     "n_judgements": 142,
+     "accuracy": 0.725
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 38,
+     "accuracy": 0.711
+    },
+    "orig_flagged_rate_unamb": 0.72,
+    "corr_accepted_rate_unamb": 0.653
+   },
+   "majority": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.727
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.786
+    },
+    "orig_flagged_rate_unamb": 0.84,
+    "corr_accepted_rate_unamb": 0.613
+   }
+  },
+  "by_census_class": {
+   "COMPOUND": {
+    "n": 22,
+    "majority": {
+     "n_judgements": 44,
+     "accuracy": 0.727
+    }
+   },
+   "VOCAB_GRAN": {
+    "n": 18,
+    "majority": {
+     "n_judgements": 36,
+     "accuracy": 0.806
+    }
+   },
+   "single-op": {
+    "n": 21,
+    "majority": {
+     "n_judgements": 42,
+     "accuracy": 0.714
+    }
+   },
+   "two-op": {
+    "n": 14,
+    "majority": {
+     "n_judgements": 28,
+     "accuracy": 0.643
+    }
+   }
+  },
+  "members": [
+   "P1",
+   "P3",
+   "R1"
+  ]
+ }
+}

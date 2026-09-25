@@ -1,0 +1,23 @@
+{
+ "token": "aii_iter5_e2a_final_v1",
+ "written_utc": "2026-09-24T15:31:38Z",
+ "per_row_file": "../per_item_E2A.jsonl",
+ "sha256": "85befc18075ad573f5bc99b35b6ed2c42abf57920b0fd9a901ea259b5031f670",
+ "n_rows": 5500,
+ "columns_note": "row_key, sentence_id, stratum, label, label_tier, reading_choice, every frozen score (higher = ERROR)",
+ "overall": "NOT_TESTABLE ((a): too few rows with the pre-registered flash-lite disguised bar; see fallback_substitute_bar)",
+ "prefix_used": {
+  "prefix_sentences": 110,
+  "n_rows": 1100,
+  "by_stratum": {
+   "EXC": 370,
+   "L25": 370,
+   "DT": 360
+  },
+  "sentences_by_stratum": {
+   "EXC": 37,
+   "L25": 37,
+   "DT": 36
+  }
+ }
+}

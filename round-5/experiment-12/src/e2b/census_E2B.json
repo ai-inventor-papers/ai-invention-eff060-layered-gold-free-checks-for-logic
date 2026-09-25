@@ -1,0 +1,87 @@
+{
+ "e2_reproduction": {
+  "pool": "98cdccffa55226db6599c6b81b0228a667d4e805215e404f832edd9b776527f7",
+  "census_identical": true,
+  "exclusion_log_identical": true,
+  "active_sentences_sha256": "a056a0e8f17205d0a5540a57c1c62e7b78ade19beb3da5b43d4d7f8cc93134dc",
+  "pool_expected": "98cdccffa55226db6599c6b81b0228a667d4e805215e404f832edd9b776527f7",
+  "pool_ok": true,
+  "active_expected": "a056a0e8f17205d0a5540a57c1c62e7b78ade19beb3da5b43d4d7f8cc93134dc",
+  "active_ok": true
+ },
+ "rule": "E2-B = E2's 98 L25 surplus (e2_rank order) + continuation of E2's take(long_) then take(short) over sha1('E2_v1|'+sid), skipping every E2 id, accepted_grams seeded with the 12-grams of all 658 E2 rows (EXC 100, L25 448, DT 110)",
+ "n_E2_rows_seeding": 658,
+ "n_E2_12grams_seeded": 9634,
+ "L25_supply_after_filters_total": {
+  "25-29": 960,
+  ">=30": 186
+ },
+ "E2B": {
+  "n": 400,
+  "from_E2_surplus": 98,
+  "continuation": 302,
+  "word_bin_counts": {
+   "25-29": 374,
+   "30-34": 26
+  },
+  "surplus_word_bins": {
+   "25-29": 72,
+   "30-34": 26
+  },
+  "continuation_word_bins": {
+   "25-29": 302
+  },
+  "share_25_29": 0.935,
+  "mean_words": 26.82,
+  "mean_n_conditions": 4.66,
+  "batch_counts": {
+   "1": 50,
+   "2": 50,
+   "3": 50,
+   "4": 50,
+   "5": 50,
+   "6": 50,
+   "7": 50,
+   "8": 50
+  },
+  "surplus_per_batch": {
+   "1": 11,
+   "2": 9,
+   "3": 15,
+   "4": 10,
+   "5": 17,
+   "6": 13,
+   "7": 14,
+   "8": 9
+  }
+ },
+ "reserve": {
+  "n": 150,
+  "word_bin_counts": {
+   "25-29": 150
+  }
+ },
+ "supply_remaining_after_E2B_and_reserve": {
+  "25-29": 244,
+  ">=30": 2
+ },
+ "within_E2B_12gram_drops": {
+  "long": 2,
+  "short": 9,
+  "long_reserve": 2,
+  "short_reserve": 20
+ },
+ "collision_checks_all_zero": {
+  "E700_text": 0,
+  "E700_12gram": 0,
+  "E2_nonsurplus_id": 0,
+  "E2_nonsurplus_text": 0,
+  "E2_nonsurplus_12gram": 0,
+  "within_E2B_12gram": 0
+ },
+ "sha256": {
+  "sentences_E2B.json": "d4d30205daefba7bd82cb05e7b9cbe958c52eb0f35ca9b540622a4ee664c3e15",
+  "reserve_E2B.json": "04e573ec1653e7603c2e251708570c2e0642700adbcd4c6a406d507b665e1b98",
+  "batches_E2B.json": "f0c9b1982a2b257ea99da63ba57634cc1bb8d57ff1377c88085a1b7ce453cdb1"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "per_sentence_cost_usd": {
+  "L25": {
+   "generation": 0.001,
+   "panel_stage1": 0.00664,
+   "adjudication_P1": 0.00277,
+   "reference_repair": 0.00141,
+   "total": 0.01182
+  },
+  "EXC": {
+   "generation": 0.00087,
+   "panel_stage1": 0.00667,
+   "adjudication_P1": 0.00231,
+   "reference_repair": 0.00093,
+   "total": 0.01078
+  },
+  "DT": {
+   "generation": 0.00081,
+   "panel_stage1": 0.00667,
+   "adjudication_P1": 0.00231,
+   "reference_repair": 0.00093,
+   "total": 0.01072
+  }
+ },
+ "panel_cost_source": "E per-stratum measured costs (E2 panel pilot blocked by the run budget stop)",
+ "pilot_sentences": {
+  "EXC": 8,
+  "L25": 12,
+  "DT": 10
+ },
+ "spent_so_far_usd": 0.2409,
+ "projected_total_usd": 6.793,
+ "decision": "SURPLUS: add 100 L25 sentences from the pre-registered surplus order",
+ "add_l25": 100,
+ "E_per_sentence_costs_by_stratum": {
+  "EXC": {
+   "P1": 0.00231,
+   "stage1": 0.00667,
+   "repair": 0.00093
+  },
+  "CTRL": {
+   "P1": 0.00143,
+   "stage1": 0.00401
+  },
+  "L25": {
+   "P1": 0.00277,
+   "stage1": 0.00664,
+   "repair": 0.00141
+  },
+  "L20": {
+   "P1": 0.00254,
+   "stage1": 0.00644,
+   "repair": 0.00111
+  }
+ },
+ "note": "COST ONLY; no pilot label was inspected for this decision"
+}

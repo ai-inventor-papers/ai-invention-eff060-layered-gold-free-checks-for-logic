@@ -1,0 +1,5 @@
+{
+ "prefix_sentences": 110,
+ "rule": "panel records of sentences outside the completed first sha1-order prefix (110) moved aside (copies *_ALL_before_prefix_cut.jsonl); those sentences keep solver-only labels (no panel votes)",
+ "utc": "2026-09-24T15:11:37Z"
+}

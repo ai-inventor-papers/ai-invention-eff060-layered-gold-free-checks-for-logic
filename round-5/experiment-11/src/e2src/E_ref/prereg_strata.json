@@ -1,0 +1,391 @@
+{
+ "frozen_at_utc": "2026-09-23T13:11:04Z",
+ "frozen_before": "any candidate generation, labelling or metric run",
+ "strata": {
+  "EXC": "MALLS-train; all parseable unless/except/excluding/other-than items (sha1-ordered, cap 100), filled with 'without' then non-XOR 'but not' items with >=15 words",
+  "L25": ">=25 words and n_conditions>=3 (gold-derived nconds), even over word bins 25-29/30-34/>=35",
+  "L20": "20-24 words and n_conditions>=3, even over bins 20-21/22/23-24",
+  "CTRL": "FOLIO-v2-train premises where tasksource original gold \u2261 folio-refined (IDENTICAL_STRING/EQ/VOCAB/GRAN); reference = refined; bins <12/12-19/>=20 words; non-identical agreement preferred"
+ },
+ "counts": {
+  "EXC": 100,
+  "L25": 200,
+  "L20": 150,
+  "CTRL": 150
+ },
+ "exclusion": {
+  "hash_count": 2054,
+  "collisions_after_exclusion": 0
+ },
+ "testability_rule": "A stratum is TESTABLE only if, using tier A+B final labels only (CONTESTED excluded), it has >=50 ERROR rows AND >=50 CORRECT rows AND >=25 distinct sentences contributing ERROR rows AND >=25 distinct sentences contributing CORRECT rows. Declared per stratum after labelling, before any metric runs.",
+ "top_up_rule": "If after Step 3 the tier-A-projected ERROR or CORRECT count of L25 is below 60, generate one more sha1-ordered batch of 100 L25 sentences with the 5 cheapest generator slots, budget permitting.",
+ "testability_declaration": {
+  "declared_at_utc": "2026-09-23T16:31:18Z",
+  "declared_before_any_metric_run": true,
+  "per_stratum": {
+   "L25": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 637,
+     "ERROR_sents": 107,
+     "CORRECT_rows": 176,
+     "CORRECT_sents": 78,
+     "testable": true
+    },
+    "official_tierAB": {
+     "ERROR_rows": 697,
+     "ERROR_sents": 107,
+     "CORRECT_rows": 176,
+     "CORRECT_sents": 78,
+     "testable": true
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 704,
+     "ERROR_sents": 108,
+     "CORRECT_rows": 176,
+     "CORRECT_sents": 78,
+     "testable": true
+    }
+   },
+   "L20": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 524,
+     "ERROR_sents": 78,
+     "CORRECT_rows": 233,
+     "CORRECT_sents": 65,
+     "testable": true
+    },
+    "official_tierAB": {
+     "ERROR_rows": 592,
+     "ERROR_sents": 79,
+     "CORRECT_rows": 229,
+     "CORRECT_sents": 65,
+     "testable": true
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 597,
+     "ERROR_sents": 79,
+     "CORRECT_rows": 233,
+     "CORRECT_sents": 65,
+     "testable": true
+    }
+   },
+   "EXC": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 355,
+     "ERROR_sents": 63,
+     "CORRECT_rows": 224,
+     "CORRECT_sents": 55,
+     "testable": true
+    },
+    "official_tierAB": {
+     "ERROR_rows": 384,
+     "ERROR_sents": 63,
+     "CORRECT_rows": 222,
+     "CORRECT_sents": 55,
+     "testable": true
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 403,
+     "ERROR_sents": 64,
+     "CORRECT_rows": 224,
+     "CORRECT_sents": 55,
+     "testable": true
+    }
+   },
+   "CTRL": {
+    "provisional_strict_excl_addrop": {
+     "ERROR_rows": 72,
+     "ERROR_sents": 24,
+     "CORRECT_rows": 237,
+     "CORRECT_sents": 31,
+     "testable": false
+    },
+    "official_tierAB": {
+     "ERROR_rows": 149,
+     "ERROR_sents": 28,
+     "CORRECT_rows": 237,
+     "CORRECT_sents": 31,
+     "testable": true
+    },
+    "provisional_incl_unaudited_ref": {
+     "ERROR_rows": 160,
+     "ERROR_sents": 30,
+     "CORRECT_rows": 237,
+     "CORRECT_sents": 31,
+     "testable": true
+    }
+   }
+  },
+  "primary_pool": {
+   "L25": {
+    "tierAB_primary": {
+     "CORRECT": {
+      "rows": 176,
+      "sents": 78
+     },
+     "ERROR": {
+      "rows": 697,
+      "sents": 107
+     },
+     "testable": true
+    },
+    "tierAB_incl_reading_choice": {
+     "CORRECT": {
+      "rows": 176,
+      "sents": 78
+     },
+     "ERROR": {
+      "rows": 697,
+      "sents": 107
+     },
+     "testable": true
+    },
+    "tierA_only": {
+     "CORRECT": {
+      "rows": 40,
+      "sents": 25
+     },
+     "ERROR": {
+      "rows": 98,
+      "sents": 46
+     },
+     "testable": false
+    },
+    "CONTESTED_rows": 130,
+    "UNRESOLVED_rows": 4,
+    "tierC_rows": 1566,
+    "reading_choice_rows": 5,
+    "rows": 2960,
+    "sentences": 300
+   },
+   "L25_orig200": {
+    "tierAB_primary": {
+     "CORRECT": {
+      "rows": 141,
+      "sents": 54
+     },
+     "ERROR": {
+      "rows": 567,
+      "sents": 70
+     },
+     "testable": true
+    },
+    "tierAB_incl_reading_choice": {
+     "CORRECT": {
+      "rows": 141,
+      "sents": 54
+     },
+     "ERROR": {
+      "rows": 567,
+      "sents": 70
+     },
+     "testable": true
+    },
+    "tierA_only": {
+     "CORRECT": {
+      "rows": 34,
+      "sents": 19
+     },
+     "ERROR": {
+      "rows": 73,
+      "sents": 30
+     },
+     "testable": false
+    },
+    "CONTESTED_rows": 116,
+    "UNRESOLVED_rows": 4,
+    "tierC_rows": 1334,
+    "reading_choice_rows": 0,
+    "rows": 2460,
+    "sentences": 200
+   },
+   "L25_topup100": {
+    "tierAB_primary": {
+     "CORRECT": {
+      "rows": 35,
+      "sents": 24
+     },
+     "ERROR": {
+      "rows": 130,
+      "sents": 37
+     },
+     "testable": false
+    },
+    "tierAB_incl_reading_choice": {
+     "CORRECT": {
+      "rows": 35,
+      "sents": 24
+     },
+     "ERROR": {
+      "rows": 130,
+      "sents": 37
+     },
+     "testable": false
+    },
+    "tierA_only": {
+     "CORRECT": {
+      "rows": 6,
+      "sents": 6
+     },
+     "ERROR": {
+      "rows": 25,
+      "sents": 16
+     },
+     "testable": false
+    },
+    "CONTESTED_rows": 14,
+    "UNRESOLVED_rows": 0,
+    "tierC_rows": 232,
+    "reading_choice_rows": 5,
+    "rows": 500,
+    "sentences": 100
+   },
+   "L20": {
+    "tierAB_primary": {
+     "CORRECT": {
+      "rows": 229,
+      "sents": 65
+     },
+     "ERROR": {
+      "rows": 592,
+      "sents": 79
+     },
+     "testable": true
+    },
+    "tierAB_incl_reading_choice": {
+     "CORRECT": {
+      "rows": 229,
+      "sents": 65
+     },
+     "ERROR": {
+      "rows": 592,
+      "sents": 79
+     },
+     "testable": true
+    },
+    "tierA_only": {
+     "CORRECT": {
+      "rows": 64,
+      "sents": 33
+     },
+     "ERROR": {
+      "rows": 132,
+      "sents": 51
+     },
+     "testable": true
+    },
+    "CONTESTED_rows": 91,
+    "UNRESOLVED_rows": 0,
+    "tierC_rows": 746,
+    "reading_choice_rows": 22,
+    "rows": 1850,
+    "sentences": 150
+   },
+   "EXC": {
+    "tierAB_primary": {
+     "CORRECT": {
+      "rows": 222,
+      "sents": 55
+     },
+     "ERROR": {
+      "rows": 384,
+      "sents": 63
+     },
+     "testable": true
+    },
+    "tierAB_incl_reading_choice": {
+     "CORRECT": {
+      "rows": 222,
+      "sents": 55
+     },
+     "ERROR": {
+      "rows": 384,
+      "sents": 63
+     },
+     "testable": true
+    },
+    "tierA_only": {
+     "CORRECT": {
+      "rows": 124,
+      "sents": 38
+     },
+     "ERROR": {
+      "rows": 129,
+      "sents": 48
+     },
+     "testable": true
+    },
+    "CONTESTED_rows": 90,
+    "UNRESOLVED_rows": 11,
+    "tierC_rows": 401,
+    "reading_choice_rows": 13,
+    "rows": 1240,
+    "sentences": 100
+   },
+   "CTRL": {
+    "tierAB_primary": {
+     "CORRECT": {
+      "rows": 237,
+      "sents": 31
+     },
+     "ERROR": {
+      "rows": 149,
+      "sents": 28
+     },
+     "testable": true
+    },
+    "tierAB_incl_reading_choice": {
+     "CORRECT": {
+      "rows": 237,
+      "sents": 31
+     },
+     "ERROR": {
+      "rows": 149,
+      "sents": 28
+     },
+     "testable": true
+    },
+    "tierA_only": {
+     "CORRECT": {
+      "rows": 186,
+      "sents": 20
+     },
+     "ERROR": {
+      "rows": 94,
+      "sents": 15
+     },
+     "testable": false
+    },
+    "CONTESTED_rows": 65,
+    "UNRESOLVED_rows": 260,
+    "tierC_rows": 865,
+    "reading_choice_rows": 0,
+    "rows": 1850,
+    "sentences": 150
+   }
+  },
+  "status": "OFFICIAL = primary_pool[stratum].tierAB_primary.testable (tiers A+B, CONTESTED and reading_choice rows excluded, LLM systems only). Declared after labelling, before any metric run. per_stratum.* are the pre-panel provisional views, kept for traceability."
+ },
+ "top_up_execution": {
+  "executed_at_utc": "2026-09-23T15:16:56Z",
+  "trigger": "tier-A CORRECT count of L25 after Step 3 = 9 (< 60)",
+  "n_sentences": 100,
+  "l25_remaining_pool": 1295,
+  "bin_log": {
+   "bin_supply": [
+    1044,
+    236,
+    15
+   ],
+   "bin_taken": [
+    43,
+    42,
+    15
+   ],
+   "shortfall": 0
+  },
+  "hash_collisions_with_screen": 0,
+  "slots": "5 cheapest few-shot generator slots by catalog price (see work/topup_slots.json)",
+  "note": "selected by the frozen step-1 rule on the unused pool; decided by the pre-written rule, not by inspecting labels"
+ }
+}

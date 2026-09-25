@@ -1,0 +1,97 @@
+{
+ "winner": "NONE: V0 stands",
+ "rule_text": "winner = variant with highest E LONG-strat AUROC (Z) that (i) beats V0 by >= +0.015 there AND (ii) >= V0 on L25 (point) AND (iii) >= V0 - 0.01 on CTRL; none -> 'NONE: V0 stands'; tie (|Δ| < 1e-4) -> cheaper (V5 < others)",
+ "observed": {
+  "V1": {
+   "LONG": 0.7391390530111708,
+   "L25": 0.7040592836558255,
+   "CTRL": 0.6281284318825502
+  },
+  "V2": {
+   "LONG": 0.7501424242068293,
+   "L25": 0.7176533552902429,
+   "CTRL": 0.7734235015317034
+  },
+  "V3": {
+   "LONG": 0.7499897219644556,
+   "L25": 0.7141292713050638,
+   "CTRL": 0.6132015490434078
+  },
+  "V4": {
+   "LONG": 0.7513904713800759,
+   "L25": 0.7186084808563195,
+   "CTRL": 0.8259638171203977
+  },
+  "V5": {
+   "LONG": 0.7456200885673006,
+   "L25": 0.6939234252778922,
+   "CTRL": 0.6288220334084735
+  },
+  "V0": {
+   "LONG": 0.7425924729540836,
+   "L25": 0.7129847673939893,
+   "CTRL": 0.7379631235188717
+  }
+ },
+ "qualification": {
+  "V1": {
+   "i_long_margin": false,
+   "ii_L25": false,
+   "iii_CTRL": false,
+   "qualifies": false,
+   "delta_long": -0.0034534199429128165
+  },
+  "V2": {
+   "i_long_margin": false,
+   "ii_L25": true,
+   "iii_CTRL": true,
+   "qualifies": false,
+   "delta_long": 0.0075499512527457124
+  },
+  "V3": {
+   "i_long_margin": false,
+   "ii_L25": true,
+   "iii_CTRL": false,
+   "qualifies": false,
+   "delta_long": 0.007397249010371976
+  },
+  "V4": {
+   "i_long_margin": false,
+   "ii_L25": true,
+   "iii_CTRL": true,
+   "qualifies": false,
+   "delta_long": 0.00879799842599227
+  },
+  "V5": {
+   "i_long_margin": false,
+   "ii_L25": false,
+   "iii_CTRL": false,
+   "qualifies": false,
+   "delta_long": 0.0030276156132169607
+  }
+ },
+ "n_screened": 5,
+ "margin": 0.015,
+ "stability": {
+  "B": 500,
+  "scheme": "sentence-cluster resample within strata",
+  "share_selected": {
+   "NONE: V0 stands": 0.876,
+   "V4": 0.118,
+   "V3": 0.002,
+   "V5": 0.004
+  }
+ },
+ "permutation_null": {
+  "B": 200,
+  "share_any_variant_qualifies": 0.035,
+  "share_per_variant": {
+   "V1": 0.0,
+   "V2": 0.0,
+   "V3": 0.0,
+   "V4": 0.0,
+   "V5": 0.035
+  },
+  "note": "within-stratum label permutation of Z; V4 re-cross-fitted on each permuted label vector"
+ }
+}
