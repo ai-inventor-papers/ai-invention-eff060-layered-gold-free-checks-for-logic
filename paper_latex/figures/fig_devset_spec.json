@@ -1,0 +1,58 @@
+{
+  "type": "forest_ci_highlight",
+  "renderer": "render_fig_devset.py",
+  "title": "Development-set evaluation on Dataset E",
+  "xlabel": "Stratified AUROC (within-stratum; 0.5 = chance)",
+  "aspect": "4:3",
+  "width_in": 7.0,
+  "xlim": [0.5, 0.85],
+  "fmt": ".3f",
+  "legend_loc": "lower right",
+  "groups": {
+    "proposed": {"label": "Proposed (consensus)", "color": "#0173B2"},
+    "baseline": {"label": "Baseline", "color": "#949494"}
+  },
+  "reference_line": {
+    "x": 0.6424864242702633,
+    "label": "Disguised-judge level",
+    "color": "#999999"
+  },
+  "rows": [
+    {"label": "Cross-family consensus", "group": "proposed",
+     "value": 0.7414618757606236, "ci": [0.7051019129338092, 0.7749461081688042],
+     "source_key": "metrics_R_AB/c_score_align/strat"},
+    {"label": "PEER+TEXT fusion", "group": "proposed",
+     "value": 0.7528068827695809, "ci": [0.7197021169892074, 0.783825716818809],
+     "source_key": "metrics_R_AB/p_peer_text/strat"},
+    {"label": "Baseline stack (S4)", "group": "baseline",
+     "value": 0.7350930963751415, "ci": [0.6991534511331978, 0.7663393619156315],
+     "source_key": "metrics_R_AB/S4_full_oof/strat"},
+    {"label": "Local 8B judge (Qwen3-8B)", "group": "baseline",
+     "value": 0.674273563163772, "ci": [0.6457108237631184, 0.7029231098336515],
+     "source_key": "metrics_R_AB/L:judge_local_qwen8b_disg/strat"},
+    {"label": "Best cheap judge (nano)", "group": "baseline",
+     "value": 0.6526289529330704, "ci": [0.6164091782295569, 0.6880497250111619],
+     "source_key": "metrics_R_AB/judge_cheap2_orig/strat"},
+    {"label": "Disguised cheap judge", "group": "baseline",
+     "value": 0.6424864242702633, "ci": [0.6069102273968827, 0.6764301935791321],
+     "source_key": "metrics_R_AB/judge_cheap_disg/strat"},
+    {"label": "Original cheap judge", "group": "baseline",
+     "value": 0.6228085459119697, "ci": [0.5927337353683388, 0.6510835483921762],
+     "source_key": "metrics_R_AB/judge_cheap_orig/strat"}
+  ],
+  "provenance": {
+    "artifact": "run_u75jRHUss0zo / 3_invention_loop / iter_3 / gen_art / gen_art_experiment_6",
+    "file": "results/analysis_T1.json",
+    "cross_check": "results/tables_T1.md, section (a) Item-level AUROC on R_AB",
+    "population": "E_POOL PRIMARY rows under label regime R_AB (tiers A+B): n = 2686 (1822 ERROR / 864 CORRECT), 292 sentences",
+    "ci": "95% sentence-cluster percentile bootstrap, B = 2000, seed 0",
+    "headline_delta": "c_score_align - judge_cheap_disg, R_AB strat: +0.099 [+0.049, +0.146] (tables_T1.md verdict row (a))",
+    "deviations_from_draft_spec": [
+      "CIs replaced by the artifact's own values; the draft's [0.708,0.773], [0.714,0.788], [0.598,0.687], [0.575,0.670] appear in no results file.",
+      "Baseline stack (S4): draft 0.704 appears in no results file for R_AB; plotted S4_full_oof (stack of every baseline, 28 features) = 0.735.",
+      "Local 8B judge: draft 0.669 is the pooled AUROC on a different subset (R_A all strata, n=867, exp 5); plotted R_AB strat 0.674.",
+      "Best cheap judge (nano): artifact value 0.6526 rounds to 0.653 (draft 0.652).",
+      "CIs are drawn for all seven rows, since the artifact provides them for every row."
+    ]
+  }
+}

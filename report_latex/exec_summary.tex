@@ -1,0 +1,123 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, hyperref, url, booktabs, xcolor}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+\usepackage{enumitem}
+
+\title{Gold-Free Faithfulness Metrics for NL-to-FOL Translation\\[0.5em]\large Executive Summary}
+\author{Internal Research Report}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\section{Problem}
+
+Translating natural language into first-order logic (NL-FOL) is a prerequisite for neurosymbolic reasoning, yet evaluating whether a candidate formula faithfully captures a sentence's meaning remains an open problem. Gold FOL annotations are expensive, non-unique, and unreliable: approximately 42\% of entries in both FOLIO and MALLS contain incorrect formalisations. This investigation seeks gold-free metrics that predict faithfulness given only a sentence and a candidate formula, with no reference formula, no ontology, and no domain knowledge.
+
+\section{Approach}
+
+Over five iterations, we screened four metric families on a frozen evaluation set and a 700-sentence development set (E):
+
+\begin{itemize}[nosep]
+\item \textbf{FOL-Triage}: a three-layer cascade (L1 formula lint, L2 bag-of-words text accounting, L3 role questionnaire with z3 formula reading).
+\item \textbf{Round-trip verification}: verbalise the formula back to natural language and compare via NLI.
+\item \textbf{Cross-system consensus}: collect independent translations from multiple LLM families, score by z3-equivalence agreement with the peer pool.
+\item \textbf{LLM judges}: direct scoring by cheap and frontier LLMs, with nonce disguise to control for memorisation.
+\end{itemize}
+
+The evaluation is a meta-evaluation: we build labelled (sentence, formula) pairs from audited public benchmarks and measure each metric's AUROC for discriminating correct translations from errors. All confidence intervals are sentence-clustered percentile bootstrap (B = 2000, seed 0).
+
+\section{Key Findings}
+
+\subsection{Cross-family consensus is the strongest signal}
+
+The cross-family consensus metric (c\_score\_align) achieves stratified AUROC 0.742 on development set E, beating the best cheap LLM judge (flash-lite disguised, 0.641) by +0.101 [+0.053, +0.145]. Three peer families suffice for 97\% of full-pool performance.
+
+On R\_COMP SIG (controlled-vocabulary composed sentences, 221 sentences), consensus reaches within-template AUROC 0.954 with zero error endorsement, vs the judge's 0.587 ($\Delta$ = +0.367).
+
+Adding c\_score\_align to a 28-feature baseline stack (S4\_full) yields +0.039 [+0.021, +0.057] stratified AUROC. A 4-feature model (c\_score\_align, L2-bow, L3, p\_text) matches the full stack without any judge features.
+
+\subsection{The rename tradeoff is unsolved}
+
+The consensus metric depends on shared predicate vocabulary between the candidate and its peers. Renaming predicates breaks the z3 equivalence check:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Variant & RENAME\_NONCE FA & SWAP recall \\
+\midrule
+c\_align (shipped V0) & 0.765 & 0.758 \\
+c\_nf (name-free) & 0.132 & 0.512 \\
+c\_hyb (hybrid) & 0.216 & 0.832 \\
+GG (Gloss-Gated) & gate FAIL & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+No consensus variant achieves both low rename false-alarm rate and high structural-error recall. The GG checker (iteration 5) reduced MEANING\_RENAME endorsement from 0.502 to 0.224 but failed the development gate (strat AUROC 0.696 vs V0 0.742).
+
+\subsection{Confirmation was blocked by budget}
+
+All three confirmation arms (E2-A: 110 sentences, E2-B: 400 long sentences, R\_COMP FREE) were budget-stopped before reaching testability. The one testable cell---DT stratum on E2-A (179 ProverQA-derived rows with trusted gold)---yields V0 strat AUROC 0.916 [0.858, 0.970]. The L25 long-sentence stratum shows V0 near chance (0.443, 42 rows).
+
+\subsection{Dead ends}
+
+Nine approaches were tried and dropped:
+
+\begin{center}
+\small
+\begin{tabular}{llr}
+\toprule
+Dead end & Iter & Key number \\
+\midrule
+L1 lint on LLM outputs & 1 & AUROC 0.508 \\
+L2 role-aware & 1 & AUROC 0.557 \\
+Pilot structural metrics & 1 & AUROC 0.500--0.533 \\
+Round-trip reformalisation & 1 & AUROC 0.513 \\
+B2 decomposed z3 reader & 2 & Gate BA 0.476 \\
+R\_ADJ LLM adjudicator & 2 & Sonnet-5 BA 0.662 \\
+Name-free consensus (c\_nf) & 2--3 & SWAP recall 0.512 \\
+CSC (Candidate-Signature) & 4 & Strat AUROC 0.614 \\
+GG (Gloss-Gated) & 5 & Strat AUROC 0.696 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Limitations}
+
+\begin{enumerate}[nosep]
+\item \textbf{No confirmation.} Every confirmation arm was budget-stopped before reaching testability.
+\item \textbf{Domain scope.} All evaluation is on FOLIO and MALLS-derived data; domain transfer is untested.
+\item \textbf{Label noise.} Panel majority accuracy on expert-curated errors is 0.727; R\_COMP FREE audit shows 13--28\% label contamination.
+\item \textbf{No complexity scaling.} The consensus advantage does not grow with sentence complexity (M3 INCONCLUSIVE).
+\item \textbf{Rename tradeoff unsolved.} No variant achieves both low rename FA and high error recall.
+\end{enumerate}
+
+\section{Shipped Metric}
+
+V0 (c\_score\_align) stands as the shipped metric. No variant V1--V5 met the pre-registered selection rule (the best candidate, V4, gained only +0.0088 LONG-strat, below the +0.015 threshold).
+
+\textbf{Cost:} \$0.000121 per item (consensus) vs \$0.0000488 per item (flash-lite judge). At k = 3 peer families: \$0.000946 per sentence.
+
+\textbf{Operating envelope:} strongest on exception-clause sentences (AUROC 0.964 on ``except'' sentences) and on sentences with 12+ words where judges degrade. Weakest on short simple sentences (CTRL: consensus $-$0.069 vs judge, n.s.) and on vocabulary-mismatch errors (MEANING\_RENAME recall 0.07 at FA 0.10).
+
+\section{Total API Spend}
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Iteration & Spend \\
+\midrule
+1 (screen) & \$13.66 \\
+2 (dev set E + PERTURB) & \$4.23 \\
+3 (API bar + R\_COMP + PERTURB) & \$4.33 \\
+4 (CSC + E2 + FREE labels) & \$0.35 \\
+5 (E2-A/B + R\_COMP FREE + freeze) & \$4.02 \\
+\midrule
+\textbf{Total} & \textbf{\$26.59} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{document}

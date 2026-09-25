@@ -1,0 +1,1656 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, hyperref, url, booktabs, xcolor, listings, natbib}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{float}
+
+\title{Gold-Free Faithfulness Metrics for NL-to-FOL Translation}
+\author{Internal Research Report}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Translating natural language into first-order logic (NL-FOL) is a prerequisite for neurosymbolic reasoning pipelines, yet evaluating whether a candidate formula faithfully captures a sentence's meaning remains an open problem. Gold FOL annotations are expensive, non-unique, and unreliable: approximately 42\% of entries in both FOLIO and MALLS contain incorrect formalisations. This report investigates gold-free metrics that predict faithfulness to the text given only a sentence and a candidate formula, with no reference formula, no ontology, and no domain knowledge. Over five iterations, we screen four metric families (FOL-Triage, round-trip verification, cross-system consensus, and LLM judges), construct development and confirmation datasets, and quantify a fundamental rename tradeoff. The cross-family consensus metric (c\_score\_align) achieves stratified AUROC 0.742 on a 700-sentence development set, beating the best cheap LLM judge (0.641) by +0.101 [+0.053, +0.145]. On controlled-vocabulary composed sentences, it reaches within-template AUROC 0.954 with zero error endorsement. The rename tradeoff---vocabulary dependence as the central unsolved problem---remains open: any renaming of predicates breaks the consensus signal (RENAME\_NONCE false-alarm rate 0.765), and no name-free variant simultaneously achieves low rename FA and high discrimination. All confirmation arms were budget-stopped before reaching testability.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+%% ============================================================
+\section{Framing}
+%% ============================================================
+
+Translating natural language into first-order logic (NL-FOL) is a prerequisite for neurosymbolic reasoning pipelines~\citep{Pan2023}, yet evaluating whether a candidate formula faithfully captures a sentence's meaning remains an open problem. Gold FOL annotations are expensive, non-unique, and unreliable: \citet{Brunello2026} found that approximately 42\% of entries in both FOLIO~\citep{Han2022} and MALLS~\citep{Yang2023malls} contain incorrect formalisations. Existing metrics either require a gold formula (exact match, prover-checked equivalence) or only verify that the output parses~\citep{Thatikonda2025, Thatikonda2024}. The user's own pilot study used structural consistency checks (arity agreement, predicate-set overlap across reruns, joint satisfiability) that measure stability but not whether a formula says what its sentence says.
+
+This run investigates gold-free metrics that predict faithfulness to the text given only a sentence and a candidate formula, with no reference formula, no ontology, and no domain knowledge. The evaluation is a meta-evaluation: we build a labelled set of (sentence, formula) pairs from public benchmarks whose gold has been audited, and measure each metric's ability to discriminate correct translations from errors.
+
+%% ============================================================
+\section{Iteration 1}
+%% ============================================================
+
+\subsection{Strategy}
+
+The iteration screens four candidate metric families head-to-head on a frozen evaluation set, with a disguised cheap LLM judge as the bar to beat.
+
+\textbf{Candidates.} (A)~FOL-Triage, a three-layer cascade: L1 (formula lint: deterministic formula smells), L2 (text accounting: bag-of-words and role-aware coverage), and L3 (role questionnaire: a small LLM reads the text and z3 reads the formula; their structured answers are compared). (B)~Round-trip verification: verbalise the formula back to natural language and compare to the original via NLI or embedding similarity~\citep{Amrollahi2026}. (C)~Cross-system consensus: collect translations of the same sentence from multiple independent systems, measure z3-equivalence between the candidate and the peer pool, and score disagreement~\citep{Li2024}. (D)~Disguised cheap judge and baselines: an LLM judge, structural pilot metrics, and round-trip features evaluated on nonce-disguised sentences to control for memorisation.
+
+\textbf{Evaluation set.} The frozen screen uses Logic-LM~\citep{Pan2023} released outputs on FOLIO validation: three LLM systems (GPT-3.5-turbo, GPT-4, text-davinci-003) producing 796 items. Track~L contains LLM outputs labelled by z3 equivalence to corrected gold~\citep{Brunello2025}; track~H contains the 294 original human gold formulas, of which 57 are errors according to the corrected labels.
+
+\textbf{Decision rule.} A candidate must achieve AUROC $\geq$ 0.65 on track~L (ERROR vs CORRECT), with coverage $\geq$ 90\%, rewrite false-alarm rate $\leq$ 10\% per rewrite family, and cost $\leq$ \$0.002 per item.
+
+\textbf{Development dataset~E} (artifact \texttt{gen\_art\_dataset\_1})\textbf{.} A separate 700-sentence, 8,507-row development set was constructed from FOLIO training premises, MALLS training long/conditional/exception strata, and FOLIO curated conclusions, each translated by 9 LLM families plus ccg2lambda plus GPT-4 gold. Labels were assigned by z3 equivalence to audited gold, with contested cases adjudicated by a three-member panel (Claude Haiku-4.5, GLM-4.6, Kimi-K2). The dataset contains 1,750 CORRECT, 5,005 ERROR, 1,086 UNPARSEABLE, 276 UNRESOLVED, and 390 CONTESTED items. Cost: \$9.83 in API calls.
+
+\subsection{Experiment A: FOL-Triage}
+\label{sec:exp_a}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_1}]}
+
+FOL-Triage was evaluated on the frozen screen with Gemini 2.5 Flash Lite as the primary LLM for L3. Total API spend was \$0.29.
+
+\subsubsection{Headline AUROCs (track L, ERROR vs CORRECT, n = 477, 199 errors)}
+
+\begin{table}[!htbp]
+\centering
+\caption{FOL-Triage headline AUROCs on track L.}
+\label{tab:foltriage_headline}
+\begin{tabular}{lccr}
+\toprule
+Metric & AUROC & 95\% CI & AUPRC \\
+\midrule
+L1 (any smell) & 0.508 & [0.499, 0.519] & 0.425 \\
+L2 bag-of-words & 0.737 & [0.677, 0.801] & 0.690 \\
+L2 role-aware & 0.557 & [0.527, 0.594] & 0.476 \\
+L3 score & 0.756 & [0.701, 0.809] & 0.657 \\
+Fused (fitted on H, no leak) & 0.759 & [0.695, 0.825] & 0.740 \\
+Fused (all H) & 0.827 & [0.778, 0.874] & 0.771 \\
+Fused (cross-fit L) & 0.864 & [0.824, 0.902] & 0.789 \\
+Decomposed judge & 0.716 & [0.645, 0.789] & 0.717 \\
+L3 with local Qwen2.5-1.5B & 0.708 & [0.637, 0.774] & 0.603 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The primary no-leak fused score is 0.759. The fused-all-H and cross-fit-L numbers (0.827, 0.864) are shown for completeness but are not valid held-out estimates.
+
+\textbf{Track H (human gold errors, n = 258, 57 errors).} Fused out-of-fold AUROC is 0.777 [0.698, 0.847]. L1 alone reaches 0.655, compared to 0.508 on track~L.
+
+\subsubsection{L1 lint: a negative result on LLM outputs}
+
+L1 flags formulas with deterministic smells (existential implication, free variables, arity clashes, vacuity, trivial formulas, dangling predicates). On track~L, the true positive rate is 2.0\% at a false positive rate of 0.4\%, giving AUROC 0.508. This is a negative result: L1 lint does not transfer from human annotation errors (where it is effective, AUROC 0.655) to LLM outputs.
+
+\begin{table}[!htbp]
+\centering
+\caption{L1 lint false-alarm rates by smell and system (track L).}
+\label{tab:l1_fa}
+\begin{tabular}{lccc}
+\toprule
+Smell & gpt-3.5 FA & gpt-4 FA & davinci-003 FA \\
+\midrule
+EX\_IMP & 0.0 & 0.0 & 0.0 \\
+ALL\_AND & 0.0 & 0.0 & 0.0 \\
+IFF\_RESTR & 0.0 & 0.009 & 0.0 \\
+GLUE & 0.0 & 0.0 & 0.0 \\
+FREE & 0.0 & 0.0 & 0.0 \\
+VACUOUS & 0.0 & 0.0 & 0.0 \\
+TRIVIAL & 0.0 & 0.0 & 0.0 \\
+ARITY & 0.0 & 0.0 & 0.0 \\
+DANGLING & 0.0 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Decomposed judge ablation}
+
+Replacing z3 with an LLM that reads the formula directly (the decomposed judge) drops L3 AUROC from 0.756 to 0.697 ($\Delta$AUROC = $-$0.059). The LLM gets only 57.6\% of binary argument slots correct on track~L and 36.4\% on track~H.
+
+\subsubsection{Per-type sensitivity (track L, at binary threshold)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Per-type sensitivity on track L.}
+\label{tab:pertype_trackl}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Error type & n & L1 & L2-bow & L2-role & L3 & Fused & Cascade \\
+\midrule
+NEG & 5 & 0.0 & 0.2 & 1.0 & 0.2 & 0.4 & 1.0 \\
+QUANT & 2 & 0.0 & 0.0 & 0.5 & 0.0 & 0.5 & 0.5 \\
+CONN & 4 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+DROP & 142 & 0.028 & 0.479 & 0.127 & 0.197 & 0.599 & 0.606 \\
+ADD & 150 & 0.020 & 0.473 & 0.107 & 0.173 & 0.653 & 0.573 \\
+SWAP & 12 & 0.0 & 0.0 & 0.083 & 0.25 & 0.083 & 0.333 \\
+BIND & 8 & 0.125 & 0.0 & 0.125 & 0.0 & 0.375 & 0.25 \\
+COMPOUND & 187 & 0.118 & 0.428 & 0.166 & 0.160 & 0.599 & 0.578 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Per-type sensitivity (track H)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Per-type sensitivity on track H.}
+\label{tab:pertype_trackh}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Error type & n & L1 & L2-bow & L2-role & L3 & Fused & Cascade \\
+\midrule
+NEG & 4 & 0.0 & 0.0 & 0.25 & 0.0 & 0.25 & 0.25 \\
+REV & 1 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+QUANT & 1 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+RESTR & 1 & 1.0 & 1.0 & 0.0 & 0.0 & 1.0 & 1.0 \\
+CONN & 8 & 0.25 & 0.125 & 0.0 & 0.375 & 0.375 & 0.375 \\
+MOVE & 2 & 0.5 & 0.0 & 0.5 & 0.0 & 0.5 & 1.0 \\
+DROP & 14 & 0.143 & 0.357 & 0.0 & 0.143 & 0.357 & 0.5 \\
+ADD & 19 & 0.158 & 0.368 & 0.053 & 0.211 & 0.526 & 0.579 \\
+SWAP & 2 & 0.0 & 0.5 & 0.0 & 0.5 & 0.5 & 0.5 \\
+BIND & 1 & 1.0 & 1.0 & 0.0 & 0.0 & 1.0 & 1.0 \\
+UNGLUE & 5 & 1.0 & 0.4 & 0.0 & 0.2 & 1.0 & 1.0 \\
+COMPOUND & 33 & 0.303 & 0.182 & 0.242 & 0.182 & 0.545 & 0.636 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Invariance under meaning-preserving rewrites}
+
+Five rewrite families were tested on 150 track-L CORRECT items.
+
+\begin{table}[!htbp]
+\centering
+\caption{Rewrite false-alarm rates and flip rates (track L CORRECT).}
+\label{tab:rewrite_fa}
+\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+Rewrite & n & L1 FA & L1 flip & bow FA & bow flip & role FA \\
+\midrule
+RENAME & 150 & 0.0 & 0.0 & 0.18 & 0.093 & 0.013 \\
+REORDER & 34 & 0.0 & 0.0 & 0.029 & 0.0 & 0.059 \\
+DEMORGAN & 33 & 0.0 & 0.0 & 0.030 & 0.0 & 0.061 \\
+CONTRA & 40 & 0.025 & 0.025 & 0.10 & 0.0 & 0.025 \\
+PRENEX & 1 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{lrrrrr}
+\toprule
+Rewrite & role flip & L3 FA & L3 flip & Fused FA & Fused flip \\
+\midrule
+RENAME & 0.0 & 0.033 & 0.007 & 0.22 & 0.013 \\
+REORDER & 0.0 & 0.059 & 0.0 & 0.235 & 0.0 \\
+DEMORGAN & 0.0 & 0.030 & 0.030 & 0.182 & 0.061 \\
+CONTRA & 0.025 & 0.025 & 0.0 & 0.275 & 0.0 \\
+PRENEX & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_rewrite_fa_v0.pdf}
+  \caption{Rewrite false-alarm rates across metric families and rewrite types. L1, L2-role, and L3 individually pass the 10\% gate. L2-bow fails only under RENAME (FA = 0.18). The fused score's high FA is driven by calibration mismatch, not rewrite sensitivity.}
+  \label{fig:rewrite_fa}
+\end{figure}
+
+\subsubsection{Coverage}
+
+\begin{table}[!htbp]
+\centering
+\caption{Coverage rates by track.}
+\label{tab:coverage}
+\begin{tabular}{lrrr}
+\toprule
+Track & n & Parseable & Full coverage rate \\
+\midrule
+L & 753 & 693 & 0.920 \\
+H & 302 & 279 & 0.924 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Cost}
+
+L1 and L2 are free (CPU-only). L3 costs \$0.175 per 1,000 calls with Gemini 2.5 Flash Lite. The total per-item cost is \$0.0002, passing the \$0.002 gate. CPU time (L1 + L2 + z3): median 35~ms, P95 90~ms. L3 latency: median 630~ms, P95 1.68~s.
+
+\subsubsection{Contamination check}
+
+L3 was run on nonce-disguised sentences. AUROC with exact text-formula alignment: 0.765; with disguised text: 0.770. Paired difference: $-$0.005 [$-$0.063, 0.049]. There is no evidence that the LLM benefits from having seen the public benchmark sentences.
+
+\subsubsection{Complexity strata (track L, fused score)}
+
+\begin{table}[!htbp]
+\centering
+\caption{AUROC by complexity stratum (track L).}
+\label{tab:complexity_strata}
+\begin{tabular}{lrcccc}
+\toprule
+Stratum & n (error/correct) & Testable & Fused & L2-bow & L3 \\
+\midrule
+words $<$ 12 & 443 (179/264) & Yes & 0.781 & 0.742 & 0.772 \\
+words 12--19 & 31 (18/13) & No & 0.521 & 0.596 & 0.541 \\
+words $\geq$ 20 & 3 (2/1) & No & 0.500 & 1.000 & 0.000 \\
+0 quantifiers & 302 (130/172) & Yes & 0.743 & 0.728 & 0.771 \\
+1 quantifier & 164 (65/99) & Yes & 0.794 & 0.748 & 0.721 \\
+$\geq$ 2 quantifiers & 11 (4/7) & No & 0.750 & 0.768 & 0.607 \\
+depth $\leq$ 1 & 296 (124/172) & Yes & 0.762 & 0.745 & 0.779 \\
+depth 2--3 & 173 (73/100) & Yes & 0.756 & 0.717 & 0.710 \\
+depth $\geq$ 4 & 8 (2/6) & No & 0.667 & 0.750 & 0.500 \\
+0 conditions & 344 (145/199) & Yes & 0.775 & 0.759 & 0.791 \\
+1--2 conditions & 131 (54/77) & Yes & 0.716 & 0.677 & 0.628 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Per-system AUROC (descriptive, n = 3 systems)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Per-system AUROCs on track L.}
+\label{tab:persystem_auroc}
+\begin{tabular}{lrrcccc}
+\toprule
+System & n & Error rate & Fused & L1 & L2-bow & L3 \\
+\midrule
+gpt-3.5-turbo & 143 & 0.378 & 0.689 & 0.500 & 0.650 & 0.722 \\
+gpt-4 & 177 & 0.367 & 0.700 & 0.496 & 0.716 & 0.720 \\
+text-davinci-003 & 157 & 0.510 & 0.857 & 0.525 & 0.811 & 0.817 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Experiment C: Cross-System Consensus}
+\label{sec:exp_c}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_3}]}
+
+The consensus metric collects translations of the same sentence from multiple independent LLM families, checks pairwise z3 equivalence, and scores each candidate by its disagreement with the pool. Total API spend was \$1.52.
+
+\subsubsection{Headline AUROCs (track L, ERROR vs CORRECT, n = 546, 249 errors)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Consensus metric AUROCs on track L.}
+\label{tab:consensus_headline}
+\begin{tabular}{lccr}
+\toprule
+Metric & AUROC & 95\% CI & AUPRC \\
+\midrule
+c\_score (all peers) & 0.866 & [0.821, 0.906] & 0.827 \\
+c\_score (6 fresh peers) & 0.872 & [0.830, 0.911] & 0.825 \\
+c\_score (non-OpenAI) & 0.863 & [0.820, 0.903] & 0.808 \\
+c\_score (2 Logic-LM peers) & 0.753 & [0.701, 0.806] & 0.659 \\
+medoid depth & 0.722 & [0.673, 0.774] & 0.622 \\
+cluster entropy & 0.773 & [0.724, 0.820] & 0.691 \\
+SC-5 cheap (gpt-4.1-nano) & 0.725 & [0.669, 0.781] & 0.627 \\
+SC-5 same model & 0.716 & [0.632, 0.796] & 0.628 \\
+SC-5 entropy & 0.631 & [0.568, 0.693] & 0.539 \\
+Prediction set instab.\ (SC) & 0.688 & [0.626, 0.750] & 0.602 \\
+Prediction set instab.\ (pool) & 0.770 & [0.717, 0.821] & 0.721 \\
+FOL length & 0.527 & [0.470, 0.586] & 0.485 \\
+Misalignment (vocab) & 0.835 & [0.794, 0.876] & 0.821 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_consensus_auroc_v0.pdf}
+  \caption{Consensus metric AUROCs on the frozen screen (track L). The c\_score achieves the highest AUROC at 0.866, beating SC-5 by $\Delta$AUROC = +0.140 [0.085, 0.197].}
+  \label{fig:consensus_auroc}
+\end{figure}
+
+The c\_score achieves the highest AUROC in the iteration at 0.866. It beats SC-5 (the self-consistency baseline) by $\Delta$AUROC = +0.140 [0.085, 0.197]. Using only the six fresh peer translations (not the three Logic-LM systems) gives 0.872. Restricting to the two other Logic-LM systems drops the AUROC to 0.753, showing that diversity across model families is essential.
+
+\subsubsection{RENAME rewrite invariance: failure}
+
+Under predicate renaming, the c\_score false-alarm rate is 96\% (100\% for constant-only renaming). This is expected and fundamental: two formulas with different predicate names are not z3-equivalent, so any rename breaks the equivalence check.
+
+\subsubsection{Blind-spot analysis}
+
+38\% of ERROR items are z3-equivalent to the medoid (the most popular peer formula). This places a ceiling on recall of approximately 62\%. The blind-spot rate is 5\% for polarity errors and 57\% for structural errors.
+
+\subsubsection{Cost}
+
+The peer pool costs \$0.0015 per sentence (6 peers via API). Total experiment spend: \$1.52.
+
+\subsection{Experiment D: Disguised Judge and Baselines}
+\label{sec:exp_d}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_4}]}
+
+This experiment establishes the bar: every baseline metric and every judge variant on the same shared screen, scored with nonce-disguised sentences. Total API spend was \$2.02.
+
+\subsubsection{The bar: disguised cheap judge}
+
+The primary cheap judge (Gemini 2.5 Flash Lite, JSON 0-100 scoring, nonce-disguised sentences) achieves AUROC 0.777 [0.720, 0.827] on track~L (n = 524, 230 errors, 294 correct).
+
+\subsubsection{Full baseline table (track L, ERROR vs CORRECT, n = 524)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Full baseline AUROCs on track L.}
+\label{tab:full_baseline}
+\begin{tabular}{lcc}
+\toprule
+Metric & AUROC & 95\% CI \\
+\midrule
+parse\_fail & 0.500 & [0.500, 0.500] \\
+pilot\_joint\_conflict & 0.513 & [0.488, 0.539] \\
+pilot\_arity\_incons & 0.500 & [0.500, 0.500] \\
+pilot\_shape\_incons & 0.524 & [0.470, 0.578] \\
+pilot\_dangling & 0.533 & [0.474, 0.592] \\
+pilot\_undeclared & 0.525 & [0.510, 0.542] \\
+pilot\_rerun\_jacc & 0.720 & [0.659, 0.780] \\
+rt\_nli\_min & 0.710 & [0.648, 0.769] \\
+rt\_nli\_fwd & 0.652 & [0.588, 0.713] \\
+rt\_nli\_bwd & 0.681 & [0.621, 0.742] \\
+rt\_nli\_contra & 0.628 & [0.566, 0.686] \\
+rt\_nli\_min\_alt & 0.689 & [0.627, 0.749] \\
+rt\_embed\_cos & 0.633 & [0.574, 0.696] \\
+rt\_reformalise\_eq & 0.513 & [0.479, 0.547] \\
+judge\_cheap\_orig & 0.749 & [0.695, 0.801] \\
+judge\_cheap\_disg & 0.777 & [0.720, 0.827] \\
+judge\_cheap2\_orig (gpt-4.1-nano) & 0.750 & [0.691, 0.810] \\
+judge\_cheap2\_disg & 0.714 & [0.648, 0.777] \\
+judge\_strong\_orig (gemini-3.1-pro) & 0.802 & [0.715, 0.877] \\
+judge\_strong\_disg & 0.730 & [0.655, 0.803] \\
+judge\_local\_qwen8b\_disg & 0.757 & [0.702, 0.811] \\
+judge\_local\_llama8b\_disg & 0.671 & [0.604, 0.737] \\
+judge\_local\_qwen14b\_disg & 0.760 & [0.681, 0.834] \\
+rt\_nli\_min\_localverb & 0.740 & [0.680, 0.796] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_baseline_auroc_v0.pdf}
+  \caption{Baseline AUROCs on the screen (track L). The disguised cheap judge (flash-lite) sets the bar at 0.777. Pilot structural metrics are null (0.500--0.533).}
+  \label{fig:baseline_auroc}
+\end{figure}
+
+\subsubsection{Cross-fitted baseline combinations (track L)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Cross-fitted baseline combinations on track L.}
+\label{tab:crossfitted_combos}
+\begin{tabular}{lcc}
+\toprule
+Combination & AUROC & 95\% CI \\
+\midrule
+S1 (structural) & 0.698 & [0.634, 0.761] \\
+S2 (round-trip) & 0.687 & [0.625, 0.749] \\
+S3 (judges disguised) & 0.771 & [0.705, 0.831] \\
+S4 (all cheap features) & 0.817 & [0.762, 0.867] \\
+S6 (S4 + local judges) & 0.810 & [0.753, 0.861] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Contamination analysis}
+
+No evidence of contamination was found for any judge. All DiD CIs include zero:
+
+\begin{table}[!htbp]
+\centering
+\caption{Contamination difference-in-differences (DiD).}
+\label{tab:contamination_did}
+\begin{tabular}{lcc}
+\toprule
+Judge & DiD (H $-$ L) & 95\% CI \\
+\midrule
+flash-lite & $-$0.042 & [$-$0.170, 0.094] \\
+gpt-4.1-nano & $-$0.077 & [$-$0.188, 0.023] \\
+gemini-3.1-pro & +0.002 & [$-$0.115, 0.104] \\
+Qwen3-8B & $-$0.045 & [$-$0.161, 0.079] \\
+Llama-3.1-8B & +0.023 & [$-$0.112, 0.157] \\
+Qwen3-14B & $-$0.073 & [$-$0.195, 0.056] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Invariance of judges under meaning-preserving rewrites}
+
+\begin{table}[!htbp]
+\centering
+\caption{Judge flip rates under meaning-preserving rewrites (track L CORRECT, n = 270).}
+\label{tab:judge_invariance}
+\begin{tabular}{lccccc}
+\toprule
+Metric & RENAME & REORDER & DEMORGAN & CONTRA & ALL \\
+\midrule
+judge\_cheap\_orig & 0.27 & 0.12 & 0.23 & 0.64 & 0.29 \\
+judge\_cheap\_disg & 0.44 & 0.12 & 0.46 & 0.41 & 0.39 \\
+judge\_cheap2\_orig & 0.49 & 0.12 & 0.46 & 0.95 & 0.49 \\
+rt\_nli\_min & 0.37 & 0.10 & 0.31 & 0.33 & 0.31 \\
+rt\_embed\_cos & 0.57 & 0.07 & 0.44 & 0.38 & 0.44 \\
+FOL-Triage fused & 0.013 & 0.0 & 0.061 & 0.0 & 0.013 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+FOL-Triage has the lowest flip rate of any metric tested. Judges and round-trip methods change their verdict on 29--49\% of meaning-preserving rewrites.
+
+\subsubsection{Per-error-type sensitivity of judges (track H, curator view, n = 46 errors)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Judge per-error-type sensitivity (track H).}
+\label{tab:judge_pertype}
+\begin{tabular}{lrcccc}
+\toprule
+Group & n & cheap\_orig & cheap\_disg & cheap2\_orig & rt\_nli\_min \\
+\midrule
+1-op errors & 13 & 0.308 & 0.538 & 0.462 & 0.231 \\
+2-op errors & 11 & 0.545 & 0.818 & 0.727 & 0.273 \\
+ADD & 12 & 0.500 & 0.750 & 0.667 & 0.250 \\
+COMPOUND & 22 & 0.545 & 0.864 & 0.773 & 0.273 \\
+DROP & 11 & 0.455 & 0.636 & 0.455 & 0.182 \\
+CONN & 3 & 0.667 & 0.667 & 1.000 & 0.333 \\
+NEG & 2 & 0.500 & 0.500 & 1.000 & 0.500 \\
+SWAP & 2 & 0.000 & 1.000 & 0.500 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[Correction (C2): on development set E at matched FA 0.10, the original judge has higher recall than the disguised judge. Disguise does not uniformly improve the judge; the screen-level pattern does not generalise.]
+
+\subsubsection{Complexity analysis (track L)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Judge AUROC by complexity stratum (track L).}
+\label{tab:judge_complexity}
+\begin{tabular}{lrcc}
+\toprule
+Stratum & n (err/cor) & judge\_cheap\_disg & rt\_nli\_min \\
+\midrule
+words $<$ 12 & 485 (210/275) & 0.784 & 0.713 \\
+words 12--19 & 36 (18/18) & 0.667 & 0.670 \\
+quantifiers 0--1 & 512 (226/286) & 0.784 & 0.712 \\
+depth $\leq$ 3 & 466 (199/267) & 0.781 & 0.702 \\
+depth 4--5 & 54 (30/24) & 0.762 & 0.828 \\
+0 conditions & 394 (182/212) & 0.783 & 0.745 \\
+1--2 conditions & 128 (48/80) & 0.765 & 0.653 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A logistic regression of judge correctness on standardised word count yields a coefficient of $-$0.48 (SE 0.11, p $<$ 0.001): the judge is significantly less reliable on longer sentences.
+
+\subsection{Iteration 1 Summary}
+
+\begin{table}[!htbp]
+\centering
+\caption{Iteration 1 summary: four candidates and the bar.}
+\label{tab:iter1_summary}
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+Method & AUROC & 95\% CI & n & Cost/item & Rewrite flip \\
+\midrule
+c\_score (consensus) & 0.866 & [0.821, 0.906] & 546 & \$0.0015/sent & 96\% (RENAME) \\
+S4 baseline combo & 0.817 & [0.762, 0.867] & 524 & varies & varies \\
+\textbf{Bar: judge\_cheap\_disg} & \textbf{0.777} & \textbf{[0.720, 0.827]} & \textbf{524} & \textbf{\$0.00004} & \textbf{0.39} \\
+FOL-Triage fused & 0.759 & [0.695, 0.825] & 477 & \$0.0002 & 0.013 \\
+rt\_nli\_min & 0.710 & [0.648, 0.769] & 524 & \$0.00001 & 0.31 \\
+L1 lint & 0.508 & [0.499, 0.519] & 477 & \$0 & 0.0 \\
+Pilot structural & 0.50--0.53 & n/a & 524 & \$0 & n/a \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_summary_comparison_v0.pdf}
+  \caption{Iteration 1 summary comparison. Consensus leads at AUROC 0.866, followed by the S4 baseline combination (0.817) and the disguised cheap judge bar (0.777). FOL-Triage (0.759) is below the bar but has the lowest rewrite flip rate (0.013).}
+  \label{fig:summary_comparison}
+\end{figure}
+
+\textbf{Key findings:}
+\begin{enumerate}
+\item The cross-system consensus metric (c\_score = 1 $-$ eq\_frac) achieves the highest AUROC at 0.866, beating SC-5 by +0.140. It requires peer translations from multiple model families and is fundamentally non-invariant to predicate renaming (96\% FA under RENAME).
+\item The disguised cheap judge sets the bar at AUROC 0.777. The S4 combination reaches 0.817 (+0.039, not significant). The frontier judge adds nothing significant over the cheap judge under solver labels; under panel labels the advantage strengthens (+0.166, p $<$ 0.001).
+\item FOL-Triage achieves AUROC 0.759, below the bar. Its primary value is invariance: the fused flip rate under meaning-preserving rewrites is 0.013, compared to 0.29--0.49 for judges.
+\item L1 lint does not transfer from human annotation errors to LLM outputs. The pilot structural metrics are null. Round-trip NLI is 0.067 below the judge.
+\item The evaluation labels are noisy: 58.8\% of track-L ``errors'' are pure ADD+DROP (likely vocabulary mismatches).
+\item No contamination was detected for any LLM-based metric.
+\end{enumerate}
+
+%% ============================================================
+\section{Iteration 2}
+%% ============================================================
+
+\subsection{Strategy}
+
+Iteration 2 has three goals: (i) confirm iteration~1's ordering on the development dataset~E under both the solver labels (R\_AB, R\_A) and panel-adjudicated labels (R\_ADJ); (ii) test whether fusing the consensus signal (PEER) with text-based checks (TEXT = L2-bow + L3) improves over each alone; and (iii) construct a typed perturbation suite (PERTURB) for controlled sensitivity testing.
+
+The pre-registered bar is the flash-lite judge on disguised sentences, with the local Qwen3-8B judge as fallback. The shared OpenRouter key hit its daily limit before the development-set experiment completed, making the flash-lite bar UNTESTABLE on E.
+
+\subsection{Experiment 5: PEER+TEXT on development dataset E}
+\label{sec:exp5}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_5}]}
+
+PEER+TEXT is a logistic fusion of the consensus signal (c\_score\_align) and the text-based FOL-Triage layers (L2-bow, L3 questionnaire). API spend was \$0.
+
+\subsubsection{Headline AUROCs on E (R\_AB, ERROR vs CORRECT)}
+
+\begin{table}[!htbp]
+\centering
+\caption{PEER+TEXT headline AUROCs on development set E.}
+\label{tab:peertext_e}
+\footnotesize
+\begin{tabular}{lrcccccr}
+\toprule
+Subset & n (err/cor) & PEER+TEXT & c\_align & NF c & L2-bow & L3 & Local judge \\
+\midrule
+R\_AB pooled & 2686 (1822/864) & 0.790 & 0.782 & 0.743 & 0.734 & 0.579 & 0.712 \\
+R\_AB L25 & 873 (697/176) & 0.755 & 0.712 & 0.651 & 0.722 & 0.560 & 0.664 \\
+R\_AB L20 & 821 (592/229) & 0.747 & 0.722 & 0.643 & 0.715 & 0.547 & 0.683 \\
+R\_AB EXC & 606 (384/222) & 0.777 & 0.814 & 0.782 & 0.669 & 0.620 & 0.663 \\
+R\_AB CTRL & 386 (149/237) & 0.708 & 0.742 & 0.741 & 0.613 & 0.490 & 0.739 \\
+R\_AB long pool & 2300 (1673/627) & 0.768 & 0.759 & 0.704 & 0.717 & 0.580 & 0.653 \\
+R\_A L20+EXC & 449 (261/188) & 0.818 & 0.860 & 0.802 & 0.678 & 0.587 & 0.554 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_dev_set_auroc_v0.pdf}
+  \caption{AUROCs on development set E by metric and subset. PEER+TEXT leads on R\_AB pooled (0.790); the local judge lags at 0.712.}
+  \label{fig:dev_set_auroc}
+\end{figure}
+
+The paired $\Delta$AUROC of PEER+TEXT minus the local judge is +0.078 [0.043, 0.112] on R\_AB pooled (DeLong p $<$ 0.0001). On the long pool, the gap widens to +0.115 [0.075, 0.157].
+
+The stratified AUROC (pairing only within complexity strata) shows PEER+TEXT at 0.753 and c\_score\_align at 0.741, a difference of +0.011 [$-$0.012, 0.038], not significant. The TEXT layers add no significant discriminative power over c\_score\_align alone once the stratum-composition confound is removed.
+
+\subsubsection{Mechanism predictions}
+
+\textbf{P1 (PEER catches COVERAGE errors that TEXT misses, and vice versa).} At matched false-alarm rate 0.10: PEER has higher recall than TEXT on COVERAGE errors (+0.093 [0.046, 0.147]), and TEXT has higher recall on PEER\_ENDORSED errors (+0.103 [0.051, 0.171]). Verdict: INCONCLUSIVE.
+
+\textbf{P2 (PEER and TEXT error rankings are uncorrelated).} Spearman correlation between PEER and TEXT among errors is 0.294 [0.224, 0.365]. Verdict: REFUTED.
+
+\textbf{P3 (PEER+TEXT advantage grows with sentence complexity).} The logistic interaction term is $-$0.023 [$-$0.228, 0.185], consistent with no interaction. Verdict: INCONCLUSIVE.
+
+\textbf{P4 (PEER+TEXT is more invariant to meaning-preserving rewrites than judges).} RENAME FA: fused 0.385, local judge 0.683. Verdict: REFUTED (c\_score\_align drives most of the FA at 0.859).
+
+\subsubsection{Rewrite false alarms (screen, CORRECT bases)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Rewrite false-alarm rates on screen CORRECT bases.}
+\label{tab:rewrite_fa_screen}
+\begin{tabular}{lrcccccc}
+\toprule
+Rewrite & n & Fused & c\_align & NF g & L2-bow & L3 & Local judge \\
+\midrule
+RENAME & 104 & 0.385 & 0.859 & 0.074 & 0.216 & 0.168 & 0.683 \\
+REORDER & 27 & 0.222 & 0.178 & 0.037 & 0.044 & 0.444 & 0.000 \\
+DEMORGAN & 26 & 0.154 & 0.185 & 0.038 & 0.046 & 0.231 & 0.231 \\
+CONTRA & 28 & 0.107 & 0.063 & 0.237 & 0.075 & 0.188 & 0.214 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Evaluation 1: Re-evaluation under alternative label regimes}
+\label{sec:eval1}
+\noindent\textit{[Artifact: \texttt{gen\_art\_evaluation\_1}]}
+
+All 57 reviewer-audited quantities from the iteration-1 report reproduce exactly under independent recomputation (57/57 MATCH).
+
+\subsubsection{Regime AUROC matrix (common set, selected metrics)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Regime AUROC matrix on common item set.}
+\label{tab:regime_auroc}
+\begin{tabular}{lcccc}
+\toprule
+Metric & R\_SOLVER & R\_ADJ\_AB & R\_ADJ\_A & R\_ADJ\_ALL \\
+\midrule
+PT (PEER+TEXT) & 0.871 & 0.877 & 0.932 & 0.906 \\
+fused\_H (FOL-Triage) & 0.770 & 0.868 & 0.958 & 0.866 \\
+c\_score & 0.849 & 0.779 & 0.786 & 0.831 \\
+L2-bow & 0.732 & 0.815 & 0.917 & 0.810 \\
+L3 & 0.761 & 0.718 & 0.813 & 0.751 \\
+judge\_cheap\_disg & 0.782 & 0.772 & 0.751 & 0.816 \\
+judge\_cheap\_orig & 0.754 & 0.797 & 0.858 & 0.785 \\
+sc5\_cheap & 0.713 & 0.703 & 0.676 & 0.737 \\
+rt\_nli\_min & 0.709 & 0.749 & 0.731 & 0.760 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Under R\_ADJ\_AB, PEER+TEXT (0.877) leads, followed by FOL-Triage fused (0.868) and L2-bow (0.815). The c\_score drops from 0.849 (solver) to 0.779 (R\_ADJ\_AB), because adjudicated labels reclassify vocabulary-mismatch items as CORRECT.
+
+\subsubsection{Label regime shifts}
+
+\begin{table}[!htbp]
+\centering
+\caption{Label regime shift: solver to adjudicated.}
+\label{tab:regime_shift}
+\begin{tabular}{lccc}
+\toprule
+Metric & Shift & 95\% CI & Direction \\
+\midrule
+fused\_H & +0.080 & [0.003, 0.171] & UP \\
+L2-bow & +0.102 & [0.018, 0.192] & UP \\
+c\_score & $-$0.106 & [$-$0.255, 0.013] & INSIDE CI \\
+judge\_cheap\_disg & +0.018 & [$-$0.094, 0.134] & INSIDE CI \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Dataset 3: R\_COMP and PERTURB}
+\label{sec:ds3}
+\noindent\textit{[Artifact: \texttt{gen\_art\_dataset\_3}]}
+
+\subsubsection{PERTURB: complete}
+
+\begin{table}[!htbp]
+\centering
+\caption{PERTURB suite statistics.}
+\label{tab:perturb_stats}
+\begin{tabular}{lr}
+\toprule
+Statistic & Value \\
+\midrule
+Base formulas & 300 \\
+Total mutants (DOWN + UP) & 4,234 \\
+Matched controls & 868 \\
+Total suite rows & 5,102 \\
+Complete DOWN/UP pairs & 1,354 \\
+z3 verification failures & 0 \\
+Operator types & 12 \\
+Cost & \$0.41 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Experiment 6: Baselines on development set E}
+\label{sec:exp6_iter2}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_6}, iteration~2]}
+
+\begin{table}[!htbp]
+\centering
+\caption{Pooled AUROCs on E (R\_AB, selected metrics).}
+\label{tab:baselines_e}
+\begin{tabular}{lc}
+\toprule
+Metric & AUROC [95\% CI] \\
+\midrule
+S4\_local (all tiers) & 0.754 [0.715, 0.789] \\
+S4\_local (R\_AB) & 0.748 [0.709, 0.782] \\
+judge\_local\_qwen8b\_disg & 0.710 [0.674, 0.746] \\
+S4\_local\_noLLMjudge & 0.703 [0.660, 0.742] \\
+sc5\_local\_eq\_frac & 0.664 [0.617, 0.706] \\
+pilot\_rerun\_jacc & 0.660 [0.621, 0.695] \\
+judge\_local\_qwen8b\_orig & 0.649 [0.604, 0.693] \\
+judge\_local\_llama8b\_disg & 0.636 [0.590, 0.681] \\
+rt\_nli\_min\_local & 0.626 [0.580, 0.673] \\
+b2\_score & 0.574 [0.529, 0.619] \\
+pilot\_shape\_incons & 0.504 [0.499, 0.510] \\
+parse\_fail & 0.500 [0.500, 0.500] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Dead ends: B2 and R\_ADJ}
+
+\textbf{Candidate B2 (decomposed z3 distinguishing-worlds reader): DROPPED.} Gate balanced accuracy 0.476 (target $\geq$ 0.85). The b2\_score AUROC on E (R\_AB pooled) was 0.574.
+
+\textbf{R\_ADJ adjudicator gate: DROPPED.}
+
+\begin{table}[!htbp]
+\centering
+\caption{R\_ADJ adjudicator gate results.}
+\label{tab:radj_gate}
+\begin{tabular}{lcc}
+\toprule
+Adjudicator & Gate track-H balanced accuracy & Target \\
+\midrule
+Sonnet-5 & 0.662 & $\geq$ 0.80 \\
+Grok-4.20 & 0.527 & $\geq$ 0.80 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Iteration 2 Summary}
+
+\begin{enumerate}
+\item PEER+TEXT achieves AUROC 0.790 [0.75, 0.82] on development dataset E (R\_AB pooled, n = 2686), beating the local judge by +0.078 [0.043, 0.112] (DeLong p $<$ 0.0001).
+\item Fusion does not significantly beat c\_score\_align alone. The stratified AUROC difference is +0.011 [$-$0.012, 0.038].
+\item The name-free consensus variant (NF-anchored) failed the pre-registered screen gate due to a threshold-tie artefact.
+\item Under adjudicated labels, FOL-Triage fused rises from 0.770 to 0.868. The c\_score drops from 0.849 to 0.779.
+\item The frontier judge advantage is large under adjudicated labels (+0.166 AUROC, p $<$ 0.001).
+\item All 57 reviewer-audited numbers from iteration 1 reproduce exactly (57/57 MATCH).
+\item The PERTURB suite (4,234 typed mutants + 868 controls, 12 operator types) is complete.
+\end{enumerate}
+
+%% ============================================================
+\section{Iteration 3}
+%% ============================================================
+
+\subsection{Strategy}
+
+Iteration 3 resolves two gaps: the flash-lite API bar and the R\_COMP candidate generation. It runs five pre-registered tests (T1--T5).
+
+\subsection{Test T1: Head-on API bar on development set E}
+\label{sec:t1}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_6}, iteration~3]}
+
+\subsubsection{Verdict}
+
+\begin{table}[!htbp]
+\centering
+\caption{T1 verdict summary.}
+\label{tab:t1_verdict}
+\footnotesize
+\begin{tabular}{p{3.8cm}cp{5.2cm}}
+\toprule
+Criterion & Status & Key numbers \\
+\midrule
+(a) c\_score\_align beats flash-lite disg & \textbf{CONFIRMED} & R\_AB strat $\Delta$ +0.099 [+0.049, +0.146] \\
+(b) adds signal beyond S4\_full & \textbf{CONFIRMED} & strat $\Delta$ +0.039 [+0.021, +0.057]; perm.\ null p95 = 0.009 \\
+(d) frontier ratio $\geq$ 0.95 at $\leq$ 10$\times$ cost & \textbf{CONFIRMED} & ratio 0.957 [0.887, 1.034]; 30.2$\times$ cheaper \\
+VEX confound control & \textbf{CONFIRMED} & strat $\Delta$ +0.306 [+0.232, +0.376] \\
+M3 length slope & \textbf{DISCONFIRMED} & words $\Delta$slope +0.146 [$-$0.051, +0.361] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Item-level AUROC on R\_AB (E\_POOL PRIMARY)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Item-level AUROCs on E (R\_AB pooled).}
+\label{tab:t1_itemlevel}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Metric & Pooled [CI] & Strat [CI] & AUPRC & \$/item \\
+\midrule
+p\_peer\_text & 0.790 [0.752, 0.825] & 0.753 [0.720, 0.784] & 0.879 & 1.21e-04 \\
+c\_score\_align & 0.782 [0.745, 0.816] & 0.741 [0.705, 0.775] & 0.861 & 1.21e-04 \\
+S4\_full\_oof & 0.777 [0.739, 0.809] & 0.735 [0.699, 0.766] & 0.874 & -- \\
+S4\_local\_oof & 0.748 [0.709, 0.782] & 0.693 [0.656, 0.729] & 0.856 & -- \\
+nf\_c\_score & 0.743 [0.702, 0.780] & 0.686 [0.647, 0.720] & 0.829 & -- \\
+L2-bow & 0.734 [0.705, 0.762] & 0.697 [0.667, 0.726] & 0.830 & -- \\
+judge\_local\_disg & 0.710 [0.674, 0.746] & 0.674 [0.646, 0.703] & 0.815 & -- \\
+judge\_cheap2\_orig & 0.700 [0.659, 0.739] & 0.653 [0.616, 0.688] & 0.823 & 2.01e-05 \\
+judge\_cheap\_disg & 0.696 [0.655, 0.733] & 0.642 [0.607, 0.676] & 0.786 & 4.88e-05 \\
+judge\_cheap2\_disg & 0.681 [0.641, 0.719] & 0.644 [0.609, 0.680] & 0.806 & 2.01e-05 \\
+sc5\_eq\_frac & 0.656 [0.609, 0.699] & 0.598 [0.559, 0.637] & 0.758 & 2.95e-05 \\
+rt\_nli\_min & 0.639 [0.593, 0.687] & 0.606 [0.569, 0.645] & 0.776 & 2.75e-05 \\
+judge\_cheap\_orig & 0.635 [0.595, 0.671] & 0.623 [0.593, 0.651] & 0.772 & 4.88e-05 \\
+rt\_nli\_fwd & 0.674 [0.631, 0.716] & 0.611 [0.573, 0.650] & 0.812 & -- \\
+L3 & 0.579 [0.532, 0.625] & 0.562 [0.524, 0.601] & 0.720 & -- \\
+rt\_embed\_cos & 0.574 [0.527, 0.623] & 0.566 [0.526, 0.607] & 0.731 & -- \\
+parse\_fail & 0.500 [0.500, 0.500] & 0.500 [0.500, 0.500] & 0.678 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Paired deltas: challenger minus bar (stratified)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Paired deltas: challenger minus flash-lite disguised (stratified).}
+\label{tab:paired_deltas}
+\begin{tabular}{lccc}
+\toprule
+Cell & n (E/C) & Challenger & $\Delta$ vs bar [CI] \\
+\midrule
+R\_AB pooled & 1822/864 & c\_score\_align & +0.099 [+0.049, +0.146] \\
+R\_AB pooled & 1822/864 & p\_peer\_text & +0.110 [+0.065, +0.154] \\
+R\_AB long & 1673/627 & c\_score\_align & +0.116 [+0.070, +0.163] \\
+R\_AB long & 1673/627 & p\_peer\_text & +0.132 [+0.091, +0.173] \\
+R\_AB EXC & 384/222 & c\_score\_align & +0.197 [+0.124, +0.269] \\
+R\_AB EXC & 384/222 & p\_peer\_text & +0.160 [+0.091, +0.232] \\
+R\_A L20+EXC & 261/188 & c\_score\_align & +0.299 [+0.212, +0.390] \\
+R\_A L20+EXC & 261/188 & p\_peer\_text & +0.264 [+0.180, +0.351] \\
+R\_AB CTRL & 149/237 & c\_score\_align & $-$0.069 [$-$0.232, +0.098] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Cross-fitted stacks and nesting}
+
+\begin{table}[!htbp]
+\centering
+\caption{Cross-fitted stacks on E.}
+\label{tab:crossfitted_stacks}
+\begin{tabular}{lcc}
+\toprule
+Stack & Pooled OOF [CI] & Strat OOF [CI] \\
+\midrule
+S4\_local & 0.748 [0.709, 0.782] & 0.693 [0.656, 0.729] \\
+S4\_full & 0.777 [0.739, 0.809] & 0.735 [0.699, 0.766] \\
+S4\_full + c\_score\_align & 0.807 [0.772, 0.838] & 0.774 [0.743, 0.802] \\
+S4\_full + p\_peer\_text & 0.808 [0.775, 0.839] & 0.776 [0.745, 0.805] \\
+S4\_full + g\_c (all consensus) & 0.809 [0.774, 0.840] & 0.776 [0.745, 0.805] \\
+S4\_local + c\_score\_align & 0.796 [0.759, 0.828] & 0.757 [0.723, 0.788] \\
+PT\_refit (4 features) & 0.808 [0.769, 0.842] & 0.778 [0.742, 0.813] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Nested contrasts on E.}
+\label{tab:nested_contrasts}
+\begin{tabular}{lcc}
+\toprule
+Nested contrast & Strat $\Delta$ [CI] & Pooled $\Delta$ [CI] \\
+\midrule
+S4\_full + c\_align $-$ S4\_full & +0.039 [+0.021, +0.057] & +0.030 [+0.015, +0.045] \\
+S4\_full + p\_peer\_text $-$ S4\_full & +0.041 [+0.022, +0.060] & +0.032 [+0.017, +0.046] \\
+S4\_full + nf\_c\_score $-$ S4\_full & +0.013 [+0.002, +0.023] & +0.010 [+0.001, +0.019] \\
+S4\_local + c\_align $-$ S4\_local & +0.064 [+0.042, +0.086] & +0.048 [+0.030, +0.067] \\
+S4\_full $-$ S4\_local & +0.042 [+0.022, +0.063] & +0.029 [+0.013, +0.045] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{VEX confound control}
+
+\begin{table}[!htbp]
+\centering
+\caption{VEX confound control.}
+\label{tab:vex}
+\begin{tabular}{lc}
+\toprule
+Subset & Strat $\Delta$ c\_align $-$ judge\_cheap\_disg [CI] \\
+\midrule
+VEX & +0.306 [+0.232, +0.376] \\
+VEX\_STRICT & +0.202 [+0.144, +0.269] (pooled) \\
+VEX\_tierA\_only & +0.224 [+0.161, +0.297] (pooled) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{AUROC by complexity bin}
+
+\begin{table}[!htbp]
+\centering
+\caption{AUROC by word-count bin.}
+\label{tab:auroc_words}
+\small
+\begin{tabular}{lrccccc}
+\toprule
+Bin & n (E/C) & c\_align & p\_peer\_text & judge\_disg & S4\_full & $\Delta$ c $-$ judge [CI] \\
+\midrule
+$<$12 & 154/283 & 0.725 & 0.746 & 0.766 & 0.772 & $-$0.040 [$-$0.178, +0.103] \\
+12--19 & 255/134 & 0.701 & 0.682 & 0.607 & 0.667 & +0.094 [+0.013, +0.188] \\
+20--24 & 686/262 & 0.727 & 0.740 & 0.625 & 0.715 & +0.103 [+0.026, +0.171] \\
+25--34 & 614/161 & 0.705 & 0.753 & 0.618 & 0.727 & +0.087 [$-$0.006, +0.178] \\
+$\geq$35 & 113/24 & 0.759 & 0.756 & 0.706 & 0.789 & +0.054 [$-$0.115, +0.173] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{AUROC by exception type.}
+\label{tab:auroc_exception}
+\begin{tabular}{lrccc}
+\toprule
+Bin & n (E/C) & c\_align & judge\_disg & $\Delta$ [CI] \\
+\midrule
+None & 1393/617 & 0.776 & 0.731 & +0.046 [+0.007, +0.089] \\
+except & 62/71 & 0.964 & 0.600 & +0.365 [+0.236, +0.472] \\
+unless & 179/98 & 0.801 & 0.713 & +0.088 [+0.001, +0.164] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The consensus advantage is concentrated in sentences with 12+ words and is largest on exception-clause
+sentences (AUROC 0.964 vs 0.600 for ``except'' sentences).
+
+\subsubsection{Recall per error group at matched FA 0.10}
+
+\begin{table}[!htbp]
+\centering
+\caption{Recall per error group at matched FA 0.10.}
+\label{tab:recall_errorgroup}
+\small
+\begin{tabular}{lrccccr}
+\toprule
+Group & n & c\_align & p\_peer\_text & judge\_disg & judge\_strong & S4\_full \\
+\midrule
+COMPOUND (tier B) & 1148 & 0.55 & 0.63 & 0.25 & 0.67 & 0.56 \\
+polarity & 434 & 0.53 & 0.56 & 0.26 & 0.74 & 0.53 \\
+structural & 1282 & 0.49 & 0.53 & 0.24 & 0.60 & 0.50 \\
+COVERAGE & 246 & 0.27 & 0.26 & 0.13 & 0.27 & 0.20 \\
+MEANING\_RENAME & 221 & 0.07 & 0.10 & 0.17 & 0.09 & 0.17 \\
+PEER\_ENDORSED & 398 & 0.00 & 0.06 & 0.16 & 0.07 & 0.17 \\
+PEER\_ENDORSED\_NF & 340 & 0.05 & 0.11 & 0.13 & 0.15 & 0.21 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{System-level correlation (10 families)}
+
+\begin{table}[!htbp]
+\centering
+\caption{System-level Kendall $\tau$-b.}
+\label{tab:system_tau}
+\begin{tabular}{lcc}
+\toprule
+Metric & $\tau$-b over sys $\times$ variant [CI] & $\tau$-b over families [CI] \\
+\midrule
+p\_peer\_text & 0.718 [0.590, 0.846] & 0.822 [0.644, 0.911] \\
+c\_score\_align & 0.692 [0.513, 0.795] & 0.822 [0.600, 0.911] \\
+judge\_cheap2\_disg & 0.718 [0.590, 0.846] & 0.822 [0.644, 0.911] \\
+judge\_cheap\_disg & 0.564 [0.410, 0.718] & 0.600 [0.422, 0.778] \\
+S4\_full\_oof & 0.590 [0.538, 0.769] & 0.644 [0.467, 0.778] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Mechanism predictions (T4)}
+\noindent\textit{[Artifact: \texttt{gen\_art\_evaluation\_2}]}
+
+48 numerical claims from the iteration-2 report were independently recomputed. All 48 match (48/48 VERIFIED\_MATCH).
+
+\textbf{M1} (peer-endorsement rate among errors falls with n\_conditions): \textbf{INCONCLUSIVE}.
+
+\textbf{M2} (divergence among CORRECT rows rises with words): \textbf{CONFIRMED but non-specific} (shuffled-label placebo also passes).
+
+\textbf{M3} (consensus length slope less negative than the judge's): \textbf{INCONCLUSIVE} (two specifications conflict).
+
+\textbf{M4} (k needed to reach 95\% of full-pool AUROC is $\leq$ 5 families): \textbf{CONFIRMED}, k95 = 3 overall; by words tercile k95 = 2 / 3 / 5.
+
+\begin{table}[!htbp]
+\centering
+\caption{k-curve on development set E.}
+\label{tab:k_curve}
+\begin{tabular}{rccc}
+\toprule
+k & AUROC & AUROC words T3 & \$/sentence (FULL) \\
+\midrule
+1 & 0.685 & 0.581 & \$0.000315 \\
+3 & 0.757 & 0.651 & \$0.000946 \\
+5 & 0.776 & 0.698 & \$0.001576 \\
+7 & 0.784 & 0.726 & \$0.002206 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Test T2: R\_COMP (long composed sentences)}
+\label{sec:t2}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_7}]}
+
+221 sentences produced 2,024 candidate translations. Population: 429 ERROR / 1,595 CORRECT.
+
+\subsubsection{SIG: primary test}
+
+\begin{table}[!htbp]
+\centering
+\caption{SIG primary test (criterion c).}
+\label{tab:sig_primary}
+\begin{tabular}{lcccc}
+\toprule
+Statistic & c\_score\_sig & judge\_cheap\_disg & $\Delta$ [95\% CI] & PASS \\
+\midrule
+Within-template AUROC & 0.954 & 0.587 & +0.367 [+0.328, +0.404] & \textbf{True} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The consensus metric's within-template AUROC is 0.954, massively outperforming the flash-lite disguised judge at 0.587. The delta of +0.367 is the largest effect observed in any test.
+
+\subsubsection{SIG: per-metric AUROCs}
+
+\begin{table}[!htbp]
+\centering
+\caption{SIG per-metric AUROCs on R\_COMP.}
+\label{tab:sig_permetric}
+\begin{tabular}{lrccc}
+\toprule
+Metric & n & Within-template [CI] & Pooled [CI] & AUPRC \\
+\midrule
+g\_align & 2024 & 0.977 [0.970, 0.983] & 0.978 [0.972, 0.983] & 0.878 \\
+g\_nf & 2024 & 0.976 [0.968, 0.983] & 0.976 [0.970, 0.982] & 0.877 \\
+c\_score\_sig & 2024 & 0.952 [0.937, 0.965] & 0.964 [0.957, 0.971] & 0.803 \\
+c\_score\_align & 2024 & 0.952 [0.937, 0.965] & 0.964 [0.957, 0.971] & 0.803 \\
+judge\_frontier\_orig & 60 & 0.932 [0.782, 1.000] & 0.932 [0.855, 0.990] & 0.881 \\
+judge\_frontier\_disg & 60 & 0.729 [0.573, 0.867] & 0.735 [0.593, 0.851] & 0.655 \\
+judge\_cheap\_orig & 1932 & 0.673 [0.637, 0.708] & 0.710 [0.678, 0.741] & 0.345 \\
+judge\_cheap\_disg & 1904 & 0.587 [0.551, 0.622] & 0.578 [0.537, 0.617] & 0.238 \\
+judge\_local\_disg & 2024 & 0.498 [0.459, 0.534] & 0.541 [0.505, 0.575] & 0.233 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Rename invariance on R\_COMP}
+
+\begin{table}[!htbp]
+\centering
+\caption{Rename invariance on R\_COMP SIG.}
+\label{tab:rename_rcomp}
+\begin{tabular}{lccc}
+\toprule
+Metric & Unrenamed FA & RENAME\_NONCE FA & RENAME\_SYN FA \\
+\midrule
+c\_score\_sig & 0.260 & 1.000 & 1.000 \\
+c\_score\_align & 0.260 & 1.000 & 0.635 \\
+c\_score\_nf & 0.263 & 0.261 & 0.252 \\
+c\_score\_hyb & 0.260 & 0.261 & 0.252 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{FREE condition: NOT\_TESTABLE}
+
+The FREE condition produced only 34 CORRECT tier-A items against 420 ERROR. FREE is NOT\_TESTABLE and deferred to iteration 4.
+
+\subsection{Tests T3 + T5: PERTURB sensitivity and rename tradeoff}
+\label{sec:t3t5}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_8}]}
+
+\subsubsection{T3: Per-operator within-base AUROC (E\_bases)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Per-operator within-base AUROC on PERTURB.}
+\label{tab:perturb_peroperator}
+\begin{tabular}{lrccccr}
+\toprule
+Operator & n & c\_align & c\_hyb & c\_nf & rt\_nli\_min & judge\_disg \\
+\midrule
+NEG & 379 & 0.869 & 0.884 & 0.843 & 0.873 & 0.723 \\
+REV & 179 & 0.860 & 0.869 & 0.826 & 0.578 & 0.697 \\
+QUANT & 179 & 0.860 & 0.872 & 0.829 & 0.351 & 0.632 \\
+RESTR & 177 & 0.859 & 0.873 & 0.827 & 0.608 & 0.638 \\
+CONN & 327 & 0.861 & 0.870 & 0.832 & 0.563 & 0.663 \\
+DROP & 191 & 0.841 & 0.841 & 0.791 & 0.792 & 0.728 \\
+ADD & 472 & 0.859 & 0.860 & 0.820 & 0.895 & 0.683 \\
+SWAP & 116 & 0.882 & 0.910 & 0.863 & 0.454 & 0.529 \\
+BIND & 314 & 0.865 & 0.858 & 0.798 & 0.833 & 0.672 \\
+M\_RENAME & 318 & 0.872 & 0.685 & 0.499 & 0.930 & 0.600 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{T5: Rename tradeoff table (E\_bases)}
+
+\begin{table}[!htbp]
+\centering
+\caption{Rename tradeoff: false-alarm rates and recall.}
+\label{tab:rename_tradeoff}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Metric & NONCE FA & SYN FA & M\_RENAME wb & SWAP recall & BASE FA \\
+\midrule
+c\_align & 0.765 & 0.565 & 0.872 & 0.758 & 0.201 \\
+c\_nf & 0.132 & 0.201 & 0.499 & 0.512 & 0.163 \\
+c\_hyb & 0.216 & 0.298 & 0.685 & 0.832 & 0.197 \\
+g\_align & 0.413 & 0.318 & 0.841 & 0.426 & 0.154 \\
+g\_nf & 0.132 & 0.176 & 0.477 & 0.428 & 0.154 \\
+rt\_nli\_min & 0.686 & 0.191 & 0.930 & 0.153 & 0.143 \\
+judge\_cheap\_disg & 0.229 & 0.132 & 0.600 & 0.220 & 0.129 \\
+S4\_local & 0.804 & 0.383 & 0.760 & 0.758 & 0.286 \\
+p\_peer\_text & 1.000 & 0.156 & 0.997 & 0.248 & 0.130 \\
+p\_text & 1.000 & 0.085 & 0.993 & 0.193 & 0.117 \\
+l2\_bow & 1.000 & 0.173 & 0.992 & 0.194 & 0.178 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Prior-art positioning study}
+\label{sec:research1}
+\noindent\textit{[Artifact: \texttt{gen\_art\_research\_1}]}
+
+A web-only prior-art positioning study (\$0 LLM spend) assessed the novelty of the cross-family solver consensus claim across five sub-claims (C1--C5). No prior paper meets the scoop rule (multi-family translations + solver equivalence + faithfulness-label meta-evaluation on NL-to-FOL). The method itself is not new: ARc~\citep{Bayless2025} uses the same share-of-k score form, and NoTB does cross-family formal consensus for requirements-to-temporal-logic. C2 (no prior work reports a rename false-alarm rate) is SAFE; C1, C3, C4, C5 each NEED-QUALIFIER. The allowed and forbidden wording for each claim is recorded in the artifact's \texttt{research\_report.md}. This study informed the phrasing of Section~\ref{sec:related_work}.
+
+\subsection{Iteration 3 Summary}
+
+\begin{enumerate}
+\item \textbf{T1 CONFIRMED}: c\_score\_align (strat AUROC 0.741) exceeds flash-lite disguised (0.642) by +0.099 [+0.049, +0.146].
+\item \textbf{T1 CONFIRMED}: adding c\_score\_align to S4\_full yields +0.039 [+0.021, +0.057] strat AUROC.
+\item \textbf{T2 NOT CONFIRMED}: SIG AUROC 0.954 but SIG is out-of-scope.
+  FREE NOT\allowbreak\_\allowbreak TESTABLE.
+\item \textbf{T3}: consensus recall flat across operators
+  (NEG 0.761, SWAP 0.758, DROP 0.721, ADD 0.763).
+\item \textbf{T5}: c\_align RENAME\allowbreak\_\allowbreak NONCE FA 0.765;
+  c\_nf 0.132 but SWAP recall 0.512.
+\item \textbf{T4}: M4 CONFIRMED (k95 = 3). M3 INCONCLUSIVE.
+\item 48/48 numerical claims verified.
+\item Iteration-3 API spend: \$4.33.
+\end{enumerate}
+
+%% ============================================================
+\section{Iteration 4}
+%% ============================================================
+
+\subsection{Strategy}
+
+Iteration 4 tests Candidate-Signature Consensus (CSC): instead of having peers translate independently, CSC feeds each peer the candidate formula's own predicate symbols and asks it to translate using those symbols. In parallel, the iteration constructs the E2 confirmation dataset (550 fresh sentences) and runs a vocabulary-analysis evaluation (T8).
+
+\subsection{Experiment 9: CSC on development set E --- provisional negative result}
+\label{sec:exp9}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_9}]}
+
+CSC was tested on 354 rows from development set E (196 ERROR / 158 CORRECT, 144 sentences). API spend: \$0.108.
+
+\subsubsection{Anchoring: the core finding}
+
+\begin{table}[!htbp]
+\centering
+\caption{CSC anchoring effect.}
+\label{tab:csc_anchoring}
+\begin{tabular}{lcc}
+\toprule
+Component & CSC & FREE\_exact (matched) \\
+\midrule
+e (error endorsement) & 0.459 & 0.173 \\
+d (correct-row divergence) & 0.139 & 0.323 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CSC dramatically lowers d but raises e from 0.173 to 0.459: nearly half of all errors are endorsed by peers anchored into the candidate's vocabulary.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_csc_anchoring_v0.pdf}
+  \caption{CSC anchoring effect. CSC lowers correct-row divergence (d: 0.139 vs 0.323) but raises error endorsement (e: 0.459 vs 0.173). The net effect is negative: strat AUROC 0.614 vs FREE 0.770.}
+  \label{fig:csc_anchoring}
+\end{figure}
+
+\subsubsection{Headline AUROCs on E (PRIMARY, stratified)}
+
+\begin{table}[!htbp]
+\centering
+\caption{CSC headline AUROCs on E (stratified).}
+\label{tab:csc_headline}
+\begin{tabular}{lc}
+\toprule
+Metric & Strat AUROC [CI] \\
+\midrule
+p\_peer\_text & 0.799 [0.700, 0.880] \\
+c\_score\_align & 0.774 [0.682, 0.857] \\
+FREE\_exact (matched) & 0.770 [0.686, 0.844] \\
+S4\_full & 0.736 [0.635, 0.826] \\
+flash-lite judge & 0.664 [0.568, 0.750] \\
+\textbf{CSC} & \textbf{0.614 [0.493, 0.736]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Gate verdicts}
+
+\begin{table}[!htbp]
+\centering
+\caption{CSC gate verdicts.}
+\label{tab:csc_gates}
+\begin{tabular}{ll}
+\toprule
+Gate & Verdict \\
+\midrule
+G1 (d slope non-positive) & \textbf{FAIL} \\
+G2 (strat AUROC $\geq$ c\_align $-$ 0.01) & \textbf{NOT\_READ} (R\_AB part FAIL) \\
+G3-E (RENAME\_SYN FA gate) & NOT\_RUN \\
+G5 (cost $\leq$ \$0.002/candidate) & PASS (\$5.25$\times$10$^{-4}$/candidate) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Experiment 10: CSC on PERTURB --- budget exhausted}
+\label{sec:exp10}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_10}]}
+
+The run-wide OpenRouter budget (\$7.00) was exhausted before experiment 10's first CSC peer call. The artifact spent \$0.0000088.
+
+\subsubsection{SIGPROXY: cued consensus on R\_COMP}
+
+\begin{table}[!htbp]
+\centering
+\caption{SIGPROXY within-template AUROCs on R\_COMP.}
+\label{tab:sigproxy}
+\begin{tabular}{lrc}
+\toprule
+Metric & n & Within-template AUROC [CI] \\
+\midrule
+c\_proxy (K3) & 2024 & 0.930 [0.916, 0.943] \\
+c\_proxy\_graded & 2024 & 0.938 [0.926, 0.950] \\
+c\_score\_sig (full) & 2024 & 0.952 [0.936, 0.966] \\
+g\_align & 2024 & 0.977 [0.970, 0.983] \\
+judge\_cheap\_disg & 1904 & 0.587 [0.550, 0.624] \\
+judge\_local\_disg & 2024 & 0.498 [0.462, 0.534] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Dataset 4: E2 confirmation set --- partial}
+\label{sec:ds4}
+\noindent\textit{[Artifact: \texttt{gen\_art\_dataset\_4}]}
+
+E2 is a fresh 550-sentence confirmation set constructed from MALLS-train and ProverQA-dev. \textbf{Status: PARTIAL (budget-stopped).} The run-wide OpenRouter budget (\$7.00) was exhausted. E2 completed a 30-sentence pilot (300 candidate rows). All confirmation cells have zero CORRECT rows.
+
+\subsection{Dataset 5: R\_COMP FREE name-free labels}
+\label{sec:ds5}
+\noindent\textit{[Artifact: \texttt{gen\_art\_dataset\_5}]}
+
+This artifact produces name-free labels for the 2,652 FREE candidate translations.
+ERROR\allowbreak\_\allowbreak CERT: 759. MAPPED: 1,506. UNPARSEABLE: 188. NO\allowbreak\_\allowbreak OUTPUT: 199.
+FREE AUROC is NOT\allowbreak\_\allowbreak TESTABLE until the gloss step runs.
+
+\subsubsection{SIG replay validation}
+
+False-error rate: 0/1,595 (CI [0, 0.002]). Identity map recovered on 100\% of CORRECT rows.
+
+\subsubsection{Executor audit}
+
+\begin{table}[!htbp]
+\centering
+\caption{Executor audit (non-blind, 60 per class).}
+\label{tab:executor_audit}
+\begin{tabular}{lc}
+\toprule
+Class & Result \\
+\midrule
+ERROR\_CERT & precision 0.867 [0.758, 0.931] \\
+MAPPED & 52/60 faithful = 0.867 [0.758, 0.931] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Evaluation 3: T8 vocabulary analysis}
+\label{sec:eval3}
+\noindent\textit{[Artifact: \texttt{gen\_art\_evaluation\_3}]}
+
+\subsubsection{Part 1: cross-family agreement floor}
+
+\begin{table}[!htbp]
+\centering
+\caption{Part 1: cross-family agreement floor (3-pool PRIMARY).}
+\label{tab:agreement_floor}
+\begin{tabular}{lr}
+\toprule
+Statistic & Value \\
+\midrule
+END\_MAJ d & 0.415 \\
+Predicted d\_floor & 0.402 [0.336, 0.471] \\
+Bracket & [0.396, 0.415] \\
+R\_exact AUROC & 0.683 \\
+No-anchoring oracle floor & 0.385 \\
+e ceiling & 0.162 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Part 3: power for E2}
+
+L25 yield: 0.37. Detecting the observed T1 delta (+0.069) at 80\% power requires $\sim$326 usable L25 sentences ($\sim$882 planned). E2's 350 L25 sentences give MDE80 $\approx$ 0.112.
+
+\subsection{Iteration 4 Summary}
+
+\begin{enumerate}
+\item \textbf{CSC is a provisional negative.} Strat AUROC 0.614 is below all established metrics. Anchoring e = 0.459 vs FREE e = 0.173. Gates G1 and G2 fail.
+\item \textbf{Cued consensus confirms k-saturation.} SIGPROXY AUROC 0.930, 98\% of full SIG (0.952).
+\item \textbf{Vocabulary sharing reduces d by 0.61--0.84 on R\_COMP.}
+\item \textbf{Error typing requires shared vocabulary.} Same-vocabulary typed repair: 0.784--0.921 accuracy; independent-vocabulary: 0.085.
+\item \textbf{E2 is constructed but not testable.}
+\item \textbf{R\_COMP FREE labels: search-only.} ERROR\_CERT precision 0.867 (below 0.90 flag).
+\item Iteration-3 FREE tier-A ERROR labels are 70.7\% MAPPED, confirming aligner-based labeller over-calls errors.
+\end{enumerate}
+
+\begin{table}[!htbp]
+\centering
+\caption{Dead ends accumulated across iterations 1--4.}
+\label{tab:dead_ends_iter4}
+\begin{tabular}{llp{6cm}}
+\toprule
+Dead end & Iter & Reason \\
+\midrule
+L1 lint on LLM outputs & 1 & AUROC 0.508 \\
+L2 role-aware & 1 & AUROC 0.557 \\
+Pilot structural metrics & 1 & AUROC 0.500--0.533 \\
+Round-trip reformalisation & 1 & AUROC 0.513 (76\% ties) \\
+B2 decomposed z3 reader & 2 & Gate balanced accuracy 0.476 \\
+R\_ADJ LLM adjudicator & 2 & Sonnet-5 balanced accuracy 0.662 \\
+Name-free consensus (c\_nf) & 2--3 & SWAP recall 0.512 \\
+CSC & 4 & Provisional negative: strat AUROC 0.614, e = 0.459 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ============================================================
+\section{Iteration 5}
+%% ============================================================
+
+\subsection{Strategy}
+
+Iteration 5 is the final iteration. It attempts four things: (1) E2-A confirmation on 110 sentences; (2) E2-B extension to 400 sentences $\geq$ 25 words; (3) R\_COMP FREE confirmation via the gloss gate; and (4) V0 freeze and variant screening (V1--V5) plus a Gloss-Gated (GG) name-free agreement checker.
+
+\subsection{Experiment 11: E2-A confirmation}
+\label{sec:exp11}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_11}]}
+
+E2-A uses 110 sentences (37 L25, 37 EXC, 36 DT) with labels joined after seal hashes matched.
+
+\textbf{Overall verdict: NOT\_TESTABLE.} The pre-registered flash-lite bar has zero scored rows in R\_AB.
+
+\subsubsection{DT stratum (testable)}
+
+\begin{table}[!htbp]
+\centering
+\caption{E2-A DT stratum AUROCs.}
+\label{tab:e2a_dt}
+\begin{tabular}{lc}
+\toprule
+Metric & DT strat AUROC [CI] \\
+\midrule
+c\_score\_align (V0) & 0.916 [0.858, 0.970] \\
+p\_peer\_text & 0.919 [0.860, 0.976] \\
+S4\_E2 & 0.953 [0.911, 0.986] \\
+judge\_local\_qwen8b\_disg & 0.913 [0.858, 0.958] \\
+l3\_z3 & 0.572 [0.480, 0.675] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+V0 minus judge\_local\_qwen8b\_disg on DT: $\Delta$ = +0.003 [$-$0.042, +0.052] (n.s.).
+
+\subsubsection{Long pool (L25 + EXC, not testable)}
+
+L25 alone (42 rows, 7 CORRECT): V0 strat AUROC 0.443 [0.375, 0.500], near chance.
+
+\subsection{Experiment 12: E2-B (long-sentence pool)}
+\label{sec:exp12}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_12}]}
+
+E2-B extends E2 with 400 sentences $\geq$ 25 words. \textbf{Status: NOT\_TESTABLE.} 48 CORRECT $<$ 50 under R\_A\_UNAUDITED.
+
+\subsubsection{Exploratory R\_A\_UNAUDITED results}
+
+\begin{table}[!htbp]
+\centering
+\caption{E2-B exploratory AUROCs (R\_A\_UNAUDITED).}
+\label{tab:e2b_exploratory}
+\begin{tabular}{lc}
+\toprule
+Metric & Strat AUROC [CI] \\
+\midrule
+V0 (c\_score\_align) & 0.737 [0.645, 0.827] \\
+V2 (reliability-weighted) & 0.750 [0.659, 0.838] \\
+V4 (two-channel logistic) & 0.764 [0.666, 0.851] \\
+p\_peer\_text & 0.655 [0.546, 0.767] \\
+flash-lite disguised & 0.496 [0.356, 0.620] \\
+S4\_E2B & 0.498 [0.402, 0.594] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Experiment 13: R\_COMP FREE confirmation}
+\label{sec:exp13}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_13}]}
+
+\textbf{Gloss gate: FAILED twice.} Run 1: haiku BA 0.776, qwen 0.855, both\_yes 0.817. Run 2: haiku BA 0.561, qwen 0.883, both\_yes 0.765. Every MAPPED row remains UNRESOLVED. \textbf{Confirmatory verdict: NOT\_TESTABLE.}
+
+\subsubsection{Provisional results (ERROR\_CERT vs MAPPED, non-confirmatory)}
+
+\begin{table}[!htbp]
+\centering
+\caption{R\_COMP FREE provisional AUROCs (ERROR\_CERT vs MAPPED, untouched).}
+\label{tab:rcomp_free}
+\begin{tabular}{lc}
+\toprule
+Metric & Within-template AUROC [CI] \\
+\midrule
+c\_score\_align & 0.801 [0.770, 0.834] \\
+c\_score\_hyb & 0.817 [0.788, 0.848] \\
+c\_score\_nf & 0.743 [0.710, 0.776] \\
+c\_exact & 0.606 [0.580, 0.633] \\
+judge\_cheap\_disg & 0.584 [0.550, 0.618] \\
+judge\_cheap\_orig & 0.633 [0.601, 0.666] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Audit}
+
+\begin{table}[!htbp]
+\centering
+\caption{Blind two-family audit (100 per class, untouched).}
+\label{tab:rcomp_audit}
+\begin{tabular}{lcc}
+\toprule
+Auditor & ERROR\_CERT precision & MAPPED faithful \\
+\midrule
+GLM-4.6 & 0.720 [0.622, 0.801] & 0.904 [0.828, 0.949] \\
+Sonnet-5 & 0.845 [0.760, 0.904] & 0.722 [0.625, 0.801] \\
+Consensus (both) & 0.838 [0.738, 0.905] & 0.917 [0.830, 0.961] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Experiment 14: Freeze and GG screening}
+\label{sec:exp14}
+\noindent\textit{[Artifact: \texttt{gen\_art\_experiment\_14}]}
+
+V0 (c\_score\_align) is frozen. Five consensus variants (V1--V5) and a Gloss-Gated (GG) checker are screened on development set E (2,672 R\_AB rows).
+
+\subsubsection{V0 frozen: development baselines}
+
+\begin{table}[!htbp]
+\centering
+\caption{V0 frozen: development baselines and variants.}
+\label{tab:v0_frozen}
+\begin{tabular}{lcccc}
+\toprule
+Score & ALL-strat & LONG-strat & L25 & CTRL \\
+\midrule
+V0 (frozen) & 0.742 & 0.743 & 0.713 & 0.738 \\
+V2 reliability-weighted & 0.752 & 0.750 & 0.718 & 0.773 \\
+V4 two-channel logistic & 0.758 & 0.751 & 0.719 & 0.826 \\
+judge\_cheap\_disg & 0.641 & 0.624 & 0.641 & 0.807 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Selection decision: NONE --- V0 stands.} No variant met the pre-registered selection rule (highest LONG-strat AUROC beating V0 by $\geq$ +0.015 AND $\geq$ V0 on L25 AND $\geq$ V0 $-$ 0.01 on CTRL). The best candidate (V4) gained +0.0088, below the +0.015 threshold.
+
+\subsubsection{GG checker}
+
+GG strat AUROC on E = 0.696 [0.659, 0.733] vs V0 0.742, $\Delta$ = $-$0.046 [$-$0.071, $-$0.021]. \textbf{Gate g3: FAIL.} GG has very low endorsement (e = 0.081) but very high divergence (d = 0.629): the gloss gate rejects too many legitimate predicate mappings.
+
+\subsection{Evaluation 4: Corrected record}
+\label{sec:eval4}
+\noindent\textit{[Artifact: \texttt{gen\_art\_evaluation\_4}]}
+
+244 claims verified. Paper-vs-file mismatches: 15 (all corrected inline). Key corrections: E is development data (not held-out); T2 NOT CONFIRMED; MEANING\_RENAME is an ERROR operator; cost units corrected.
+
+\subsection{Iteration 5 Summary}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_confirmation_landscape_v0.pdf}
+  \caption{Confirmation landscape across all five iterations. Every confirmation arm was budget-stopped before reaching testability. The DT stratum (V0 0.916) is the only testable cell.}
+  \label{fig:confirmation_landscape}
+\end{figure}
+
+\begin{enumerate}
+\item \textbf{Confirmation is NOT\_TESTABLE across the board.} The run-wide budget (\$7.00) was exhausted before any confirmation arm could complete.
+\item \textbf{DT stratum is a bright spot.} V0 reaches strat AUROC 0.916 [0.858, 0.970] on 179 ProverQA-derived rows with trusted gold.
+\item \textbf{L25 on E2 is near chance.} V0 strat AUROC 0.443 on E2-A L25 (42 rows).
+\item \textbf{R\_COMP FREE provisional results favour consensus.} c\_align 0.801 vs judge 0.584 ($\Delta$ +0.217 [+0.175, +0.260]).
+\item \textbf{V0 stands.} No variant V1--V5 met the selection rule.
+\item \textbf{GG fails its development gate.} Strat AUROC 0.696 vs V0 0.742.
+\item \textbf{Rename weakness persists.} V0 RENAME\_NONCE FA 1.0 on E2.
+\end{enumerate}
+
+\begin{table}[!htbp]
+\centering
+\caption{Dead ends accumulated across all iterations.}
+\label{tab:dead_ends_final}
+\begin{tabular}{llp{6cm}}
+\toprule
+Dead end & Iter & Reason \\
+\midrule
+L1 lint on LLM outputs & 1 & AUROC 0.508 \\
+L2 role-aware & 1 & AUROC 0.557 \\
+Pilot structural metrics & 1 & AUROC 0.500--0.533 \\
+Round-trip reformalisation & 1 & AUROC 0.513 (76\% ties) \\
+B2 decomposed z3 reader & 2 & Gate balanced accuracy 0.476 \\
+R\_ADJ LLM adjudicator & 2 & Sonnet-5 balanced accuracy 0.662 \\
+Name-free consensus (c\_nf) & 2--3 & SWAP recall 0.512 \\
+CSC & 4 & Provisional: strat AUROC 0.614, e = 0.459 \\
+GG (Gloss-Gated) & 5 & Gate g3 FAIL: strat AUROC 0.696 vs V0 0.742 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ============================================================
+\section{What We Have Learned So Far}
+%% ============================================================
+
+The cross-family consensus metric (c\_score\_align) is the strongest gold-free faithfulness signal found in this investigation. On development set E, it achieves stratified AUROC 0.742, beating the best cheap LLM judge (0.641) by +0.101 [+0.053, +0.145]. On R\_COMP SIG (the out-of-scope controlled-vocabulary condition), it reaches 0.954 within-template AUROC with zero error endorsement. Three peer families suffice for 97\% of full-pool performance (M4 confirmed: k95 = 3; by words tercile k95 = 2/3/5).
+
+The mechanism is clear: errors scatter across z3-equivalence classes while correct translations cluster. The consensus signal degrades with sentence length (NET +0.401 on development E, driven by divergence d), meaning longer sentences need more peers and the metric becomes less reliable precisely where it matters most.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_vocabulary_source_v0.pdf}
+  \caption{The vocabulary source problem. c\_align RENAME\_NONCE FA is 0.765 on development E and 1.0 on E2: any renaming of predicates breaks the consensus signal. The GG checker reduces MEANING\_RENAME endorsement from 0.502 (V0) to 0.224 but fails the development gate (strat AUROC 0.696 vs V0 0.742) because the gloss gate rejects too many legitimate predicate mappings.}
+  \label{fig:vocabulary_source}
+\end{figure}
+
+Iteration 5 attempted confirmation on three fronts, and all three were blocked by the run-wide budget (\$7.00). E2-A produced one testable cell: V0 reaches 0.916 on ProverQA-derived sentences with trusted gold, but only 0.443 on the L25 long-sentence stratum (near chance). E2-B's exploratory results (V0 0.737 vs flash-lite 0.496, $\Delta$ +0.208) favour consensus on long sentences with unaudited labels, but the label-coupling diagnostic shows part of the advantage comes from shared gold-equivalent peers. R\_COMP FREE's provisional results show c\_align 0.801 vs judge 0.584 ($\Delta$ +0.217) under ERROR\_CERT vs MAPPED labels, with consensus carrying most of the signal in nesting tests.
+
+No consensus variant V1--V5 improved on V0. The best candidate (V4, two-channel logistic) gained only +0.0088 LONG-strat, well below the +0.015 selection threshold. V0 stands as the shipped metric.
+
+The rename tradeoff remains the central open problem. V0 has RENAME\_NONCE FA 0.765 on development E and 1.0 on E2: any renaming of predicates breaks the consensus signal. The GG checker was the iteration-5 attempt to solve this. It reduces MEANING\_RENAME endorsement from 0.502 (V0) to 0.224, but fails the development gate (strat AUROC 0.696 vs V0 0.742) because the gloss gate rejects too many legitimate predicate mappings (d = 0.629). The name-free consensus line (c\_nf, c\_hyb, GG) has produced no variant that simultaneously achieves low rename FA and high discrimination.
+
+Five limitations bound the current results. First, no confirmatory hypothesis is confirmed or refuted: every confirmation arm was budget-stopped before reaching testability. Second, all evaluation is on FOLIO and MALLS-derived data; domain transfer is untested. Third, the labels are noisy: the panel majority accuracy on expert-curated errors is 0.727, and the R\_COMP FREE audit shows 13--28\% label contamination. Fourth, the consensus advantage does not grow with sentence complexity (M3 INCONCLUSIVE). Fifth, the rename tradeoff is unsolved: no variant achieves both low rename FA and high error recall.
+
+%% ============================================================
+\section{Related Work}
+\label{sec:related_work}
+%% ============================================================
+
+\textbf{NL-FOL datasets and their quality.} FOLIO~\citep{Han2022} provides 1,435 FOL-annotated NLI problems. MALLS~\citep{Yang2023malls} uses GPT-4 to generate and verify NL-FOL pairs at scale. \citet{Brunello2026} found that approximately 42\% of entries in both datasets contain incorrect FOL formalisations, with additional ambiguity rates of 17.8\% (FOLIO) and 51\% (MALLS). Logic-LM~\citep{Pan2023} prompts LLMs for FOL and calls a prover.
+
+\textbf{FOL closeness metrics.} \citet{Thatikonda2025} evaluate n-gram, graph, embedding, and LLM-based metrics on controlled FOL perturbations, finding that no single metric is sensitive to all perturbation types. Our typed repair operators follow the tradition of \citet{Thatikonda2024} but are derived from z3 equivalence-class differences.
+
+\textbf{Factuality metrics.} FRANK~\citep{Pagnoni2021} defines a typology of factuality errors. QuestEval~\citep{Scialom2021} uses question generation and answering. Our L3 questionnaire layer generates structured questions from the text and checks the formula's answers via z3.
+
+\textbf{Round-trip and self-consistency.} \citet{Amrollahi2026} propose verbalising a formal statement back to natural language and checking consistency. \citet{Li2024} use symbolic equivalence and semantic consistency for Lean/Isabelle autoformalization. Our round-trip baseline achieves only AUROC 0.710 on NL-FOL.
+
+\textbf{Cross-check consistency.} SAC3~\citep{Zhang2023sac3} detects hallucinations via semantic-aware cross-check consistency. Our cross-system consensus metric uses a similar principle with FOL equivalence and multiple model families. The $\Delta$AUROC of cross-family consensus over single-model self-consistency is +0.140.
+
+\textbf{Automated alignment for autoformalization.} FormalAlign trains a model on alignment scoring via a dual contrastive-generative loss. Our approach uses no learned alignment model.
+
+\textbf{Vacuity detection.} \citet{Kupferman2003} formalise vacuity in temporal logic model checking. Our L1 lint layer includes a vacuity check adapted from their framework.
+
+\textbf{Cross-model translation confidence.} \citet{Bayless2025} apply the same score form as c\_score to NL-to-SMT translation. NoTB uses four LLM families for requirements-to-temporal-logic translation.
+
+\textbf{Predicate alignment.} LogicLLaMA~\citep{Yang2023logicllama} uses a greedy binding search. \citet{Vossel2025} map predicates by normalised Levenshtein distance. No prior work reports a rename false-alarm rate.
+
+\textbf{N-version programming.} \citet{Chen1978} noted that ``faulty but identical results may outvote correct results''---precisely the endorsement failure mode we measure (e = 0.124 on E, 0.459 under CSC).
+
+%% ============================================================
+\section*{References}
+%% ============================================================
+
+\begin{thebibliography}{26}
+
+\bibitem[Han et~al.(2022)]{Han2022}
+Simeng Han, Hailey Schoelkopf, Yilun Zhao, et~al.
+\newblock FOLIO: Natural Language Reasoning with First-Order Logic.
+\newblock In \emph{EMNLP}, 2022.
+
+\bibitem[Yang et~al.(2023a)]{Yang2023malls}
+Delong Yang, Fei Huang, and Yongbin Li.
+\newblock MALLS: A Multi-task Benchmark for Automated Logical Specification.
+\newblock \emph{ArXiv}, abs/2305.18100, 2023.
+
+\bibitem[Brunello et~al.(2026)]{Brunello2026}
+Andrea Brunello, Cristian Curaba, Luca Geatti, Michele Mignani, Angelo Montanari, and N.~Saccomanno.
+\newblock Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted Framework to Focus Human Relabeling.
+\newblock \emph{ArXiv}, abs/2606.02837, 2026.
+
+\bibitem[Brunello et~al.(2025)]{Brunello2025}
+Andrea Brunello, Luca Geatti, Michele Mignani, Angelo Montanari, and N.~Saccomanno.
+\newblock Do LLMs Really Struggle at NL-FOL Translation?
+\newblock In \emph{AAAI}, 2025.
+
+\bibitem[Thatikonda et~al.(2025)]{Thatikonda2025}
+Ramya~K. Thatikonda, Wray Buntine, and Ehsan Shareghi.
+\newblock Assessing the Sensitivity and Alignment of FOL Closeness Metrics.
+\newblock In \emph{Findings of EMNLP}, pages 16775--16785, 2025.
+
+\bibitem[Thatikonda et~al.(2024)]{Thatikonda2024}
+Ramya~K. Thatikonda, Wray Buntine, and Ehsan Shareghi.
+\newblock Strategies for Improving NL-to-FOL Translation with LLMs.
+\newblock \emph{ArXiv}, abs/2409.16461, 2024.
+
+\bibitem[Pan et~al.(2023)]{Pan2023}
+Liangming Pan, Alon Albalak, Xinyi Wang, and William~Yang Wang.
+\newblock Logic-LM: Empowering Large Language Models with Symbolic Solvers for Faithful Logical Reasoning.
+\newblock In \emph{EMNLP}, 2023.
+
+\bibitem[Amrollahi et~al.(2026)]{Amrollahi2026}
+Danesh Amrollahi, Yuxin Zuo, Seth Berger, Chao Chen, and Sidi Lu.
+\newblock Faithful Autoformalization via Roundtrip Verification and Repair.
+\newblock \emph{ArXiv}, abs/2604.25031, 2026.
+
+\bibitem[Li et~al.(2024)]{Li2024}
+Zenan Li, Yifan Wu, Zhaoyu Li, Fan Yang, Xian Zhang, Xiaoxing Ma, and Jian L\"u.
+\newblock Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency.
+\newblock In \emph{NeurIPS}, 2024.
+
+\bibitem[Pagnoni et~al.(2021)]{Pagnoni2021}
+Artidoro Pagnoni, Vidhisha Balachandran, and Yulia Tsvetkov.
+\newblock Understanding Factuality in Abstractive Summarization with FRANK.
+\newblock In \emph{NAACL}, 2021.
+
+\bibitem[Scialom et~al.(2021)]{Scialom2021}
+Thomas Scialom et~al.
+\newblock QuestEval: Summarization Asks for Fact-based Evaluation.
+\newblock In \emph{EMNLP}, pages 6594--6604, 2021.
+
+\bibitem[Zhang et~al.(2023)]{Zhang2023sac3}
+Jiaxin Zhang, Zhuohang Li, Kamalika Das, Bradley Malin, and Kumar Sricharan.
+\newblock SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency.
+\newblock In \emph{EMNLP}, pages 15445--15458, 2023.
+
+\bibitem[Yang et~al.(2023b)]{Yang2023logicllama}
+Yuan Yang, Siheng Xiong, Ali Payani, Ehsan Shareghi, and Faramarz Fekri.
+\newblock Harnessing the Power of Large Language Models for Natural Language to First-Order Logic Translation.
+\newblock In \emph{ACL}, 2023.
+
+\bibitem[Vossel et~al.(2025)]{Vossel2025}
+Felix Vossel, Till Mossakowski, and Bj\"orn Gehrke.
+\newblock Advancing Natural Language Formalization to First Order Logic with Fine-tuned LLMs.
+\newblock \emph{ArXiv}, abs/2509.22338, 2025.
+
+\bibitem[Kupferman and Vardi(2003)]{Kupferman2003}
+Orna Kupferman and Moshe~Y. Vardi.
+\newblock Vacuity Detection in Temporal Model Checking.
+\newblock \emph{STTT}, 4(2):224--233, 2003.
+
+\bibitem[Chen and Avizienis(1978)]{Chen1978}
+Liming Chen and Algirdas Avizienis.
+\newblock N-Version Programming: A Fault-Tolerance Approach to Reliability of Software Operation.
+\newblock In \emph{FTCS-8}, pages 3--9, 1978.
+
+\bibitem[Bayless et~al.(2025)]{Bayless2025}
+Sam Bayless et~al.
+\newblock A Neurosymbolic Approach to Natural Language Formalization and Verification.
+\newblock \emph{ArXiv}, abs/2511.09008, 2025.
+
+\end{thebibliography}
+
+\end{document}

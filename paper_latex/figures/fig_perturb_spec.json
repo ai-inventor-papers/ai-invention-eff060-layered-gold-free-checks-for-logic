@@ -1,0 +1,215 @@
+{
+  "figure_id": "fig_perturb",
+  "title": "Perturbation sensitivity across metrics",
+  "xlabel": "Within-base AUROC (mutant vs. matched control)",
+  "xlim": [
+    0.4,
+    1.0
+  ],
+  "chance": 0.5,
+  "aspect": "4:3",
+  "width_in": 7.0,
+  "groups": {
+    "proposed": {
+      "label": "Proposed metric",
+      "color": "#0173B2"
+    },
+    "component": {
+      "label": "Single layer / variant of a proposed metric",
+      "color": "#56B4E9"
+    },
+    "baseline": {
+      "label": "Baseline",
+      "color": "#949494"
+    }
+  },
+  "rows": [
+    {
+      "metric": "p_peer_text",
+      "label": "PEER+TEXT fusion",
+      "group": "proposed",
+      "value": 0.948,
+      "ci": [
+        0.934,
+        0.961
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "c_align",
+      "label": "Consensus (c_align)",
+      "group": "proposed",
+      "value": 0.866,
+      "ci": [
+        0.835,
+        0.896
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "p_text",
+      "label": "Text checks (L2-bow + L3)",
+      "group": "proposed",
+      "value": 0.845,
+      "ci": [
+        0.832,
+        0.857
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "l3_z3",
+      "label": "L3 role questionnaire",
+      "group": "component",
+      "value": 0.816,
+      "ci": [
+        0.801,
+        0.831
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "c_nf",
+      "label": "Name-free consensus",
+      "group": "component",
+      "value": 0.785,
+      "ci": [
+        0.757,
+        0.814
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "S4_local",
+      "label": "Baseline stack (S4)",
+      "group": "baseline",
+      "value": 0.753,
+      "ci": [
+        0.731,
+        0.775
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "rt_nli_min_local",
+      "label": "Round-trip NLI",
+      "group": "baseline",
+      "value": 0.749,
+      "ci": [
+        0.73,
+        0.768
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "judge_cheap_disg",
+      "label": "LLM judge, disguised (flash-lite)",
+      "group": "baseline",
+      "value": 0.68,
+      "ci": [
+        0.66,
+        0.702
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "sc5_local_eq_frac",
+      "label": "Self-consistency (SC-5)",
+      "group": "baseline",
+      "value": 0.666,
+      "ci": [
+        0.634,
+        0.702
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "l2_bow",
+      "label": "L2 bag-of-words",
+      "group": "component",
+      "value": 0.659,
+      "ci": [
+        0.653,
+        0.665
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "judge_local_llama8b_disg",
+      "label": "Local judge: Llama-3.1-8B (nf4)",
+      "group": "baseline",
+      "value": 0.653,
+      "ci": [
+        0.629,
+        0.676
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "judge_local_qwen8b_disg",
+      "label": "Local judge: Qwen3-8B (nf4)",
+      "group": "baseline",
+      "value": 0.643,
+      "ci": [
+        0.624,
+        0.663
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "pilot_joint_conflict",
+      "label": "Pilot: joint conflict",
+      "group": "baseline",
+      "value": 0.539,
+      "ci": [
+        0.534,
+        0.544
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "pilot_dangling",
+      "label": "Pilot: dangling predicates",
+      "group": "baseline",
+      "value": 0.502,
+      "ci": [
+        0.489,
+        0.515
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "pilot_arity_incons",
+      "label": "Pilot: arity",
+      "group": "baseline",
+      "value": 0.5,
+      "ci": [
+        0.5,
+        0.5
+      ],
+      "n_bases": 198
+    },
+    {
+      "metric": "pilot_shape_incons",
+      "label": "Pilot: shape",
+      "group": "baseline",
+      "value": 0.5,
+      "ci": [
+        0.493,
+        0.506
+      ],
+      "n_bases": 198
+    }
+  ],
+  "population": {
+    "suite_mutants": 4234,
+    "suite_controls": 868,
+    "suite_bases": 300,
+    "scored_rows": 3419,
+    "scored_mutants": 2658,
+    "scored_controls": 761,
+    "bases": 198,
+    "unparseable": 0
+  },
+  "provenance": "gen_art_experiment_8 (iteration 3) results/perturb_scores.jsonl, recomputed by recompute_wb_auroc.py; point estimates equal analysis_perturb.json common_subset"
+}

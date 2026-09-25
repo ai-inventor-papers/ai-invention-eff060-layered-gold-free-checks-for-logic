@@ -1,0 +1,186 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alvanaki et~al.(2026)Alvanaki, Yang, Seyoum, and
+  Carloni]{Alvanaki2026}
+Elisavet~Lydia Alvanaki, Je~Yang, Biruk~B. Seyoum, and Luca~P. Carloni.
+\newblock {NoTB}: Oracle-free triage of {LLM}-generated {RTL} via cross-model
+  formal consensus.
+\newblock 2026.
+
+\bibitem[Bayless et~al.(2025)Bayless, Buliani, Cassel, Cook, Clough,
+  et~al.]{Bayless2025}
+Sam Bayless, Stefano Buliani, Darion Cassel, Byron Cook, D.~Clough, et~al.
+\newblock A neurosymbolic approach to natural language formalization and
+  verification.
+\newblock In \emph{International Conference on Computer Aided Verification},
+  pages 601--617, 2025.
+\newblock \doi{10.48550/arXiv.2511.09008}.
+
+\bibitem[Brunello et~al.(2025)Brunello, Geatti, Mignani, Montanari, and
+  Saccomanno]{Brunello2025}
+Andrea Brunello, Luca Geatti, Michele Mignani, Angelo Montanari, and
+  N.~Saccomanno.
+\newblock Do {LLMs} really struggle at {NL}-{FOL} translation? revealing their
+  strengths via a novel benchmarking strategy.
+\newblock In \emph{AAAI Conference on Artificial Intelligence}, 2025.
+\newblock \doi{10.1609/aaai.v40i36.40258}.
+
+\bibitem[Brunello et~al.(2026)Brunello, Curaba, Geatti, Mignani, Montanari, and
+  Saccomanno]{Brunello2026}
+Andrea Brunello, Cristian Curaba, Luca Geatti, Michele Mignani, Angelo
+  Montanari, and N.~Saccomanno.
+\newblock Fixing {FOLIO} and {MALLS}: Verified annotations and an
+  {LLM}-assisted framework to focus human relabeling.
+\newblock \emph{arXiv preprint arXiv:2606.02837}, 2026.
+\newblock \doi{10.48550/arXiv.2606.02837}.
+
+\bibitem[Chen et~al.(2022)Chen, Zhang, Nguyen, Zan, Lin, Lou, and
+  Chen]{Chen2022}
+Bei Chen, Fengji Zhang, A.~Nguyen, Dao-Guang Zan, Zeqi Lin, Jian-Guang Lou, and
+  Weizhu Chen.
+\newblock {CodeT}: Code generation with generated tests.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+\newblock \doi{10.48550/arXiv.2207.10397}.
+
+\bibitem[Eckhardt and Lee(1985)]{Eckhardt1985}
+D.~Eckhardt and Larry~D. Lee.
+\newblock A theoretical basis for the analysis of multiversion software subject
+  to coincident errors.
+\newblock In \emph{IEEE Transactions on Software Engineering}, volume SE-11,
+  pages 1511--1517, 1985.
+\newblock \doi{10.1109/TSE.1985.231895}.
+
+\bibitem[Farquhar et~al.(2024)Farquhar, Kossen, Kuhn, and Gal]{Farquhar2024}
+Sebastian Farquhar, Jannik Kossen, Lorenz Kuhn, and Y.~Gal.
+\newblock Detecting hallucinations in large language models using semantic
+  entropy.
+\newblock In \emph{Nature}, volume 630, pages 625 -- 630, 2024.
+\newblock \doi{10.1038/s41586-024-07421-0}.
+
+\bibitem[Granelli et~al.()Granelli, Hamaguchi, Nagata, Ramirez-Quezada, and
+  Wada]{Granelli2023}
+A.~Granelli, K.~Hamaguchi, N.~Nagata, Maura~E. Ramirez-Quezada, and Juntaro
+  Wada.
+\newblock Thermal leptogenesis in the minimal gauged
+  {U1Lμ}−lτ\documentclass[12pt]{minimal} \usepackage{amsmath}
+  \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb}
+  \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+  \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \textrm{U}{(1)}_{L_},
+  volume = {2023}, year = {2023}.
+\newblock In \emph{Journal of High Energy Physics}.
+\newblock \doi{10.1007/JHEP09(2023)079}.
+
+\bibitem[Han et~al.(2022)Han, Schoelkopf, Zhao, Qi, Riddell, et~al.]{Han2022}
+Simeng Han, Hailey Schoelkopf, Yilun Zhao, Zhenting Qi, Martin Riddell, et~al.
+\newblock {FOLIO}: Natural language reasoning with first-order logic.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2022.
+\newblock \doi{10.48550/arXiv.2209.00840}.
+
+\bibitem[Kuhn et~al.(2023)Kuhn, Gal, and Farquhar]{Kuhn2023}
+Lorenz Kuhn, Y.~Gal, and Sebastian Farquhar.
+\newblock {Semantic Uncertainty}: Linguistic invariances for uncertainty
+  estimation in natural language generation.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+\newblock \doi{10.48550/arXiv.2302.09664}.
+
+\bibitem[Li et~al.(2022)Li, Choi, Chung, Kushman, Schrittwieser,
+  et~al.]{Li2022}
+Yujia Li, David Choi, Junyoung Chung, Nate Kushman, Julian Schrittwieser,
+  et~al.
+\newblock Competition-level code generation with {AlphaCode}.
+\newblock In \emph{Science}, volume 378, pages 1092 -- 1097, 2022.
+\newblock \doi{10.1126/science.abq1158}.
+
+\bibitem[Pan et~al.(2023)Pan, Albalak, Wang, and Wang]{Pan2023}
+Liangming Pan, Alon Albalak, Xinyi Wang, and William~Yang Wang.
+\newblock Logic-{LM}: Empowering large language models with symbolic solvers
+  for faithful logical reasoning.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2023.
+\newblock \doi{10.48550/arXiv.2305.12295}.
+
+\bibitem[Ryu et~al.(2024)Ryu, Kim, Lee, and Yang]{Ryu2024}
+Hyun Ryu, Gyeongman Kim, Hyemin~S. Lee, and Eunho Yang.
+\newblock Divide and translate: Compositional first-order logic translation and
+  verification for complex logical reasoning.
+\newblock In \emph{International Conference on Learning Representations}, 2024.
+\newblock \doi{10.48550/arXiv.2410.08047}.
+
+\bibitem[Shi et~al.(2022)Shi, Fried, Ghazvininejad, Zettlemoyer, and
+  Wang]{Shi2022}
+Freda Shi, Daniel Fried, Marjan Ghazvininejad, Luke Zettlemoyer, and Sida~I.
+  Wang.
+\newblock Natural language to code translation with execution.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2022.
+\newblock \doi{10.48550/arXiv.2204.11454}.
+
+\bibitem[Singh et~al.(2026)Singh, Ganguly, Goel, Torkamani, Han, Lilien, Erata,
+  and Chaudhary]{Singh2026}
+Vikash Singh, Debargha Ganguly, Aman Goel, Ali Torkamani, Xiao-Xue Han, Joseph
+  Lilien, Ferhat Erata, and Vipin Chaudhary.
+\newblock {Beyond Solver Verdicts}: Generative reward models for
+  autoformalization.
+\newblock 2026.
+
+\bibitem[Thatikonda et~al.(2025)Thatikonda, Buntine, and
+  Shareghi]{Thatikonda2025}
+Ramya~Keerthy Thatikonda, W.~Buntine, and Ehsan Shareghi.
+\newblock Assessing the sensitivity and alignment of {FOL} closeness metrics.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 16775--16785, 2025.
+\newblock \doi{10.18653/v1/2025.findings-emnlp.910}.
+
+\bibitem[Verga et~al.(2024)Verga, Hofstätter, Althammer, Su, Piktus,
+  Arkhangorodsky, Xu, White, and Lewis]{Verga2024}
+Pat Verga, Sebastian Hofstätter, Sophia Althammer, Yixuan Su, Aleksandra
+  Piktus, Arkady Arkhangorodsky, Minjie Xu, Naomi White, and Patrick Lewis.
+\newblock Replacing judges with juries: Evaluating {LLM} generations with a
+  panel of diverse models.
+\newblock \emph{arXiv preprint arXiv:2404.18796}, 2024.
+\newblock \doi{10.48550/arXiv.2404.18796}.
+
+\bibitem[Vossel et~al.(2025)Vossel, Mossakowski, and Gehrke]{Vossel2025}
+Felix Vossel, Till Mossakowski, and Björn Gehrke.
+\newblock Advancing natural language formalization to first order logic with
+  fine-tuned {LLMs}.
+\newblock \emph{arXiv preprint arXiv:2509.22338}, 2025.
+\newblock \doi{10.48550/arXiv.2509.22338}.
+
+\bibitem[Wang et~al.(2022)Wang, Wei, Schuurmans, Le, Chi, Narang, Chowdhery,
+  and Zhou]{Wang2022}
+Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed~H. Chi, Sharan Narang,
+  Aakanksha Chowdhery, and Denny Zhou.
+\newblock Self-consistency improves chain of thought reasoning in language
+  models.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+
+\bibitem[Wang et~al.(2026)Wang, Luo, Fu, Xu, Dong, and Cai]{Wang2026}
+Yixuan Wang, Licheng Luo, Yu~Fu, Kaidi Xu, Yue Dong, and Mingyu Cai.
+\newblock {SCP}-{NL2TL}: Selective conformal prediction with semantic
+  verification for natural language to temporal logic specifications.
+\newblock 2026.
+
+\bibitem[Yang et~al.(2023)Yang, Xiong, Payani, Shareghi, and Fekri]{Yang2023}
+Yuan Yang, Siheng Xiong, Ali Payani, Ehsan Shareghi, and F.~Fekri.
+\newblock Harnessing the power of large language models for natural language to
+  first-order logic translation.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, 2023.
+\newblock \doi{10.48550/arXiv.2305.15541}.
+
+\bibitem[Zhang et~al.(2023)Zhang, Li, Das, Malin, and Sricharan]{Zhang2023}
+Jiaxin Zhang, Zhuohang Li, Kamalika Das, Bradley Malin, and Kumar Sricharan.
+\newblock {SAC3}: Reliable hallucination detection in black-box language models
+  via semantic-aware cross-check consistency.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 15445--15458, 2023.
+\newblock \doi{10.48550/arXiv.2311.01740}.
+
+\end{thebibliography}

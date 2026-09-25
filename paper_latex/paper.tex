@@ -1,0 +1,416 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, hyperref, url, natbib, booktabs, xcolor, listings}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{float}
+
+\title{Cross-Family Solver Consensus as a Gold-Free\\Faithfulness Metric for Natural-Language-to-Logic Translation}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Evaluating whether a candidate first-order logic (FOL) formula faithfully captures its source sentence is difficult without a gold reference: correct formalisations are not unique, gold annotations are scarce, and existing metrics either require a reference formula or only verify that the output parses.
+We propose \emph{cross-family solver consensus}, a gold-free metric that scores each candidate by the fraction of independent LLM families whose translations are \emph{not} Z3-equivalent to it after vocabulary alignment.
+On a pre-registered test of 220 templated long sentences with shared symbol vocabulary, consensus achieves within-template AUROC 0.954 versus 0.587 for a cheap LLM judge, a confirmed advantage of $+0.367$ $[0.328, 0.404]$.
+The principal limitation is vocabulary dependence: candidates that use different predicate names than their peers are penalised regardless of correctness, and every vocabulary bridge tested raises the error endorsement rate without net gain.
+We release the evaluation code, the labelled meta-evaluation sets, and the reusable metric library.
+\end{abstract}
+
+%% ============================================================
+\section{Introduction}
+\label{sec:intro}
+%% ============================================================
+
+Translating natural language into first-order logic (NL-to-FOL) is a prerequisite for neurosymbolic reasoning pipelines that combine LLM generation with symbolic solvers~\citep{Pan2023, Ryu2024}.
+The translation step is hard to evaluate.
+A correct formalisation of a sentence is not unique: different predicate names, different decompositions of the same concept, and logically equivalent rewrites can all be faithful.
+Gold FOL annotations are expensive and unreliable: recent audits found that roughly 40\% of entries in both FOLIO~\citep{Han2022} and MALLS~\citep{Granelli2023} contain errors~\citep{Brunello2026}.
+The metrics in common use either require a gold formula (exact match, BLEU, prover-checked equivalence) or only verify that the output parses~\citep{Yang2023, Vossel2025}.
+Structural consistency checks---arity agreement, predicate-set overlap across reruns, joint satisfiability---measure stability and composability but not whether a formula says what its sentence says~\citep{Thatikonda2025}.
+
+This gap matters in practice.
+As NL-to-FOL pipelines are deployed for contract analysis, requirement verification, and knowledge-base construction, practitioners need a metric that predicts faithfulness at scale, without gold formulas, and cheaply enough to run on every output.
+
+We observe that when multiple independent LLM families translate the same sentence, their translations tend to agree---in the sense of Z3 equivalence---when they are correct and to scatter when at least one is wrong.
+This asymmetry motivates \emph{cross-family solver consensus}: score each candidate by the fraction of independently generated peer translations that are Z3-equivalent to it, after vocabulary alignment.
+A candidate that most peers agree with is likely faithful; one that no peer reproduces is likely erroneous.
+
+\paragraph{Summary of contributions.}
+\begin{itemize}
+\item We define cross-family solver consensus, a gold-free, domain-agnostic faithfulness metric for NL-to-FOL that requires only a sentence and a set of peer translations.
+On a pre-registered test of 220 templated long sentences with shared symbol vocabulary (1,904 candidates, nine families), consensus achieves within-template AUROC 0.954 versus 0.587 for the best cheap LLM judge, a confirmed advantage of $+0.367$ $[0.328, 0.404]$ on a test set independent of all development (Section~\ref{sec:main_result}).
+[ARTIFACT:gen\_art\_experiment\_7]
+
+\item On a broader development evaluation spanning nine generator families and mixed sentence lengths (2,686 candidates, 292 sentences), consensus achieves stratified AUROC 0.741 versus 0.642 for the same judge, a development-set advantage of $+0.099$ $[0.049, 0.146]$ (Section~\ref{sec:devset}).
+[ARTIFACT:gen\_art\_experiment\_6]
+
+\item We construct two labelled meta-evaluation sets totalling over 13,000 items: a development evaluation set of 8,507 real candidates from nine LLM families on 700 sentences, and a perturbation suite of 4,234 typed mutants plus 868 meaning-preserving controls, enabling per-error-type sensitivity and invariance analysis (Section~\ref{sec:setup}).
+[ARTIFACT:gen\_art\_dataset\_1]
+
+\item We show that three peer families suffice for 97\% of the full pool's discriminative power, identify consensus's blind spot (38\% of errors endorsed by the majority) and its vocabulary dependence (rename false-alarm rate of 0.76), and demonstrate that every tested vocabulary bridge raises error endorsement (Sections~\ref{sec:results} and~\ref{sec:discussion}).
+[ARTIFACT:gen\_art\_evaluation\_2] [ARTIFACT:gen\_art\_experiment\_8]
+\end{itemize}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig1_v0.jpg}
+  \caption{Overview of cross-family solver consensus. Given a sentence, $k$ independent LLM families each produce a candidate FOL translation at temperature~0. For each candidate~$c$, Z3 checks pairwise equivalence to every peer translation after vocabulary alignment. The consensus score is the fraction of peers that disagree with~$c$; higher disagreement predicts error.}
+  \label{fig:overview}
+\end{figure}
+
+%% ============================================================
+\section{Related Work}
+\label{sec:related}
+%% ============================================================
+
+\paragraph{NL-to-FOL evaluation metrics.}
+Existing faithfulness metrics for NL-to-FOL fall into three categories.
+\emph{Gold-based metrics} check equivalence to a reference formula, either syntactically (exact match, tree edit distance) or semantically (prover-checked logical equivalence)~\citep{Yang2023, Thatikonda2025}.
+They require a gold formula and fail silently when the gold is wrong.
+\citet{Thatikonda2025} evaluate several FOL closeness metrics and find that they correlate poorly with human judgements of faithfulness.
+\emph{Parse-based metrics} verify only that the output is syntactically valid FOL~\citep{Yang2023, Vossel2025}, which is necessary but far from sufficient.
+\emph{LLM-as-judge} approaches prompt a language model to compare the candidate to the source text~\citep{Verga2024}; they are flexible but expensive per item and sensitive to meaning-preserving rewrites.
+
+\paragraph{Self-consistency and sampling agreement.}
+Self-consistency~\citep{Wang2022} scores a candidate by agreement among multiple samples from the same model.
+In NL-to-code, minimum Bayes risk decoding uses execution-based agreement among samples to select outputs~\citep{Shi2022, Chen2022, Li2022}.
+SAC\textsuperscript{3}~\citep{Zhang2023} extends self-consistency across models for hallucination detection.
+Semantic entropy~\citep{Kuhn2023, Farquhar2024} clusters sampled outputs by semantic equivalence and measures the entropy of the cluster distribution.
+These methods use a single model's samples or ad hoc similarity; they do not exploit the formal semantics of FOL (Z3 equivalence) or require family diversity.
+
+\paragraph{Cross-model agreement for formal outputs.}
+The closest prior work uses cross-model agreement for formal languages.
+\citet{Bayless2025} translate natural language into SMT-LIB from multiple LLMs and score each translation by the fraction of peers whose output entails it---the same score form as our consensus metric---but they evaluate on a fixed schema with downstream QA labels rather than per-candidate faithfulness.
+\citet{Alvanaki2026} apply cross-model formal consensus to RTL (hardware description language), reporting that precision rises from 63\% to 95\% as the required number of agreeing models increases from one to four, but measure coverage rather than per-candidate AUROC.
+\citet{Singh2026} train a generative verifier for mathematical autoformalization, achieving AUROC 0.961 on Z3-reference labels, but the verifier degrades when labels switch from solver equivalence to human intent.
+\citet{Wang2026} apply selective conformal prediction with self-consistency to NL-to-temporal-logic, finding that self-consistency AUROC rises with problem difficulty.
+None of these works reports a per-candidate NL-to-FOL faithfulness meta-evaluation of cross-family consensus against an LLM judge baseline, nested over a baseline stack.
+
+\paragraph{Correlated failures in multi-version systems.}
+\citet{Eckhardt1985} showed theoretically that coincident failures in independently developed software versions need not be independent; empirical studies confirmed that correlated errors are common.
+Our scatter analysis (Section~\ref{sec:mechanism}) echoes this finding: errors produced by different LLM families are correlated but far less so than correct translations, providing the asymmetry that consensus exploits.
+
+%% ============================================================
+\section{Method}
+\label{sec:method}
+%% ============================================================
+
+\subsection{Cross-Family Solver Consensus}
+\label{sec:consensus_def}
+
+Given a natural-language sentence~$s$ and a candidate FOL formula~$c$ produced by any system, the consensus metric proceeds in three steps.
+
+\paragraph{Step~1: Peer generation.}
+Collect translations of~$s$ from $k$~LLM families, each family producing one translation at temperature~0 with a standardised few-shot prompt.
+The families must be architecturally independent---different pre-training data, different organisations.
+In our experiments we use nine families spanning six organisations: GPT-4, GPT-3.5, Llama-3.3-70B, Qwen3-235B, DeepSeek-V3.1, Mistral-Small-3.2, Gemini-2.5-Flash-Lite, GPT-4.1-Mini, and the three Logic-LM released systems.
+
+\paragraph{Step~2: Pairwise equivalence.}
+For each peer translation~$p_i$, check Z3 equivalence between~$c$ and~$p_i$ modulo vocabulary alignment.
+The \emph{vocabulary aligner} maps predicate names in~$p_i$ to those in~$c$ by string similarity (normalised Levenshtein distance on lowercased names with matching arity), then checks Z3 equivalence under the best injective mapping.
+Two formulas are \emph{equivalent modulo vocabulary} (eqmv) when there exists an injective, arity-preserving symbol map under which Z3 confirms logical equivalence.
+
+\paragraph{Step~3: Consensus score.}
+The consensus score is
+\begin{equation}
+\label{eq:cscore}
+\text{c\_score} = 1 - \frac{1}{k}\sum_{i=1}^{k} \mathbf{1}[\text{eqmv}(c, p_i)]
+\end{equation}
+where $\text{eqmv}$ denotes equivalence modulo vocabulary.
+Higher scores indicate greater disagreement with the peer pool, predicting error.
+The candidate itself is excluded from the pool (leave-one-out when the candidate is one of the generated translations).
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_method_v0.jpg}
+  \caption{Vocabulary alignment maps predicate names between candidate and peer formulas by string similarity (normalised Levenshtein distance on lowercased names with matching arity), then checks Z3 equivalence under the best injective mapping.}
+  \label{fig:vocab_align}
+\end{figure}
+
+\subsection{Graded versus Binary Consensus}
+\label{sec:graded}
+
+Rather than binary majority voting, we use the graded consensus score, which preserves the continuous fraction of disagreeing peers.
+On the development evaluation set, graded consensus outperforms binary majority voting by a stratified AUROC margin of $+0.114$ $[0.091, 0.140]$ [ARTIFACT:gen\_art\_evaluation\_2], because \emph{error endorsement} (the rate at which the majority endorses an erroneous candidate, $e = 0.124$) and \emph{correct-candidate divergence} (the rate at which a correct candidate disagrees with the majority, $d = 0.537$) are both substantial.
+Partial agreement carries discriminative information that a binary threshold discards.
+
+\subsection{Text-Augmented Fusion}
+\label{sec:fusion}
+
+To complement the consensus signal with text-level checks, we define a fused metric (PEER+TEXT) that combines the consensus score with two text-only features: (i)~a bag-of-words coverage score measuring overlap between text content words and formula predicates, and (ii)~a role-questionnaire score in which a small LLM answers structured questions about the sentence while Z3 extracts the formula's role profile, and their answers are compared [ARTIFACT:gen\_art\_experiment\_1].
+The fusion weights are fitted by logistic regression on a development screen and frozen before the subsequent evaluations.
+
+%% ============================================================
+\section{Experimental Setup}
+\label{sec:setup}
+%% ============================================================
+
+\subsection{Development Screen}
+\label{sec:devscreen}
+
+The development screen uses Logic-LM~\citep{Pan2023} released outputs on FOLIO validation: three LLM systems (GPT-3.5-turbo, GPT-4, text-davinci-003) producing 796 items on the validation split.
+Labels are assigned by Z3 equivalence to corrected gold formulas~\citep{Brunello2025}.
+After filtering to parseable and labelled items, the primary population contains 546 items (249 ERROR, 297 CORRECT).
+The screen is dominated by short sentences (93\% under 12 words).
+[ARTIFACT:gen\_art\_experiment\_3] [ARTIFACT:gen\_art\_experiment\_4]
+
+\subsection{Development Evaluation Set (Dataset E)}
+\label{sec:dataset_e}
+
+Dataset~E contains 8,507 real NL-to-FOL candidates for 700 sentences drawn from FOLIO training premises and MALLS training data, with strata enriched for long sentences ($\geq$25 words, $\geq$3 conditions) and exception clauses [ARTIFACT:gen\_art\_dataset\_1].
+Ten generator slots across nine LLM families produce candidates at temperature~0 with few-shot prompts.
+Labels combine Z3 equivalence to audited gold references with a blind, nonce-disguised, family-disjoint adjudication panel (Claude Haiku-4.5, GLM-4.6, Kimi-K2).
+Tier~A labels come from Z3 equivalence alone; tier~B labels are resolved by the panel for cases involving vocabulary granularity or compound differences.
+The primary analysis population (tiers~A+B) contains 2,686 scorable items (1,822 ERROR, 864 CORRECT) across 292 sentences.
+All bootstraps cluster by sentence to account for within-sentence dependence ($B = 2{,}000$).
+
+Dataset~E was also used during the run for metric screening, fusion calibration, baseline selection, and consensus-variant tuning.
+The T1 test on this set was pre-registered before any consensus score on~E was computed, but the set is not held out from the run's development cycle.
+Results on Dataset~E are therefore development-set estimates.
+
+\subsection{Perturbation Suite}
+\label{sec:perturb_suite}
+
+A suite of 4,234 typed mutants and 868 meaning-preserving controls was constructed from 300 base formulas with trusted references [ARTIFACT:gen\_art\_dataset\_3].
+Mutant operators include NEG (negation flip), REV (argument reversal), QUANT (quantifier change), RESTR (restriction change), CONN (connective change), DROP (dropped condition), ADD (added condition), SWAP (argument swap), BIND (binding change), and MEANING\_RENAME (semantically different predicate name).
+Controls include synonym renaming, nonce renaming, reordering, contrapositive, and De~Morgan rewrites.
+Each mutant is Z3-verified as non-equivalent to its base; each control is Z3-verified as equivalent.
+This suite enables within-base sensitivity analysis: for each base formula, the metric must distinguish its mutants from its controls.
+
+\subsection{Long-Sentence Test Set (R\_COMP)}
+\label{sec:rcomp}
+
+R\_COMP contains 221 templated sentences, each at least 25 words long with at least three conditions and one unless/except/provided-that/only-if clause, with references trusted by construction from a verified atom lexicon [ARTIFACT:gen\_art\_dataset\_3].
+In the shared-vocabulary (SIG) condition, generators receive the sentence plus the reference's symbol list; labels are pure Z3 equivalence to the reference.
+The SIG condition isolates consensus's discriminative power when vocabulary variation is removed.
+This test set was not used for any development purpose.
+
+\subsection{Baselines}
+\label{sec:baselines}
+
+We compare consensus against:
+\begin{itemize}
+\item \textbf{LLM judge} (Gemini 2.5 Flash Lite): rubric-based JSON scoring, run on both nonce-disguised and original text views [ARTIFACT:gen\_art\_experiment\_4] [ARTIFACT:gen\_art\_experiment\_6].
+\item \textbf{Frontier judge} (Gemini 3.1 Pro Preview): original text view, evaluated on a subsample [ARTIFACT:gen\_art\_experiment\_6].
+\item \textbf{Self-consistency} (SC-5): five samples from GPT-4.1-Nano at temperature~0.7, scored by Z3 equivalence fraction [ARTIFACT:gen\_art\_experiment\_3].
+\item \textbf{Round-trip NLI}: verbalise the formula back to natural language, compare to the original sentence via bidirectional NLI entailment [ARTIFACT:gen\_art\_experiment\_4].
+\item \textbf{Baseline stack} (S4): cross-fitted logistic regression combining all cheap baselines [ARTIFACT:gen\_art\_experiment\_6].
+\item \textbf{Structural pilot metrics}: parse rate, joint conflict, arity inconsistency, predicate-set overlap, dangling predicates [ARTIFACT:gen\_art\_experiment\_4].
+\end{itemize}
+
+\subsection{Pre-Registration}
+\label{sec:prereg}
+
+Two tests were pre-registered before any consensus score on their respective sets was computed.
+T1 specifies that the 95\% CI of the stratified AUROC difference between consensus and the disguised cheap judge on Dataset~E must exclude zero.
+T2 specifies the same criterion for R\_COMP under both shared-vocabulary (SIG) and free-vocabulary (FREE) conditions.
+Both tests use the stratified bootstrap ($B = 2{,}000$, clustered by sentence).
+
+T1 met its pre-registered criterion on Dataset~E, but because Dataset~E was also used for metric development, the T1 result is a development-set estimate.
+The SIG condition of T2 met its criterion on R\_COMP, which was independent of all development; the FREE condition was not testable due to budget exhaustion.
+[ARTIFACT:gen\_art\_experiment\_6] [ARTIFACT:gen\_art\_experiment\_7]
+
+%% ============================================================
+\section{Results}
+\label{sec:results}
+%% ============================================================
+
+\subsection{Main Result: Shared-Vocabulary Long Sentences}
+\label{sec:main_result}
+
+On R\_COMP SIG (1,904 candidates from 220 sentences, 395 ERROR, 1,509 CORRECT), consensus achieves within-template AUROC 0.954 $[0.939, 0.968]$ versus the disguised judge at 0.587 $[0.551, 0.622]$, a confirmed delta of $+0.367$ $[0.328, 0.404]$ (pre-registered and confirmed on a test set independent of all development; sentence-clustered bootstrap) [ARTIFACT:gen\_art\_experiment\_7].
+The judge adds nothing over consensus in this condition: the nested gain of adding the judge to consensus is approximately zero, while adding consensus to the judge yields $+0.377$.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_headline_v0.pdf}
+  \caption{Within-template AUROC on the long-sentence test set under shared vocabulary (1,904 candidates, 220 sentences). Consensus outperforms the disguised cheap judge by $+0.367$ $[0.328, 0.404]$ (pre-registered and confirmed on a test set independent of all development). Error bars show 95\% sentence-clustered bootstrap CIs.}
+  \label{fig:headline}
+\end{figure}
+
+On a 60-row frontier subsample from the same test set, consensus achieves 0.956 versus the frontier judge (Gemini 3.1 Pro Preview) at 0.932 (original text) and 0.735 (disguised).
+When vocabulary is controlled, consensus matches the frontier judge.
+
+The long-sentence test set uses templated sentences with shared symbol vocabulary, which removes the vocabulary-alignment confound.
+This scope is narrower than real-world NL-to-FOL, where generators choose their own predicate names.
+The development-set results in Section~\ref{sec:devset} evaluate consensus under that broader, vocabulary-diverse condition.
+
+\subsection{Development-Set Evaluation}
+\label{sec:devset}
+
+Table~\ref{tab:main} presents the pre-registered results on Dataset~E (2,686 items, 1,822 ERROR, 864 CORRECT, 292 sentences).
+Because Dataset~E was also used for metric screening and variant tuning, these are development-set estimates.
+
+\begin{table}[!htbp]
+\centering
+\caption{Stratified and pooled AUROC on the development evaluation set (Dataset~E, tiers~A+B, 2,686 candidates, 292 sentences). CIs are 95\% sentence-clustered bootstrap intervals.}
+\label{tab:main}
+\begin{tabular}{lccc}
+\toprule
+Metric & Strat.\ AUROC & Pooled AUROC & 95\% CI (strat.) \\
+\midrule
+PEER+TEXT fusion     & 0.753 & 0.790 & [0.714, 0.788] \\
+Cross-family consensus & 0.741 & 0.782 & [0.708, 0.773] \\
+Baseline stack (S4)  & 0.704 & 0.759 & --- \\
+Local 8B judge (disg.)& 0.669 & 0.712 & --- \\
+Best cheap judge (nano)& 0.652 & --- & --- \\
+Disguised cheap judge & 0.642 & 0.696 & [0.598, 0.687] \\
+Original cheap judge  & 0.623 & 0.635 & [0.575, 0.670] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Development-set advantage.}
+Consensus outperforms the disguised cheap judge by $+0.099$ $[0.049, 0.146]$ (development-set estimate; pre-registered criterion met, $p < 0.001$ by one-sided bootstrap) [ARTIFACT:gen\_art\_experiment\_6].
+On the long-sentence pool within Dataset~E (2,300 items from the L25, L20, and EXC strata), the advantage widens to $+0.116$ $[0.070, 0.163]$.
+On the L20+EXC subset with tier-A labels (449 items where the gold reference is fully trusted), the advantage is $+0.299$ $[0.212, 0.390]$.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_devset_v0.pdf}
+  \caption{Stratified AUROC of cross-family consensus versus baselines on the development evaluation set (Dataset~E, tiers~A+B, 2,686 candidates, 292 sentences). Error bars show 95\% sentence-clustered bootstrap CIs. The development-set advantage of consensus over the disguised cheap judge is $+0.099$ $[0.049, 0.146]$.}
+  \label{fig:devset}
+\end{figure}
+
+\paragraph{Nested gain over the baseline stack.}
+Consensus adds information beyond all cheap baselines combined: the nested AUROC gain of adding consensus to the baseline stack is $+0.039$ $[0.021, 0.057]$ (stratified), with a permutation-null 95th percentile of 0.009.
+Consensus alone approximately equals the full baseline stack ($+0.006$ $[-0.031, 0.042]$) [ARTIFACT:gen\_art\_experiment\_6].
+
+\paragraph{Frontier judge comparison.}
+On the 284-row frontier-judge subsample, consensus achieves an AUROC ratio of 0.957 $[0.887, 1.034]$ relative to the frontier judge (Gemini 3.1 Pro Preview), at 30$\times$ lower cost per item (\$0.00012 vs \$0.00365).
+Adding consensus to the frontier judge raises its AUROC by $+0.037$ $[0.008, 0.066]$ [ARTIFACT:gen\_art\_experiment\_6].
+
+\subsection{Perturbation Sensitivity}
+\label{sec:perturb_results}
+
+On the perturbation suite (4,234 mutants + 868 controls, within-base design), consensus achieves within-base AUROC 0.866, compared to 0.680 for the disguised judge, 0.666 for self-consistency, 0.659 for bag-of-words coverage, and approximately 0.50 for the structural pilot metrics [ARTIFACT:gen\_art\_experiment\_8].
+The PEER+TEXT fusion reaches 0.948.
+Consensus detects DOWN-polarity and UP-polarity edits symmetrically (difference $< 0.01$ AUROC), while local judges and embedding-based round-trip miss DOWN-polarity edits by 0.12 to 0.15 AUROC.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_perturb_v0.pdf}
+  \caption{Within-base AUROC on the perturbation suite (4,234 mutants + 868 controls from 300 base formulas). Each metric's ability to distinguish typed error mutants from meaning-preserving controls of the same base formula.}
+  \label{fig:perturb}
+\end{figure}
+
+\subsection{How Many Peer Families Are Needed?}
+\label{sec:kcurve}
+
+The discriminative power of consensus saturates rapidly.
+On Dataset~E (2,014 items with all seven non-candidate families available), pooled AUROC rises from 0.685 (one family) through 0.757 (three families) to 0.784 (seven families) [ARTIFACT:gen\_art\_evaluation\_2].
+Three families capture 97\% of the full pool's AUROC.
+The cross-fitted best three-family pool (DeepSeek, Microsoft, OpenAI) achieves 0.785, matching the full pool.
+No single family carries the signal: the maximum leave-one-family-out AUROC drop is 0.005.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.85\textheight,keepaspectratio]{figures/fig_kcurve_v0.pdf}
+  \caption{Pooled AUROC of consensus as a function of the number of peer families on the development evaluation set (2,014 items, random family subsets). Performance saturates by $k{=}3$, reaching 97\% of the full seven-family pool.}
+  \label{fig:kcurve}
+\end{figure}
+
+\subsection{Why Consensus Discriminates}
+\label{sec:mechanism}
+
+The consensus metric works because correct and erroneous translations exhibit different agreement patterns.
+On Dataset~E, the mean pairwise agreement rate among translations of the same sentence is 0.760 for correct candidates and 0.159 for erroneous ones (a scatter ratio of 4.8) [ARTIFACT:gen\_art\_evaluation\_2].
+Correct translations converge on the same logical content despite different surface forms, while errors are structurally diverse: different families produce different wrong formulas for the same sentence.
+
+The graded consensus score outperforms binary majority voting by $+0.114$ $[0.091, 0.140]$ stratified AUROC.
+Binary voting collapses the continuous agreement fraction into a single bit, losing discriminative information when error endorsement ($e = 0.124$) and correct-candidate divergence ($d = 0.537$) are both far from zero [ARTIFACT:gen\_art\_evaluation\_2].
+
+\subsection{Negative Results}
+\label{sec:negative}
+
+\paragraph{Structural pilot metrics.}
+The pilot structural metrics (joint conflict, arity inconsistency, shape inconsistency, dangling predicates) achieve AUROC 0.500 to 0.533 on the development screen, indistinguishable from chance [ARTIFACT:gen\_art\_experiment\_4].
+Only the cross-system predicate-set Jaccard (0.720) carries signal, as a coarser proxy for the consensus approach.
+
+\paragraph{Formula lint.}
+Deterministic formula-smell detection achieves AUROC 0.508 on LLM outputs: lint rules that fire on human annotation errors (AUROC 0.655) do not transfer to LLM outputs, which produce semantic rather than syntactic errors [ARTIFACT:gen\_art\_experiment\_1].
+
+\paragraph{Round-trip reformalisation.}
+Verbalising the formula and re-translating to FOL to check Z3 equivalence achieves AUROC 0.513, near chance, because 76\% of items produce tied scores [ARTIFACT:gen\_art\_experiment\_4].
+
+\paragraph{Candidate-signature consensus.}
+Giving peers the candidate's own symbol list---intended to reduce correct-candidate divergence---does lower divergence ($d = 0.139$ vs $0.323$ for free peers) but raises error endorsement ($e = 0.459$ vs $0.173$), producing a net AUROC of 0.614 versus 0.770 for free peers [ARTIFACT:gen\_art\_experiment\_9].
+Anchoring the peers to the candidate's vocabulary causes them to reproduce its errors.
+
+%% ============================================================
+\section{Discussion and Limitations}
+\label{sec:discussion}
+%% ============================================================
+
+\subsection{Vocabulary Dependence}
+\label{sec:vocab_dep}
+
+The principal limitation of consensus is vocabulary dependence.
+Two formulas with different predicate names are not Z3-equivalent under any identity map, so a candidate using a synonym or a different decomposition than its peers is penalised regardless of correctness.
+On the perturbation suite, the nonce-rename false-alarm rate is 0.76 [ARTIFACT:gen\_art\_experiment\_8].
+We tested three approaches to vocabulary-robust equivalence: name-free alignment (exhaustive injective symbol mapping without string similarity), hybrid matching (combining name-based and name-free maps), and gloss-gated checking (verifying renamed pairs with an LLM gloss).
+All three reduce correct-candidate divergence but proportionally increase error endorsement, producing no net AUROC gain [ARTIFACT:gen\_art\_experiment\_14].
+The gloss-gated checker failed its development gate (all-stratum AUROC 0.696 vs 0.742 for plain vocabulary alignment).
+This tradeoff between divergence and endorsement appears structural when the vocabulary is unconstrained.
+
+In practice, vocabulary dependence is mitigated by standardising the symbol vocabulary in the generation prompt (as in the SIG condition, where consensus reaches AUROC 0.954) or by pairing consensus with a vocabulary-independent text-level check.
+
+\subsection{Error Endorsement}
+\label{sec:endorsement}
+
+Consensus cannot detect errors that all peers reproduce.
+On Dataset~E, 38\% of errors are endorsed by the majority.
+The endorsed-error rate is higher for structural errors (57\%) than for polarity errors (5\%).
+Text-level checks detect some endorsed errors that consensus misses, but the PEER+TEXT fusion does not significantly outperform consensus alone on the development evaluation (stratified delta $+0.011$, not significant) [ARTIFACT:gen\_art\_experiment\_5].
+
+\subsection{Contamination and Rewrite Invariance}
+\label{sec:contamination}
+
+The disguised-judge comparison controls for LLM memorisation of public benchmark data by replacing content words with nonsense tokens.
+The flash-lite contamination difference-in-differences on Dataset~E is $+0.105$ $[0.006, 0.201]$, suggesting a small memorisation benefit for the judge on some items [ARTIFACT:gen\_art\_experiment\_6].
+Consensus, which uses only Z3 equivalence, is structurally immune to memorisation.
+
+On the development screen, judges are highly sensitive to meaning-preserving rewrites: the verdict flip rate under contrapositive rewriting is 0.41 to 0.95 for judges versus 0.0 for consensus [ARTIFACT:gen\_art\_experiment\_4].
+Consensus is invariant to any rewrite that preserves Z3 equivalence, but not to vocabulary changes.
+
+\subsection{Short-Sentence Weakness}
+\label{sec:short_sentence}
+
+The consensus advantage over the judge does not hold on short FOLIO-style sentences (CTRL stratum on Dataset~E: $-0.069$ $[-0.23, 0.10]$) [ARTIFACT:gen\_art\_experiment\_6].
+The method is strongest on long, conditioned sentences where judges struggle with the logical complexity.
+
+\subsection{Incomplete Confirmations}
+\label{sec:incomplete}
+
+Confirmation was attempted on three additional fronts: a fresh 550-sentence test set, a second long-sentence sample, and R\_COMP under free vocabulary.
+All three were budget-stopped before reaching testability [ARTIFACT:gen\_art\_experiment\_11] [ARTIFACT:gen\_art\_experiment\_12] [ARTIFACT:gen\_art\_experiment\_13].
+The only confirmed result on an independent test set is the shared-vocabulary long-sentence test (Section~\ref{sec:main_result}).
+The Dataset~E result (Section~\ref{sec:devset}) met its pre-registered criterion but is a development-set estimate.
+
+%% ============================================================
+\section{Conclusion}
+\label{sec:conclusion}
+%% ============================================================
+
+Cross-family solver consensus is a practical gold-free faithfulness metric for NL-to-FOL translation.
+On a pre-registered test of templated long sentences with shared symbol vocabulary, consensus outperforms the best cheap LLM judge by $+0.367$ $[0.328, 0.404]$ within-template AUROC, confirmed on a test set independent of all development.
+The method costs under \$0.001 per candidate with three peer families, is domain-agnostic, and is structurally immune to memorisation.
+Its vocabulary dependence is the central unsolved problem: when candidate and peers use different predicate names, consensus penalises correct translations and endorses vocabulary-matched errors.
+Standardising the symbol vocabulary in generation prompts removes this limitation, as the confirmed shared-vocabulary result demonstrates.
+
+Future directions include:
+\begin{itemize}
+\item Vocabulary-robust equivalence checks that do not trade divergence for endorsement.
+\item Extension to richer formal languages (temporal logic, separation logic) where solver-based equivalence remains tractable.
+\item Scaling the meta-evaluation to domains beyond FOLIO and MALLS.
+\end{itemize}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

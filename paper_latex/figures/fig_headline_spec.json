@@ -1,0 +1,44 @@
+{
+  "type": "custom_ci_lollipop_panels",
+  "renderer": "make_fig_headline.py",
+  "figure_id": "fig_headline",
+  "title": "Headline result on shared-vocabulary long sentences",
+  "aspect": "4:3",
+  "width_in": 7.0,
+  "xlim": [0.30, 1.00],
+  "source": {
+    "artifact": "run_u75jRHUss0zo / iter_3 / gen_art_experiment_7",
+    "file": "results/analysis.json",
+    "note": "Panel (a) values from SIG.primary; panel (b) values from SIG.frontier.<metric>.pooled. Frontier judges were only run on the 60-row subsample, never on the 1,904-row primary set, so they are drawn in their own panel."
+  },
+  "panels": [
+    {
+      "key": "primary",
+      "title": "Primary test: 1,904 candidates, 220 sentences",
+      "xlabel": "Within-template AUROC (0.5 = chance)",
+      "source_keys": "SIG.primary (auroc_metric, auroc_metric_ci, auroc_comparator, auroc_comparator_ci, delta, ci)",
+      "n": 1904, "n_error": 395, "n_correct": 1509, "n_sentences": 220,
+      "rows": [
+        {"label": "Cross-family consensus", "value": 0.954, "ci": [0.939, 0.968], "highlight": true},
+        {"label": "Disguised cheap judge", "value": 0.587, "ci": [0.551, 0.622], "highlight": false}
+      ],
+      "reference_line": {"x": 0.587, "label": "cheap-judge baseline"},
+      "delta": {"from": 0.587, "to": 0.954, "value": 0.367, "ci": [0.328, 0.404], "p_one_sided": "< 0.0005", "status": "pre-registered, PASS"}
+    },
+    {
+      "key": "frontier",
+      "title": "Frontier-judge subsample: 60 candidates (30 / 30)",
+      "xlabel": "Pooled AUROC (0.5 = chance)",
+      "source_keys": "SIG.frontier.{c_score_sig,judge_frontier_orig,judge_frontier_disg,judge_cheap_disg}.pooled",
+      "n": 60, "n_error": 30, "n_correct": 30, "n_sentences": 51,
+      "rows": [
+        {"label": "Cross-family consensus", "value": 0.956, "ci": [0.889, 1.000], "highlight": true},
+        {"label": "Frontier judge (original text)", "value": 0.932, "ci": [0.855, 0.990], "highlight": false},
+        {"label": "Frontier judge (disguised)", "value": 0.735, "ci": [0.593, 0.851], "highlight": false},
+        {"label": "Disguised cheap judge (n = 56)", "value": 0.499, "ci": [0.341, 0.653], "highlight": false}
+      ]
+    }
+  ],
+  "chance_line": 0.5,
+  "ci_method": "95% sentence-clustered, template-stratified bootstrap (B = 2,000)"
+}

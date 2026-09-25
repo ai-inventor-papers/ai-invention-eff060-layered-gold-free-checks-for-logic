@@ -1,0 +1,146 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Pan2023,Ryu2024}
+\citation{Han2022}
+\citation{Granelli2023}
+\citation{Brunello2026}
+\citation{Yang2023,Vossel2025}
+\citation{Thatikonda2025}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Summary of contributions.}{1}{section*.1}\protected@file@percent }
+\citation{Yang2023,Thatikonda2025}
+\citation{Thatikonda2025}
+\citation{Yang2023,Vossel2025}
+\citation{Verga2024}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of cross-family solver consensus. Given a sentence, $k$ independent LLM families each produce a candidate FOL translation at temperature\nobreakspace  {}0. For each candidate\nobreakspace  {}$c$, Z3 checks pairwise equivalence to every peer translation after vocabulary alignment. The consensus score is the fraction of peers that disagree with\nobreakspace  {}$c$; higher disagreement predicts error.\relax }}{2}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:overview}{{1}{2}{Overview of cross-family solver consensus. Given a sentence, $k$ independent LLM families each produce a candidate FOL translation at temperature~0. For each candidate~$c$, Z3 checks pairwise equivalence to every peer translation after vocabulary alignment. The consensus score is the fraction of peers that disagree with~$c$; higher disagreement predicts error.\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{NL-to-FOL evaluation metrics.}{2}{section*.3}\protected@file@percent }
+\citation{Wang2022}
+\citation{Shi2022,Chen2022,Li2022}
+\citation{Zhang2023}
+\citation{Kuhn2023,Farquhar2024}
+\citation{Bayless2025}
+\citation{Alvanaki2026}
+\citation{Singh2026}
+\citation{Wang2026}
+\citation{Eckhardt1985}
+\@writefile{toc}{\contentsline {paragraph}{Self-consistency and sampling agreement.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Cross-model agreement for formal outputs.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Correlated failures in multi-version systems.}{3}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{3}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{3}{Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Cross-Family Solver Consensus}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:consensus_def}{{3.1}{3}{Cross-Family Solver Consensus}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step\nobreakspace  {}1: Peer generation.}{4}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step\nobreakspace  {}2: Pairwise equivalence.}{4}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step\nobreakspace  {}3: Consensus score.}{4}{section*.9}\protected@file@percent }
+\newlabel{eq:cscore}{{1}{4}{Step~3: Consensus score}{equation.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Vocabulary alignment maps predicate names between candidate and peer formulas by string similarity (normalised Levenshtein distance on lowercased names with matching arity), then checks Z3 equivalence under the best injective mapping.\relax }}{4}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:vocab_align}{{2}{4}{Vocabulary alignment maps predicate names between candidate and peer formulas by string similarity (normalised Levenshtein distance on lowercased names with matching arity), then checks Z3 equivalence under the best injective mapping.\relax }{figure.caption.10}{}}
+\citation{Pan2023}
+\citation{Brunello2025}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Graded versus Binary Consensus}{5}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:graded}{{3.2}{5}{Graded versus Binary Consensus}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Text-Augmented Fusion}{5}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:fusion}{{3.3}{5}{Text-Augmented Fusion}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{5}{section.4}\protected@file@percent }
+\newlabel{sec:setup}{{4}{5}{Experimental Setup}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Development Screen}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:devscreen}{{4.1}{5}{Development Screen}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Development Evaluation Set (Dataset E)}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:dataset_e}{{4.2}{5}{Development Evaluation Set (Dataset E)}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Perturbation Suite}{6}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:perturb_suite}{{4.3}{6}{Perturbation Suite}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Long-Sentence Test Set (R\_COMP)}{6}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:rcomp}{{4.4}{6}{Long-Sentence Test Set (R\_COMP)}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Baselines}{6}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:baselines}{{4.5}{6}{Baselines}{subsection.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Pre-Registration}{6}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:prereg}{{4.6}{6}{Pre-Registration}{subsection.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{7}{section.5}\protected@file@percent }
+\newlabel{sec:results}{{5}{7}{Results}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Main Result: Shared-Vocabulary Long Sentences}{7}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:main_result}{{5.1}{7}{Main Result: Shared-Vocabulary Long Sentences}{subsection.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Within-template AUROC on the long-sentence test set under shared vocabulary (1,904 candidates, 220 sentences). Consensus outperforms the disguised cheap judge by $+0.367$ $[0.328, 0.404]$ (pre-registered and confirmed on a test set independent of all development). Error bars show 95\% sentence-clustered bootstrap CIs.\relax }}{7}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:headline}{{3}{7}{Within-template AUROC on the long-sentence test set under shared vocabulary (1,904 candidates, 220 sentences). Consensus outperforms the disguised cheap judge by $+0.367$ $[0.328, 0.404]$ (pre-registered and confirmed on a test set independent of all development). Error bars show 95\% sentence-clustered bootstrap CIs.\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Development-Set Evaluation}{8}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:devset}{{5.2}{8}{Development-Set Evaluation}{subsection.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Stratified and pooled AUROC on the development evaluation set (Dataset\nobreakspace  {}E, tiers\nobreakspace  {}A+B, 2,686 candidates, 292 sentences). CIs are 95\% sentence-clustered bootstrap intervals.\relax }}{8}{table.caption.12}\protected@file@percent }
+\newlabel{tab:main}{{1}{8}{Stratified and pooled AUROC on the development evaluation set (Dataset~E, tiers~A+B, 2,686 candidates, 292 sentences). CIs are 95\% sentence-clustered bootstrap intervals.\relax }{table.caption.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Development-set advantage.}{8}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Nested gain over the baseline stack.}{8}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Frontier judge comparison.}{8}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Perturbation Sensitivity}{8}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:perturb_results}{{5.3}{8}{Perturbation Sensitivity}{subsection.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Stratified AUROC of cross-family consensus versus baselines on the development evaluation set (Dataset\nobreakspace  {}E, tiers\nobreakspace  {}A+B, 2,686 candidates, 292 sentences). Error bars show 95\% sentence-clustered bootstrap CIs. The development-set advantage of consensus over the disguised cheap judge is $+0.099$ $[0.049, 0.146]$.\relax }}{9}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:devset}{{4}{9}{Stratified AUROC of cross-family consensus versus baselines on the development evaluation set (Dataset~E, tiers~A+B, 2,686 candidates, 292 sentences). Error bars show 95\% sentence-clustered bootstrap CIs. The development-set advantage of consensus over the disguised cheap judge is $+0.099$ $[0.049, 0.146]$.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Within-base AUROC on the perturbation suite (4,234 mutants + 868 controls from 300 base formulas). Each metric's ability to distinguish typed error mutants from meaning-preserving controls of the same base formula.\relax }}{10}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:perturb}{{5}{10}{Within-base AUROC on the perturbation suite (4,234 mutants + 868 controls from 300 base formulas). Each metric's ability to distinguish typed error mutants from meaning-preserving controls of the same base formula.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}How Many Peer Families Are Needed?}{10}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:kcurve}{{5.4}{10}{How Many Peer Families Are Needed?}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Why Consensus Discriminates}{10}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:mechanism}{{5.5}{10}{Why Consensus Discriminates}{subsection.5.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Pooled AUROC of consensus as a function of the number of peer families on the development evaluation set (2,014 items, random family subsets). Performance saturates by $k{=}3$, reaching 97\% of the full seven-family pool.\relax }}{11}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:kcurve}{{6}{11}{Pooled AUROC of consensus as a function of the number of peer families on the development evaluation set (2,014 items, random family subsets). Performance saturates by $k{=}3$, reaching 97\% of the full seven-family pool.\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Negative Results}{12}{subsection.5.6}\protected@file@percent }
+\newlabel{sec:negative}{{5.6}{12}{Negative Results}{subsection.5.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Structural pilot metrics.}{12}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Formula lint.}{12}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Round-trip reformalisation.}{12}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Candidate-signature consensus.}{12}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion and Limitations}{12}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{12}{Discussion and Limitations}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Vocabulary Dependence}{12}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:vocab_dep}{{6.1}{12}{Vocabulary Dependence}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Error Endorsement}{13}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:endorsement}{{6.2}{13}{Error Endorsement}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Contamination and Rewrite Invariance}{13}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:contamination}{{6.3}{13}{Contamination and Rewrite Invariance}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Short-Sentence Weakness}{13}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:short_sentence}{{6.4}{13}{Short-Sentence Weakness}{subsection.6.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Incomplete Confirmations}{13}{subsection.6.5}\protected@file@percent }
+\newlabel{sec:incomplete}{{6.5}{13}{Incomplete Confirmations}{subsection.6.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{13}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{13}{Conclusion}{section.7}{}}
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Alvanaki2026}{{1}{2026}{{Alvanaki et~al.}}{{Alvanaki, Yang, Seyoum, and Carloni}}}
+\bibcite{Bayless2025}{{2}{2025}{{Bayless et~al.}}{{Bayless, Buliani, Cassel, Cook, Clough, et~al.}}}
+\bibcite{Brunello2025}{{3}{2025}{{Brunello et~al.}}{{Brunello, Geatti, Mignani, Montanari, and Saccomanno}}}
+\bibcite{Brunello2026}{{4}{2026}{{Brunello et~al.}}{{Brunello, Curaba, Geatti, Mignani, Montanari, and Saccomanno}}}
+\bibcite{Chen2022}{{5}{2022}{{Chen et~al.}}{{Chen, Zhang, Nguyen, Zan, Lin, Lou, and Chen}}}
+\bibcite{Eckhardt1985}{{6}{1985}{{Eckhardt and Lee}}{{}}}
+\bibcite{Farquhar2024}{{7}{2024}{{Farquhar et~al.}}{{Farquhar, Kossen, Kuhn, and Gal}}}
+\bibcite{Granelli2023}{{8}{}{{Granelli et~al.}}{{Granelli, Hamaguchi, Nagata, Ramirez-Quezada, and Wada}}}
+\bibcite{Han2022}{{9}{2022}{{Han et~al.}}{{Han, Schoelkopf, Zhao, Qi, Riddell, et~al.}}}
+\bibcite{Kuhn2023}{{10}{2023}{{Kuhn et~al.}}{{Kuhn, Gal, and Farquhar}}}
+\bibcite{Li2022}{{11}{2022}{{Li et~al.}}{{Li, Choi, Chung, Kushman, Schrittwieser, et~al.}}}
+\bibcite{Pan2023}{{12}{2023}{{Pan et~al.}}{{Pan, Albalak, Wang, and Wang}}}
+\bibcite{Ryu2024}{{13}{2024}{{Ryu et~al.}}{{Ryu, Kim, Lee, and Yang}}}
+\bibcite{Shi2022}{{14}{2022}{{Shi et~al.}}{{Shi, Fried, Ghazvininejad, Zettlemoyer, and Wang}}}
+\bibcite{Singh2026}{{15}{2026}{{Singh et~al.}}{{Singh, Ganguly, Goel, Torkamani, Han, Lilien, Erata, and Chaudhary}}}
+\bibcite{Thatikonda2025}{{16}{2025}{{Thatikonda et~al.}}{{Thatikonda, Buntine, and Shareghi}}}
+\bibcite{Verga2024}{{17}{2024}{{Verga et~al.}}{{Verga, Hofstätter, Althammer, Su, Piktus, Arkhangorodsky, Xu, White, and Lewis}}}
+\bibcite{Vossel2025}{{18}{2025}{{Vossel et~al.}}{{Vossel, Mossakowski, and Gehrke}}}
+\bibcite{Wang2022}{{19}{2022}{{Wang et~al.}}{{Wang, Wei, Schuurmans, Le, Chi, Narang, Chowdhery, and Zhou}}}
+\bibcite{Wang2026}{{20}{2026}{{Wang et~al.}}{{Wang, Luo, Fu, Xu, Dong, and Cai}}}
+\bibcite{Yang2023}{{21}{2023}{{Yang et~al.}}{{Yang, Xiong, Payani, Shareghi, and Fekri}}}
+\bibcite{Zhang2023}{{22}{2023}{{Zhang et~al.}}{{Zhang, Li, Das, Malin, and Sricharan}}}
+\gdef \@abspage@last{15}
