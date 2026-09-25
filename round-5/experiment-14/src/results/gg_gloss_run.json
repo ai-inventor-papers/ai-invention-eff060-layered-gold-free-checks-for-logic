@@ -1,0 +1,34 @@
+{
+ "n_pairs": 3481,
+ "n_sentences": 245,
+ "n_calls": 415,
+ "first50": {
+  "calls": 50,
+  "unparseable_calls": 0,
+  "reasoning_tokens": 0,
+  "prompt_tokens": 34071,
+  "completion_tokens": 3757,
+  "usd": 0.0196138,
+  "secs": 37.74308180809021
+ },
+ "projection_rest_usd": 0.14318074,
+ "remaining_before_rest": 1.7244412,
+ "prompt": "gloss_gg_v2",
+ "prompt_sha256": "48394616002323cb0608527746812df0a1953264385fff205e4a1b3b9087c46d",
+ "model": "google/gemini-2.5-flash",
+ "rest": {
+  "calls": 365,
+  "unparseable_calls": 0,
+  "reasoning_tokens": 0,
+  "prompt_tokens": 245921,
+  "completion_tokens": 27862,
+  "usd": 0.14343129999999993,
+  "secs": 278.08261132240295
+ },
+ "verdict_counts": {
+  "NO": 2632,
+  "YES": 849
+ },
+ "wall_s": 41.65730929374695,
+ "spend_total_after": 0.2189901
+}
