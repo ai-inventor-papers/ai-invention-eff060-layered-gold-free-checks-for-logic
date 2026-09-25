@@ -1,7 +1,0 @@
-18:25:30|INFO   |stage 100: 100 sentences selected, 80 to score; params {'variants': ['ALIGN', 'NF-anchored'], 'k': 5, 'tau': {'NF-pure': None, 'NF-anchored': 0.5, 'ALIGN': None}, 'timeout_ms': 2000, 'pair_cap_s': 30, 'k6_seeds': 5, 'medoid_budget_s': 2, 'do_align': True, 'do_text': True, 'codes': True, 'famfield': True, 'allpool': False}
-18:26:08|INFO   |E 20/80 sentences, 38s wall
-18:26:27|INFO   |E 40/80 sentences, 57s wall
-18:26:51|INFO   |E 60/80 sentences, 81s wall
-18:27:28|INFO   |E 80/80 sentences, 118s wall
-18:27:29|INFO   |stage 100 done in 119s wall; mean cpu-s per sentence by stratum {'CTRL': (19.413, 20), 'EXC': (9.973, 20), 'L20': (12.663, 20), 'L25': (17.9345, 20)}
-18:27:45|INFO   |projection for the remaining 600 sentences: 13.5 min wall

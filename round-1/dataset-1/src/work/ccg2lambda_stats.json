@@ -1,7 +1,0 @@
-{
- "train_rows": 1644,
- "matched": 57,
- "convert_fail": 17,
- "parse_fail": 7,
- "ctrl_sentences": 150
-}
