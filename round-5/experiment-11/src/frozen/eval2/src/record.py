@@ -319,8 +319,8 @@ def corrections() -> pd.DataFrame:
     a5 = J(E5 / "results" / "analysis.json")
     a6 = J(E6 / "results" / "analysis_E.json")
     sf = J(E5 / "results" / "screen_fit.json")
-    x4 = J(I1 / "gen_art_experiment_4" / "results" / "method_out.json")
-    m1 = J(I1 / "gen_art_experiment_1" / "results" / "metrics.json")
+    x4 = J(I1 / "experiment-4/src" / "results" / "method_out.json")
+    m1 = J(I1 / "experiment-1/src" / "results" / "metrics.json")
     mfa = pd.read_csv(EV1 / "tables" / "judge_matched_fa.csv", comment="#")
     fsi = pd.read_csv(EV1 / "tables" / "frontier_same_item.csv", comment="#")
     R = []
@@ -470,12 +470,12 @@ def hypothesis_verdicts(A: dict, pts: dict, lab: pd.DataFrame) -> pd.DataFrame:
     rows.append({"clause_id": "ii.untested_bars", "clause_text": "API flash-lite judge untestable on E (20 rows); no API SC-5 / round-trip / frontier rows on E",
                  "status": "OWNED_BY_OTHER_ARTIFACT (T1)", "claimed": None, "file_value": None, "source": "T1 experiment (iteration 3)"})
     chk("ii.frontier_solver", "frontier advantage +0.077 under solver labels", 0.077,
-        get(J(I1 / "gen_art_experiment_4/results/method_out.json"), "metadata.analysis.paired_strong_subset.L_strong_subset.judge_cheap_orig.judge_strong_orig.delta_auroc"),
+        get(J(I1 / "experiment-4/src/results/method_out.json"), "metadata.analysis.paired_strong_subset.L_strong_subset.judge_cheap_orig.judge_strong_orig.delta_auroc"),
         f"{I1}/gen_art_experiment_4/results/method_out.json :: metadata.analysis.paired_strong_subset.L_strong_subset.judge_cheap_orig.judge_strong_orig.delta_auroc")
     fsi = pd.read_csv(EV1 / "tables/frontier_same_item.csv", comment="#")
     r = fsi[(fsi.regime == "R_ADJ_AB") & (fsi.strong == "judge_strong_orig") & (fsi.cheap == "judge_cheap_orig")]
     chk("ii.frontier_panel", "+0.166 under panel A+B (n=90)", 0.166, r.delta.iloc[0] if len(r) else None, f"{EV1}/tables/frontier_same_item.csv :: R_ADJ_AB strong_orig vs cheap_orig delta")
-    chk("ii.frontier_cost", "frontier judge $0.0029/call", 0.0029, get(J(I1 / "gen_art_experiment_4/results/method_out.json"),
+    chk("ii.frontier_cost", "frontier judge $0.0029/call", 0.0029, get(J(I1 / "experiment-4/src/results/method_out.json"),
         "metadata.analysis.cost.judge_strong (API, per condition).usd_per_call"),
         f"{I1}/gen_art_experiment_4/results/method_out.json :: metadata.analysis.cost['judge_strong (API, per condition)'].usd_per_call", prec=4)
     fl = pd.read_csv(EV1 / "tables/flipped_items.csv", comment="#")
@@ -561,7 +561,7 @@ def coverage_vs_request() -> pd.DataFrame:
 
 
 def function_inventory() -> pd.DataFrame:
-    files = [I1 / "gen_art_experiment_1/src/fol_triage.py"] + sorted(Path(p) for p in glob.glob(str(I1 / "gen_art_experiment_3/src/*.py")))
+    files = [I1 / "experiment-1/src/src/fol_triage.py"] + sorted(Path(p) for p in glob.glob(str(I1 / "experiment-3/src/src/*.py")))
     files += [E5 / "src/vendor_c/consensus.py", E5 / "src/peer_text.py"]
     files += sorted(Path(p) for p in glob.glob(str(E6 / "src/*b2*.py")) + glob.glob(str(E6 / "src/*world*.py")))
     files += [ROOT / "src/pairwise.py", ROOT / "src/mechanism.py"]

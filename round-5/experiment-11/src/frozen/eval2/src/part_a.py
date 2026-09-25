@@ -337,7 +337,7 @@ def run(stage: str = "all") -> dict:
     A["M4"]["fixed_pools"] = pools
     A["M4"]["LOFO"] = M4.lofo(P, boot, "fam_stats", llm_fams, neutral, 0.712)
     logger.info(f"M4 pools/LOFO done {time.time() - t0:.0f}s")
-    x4 = json.loads((I1 / "gen_art_experiment_4" / "results" / "method_out.json").read_text())
+    x4 = json.loads((I1 / "experiment-4/src" / "results" / "method_out.json").read_text())
     fj = x4["metadata"]["analysis"]["cost"]["judge_strong (API, per condition)"]
     frontier = {"usd_per_call": fj["usd_per_call"], "n_calls": fj["n_calls"],
                 "source": f"{I1}/gen_art_experiment_4/results/method_out.json :: metadata.analysis.cost['judge_strong (API, per condition)'].usd_per_call"}

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6
 """E calibration units for the 4-bit (nf4) local judges / round-trip on the 16 GB GPU (deviation D-GPU16).
 The judges' frozen E scores (exp 6) were produced at bf16 on a 21 GB GPU; this machine has 16 GB, so the 8B judges run
 nf4. To keep PRIMARY thresholds (matched FA 0.10 on E R_AB LLM CORRECT rows) on the SAME quantisation as the PERTURB

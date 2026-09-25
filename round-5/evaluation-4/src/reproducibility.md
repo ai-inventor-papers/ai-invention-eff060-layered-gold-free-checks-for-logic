@@ -16,7 +16,7 @@ Inputs are read in place, read-only, from absolute paths under
 
 - Python 3.12.14 (via `uv`); no system packages beyond `uv`.
 - Exact versions (also pinned in `pyproject.toml`): contourpy 1.4.0, cycler 0.12.1, fonttools 4.66.0, kiwisolver 1.5.1, loguru 0.7.3, matplotlib 3.11.2, numpy 2.5.3, packaging 26.3, pandas 3.0.6, pillow 12.3.0, pyparsing 3.3.3, python-dateutil 2.9.0.post0, pyyaml 6.0.3, scipy 1.18.1, six 1.17.0.
-- The figures import the house-style helpers from `/ai-inventor/.claude/skills/aii-data-fig-gen/scripts/chart_style.py` (read-only).
+- The figures import the house-style helpers from `../../../tools/aii-data-fig-gen/scripts/chart_style.py` (read-only).
 
 ```bash
 uv venv .venv --python=3.12
@@ -47,8 +47,8 @@ None. No API keys are needed: `eval.py` asserts that `openai` and `requests` are
 After it, run:
 
 ```bash
-python /ai-inventor/.claude/skills/aii-json/scripts/aii_json_validate_schema.py --format exp_eval_sol_out --file $PWD/eval_out.json   # PASSED
-python /ai-inventor/.claude/skills/aii-json/scripts/aii_json_format_mini_preview.py --input $PWD/eval_out.json   # full_/mini_/preview_
+python ../../../tools/aii-json/scripts/aii_json_validate_schema.py --format exp_eval_sol_out --file $PWD/eval_out.json   # PASSED
+python ../../../tools/aii-json/scripts/aii_json_format_mini_preview.py --input $PWD/eval_out.json   # full_/mini_/preview_
 ```
 
 ## 5. What you should get

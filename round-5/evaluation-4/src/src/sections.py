@@ -222,7 +222,7 @@ def s07_prior(c: Ctx) -> str:
     c.section = "S7"
     pa = f"{T}/prior_art.csv"
     tbl = verbatim_table(pa, ["section", "line"], "prior_art.csv", max_cell=700)
-    rr = f"{RUN}/iter_3/gen_art/gen_art_research_1"
+    rr = f"{RUN}/round-3/research-1/src"
     qfiles = [f"{rr}/notes/QUOTES.md", f"{rr}/notes/full/vossel.md"]
     found = [p for p in qfiles if Path(p).exists() and "predicate availability boosts performance by 15-20%" in Path(p).read_text(errors="replace")]
     for p in found:
@@ -246,7 +246,7 @@ Insert as §3.x. The research artifact's scoop rule, neighbour table and C1–C5
 
 def s08_reasoning(c: Ctx) -> str:
     c.section = "S8"
-    rv3 = f"{RUN}/iter_3/review_report/review_report/.terminal_claude_agent_struct_out.json"
+    rv3 = f"{RUN}/round-3/review/.terminal_claude_agent_struct_out.json"
     up3 = f"{RUN}/iter_3/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json"
     gs4 = f"{RUN}/iter_4/gen_strat/gen_strat_1/.terminal_claude_agent_struct_out.json"
     pr = f"{X9}/prereg_csc_E.json"
@@ -413,7 +413,7 @@ The eval-3 table in section 1 gives a larger c_align NONCE flip ({c.v('pc_c_alig
 
 **T8 (R_COMP FREE, label-free).** ALIGN pairwise agreement among FREE candidates {c.v('x10_t8_align')}.
 
-{src_line([f'{X10}/tables.md', f'{X10}/anchoring.csv', f'{X10}/controls_fa.csv', f'{X10}/d_by_length.csv', f'{X10}/typing_csc.csv', f'{X10}/rcomp_sig_csc.json', f'{X10}/paired_cue_effect.csv', f'{X10}/api_cost_ledger.jsonl', f'{L.RUN}/iter_4/review_report/review_report/audit/recompute_perturb_csc.json'])}
+{src_line([f'{X10}/tables.md', f'{X10}/anchoring.csv', f'{X10}/controls_fa.csv', f'{X10}/d_by_length.csv', f'{X10}/typing_csc.csv', f'{X10}/rcomp_sig_csc.json', f'{X10}/paired_cue_effect.csv', f'{X10}/api_cost_ledger.jsonl', f'{L.RUN}/round-4/review/audit/recompute_perturb_csc.json'])}
 """
 
 
@@ -555,9 +555,9 @@ Method: every `*ledger*.json(l)` and `budget_state.json` under the run root was 
 
 def s15_deadends(c: Ctx) -> str:
     c.section = "S15"
-    b2 = f"{RUN}/iter_3/gen_art/gen_art_evaluation_2/tables/b2_dead_end.csv"
-    ra = f"{RUN}/iter_3/gen_art/gen_art_evaluation_2/tables/radj_gate.csv"
-    p = f"{RUN}/iter_2/gen_art/gen_art_experiment_5/results/p_tests.json"
+    b2 = f"{RUN}/round-3/evaluation-2/src/tables/b2_dead_end.csv"
+    ra = f"{RUN}/round-3/evaluation-2/src/tables/radj_gate.csv"
+    p = f"{RUN}/round-2/experiment-5/src/results/p_tests.json"
     pt = json.loads(L._read_text(p))
     b1 = f"{RUN}/iter_1/gen_art/gen_art_experiment_2"
     b1_empty = not any(x.name not in (".aii",) for x in Path(b1).iterdir()) if Path(b1).exists() else True

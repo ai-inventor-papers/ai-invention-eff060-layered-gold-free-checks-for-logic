@@ -1,3 +1,7 @@
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/iter_3/gen_hypo/claude_agent/data
 """MINIMAL-TYPED-REPAIR census of real NL->FOL errors (review critique 1 & 2 of iter 2).
 
 For every curated FOLIO-conclusion / MALLS-test item whose ORIGINAL gold is not logically equivalent to the

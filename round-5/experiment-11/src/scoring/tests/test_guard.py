@@ -1,3 +1,7 @@
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/x/labels_foo.jsonl
 """Allowlist guard: refuses 12 label-like / out-of-allowlist paths, allows the 4 permitted kinds."""
 import sys
 from pathlib import Path

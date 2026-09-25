@@ -26,10 +26,10 @@ INPUTS = [E5 / "results/per_item_E.jsonl", E5 / "data/E_labels.jsonl", E5 / "dat
           DS3 / "full_data_out.json", DS3 / "dataset_card.md", DS3 / "prereg_rcomp.json", DS3 / "TODO.md", DS3 / "cost_ledger.jsonl",
           DS_E / "full_data_out.json", DS_E / "raw/generations.jsonl", DS_E / "dataset_card.md",
           REVIEW / "audit/pt_vs_s4.py", REVIEW / "audit/pt_vs_s4.json",
-          I1 / "gen_art_experiment_4/results/method_out.json", I1 / "gen_art_experiment_1/results/metrics.json",
-          I1 / "gen_art_experiment_1/src/fol_triage.py"]
+          I1 / "experiment-4/src/results/method_out.json", I1 / "experiment-1/src/results/metrics.json",
+          I1 / "experiment-1/src/src/fol_triage.py"]
 INPUTS += [Path(p) for p in sorted(glob.glob(str(EV1 / "tables/*.csv")))]
-INPUTS += [Path(p) for p in sorted(glob.glob(str(I1 / "gen_art_experiment_3/src/*.py")))]
+INPUTS += [Path(p) for p in sorted(glob.glob(str(I1 / "experiment-3/src/src/*.py")))]
 
 
 def main():

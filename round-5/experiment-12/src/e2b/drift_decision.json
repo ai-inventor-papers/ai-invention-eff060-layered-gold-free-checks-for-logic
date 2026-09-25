@@ -1,6 +1,6 @@
 {
  "source": "M2",
- "marker_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json",
+ "marker_path": "../../../experiment-11/src/e2/E2_DRIFT_DECISION.json",
  "marker_sha256": "36965541168a3d3bb86a6b03c96b07e48e5f3034082da26a1d6931cf29e6ed16",
  "marker": {
   "token": "aii_iter5_e2_drift_v1",

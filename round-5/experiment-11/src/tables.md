@@ -17,7 +17,7 @@
   - L25_V0_minus_local_disg: Δ = -0.216 [-0.524, 0.025] (n = 42; 35 ERR / 7 COR; testable False)
   - EXC_V0_minus_local_disg: Δ = -0.023 [-0.149, 0.071] (n = 52; 41 ERR / 11 COR; testable False)
   - DT_V0_minus_local_disg: Δ = 0.003 [-0.042, 0.052] (n = 179; 74 ERR / 105 COR; testable True)
-- (c) R_COMP FREE (sibling): "NOT_TESTABLE" (/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13/results/confirm_verdict_rcomp.json)
+- (c) R_COMP FREE (sibling): "NOT_TESTABLE" (../../experiment-13/src/results/confirm_verdict_rcomp.json)
 - L25_alone: Δ = — —; testable False; MDE80 —
 - EXC: None
 - DT_sign: Δ = -0.083 [-0.266, 0.137] (n = 63)
@@ -1207,7 +1207,7 @@ n = 135 (56 ERROR / 79 CORRECT; 20 sentences); testable = False
 
 ```
 {
- "marker": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_12/e2b/E2B_FINAL_READY.json",
+ "marker": "../../experiment-12/src/e2b/E2B_FINAL_READY.json",
  "sha256_ok": true,
  "union_long_pool": {
   "n_rows": 94,

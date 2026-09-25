@@ -9,16 +9,16 @@ import time
 from pathlib import Path
 
 RUN = Path(__file__).resolve().parents[4]
-DS_E = RUN / "iter_1/gen_art/gen_art_dataset_1"            # art_U4Hsqt4Ay9Tg (dataset E)
-DS3 = RUN / "iter_2/gen_art/gen_art_dataset_3"             # art_zcwCQgTqk6DN (PERTURB / R_COMP)
-E5 = RUN / "iter_2/gen_art/gen_art_experiment_5"           # frozen c_score_align code / per_item_E
-E6 = RUN / "iter_3/gen_art/gen_art_experiment_6"           # per_item_T1.jsonl (labels + frozen columns)
-EV2 = RUN / "iter_3/gen_art/gen_art_evaluation_2"          # pairwise_classes_E.jsonl
-E8 = RUN / "iter_3/gen_art/gen_art_experiment_8"           # perturb_scores.jsonl, pairs_E.jsonl, consensus_lib
-E9 = RUN / "iter_4/gen_art/gen_art_experiment_9"           # T9 classes
-EV3 = RUN / "iter_4/gen_art/gen_art_evaluation_3"          # R_oracle
-DS5 = RUN / "iter_4/gen_art/gen_art_dataset_5"             # freelab / gloss gate items
-E1 = RUN / "iter_1/gen_art/gen_art_experiment_1"           # fol_triage
+DS_E = RUN / "round-1/dataset-1/src"            # art_U4Hsqt4Ay9Tg (dataset E)
+DS3 = RUN / "round-2/dataset-3/src"             # art_zcwCQgTqk6DN (PERTURB / R_COMP)
+E5 = RUN / "round-2/experiment-5/src"           # frozen c_score_align code / per_item_E
+E6 = RUN / "round-3/experiment-6/src"           # per_item_T1.jsonl (labels + frozen columns)
+EV2 = RUN / "round-3/evaluation-2/src"          # pairwise_classes_E.jsonl
+E8 = RUN / "round-3/experiment-8/src"           # perturb_scores.jsonl, pairs_E.jsonl, consensus_lib
+E9 = RUN / "round-4/experiment-9/src"           # T9 classes
+EV3 = RUN / "round-4/evaluation-3/src"          # R_oracle
+DS5 = RUN / "round-4/dataset-5/src"             # freelab / gloss gate items
+E1 = RUN / "round-1/experiment-1/src"           # fol_triage
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"

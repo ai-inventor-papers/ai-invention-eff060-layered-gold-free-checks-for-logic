@@ -14,8 +14,8 @@ for _p in (ROOT / "vendor", ROOT / "src"):
 sys.setrecursionlimit(10000)
 
 RUN = Path(__file__).resolve().parents[5]
-E7 = RUN / "iter_3/gen_art/gen_art_experiment_7"
-D3 = RUN / "iter_2/gen_art/gen_art_dataset_3"
+E7 = RUN / "round-3/experiment-7/src"
+D3 = RUN / "round-2/dataset-3/src"
 GEN_FREE = E7 / "rcomp/raw/generations.jsonl"          # FREE raw generations: no scores, no labels
 SENTS = E7 / "rcomp/work/rcomp_sentences.json"
 D3_FULL = D3 / "full_data_out.json"

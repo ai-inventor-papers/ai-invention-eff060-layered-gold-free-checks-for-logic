@@ -11,7 +11,7 @@ from sklearn.metrics import roc_auc_score
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
-PER = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl")
+PER = Path(__file__).resolve().parents[4] / "round-3/experiment-6/src/results/per_item_T1.jsonl"
 
 
 def rd(p):

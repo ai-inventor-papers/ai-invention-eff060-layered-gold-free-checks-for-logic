@@ -1,7 +1,7 @@
 {
  "figure": "F4",
  "caption": "AUROC of consensus over random k-family pools on E rows with all 7 other families; dotted lines mark k95 overall and for the longest words tercile. Top axis: FULL peer-generation cost per SENTENCE.",
- "source": "# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/results/part_a.json M4.random_k_primary; /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_evaluation_3/tables/cost_units.csv",
+ "source": "# source: ../../../../round-3/evaluation-2/src/results/part_a.json M4.random_k_primary; ../../../../round-4/evaluation-3/src/tables/cost_units.csv",
  "data": [
   {
    "label": "overall",

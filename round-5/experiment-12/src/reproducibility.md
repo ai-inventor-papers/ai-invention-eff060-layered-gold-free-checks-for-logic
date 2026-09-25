@@ -15,12 +15,12 @@ cp -r . ~/e2b && cd ~/e2b
 ```
 Scripts derive paths from their own location. The following inputs are referenced by absolute path and must stay reachable
 (all read-only):
-- `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_dataset_4` (E2; also the source of
+- `../../../round-4/dataset-4/src` (E2; also the source of
   `e2bsrc/data_local`);
-- `.../iter_1/gen_art/gen_art_dataset_1` (dataset E: its 700 sentences, calibration and few-shot items, the exclusion set);
-- `.../iter_1/gen_art/gen_art_experiment_1/screen_items.json` (screen texts, exclusion);
-- `.../iter_2/gen_art/gen_art_experiment_5` (stored per_item_E.jsonl, used only by the reproduction check);
-- `.../iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl` (used only by the T1 check).
+- `.../round-1/dataset-1/src` (dataset E: its 700 sentences, calibration and few-shot items, the exclusion set);
+- `.../round-1/experiment-1/src/screen_items.json` (screen texts, exclusion);
+- `.../round-2/experiment-5/src` (stored per_item_E.jsonl, used only by the reproduction check);
+- `.../round-3/experiment-6/src/results/per_item_T1.jsonl` (used only by the T1 check).
 
 ## 2. System, Python, libraries
 - Ubuntu/Debian 12 container, kernel 6.17, **Python 3.12.14**, **uv 0.6.14** (pip is not installed; `uv pip` is used everywhere).

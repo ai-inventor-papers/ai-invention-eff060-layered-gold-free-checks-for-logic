@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6
 """PART B label-free CPU metrics on every PERTURB unit (4,234 mutants + 868 controls = PT:<item_id>, 300 bases = PB:<base>).
 
   parse_fail        dataset-E parser (vendor_e.fol via peer_text.parse_fol): 1 if unparseable.
