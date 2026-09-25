@@ -1,0 +1,24 @@
+QUERY: arxiv 2026 autoformalization "cross-model" agreement faithfulness metric | MODE: general | 2026-09-24T02:59:31Z
+Search: arxiv 2026 autoformalization "cross-model" agreement faithfulness metric  [general via ddgs]
+Found: 5 results
+
+1. Faithful Autoformalization via Roundtrip Verification and Repair
+   https://arxiv.org/pdf/2604.25031
+   Faithful Autoformalization via Roundtrip Verification and Repair ... Wildlife Code. We use two LLMs, Claude Opus 4.6 ... NLI drift than rules that pass it. ... Figure 1: Roundtrip loop. An input x is ...
+
+2. [2604.24302] Differentiable Faithfulness Alignment for Cross-Model Circuit Transfer
+   https://arxiv.org/abs/2604.24302
+   April 27, 2026 - Overall, DFA consistently outperforms simple baselines and, in some settings, recovers target-model circuits with faithfulness comparable to or stronger than direct attribution. These...
+
+3. Differentiable Faithfulness Alignment for Cross-Model Circuit Transfer · Pith Review
+   https://pith.science/paper/2604.24302
+   May 8, 2026 - @misc{pith2026260424302, author = {Pith}, title = {Pith review of: Differentiable Faithfulness Alignment for Cross-Model Circuit Transfer}, year = {2026}, howpublished = {\url{https://pi...
+
+4. Differentiable Faithfulness Alignment for Cross-Model Circuit Transfer
+   https://arxiv.org/html/2604.24302
+   This learned correspondence is then used to predict a soft target-side circuit, indicating which target components are likely to be causally important for the task or behavior of interest. The corresp...
+
+5. [2603.25450] Cross-Model Disagreement as a Label-Free Correctness Signal
+   https://arxiv.org/abs/2603.25450
+   March 26, 2026 - Detecting when a language model is wrong without ground truth labels is a fundamental challenge for safe deployment. Existing approaches rely on a model's own uncertainty -- such as t...
+
