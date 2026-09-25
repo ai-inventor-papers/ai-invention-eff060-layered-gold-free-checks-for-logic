@@ -1,0 +1,1000 @@
+{"key": "PT:7829ad5e2153cad7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.32, "renamed": true}
+{"key": "PT:7829ad5e2153cad7", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.7, "renamed": false}
+{"key": "PT:ab52892a830e9d14", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.32, "renamed": false}
+{"key": "PT:ab52892a830e9d14", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:bf2451040176a97a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.32, "renamed": false}
+{"key": "PT:bf2451040176a97a", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.4, "renamed": false}
+{"key": "PT:224dfca35f82a55c", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.34, "renamed": true}
+{"key": "PT:224dfca35f82a55c", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.11, "renamed": false}
+{"key": "PT:7fd28bba5a5b5954", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": true}
+{"key": "PT:7fd28bba5a5b5954", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:46cd4c2d5936d850", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.8, "renamed": false}
+{"key": "PT:46cd4c2d5936d850", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.1, "renamed": false}
+{"key": "PT:413853fdbce87d26", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.18, "renamed": false}
+{"key": "PT:413853fdbce87d26", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.18, "renamed": false}
+{"key": "PT:df45f14ecf7b8f51", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:df45f14ecf7b8f51", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:8bad55c19d4a8362", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.01, "renamed": false}
+{"key": "PT:8bad55c19d4a8362", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.01, "renamed": false}
+{"key": "PT:91bab5e17b7a7c58", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:91bab5e17b7a7c58", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:cd19491ea13cac39", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.18, "renamed": true}
+{"key": "PT:cd19491ea13cac39", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:d3d74965c3b458cf", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.09, "renamed": false}
+{"key": "PT:d3d74965c3b458cf", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.01, "renamed": false}
+{"key": "PT:c5bccb61d3d8caed", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 11.1, "renamed": false}
+{"key": "PT:c5bccb61d3d8caed", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:72bce89385f93c95", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": true}
+{"key": "PT:72bce89385f93c95", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.01, "renamed": false}
+{"key": "PT:21c0a8c0a7afeb37", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.11, "renamed": false}
+{"key": "PT:21c0a8c0a7afeb37", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.1, "renamed": false}
+{"key": "PT:7a57721624539d4e", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.15, "renamed": false}
+{"key": "PT:7a57721624539d4e", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:75bc83d3dc481117", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:75bc83d3dc481117", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.29, "renamed": false}
+{"key": "PT:c4e5b515a43a2df2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.05, "renamed": false}
+{"key": "PT:c4e5b515a43a2df2", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.29, "renamed": false}
+{"key": "PT:061339fc8c8bd52c", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.11, "renamed": true}
+{"key": "PT:061339fc8c8bd52c", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.19, "renamed": false}
+{"key": "PT:d4c64e4e1ccd2d20", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:d4c64e4e1ccd2d20", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.79, "renamed": false}
+{"key": "PT:b56b5b0265a13bf3", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:b56b5b0265a13bf3", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": false}
+{"key": "PT:b74f5e203a2ead3a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.08, "renamed": false}
+{"key": "PT:b74f5e203a2ead3a", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.31, "renamed": false}
+{"key": "PT:dfbca71faad3292c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:dfbca71faad3292c", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:30ba73d7023b3ccd", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 0.61, "renamed": true}
+{"key": "PT:30ba73d7023b3ccd", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.01, "renamed": false}
+{"key": "PT:0e8dfef4c2f4aadc", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:0e8dfef4c2f4aadc", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.0, "renamed": false}
+{"key": "PT:ec212c7259180889", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.31, "renamed": false}
+{"key": "PT:ec212c7259180889", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.18, "renamed": false}
+{"key": "PT:b78f492fa7163ac2", "which": "medoid_align", "cls": "DROP+DROP", "ops": ["DROP", "DROP"], "secs": 7.3, "renamed": true}
+{"key": "PT:b78f492fa7163ac2", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.31, "renamed": false}
+{"key": "PT:f66ad504b08099ef", "which": "medoid_align", "cls": "ADD+NEG", "ops": ["ADD", "NEG"], "secs": 0.49, "renamed": true}
+{"key": "PT:f66ad504b08099ef", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:e083be16605375f0", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 1.2, "renamed": true}
+{"key": "PT:e083be16605375f0", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 1.19, "renamed": false}
+{"key": "PT:d8f11c3feeea01a9", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:d8f11c3feeea01a9", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.31, "renamed": false}
+{"key": "PT:c42a4600e1f2fb08", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:c42a4600e1f2fb08", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.09, "renamed": false}
+{"key": "PT:9c8fe69fb7de768c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:9c8fe69fb7de768c", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:bffa29569d86223e", "which": "medoid_align", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 0.7, "renamed": false}
+{"key": "PT:bffa29569d86223e", "which": "oracle", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 1.09, "renamed": false}
+{"key": "PT:416a21843a201f87", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:416a21843a201f87", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:41284c487bed82d9", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 16.38, "renamed": false}
+{"key": "PT:41284c487bed82d9", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 2.2, "renamed": false}
+{"key": "PT:4d5729682a5f18fe", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 24.3, "renamed": true}
+{"key": "PT:4d5729682a5f18fe", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.99, "renamed": false}
+{"key": "PT:28970355e3b7e788", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:28970355e3b7e788", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:fc9647340a702cf1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:fc9647340a702cf1", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 4.09, "renamed": false}
+{"key": "PT:1e31a942c5f13cc2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:1e31a942c5f13cc2", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": false}
+{"key": "PT:e2984d394ac95845", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.09, "renamed": false}
+{"key": "PT:e2984d394ac95845", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.0, "renamed": false}
+{"key": "PT:c859572091f039b7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:c859572091f039b7", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.5, "renamed": false}
+{"key": "PT:2e1e56bb292fe4aa", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 18.1, "renamed": false}
+{"key": "PT:2e1e56bb292fe4aa", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:7bcbb7fa3ab5bc8f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:7bcbb7fa3ab5bc8f", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.41, "renamed": false}
+{"key": "PT:8683c932473e6272", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": true}
+{"key": "PT:8683c932473e6272", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:bb6e4e57aea18fd9", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.01, "renamed": false}
+{"key": "PT:bb6e4e57aea18fd9", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.09, "renamed": false}
+{"key": "PT:dd8c0dc775db6a47", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:dd8c0dc775db6a47", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:fb2d29b3151df4a2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:fb2d29b3151df4a2", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.21, "renamed": false}
+{"key": "PT:93c1a5b8dc05d679", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:93c1a5b8dc05d679", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.59, "renamed": false}
+{"key": "PT:3b4cfd189e28328c", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:3b4cfd189e28328c", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": false}
+{"key": "PT:b72841bd0ab66063", "which": "medoid_align", "cls": "BIND+CONN", "ops": ["BIND", "CONN"], "secs": 1.2, "renamed": true}
+{"key": "PT:b72841bd0ab66063", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:fef3ef3f76bcbb61", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": true}
+{"key": "PT:fef3ef3f76bcbb61", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:9988d55ce1060ad8", "which": "medoid_align", "cls": "DROP+REV", "ops": ["DROP", "REV"], "secs": 1.5, "renamed": false}
+{"key": "PT:9988d55ce1060ad8", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.11, "renamed": false}
+{"key": "PT:223d92a0cd83c2dd", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": true}
+{"key": "PT:223d92a0cd83c2dd", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.29, "renamed": false}
+{"key": "PT:1e48a72c459f742d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:1e48a72c459f742d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.59, "renamed": false}
+{"key": "PT:a66f967b4ece013d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:a66f967b4ece013d", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:e9cd78fc0d6aa5b9", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:e9cd78fc0d6aa5b9", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.2, "renamed": false}
+{"key": "PT:2f1bf320941cecc4", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": false}
+{"key": "PT:2f1bf320941cecc4", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:e37f741be90c173d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 14.2, "renamed": true}
+{"key": "PT:e37f741be90c173d", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:178f12223e469dd7", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.49, "renamed": false}
+{"key": "PT:178f12223e469dd7", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.11, "renamed": false}
+{"key": "PT:2dd8102c361dba60", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.29, "renamed": false}
+{"key": "PT:2dd8102c361dba60", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:a6f028483c3c52b9", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 4.9, "renamed": true}
+{"key": "PT:a6f028483c3c52b9", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:fa87573ee215f902", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.29, "renamed": false}
+{"key": "PT:fa87573ee215f902", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.11, "renamed": false}
+{"key": "PT:c6eb152e443cf279", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:c6eb152e443cf279", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:52e6a0daac77605f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.09, "renamed": true}
+{"key": "PT:52e6a0daac77605f", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.4, "renamed": false}
+{"key": "PT:7fc1f7c010ef1a11", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:7fc1f7c010ef1a11", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:a968a4a502480e56", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": true}
+{"key": "PT:a968a4a502480e56", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:f4177e798f4904fb", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 5.2, "renamed": false}
+{"key": "PT:f4177e798f4904fb", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.29, "renamed": false}
+{"key": "PT:f00b366eca6899b9", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:f00b366eca6899b9", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:a2e5921192320f2c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:a2e5921192320f2c", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.8, "renamed": false}
+{"key": "PT:6f9abcde4f7c85a0", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": true}
+{"key": "PT:6f9abcde4f7c85a0", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:84784fd33421b7c2", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 3.7, "renamed": false}
+{"key": "PT:84784fd33421b7c2", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 3.2, "renamed": false}
+{"key": "PT:607e42c39ff4f32a", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:607e42c39ff4f32a", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:5eb9844aaad69fdf", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 4.7, "renamed": false}
+{"key": "PT:5eb9844aaad69fdf", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:5dfde3190e1c2be1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.3, "renamed": true}
+{"key": "PT:5dfde3190e1c2be1", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.5, "renamed": false}
+{"key": "PT:35050f7d4ef84e0e", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.8, "renamed": false}
+{"key": "PT:35050f7d4ef84e0e", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.7, "renamed": false}
+{"key": "PT:bd3481cc569ce11e", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:bd3481cc569ce11e", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:e48468311bc6fd36", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:e48468311bc6fd36", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:52c5da7df1a4f363", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.29, "renamed": true}
+{"key": "PT:52c5da7df1a4f363", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.4, "renamed": false}
+{"key": "PT:6e02b87da0775028", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:6e02b87da0775028", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 1.3, "renamed": false}
+{"key": "PT:ee39646049e2eff4", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:ee39646049e2eff4", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:26c3a376c4a50c45", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.5, "renamed": true}
+{"key": "PT:26c3a376c4a50c45", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.9, "renamed": false}
+{"key": "PT:a411b7f320bcf36d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 2.5, "renamed": false}
+{"key": "PT:a411b7f320bcf36d", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": false}
+{"key": "PT:9b83eabc97502569", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:9b83eabc97502569", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:e90795cb8f2167b4", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:e90795cb8f2167b4", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:73ebe745b1b5c270", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:73ebe745b1b5c270", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:0a7276aab50c3f42", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 12.99, "renamed": true}
+{"key": "PT:0a7276aab50c3f42", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.4, "renamed": false}
+{"key": "PT:a8efbe536d53b6a1", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:a8efbe536d53b6a1", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:db1bce0b1f9c710f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:db1bce0b1f9c710f", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.9, "renamed": false}
+{"key": "PT:7ef0f13e63858c93", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.39, "renamed": true}
+{"key": "PT:7ef0f13e63858c93", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:07a71c3bad884fca", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:07a71c3bad884fca", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.2, "renamed": false}
+{"key": "PT:15a2af4edb69bbbd", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:15a2af4edb69bbbd", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:a7cf775e6d04baa0", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:a7cf775e6d04baa0", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.19, "renamed": false}
+{"key": "PT:15c6ac1bf6c6fe21", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:15c6ac1bf6c6fe21", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:a9d74a0be902b95a", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 5.6, "renamed": true}
+{"key": "PT:a9d74a0be902b95a", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:5c6288573c7476ff", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:5c6288573c7476ff", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:8b6ab83f6465044c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 37.21, "renamed": false}
+{"key": "PT:8b6ab83f6465044c", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 5.59, "renamed": false}
+{"key": "PT:556b6813523d0741", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 7.99, "renamed": true}
+{"key": "PT:556b6813523d0741", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:4a044d2acacfbce1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:4a044d2acacfbce1", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": false}
+{"key": "PT:bb9f66e31cf85b5d", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 1.21, "renamed": false}
+{"key": "PT:bb9f66e31cf85b5d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 1.3, "renamed": false}
+{"key": "PT:5d41e98ad5529f8e", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.4, "renamed": false}
+{"key": "PT:5d41e98ad5529f8e", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.4, "renamed": false}
+{"key": "PT:0515d55cefbba20a", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:0515d55cefbba20a", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:df70eafc1c954e34", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:df70eafc1c954e34", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.5, "renamed": false}
+{"key": "PT:294268328bf847b5", "which": "medoid_align", "cls": "ADD", "ops": ["ADD"], "secs": 0.2, "renamed": false}
+{"key": "PT:294268328bf847b5", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.1, "renamed": false}
+{"key": "PT:1a3f28b03261c7c9", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.3, "renamed": false}
+{"key": "PT:1a3f28b03261c7c9", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.3, "renamed": false}
+{"key": "PT:6d7a5d016788d2d3", "which": "medoid_align", "cls": "GRAN", "ops": [], "secs": 0.2}
+{"key": "PT:6d7a5d016788d2d3", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:d2152076a5987e40", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.6, "renamed": false}
+{"key": "PT:d2152076a5987e40", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.5, "renamed": false}
+{"key": "PT:9086fba7fcb5194c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:9086fba7fcb5194c", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.29, "renamed": false}
+{"key": "PT:82c8e5834da8ffe2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:82c8e5834da8ffe2", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.7, "renamed": false}
+{"key": "PT:0fdf92aedf21b18a", "which": "medoid_align", "cls": "SWAP", "ops": ["SWAP"], "secs": 4.81, "renamed": true}
+{"key": "PT:0fdf92aedf21b18a", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 6.79, "renamed": false}
+{"key": "PT:825ed2b5686ed983", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": true}
+{"key": "PT:825ed2b5686ed983", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:67c91eef9c52b006", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": false}
+{"key": "PT:67c91eef9c52b006", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.11, "renamed": false}
+{"key": "PT:139b590920972ff9", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:139b590920972ff9", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:9ffc1a98c1595443", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 36.69, "renamed": true}
+{"key": "PT:9ffc1a98c1595443", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 2.5, "renamed": false}
+{"key": "PT:1dc0ffe28aab362c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:1dc0ffe28aab362c", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:53f025bb32b04acf", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": true}
+{"key": "PT:53f025bb32b04acf", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:e8f4b556a8cc8e0d", "which": "medoid_align", "cls": "CONN+NEG", "ops": ["CONN", "NEG"], "secs": 1.3, "renamed": false}
+{"key": "PT:e8f4b556a8cc8e0d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:1b27c3c0984d46e9", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:1b27c3c0984d46e9", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:302edce4cf16c9f1", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:302edce4cf16c9f1", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:7964743b2ae08cc2", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": true}
+{"key": "PT:7964743b2ae08cc2", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:e816ae75c4146b04", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:e816ae75c4146b04", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:0067b35eb7347e76", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 11.21, "renamed": true}
+{"key": "PT:0067b35eb7347e76", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.99, "renamed": false}
+{"key": "PT:b9918afba6af311d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:b9918afba6af311d", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.29, "renamed": false}
+{"key": "PT:a585cf0d8b0cb313", "which": "medoid_align", "cls": "ADD+BIND", "ops": ["ADD", "BIND"], "secs": 1.19, "renamed": true}
+{"key": "PT:a585cf0d8b0cb313", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.2, "renamed": false}
+{"key": "PT:1dc8f852539c7993", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.31, "renamed": true}
+{"key": "PT:1dc8f852539c7993", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:af0490386f04caab", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 11.0, "renamed": true}
+{"key": "PT:af0490386f04caab", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.29, "renamed": false}
+{"key": "PT:76a62658ee7eff27", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:76a62658ee7eff27", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:8007bb241289b10a", "which": "medoid_align", "cls": "BIND+DROP", "ops": ["BIND", "DROP"], "secs": 20.1, "renamed": true}
+{"key": "PT:8007bb241289b10a", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 1.4, "renamed": false}
+{"key": "PT:33f443718edb96d0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:33f443718edb96d0", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:dcfdbfe657cc1f0d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 3.4, "renamed": false}
+{"key": "PT:dcfdbfe657cc1f0d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:99ec3e6ed8d52821", "which": "medoid_align", "cls": "DROP+DROP", "ops": ["DROP", "DROP"], "secs": 8.01, "renamed": true}
+{"key": "PT:99ec3e6ed8d52821", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.79, "renamed": false}
+{"key": "PT:e9cbe62bc5d58235", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": true}
+{"key": "PT:e9cbe62bc5d58235", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:3b1821cc11b553ad", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 2.39, "renamed": true}
+{"key": "PT:3b1821cc11b553ad", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 2.0, "renamed": false}
+{"key": "PT:1b165cd538fb918a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:1b165cd538fb918a", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 7.81, "renamed": false}
+{"key": "PT:092b4aa158622ce4", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 2.3, "renamed": true}
+{"key": "PT:092b4aa158622ce4", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 2.1, "renamed": false}
+{"key": "PT:29e235c689f2184d", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": true}
+{"key": "PT:29e235c689f2184d", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:ca9e3ac2f83fb407", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:ca9e3ac2f83fb407", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.79, "renamed": false}
+{"key": "PT:03b09745c8a38019", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": true}
+{"key": "PT:03b09745c8a38019", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.29, "renamed": false}
+{"key": "PT:a50a0f7ad956902d", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:a50a0f7ad956902d", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:aade4e9c9c36a543", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:aade4e9c9c36a543", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.01, "renamed": false}
+{"key": "PT:21cc26535c5813d6", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:21cc26535c5813d6", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:05cd436545f6e7be", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 8.5, "renamed": true}
+{"key": "PT:05cd436545f6e7be", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.6, "renamed": false}
+{"key": "PT:d9affc23839a8baf", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 11.3, "renamed": false}
+{"key": "PT:d9affc23839a8baf", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.1, "renamed": false}
+{"key": "PT:d05b1443e9d38bc9", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:d05b1443e9d38bc9", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.21, "renamed": false}
+{"key": "PT:62b79e6a017748b1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:62b79e6a017748b1", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.0, "renamed": false}
+{"key": "PT:837acc2fa697e88c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:837acc2fa697e88c", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:2a53c84c05124c72", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": true}
+{"key": "PT:2a53c84c05124c72", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:9cef9090f1203223", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.39, "renamed": false}
+{"key": "PT:9cef9090f1203223", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:8b15f7dcb06a31de", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:8b15f7dcb06a31de", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:61c14884051ad1cf", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:61c14884051ad1cf", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 19.11, "renamed": false}
+{"key": "PT:89e0b9b649812870", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:89e0b9b649812870", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.5, "renamed": false}
+{"key": "PT:ef192a851337a8fd", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.3, "renamed": false}
+{"key": "PT:ef192a851337a8fd", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:c98cb7114cac5a28", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:c98cb7114cac5a28", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.6, "renamed": false}
+{"key": "PT:1592114a02d30ddb", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:1592114a02d30ddb", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": false}
+{"key": "PT:381480553f8c7f65", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": false}
+{"key": "PT:381480553f8c7f65", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.39, "renamed": false}
+{"key": "PT:388f9d4bc2c32662", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:388f9d4bc2c32662", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": false}
+{"key": "PT:d52f3cb211a069ed", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:d52f3cb211a069ed", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 3.21, "renamed": false}
+{"key": "PT:16fb7504f2c1b52d", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.01, "renamed": false}
+{"key": "PT:16fb7504f2c1b52d", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:78699c7a4b19aeb4", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 4.8, "renamed": true}
+{"key": "PT:78699c7a4b19aeb4", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 5.2, "renamed": false}
+{"key": "PT:7061beafdec4eb93", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.29, "renamed": false}
+{"key": "PT:7061beafdec4eb93", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:3fe4488e6ff1045c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:3fe4488e6ff1045c", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.29, "renamed": false}
+{"key": "PT:344160a0e6f7f2db", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": true}
+{"key": "PT:344160a0e6f7f2db", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:e3903fc521dfd33c", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:e3903fc521dfd33c", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:0c528558af017208", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:0c528558af017208", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 9.29, "renamed": false}
+{"key": "PT:9a089bbf019a546d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:9a089bbf019a546d", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.4, "renamed": false}
+{"key": "PT:51cabc66cc763737", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": true}
+{"key": "PT:51cabc66cc763737", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:c72c128a3e733e7b", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 6.3, "renamed": true}
+{"key": "PT:c72c128a3e733e7b", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": false}
+{"key": "PT:3a2939577df9690a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:3a2939577df9690a", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.2, "renamed": false}
+{"key": "PT:2241d2b523f2ee58", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 14.51, "renamed": false}
+{"key": "PT:2241d2b523f2ee58", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:bcdbdd783cf4f0e2", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:bcdbdd783cf4f0e2", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:f8177e4a6b60e2f7", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 1.0, "renamed": false}
+{"key": "PT:f8177e4a6b60e2f7", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.81, "renamed": false}
+{"key": "PT:ac5915f8c02feec7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:ac5915f8c02feec7", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.9, "renamed": false}
+{"key": "PT:7a2a5819c46a8e66", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 2.0, "renamed": false}
+{"key": "PT:7a2a5819c46a8e66", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 2.2, "renamed": false}
+{"key": "PT:9b5b6bf8ef638f07", "which": "medoid_align", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 1.6, "renamed": false}
+{"key": "PT:9b5b6bf8ef638f07", "which": "oracle", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 1.5, "renamed": false}
+{"key": "PT:7f1b4b5ad0aef6a9", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:7f1b4b5ad0aef6a9", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 1.9, "renamed": false}
+{"key": "PT:9d9406a05dc3bc3f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:9d9406a05dc3bc3f", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:dd5a9be77630f628", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:dd5a9be77630f628", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:6231da48ddccaf28", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 9.61, "renamed": false}
+{"key": "PT:6231da48ddccaf28", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:6839d9f6581f30ad", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:6839d9f6581f30ad", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.2, "renamed": false}
+{"key": "PT:ae48df33dfc41037", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:ae48df33dfc41037", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:a27a6707fd3a6e8f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:a27a6707fd3a6e8f", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.69, "renamed": false}
+{"key": "PT:8cd03a29c32d4a55", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:8cd03a29c32d4a55", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:18d3fdf645a418ae", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 2.71, "renamed": false}
+{"key": "PT:18d3fdf645a418ae", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 3.5, "renamed": false}
+{"key": "PT:7cd9ccc9bd2429d1", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:7cd9ccc9bd2429d1", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": false}
+{"key": "PT:01a79a0450c22fcd", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 1.0, "renamed": true}
+{"key": "PT:01a79a0450c22fcd", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.9, "renamed": false}
+{"key": "PT:40e92cdc178f1a8d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:40e92cdc178f1a8d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.49, "renamed": false}
+{"key": "PT:d20013d84ddb0722", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:d20013d84ddb0722", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:8ac6073357de883f", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": true}
+{"key": "PT:8ac6073357de883f", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:a5dccf273cc04635", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:a5dccf273cc04635", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:72802ee27dc90bba", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 19.3, "renamed": true}
+{"key": "PT:72802ee27dc90bba", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:b1fd7da581f4e8db", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:b1fd7da581f4e8db", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:0b2d9ccfc8575d77", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": false}
+{"key": "PT:0b2d9ccfc8575d77", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:af02c0d9553b9ef8", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": false}
+{"key": "PT:af02c0d9553b9ef8", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:b3359ae34308dfcc", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:b3359ae34308dfcc", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 6.3, "renamed": false}
+{"key": "PT:5745391df86b7e15", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.39, "renamed": true}
+{"key": "PT:5745391df86b7e15", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:4c656004ab9a7222", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 6.6, "renamed": false}
+{"key": "PT:4c656004ab9a7222", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": false}
+{"key": "PT:22751b210eec4a61", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": true}
+{"key": "PT:22751b210eec4a61", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:100003770e172d17", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:100003770e172d17", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:5cf41c399a412564", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:5cf41c399a412564", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 1.29, "renamed": false}
+{"key": "PT:4690c2af5509c0b8", "which": "medoid_align", "cls": "ADD", "ops": ["ADD"], "secs": 0.3, "renamed": true}
+{"key": "PT:4690c2af5509c0b8", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.2, "renamed": false}
+{"key": "PT:c4d08e6c5cd7d758", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:c4d08e6c5cd7d758", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 1.8, "renamed": false}
+{"key": "PT:8c88d4c67db09c8a", "which": "medoid_align", "cls": "MOVE", "ops": ["MOVE"], "secs": 0.4, "renamed": true}
+{"key": "PT:8c88d4c67db09c8a", "which": "oracle", "cls": "MOVE", "ops": ["MOVE"], "secs": 0.5, "renamed": false}
+{"key": "PT:3f5c923d9ab72850", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.01, "renamed": true}
+{"key": "PT:3f5c923d9ab72850", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.79, "renamed": false}
+{"key": "PT:e06b3f47b0937ab8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 24.3, "renamed": true}
+{"key": "PT:e06b3f47b0937ab8", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.7, "renamed": false}
+{"key": "PT:20bf02f71b7eef80", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 1.1, "renamed": false}
+{"key": "PT:20bf02f71b7eef80", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.6, "renamed": false}
+{"key": "PT:bd1e849427514c5d", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 1.29, "renamed": true}
+{"key": "PT:bd1e849427514c5d", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.8, "renamed": false}
+{"key": "PT:70e52b9eba86dc65", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:70e52b9eba86dc65", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 1.1, "renamed": false}
+{"key": "PT:eb304e3f07351d94", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:eb304e3f07351d94", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:d7dd3a8397d1a48d", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.19, "renamed": false}
+{"key": "PT:d7dd3a8397d1a48d", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:e1b5c7705a93bcb0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:e1b5c7705a93bcb0", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:fe0c07d2d4ed129f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.3, "renamed": false}
+{"key": "PT:fe0c07d2d4ed129f", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.7, "renamed": false}
+{"key": "PT:6da67fd131e889b3", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 3.5, "renamed": false}
+{"key": "PT:6da67fd131e889b3", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 3.2, "renamed": false}
+{"key": "PT:1bcee6020afea50a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:1bcee6020afea50a", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 1.3, "renamed": false}
+{"key": "PT:7d50aa35b140374d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:7d50aa35b140374d", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:8070fa03a3bad0c7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:8070fa03a3bad0c7", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:5ef0b894b7794e14", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:5ef0b894b7794e14", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 6.5, "renamed": false}
+{"key": "PT:f8c022e69f8a11ce", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:f8c022e69f8a11ce", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.39, "renamed": false}
+{"key": "PT:c96c924068dfdcc9", "which": "medoid_align", "cls": "SWAP", "ops": ["SWAP"], "secs": 5.1, "renamed": true}
+{"key": "PT:c96c924068dfdcc9", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 4.5, "renamed": false}
+{"key": "PT:47823c706c99c3d7", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.9, "renamed": true}
+{"key": "PT:47823c706c99c3d7", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.6, "renamed": false}
+{"key": "PT:64e000fc33efcff2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:64e000fc33efcff2", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:05d766d6dbbc5e8d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:05d766d6dbbc5e8d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": false}
+{"key": "PT:64464f718d6c97cc", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.11, "renamed": true}
+{"key": "PT:64464f718d6c97cc", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.19, "renamed": false}
+{"key": "PT:0f39a82c9fb92a8d", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.29, "renamed": false}
+{"key": "PT:0f39a82c9fb92a8d", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:6bbab6089db2686e", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": false}
+{"key": "PT:6bbab6089db2686e", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": false}
+{"key": "PT:bc129e9188e5d85e", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:bc129e9188e5d85e", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.4, "renamed": false}
+{"key": "PT:9dca6847039bd6eb", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:9dca6847039bd6eb", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.3, "renamed": false}
+{"key": "PT:127b8fa7750980d2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:127b8fa7750980d2", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 15.7, "renamed": false}
+{"key": "PT:51e7e78c9bbc82d8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:51e7e78c9bbc82d8", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.5, "renamed": false}
+{"key": "PT:4b4e932a2f16ded6", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:4b4e932a2f16ded6", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": false}
+{"key": "PT:ffc22857c14a2a93", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:ffc22857c14a2a93", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 2.9, "renamed": false}
+{"key": "PT:3d308f0f22b89068", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:3d308f0f22b89068", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 13.69, "renamed": false}
+{"key": "PT:25ea8f02d82b8268", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 1.0, "renamed": false}
+{"key": "PT:25ea8f02d82b8268", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 1.0, "renamed": false}
+{"key": "PT:af8fb306ee862991", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.7, "renamed": false}
+{"key": "PT:af8fb306ee862991", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:b312bcd8b80919f8", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.01, "renamed": false}
+{"key": "PT:b312bcd8b80919f8", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.0, "renamed": false}
+{"key": "PT:f6d47bfa8adb97ff", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 0.71, "renamed": false}
+{"key": "PT:f6d47bfa8adb97ff", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 0.8, "renamed": false}
+{"key": "PT:5699e4517128ac18", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:5699e4517128ac18", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:fe1cb493840d3d33", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:fe1cb493840d3d33", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 2.6, "renamed": false}
+{"key": "PT:5f5d7cfc2a094161", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:5f5d7cfc2a094161", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:1a2b97d507f3f55e", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:1a2b97d507f3f55e", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.79, "renamed": false}
+{"key": "PT:fb90b71fb32ddd99", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:fb90b71fb32ddd99", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.49, "renamed": false}
+{"key": "PT:9b03967dc45e575d", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.19, "renamed": false}
+{"key": "PT:9b03967dc45e575d", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:a6e4757075b98434", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 17.21, "renamed": false}
+{"key": "PT:a6e4757075b98434", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:4f142f71ce905f43", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:4f142f71ce905f43", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.59, "renamed": false}
+{"key": "PT:88199c3f0933f63f", "which": "medoid_align", "cls": "CONN+NEG", "ops": ["CONN", "NEG"], "secs": 8.8, "renamed": false}
+{"key": "PT:88199c3f0933f63f", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.6, "renamed": false}
+{"key": "PT:6fbd7abc5a1bd3ac", "which": "medoid_align", "cls": "BIND+RESTR", "ops": ["BIND", "RESTR"], "secs": 10.5, "renamed": false}
+{"key": "PT:6fbd7abc5a1bd3ac", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:e5593d30ac203208", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.7, "renamed": false}
+{"key": "PT:e5593d30ac203208", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.8, "renamed": false}
+{"key": "PT:9b64e5bcd2f65a27", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:9b64e5bcd2f65a27", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 16.1, "renamed": false}
+{"key": "PT:ab65d6b1b2f1ea74", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:ab65d6b1b2f1ea74", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.6, "renamed": false}
+{"key": "PT:cf47f5ad4c263939", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:cf47f5ad4c263939", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:768272715a6c3167", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": true}
+{"key": "PT:768272715a6c3167", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:a805dd71484ccdb3", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.3, "renamed": false}
+{"key": "PT:a805dd71484ccdb3", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:a6168b392cdfb307", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.5, "renamed": true}
+{"key": "PT:a6168b392cdfb307", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.5, "renamed": false}
+{"key": "PT:f82ef4eddd759afb", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:f82ef4eddd759afb", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.11, "renamed": false}
+{"key": "PT:960c6ad1df064097", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:960c6ad1df064097", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:34d56dd566a32d34", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:34d56dd566a32d34", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.11, "renamed": false}
+{"key": "PT:482fdfafdc83932b", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:482fdfafdc83932b", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.6, "renamed": false}
+{"key": "PT:ade3add40ba54e77", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 15.4, "renamed": false}
+{"key": "PT:ade3add40ba54e77", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:16df0f603fa13ca7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:16df0f603fa13ca7", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:ce74a72c9badadfc", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.21, "renamed": true}
+{"key": "PT:ce74a72c9badadfc", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.79, "renamed": false}
+{"key": "PT:c2ecb981d5ae61bd", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 1.21, "renamed": false}
+{"key": "PT:c2ecb981d5ae61bd", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": false}
+{"key": "PT:32f3b98edf21792c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:32f3b98edf21792c", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 2.1, "renamed": false}
+{"key": "PT:e36035e70bd59f4c", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:e36035e70bd59f4c", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.0, "renamed": false}
+{"key": "PT:fde69561eeea9581", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:fde69561eeea9581", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:761dfb785bdb779b", "which": "medoid_align", "cls": "ADD+BIND", "ops": ["ADD", "BIND"], "secs": 1.2, "renamed": true}
+{"key": "PT:761dfb785bdb779b", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.2, "renamed": false}
+{"key": "PT:a18e8b09017b088d", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.7, "renamed": false}
+{"key": "PT:a18e8b09017b088d", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.6, "renamed": false}
+{"key": "PT:f0c2ee9848c1327e", "which": "medoid_align", "cls": "REV", "ops": ["REV"], "secs": 0.19, "renamed": true}
+{"key": "PT:f0c2ee9848c1327e", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.1, "renamed": false}
+{"key": "PT:31e319997e35c200", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:31e319997e35c200", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:79890a222a74b5d8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:79890a222a74b5d8", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:3485d00946f7fb22", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:3485d00946f7fb22", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.41, "renamed": false}
+{"key": "PT:476c1e83106830ee", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.6, "renamed": false}
+{"key": "PT:476c1e83106830ee", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.6, "renamed": false}
+{"key": "PT:781a060279ffce5d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:781a060279ffce5d", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:f4640830922d924c", "which": "medoid_align", "cls": "BIND+CONN", "ops": ["BIND", "CONN"], "secs": 13.59, "renamed": false}
+{"key": "PT:f4640830922d924c", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:ad706718ece241a4", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": true}
+{"key": "PT:ad706718ece241a4", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:e70b8ad0d80c53f1", "which": "medoid_align", "cls": "DROP+QUANT", "ops": ["DROP", "QUANT"], "secs": 2.5, "renamed": false}
+{"key": "PT:e70b8ad0d80c53f1", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:d21a3dafe3505b32", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": false}
+{"key": "PT:d21a3dafe3505b32", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.19, "renamed": false}
+{"key": "PT:6168e8fc08ceadce", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.31, "renamed": true}
+{"key": "PT:6168e8fc08ceadce", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:8d84264576ff1471", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:8d84264576ff1471", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.6, "renamed": false}
+{"key": "PT:bf2568b051447e39", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:bf2568b051447e39", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:2f5fcdd30f2986c4", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:2f5fcdd30f2986c4", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:c6715de33d938270", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.0, "renamed": true}
+{"key": "PT:c6715de33d938270", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.09, "renamed": false}
+{"key": "PT:1838a8979d240d50", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:1838a8979d240d50", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.29, "renamed": false}
+{"key": "PT:56442c2edc2c38db", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": true}
+{"key": "PT:56442c2edc2c38db", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:b48087598b34437b", "which": "medoid_align", "cls": "ADD+BIND", "ops": ["ADD", "BIND"], "secs": 1.39, "renamed": true}
+{"key": "PT:b48087598b34437b", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.2, "renamed": false}
+{"key": "PT:73ba051fefe45a0d", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.61, "renamed": false}
+{"key": "PT:73ba051fefe45a0d", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.79, "renamed": false}
+{"key": "PT:e3b97999ba85d019", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:e3b97999ba85d019", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": false}
+{"key": "PT:44721a1fb8a90df6", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 3.61, "renamed": true}
+{"key": "PT:44721a1fb8a90df6", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 4.19, "renamed": false}
+{"key": "PT:3534952400f586bc", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:3534952400f586bc", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 11.31, "renamed": false}
+{"key": "PT:aa90e02b471f1879", "which": "medoid_align", "cls": "BIND+REV", "ops": ["BIND", "REV"], "secs": 0.61, "renamed": true}
+{"key": "PT:aa90e02b471f1879", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.1, "renamed": false}
+{"key": "PT:a549b81b06e5c348", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:a549b81b06e5c348", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.29, "renamed": false}
+{"key": "PT:4fbb8cfa5cfe47a4", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 7.61, "renamed": true}
+{"key": "PT:4fbb8cfa5cfe47a4", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 8.7, "renamed": false}
+{"key": "PT:dfb68aa28b0ea12f", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.39, "renamed": false}
+{"key": "PT:dfb68aa28b0ea12f", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:d5c23aab14f59af0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:d5c23aab14f59af0", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 3.6, "renamed": false}
+{"key": "PT:dae3c30d83412ad2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:dae3c30d83412ad2", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": false}
+{"key": "PT:ff8519cc58968f61", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:ff8519cc58968f61", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:0b055ac2b163f3ed", "which": "medoid_align", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.71, "renamed": false}
+{"key": "PT:0b055ac2b163f3ed", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.8, "renamed": false}
+{"key": "PT:405c8bc4765feea6", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:405c8bc4765feea6", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:1f301571a2008ae2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:1f301571a2008ae2", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:40136a227c8fef4b", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:40136a227c8fef4b", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:3fe4121000e43620", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.11, "renamed": true}
+{"key": "PT:3fe4121000e43620", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:57b2cfa6eb9c29c8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:57b2cfa6eb9c29c8", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.29, "renamed": false}
+{"key": "PT:3f85ee93b4d6b037", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:3f85ee93b4d6b037", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.59, "renamed": false}
+{"key": "PT:acfbcd48c697da4f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 0.9, "renamed": false}
+{"key": "PT:acfbcd48c697da4f", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:3adbf386bd10a889", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.59, "renamed": true}
+{"key": "PT:3adbf386bd10a889", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:7d9d77d9abd448cf", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:7d9d77d9abd448cf", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:6008415f41d26b5b", "which": "medoid_align", "cls": "SWAP", "ops": ["SWAP"], "secs": 21.6, "renamed": true}
+{"key": "PT:6008415f41d26b5b", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 20.6, "renamed": false}
+{"key": "PT:d4c23097a24bfb76", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:d4c23097a24bfb76", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.11, "renamed": false}
+{"key": "PT:9af772d555ba74eb", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:9af772d555ba74eb", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 3.6, "renamed": false}
+{"key": "PT:98587faf8687a056", "which": "medoid_align", "cls": "CONN+NEG", "ops": ["CONN", "NEG"], "secs": 9.6, "renamed": true}
+{"key": "PT:98587faf8687a056", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.9, "renamed": false}
+{"key": "PT:ab9973d56cef50da", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:ab9973d56cef50da", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:544f12d6dc35af79", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:544f12d6dc35af79", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.5, "renamed": false}
+{"key": "PT:3110daf996c9c314", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 1.41, "renamed": true}
+{"key": "PT:3110daf996c9c314", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:ebff7b5d2016f7e1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:ebff7b5d2016f7e1", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.0, "renamed": false}
+{"key": "PT:1bb83f07dd7ffa3b", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:1bb83f07dd7ffa3b", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.0, "renamed": false}
+{"key": "PT:3ce11e64a7dbc72c", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 10.7, "renamed": false}
+{"key": "PT:3ce11e64a7dbc72c", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 10.6, "renamed": false}
+{"key": "PT:6694050a58fb7730", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:6694050a58fb7730", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.9, "renamed": false}
+{"key": "PT:5e923a6b232716b5", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": true}
+{"key": "PT:5e923a6b232716b5", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.5, "renamed": false}
+{"key": "PT:92443a78a390d6fe", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": true}
+{"key": "PT:92443a78a390d6fe", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:3f667cb689ed675e", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:3f667cb689ed675e", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 3.9, "renamed": false}
+{"key": "PT:6f741417bbf14afa", "which": "medoid_align", "cls": "DROP+NEG", "ops": ["DROP", "NEG"], "secs": 8.8, "renamed": true}
+{"key": "PT:6f741417bbf14afa", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": false}
+{"key": "PT:64406fdd50a48d49", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:64406fdd50a48d49", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.1, "renamed": false}
+{"key": "PT:3e5c1c76f2c9012b", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": true}
+{"key": "PT:3e5c1c76f2c9012b", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:282c254d4f1bd601", "which": "medoid_align", "cls": "BIND+CONN", "ops": ["BIND", "CONN"], "secs": 17.99, "renamed": true}
+{"key": "PT:282c254d4f1bd601", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.41, "renamed": false}
+{"key": "PT:428997140a882970", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:428997140a882970", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.59, "renamed": false}
+{"key": "PT:d798eba64d170f1e", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 28.4, "renamed": false}
+{"key": "PT:d798eba64d170f1e", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 6.19, "renamed": false}
+{"key": "PT:577a12a71653ba86", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:577a12a71653ba86", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:bb9132464c80eeb2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:bb9132464c80eeb2", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.29, "renamed": false}
+{"key": "PT:8b02da1cd0ca7c8a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:8b02da1cd0ca7c8a", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:52670fa77cc76391", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:52670fa77cc76391", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.29, "renamed": false}
+{"key": "PT:a05296dddd1bb6d1", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.39, "renamed": false}
+{"key": "PT:a05296dddd1bb6d1", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": false}
+{"key": "PT:c94286ca2ccf8323", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:c94286ca2ccf8323", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.7, "renamed": false}
+{"key": "PT:263c2168f76b7298", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:263c2168f76b7298", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:5cfbff84e9994db2", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:5cfbff84e9994db2", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:27f999f1ca70da2d", "which": "medoid_align", "cls": "DROP+QUANT", "ops": ["DROP", "QUANT"], "secs": 2.99, "renamed": true}
+{"key": "PT:27f999f1ca70da2d", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:05300619dc949f28", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.3, "renamed": false}
+{"key": "PT:05300619dc949f28", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.41, "renamed": false}
+{"key": "PT:79519f4e15ae47d7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:79519f4e15ae47d7", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.4, "renamed": false}
+{"key": "PT:b98931d55b050241", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:b98931d55b050241", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.19, "renamed": false}
+{"key": "PT:a91f79c12b352a3c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.3, "renamed": true}
+{"key": "PT:a91f79c12b352a3c", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 5.99, "renamed": false}
+{"key": "PT:31ce3790c28239d6", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.29, "renamed": false}
+{"key": "PT:31ce3790c28239d6", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.2, "renamed": false}
+{"key": "PT:57ef6d58e3467c0a", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": true}
+{"key": "PT:57ef6d58e3467c0a", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:c134d551004708c7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:c134d551004708c7", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:b904c8e0e5f6a3e4", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 18.2, "renamed": true}
+{"key": "PT:b904c8e0e5f6a3e4", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.6, "renamed": false}
+{"key": "PT:5a1f916b22a8f196", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:5a1f916b22a8f196", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.39, "renamed": false}
+{"key": "PT:9096cb209bf8d960", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": true}
+{"key": "PT:9096cb209bf8d960", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:a749bb6b7fbe8e72", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 1.09, "renamed": false}
+{"key": "PT:a749bb6b7fbe8e72", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.8, "renamed": false}
+{"key": "PT:6a752720d183cbdf", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:6a752720d183cbdf", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:1a4cc4483f3fb194", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.5, "renamed": false}
+{"key": "PT:1a4cc4483f3fb194", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:85574d4c011e25b5", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.6, "renamed": true}
+{"key": "PT:85574d4c011e25b5", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.59, "renamed": false}
+{"key": "PT:76a4f5306d863dfc", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 3.8, "renamed": false}
+{"key": "PT:76a4f5306d863dfc", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 3.7, "renamed": false}
+{"key": "PT:0465823ce0402528", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 12.91, "renamed": false}
+{"key": "PT:0465823ce0402528", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.49, "renamed": false}
+{"key": "PT:d8771000253df551", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 8.4, "renamed": false}
+{"key": "PT:d8771000253df551", "which": "oracle", "cls": "ADD+ADD", "ops": ["ADD", "ADD"], "secs": 3.6, "renamed": false}
+{"key": "PT:5320799b373dbdd0", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:5320799b373dbdd0", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:553429929b57a767", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.21, "renamed": true}
+{"key": "PT:553429929b57a767", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.19, "renamed": false}
+{"key": "PT:b1069ec4312a450d", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:b1069ec4312a450d", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:45bba5dd1fc4be3f", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": true}
+{"key": "PT:45bba5dd1fc4be3f", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:77a4cedb6040b852", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:77a4cedb6040b852", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.99, "renamed": false}
+{"key": "PT:0a4968f383feed3f", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:0a4968f383feed3f", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:3592eff7beefaf65", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": true}
+{"key": "PT:3592eff7beefaf65", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:2fe39c4f3398bc79", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.8, "renamed": false}
+{"key": "PT:2fe39c4f3398bc79", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.8, "renamed": false}
+{"key": "PT:5b7683ce57578dcf", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:5b7683ce57578dcf", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 14.1, "renamed": false}
+{"key": "PT:2383cac8fc03d139", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:2383cac8fc03d139", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.0, "renamed": false}
+{"key": "PT:d562bc18564cafbf", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:d562bc18564cafbf", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.3, "renamed": false}
+{"key": "PT:aef45e60b0b20514", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:aef45e60b0b20514", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:5a27965e1537da60", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:5a27965e1537da60", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.11, "renamed": false}
+{"key": "PT:20f7584f909d349a", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.79, "renamed": true}
+{"key": "PT:20f7584f909d349a", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.91, "renamed": false}
+{"key": "PT:e27fa6825d234b06", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:e27fa6825d234b06", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:22eda8061a9c1995", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:22eda8061a9c1995", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.7, "renamed": false}
+{"key": "PT:db45c6c2d432137a", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": true}
+{"key": "PT:db45c6c2d432137a", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:f9272f54850a2e9f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 9.5, "renamed": true}
+{"key": "PT:f9272f54850a2e9f", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.11, "renamed": false}
+{"key": "PT:4912b18db5aa748c", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 2.4, "renamed": false}
+{"key": "PT:4912b18db5aa748c", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:c71eb1cb9eee25f0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:c71eb1cb9eee25f0", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:2c381b8bfd721f97", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 4.19, "renamed": true}
+{"key": "PT:2c381b8bfd721f97", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 3.7, "renamed": false}
+{"key": "PT:4fb7b2a3f51149ab", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.01, "renamed": false}
+{"key": "PT:4fb7b2a3f51149ab", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.09, "renamed": false}
+{"key": "PT:363dd1cd051d2d6f", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 36.0, "renamed": false}
+{"key": "PT:363dd1cd051d2d6f", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 6.9, "renamed": false}
+{"key": "PT:801752f2ee43ea95", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 6.21, "renamed": false}
+{"key": "PT:801752f2ee43ea95", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:479b5b4e85dc77fe", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:479b5b4e85dc77fe", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 1.4, "renamed": false}
+{"key": "PT:404ae641ef7f1982", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:404ae641ef7f1982", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.39, "renamed": false}
+{"key": "PT:ab00b00f1a91f8e8", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 9.9, "renamed": false}
+{"key": "PT:ab00b00f1a91f8e8", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 9.6, "renamed": false}
+{"key": "PT:55ea3257a4d8eed8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:55ea3257a4d8eed8", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.9, "renamed": false}
+{"key": "PT:67a043c14b3a3496", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:67a043c14b3a3496", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:5e6deba0aa4215c0", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 7.19, "renamed": false}
+{"key": "PT:5e6deba0aa4215c0", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 6.8, "renamed": false}
+{"key": "PT:63464f8fc745e20f", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.7, "renamed": false}
+{"key": "PT:63464f8fc745e20f", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.81, "renamed": false}
+{"key": "PT:40c1d241eb314498", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:40c1d241eb314498", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.5, "renamed": false}
+{"key": "PT:e4e652ce106a0fe6", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:e4e652ce106a0fe6", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.3, "renamed": false}
+{"key": "PT:ebc135080404c95b", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:ebc135080404c95b", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.29, "renamed": false}
+{"key": "PT:a948039c56076c38", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.7, "renamed": true}
+{"key": "PT:a948039c56076c38", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": false}
+{"key": "PT:43b78101f8e8b6af", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:43b78101f8e8b6af", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 18.31, "renamed": false}
+{"key": "PT:2f1add8e6023f121", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:2f1add8e6023f121", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.11, "renamed": false}
+{"key": "PT:23bf2fbda3881189", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:23bf2fbda3881189", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:d85e547d4ac16684", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:d85e547d4ac16684", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": false}
+{"key": "PT:2baeaf042b0afa86", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": true}
+{"key": "PT:2baeaf042b0afa86", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.1, "renamed": false}
+{"key": "PT:dcd67510864a3065", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.29, "renamed": false}
+{"key": "PT:dcd67510864a3065", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:d7af0a6d840b64ca", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:d7af0a6d840b64ca", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.31, "renamed": false}
+{"key": "PT:7a963e7a205c2194", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": true}
+{"key": "PT:7a963e7a205c2194", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:6802dd9705828905", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 1.1, "renamed": false}
+{"key": "PT:6802dd9705828905", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.99, "renamed": false}
+{"key": "PT:71e3efd4c3e36766", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:71e3efd4c3e36766", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.01, "renamed": false}
+{"key": "PT:f7ba670bfc36cbec", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 10.5, "renamed": false}
+{"key": "PT:f7ba670bfc36cbec", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.6, "renamed": false}
+{"key": "PT:d925a1eb30baa81b", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:d925a1eb30baa81b", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:97674022f55e9149", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": true}
+{"key": "PT:97674022f55e9149", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.0, "renamed": false}
+{"key": "PT:4162d12b0b919fa1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 6.7, "renamed": true}
+{"key": "PT:4162d12b0b919fa1", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:199171a49e8ab206", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.0, "renamed": true}
+{"key": "PT:199171a49e8ab206", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.09, "renamed": false}
+{"key": "PT:46f4ca2465398a17", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:46f4ca2465398a17", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:2c6c18b1888ca6ea", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 1.5, "renamed": false}
+{"key": "PT:2c6c18b1888ca6ea", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.7, "renamed": false}
+{"key": "PT:8d21080023e24742", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:8d21080023e24742", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.5, "renamed": false}
+{"key": "PT:dee3e038eb0929a9", "which": "medoid_align", "cls": "ADD", "ops": ["ADD"], "secs": 0.4, "renamed": false}
+{"key": "PT:dee3e038eb0929a9", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.4, "renamed": false}
+{"key": "PT:5dc0ad865fe1d512", "which": "medoid_align", "cls": "BIND+DROP", "ops": ["BIND", "DROP"], "secs": 9.7, "renamed": false}
+{"key": "PT:5dc0ad865fe1d512", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": false}
+{"key": "PT:c8c09d86d800605a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:c8c09d86d800605a", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:e410691bda55c42d", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 13.5, "renamed": false}
+{"key": "PT:e410691bda55c42d", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 13.31, "renamed": false}
+{"key": "PT:15b251c85a42f9f8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:15b251c85a42f9f8", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.7, "renamed": false}
+{"key": "PT:437251e6badba5b2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.01, "renamed": false}
+{"key": "PT:437251e6badba5b2", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 7.19, "renamed": false}
+{"key": "PT:73ffcf09701389ac", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.21, "renamed": false}
+{"key": "PT:73ffcf09701389ac", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.3, "renamed": false}
+{"key": "PT:efc5dd55a96d8115", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": true}
+{"key": "PT:efc5dd55a96d8115", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": false}
+{"key": "PT:296b23a40edfd273", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:296b23a40edfd273", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.69, "renamed": false}
+{"key": "PT:049977d3a80e63d3", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 11.19, "renamed": false}
+{"key": "PT:049977d3a80e63d3", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.0, "renamed": false}
+{"key": "PT:50ef0bd611e70ff4", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": false}
+{"key": "PT:50ef0bd611e70ff4", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": false}
+{"key": "PT:2881ceff7e53eb45", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:2881ceff7e53eb45", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.49, "renamed": false}
+{"key": "PT:d66697116055ae7d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:d66697116055ae7d", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 14.4, "renamed": false}
+{"key": "PT:12e9b26035adb513", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:12e9b26035adb513", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": false}
+{"key": "PT:d215ff740407e1d2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 14.2, "renamed": false}
+{"key": "PT:d215ff740407e1d2", "which": "oracle", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 3.9, "renamed": false}
+{"key": "PT:4d92469c38ea89d4", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:4d92469c38ea89d4", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.7, "renamed": false}
+{"key": "PT:27e3a85da26e565d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:27e3a85da26e565d", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:10e0eca472892100", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:10e0eca472892100", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.3, "renamed": false}
+{"key": "PT:c813d9bb9c2cbf6e", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:c813d9bb9c2cbf6e", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.5, "renamed": false}
+{"key": "PT:4444a316689bae83", "which": "medoid_align", "cls": "DROP+QUANT", "ops": ["DROP", "QUANT"], "secs": 0.6, "renamed": true}
+{"key": "PT:4444a316689bae83", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:2475bf4ab9ac2585", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.41, "renamed": true}
+{"key": "PT:2475bf4ab9ac2585", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.39, "renamed": false}
+{"key": "PT:04d3eec13cb01e3c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:04d3eec13cb01e3c", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 18.21, "renamed": false}
+{"key": "PT:b615972497c2d0af", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:b615972497c2d0af", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.4, "renamed": false}
+{"key": "PT:3845d4a653ab439f", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.5, "renamed": true}
+{"key": "PT:3845d4a653ab439f", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.5, "renamed": false}
+{"key": "PT:95fab994be7d60af", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:95fab994be7d60af", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.7, "renamed": false}
+{"key": "PT:fe2976f2f3c60a4c", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:fe2976f2f3c60a4c", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.3, "renamed": false}
+{"key": "PT:e99d37555501597b", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:e99d37555501597b", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 1.1, "renamed": false}
+{"key": "PT:ead575bc03041da0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 4.6, "renamed": false}
+{"key": "PT:ead575bc03041da0", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 2.0, "renamed": false}
+{"key": "PT:cbd858fc75e24c04", "which": "medoid_align", "cls": "BIND+DROP", "ops": ["BIND", "DROP"], "secs": 2.81, "renamed": true}
+{"key": "PT:cbd858fc75e24c04", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.19, "renamed": false}
+{"key": "PT:d4f866e2a91bfd72", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.11, "renamed": true}
+{"key": "PT:d4f866e2a91bfd72", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.29, "renamed": false}
+{"key": "PT:073244430b739a90", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 10.2, "renamed": true}
+{"key": "PT:073244430b739a90", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:4a05dd8941f6fa48", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.41, "renamed": true}
+{"key": "PT:4a05dd8941f6fa48", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.3, "renamed": false}
+{"key": "PT:ce8bea5df087e087", "which": "medoid_align", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.3, "renamed": true}
+{"key": "PT:ce8bea5df087e087", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.7, "renamed": false}
+{"key": "PT:46061e2731d2fef0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:46061e2731d2fef0", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.1, "renamed": false}
+{"key": "PT:bef47bbd2e8f6a7b", "which": "medoid_align", "cls": "ADD+NEG", "ops": ["ADD", "NEG"], "secs": 0.41, "renamed": true}
+{"key": "PT:bef47bbd2e8f6a7b", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:79f2f79b767f67d0", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:79f2f79b767f67d0", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 1.8, "renamed": false}
+{"key": "PT:d2a7698ca99905d7", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": true}
+{"key": "PT:d2a7698ca99905d7", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.2, "renamed": false}
+{"key": "PT:a7dbb74d69ee0746", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 4.7, "renamed": false}
+{"key": "PT:a7dbb74d69ee0746", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.1, "renamed": false}
+{"key": "PT:be61314a3a47c82d", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": true}
+{"key": "PT:be61314a3a47c82d", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.49, "renamed": false}
+{"key": "PT:9e082c2c11788dbb", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 3.3, "renamed": true}
+{"key": "PT:9e082c2c11788dbb", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 4.0, "renamed": false}
+{"key": "PT:f57b3ffb9c1d5355", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:f57b3ffb9c1d5355", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:90605137c5c177e1", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 9.0, "renamed": false}
+{"key": "PT:90605137c5c177e1", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 2.31, "renamed": false}
+{"key": "PT:a0b0bb4c079242c6", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:a0b0bb4c079242c6", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.2, "renamed": false}
+{"key": "PT:c1f9664103aee938", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": true}
+{"key": "PT:c1f9664103aee938", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:8bc06532669c0f08", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": true}
+{"key": "PT:8bc06532669c0f08", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.1, "renamed": false}
+{"key": "PT:3550808ac61c52ca", "which": "medoid_align", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": true}
+{"key": "PT:3550808ac61c52ca", "which": "oracle", "cls": "QUANT", "ops": ["QUANT"], "secs": 0.2, "renamed": false}
+{"key": "PT:5949802fa2378b57", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.0, "renamed": false}
+{"key": "PT:5949802fa2378b57", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.0, "renamed": false}
+{"key": "PT:b77dab405e9abd4f", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.39, "renamed": false}
+{"key": "PT:b77dab405e9abd4f", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.21, "renamed": false}
+{"key": "PT:6c690ec3eb456972", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.4, "renamed": true}
+{"key": "PT:6c690ec3eb456972", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.4, "renamed": false}
+{"key": "PT:0253b2590cbaedcc", "which": "medoid_align", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": true}
+{"key": "PT:0253b2590cbaedcc", "which": "oracle", "cls": "RESTR", "ops": ["RESTR"], "secs": 0.3, "renamed": false}
+{"key": "PT:f00479ed1b1e23e6", "which": "medoid_align", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 1.8, "renamed": false}
+{"key": "PT:f00479ed1b1e23e6", "which": "oracle", "cls": "ADD+CONN", "ops": ["ADD", "CONN"], "secs": 2.1, "renamed": false}
+{"key": "PT:a445736bcc95d1ff", "which": "medoid_align", "cls": "VOCAB", "ops": ["RENAME"], "secs": 0.1}
+{"key": "PT:a445736bcc95d1ff", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 9.6, "renamed": false}
+{"key": "PT:1b362904f9ab7452", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 0.0, "renamed": true}
+{"key": "PT:1b362904f9ab7452", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.09, "renamed": false}
+{"key": "PT:afef34049f5fe419", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.5, "renamed": false}
+{"key": "PT:afef34049f5fe419", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.8, "renamed": false}
+{"key": "PT:0933cda6c7aba3a8", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": true}
+{"key": "PT:0933cda6c7aba3a8", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.3, "renamed": false}
+{"key": "PT:52c257f7b9156b5d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:52c257f7b9156b5d", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.11, "renamed": false}
+{"key": "PT:cb252d193d4b3c29", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 19.81, "renamed": true}
+{"key": "PT:cb252d193d4b3c29", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.18, "renamed": false}
+{"key": "PT:ef7777c730ef72e9", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:ef7777c730ef72e9", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.51, "renamed": false}
+{"key": "PT:b493a2a1440ed2cb", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": true}
+{"key": "PT:b493a2a1440ed2cb", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.11, "renamed": false}
+{"key": "PT:ecb7fe4faa6403df", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.2, "renamed": false}
+{"key": "PT:ecb7fe4faa6403df", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.0, "renamed": false}
+{"key": "PT:b55ef54ad68379ea", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 14.5, "renamed": false}
+{"key": "PT:b55ef54ad68379ea", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:69ef21965ae8f584", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:69ef21965ae8f584", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 3.12, "renamed": false}
+{"key": "PT:a9f58a466c215d0c", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 0.3, "renamed": true}
+{"key": "PT:a9f58a466c215d0c", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.89, "renamed": false}
+{"key": "PT:faec78809c73f568", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 10.1, "renamed": false}
+{"key": "PT:faec78809c73f568", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:2010e9af9e17305a", "which": "medoid_align", "cls": "DROP+NEG", "ops": ["DROP", "NEG"], "secs": 0.8, "renamed": true}
+{"key": "PT:2010e9af9e17305a", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.19, "renamed": false}
+{"key": "PT:36200aa39a6e52fc", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 19.32, "renamed": false}
+{"key": "PT:36200aa39a6e52fc", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.09, "renamed": false}
+{"key": "PT:46a2ed35b8a5af15", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 6.1, "renamed": true}
+{"key": "PT:46a2ed35b8a5af15", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 7.9, "renamed": false}
+{"key": "PT:fe030e67346a707e", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.4, "renamed": true}
+{"key": "PT:fe030e67346a707e", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:b402299aace5e60d", "which": "medoid_align", "cls": "ADD+SWAP", "ops": ["ADD", "SWAP"], "secs": 1.8, "renamed": true}
+{"key": "PT:b402299aace5e60d", "which": "oracle", "cls": "SWAP", "ops": ["SWAP"], "secs": 0.1, "renamed": false}
+{"key": "PT:aaa58ffb3b70091b", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:aaa58ffb3b70091b", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.1, "renamed": false}
+{"key": "PT:06d2b6e12bfbe2d3", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.39, "renamed": false}
+{"key": "PT:06d2b6e12bfbe2d3", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.21, "renamed": false}
+{"key": "PT:6ac3d2eca113a631", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.21, "renamed": false}
+{"key": "PT:6ac3d2eca113a631", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 8.32, "renamed": false}
+{"key": "PT:6ba458aa8d8b2c85", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 16.21, "renamed": true}
+{"key": "PT:6ba458aa8d8b2c85", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:d1de422bd3aaee44", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 11.7, "renamed": true}
+{"key": "PT:d1de422bd3aaee44", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:d3876bfe0fa2c650", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 14.19, "renamed": false}
+{"key": "PT:d3876bfe0fa2c650", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 5.11, "renamed": false}
+{"key": "PT:b575a6769478001a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:b575a6769478001a", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.03, "renamed": false}
+{"key": "PT:8bcba6332c4f37b3", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.29, "renamed": true}
+{"key": "PT:8bcba6332c4f37b3", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:92357e25365544f5", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 19.23, "renamed": true}
+{"key": "PT:92357e25365544f5", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.09, "renamed": false}
+{"key": "PT:a8709aa062ebbedb", "which": "medoid_align", "cls": "DROP+DROP", "ops": ["DROP", "DROP"], "secs": 3.91, "renamed": true}
+{"key": "PT:a8709aa062ebbedb", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.29, "renamed": false}
+{"key": "PT:0e0cf88d89e1875d", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 3.61, "renamed": false}
+{"key": "PT:0e0cf88d89e1875d", "which": "oracle", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 4.79, "renamed": false}
+{"key": "PT:2f99a944cefdd8b2", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 16.72, "renamed": false}
+{"key": "PT:2f99a944cefdd8b2", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.1, "renamed": false}
+{"key": "PT:0fbee08be5a09b5f", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:0fbee08be5a09b5f", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.2, "renamed": false}
+{"key": "PT:372fe9aedb8fc811", "which": "medoid_align", "cls": "DROP", "ops": ["DROP"], "secs": 1.4, "renamed": true}
+{"key": "PT:372fe9aedb8fc811", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.5, "renamed": false}
+{"key": "PT:29d5c602dadd7377", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.11, "renamed": false}
+{"key": "PT:29d5c602dadd7377", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 0.9, "renamed": false}
+{"key": "PT:6209d8217a067095", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:6209d8217a067095", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.01, "renamed": false}
+{"key": "PT:7716e52615ffa68a", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:7716e52615ffa68a", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.02, "renamed": false}
+{"key": "PT:dbb014cda4612802", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.3, "renamed": true}
+{"key": "PT:dbb014cda4612802", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.8, "renamed": false}
+{"key": "PT:8397e36ebaf3ce08", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.19, "renamed": false}
+{"key": "PT:8397e36ebaf3ce08", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.12, "renamed": false}
+{"key": "PT:025f62746ef2bb97", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 12.81, "renamed": false}
+{"key": "PT:025f62746ef2bb97", "which": "oracle", "cls": "REV", "ops": ["REV"], "secs": 0.09, "renamed": false}
+{"key": "PT:14d552a71348ab00", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.2, "renamed": false}
+{"key": "PT:14d552a71348ab00", "which": "oracle", "cls": "DROP", "ops": ["DROP"], "secs": 0.03, "renamed": false}
+{"key": "PT:83be28d520b5e331", "which": "medoid_align", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 6.8, "renamed": true}
+{"key": "PT:83be28d520b5e331", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 2.91, "renamed": false}
+{"key": "PT:60c09243ce8b35f8", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:60c09243ce8b35f8", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 0.94, "renamed": false}
+{"key": "PT:1a94737a30609f72", "which": "medoid_align", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:1a94737a30609f72", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.2, "renamed": false}
+{"key": "PT:f187080d73a0cbdd", "which": "medoid_align", "cls": "NEG", "ops": ["NEG"], "secs": 0.3, "renamed": true}
+{"key": "PT:f187080d73a0cbdd", "which": "oracle", "cls": "NEG", "ops": ["NEG"], "secs": 0.1, "renamed": false}
+{"key": "PT:710da149b4ea1afa", "which": "medoid_align", "cls": "BIND", "ops": ["BIND"], "secs": 3.1, "renamed": true}
+{"key": "PT:710da149b4ea1afa", "which": "oracle", "cls": "BIND", "ops": ["BIND"], "secs": 2.7, "renamed": false}
+{"key": "PT:a75082ad961f8e3d", "which": "medoid_align", "cls": "CONN+DROP", "ops": ["CONN", "DROP"], "secs": 7.6, "renamed": true}
+{"key": "PT:a75082ad961f8e3d", "which": "oracle", "cls": "CONN", "ops": ["CONN"], "secs": 0.31, "renamed": false}
+{"key": "PT:dda31f4674330296", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:dda31f4674330296", "which": "oracle", "cls": "ADD", "ops": ["ADD"], "secs": 0.02, "renamed": false}
+{"key": "PT:085b8efabed2b2c3", "which": "medoid_align", "cls": "TIMEOUT_OR_COMPOUND", "ops": [], "secs": 20.1, "renamed": false}
+{"key": "PT:085b8efabed2b2c3", "which": "oracle", "cls": "ADD+DROP", "ops": ["ADD", "DROP"], "secs": 1.33, "renamed": false}
