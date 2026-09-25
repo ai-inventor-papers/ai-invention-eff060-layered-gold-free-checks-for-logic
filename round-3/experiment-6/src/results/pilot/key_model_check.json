@@ -1,0 +1,32 @@
+{
+ "key": {
+  "limit": 7.0,
+  "limit_remaining": 4.549835,
+  "usage": 2.450165,
+  "ts": 1790214756.5512657
+ },
+ "models": {
+  "google/gemini-2.5-flash-lite": {
+   "listed": true,
+   "in": 1e-07,
+   "out": 4e-07,
+   "logprobs": false,
+   "reasoning": true
+  },
+  "openai/gpt-4.1-nano": {
+   "listed": true,
+   "in": 1e-07,
+   "out": 4e-07,
+   "logprobs": false,
+   "reasoning": false
+  },
+  "google/gemini-3.1-pro-preview": {
+   "listed": true,
+   "in": 2e-06,
+   "out": 1.2e-05,
+   "logprobs": false,
+   "reasoning": true
+  }
+ },
+ "swaps": []
+}

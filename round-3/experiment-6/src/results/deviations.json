@@ -1,0 +1,50 @@
+{
+ "note": "Deviations from gen_plan_experiment_1 / prereg_T1.json (sha256 c2a6cf84...), in addition to the plan's own declared departures A-I. None of them changes a pre-registered contrast, population, threshold rule or model.",
+ "deviations": [
+  {
+   "id": "D1",
+   "what": "Execution interrupted twice by platform restarts (sessions lost ~02:05 and ~03:18 UTC); the .venv lost its bin/ directory and was rebuilt with `bash restore.sh venv` (torch 2.11.0+cu128). Hardware differs from the plan: NVIDIA RTX 2000 Ada 16 GB, 6 CPUs (cgroup).",
+   "impact": "none on results: every API stage is cached (results/llm_cache.jsonl) and idempotent; re-runs re-billed nothing that had succeeded. NLI ran on the new GPU with the same checkpoints."
+  },
+  {
+   "id": "D2",
+   "what": "At 02:02 UTC the OpenRouter relay returned empty bodies (897 flash-lite-disguised and some nano calls failed as network errors); at 03:26 a relay redeploy returned 502s (547 verbaliser calls, 122 SC-5 samples). All were re-issued after the relaunch; final coverage of R_AB PRIMARY rows is 100% for every cheap judge, round trip and SC-5 column.",
+   "impact": "none"
+  },
+  {
+   "id": "D3",
+   "what": "flash-lite JSON outputs that omit faithful_prob but give a verdict (302/7421 disguised rows, similar for original; 108 and 112 of the 2,686 R_AB rows) get the PRE-REGISTERED oriented 0.5 after one retry. The pre-registered sensitivity column judge_cheap_*_vfb (verdict-median fill) is reported; criterion (a) holds under it too (strat delta 0.100 [0.051, 0.144]).",
+   "impact": "none (pre-declared rule)"
+  },
+  {
+   "id": "D4",
+   "what": "Frontier DISGUISED view NOT run: the pre-registered shared-key reserve rule (run only while the key's limit_remaining > $0.75) stopped it; limit_remaining was $0.33 at 03:29 UTC because sibling artifacts had spent ~$4.2 of the run key's $7 limit. All 284 disguised rows carry fail='budget:key_reserve'.",
+   "impact": "criterion (d) uses the ORIGINAL frontier view only (the stronger view on the screen, 0.802); the frontier orig-vs-disg contamination delta is not available."
+  },
+  {
+   "id": "D5",
+   "what": "Matched-FA operating points (M3 GEE, recall@FA0.10, per-group recall, aligner-masked recall): the pre-registered threshold 'q90 of CORRECT scores, flag = score > thr' is unattainable for quantised scores - c_score_align, nf_c_score, judge_cheap_disg and sc5_eq_frac have >10% of CORRECT rows at the maximum (thr = 1.0), so the flag never fired and M3 degenerated to diff 0 [0, 0] in the smoke run. Fix: a label-free, seeded tie-breaker (1e-9 x U[0,1) from sha1('tiebreak|'+canonical_key)) is added before thresholding, i.e. a randomised test that attains FA = 0.101 for every metric (achieved FA/recall recorded in analysis_T1.json e_M3.achieved_operating_point). AUROCs never use it. tests/audit_T1.py applies the identical tie-breaker on its own code path and reproduces the M3 point estimate.",
+   "impact": "M3 becomes estimable; it is DISCONFIRMED (+0.146 [-0.051, +0.361])."
+  },
+  {
+   "id": "D6",
+   "what": "Bug fixes found in the label-free smoke run before the final analysis: (i) the frontier-view filter used .get('untestable', True) and dropped every testable view (criterion d would have read 'untestable'); (ii) the verdict mapped d = None (untestable) to 'd fails'; (iii) figures imported chart_style before the house-style path was added.",
+   "impact": "code correctness only; no contrast or rule changed"
+  },
+  {
+   "id": "D7",
+   "what": "API cost reconciliation vs the key's usage delta (testing plan T5: within 5%) is impossible: the key is shared by the whole run. Key usage rose $2.450 -> $6.689 (delta $4.239) between our first and last call while this artifact's own ledger (per-call usage.cost returned by OpenRouter, results/costs.jsonl) sums to $2.395; the ~$1.84 remainder was spent by sibling artifacts.",
+   "impact": "spend figures come from per-call usage.cost; total $2.395 <= $4.60 hard cap"
+  },
+  {
+   "id": "D8",
+   "what": "The 20 exp-5 flash-lite rows were not imported (message identity was verified, but they were cheaper to re-score than to special-case); they served as the T2 API-determinism reference (10/10 agree within 0.05).",
+   "impact": "none"
+  },
+  {
+   "id": "D9",
+   "what": "System-level tau is over 13 system x variant rows and 10 families (the plan said 11 families; R_AB E_POOL PRIMARY contains 10).",
+   "impact": "descriptive only"
+  }
+ ]
+}
