@@ -1,0 +1,12 @@
+16:08:28|INFO   |adjudication by P1: 506 sentences, 1517 items (of 5323 items in 700 sentences)
+16:08:48|INFO   |adj 50/506 phase $0.166 total $7.648
+16:09:04|INFO   |adj 100/506 phase $0.340 total $7.822
+16:09:21|INFO   |adj 150/506 phase $0.528 total $8.010
+16:09:37|INFO   |adj 200/506 phase $0.700 total $8.182
+16:09:53|INFO   |adj 250/506 phase $0.896 total $8.378
+16:10:07|INFO   |adj 300/506 phase $1.075 total $8.557
+16:10:22|INFO   |adj 350/506 phase $1.252 total $8.734
+16:10:35|INFO   |adj 400/506 phase $1.409 total $8.891
+16:10:44|INFO   |adj 450/506 phase $1.500 total $8.982
+16:10:46|INFO   |adj 500/506 phase $1.530 total $9.012
+16:10:54|INFO   |adjudication done: phase $1.552 total $9.034
