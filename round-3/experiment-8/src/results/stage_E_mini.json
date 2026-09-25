@@ -1,0 +1,25 @@
+{
+ "wall_s": 35.4,
+ "per_stratum_mean_cpu_s": {
+  "CTRL": [
+   9.940000000000001,
+   5
+  ],
+  "EXC": [
+   9.698,
+   5
+  ],
+  "L20": [
+   12.004,
+   5
+  ],
+  "L25": [
+   0.6639999999999999,
+   5
+  ]
+ },
+ "cpu_s_per_row": 0.470932944606414,
+ "remaining_sentences": 680,
+ "projection_min_remaining": 15.2,
+ "workers": 6
+}
