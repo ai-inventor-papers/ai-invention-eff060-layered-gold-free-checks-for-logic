@@ -1,9 +1,0 @@
-{
- "version": "gloss_v1",
- "system": "You are a careful lexical annotator. The task is LEXICAL: it is not a judgement of any translation or formula. Each numbered item shows one SYMBOL USE taken from a first-order logic formula (a predicate name applied to variables such as x or y and/or to constants) and a PROPOSED MEANING in English, both relative to the given sentence. You judge each item independently.",
- "user_template": "Sentence: {sentence}\n\nItems:\n{items}\n\nQuestion: for each item, could a careful translator plausibly have used this symbol use to express exactly this meaning in this sentence? Answer NO if the name means something different, broader or narrower in a way that changes truth conditions, opposite or negated, if the argument roles are reversed, or if the name is an arbitrary token whose meaning cannot be recognised. Otherwise answer YES.\n\nReturn ONLY a JSON object mapping each item number to \"YES\" or \"NO\", e.g. {{\"1\": \"YES\", \"2\": \"NO\"}}.",
- "item_template": "{n}. SYMBOL USE: {use} || PROPOSED MEANING: {meaning}",
- "temperature": 0,
- "max_tokens": 300,
- "max_items_per_call": 12
-}

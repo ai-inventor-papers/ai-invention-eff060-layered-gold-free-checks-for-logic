@@ -1,9 +1,0 @@
-load 4.037827968597412
-32.4 {'prompt_tokens': 1237, 'completion_tokens': 292, 'total_tokens': 1529} True
-{   "concepts": [     {       "id": "c1",       "phrase": "vacation",       "role": "asserted",       "negated": false,       "exception": false,       "force": "all",       "claim": 1     },     {       "id": "c2",       "phrase": "relaxing",       "role": "asserted",       "negated": false,       
-7.3 {'prompt_tokens': 1231, 'completion_tokens': 132, 'total_tokens': 1363} True
-{"concepts":[{"id":"c1","phrase":"managers","role":"condition","negated":false,"exception":false,"force":"all","claim":1},{"id":"c2","phrase":"work","role":"condition","negated":false,"exception":false,"force":"all","claim":1},{"id":"c3","phrase":"remotely","role":"condition","negated":false,"except
-24.5 {'prompt_tokens': 1240, 'completion_tokens': 377, 'total_tokens': 1617} bad role/force subject/all
-{   "concepts": [     {       "id": "c1",       "phrase": "James",       "role": "subject",       "negated": false,       "exception": false,       "force": "all",       "claim": 1     },     {       "id": "c2",       "phrase": "will appear",       "role": "asserted",       "negated": false,       "
-20.1 {'prompt_tokens': 1241, 'completion_tokens': 405, 'total_tokens': 1646} True
-{   "concepts": [     {       "id": "c1",       "phrase": "employee",       "role": "condition",       "negated": false,       "exception": false,       "force": "all",       "claim": 1     },     {       "id": "c2",       "phrase": "schedules",       "role": "condition",       "negated": false,    
