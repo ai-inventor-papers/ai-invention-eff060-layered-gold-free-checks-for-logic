@@ -1,6 +1,0 @@
-{
- "status": "NOT_RUN",
- "reason": "D9: HTTP 403 aii_run_budget_exhausted on every gate call (190 calls refused, $0 billed); free models 429 daily limit",
- "items": "results/gate_items.json (840 items, 7 classes x 120, halves A 442 / B 398) are built and frozen",
- "runner": "src/resume_gloss.py gate"
-}

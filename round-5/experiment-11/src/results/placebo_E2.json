@@ -1,6 +1,0 @@
-{
- "shuffled_labels_mean_auroc": 0.5008755017735967,
- "shuffled_labels_p95": 0.6064295977011493,
- "within_stratum_score_permutation_mean": 0.49735272988505747,
- "pass_0.5pm0.03": true
-}
