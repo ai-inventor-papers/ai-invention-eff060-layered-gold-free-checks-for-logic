@@ -1,0 +1,18 @@
+14:10:32|INFO   |screen: H=302 L=753 HREF=302 invariance rows=750
+14:10:32|INFO   |cpu_layers: 1182 unique pairs, 0 uncached
+14:10:32|INFO   |prereg.json written (stage 4)
+14:10:34|INFO   |questionnaires[local/qwen2.5-1.5b-instruct-q4_k_m L3]: 421 texts, new calls 0, ledger $0.0264
+14:10:40|INFO   |L3 gate (HREF, local/qwen2.5-1.5b-instruct-q4_k_m): {"mm_role": 0.7287, "mm_force": 0.6829, "mm_claims": 0.9157, "mm_order": 1.0, "mm_exception": null, "missing_frac": 0.7784, "extra_frac": 0.9128}
+14:10:40|INFO   |gated fields ['mm_role', 'mm_claims', 'mm_order', 'missing_frac', 'extra_frac']; flagged ['mm_role', 'missing_frac']; excluded ['mm_force', 'mm_exception']
+14:10:40|INFO   |questionnaires[local/qwen2.5-1.5b-instruct-q4_k_m L3retest]: 60 texts, new calls 0, ledger $0.0264
+14:10:40|INFO   |questionnaires[google/gemini-2.5-flash-lite L3]: 294 texts, new calls 0, ledger $0.0264
+/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+14:10:45|INFO   |calibration appended to prereg.json (stage 5) BEFORE track-L scoring
+14:10:46|INFO   |decomposed[local/qwen2.5-1.5b-instruct-q4_k_m]: 905 pairs, new calls 0, ledger $0.0264
+14:10:46|INFO   |cascade_llmformula: trained on 0 no-leak H/HREF rows with decomposed answers (0 positive) -> too few rows; cascade_llmformula NOT fitted (single-layer l3_score_llmformula still reported)
+14:11:00|INFO   |questionnaires[local/qwen2.5-1.5b-instruct-q4_k_m L3disguised]: 417 texts, new calls 0, ledger $0.0264
+14:11:26|INFO   |STAGE 6 done: spend $0.0264; runtime 54s
+14:11:35|INFO   |analysis written: {"primary_L_ERROR_vs_CORRECT": 0.6894544665774917, "secondary_L_ERRORuCOMPOUND_vs_CORRECT": 0.709159615312931, "secondary_L_ERROR_minus_pureADDDROP_vs_CORRECT": 0.6218634848218985, "track_H": null}
