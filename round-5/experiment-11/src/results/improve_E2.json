@@ -1,0 +1,123 @@
+{
+ "carried_variant": "NONE: V0 stands",
+ "rule": "winner = variant with highest E LONG-strat AUROC (Z) that (i) beats V0 by >= +0.015 there AND (ii) >= V0 on L25 (point) AND (iii) >= V0 - 0.01 on CTRL; none -> 'NONE: V0 stands'; tie (|\u0394| < 1e-4) -> cheaper (V5 < others)",
+ "verdict": "V0 STANDS (no variant carried by the freeze; V1-V5 below are DEVELOPMENT-ONLY/exploratory rows)",
+ "exploratory_long_pool_deltas_vs_V0": {
+  "c_pn": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": 0.015086206896551713,
+   "ci": [
+    -0.038523274478330705,
+    0.08721139020943085
+   ],
+   "p_le0": 0.2925,
+   "ci_gt0": false,
+   "pooled_delta": -0.0003654970760234022,
+   "ci_pooled_cluster_boot": [
+    -0.03266963205427367,
+    0.08379403369534935
+   ]
+  },
+  "c_rw": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": 0.0035919540229885083,
+   "ci": [
+    0.0,
+    0.012967430285659363
+   ],
+   "p_le0": 0.158,
+   "ci_gt0": false,
+   "pooled_delta": 0.0010964912280702066,
+   "ci_pooled_cluster_boot": [
+    0.0,
+    0.012430939226519389
+   ]
+  },
+  "c_pn_rw": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": 0.02298850574712641,
+   "ci": [
+    -0.0034662045060658286,
+    0.0923077702155241
+   ],
+   "p_le0": 0.066,
+   "ci_gt0": false,
+   "pooled_delta": 0.011695906432748537,
+   "ci_pooled_cluster_boot": [
+    -0.0007151823281116853,
+    0.08855951554100297
+   ]
+  },
+  "c_two": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": 0.030890804597701216,
+   "ci": [
+    -0.013821969880393177,
+    0.12114621064363348
+   ],
+   "p_le0": 0.328,
+   "ci_gt0": false,
+   "pooled_delta": 0.012792397660818744,
+   "ci_pooled_cluster_boot": [
+    -0.01403508771929829,
+    0.12052769709662639
+   ]
+  },
+  "c_v5": {
+   "n": 92,
+   "n_error": 74,
+   "n_correct": 18,
+   "testable": false,
+   "delta": 0.021994134897360684,
+   "ci": [
+    -0.04081841325487249,
+    0.10322721516465122
+   ],
+   "p_le0": 0.2295,
+   "ci_gt0": false,
+   "pooled_delta": 0.01501501501501501,
+   "ci_pooled_cluster_boot": [
+    -0.046363296478326384,
+    0.10282146315402849
+   ]
+  },
+  "c_exact": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": -0.030890804597701105,
+   "ci": [
+    -0.17295166560816214,
+    0.0854704301075269
+   ],
+   "p_le0": 0.675,
+   "ci_gt0": false,
+   "pooled_delta": -0.05080409356725146,
+   "ci_pooled_cluster_boot": [
+    -0.19857907645958373,
+    0.08358155976581756
+   ]
+  }
+ },
+ "holm_over_5": {
+  "c_pn_rw": 0.33,
+  "c_rw": 0.632,
+  "c_v5": 0.6885,
+  "c_pn": 0.585,
+  "c_two": 0.328,
+  "c_exact": 0.0
+ }
+}
