@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_scores.jsonl
 """Headline re-derivation (TODO 5): each headline number recomputed from RAW per-row files through a DIFFERENT code path
 (explicit pair counting / pandas; no import of src/), each with a placebo that must fail.
 
@@ -24,7 +20,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
-E8 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/perturb_scores.jsonl")
+E8 = Path(__file__).resolve().parents[4] / "round-3/experiment-8/src/results/perturb_scores.jsonl"
 rng = np.random.default_rng(12345)
 
 

@@ -31,9 +31,9 @@ import csc_prereg  # noqa: E402
 DATA = ROOT / "data"
 RES = ROOT / "results"
 RUN = Path(__file__).resolve().parents[4]
-E8 = RUN / "iter_3/gen_art/gen_art_experiment_8"
-E7 = RUN / "iter_3/gen_art/gen_art_experiment_7"
-E9 = RUN / "iter_4/gen_art/gen_art_experiment_9"
+E8 = RUN / "round-3/experiment-8/src"
+E7 = RUN / "round-3/experiment-7/src"
+E9 = RUN / "round-4/experiment-9/src"
 B = 2000
 SEED = 0
 TYPING_MAP = {"DROP": "ADD", "ADD": "DROP", "ADD_ANY": "DROP", "SUBST": "MEANING_RENAME"}

@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
 """Build full_data_out.json (aii-json exp_sel_data_out) for E2, the fresh NL->FOL faithfulness confirmation set.
 
 Inputs: work/assembled_E2.json (src_e2/assemble_e2.py, i.e. E's frozen final_rule), work/controls_E2.json,
@@ -35,7 +31,7 @@ from normalise import normalise  # noqa: E402
 
 TD = ROOT / "temp" / "datasets"
 W = ROOT / "work"
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path(__file__).resolve().parents[3] / "round-1/dataset-1/src"
 (ROOT / "logs").mkdir(exist_ok=True)
 logger.remove()
 logger.add(sys.stdout, level="INFO", format="{time:HH:mm:ss}|{level:<7}|{message}")

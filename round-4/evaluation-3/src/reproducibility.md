@@ -11,11 +11,11 @@ cp -r gen_art_evaluation_3 ~/t8 && cd ~/t8
 The scripts read their inputs **read-only** from absolute paths in `src/t8_paths.py` (`RUN = ../../..`).
 If you are on another machine, edit `RUN` there, and the three hard-coded `RUN`/`E6T1`/`E7`/`E8` paths at the top of `audit/rederive.py`. The input workspaces are:
 
-- `iter_3/gen_art/gen_art_evaluation_2`: eval 2. Its `src/` and `vendor_exp5/` are **imported unchanged via sys.path** (code sha `dd73975642f428cc`).
+- `round-3/evaluation-2/src`: eval 2. Its `src/` and `vendor_exp5/` are **imported unchanged via sys.path** (code sha `dd73975642f428cc`).
 - `iter_3/gen_art/gen_art_experiment_{6,7,8}`
-- `iter_1/gen_art/gen_art_dataset_1`
-- `iter_2/gen_art/gen_art_experiment_5`, used by eval 2's `frame.build_frame`
-- `iter_3/review_report/review_report/audit`, `iter_3/gen_art/gen_art_research_1`, and `iter_3/upd_hypo/upd_hypo` (the iteration-4 hypothesis text)
+- `round-1/dataset-1/src`
+- `round-2/experiment-5/src`, used by eval 2's `frame.build_frame`
+- `round-3/review/audit`, `round-3/research-1/src`, and `iter_3/upd_hypo/upd_hypo` (the iteration-4 hypothesis text)
 
 `tables/source_hashes.csv` lists the sha256 of every input read.
 

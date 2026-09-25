@@ -23,7 +23,7 @@ INPUTS = [EV2 / "pairwise_classes_E.jsonl", EV2 / "prereg_mech.json", EV2 / "src
           E7 / "results/analysis.json", E7 / "results/deviations.json", E7 / ".aii_cost_ledger.jsonl",
           DSE / "full_data_out.json", AUDIT3 / "perturb_c_align_constant.json", RES1 / "research_report.md",
           RUN / "iter_3/upd_hypo/upd_hypo/.terminal_claude_agent_struct_out.json",
-          RUN / "iter_2/gen_art/gen_art_experiment_5/results/per_item_E.jsonl", RUN / "iter_2/gen_art/gen_art_experiment_5/data/E_labels.jsonl"]
+          RUN / "round-2/experiment-5/src/results/per_item_E.jsonl", RUN / "round-2/experiment-5/src/data/E_labels.jsonl"]
 
 
 def main() -> None:

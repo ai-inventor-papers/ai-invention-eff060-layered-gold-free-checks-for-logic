@@ -29,7 +29,7 @@
  },
  "projected_total_usd": 3.073,
  "projected_total_usd_x1.1": 3.38,
- "price_source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/pilot.json",
+ "price_source": "../../../experiment-9/src/results/pilot.json",
  "prompt_variant": "v1 (block template sha256 227e0db8ecfd64a4d9455ecb035fbbf9a39b8244223dc492873537415a68a460)",
  "jobs_file": "data/csc_jobs.jsonl",
  "jobs_file_sha256": "b2008b0839e5e45617b8c1b08e1694f6b39fa1c2d354fe5af9acee0c97cf3d70",

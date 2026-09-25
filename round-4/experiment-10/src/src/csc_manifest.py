@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/pilot.json
 """Job manifest for the CSC peer sweep that could not run (D-BUDGET) + the FREE firewall record.
 
 data/csc_jobs.jsonl        one line per unique (stage, text, signature): sig_key, models, prompt sha1 per model
@@ -27,7 +23,7 @@ import views as V  # noqa: E402
 
 DATA = ROOT / "data"
 RES = ROOT / "results"
-E9_PILOT = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_4/gen_art/gen_art_experiment_9/results/pilot.json")
+E9_PILOT = Path(__file__).resolve().parents[4] / "round-4/experiment-9/src/results/pilot.json"
 
 
 def main() -> None:

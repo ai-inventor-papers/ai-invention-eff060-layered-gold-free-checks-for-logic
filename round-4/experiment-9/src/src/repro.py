@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/prereg.json
 """$0 reproduction checks (before any CSC score is joined to labels): (1) eval 2's fixed 3-family pool
 deepseek+microsoft+openai (m4_fixed_pools_k3.csv: AUROC 0.7845 / strat 0.7427) recomputed from the frozen label-free
 pairwise matrix; (2) T1's c_score_align pooled/strat AUROC (tables_T1.md: 0.782 / 0.741) from per_item_T1 columns.
@@ -24,7 +20,7 @@ from stats import auc, strat_auc  # noqa: E402
 
 from score import EV2_PAIRWISE, jl  # noqa: E402
 
-EXP5_PREREG = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/prereg.json")
+EXP5_PREREG = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src/results/prereg.json"
 
 
 def run() -> dict:

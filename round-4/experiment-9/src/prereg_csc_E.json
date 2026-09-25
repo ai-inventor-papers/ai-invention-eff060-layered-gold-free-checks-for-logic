@@ -3,7 +3,7 @@
  "status_of_data": "DEVELOPMENT: dataset E was used by earlier rounds to choose consensus; no result here is a confirmation (confirmation = iteration 5 on E2 / R_COMP FREE).",
  "written_before": "any CSC score exists for the full sweep and before any CSC score is joined to labels (only the 30-row pilot peers exist; no pilot score was joined to labels)",
  "prompt": {
-  "file": "iter_1/gen_art/gen_art_dataset_1/prompts/fewshot_v1.txt",
+  "file": "round-1/dataset-1/src/prompts/fewshot_v1.txt",
   "sha256": "cdfd524edca37a619668943b9b6e7ef8b3fae91f5e0432e8b270e0bf2f847a9e",
   "block_sig": "Symbols from another translation of this sentence (name/arity, random order): {sig}. Use a listed symbol wherever its name fits what the sentence says, and keep its arity. If part of the sentence is not covered by any listed symbol, introduce a new symbol. You need not use every listed symbol. The list is not a translation: translate the sentence itself. Return JSON {{\"fol\": <formula>, \"alt_fol\": <a formula for a second legitimate reading, or null>}}.",
   "block_format_only": "Translate the sentence itself. Return JSON {\"fol\": <formula>, \"alt_fol\": <a formula for a second legitimate reading, or null>}.",

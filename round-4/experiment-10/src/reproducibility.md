@@ -16,11 +16,11 @@ and LOCAL2. To run the missing part, raise the budget and follow step 5b.
 cp -r . ~/csc && cd ~/csc
 ```
 The code reads these inputs **read-only by absolute path**. To reproduce elsewhere, place them at the same paths:
-* `iter_3/gen_art/gen_art_experiment_8/{data/perturb_rows.jsonl, results/perturb_scores.jsonl, results/invariance_table.csv, results/analysis_typing.json, src/, tests/, data/nltk_data/}`
-* `iter_3/gen_art/gen_art_experiment_7/{results/rcomp_candidates.jsonl, results/analysis_rows_SIG.jsonl, rcomp/work/rcomp_sentences.json, src/auc_tools.py, src/consensus_rcomp.py}`
-* `iter_2/gen_art/gen_art_dataset_3/full_data_out.json` (perturb_suite, rcomp_sentences)
-* `iter_1/gen_art/gen_art_dataset_1/{full_data_out.json, prompts/fewshot_v1.txt}`
-* `iter_4/gen_art/gen_art_experiment_9/results/pilot.json`, used only for the cost projection
+* `round-3/experiment-8/src/{data/perturb_rows.jsonl, results/perturb_scores.jsonl, results/invariance_table.csv, results/analysis_typing.json, src/, tests/, data/nltk_data/}`
+* `round-3/experiment-7/src/{results/rcomp_candidates.jsonl, results/analysis_rows_SIG.jsonl, rcomp/work/rcomp_sentences.json, src/auc_tools.py, src/consensus_rcomp.py}`
+* `round-2/dataset-3/src/full_data_out.json` (perturb_suite, rcomp_sentences)
+* `round-1/dataset-1/src/{full_data_out.json, prompts/fewshot_v1.txt}`
+* `round-4/experiment-9/src/results/pilot.json`, used only for the cost projection
 
 All paths are under `../../../`. Exp 7's `results/free_labels.jsonl`
 is **never** opened (firewall).

@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
 """E2 STEP 3 report: panel drift check. Compares today's replay (work/panel_cache.jsonl + work/gate_results.json +
 work/trackh_panel_rows.json, produced by E's frozen gate.py with a FRESH cache) with E's STORED votes
 (E/work/panel_cache.jsonl for the 77 synthetic gate items; E/work/trackh_panel_rows.json for the 96 track-H pairs).
@@ -21,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from panel import PROMPT_SHA1  # noqa: E402
 
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src"
 MEM = ["P1", "P3", "R1"]
 
 

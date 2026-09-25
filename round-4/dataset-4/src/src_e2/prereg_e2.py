@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/dataset_card.md
 """E2 STEP 2: write prereg_E2.json and prereg_E2.sha256 BEFORE any generation (refuses to overwrite a frozen prereg)."""
 from __future__ import annotations
 
@@ -17,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from generate import SLOTS  # noqa: E402  (E's frozen slot table)
 from panel import MEMBERS, PROMPT_SHA1  # noqa: E402
 
-E_CARD = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/dataset_card.md")
+E_CARD = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src/dataset_card.md"
 FEWSHOT_SLOTS = ["G1", "G1b", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9"]
 
 

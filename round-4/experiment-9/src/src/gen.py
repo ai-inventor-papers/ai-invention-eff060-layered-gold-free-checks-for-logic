@@ -54,7 +54,7 @@ def write_prereg() -> dict:
         "title": "T6-E Candidate-Signature Consensus on development set E -- pre-registration",
         "status_of_data": "DEVELOPMENT: dataset E was used by earlier rounds to choose consensus; no result here is a confirmation (confirmation = iteration 5 on E2 / R_COMP FREE).",
         "written_before": "any CSC score exists for the full sweep and before any CSC score is joined to labels (only the 30-row pilot peers exist; no pilot score was joined to labels)",
-        "prompt": {"file": "iter_1/gen_art/gen_art_dataset_1/prompts/fewshot_v1.txt", "sha256": sha256(csc.PROMPT_PATH),
+        "prompt": {"file": "round-1/dataset-1/src/prompts/fewshot_v1.txt", "sha256": sha256(csc.PROMPT_PATH),
                    "block_sig": csc.B_SIG, "block_format_only": csc.B_FMT, "temperature": 0, "max_tokens": 600},
         "pool": [m[0] for m in csc.POOL], "pool_params": {m[0]: m[2] for m in csc.POOL},
         "peer_rule": "first k=3 pool members whose vendor family differs from the candidate's; k=4 arm = all 4, only for families outside the pool",

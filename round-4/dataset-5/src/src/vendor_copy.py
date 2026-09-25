@@ -14,9 +14,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 R = Path(__file__).resolve().parents[4]
-D3 = R / "iter_2/gen_art/gen_art_dataset_3"
-E5 = R / "iter_2/gen_art/gen_art_experiment_5"
-E7 = R / "iter_3/gen_art/gen_art_experiment_7"
+D3 = R / "round-2/dataset-3/src"
+E5 = R / "round-2/experiment-5/src"
+E7 = R / "round-3/experiment-7/src"
 V = ROOT / "vendor"
 
 WHOLE = {"fol.py": D3 / "labeller/fol.py", "templates.py": D3 / "src/templates.py"}

@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl
 """STEP F: label-blind scoring of every arm ($0, CPU, ProcessPool/spawn, z3 2 s per pair, UNKNOWN counted).
 
 Output: results/scores_labelblind.jsonl -- one line per (arm, row_key) with c_csc / c_csc_graded / c_csc_multi, usable
@@ -26,7 +22,7 @@ SRC = Path(__file__).resolve().parent
 ROOT = SRC.parent
 RES = ROOT / "results"
 DATA = ROOT / "data"
-EV2_PAIRWISE = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl")
+EV2_PAIRWISE = Path(__file__).resolve().parents[4] / "round-3/evaluation-2/src/pairwise_classes_E.jsonl"
 
 
 def _init():

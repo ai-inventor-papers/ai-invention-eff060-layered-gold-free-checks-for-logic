@@ -1,8 +1,3 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data
-
 # Candidate-Signature Consensus (CSC) on PERTURB and R_COMP: anchoring, rename invariance, typing
 
 Run `run_u75jRHUss0zo`, iteration 4, `gen_art_experiment_10` (plan `gen_plan_experiment_2_idx2`, task T6-P).
@@ -231,5 +226,5 @@ Two other inputs are not stored here:
 * **Local GGUF weights** (`models/`, git-ignored; only for re-running LOCAL2). They are downloaded on demand by
   `src/local_peers.py`, or by `./restore.sh`.
 * **The copy of exp 8's NLTK data** (`src/data/nltk_data/`, only for the vendored exp-8 tests). Restore it with
-  `cp -r /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data src/data/`
+  `cp -r ../../../round-3/experiment-8/src/data/nltk_data src/data/`
   or `python -m nltk.downloader -d src/data/nltk_data wordnet omw-1.4 words`.

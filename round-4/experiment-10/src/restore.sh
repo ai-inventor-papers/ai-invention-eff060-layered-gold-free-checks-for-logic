@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data
 # Restore everything the manifest deletes after the round (venv, local GGUF models, NLTK data).
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -18,5 +14,5 @@ for repo, f in [("Qwen/Qwen2.5-1.5B-Instruct-GGUF", "qwen2.5-1.5b-instruct-q4_k_
                 ("bartowski/Llama-3.2-1B-Instruct-GGUF", "Llama-3.2-1B-Instruct-Q4_K_M.gguf")]:
     print(hf_hub_download(repo, f, local_dir="models"))
 PY
-E8=/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/data/nltk_data
+E8=../../../round-3/experiment-8/src/data/nltk_data
 if [ -d "$E8" ]; then cp -r "$E8" src/data/; else .venv/bin/python -m nltk.downloader -d src/data/nltk_data wordnet omw-1.4 words; fi
