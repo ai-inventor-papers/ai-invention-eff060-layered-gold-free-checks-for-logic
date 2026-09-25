@@ -1,4 +1,0 @@
-# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/analysis_E.json :: contamination.<judge>.{E_POOL,GOLDSYS,DiD}
-judge,E_POOL_delta_disg,GOLDSYS_delta_disg,DiD,DiD_ci_lo,DiD_ci_hi,MDE_2.8SE,probe_DiD
-judge_local_qwen8b,-0.0614,-0.0257,0.0357,-0.0388,0.1107,0.1072,-0.0709
-judge_local_llama8b,-0.0547,0.1076,0.1623,0.0641,0.2612,0.1388,-0.0743
