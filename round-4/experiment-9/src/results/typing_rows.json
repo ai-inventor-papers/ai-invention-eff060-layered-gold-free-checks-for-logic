@@ -1,0 +1,1590 @@
+[
+ {
+  "row_key": "f92555357c8ff19c|fewshot_v1",
+  "cand": "∀x ((DerivedFromPlants(x) ∧ NoAnimalProducts(x) ∧ RichInNutrients(x)) → (Fruit(x) ∨ Vegetable(x)))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "NEG"
+  ],
+  "sentence_id": "05c8b71f28f9",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.09
+  }
+ },
+ {
+  "row_key": "ad0491e9017d6366|fewshot_v1",
+  "cand": "∀x (DerivedFromPlants(x) ∧ NoAnimalProducts(x) ∧ RichInNutrients(x) → (Fruit(x) ∨ Vegetable(x)))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "NEG"
+  ],
+  "sentence_id": "05c8b71f28f9",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.09
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.09
+  }
+ },
+ {
+  "row_key": "b1ed3398503124f0|fewshot_v1",
+  "cand": "∀x ((Landscape(x) ∧ CharacterizedByPresenceOf(x, water) ∧ SupportsVarietyOfSpecies(x, plants, animals) ∧ ActsAsNaturalFilterFor(x, pollutants)) → Wetland(x))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "05dc54e39ee5",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.12
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.12
+  }
+ },
+ {
+  "row_key": "dc4b8286d9a45717|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+  "own_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "free_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0671c1a826cd",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.25
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.25
+  }
+ },
+ {
+  "row_key": "d72fcead14149209|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+  "own_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "free_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0671c1a826cd",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.25
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.24
+  }
+ },
+ {
+  "row_key": "c48375dcee4ca738|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+  "own_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "free_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0671c1a826cd",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.25
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.25
+  }
+ },
+ {
+  "row_key": "4f4dcf5f2536a545|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+  "own_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "free_majority": "∀v0 (((person(v0) ∧ regularlydrinks(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0671c1a826cd",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.24
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.52
+  }
+ },
+ {
+  "row_key": "f9416ba37f1c0ef1|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+  "own_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "free_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0671c1a826cd",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.25
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.24
+  }
+ },
+ {
+  "row_key": "e0a0e6e0df8322b9|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ RegularlyDrink(x, coffee) → DependentOn(x, caffeine))",
+  "own_majority": "∀v0 (((person(v0) ∧ regularlydrink(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "free_majority": "∀v0 (((person(v0) ∧ regularlydrinks(v0, k_coffee)) → dependenton(v0, k_caffeine)))",
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0671c1a826cd",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.22
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.51
+  }
+ },
+ {
+  "row_key": "2a49fb9c96d1b0c7|fewshot_v1",
+  "cand": "∀x (Vehicle(x) → (ElectricVehicle(x) ↔ (PoweredBy(x, electricMotor) ∧ Uses(x, rechargeableBattery))))",
+  "own_majority": "∀v0 ((((vehicle(v0) ∧ poweredby(v0, k_electricmotor)) ∧ uses(v0, k_rechargeablebattery)) → electricvehicle(v0)))",
+  "free_majority": "∀v0 ((((vehicle(v0) ∧ poweredby(v0, k_electricmotor)) ∧ uses(v0, k_rechargeablebattery)) → electricvehicle(v0)))",
+  "true_ops": [
+   "CONN",
+   "NEG"
+  ],
+  "sentence_id": "06b9106bfa46",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.59
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.59
+  }
+ },
+ {
+  "row_key": "722505135b9887ad|fewshot_v1",
+  "cand": "∀x (Vehicle(x) → (ElectricVehicle(x) ↔ (PoweredBy(x, electricMotor) ∧ Uses(x, rechargeableBattery))))",
+  "own_majority": "∀v0 ((((vehicle(v0) ∧ poweredby(v0, k_electricmotor)) ∧ uses(v0, k_rechargeablebattery)) → electricvehicle(v0)))",
+  "free_majority": "∀v0 ((((vehicle(v0) ∧ poweredby(v0, k_electricmotor)) ∧ uses(v0, k_rechargeablebattery)) → electricvehicle(v0)))",
+  "true_ops": [
+   "CONN",
+   "NEG"
+  ],
+  "sentence_id": "06b9106bfa46",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.59
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.6
+  }
+ },
+ {
+  "row_key": "42716a20d751e2fe|fewshot_v1",
+  "cand": "∀x (Artwork(x) ∧ ConveysStrongMessage(x) ∧ EvokesEmotionalResponse(x) ∧ DemonstratesTechnicalMastery(x) → Impactful(x))",
+  "own_majority": "∀v0 (((((artwork(v0) ∧ conveysstrongmessage(v0)) ∧ evokesemotionalresponse(v0)) ∧ demonstratestechnicalmastery(v0)) → impactful(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "077a4b3b9196",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "c01381869f40e8fd|fewshot_v1",
+  "cand": "∀x ((Painting(x) ∧ CreatedUsing(x, waterSolublePigments) ∧ AppliedTo(x, SpecificPaper) ∧ FormOfArtFromRegion(x)) → UsuallyWatercolorPainting(x))",
+  "own_majority": "∀v0 (((((painting(v0) ∧ createdusing(v0, k_watersolublepigments)) ∧ appliedto(v0, k_specificpaper)) ∧ formofartfromregion(v0)) → usuallywatercolorpainting(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "004f8eafeefa",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 1.37
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.11
+  }
+ },
+ {
+  "row_key": "7d1ca19a3eacefd0|fewshot_v1",
+  "cand": "∀x ((Material(x) ∧ UnderStress(x) ∧ ¬ExceedsElasticLimit(x) ∧ LoadNotRemoved(x)) → DeformsElastically(x))",
+  "own_majority": "∀v0 (((((material(v0) ∧ understress(v0)) ∧ ¬exceedselasticlimit(v0)) ∧ loadnotremoved(v0)) → deformselastically(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "NEG"
+  ],
+  "sentence_id": "00ddad96098f",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "355e5c2a7184ab6e|fewshot_v1",
+  "cand": "∀x (Book(x) → (Bestseller(x) ↔ (SoldLargeCopies(x) ∧ ReceivedWidespreadAcclaim(x))))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "CONN",
+   "NEG"
+  ],
+  "sentence_id": "01e2ba7aab85",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.05
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.05
+  }
+ },
+ {
+  "row_key": "06406ee1a1eb6122|fewshot_v1",
+  "cand": "∀x ((MusicalInstrument(x) ∧ Uses(x, vibratingStrings) ∧ Has(x, woodenBody) ∧ PlayedWith(x, bow)) ↔ Violin(x))",
+  "own_majority": "∀v0 (((((musicalinstrument(v0) ∧ uses(v0, k_vibratingstrings)) ∧ has(v0, k_woodenbody)) ∧ playedwith(v0, k_bow)) → violin(v0)))",
+  "free_majority": "∀v0 (((((musicalinstrument(v0) ∧ uses(v0, k_vibratingstrings)) ∧ has(v0, k_woodenbody)) ∧ playedwith(v0, k_bow)) → violin(v0)))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "050194abc41b",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 1.48
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 1.49
+  }
+ },
+ {
+  "row_key": "fa5d8140a3e17c04|zeroshot_v1",
+  "cand": "∀x (Artwork(x) ∧ ConveysStrongMessage(x) ∧ EvokesEmotionalResponse(x) ∧ DemonstratesTechnicalMastery(x) → Impactful(x))",
+  "own_majority": "∀v0 (((((artwork(v0) ∧ conveysstrongmessage(v0)) ∧ evokesemotionalresponse(v0)) ∧ demonstratestechnicalmastery(v0)) → impactful(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "077a4b3b9196",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "d8e2e336019eb2ee|fewshot_v1",
+  "cand": "∀x (Artwork(x) ∧ ConveysStrongMessage(x) ∧ EvokesEmotionalResponse(x) ∧ DemonstratesTechnicalMastery(x) → Impactful(x))",
+  "own_majority": "∀v0 (((((artwork(v0) ∧ conveysstrongmessage(v0)) ∧ evokesemotionalresponse(v0)) ∧ demonstratestechnicalmastery(v0)) → impactful(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "077a4b3b9196",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "cc907bb177656cca|fewshot_v1",
+  "cand": "∀x (Bird(x) ∧ CurvedBeak(x) ∧ BrightlyColoredFeathers(x) ∧ CanMimic(x, varietyOfSounds) ∧ CanMimic(x, humanSpeech) → Parrot(x))",
+  "own_majority": "∀v0 ((((((bird(v0) ∧ curvedbeak(v0)) ∧ brightlycoloredfeathers(v0)) ∧ canmimic(v0, k_varietyofsounds)) ∧ canmimic(v0, k_humanspeech)) → parrot(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "BIND"
+  ],
+  "sentence_id": "07d40cb53353",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 1.77
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.14
+  }
+ },
+ {
+  "row_key": "41b79fab21557b74|fewshot_v1",
+  "cand": "∀x (Bird(x) ∧ CurvedBeak(x) ∧ BrightlyColoredFeathers(x) ∧ CanMimic(x, varietyOfSounds) ∧ CanMimic(x, humanSpeech) → Parrot(x))",
+  "own_majority": "∀v0 ((((((bird(v0) ∧ curvedbeak(v0)) ∧ brightlycoloredfeathers(v0)) ∧ canmimic(v0, k_varietyofsounds)) ∧ canmimic(v0, k_humanspeech)) → parrot(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "BIND"
+  ],
+  "sentence_id": "07d40cb53353",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 1.78
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.14
+  }
+ },
+ {
+  "row_key": "ab66a00f3cf3c124|fewshot_v1",
+  "cand": "∀x (Book(x) ∧ (SetIn(x, past) ∧ Includes(x, realHistoricalEvents) ∨ Includes(x, realHistoricalCharacters)) → HistoricalFiction(x))",
+  "own_majority": "∀v0 ((book(v0) → ((setin(v0, k_past) ∧ (includes(v0, k_realhistoricalevents) ∨ includes(v0, k_realhistoricalcharacters))) → historicalfiction(v0))))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "10e21fa7c93a",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 2.04
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.11
+  }
+ },
+ {
+  "row_key": "12508b6fb06cfa3c|fewshot_v1",
+  "cand": "∀x (Beverage(x) ∧ BrewedFrom(x, roastedSeedsOfCoffeaPlant) ∧ TypicallyServedHot(x) ∧ HasStimulatingEffect(x, caffeine) → Coffee(x))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "1123743046d3",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.11
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.11
+  }
+ },
+ {
+  "row_key": "ffdf5a792d602a5d|fewshot_v1",
+  "cand": "∀x (Scientist(x) ∧ InFamily(x) → Adult(x))",
+  "own_majority": "∀v0 (((infamily(v0) ∧ scientist(v0)) → adult(v0)))",
+  "free_majority": "∀v0 (((infamily(v0, k_ourfamily) ∧ scientist(v0)) → adult(v0)))",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "115253ee533b",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.15
+  }
+ },
+ {
+  "row_key": "f6a25ff780b8c599|fewshot_v1",
+  "cand": "∀x ((InFamily(x) ∧ Scientist(x)) → Adult(x))",
+  "own_majority": "∀v0 (((infamily(v0) ∧ scientist(v0)) → adult(v0)))",
+  "free_majority": "∀v0 (((infamily(v0, k_ourfamily) ∧ scientist(v0)) → adult(v0)))",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "115253ee533b",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.15
+  }
+ },
+ {
+  "row_key": "e24363a09f720de2|fewshot_v1",
+  "cand": "∀x (Person(x) ∧ ThinksMadeUp(x, santaClaus) → SurprisedToSee(x, santaClaus, theirHouse))",
+  "own_majority": "∀v0 (((person(v0) ∧ thinksmadeup(v0, k_santaclaus)) → surprisedtosee(v0, k_santaclaus, k_theirhouse)))",
+  "free_majority": null,
+  "true_ops": [
+   "DROP"
+  ],
+  "sentence_id": "0eead024c9ba",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.51
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.05
+  }
+ },
+ {
+  "row_key": "1d48208b4399b18d|fewshot_v1",
+  "cand": "Son(brianWinter, andyWinter) ∧ FootballPlayer(andyWinter) ∧ PlaysFor(andyWinter, hamiltonAcademical)",
+  "own_majority": "((son(k_andywinter, k_brianwinter) ∧ footballplayer(k_andywinter)) ∧ playsfor(k_andywinter, k_hamiltonacademical))",
+  "free_majority": "((footballplayer(k_andywinter) ∧ sonof(k_andywinter, k_brianwinter)) ∧ playsfor(k_andywinter, k_hamiltonacademical))",
+  "true_ops": [
+   "SWAP"
+  ],
+  "sentence_id": "0ef71f65ea70",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.12
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.19
+  }
+ },
+ {
+  "row_key": "5227453a067556e7|fewshot_v1",
+  "cand": "∀x (ElectronicDevice(x) ∧ ReceivesAndDisplays(x, broadcastSignals) ∧ Provides(x, audiovisualEntertainment) ∧ Provides(x, information) → Television(x))",
+  "own_majority": "∀v0 (((((electronicdevice(v0) ∧ receivesanddisplays(v0, k_broadcastsignals)) ∧ provides(v0, k_audiovisualentertainment)) ∧ provides(v0, k_information)) → television(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD"
+  ],
+  "sentence_id": "0f995c93155d",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 2.18
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.12
+  }
+ },
+ {
+  "row_key": "ff6fad5c8ab603ff|fewshot_v1",
+  "cand": "∀x (ElectronicComponent(x) ∧ StoresEnergyInElectricField(x) ∧ HasConductivePlatesSeparatedByInsulator(x) ∧ BlocksDirectCurrent(x) ∧ AllowsAlternatingCurrent(x) → Capacitor(x))",
+  "own_majority": "∀v0 ((((((electroniccomponent(v0) ∧ storesenergyinelectricfield(v0)) ∧ hasconductiveplatesseparatedbyinsulator(v0)) ∧ blocksdirectcurrent(v0)) ∧ allowsalternatingcurrent(v0)) → capacitor(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD"
+  ],
+  "sentence_id": "1069224f7355",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.14
+  }
+ },
+ {
+  "row_key": "e210cb9b48498436|zeroshot_v1",
+  "cand": "∀x (Vehicle(x) ∧ DesignedForSnowAndIce(x) ∧ HasSkisOnFront(x) ∧ HasTracksOnBack(x) → Snowmobile(x))",
+  "own_majority": "∀v0 (((((vehicle(v0) ∧ designedforsnowandice(v0)) ∧ hasskisonfront(v0)) ∧ hastracksonback(v0)) → snowmobile(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD"
+  ],
+  "sentence_id": "0976856745c2",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "12dc1690d1f4d89b|fewshot_v1",
+  "cand": "∀x (Product(x) → (EcoFriendly(x) ↔ (MadeOfBiodegradableMaterials(x) ∨ LowCarbonFootprint(x)) ∧ ¬ExcessivePackaging(x)))",
+  "own_majority": "∀v0 ((product(v0) → (((madeofbiodegradablematerials(v0) ∨ lowcarbonfootprint(v0)) ∧ ¬excessivepackaging(v0)) → ecofriendly(v0))))",
+  "free_majority": "∀v0 ((product(v0) → (((madeof(v0, k_biodegradablematerials) ∨ has(v0, k_lowcarbonfootprint)) ∧ ¬has(v0, k_excessivepackaging)) → moreecofriendly(v0))))",
+  "true_ops": [
+   "CONN",
+   "NEG"
+  ],
+  "sentence_id": "0caaece5b349",
+  "pred_own_majority": {
+   "cls": "CONN+NEG",
+   "ops": [
+    "CONN",
+    "NEG"
+   ],
+   "secs": 0.16
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 4.0
+  }
+ },
+ {
+  "row_key": "1d8cee7efa32d214|fewshot_v1",
+  "cand": "∀x (ProducesFlowers(x) ∧ (PollinatedBy(x, insects) ∨ PollinatedBy(x, wind)) ∧ SeedsEnclosedInFruit(x) → Angiosperm(x))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "ADD"
+  ],
+  "sentence_id": "0cff17e7ce5b",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "53096684dcc55517|fewshot_v1",
+  "cand": "∀x ((SpeciesOfPlant(x) ∧ Produces(x, flowers) ∧ (PollinatedBy(x, insects) ∨ PollinatedBy(x, wind)) ∧ HasSeedsEnclosedIn(x, fruit)) → ClassifiedAs(x, angiosperm))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "0cff17e7ce5b",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.17
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.17
+  }
+ },
+ {
+  "row_key": "82aab89e14d4cfd8|fewshot_v1",
+  "cand": "∀x (Computer(x) → (Desktop(x) ∨ Laptop(x) ∨ Tablet(x))) ∧ ∀x (Computer(x) → ¬(Desktop(x) ∧ Laptop(x)) ∧ ¬(Desktop(x) ∧ Tablet(x)) ∧ ¬(Laptop(x) ∧ Tablet(x)) ∨ Convertible(x))",
+  "own_majority": null,
+  "free_majority": "∀v0 ((computer(v0) → (((desktop(v0) ⊕ laptop(v0)) ⊕ tablet(v0)) ∨ (convertibledevice(v0) ∧ ((desktop(v0) ∨ laptop(v0)) ∨ tablet(v0))))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "439e4bdd3501",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.94
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 4.0
+  }
+ },
+ {
+  "row_key": "5ff826c0f843fe44|fewshot_v1",
+  "cand": "Friend(taylor, emily)",
+  "own_majority": "friend(k_taylor, k_emily)",
+  "free_majority": "friend(k_taylor, k_emily)",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "444cf16a5b26",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "5ff826c0f843fe44|zeroshot_v1",
+  "cand": "Friend(taylor, emily)",
+  "own_majority": "friend(k_taylor, k_emily)",
+  "free_majority": "friend(k_taylor, k_emily)",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "444cf16a5b26",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "5f859d841d0e98d7|fewshot_v1",
+  "cand": "Friend(emily, taylor)",
+  "own_majority": "friend(k_taylor, k_emily)",
+  "free_majority": "friend(k_taylor, k_emily)",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "444cf16a5b26",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "767d40a502c05843|fewshot_v1",
+  "cand": "Friend(taylor, emily)",
+  "own_majority": "friend(k_taylor, k_emily)",
+  "free_majority": "friend(k_taylor, k_emily)",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "444cf16a5b26",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "7113a404734dd914|fewshot_v1",
+  "cand": "Friend(taylor, emily)",
+  "own_majority": "friend(k_taylor, k_emily)",
+  "free_majority": "friend(k_taylor, k_emily)",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "444cf16a5b26",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "ce95742379e6cb7a|fewshot_v1",
+  "cand": "Friend(taylor, emily)",
+  "own_majority": "friend(k_taylor, k_emily)",
+  "free_majority": "friend(k_taylor, k_emily)",
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "444cf16a5b26",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "aee0ab089f6ff73b|fewshot_v1",
+  "cand": "∀x (Smartphone(x) → (Waterproof(x) → (HasIPRating(x) ∨ HasWaterResistantCase(x))))",
+  "own_majority": "∀v0 ((smartphone(v0) → ((¬hasiprating(v0) ∧ ¬haswaterresistantcase(v0)) → ¬waterproof(v0))))",
+  "free_majority": "∀v0 ((smartphone(v0) → (¬((hasiprating(v0) ∨ haswaterresistantcase(v0))) → ¬waterproof(v0))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "4dadf510a70d",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "dc32a93ab0c36978|zeroshot_v1",
+  "cand": "∀x (Cell(x) → (Prokaryote(x) ∨ Eukaryote(x) ∨ Archaea(x)) ∧ ¬(Prokaryote(x) ∧ Eukaryote(x) ∧ ¬Hybrid(x)) ∧ ¬(Prokaryote(x) ∧ Archaea(x) ∧ ¬Hybrid(x)) ∧ ¬(Eukaryote(x) ∧ Archaea(x) ∧ ¬Hybrid(x)))",
+  "own_majority": null,
+  "free_majority": "∀v0 ((cell(v0) → (((prokaryote(v0) ⊕ eukaryote(v0)) ⊕ archaea(v0)) ∨ (uniquehybridcell(v0) ∧ ¬(((prokaryote(v0) ⊕ eukaryote(v0)) ⊕ archaea(v0)))))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "14d8aea91a51",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.57
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 4.0
+  }
+ },
+ {
+  "row_key": "665f3dc892bc2232|zeroshot_v1",
+  "cand": "∀x (Bird(x) → (FlightlessBird(x) → ¬CanFly(x)) ∧ (¬FlightlessBird(x) → CanFly(x)))",
+  "own_majority": "∀v0 ((bird(v0) → (canfly(v0) ∨ flightlessbird(v0))))",
+  "free_majority": "∀v0 ((bird(v0) → (flightlessbird(v0) ∨ canfly(v0))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "14dd763a59ae",
+  "pred_own_majority": {
+   "cls": "CONN",
+   "ops": [
+    "CONN"
+   ],
+   "secs": 0.01
+  },
+  "pred_free_majority": {
+   "cls": "CONN",
+   "ops": [
+    "CONN"
+   ],
+   "secs": 0.01
+  }
+ },
+ {
+  "row_key": "2f2badf44e44c168|fewshot_v1",
+  "cand": "∀x (Smartphone(x) ∧ LastsFullDayWithoutCharging(x) ∧ ¬Overheats(x) ∧ ChargesQuickly(x) → GoodBatteryLife(x))",
+  "own_majority": "∀v0 ((smartphone(v0) → (goodbatterylife(v0) ↔ ((lastsfulldaywithoutcharging(v0) ∧ ¬overheats(v0)) ∧ chargesquickly(v0)))))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "191af0b96855",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 0.54
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "533ba5e590bb99b7|fewshot_v1",
+  "cand": "∀x (Tool(x) → (Useful(x) ↔ (Durable(x) ∨ EasyToUse(x))))",
+  "own_majority": "∀v0 ((tool(v0) → (¬((durable(v0) ∨ easytouse(v0))) → ¬useful(v0))))",
+  "free_majority": "∀v0 ((tool(v0) → (useful(v0) → (durable(v0) ∨ easytouse(v0)))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "22983ecef398",
+  "pred_own_majority": {
+   "cls": "CONN",
+   "ops": [
+    "CONN"
+   ],
+   "secs": 0.01
+  },
+  "pred_free_majority": {
+   "cls": "CONN",
+   "ops": [
+    "CONN"
+   ],
+   "secs": 0.01
+  }
+ },
+ {
+  "row_key": "aee0ab089f6ff73b|zeroshot_v1",
+  "cand": "∀x (Smartphone(x) → (Waterproof(x) → (HasIPRating(x) ∨ HasWaterResistantCase(x))))",
+  "own_majority": "∀v0 ((smartphone(v0) → ((¬hasiprating(v0) ∧ ¬haswaterresistantcase(v0)) → ¬waterproof(v0))))",
+  "free_majority": "∀v0 ((smartphone(v0) → (¬((hasiprating(v0) ∨ haswaterresistantcase(v0))) → ¬waterproof(v0))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "4dadf510a70d",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "8356c64a2b8f8bac|fewshot_v1",
+  "cand": "∀x (Smartphone(x) ∧ ¬(HasIPRating(x) ∨ HasWaterResistantCase(x)) → ¬Waterproof(x))",
+  "own_majority": "∀v0 ((smartphone(v0) → ((¬hasiprating(v0) ∧ ¬haswaterresistantcase(v0)) → ¬waterproof(v0))))",
+  "free_majority": "∀v0 ((smartphone(v0) → (¬((hasiprating(v0) ∨ haswaterresistantcase(v0))) → ¬waterproof(v0))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "4dadf510a70d",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "a02c7ffd16cc8c68|fewshot_v1",
+  "cand": "∀x (Smartphone(x) → (¬Waterproof(x) ∨ (HasIPRating(x) ∨ HasWaterResistantCase(x))))",
+  "own_majority": "∀v0 ((smartphone(v0) → ((¬hasiprating(v0) ∧ ¬haswaterresistantcase(v0)) → ¬waterproof(v0))))",
+  "free_majority": "∀v0 ((smartphone(v0) → (¬((hasiprating(v0) ∨ haswaterresistantcase(v0))) → ¬waterproof(v0))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "4dadf510a70d",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "2a5febc15a5e0b17|fewshot_v1",
+  "cand": "∀x (Bird(x) → (CanFly(x) ∧ ¬(Ostrich(x) ∨ Penguin(x))))",
+  "own_majority": "∀v0 ((((bird(v0) ∧ ¬ostrich(v0)) ∧ ¬penguin(v0)) → canfly(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "CONN",
+   "NEG"
+  ],
+  "sentence_id": "4e01d55a22c8",
+  "pred_own_majority": {
+   "cls": "CONN+NEG",
+   "ops": [
+    "CONN",
+    "NEG"
+   ],
+   "secs": 0.1
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.06
+  }
+ },
+ {
+  "row_key": "655adee80d84ff34|zeroshot_v1",
+  "cand": "∀x (Catchy(x) ↔ (MemorableLyrics(x) ∨ CatchyMelody(x) ∨ StrongRhythm(x)) ∧ ¬(MemorableLyrics(x) ∧ CatchyMelody(x) ∧ StrongRhythm(x)))",
+  "own_majority": "∀v0 ((song(v0) → (catchy(v0) ↔ (((memorablelyrics(v0) ∨ catchymelody(v0)) ∨ strongrhythm(v0)) ∧ ¬(((memorablelyrics(v0) ∧ catchymelody(v0)) ∧ strongrhythm(v0)))))))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "MOVE"
+  ],
+  "sentence_id": "14748a24d1e4",
+  "pred_own_majority": {
+   "cls": "ADD+MOVE",
+   "ops": [
+    "ADD",
+    "MOVE"
+   ],
+   "secs": 0.37
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "f0c91e865fcfc5e2|fewshot_v1",
+  "cand": "∀x (Catchy(x) ↔ (MemorableLyrics(x) ∨ CatchyMelody(x) ∨ StrongRhythm(x)) ∧ ¬(MemorableLyrics(x) ∧ CatchyMelody(x) ∧ StrongRhythm(x)))",
+  "own_majority": "∀v0 ((song(v0) → (catchy(v0) ↔ (((memorablelyrics(v0) ∨ catchymelody(v0)) ∨ strongrhythm(v0)) ∧ ¬(((memorablelyrics(v0) ∧ catchymelody(v0)) ∧ strongrhythm(v0)))))))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "MOVE"
+  ],
+  "sentence_id": "14748a24d1e4",
+  "pred_own_majority": {
+   "cls": "ADD+MOVE",
+   "ops": [
+    "ADD",
+    "MOVE"
+   ],
+   "secs": 0.36
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "68d990dd0a746930|fewshot_v1",
+  "cand": "∀x (Catchy(x) ↔ ((MemorableLyrics(x) ∨ CatchyMelody(x) ∨ StrongRhythm(x)) ∧ ¬(MemorableLyrics(x) ∧ CatchyMelody(x) ∧ StrongRhythm(x))))",
+  "own_majority": "∀v0 ((song(v0) → (catchy(v0) ↔ (((memorablelyrics(v0) ∨ catchymelody(v0)) ∨ strongrhythm(v0)) ∧ ¬(((memorablelyrics(v0) ∧ catchymelody(v0)) ∧ strongrhythm(v0)))))))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "MOVE"
+  ],
+  "sentence_id": "14748a24d1e4",
+  "pred_own_majority": {
+   "cls": "ADD+MOVE",
+   "ops": [
+    "ADD",
+    "MOVE"
+   ],
+   "secs": 0.36
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.1
+  }
+ },
+ {
+  "row_key": "a13c8b94a9e7af36|fewshot_v1",
+  "cand": "∀x (Cell(x) → (Prokaryote(x) ∨ Eukaryote(x) ∨ Archaea(x)) ∧ ((Prokaryote(x) ∧ Eukaryote(x)) ∨ (Prokaryote(x) ∧ Archaea(x)) ∨ (Eukaryote(x) ∧ Archaea(x)) → Hybrid(x)))",
+  "own_majority": null,
+  "free_majority": "∀v0 ((cell(v0) → (((prokaryote(v0) ⊕ eukaryote(v0)) ⊕ archaea(v0)) ∨ (uniquehybridcell(v0) ∧ ¬(((prokaryote(v0) ⊕ eukaryote(v0)) ⊕ archaea(v0)))))))",
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "14d8aea91a51",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.35
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 4.0
+  }
+ },
+ {
+  "row_key": "ad74468c8350f29e|fewshot_v1",
+  "cand": "∀x (Bird(x) → (CanFly(x) ↔ (Flightless(x) ∨ Injured(x))))",
+  "own_majority": "∀v0 ((bird(v0) → ((¬flightless(v0) ∧ ¬injured(v0)) → canfly(v0))))",
+  "free_majority": null,
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "8681dfaac4bf",
+  "pred_own_majority": {
+   "cls": "CONN",
+   "ops": [
+    "CONN"
+   ],
+   "secs": 0.01
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.05
+  }
+ },
+ {
+  "row_key": "890a230c85af99aa|fewshot_v1",
+  "cand": "∀x ((Bird(x) ∧ ¬Ostrich(x) ∧ ¬Penguin(x)) → CanFly(x)) ∧ (Ostrich(x) → ¬CanFly(x)) ∧ (Penguin(x) → ¬CanFly(x))",
+  "own_majority": "∀v0 ((((bird(v0) ∧ ¬ostrich(v0)) ∧ ¬penguin(v0)) → canfly(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "DROP",
+   "DROP"
+  ],
+  "sentence_id": "4e01d55a22c8",
+  "pred_own_majority": {
+   "cls": "DROP+DROP",
+   "ops": [
+    "DROP",
+    "DROP"
+   ],
+   "secs": 0.23
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.32
+  }
+ },
+ {
+  "row_key": "5f9de328ab024bfa|fewshot_v1",
+  "cand": "∀x (Bird(x) → CanFly(x) ∧ ¬(Ostrich(x) ∨ Penguin(x)))",
+  "own_majority": "∀v0 ((((bird(v0) ∧ ¬ostrich(v0)) ∧ ¬penguin(v0)) → canfly(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "CONN",
+   "NEG"
+  ],
+  "sentence_id": "4e01d55a22c8",
+  "pred_own_majority": {
+   "cls": "CONN+NEG",
+   "ops": [
+    "CONN",
+    "NEG"
+   ],
+   "secs": 0.06
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.04
+  }
+ },
+ {
+  "row_key": "8c661be4fd689c19|fewshot_v1",
+  "cand": "∀x (Scientist(x) ∧ SpecializeIn(x, livingOrganisms) → Biologist(x)) ∧ ∀x (Scientist(x) ∧ SpecializeIn(x, earthStructureAndComposition) → Geologist(x))",
+  "own_majority": "(∀v0 (((scientist(v0) ∧ specializein(v0, k_livingorganisms)) → biologist(v0))) ∧ ∀v1 (((scientist(v1) ∧ specializein(v1, k_earthstructureandcomposition)) → geologist(v1))))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD",
+   "DROP"
+  ],
+  "sentence_id": "50098eb2eee7",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 0.73
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.15
+  }
+ },
+ {
+  "row_key": "6bacfc8a7ebb8362|fewshot_v1",
+  "cand": "∀x ((Bird(x) ∧ ¬Flightless(x)) → CanFly(x)) ∧ ∀x (Fish(x) → (CanSwim(x) ∧ ¬CanFly(x)))",
+  "own_majority": "(∀v0 (((bird(v0) ∧ ¬flightless(v0)) → canfly(v0))) ∧ ∀v1 ((fish(v1) → (canswim(v1) ∧ ¬canfly(v1)))))",
+  "free_majority": "∀v0 ((((bird(v0) ∧ ¬flightless(v0)) → canfly(v0)) ∧ (fish(v0) → (canswim(v0) ∧ ¬canfly(v0)))))",
+  "true_ops": [
+   "CONN",
+   "MOVE"
+  ],
+  "sentence_id": "5de845702783",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "13f811a46b9dd76e|fewshot_v1",
+  "cand": "∀x (Bird(x) ∧ CurvedBeak(x) ∧ BrightlyColoredFeathers(x) ∧ CanMimic(x, varietyOfSounds) ∧ CanMimic(x, humanSpeech) → Parrot(x))",
+  "own_majority": "∀v0 ((((((bird(v0) ∧ curvedbeak(v0)) ∧ brightlycoloredfeathers(v0)) ∧ canmimic(v0, k_varietyofsounds)) ∧ canmimic(v0, k_humanspeech)) → parrot(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "BIND"
+  ],
+  "sentence_id": "07d40cb53353",
+  "pred_own_majority": {
+   "cls": "BIND+BIND",
+   "ops": [
+    "BIND",
+    "BIND"
+   ],
+   "secs": 1.76
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.14
+  }
+ },
+ {
+  "row_key": "c0862b9450ce8ea7|fewshot_v1",
+  "cand": "∀x (WorkoutRoutine(x) → ((Include(x, cardio) ∨ Include(x, strength) ∨ Include(x, flexibility)) ∧ Improve(x, overallFitness) ∧ (Target(x, weightLoss) ⊕ Target(x, muscleGain)) → Effective(x)))",
+  "own_majority": null,
+  "free_majority": null,
+  "true_ops": [
+   "CONN"
+  ],
+  "sentence_id": "086cc39a5a1e",
+  "pred_own_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.25
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.25
+  }
+ },
+ {
+  "row_key": "fa30dded3fac0a06|fewshot_v1",
+  "cand": "∀x ((Has(x, captivatingStoryline) ∧ Has(x, exceptionalActing) ∧ Has(x, impressiveCinematography)) → (ReceivePositiveReviews(x) ∨ BecomeBoxOfficeHit(x)))",
+  "own_majority": "∀v0 (((((film(v0) ∧ has(v0, k_captivatingstoryline)) ∧ has(v0, k_exceptionalacting)) ∧ has(v0, k_impressivecinematography)) → (receivepositivereviews(v0) ∧ becomeboxofficehit(v0))))",
+  "free_majority": "∀v0 (((((film(v0) ∧ has(v0, k_captivatingstoryline)) ∧ has(v0, k_exceptionalactingperformances)) ∧ has(v0, k_impressivecinematography)) → (canreceive(v0, k_positivereviews) ∧ canbecome(v0, k_boxofficehit))))",
+  "true_ops": [
+   "ADD",
+   "CONN"
+  ],
+  "sentence_id": "08d8d5fb7a45",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 3.04
+  },
+  "pred_free_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 4.0
+  }
+ },
+ {
+  "row_key": "e9b72882d16f3f73|fewshot_v1",
+  "cand": "∀x (ConvertsEnergy(x, electricalEnergy, mechanicalEnergy) ∧ Uses(x, magneticFields) ∧ Uses(x, rotatingCoil) → ElectricMotor(x))",
+  "own_majority": "∀v0 (((((device(v0) ∧ convertsenergy(v0, k_electricalenergy, k_mechanicalenergy)) ∧ uses(v0, k_magneticfields)) ∧ uses(v0, k_rotatingcoil)) → electricmotor(v0)))",
+  "free_majority": null,
+  "true_ops": [
+   "ADD"
+  ],
+  "sentence_id": "0939cbeab4c8",
+  "pred_own_majority": {
+   "cls": "TIMEOUT_OR_COMPOUND",
+   "ops": [],
+   "secs": 2.89
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 0.08
+  }
+ },
+ {
+  "row_key": "db96a3683e651615|zeroshot_v1",
+  "cand": "∀x (Bird(x) → (Flightless(x) → ¬CanFly(x)) ∧ ¬CanFly(x)) ∧ ∀x (Fish(x) → CanSwim(x) ∧ ¬CanFly(x))",
+  "own_majority": "(∀v0 (((bird(v0) ∧ ¬flightless(v0)) → canfly(v0))) ∧ ∀v1 ((fish(v1) → (canswim(v1) ∧ ¬canfly(v1)))))",
+  "free_majority": "∀v0 ((((bird(v0) ∧ ¬flightless(v0)) → canfly(v0)) ∧ (fish(v0) → (canswim(v0) ∧ ¬canfly(v0)))))",
+  "true_ops": [
+   "CONN",
+   "DROP"
+  ],
+  "sentence_id": "5de845702783",
+  "pred_own_majority": {
+   "cls": "CONN+NEG",
+   "ops": [
+    "CONN",
+    "NEG"
+   ],
+   "secs": 0.59
+  },
+  "pred_free_majority": {
+   "cls": "CONN+NEG",
+   "ops": [
+    "CONN",
+    "NEG"
+   ],
+   "secs": 0.59
+  }
+ },
+ {
+  "row_key": "16522c84e23dc699|zeroshot_v1",
+  "cand": "∀x (Bird(x) → (¬Flightless(x) → CanFly(x))) ∧ ∀x (Fish(x) → (Swims(x) ∧ ¬CanFly(x)))",
+  "own_majority": "(∀v0 (((bird(v0) ∧ ¬flightless(v0)) → canfly(v0))) ∧ ∀v1 ((fish(v1) → (swims(v1) ∧ ¬canfly(v1)))))",
+  "free_majority": "∀v0 ((((bird(v0) ∧ ¬flightless(v0)) → canfly(v0)) ∧ (fish(v0) → (canswim(v0) ∧ ¬canfly(v0)))))",
+  "true_ops": [
+   "CONN",
+   "MOVE"
+  ],
+  "sentence_id": "5de845702783",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.01
+  },
+  "pred_free_majority": {
+   "cls": "ADD+DROP",
+   "ops": [
+    "ADD",
+    "DROP"
+   ],
+   "secs": 1.28
+  }
+ },
+ {
+  "row_key": "7d82d240e419785a|fewshot_v1",
+  "cand": "∀x ((Bird(x) ∧ ¬Flightless(x)) → CanFly(x)) ∧ ∀x (Fish(x) → (CanSwim(x) ∧ ¬CanFly(x)))",
+  "own_majority": "(∀v0 (((bird(v0) ∧ ¬flightless(v0)) → canfly(v0))) ∧ ∀v1 ((fish(v1) → (canswim(v1) ∧ ¬canfly(v1)))))",
+  "free_majority": "∀v0 ((((bird(v0) ∧ ¬flightless(v0)) → canfly(v0)) ∧ (fish(v0) → (canswim(v0) ∧ ¬canfly(v0)))))",
+  "true_ops": [
+   "CONN",
+   "MOVE"
+  ],
+  "sentence_id": "5de845702783",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ },
+ {
+  "row_key": "5a2d382d0a0a50c1|fewshot_v1",
+  "cand": "(∀x (Bird(x) → (¬Flightless(x) → CanFly(x)))) ∧ (∀y (Fish(y) → (CanSwim(y) ∧ ¬CanFly(y))))",
+  "own_majority": "(∀v0 (((bird(v0) ∧ ¬flightless(v0)) → canfly(v0))) ∧ ∀v1 ((fish(v1) → (canswim(v1) ∧ ¬canfly(v1)))))",
+  "free_majority": "∀v0 ((((bird(v0) ∧ ¬flightless(v0)) → canfly(v0)) ∧ (fish(v0) → (canswim(v0) ∧ ¬canfly(v0)))))",
+  "true_ops": [
+   "CONN",
+   "MOVE"
+  ],
+  "sentence_id": "5de845702783",
+  "pred_own_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  },
+  "pred_free_majority": {
+   "cls": "EQUIV",
+   "ops": [],
+   "secs": 0.0
+  }
+ }
+]
