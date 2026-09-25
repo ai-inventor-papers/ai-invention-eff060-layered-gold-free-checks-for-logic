@@ -1,0 +1,28 @@
+{
+ "a_rows": 131,
+ "b_rows": 1507,
+ "c_rows": 0,
+ "screen_collisions": 0,
+ "fewshot_excluded": 6,
+ "no_atoms_or_not_universal": 743,
+ "dup_text": 15,
+ "rules": 874,
+ "shaped": 580,
+ "by_source": {
+  "E_heldout_TRUSTED_AGREED": 15,
+  "E_heldout_GOLD_PANEL_OK": 88,
+  "FOLIO-v2-train_agreed": 771
+ },
+ "atoms_total": 2306,
+ "collisions_final": 0,
+ "exclusion_hash_count": 2054,
+ "exclusion_sources": {
+  "tasksource_folio_validation": 2634,
+  "folio_refined_validation": 2634,
+  "curated_folio": 859,
+  "curated_malls": 200,
+  "malls_test": 2000,
+  "logiclm_context": 3876,
+  "logiclm_question": 1224
+ }
+}

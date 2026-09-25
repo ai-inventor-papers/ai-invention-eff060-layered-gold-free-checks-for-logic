@@ -1,0 +1,21 @@
+18:20:25|INFO   |probes: {'MEANING_RENAME': 150, 'SWAP': 150, 'ROLE_PERMUTE': 131}
+18:20:41|INFO   |L3 questionnaires from the iteration-1 cache: 420/440
+18:20:41|INFO   |screen sentences 440; rows 4980; probes 431
+18:21:11|INFO   |screen 25/440 sentences, 30s
+18:21:12|INFO   |screen 50/440 sentences, 31s
+18:21:13|INFO   |screen 75/440 sentences, 32s
+18:21:13|INFO   |screen 100/440 sentences, 32s
+18:21:13|INFO   |screen 125/440 sentences, 33s
+18:21:14|INFO   |screen 150/440 sentences, 33s
+18:21:14|INFO   |screen 175/440 sentences, 33s
+18:21:15|INFO   |screen 200/440 sentences, 34s
+18:21:15|INFO   |screen 225/440 sentences, 34s
+18:21:16|INFO   |screen 250/440 sentences, 35s
+18:21:17|INFO   |screen 275/440 sentences, 36s
+18:21:18|INFO   |screen 300/440 sentences, 37s
+18:21:19|INFO   |screen 325/440 sentences, 38s
+18:21:20|INFO   |screen 350/440 sentences, 39s
+18:21:20|INFO   |screen 375/440 sentences, 39s
+18:21:21|INFO   |screen 400/440 sentences, 40s
+18:21:21|INFO   |screen 425/440 sentences, 40s
+18:21:27|INFO   |screen compute done in 46s

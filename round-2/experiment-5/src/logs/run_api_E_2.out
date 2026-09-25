@@ -1,0 +1,7 @@
+19:08:44|INFO   |rows 8507; analysable-first 2686; key remaining $0.0
+19:08:44|INFO   |disguise: 8507 rows, assertion failures 18
+19:08:45|INFO   |parseable judge rows: 7388 / 8507
+19:08:45|INFO   |judge: 2666 units to score (2686 requested)
+19:08:45|INFO   |judge chunk 0: key remaining $0.0; artifact judge spend $0.0008
+19:08:45|ERROR  |shared key nearly exhausted ($0.0); stopping judge phase (resumable)
+19:08:45|INFO   |run_api_E finished (completed=False); key remaining $0.0
