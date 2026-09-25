@@ -37,8 +37,7 @@ from pathlib import Path
 SRC = Path(__file__).resolve().parent
 ROOT = SRC.parent
 VENDOR = ROOT / "vendor" / "e8src"
-os.environ.setdefault("NLTK_DATA", "../../../../round-3/"
-                                   "gen_art_experiment_8/data/nltk_data")
+os.environ.setdefault("NLTK_DATA", str(Path(__file__).resolve().parents[4] / "round-3/experiment-8/src/data/nltk_data"))
 for _p in (str(VENDOR),):
     if _p not in sys.path:
         sys.path.insert(0, _p)

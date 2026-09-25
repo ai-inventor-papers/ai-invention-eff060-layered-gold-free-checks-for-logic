@@ -10,13 +10,13 @@ import sys
 from pathlib import Path
 
 RUN = Path(__file__).resolve().parents[4]
-EV2 = RUN / "iter_3/gen_art/gen_art_evaluation_2"          # art_FWy8D4_y9GBn (not declared; read-only)
-E6T1 = RUN / "iter_3/gen_art/gen_art_experiment_6"         # art_7GxreYjATkC5
-E7 = RUN / "iter_3/gen_art/gen_art_experiment_7"           # art_cxnoDYQNFolW (R_COMP)
-E8 = RUN / "iter_3/gen_art/gen_art_experiment_8"           # art_YYD-HDzfQfEj
-DSE = RUN / "iter_1/gen_art/gen_art_dataset_1"             # art_U4Hsqt4Ay9Tg (dataset E)
-RES1 = RUN / "iter_3/gen_art/gen_art_research_1"           # art_VIF75I5R6f0v
-AUDIT3 = RUN / "iter_3/review_report/review_report/audit"
+EV2 = RUN / "round-3/evaluation-2/src"          # art_FWy8D4_y9GBn (not declared; read-only)
+E6T1 = RUN / "round-3/experiment-6/src"         # art_7GxreYjATkC5
+E7 = RUN / "round-3/experiment-7/src"           # art_cxnoDYQNFolW (R_COMP)
+E8 = RUN / "round-3/experiment-8/src"           # art_YYD-HDzfQfEj
+DSE = RUN / "round-1/dataset-1/src"             # art_U4Hsqt4Ay9Tg (dataset E)
+RES1 = RUN / "round-3/research-1/src"           # art_VIF75I5R6f0v
+AUDIT3 = RUN / "round-3/review/audit"
 IT2_E6 = RUN / "iter_2/gen_art/gen_art_experiment_6"
 IT2_DS2 = RUN / "iter_2/gen_art/gen_art_dataset_2"
 HYP4 = RUN / "iter_4/gen_strat/gen_strat_1/README.md"

@@ -22,7 +22,7 @@ SRC = Path(__file__).resolve().parent
 ROOT = SRC.parent
 RES = ROOT / "results"
 DATA = ROOT / "data"
-EV2_PAIRWISE = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_evaluation_2/pairwise_classes_E.jsonl")
+EV2_PAIRWISE = Path(__file__).resolve().parents[4] / "round-3/evaluation-2/src/pairwise_classes_E.jsonl"
 
 
 def _init():

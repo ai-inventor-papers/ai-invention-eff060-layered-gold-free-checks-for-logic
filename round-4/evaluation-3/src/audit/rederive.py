@@ -21,7 +21,7 @@ from sklearn.metrics import roc_auc_score
 
 ROOT = Path(__file__).resolve().parent.parent
 RUN = Path(__file__).resolve().parents[4]
-E6T1, E7, E8 = RUN / "iter_3/gen_art/gen_art_experiment_6", RUN / "iter_3/gen_art/gen_art_experiment_7", RUN / "iter_3/gen_art/gen_art_experiment_8"
+E6T1, E7, E8 = RUN / "round-3/experiment-6/src", RUN / "round-3/experiment-7/src", RUN / "round-3/experiment-8/src"
 POOL3 = {"deepseek", "microsoft", "openai"}
 
 

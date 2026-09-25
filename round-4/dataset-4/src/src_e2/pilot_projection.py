@@ -14,7 +14,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-E_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+E_DIR = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src"
 
 
 def jl(p):

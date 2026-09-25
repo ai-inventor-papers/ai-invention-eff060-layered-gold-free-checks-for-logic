@@ -1,0 +1,52 @@
+{
+ "n_primary": 354,
+ "n_err": 196,
+ "c_csc": {
+  "n": 354,
+  "strat": 0.6136,
+  "ci_B300": [
+   0.501,
+   0.728
+  ],
+  "e": 0.459,
+  "d": 0.139
+ },
+ "c_free_exact": {
+  "n": 354,
+  "strat": 0.7697,
+  "ci_B300": [
+   0.675,
+   0.839
+  ],
+  "e": 0.173,
+  "d": 0.323
+ },
+ "c_score_align": {
+  "n": 354,
+  "strat": 0.774,
+  "ci_B300": [
+   0.687,
+   0.852
+  ]
+ },
+ "primary_stratum_counts": {
+  "L25": [
+   59,
+   22
+  ],
+  "L20": [
+   77,
+   20
+  ],
+  "EXC": [
+   41,
+   45
+  ],
+  "CTRL": [
+   19,
+   71
+  ]
+ },
+ "full_CTRL_share_of_CORRECT": 0.274,
+ "primary_CTRL_share_of_CORRECT": 0.449
+}

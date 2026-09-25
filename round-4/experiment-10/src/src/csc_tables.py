@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
 DATA = ROOT / "data"
-E8 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8")
+E8 = Path(__file__).resolve().parents[4] / "round-3/experiment-8/src"
 
 
 def rcsv(p: Path) -> list[dict]:

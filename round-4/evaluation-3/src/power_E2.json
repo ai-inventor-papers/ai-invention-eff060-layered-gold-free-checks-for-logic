@@ -4,7 +4,7 @@
   "n_err": 1822,
   "n_cor": 864,
   "n_sent": 292,
-  "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl :: in_R_AB & pool == E_POOL"
+  "source": "../../../round-3/experiment-6/src/results/per_item_T1.jsonl :: in_R_AB & pool == E_POOL"
  },
  "comparators": {
   "flashlite_disg": "judge_cheap_disg",

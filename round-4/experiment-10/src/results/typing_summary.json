@@ -1,5 +1,5 @@
 {
- "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_8/results/analysis_typing.json",
+ "source": "../../../../round-3/experiment-8/src/results/analysis_typing.json",
  "majority_class": "ADD",
  "majority_acc_exp8": 0.17708333333333334,
  "marginal_chance_exp8": 0.11568113573554421,

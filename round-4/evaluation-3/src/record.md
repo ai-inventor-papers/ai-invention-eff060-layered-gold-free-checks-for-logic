@@ -75,7 +75,7 @@ Every number in the tables below is read from a source file by code (`src/t8_par
 
 ### Mismatches and wording corrections (source wins)
 
-- **exp-7 peer generation $/candidate (plan literal; not in hypothesis)**: stated `$0.000996` vs source `0.00011640721628959276` (/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_7/results/rcomp_candidates.jsonl :: mean cost_usd). The literal is in §0: False.
+- **exp-7 peer generation $/candidate (plan literal; not in hypothesis)**: stated `$0.000996` vs source `0.00011640721628959276` (../../../round-3/experiment-7/src/results/rcomp_candidates.jsonl :: mean cost_usd). The literal is in §0: False.
 - **'26.8% of controls score c = 1'** is true only for the NON-RENAME controls. Across all controls, including RENAME_NONCE (100%) and RENAME_SYN (73.9%), the share is 42.8% (audit/perturb_c_align_constant.json).
 - **Cost units.** SIG peer generation is $0.000116 per CANDIDATE and $0.00116 per SENTENCE (10 slots). Neither equals the plan's `$0.000996 per candidate`, and that literal does not occur in the hypothesis. `tables/cost_units.csv` gives every cost with an explicit unit column. Iteration-3 spend comes from the workspace `.aii_cost_ledger.jsonl` files: T1 $2.395, T2 $1.581, exp 8 $0.352, total $4.33. `results/costs.jsonl` of exp 7 holds only the judge calls ($1.04), which is why an earlier reading could come out low.
 

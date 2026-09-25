@@ -18,13 +18,13 @@ paths to exist, or the constants in `src/common.py` must be edited:
 
 | input | path under `../../../` |
 |---|---|
-| FREE generations (no scores) | `iter_3/gen_art/gen_art_experiment_7/rcomp/raw/generations.jsonl` |
-| sentences and references | `iter_3/gen_art/gen_art_experiment_7/rcomp/work/rcomp_sentences.json` |
-| SIG pure-z3 labels | `iter_3/gen_art/gen_art_experiment_7/results/sig_labels.jsonl` |
-| old labels (post-seal join only, whitelist loader) | `iter_3/gen_art/gen_art_experiment_7/results/rcomp_candidates.jsonl` |
-| WordNet data (`NLTK_DATA`) | `iter_3/gen_art/gen_art_experiment_7/data/nltk_data` |
-| lexicon | `iter_2/gen_art/gen_art_dataset_3/lexicon.json` |
-| cross-check | `iter_2/gen_art/gen_art_dataset_3/full_data_out.json` |
+| FREE generations (no scores) | `round-3/experiment-7/src/rcomp/raw/generations.jsonl` |
+| sentences and references | `round-3/experiment-7/src/rcomp/work/rcomp_sentences.json` |
+| SIG pure-z3 labels | `round-3/experiment-7/src/results/sig_labels.jsonl` |
+| old labels (post-seal join only, whitelist loader) | `round-3/experiment-7/src/results/rcomp_candidates.jsonl` |
+| WordNet data (`NLTK_DATA`) | `round-3/experiment-7/src/data/nltk_data` |
+| lexicon | `round-2/dataset-3/src/lexicon.json` |
+| cross-check | `round-2/dataset-3/src/full_data_out.json` |
 | vendored code sources (hashes in `VENDOR_SHA256.json`) | dataset 3 `labeller/fol.py`, `labeller/repair_census.py`, `src/templates.py`, `src/perturb.py`; exp 5 `src/vendor_a/fol_triage.py`; exp 7 `src/sig_prompt.py`, `src/label_sig.py` |
 
 ## 2. Environment

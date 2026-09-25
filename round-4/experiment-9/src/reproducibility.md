@@ -19,7 +19,7 @@ Some inputs are read in place from absolute paths under `../../../` (read-only, 
 - `s4_full_coefs.json`;
 - exp 5 `prereg.json`;
 - the exp 8 `data/nltk_data` directory (WordNet, used for RENAME_SYN);
-- the sibling `iter_4/gen_art/gen_art_evaluation_3/results/part1.json`, which is read only after d is written.
+- the sibling `round-4/evaluation-3/src/results/part1.json`, which is read only after d is written.
 
 Keep those paths, or edit `src/prep.py:INPUTS`, `src/score.py:EV2_PAIRWISE`, `src/analyse.py:RUN` and `src/csc.py` (the NLTK_DATA default).
 

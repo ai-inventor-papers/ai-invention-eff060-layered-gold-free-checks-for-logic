@@ -28,10 +28,10 @@ sys.path.insert(0, str(SRC))
 import csc_lib as L  # noqa: E402
 
 RUN = Path(__file__).resolve().parents[4]
-E8 = RUN / "iter_3/gen_art/gen_art_experiment_8"
-E7 = RUN / "iter_3/gen_art/gen_art_experiment_7"
-DS3 = RUN / "iter_2/gen_art/gen_art_dataset_3/full_data_out.json"
-DSE = RUN / "iter_1/gen_art/gen_art_dataset_1/full_data_out.json"
+E8 = RUN / "round-3/experiment-8/src"
+E7 = RUN / "round-3/experiment-7/src"
+DS3 = RUN / "round-2/dataset-3/src/full_data_out.json"
+DSE = RUN / "round-1/dataset-1/src/full_data_out.json"
 DATA = ROOT / "data"
 RES = ROOT / "results"
 

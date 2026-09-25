@@ -20,7 +20,7 @@ from stats import auc, strat_auc  # noqa: E402
 
 from score import EV2_PAIRWISE, jl  # noqa: E402
 
-EXP5_PREREG = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/prereg.json")
+EXP5_PREREG = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src/results/prereg.json"
 
 
 def run() -> dict:

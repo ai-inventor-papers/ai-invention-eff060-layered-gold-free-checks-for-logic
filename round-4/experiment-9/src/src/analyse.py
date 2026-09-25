@@ -318,9 +318,9 @@ def s4_nesting(P: pd.DataFrame, pop_mask: np.ndarray, boot: SentBoot) -> dict:
     """(c) fit_s4_oof on folds_E: [S4_full + x] vs S4_full, [S4_full + c_score_align + x] vs [S4_full + c_score_align], fitted
     on the population rows only (labels = R_AB), OOF predictions compared with the paired sentence bootstrap."""
     from s4 import fit_s4_oof
-    coefs = json.loads((RUN / "iter_3/gen_art/gen_art_experiment_6/results/s4_full_coefs.json").read_text())
+    coefs = json.loads((RUN / "round-3/experiment-6/src/results/s4_full_coefs.json").read_text())
     s4 = coefs["S4_full"]["features_used"]
-    T1 = {r["canonical_key"]: r for r in jl(RUN / "iter_3/gen_art/gen_art_experiment_6/results/per_item_T1.jsonl") if r["canonical_key"] in set(P.row_key)}
+    T1 = {r["canonical_key"]: r for r in jl(RUN / "round-3/experiment-6/src/results/per_item_T1.jsonl") if r["canonical_key"] in set(P.row_key)}
     bf = {}
     with open(RUN / "iter_2/gen_art/gen_art_experiment_6/E_baseline_features.jsonl") as fh:
         want = {T1[k]["exp6_row_key"] for k in T1}
@@ -389,7 +389,7 @@ def d_went(P: pd.DataFrame, pop_mask: np.ndarray, free_flag_col: str, csc_flag_c
         for f in fams:
             if f in sp:
                 need[(r.row_key, sp[f]["row_key"])] = None
-    with open(RUN / "iter_3/gen_art/gen_art_experiment_8/results/pairs_E.jsonl") as fh:
+    with open(RUN / "round-3/experiment-8/src/results/pairs_E.jsonl") as fh:
         for line in fh:
             q = json.loads(line)
             k = (q["cand"], q["peer"])
@@ -658,11 +658,11 @@ def main() -> dict:
             "d_FREE_exact_FULL": A["a_ed_FULL"]["cells"]["R_AB"]["FREE_exact"], "d_FREE_align_FULL": A["a_ed_FULL"]["cells"]["R_AB"]["FREE_align"],
             "d_END_MAJ9_FULL": A["a_ed_FULL"]["cells"]["R_AB"]["END_MAJ9"], "written_ts": time.time()}
     jdump(dres, RES / "d_measured.json")
-    sib = RUN / "iter_4/gen_art/gen_art_evaluation_3/prereg_d_split.json"
+    sib = RUN / "round-4/evaluation-3/src/prereg_d_split.json"
     A["d_vs_sibling_prediction"] = {"sibling_file": str(sib), "exists": sib.exists(), "read_after_d_written_ts": time.time()}
     if sib.exists():
         A["d_vs_sibling_prediction"]["sibling_prereg_sha256"] = hashlib.sha256(sib.read_bytes()).hexdigest()
-    p1 = RUN / "iter_4/gen_art/gen_art_evaluation_3/results/part1.json"
+    p1 = RUN / "round-4/evaluation-3/src/results/part1.json"
     if p1.exists():
         pools = json.loads(p1.read_text()).get("pools", {})
         A["d_vs_sibling_prediction"]["sibling_part1_predictions"] = {k: {kk: pools[k].get(kk) for kk in ("d_floor_pred", "d_floor_pred_ci", "e_ceiling_pred")}
