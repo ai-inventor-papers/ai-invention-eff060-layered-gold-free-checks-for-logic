@@ -1,0 +1,243 @@
+{
+ "status": "FAIL(g3)",
+ "gates": {
+  "g1": {
+   "pass": true,
+   "paired_flip": 0.03409090909090909,
+   "FA_SYN": 0.9318181818181818,
+   "FA_paired_bases": 0.8977272727272727,
+   "FA_all_bases": 0.8282828282828283,
+   "rule": "flip <= 0.05 AND FA <= FA(base) + 0.05"
+  },
+  "g2": {
+   "pass": true,
+   "recall_gg": 1.0,
+   "recall_c_align": 1.0,
+   "FA_base_gg": 0.8282828282828283,
+   "FA_base_c_align": 0.7121212121212122,
+   "recall_given_base_endorsed_gg": 1.0,
+   "recall_given_base_endorsed_c_align": 1.0
+  },
+  "g3": {
+   "pass": false,
+   "gg": 0.6964364733668502,
+   "V0": 0.7421654662067422,
+   "delta_ci": [
+    -0.0708974380922907,
+    -0.021226381894754013
+   ]
+  },
+  "checker": {
+   "pass": true,
+   "G-A_confirm_BA": 0.9074303405572756,
+   "G-B": "NOT_TESTABLE",
+   "G-B_confirm_BA_descriptive": 0.9406862745098039
+  },
+  "NONCE_expected_failure": {
+   "n": 110,
+   "FA": 1.0,
+   "FA_paired_bases": 0.7727272727272727,
+   "paired_flip": 0.22727272727272727,
+   "by_base_status": {
+    "GOLD_PANEL_OK": {
+     "n": 43,
+     "FA": 1.0,
+     "FA_base": 0.8837209302325582,
+     "flip": 0.11627906976744186
+    },
+    "PANEL_REPAIRED": {
+     "n": 39,
+     "FA": 1.0,
+     "FA_base": 0.9230769230769231,
+     "flip": 0.07692307692307693
+    },
+    "TRUSTED_AGREED": {
+     "n": 28,
+     "FA": 1.0,
+     "FA_base": 0.39285714285714285,
+     "flip": 0.6071428571428571
+    }
+   }
+  },
+  "GG_status": "FAIL"
+ },
+ "checker_model": "google/gemini-2.5-flash",
+ "checker_provider": "Google (OpenRouter; reasoning max_tokens 0, 0 reasoning tokens)",
+ "prompt": "gloss_gg_v2",
+ "prompt_sha256": "48394616002323cb0608527746812df0a1953264385fff205e4a1b3b9087c46d",
+ "prompt_revision": {
+  "written_utc": "2026-09-24T11:26:34Z",
+  "revision": "the ONE pre-registered prompt revision (after the dev halves)",
+  "trigger": "G-A dev half A balanced accuracy 0.780 < 0.90 (NO_NONCE 0.508, YES_FORM 0.492, NO_ROLE 0.730); G-B dev 0.950",
+  "change": "system text only: explicit rules for built-in negation / fixed arguments, argument-role reading, and nonce tokens",
+  "gloss_gg_v2_sha256": "48394616002323cb0608527746812df0a1953264385fff205e4a1b3b9087c46d",
+  "gloss_gg_gateA_v2_sha256": "24784d011329cc5880ec40a1fe3461b1018b4ac48b546d94facd17ad6e9d218c",
+  "confirm_rule": "confirm halves (G-A half B, G-B confirm) run ONCE with v2"
+ },
+ "caps": {
+  "max_maps_per_pair": 20000,
+  "max_secs_per_pair": 10.0,
+  "keep_equiv_maps": 5,
+  "cap_hit": "not agreeing (counted)",
+  "z3_unknown": "not agreeing (counted)"
+ },
+ "map_family": "injective arity-consistent predicate map + injective constant map; either direction (bijection => one direction searched); NO B1-B5 bridges; argument order is never permuted",
+ "E_headline": {
+  "ALL-strat": {
+   "c_gg": {
+    "auroc": 0.6964364733668502,
+    "ci": [
+     0.6593869075913343,
+     0.7325637662467749
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.6851605026470541,
+    "ci": [
+     0.6477812650837804,
+     0.7224002779374089
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.689402986666098,
+    "ci": [
+     0.6521886874991049,
+     0.7256701171279417
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7421654662067422,
+    "ci": [
+     0.7074502503344503,
+     0.774130921033457
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.04572899283989196,
+    "ci": [
+     -0.0708974380922907,
+     -0.021226381894754013
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.05700496355968809,
+    "ci": [
+     -0.07946007534037781,
+     -0.03668890311324016
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.05276247954064417,
+    "ci": [
+     -0.08701422407474535,
+     -0.017856484090328164
+    ]
+   }
+  },
+  "LONG-strat": {
+   "c_gg": {
+    "auroc": 0.6886665570342875,
+    "ci": [
+     0.6500605367753001,
+     0.7262309460476591
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.6826994232553769,
+    "ci": [
+     0.6437900027484259,
+     0.7215272402305699
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.6724169828386172,
+    "ci": [
+     0.6341961381516903,
+     0.7111593831186117
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7425924729540836,
+    "ci": [
+     0.7061825496731055,
+     0.7758485282757984
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.05392591591979612,
+    "ci": [
+     -0.07970902575405811,
+     -0.029838034821039947
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.05989304969870668,
+    "ci": [
+     -0.08337614945644607,
+     -0.0373415763794124
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.07017549011546642,
+    "ci": [
+     -0.10338709849890972,
+     -0.03807017383525768
+    ]
+   }
+  },
+  "L25": {
+   "c_gg": {
+    "auroc": 0.6569534787978591,
+    "ci": [
+     0.5955131929079831,
+     0.7120359677486703
+    ]
+   },
+   "c_gg_allyes": {
+    "auroc": 0.6519226018937835,
+    "ci": [
+     0.5864053667631709,
+     0.710175200578677
+    ]
+   },
+   "c_exact": {
+    "auroc": 0.6113050638122685,
+    "ci": [
+     0.5525634804789544,
+     0.6709477402817299
+    ]
+   },
+   "V0_frozen": {
+    "auroc": 0.7129847673939893,
+    "ci": [
+     0.6493294162748214,
+     0.7695635621419243
+    ]
+   },
+   "c_gg - V0": {
+    "delta": -0.05603128859613016,
+    "ci": [
+     -0.09694120853492863,
+     -0.017815611168613237
+    ]
+   },
+   "c_gg_allyes - V0": {
+    "delta": -0.06106216550020582,
+    "ci": [
+     -0.0973907437823976,
+     -0.025786042550804075
+    ]
+   },
+   "c_exact - V0": {
+    "delta": -0.10167970358172085,
+    "ci": [
+     -0.16775623311148233,
+     -0.037829705160757704
+    ]
+   }
+  }
+ },
+ "why_it_fails": "GG lowers e in every T9 class (MEANING_RENAME-type 0.502 -> 0.224; ALL 0.140 -> 0.081) but raises d (ALL 0.490 -> 0.629; L25 0.811 -> 0.960): bijective symbol maps cannot bridge granularity/decomposition differences that eqmv accepts: of the 946 eqmv-accepted node pairs that GG does not accept, all 678 kind=gran pairs fail the arity-multiset prefilter and 268 kind=align pairs are gloss-rejected, so correct candidates lose support. g1/g2 pass only trivially: base FA is 0.83 (c > 0.5), so recall ~1 and flips are bounded by the already-flagged bases.",
+ "written_utc": "2026-09-24T11:30:54Z",
+ "boundary": "rename non-invariance of consensus is a measured boundary: c_align PERTURB NONCE/SYN FA 0.765/0.565, paired flips 0.327/0.182; 9-peer ΔFA +0.273"
+}

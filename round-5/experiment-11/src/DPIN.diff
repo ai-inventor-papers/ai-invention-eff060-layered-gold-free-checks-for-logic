@@ -1,0 +1,8 @@
+102a103,105
+>         _pin = json.loads(os.environ.get("AII_PROVIDER_PIN") or "{}")  # D-PIN (E2-A iter 5): request routing only
+>         if model in _pin and "provider" not in body:
+>             body["provider"] = _pin[model]
+139c142
+<                        "provider": data.get("provider")}
+---
+>                        "provider": data.get("provider"), "seconds": round(time.time() - t0, 2)}
