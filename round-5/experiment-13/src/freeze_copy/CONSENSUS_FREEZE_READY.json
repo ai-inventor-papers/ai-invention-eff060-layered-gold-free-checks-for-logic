@@ -1,0 +1,29 @@
+{
+ "token": "aii_iter5_consensus_freeze_v1",
+ "written_utc": "2026-09-24T11:20:44Z",
+ "V": {
+  "status": "FROZEN",
+  "selection_sha256": "ed8c1364b0e223c4ebc01aee6fd803577ce13ea8ca25eb8d853bab35ff491a9a",
+  "consensus_variants_sha256": "6730a63b2d7612c3d44fd92019bceff8e72a68220c3fa0c65acbbb2a9463f429",
+  "winner": "NONE: V0 stands"
+ },
+ "GG": {
+  "status": "FAIL(g3)",
+  "gg_sha256": "80e6d98e990e969c5eb7640e946f52da6e7ecebb8292bfd6003817d8778f3120",
+  "gg_gate_sha256": "7bf0a2d3ba9bf4cb9cf54187343ff4877be896afe169a76e11c3628e84ffb334",
+  "checker_model": "google/gemini-2.5-flash",
+  "prompt_sha": "48394616002323cb0608527746812df0a1953264385fff205e4a1b3b9087c46d",
+  "updated_utc": "2026-09-24T11:30:54Z"
+ },
+ "files": {
+  "selection": "freeze/selection.json",
+  "consensus_variants": "freeze/consensus_variants.py",
+  "prereg": "prereg_improve.json",
+  "scores": "results/scores_E_variants.jsonl",
+  "tests": "tests/test_variants.py",
+  "gg": "freeze/gg.py",
+  "gg_gate": "freeze/gg_gate.json",
+  "gg_dev": "results/gg_dev.json"
+ },
+ "workspace": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14"
+}

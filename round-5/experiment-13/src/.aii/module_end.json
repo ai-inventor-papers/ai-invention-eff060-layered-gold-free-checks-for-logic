@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "at": 1790250645.9804618,
+  "passed": false,
+  "attempts": 3,
+  "default_policy": true,
+  "keep_bytes": 0,
+  "problems": [
+    ".pytest_cache/  860 B  [known cache directory]"
+  ]
+}
