@@ -1,0 +1,9 @@
+{
+ "peer_endorses_both_base_and_sigpreserving_mutant": 0,
+ "n_peer_checks": 2112,
+ "examples": [],
+ "sigpreserving_controls_keep_base_per_peer_verdicts": 1.0,
+ "n_controls": 154,
+ "mutants_equivalent_to_reference_same_vocab": 0,
+ "nonrename_controls_not_equivalent_to_base": 0
+}
