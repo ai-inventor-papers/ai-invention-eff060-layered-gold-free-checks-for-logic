@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Registered Cross-Family Solver Consensus Outperforms LLM Judges on Templated NL-to-FOL Translation</title>
+<style>
+:root {
+  --bg: #faf9f6;
+  --fg: #1a1a1a;
+  --fg2: #444;
+  --fg3: #666;
+  --border: #ddd;
+  --card-bg: #fff;
+  --card-shadow: rgba(0,0,0,.08);
+  --accent: #1a6b4a;
+  --accent-bg: #e8f5ee;
+  --accent2: #c77d1a;
+  --accent2-bg: #fff5e6;
+  --hero-bg: #f0f7f3;
+  --table-stripe: #f7f7f5;
+  --code-bg: #f4f3f0;
+  --nav-bg: rgba(250,249,246,.95);
+  --lightbox-bg: rgba(0,0,0,.85);
+  --tile-bg: #f0f7f3;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg: #181a1b;
+    --fg: #e0ddd8;
+    --fg2: #b0ada6;
+    --fg3: #8a8780;
+    --border: #333;
+    --card-bg: #222;
+    --card-shadow: rgba(0,0,0,.3);
+    --accent: #4cc88a;
+    --accent-bg: #1a2e23;
+    --accent2: #e8a940;
+    --accent2-bg: #2a2010;
+    --hero-bg: #1a2e23;
+    --table-stripe: #1e2021;
+    --code-bg: #1e1e1e;
+    --nav-bg: rgba(24,26,27,.95);
+    --lightbox-bg: rgba(0,0,0,.92);
+    --tile-bg: #1a2e23;
+  }
+}
+:root[data-theme="dark"]{
+  --bg: #181a1b;
+  --fg: #e0ddd8;
+  --fg2: #b0ada6;
+  --fg3: #8a8780;
+  --border: #333;
+  --card-bg: #222;
+  --card-shadow: rgba(0,0,0,.3);
+  --accent: #4cc88a;
+  --accent-bg: #1a2e23;
+  --accent2: #e8a940;
+  --accent2-bg: #2a2010;
+  --hero-bg: #1a2e23;
+  --table-stripe: #1e2021;
+  --code-bg: #1e1e1e;
+  --nav-bg: rgba(24,26,27,.95);
+  --lightbox-bg: rgba(0,0,0,.92);
+  --tile-bg: #1a2e23;
+}
+[hidden]{display:none !important}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; padding:0;
+  font-family:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  background:var(--bg); color:var(--fg);
+  line-height:1.65; font-size:17px;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{font-weight:600; line-height:1.25; margin:0 0 .5em}
+h1{font-size:1.6em}
+h2{font-size:1.3em; border-bottom:2px solid var(--accent); padding-bottom:.25em; margin-top:2em}
+h3{font-size:1.1em; color:var(--fg2)}
+code{font-family:'SF Mono',Monaco,'Cascadia Code','Consolas',monospace; font-size:.88em; background:var(--code-bg); padding:1px 5px; border-radius:3px}
+.wrap{max-width:860px; margin:0 auto; padding:0 16px}
+/* --- Hero --- */
+.hero{background:var(--hero-bg); padding:2.5em 0 2em; border-bottom:1px solid var(--border)}
+.hero h1{color:var(--accent); font-size:1.5em; margin-bottom:.3em}
+.hero .author{color:var(--fg3); font-size:.95em; margin-bottom:.8em}
+.hero-links{display:flex; flex-wrap:wrap; gap:.5em}
+.hero-links a{
+  display:inline-flex; align-items:center; gap:.3em;
+  background:var(--accent); color:#fff; padding:.4em 1em;
+  border-radius:5px; font-size:.88em; font-weight:600;
+}
+.hero-links a:hover{opacity:.85; text-decoration:none}
+/* --- Nav --- */
+nav.side{
+  position:sticky; top:1em; float:left; width:170px;
+  margin-left:-190px; font-size:.82em;
+}
+nav.side a{
+  display:block; padding:3px 8px; color:var(--fg3);
+  border-left:2px solid transparent; margin-bottom:2px;
+}
+nav.side a.active{border-left-color:var(--accent); color:var(--accent); font-weight:600}
+nav.side a:hover{color:var(--accent); text-decoration:none}
+nav.mobile{
+  display:none; position:sticky; top:0; z-index:50;
+  background:var(--nav-bg); border-bottom:1px solid var(--border);
+  overflow-x:auto; white-space:nowrap; padding:6px 16px;
+  -webkit-overflow-scrolling:touch;
+}
+nav.mobile a{
+  display:inline-block; padding:4px 10px; font-size:.8em; color:var(--fg3);
+  border-bottom:2px solid transparent;
+}
+nav.mobile a.active{color:var(--accent); border-bottom-color:var(--accent); font-weight:600}
+nav.mobile a:hover{color:var(--accent); text-decoration:none}
+@media(max-width:1100px){
+  nav.side{display:none}
+  nav.mobile{display:block}
+}
+/* --- Main --- */
+main{margin-left:0; padding:1.5em 0 3em}
+@media(min-width:1101px){
+  main{margin-left:0; position:relative}
+}
+/* --- Cards --- */
+.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1em; margin:1em 0}
+.card{
+  background:var(--card-bg); border:1px solid var(--border);
+  border-radius:8px; padding:1em; box-shadow:0 1px 4px var(--card-shadow);
+}
+.card h3{font-size:1em; color:var(--accent); margin-bottom:.4em}
+.card p{font-size:.9em; color:var(--fg2); margin:0}
+/* --- Tables --- */
+.tbl-wrap{overflow-x:auto; margin:1em 0}
+table{width:100%; border-collapse:collapse; font-size:.88em}
+th{text-align:left; font-weight:600; border-bottom:2px solid var(--border); padding:6px 10px}
+td{padding:6px 10px; border-bottom:1px solid var(--border)}
+tr:nth-child(even){background:var(--table-stripe)}
+/* --- Tiles --- */
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1em; margin:1em 0}
+.tile{
+  background:var(--tile-bg); border-radius:8px; padding:1.2em;
+  text-align:center; border:1px solid var(--border);
+}
+.tile .num{font-size:2em; font-weight:700; color:var(--accent); line-height:1.1}
+.tile .lbl{font-size:.82em; color:var(--fg3); margin-top:.3em}
+/* --- Figures --- */
+.fig{margin:1.5em 0; text-align:center}
+.fig img{
+  max-width:100%; height:auto; border:1px solid var(--border);
+  border-radius:6px; cursor:pointer; transition:box-shadow .2s;
+}
+.fig img:hover{box-shadow:0 2px 12px var(--card-shadow)}
+.fig figcaption{font-size:.82em; color:var(--fg3); margin-top:.5em; max-width:700px; display:inline-block; text-align:left}
+/* --- Lightbox --- */
+.lightbox{
+  position:fixed; inset:0; z-index:1000;
+  background:var(--lightbox-bg);
+  display:flex; align-items:center; justify-content:center;
+  padding:2em;
+}
+.lightbox img{max-width:100%; max-height:90vh; border-radius:6px}
+.lightbox-close{
+  position:absolute; top:12px; right:16px;
+  background:none; border:none; color:#fff; font-size:2em;
+  cursor:pointer; line-height:1;
+}
+/* --- Artifacts --- */
+.artifacts{list-style:none; padding:0; margin:1em 0; columns:2; column-gap:1.5em}
+.artifacts li{break-inside:avoid; margin-bottom:.5em; font-size:.9em}
+.artifacts li::before{content:""; display:inline-block; width:6px; height:6px; background:var(--accent); border-radius:50%; margin-right:6px; vertical-align:middle}
+@media(max-width:600px){.artifacts{columns:1}}
+/* --- Footer --- */
+footer{border-top:1px solid var(--border); padding:2em 0; margin-top:2em}
+footer .links{display:flex; flex-wrap:wrap; gap:1em; margin-bottom:1em}
+footer .links a{font-size:.9em}
+.citation{background:var(--code-bg); padding:1em; border-radius:6px; font-size:.82em; font-family:'SF Mono',Monaco,'Cascadia Code','Consolas',monospace; white-space:pre-wrap; word-break:break-all}
+/* --- Abstract --- */
+.abstract{
+  background:var(--card-bg); border:1px solid var(--border);
+  border-radius:8px; padding:1.2em 1.5em; margin:1em 0;
+  font-size:.95em; color:var(--fg2);
+}
+.abstract strong{color:var(--fg)}
+/* --- Limitations --- */
+.limitations{list-style:decimal; padding-left:1.5em}
+.limitations li{margin-bottom:.6em; font-size:.92em}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Pre-Registered Cross-Family Solver Consensus Outperforms LLM Judges on Templated NL-to-FOL Translation with a Supplied Predicate Signature</h1>
+    <div class="author">Anonymous</div>
+    <div class="hero-links">
+      <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/paper.pdf">Paper (PDF)</a>
+      <a href="interactive.html">Explore the interactive demo</a>
+      <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/report.pdf">Report (PDF)</a>
+      <a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3">Code Repository</a>
+    </div>
+  </div>
+</div>
+
+<nav class="mobile" aria-label="Sections">
+  <a href="#abstract">Abstract</a>
+  <a href="#contributions">Contributions</a>
+  <a href="#method">Method</a>
+  <a href="#results-sig">SIG Results</a>
+  <a href="#results-dev">Dev Results</a>
+  <a href="#results-free">Free OOS</a>
+  <a href="#mechanism">Mechanism</a>
+  <a href="#rename">Rename</a>
+  <a href="#confirmation">Confirmation</a>
+  <a href="#limitations">Limitations</a>
+  <a href="#artifacts">Artifacts</a>
+</nav>
+
+<div class="wrap" style="position:relative">
+  <nav class="side" aria-label="Sections">
+    <a href="#abstract">Abstract</a>
+    <a href="#contributions">Contributions</a>
+    <a href="#method">Method</a>
+    <a href="#results-sig">SIG Results</a>
+    <a href="#results-dev">Dev Results</a>
+    <a href="#results-free">Free OOS</a>
+    <a href="#mechanism">Mechanism</a>
+    <a href="#rename">Rename</a>
+    <a href="#confirmation">Confirmation</a>
+    <a href="#limitations">Limitations</a>
+    <a href="#artifacts">Artifacts</a>
+  </nav>
+
+  <main>
+
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <div class="abstract">
+        Evaluating the faithfulness of NL&#8594;FOL translations is hampered by the expense and unreliability of gold-standard references: roughly <strong>40%</strong> of annotations in standard benchmarks contain errors. We study a gold-free alternative based on <strong>cross-family solver consensus</strong>: collect translations from multiple independent LLM families, check pairwise equivalence with an SMT solver, and score each candidate by the fraction of cross-family peers that disagree with it. In a pre-registered evaluation on <strong>221 templated long-exception sentences</strong> with a supplied predicate signature, consensus achieves a within-template AUROC of <strong>0.954</strong> versus <strong>0.587</strong> for a disguised API judge (&Delta;&nbsp;=&nbsp;+0.367 [+0.328,&nbsp;+0.404]), flat across word-length terciles. Under free vocabulary, consensus still outperforms judges on both development data (&Delta;&nbsp;=&nbsp;+0.099) and untouched out-of-sample sentences (&Delta;&nbsp;=&nbsp;+0.171), but the advantage shrinks by roughly 0.15&nbsp;AUROC and a fundamental <strong>rename tradeoff</strong> emerges: any predicate-name alignment needed to compare independently generated formulas produces a high false-alarm rate on meaning-preserving renames. Confirmation on independent held-out data was budget-stopped and remains incomplete.
+      </div>
+    </section>
+
+    <section id="contributions">
+      <h2>Contributions</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Pre-Registered SIG Evaluation</h3>
+          <p>Within-template AUROC 0.954 vs 0.587 for a disguised judge (&Delta;&nbsp;=&nbsp;+0.367) on 221 sentences under shared signature, flat across word-length terciles. Zero error endorsement.</p>
+        </div>
+        <div class="card">
+          <h3>Free-Vocabulary Dev Results</h3>
+          <p>Consensus outperforms judges by &Delta;&nbsp;=&nbsp;+0.099 [+0.049,&nbsp;+0.146] on stratified AUROC (n&nbsp;=&nbsp;2,686). Aligner-free c_exact at 0.689 provides 78% of above-chance signal from structural agreement alone.</p>
+        </div>
+        <div class="card">
+          <h3>Untouched Free OOS</h3>
+          <p>R_COMP FREE: &Delta;&nbsp;=&nbsp;+0.171 vs original-view judge under provisional labels. Consensus reaches 94% of frontier judge AUROC. Two-auditor &Delta;&nbsp;=&nbsp;+0.105.</p>
+        </div>
+        <div class="card">
+          <h3>Rename Tradeoff</h3>
+          <p>76.5% false-alarm rate under nonce renames. No alignment variant eliminates this without sacrificing error recall. The name-free variant (c_nf) has zero rename flip but AUROC drops to 0.686.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <h2>Method</h2>
+      <h3>Consensus Scoring</h3>
+      <p>Given a sentence <em>s</em> and candidate FOL translation <em>c</em>, collect peer translations {<em>p</em><sub>1</sub>,&nbsp;&hellip;,&nbsp;<em>p<sub>k</sub></em>} from <em>k</em> independent LLM families. Score the candidate as:</p>
+      <p style="text-align:center; font-size:1.05em"><code>c_score(c, s) = 1 - (1/k) &sum; 1[equiv(c, p<sub>i</sub>)]</code></p>
+      <p>Under <strong>shared signature</strong> (c_score_sig), all translators use a supplied predicate vocabulary and <code>equiv</code> is a direct Z3 check. Under <strong>free vocabulary</strong> (c_score_align), each translator chooses its own names and <code>equiv</code> requires a predicate-name aligner before Z3.</p>
+
+      <h3>Predicate Alignment (Free Vocabulary)</h3>
+      <p>Independent translators choose different predicate names (e.g. <code>Runs(x)</code> vs <code>IsRunner(x)</code>). The aligner combines three cost components:</p>
+      <ol>
+        <li><strong>Structural cost</strong>: polarity profile, argument-count match, nesting depth</li>
+        <li><strong>Text-anchor cost</strong>: overlap between predicate-name words and source-sentence tokens (Porter stemming, WordNet synonyms)</li>
+        <li><strong>Semantic signature</strong>: truth-value profiles over random finite interpretations</li>
+      </ol>
+      <p>The <em>k</em> cheapest bijections are evaluated; the pair is declared equivalent if any bijection yields a Z3-verified equivalence.</p>
+
+      <h3>Score Variants</h3>
+      <ul>
+        <li><strong>c_exact</strong>: no alignment; exact-match equivalence only. Immune to rename false alarms.</li>
+        <li><strong>c_nf</strong> (name-free): alignment by structural and semantic signatures only, ignoring text anchoring.</li>
+        <li><strong>p_peer_text</strong>: logistic fusion of consensus features with text-side features (bag-of-words coverage, role accounting, Z3 structural match).</li>
+      </ul>
+
+      <h3>Evaluation Framework</h3>
+      <p><strong>Shared-signature labels</strong> (R_COMP): Z3 equivalence to trusted-by-construction references (one weak, one strong reading per template). No human or LLM judgement in the labelling loop.</p>
+      <p><strong>Free-vocabulary labels</strong> (set E): three-person expert panel. R_COMP FREE: provisional search-based classifications (non-confirmatory).</p>
+      <p><strong>Primary metric</strong>: stratified AUROC (items paired only within the same source stratum). Confidence intervals via sentence-cluster percentile bootstrap (B&nbsp;=&nbsp;2,000).</p>
+    </section>
+
+    <section id="results-sig">
+      <h2>Shared-Signature Results (R_COMP-SIG)</h2>
+
+      <div class="tiles">
+        <div class="tile">
+          <div class="num">0.954</div>
+          <div class="lbl">Consensus AUROC<br>(c_score_sig)</div>
+        </div>
+        <div class="tile">
+          <div class="num">0.587</div>
+          <div class="lbl">Judge AUROC<br>(flash-lite, disguised)</div>
+        </div>
+        <div class="tile">
+          <div class="num">+0.367</div>
+          <div class="lbl">&Delta; Consensus &minus; Judge<br>[+0.328, +0.404]</div>
+        </div>
+      </div>
+
+      <p>On 1,904 rows where both scores exist. Population: 429 ERROR / 1,595 CORRECT (21.2% error rate) from 221 sentences, 10 LLM slots across 9 vendor families. Error endorsement is zero (<em>e</em>&nbsp;=&nbsp;0): no error item scores below the decision threshold. Among 429 error items, 75.3% receive the maximum score of 1.0.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption style="text-align:left; font-size:.85em; color:var(--fg3); margin-bottom:.5em">Table 1: Within-template AUROC on R_COMP-SIG (221 sentences, pure Z3 labels)</caption>
+          <thead><tr><th>Metric</th><th><em>n</em></th><th>AUROC [95% CI]</th><th>&Delta; vs disg. judge</th></tr></thead>
+          <tbody>
+            <tr><td>c_score_sig</td><td>1,904</td><td>0.954 [0.939, 0.968]</td><td>+0.367 [+0.328, +0.404]</td></tr>
+            <tr><td>c_score_align</td><td>1,904</td><td>0.954 [0.939, 0.968]</td><td>+0.367 [+0.328, +0.404]</td></tr>
+            <tr><td>judge (flash-lite, disg.)</td><td>1,904</td><td>0.587 [0.551, 0.622]</td><td>&mdash;</td></tr>
+            <tr><td>judge (flash-lite, orig.)</td><td>1,932</td><td>0.673 [0.637, 0.708]</td><td></td></tr>
+            <tr><td>judge (frontier, orig.)</td><td>60</td><td>0.932 [0.782, 1.000]</td><td></td></tr>
+            <tr><td>judge (local, disg.)</td><td>2,024</td><td>0.498 [0.459, 0.534]</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Flat with Sentence Length</h3>
+      <p>Unlike the free-vocabulary setting, consensus under shared signature is flat across word-length terciles: W1 0.959, W2 0.947, W3 0.953.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption style="text-align:left; font-size:.85em; color:var(--fg3); margin-bottom:.5em">Table 2: R_COMP-SIG AUROC by word-length tercile</caption>
+          <thead><tr><th>Tercile</th><th><em>n</em></th><th>ERR/COR</th><th>c_sig</th><th>judge (disg.)</th><th>&Delta; [CI]</th></tr></thead>
+          <tbody>
+            <tr><td>W1 (shortest)</td><td>503</td><td>125/449</td><td>0.959</td><td>0.578</td><td>+0.382 [+0.278, +0.472]</td></tr>
+            <tr><td>W2</td><td>712</td><td>149/594</td><td>0.947</td><td>0.624</td><td>+0.331 [+0.253, +0.421]</td></tr>
+            <tr><td>W3 (longest)</td><td>689</td><td>155/552</td><td>0.953</td><td>0.567</td><td>+0.388 [+0.301, +0.471]</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="fig" id="fig-sig-tercile">
+        <img src="figures/fig_sig_tercile_v0.png" alt="R_COMP-SIG AUROC by word-length tercile" width="800" height="500">
+        <figcaption>Figure 1: Within-template AUROC on R_COMP-SIG by word-length tercile. Consensus (blue) is flat (0.947&ndash;0.959); the disguised judge (orange) hovers near chance (0.567&ndash;0.624).</figcaption>
+      </figure>
+
+      <p><strong>Frontier judge comparison</strong>: On a 60-row subsample, consensus achieves 0.956 [0.889, 1.000] vs 0.932 [0.855, 0.990] for the frontier judge (Gemini 3.1 Pro).</p>
+
+      <p><strong>Scope</strong>: R_COMP-SIG uses templated sentences with a supplied predicate vocabulary. The shared signature eliminates the alignment problem entirely. These results do not extend to free-vocabulary settings.</p>
+    </section>
+
+    <section id="results-dev">
+      <h2>Free-Vocabulary Development Results (Set E)</h2>
+
+      <figure class="fig" id="fig-dev-auroc">
+        <img src="figures/fig_dev_auroc_v0.png" alt="Stratified AUROC on development set E" width="800" height="500">
+        <figcaption>Figure 2: Stratified AUROC on the free-vocabulary development dataset. Consensus-based metrics (blue) outperform API judges (orange) and other baselines (gray). Error bars: 95% sentence-cluster bootstrap CIs.</figcaption>
+      </figure>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption style="text-align:left; font-size:.85em; color:var(--fg3); margin-bottom:.5em">Table 3: Stratified AUROC on development set E (R_AB, n = 2,686)</caption>
+          <thead><tr><th>Metric</th><th>Strat AUROC [95% CI]</th><th>$/item</th></tr></thead>
+          <tbody>
+            <tr><td>c_score_align</td><td>0.741 [0.705, 0.775]</td><td>9.1e-5</td></tr>
+            <tr><td>p_peer_text (fused)</td><td>0.753 [0.720, 0.784]</td><td>9.1e-5</td></tr>
+            <tr><td>c_exact (no alignment)</td><td>0.689 [0.652, 0.726]</td><td>&mdash;</td></tr>
+            <tr><td>c_nf (name-free)</td><td>0.686 [0.647, 0.720]</td><td>&mdash;</td></tr>
+            <tr style="border-top:2px solid var(--border)"><td>flash-lite judge (disg.)</td><td>0.642 [0.607, 0.676]</td><td>5.1e-5</td></tr>
+            <tr><td>flash-lite judge (orig.)</td><td>0.623 [0.593, 0.651]</td><td>5.1e-5</td></tr>
+            <tr><td>nano judge (disg.)</td><td>0.644 [0.609, 0.680]</td><td>2.0e-5</td></tr>
+            <tr><td>local judge Qwen-8B (disg.)</td><td>0.674 [0.646, 0.703]</td><td>&mdash;</td></tr>
+            <tr style="border-top:2px solid var(--border)"><td>round-trip NLI (min)</td><td>0.606 [0.569, 0.645]</td><td>2.8e-5</td></tr>
+            <tr><td>self-consistency (5-sample)</td><td>0.598 [0.559, 0.637]</td><td>6.7e-5</td></tr>
+            <tr style="border-top:2px solid var(--border)"><td>28-feature stack</td><td>0.735 [0.699, 0.766]</td><td>&mdash;</td></tr>
+            <tr><td>28-feature stack + c_score_align</td><td>0.774 [0.743, 0.802]</td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The drop from 0.952 (shared signature, full 2,024-row pool) to 0.801 (free vocabulary on the same R_COMP sentences) reflects the cost of predicate-name alignment. Aligner-free c_exact at 0.689 provides 78% of the above-chance signal from structural agreement alone; the aligner adds the remaining 22%.</p>
+      <p>Adding c_score_align to the 28-feature baseline stack increases stratified AUROC by +0.039 [+0.021,&nbsp;+0.057]; permutation null test <em>p</em><sub>95</sub>&nbsp;=&nbsp;0.009.</p>
+      <p><strong>Frontier judge comparison</strong>: c_score_align achieves 95.7% of the frontier judge's AUROC (ratio 0.957 [0.887, 1.034]) on a 284-row subsample.</p>
+      <p><strong>System-level ranking</strong>: Kendall &tau;<sub>b</sub>&nbsp;=&nbsp;0.692 [+0.513,&nbsp;+0.795] between system mean score and error rate across 13 configurations.</p>
+    </section>
+
+    <section id="results-free">
+      <h2>Free-Vocabulary Out-of-Sample (R_COMP FREE)</h2>
+
+      <p>The same 221 R_COMP sentences translated under free vocabulary. Confirmatory labelling required a gloss gate that failed twice (balanced accuracy 0.776 and 0.561, below the 0.90 threshold), producing zero confirmed CORRECT rows. Results use provisional non-confirmatory labels.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption style="text-align:left; font-size:.85em; color:var(--fg3); margin-bottom:.5em">Table 4: R_COMP FREE provisional AUROCs (within-template, untouched rows)</caption>
+          <thead><tr><th>View</th><th><em>n</em> (ERR/MAPPED)</th><th>c_align</th><th>judge</th></tr></thead>
+          <tbody>
+            <tr><td>Disguised</td><td>1,706 (602/1,104)</td><td>0.801 [0.770, 0.834]</td><td>0.584 [0.550, 0.618]</td></tr>
+            <tr><td>Original</td><td>1,709 (605/1,104)</td><td>0.804 [0.774, 0.836]</td><td>0.633 [0.601, 0.666]</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Disguised-judge &Delta;&nbsp;=&nbsp;+0.217 [+0.175, +0.260]. Original-view &Delta;&nbsp;=&nbsp;+0.171 [+0.135, +0.206]. On a 146-row two-auditor subset: &Delta;&nbsp;=&nbsp;+0.105 [+0.011, +0.215]. On a 150-row frontier-judge subsample: consensus reaches 0.94 of the frontier judge's AUROC.</p>
+    </section>
+
+    <section id="mechanism">
+      <h2>Mechanism</h2>
+
+      <p>The consensus signal decomposes into <strong>endorsement</strong> <em>e</em> (fraction of ERROR items endorsed by peers, i.e. false negatives) and <strong>divergence</strong> <em>d</em> (fraction of CORRECT items that diverge from peers, i.e. false positives). AUROC at a binary threshold equals 1&nbsp;&minus;&nbsp;(<em>e</em>&nbsp;+&nbsp;<em>d</em>)/2.</p>
+
+      <p><strong>Shared vocabulary</strong>: <em>e</em>&nbsp;=&nbsp;0.0, <em>d</em>&nbsp;=&nbsp;0.260. Zero error endorsement; 26% false-alarm rate from valid alternative formalizations. Flat across sentence lengths.</p>
+
+      <p><strong>Free vocabulary</strong>: Net degradation &Delta;(<em>e</em>&nbsp;+&nbsp;<em>d</em>)&nbsp;=&nbsp;+0.356 [+0.198,&nbsp;+0.493] from short to long sentences, driven almost entirely by divergence (&Delta;<em>d</em>&nbsp;=&nbsp;+0.608, &Delta;<em>e</em>&nbsp;=&nbsp;&minus;0.252). As formulas grow longer, the predicate-name aligner increasingly makes mistakes.</p>
+
+      <figure class="fig" id="fig-complexity">
+        <img src="figures/fig_complexity_v0.png" alt="Endorsement and divergence by sentence-length tercile" width="800" height="500">
+        <figcaption>Figure 3: Decomposition of free-vocabulary consensus error rates by sentence-length tercile. Endorsement <em>e</em> decreases with length, but divergence <em>d</em> increases sharply, producing net degradation of +0.356. Under shared signature, this degradation is absent.</figcaption>
+      </figure>
+
+      <h3>Family Sufficiency</h3>
+      <p>Three peer families suffice for 97% of full-pool AUROC (<em>k</em><sub>95</sub>&nbsp;=&nbsp;3), but the long-sentence tercile requires <em>k</em><sub>95</sub>&nbsp;=&nbsp;5.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption style="text-align:left; font-size:.85em; color:var(--fg3); margin-bottom:.5em">Table 5: Free-vocabulary AUROC by number of peer families</caption>
+          <thead><tr><th><em>k</em></th><th>AUROC (overall)</th><th>AUROC (long, T3)</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>0.685</td><td>0.581</td></tr>
+            <tr><td>3</td><td>0.757</td><td>0.651</td></tr>
+            <tr><td>5</td><td>0.776</td><td>0.698</td></tr>
+            <tr><td>7</td><td>0.784</td><td>0.726</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="fig" id="fig-k-curve">
+        <img src="figures/fig_k_curve_v0.png" alt="AUROC vs number of peer families" width="800" height="500">
+        <figcaption>Figure 4: Stratified AUROC as a function of peer families <em>k</em>. Three families capture 97% of the full-pool signal, but long sentences require five families to reach 95%.</figcaption>
+      </figure>
+    </section>
+
+    <section id="rename">
+      <h2>The Rename Tradeoff</h2>
+
+      <p>The predicate aligner that enables free-vocabulary comparison introduces a fundamental false-alarm vulnerability. When correct formulas are copied with meaning-preserving renames, the consensus score should not change. In practice:</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <caption style="text-align:left; font-size:.85em; color:var(--fg3); margin-bottom:.5em">Table 6: False-alarm rates on meaning-preserving renames of CORRECT candidates</caption>
+          <thead><tr><th>Metric</th><th>NONCE FA</th><th>NONCE flip</th><th>SYN FA</th><th>SYN flip</th></tr></thead>
+          <tbody>
+            <tr><td>c_align</td><td>0.765</td><td>0.605</td><td>0.565</td><td>0.313</td></tr>
+            <tr><td>c_nf (name-free)</td><td>0.132</td><td>0.000</td><td>0.201</td><td>0.000</td></tr>
+            <tr><td>p_peer_text</td><td>1.000</td><td>0.821</td><td>0.216</td><td>0.080</td></tr>
+            <tr><td>judge (disg.)</td><td>0.229</td><td>0.134</td><td>0.085</td><td>0.058</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The name-free variant c_nf eliminates rename sensitivity (flip&nbsp;=&nbsp;0) but at the cost of within-base AUROC 0.499 (chance level) and lower overall discrimination (0.686 vs 0.741). This tradeoff explains the gap between shared-signature and free-vocabulary performance.</p>
+
+      <h3>Per-Type Sensitivity</h3>
+      <p>On the PERTURB suite (4,234 typed mutants + 868 controls), consensus recall at the primary threshold is flat across error operators: NEG 0.761, SWAP 0.758, DROP 0.721, ADD 0.763, MEANING_RENAME 0.762. Error typing under free vocabulary achieves only 0.123 [0.081, 0.169] accuracy, below both the judge (0.326) and peer-medoid baseline (0.328).</p>
+    </section>
+
+    <section id="confirmation">
+      <h2>Confirmation Status</h2>
+      <p>Independent confirmation on held-out data remains incomplete. A fresh dataset (E2-A, 550 new sentences) was constructed but the budget was exhausted before enough items could be labelled.</p>
+      <ul>
+        <li><strong>DT stratum</strong> (short, ProverQA): consensus AUROC 0.916, tying Qwen-8B judge (&Delta;&nbsp;=&nbsp;+0.003 [&minus;0.042, +0.052]).</li>
+        <li><strong>L25 stratum</strong>: c_score_align falls to 0.443 on only 42 items (35 ERROR / 7 CORRECT), below chance, but extreme variance with only 7 CORRECT items from 3 sentences.</li>
+      </ul>
+      <p>Every pre-registered criterion on the target strata returned NOT_TESTABLE or unfavourable.</p>
+
+      <h3>Dead Ends</h3>
+      <p>Investigated and abandoned: fused structural-feature filter (false-alarm gate failure); name-free consensus c_nf (rename-invariant but blind to meaning-rename errors); decomposed solver-based semantic reader (balanced accuracy 0.476); LLM adjudication of disputed items (balanced accuracy 0.662); candidate-signature consensus (error endorsement rose to 0.459 because peers reproduced the candidate's errors).</p>
+    </section>
+
+    <section id="limitations">
+      <h2>Limitations</h2>
+      <ol class="limitations">
+        <li><strong>Shared-signature scope.</strong> The 0.954 AUROC uses templated sentences with a supplied predicate vocabulary. The templates and supplied signature limit scope to controlled evaluation settings.</li>
+        <li><strong>Development data overlap.</strong> R_COMP-SIG later served as development data for aligner tuning. Pre-registration ensures the SIG result is uncontaminated, but the dev-set numbers from E are not independent.</li>
+        <li><strong>Rename vulnerability.</strong> Under free vocabulary, a 76.5% false-alarm rate on nonce renames means the metric systematically penalises non-standard predicate names, even if semantically correct.</li>
+        <li><strong>Length degradation (free vocabulary).</strong> Net degradation +0.356 from short to long sentences, driven by correct-translation divergence. Weakest on the longest, most complex sentences.</li>
+        <li><strong>Provisional labels.</strong> R_COMP FREE uses non-confirmatory labels; the two-auditor subset &Delta;&nbsp;=&nbsp;+0.105 has a CI that barely excludes zero.</li>
+        <li><strong>Label dependence.</strong> Development results on E depend on a three-person panel whose agreement is imperfect. The metric's advantage could partly reflect panel biases.</li>
+        <li><strong>Cost.</strong> Consensus requires <em>k</em> peer translations per sentence. In this experiment (k&nbsp;=&nbsp;9), amortised cost is about 19&times; a single cheap judge call.</li>
+        <li><strong>Domain.</strong> All results are English&#8594;FOL from MALLS, ProverQA, and R_COMP. Generalisation to other formalisms, languages, or distributions is untested.</li>
+      </ol>
+    </section>
+
+    <section id="artifacts">
+      <h2>Code Artifacts</h2>
+      <ul class="artifacts">
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-1/experiment-1">Consensus scoring</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-1/experiment-3">Development set E</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-1/experiment-4">Baselines</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-1/dataset-1">Code: Held-out logic translation test set, panel-checked</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-2/experiment-5">p_peer_text (fused)</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-2/dataset-3">Code: Long logic sentences and FOL error suite</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-2/evaluation-1">Code: Re-checking earlier logic-metric results across label sets</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-3/experiment-6">Dev results evaluation</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-3/experiment-7">R_COMP dataset</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-3/experiment-8">Rename tradeoff</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-3/evaluation-2">Mechanism decomposition</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-3/research-1">Code: What is new about peer agreement for logic</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-4/dataset-4">E2-A held-out data</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-4/experiment-9">Dead ends</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-4/experiment-10">Code: Do symbol hints help model agreement checks?</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-4/dataset-5">Code: Name-free labels for free-vocabulary logic translations</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-4/evaluation-3">Code: Can shared vocabulary fix consensus blind spots?</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-5/experiment-11">Code: Consensus vs LLM judges on fresh logic data</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-5/experiment-12">Code: Second fresh sample of long logic sentences</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-5/experiment-13">R_COMP FREE</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-5/experiment-14">Code: Screening fixes for model-agreement false alarms</a></li>
+        <li><a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3/round-5/evaluation-4">Code: Corrected record: every paper number checked</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/paper.pdf">Paper (PDF)</a>
+        <a href="interactive.html">Explore the interactive demo</a>
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/report.pdf">Report (PDF)</a>
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/exec_summary.pdf">Read the executive summary</a>
+        <a href="https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3">Code Repository</a>
+      </div>
+      <h3 style="font-size:.95em; margin-top:1em">Round Reports</h3>
+      <div class="links">
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/round-1/report.pdf">Round 1</a>
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/round-2/report.pdf">Round 2</a>
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/round-3/report.pdf">Round 3</a>
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/round-4/report.pdf">Round 4</a>
+        <a href="https://cdn.jsdelivr.net/gh/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic@fork/run_Jhw6i0bFXdo3/round-5/report.pdf">Round 5</a>
+      </div>
+      <div class="citation">@article{anonymous2026consensus,
+  title={Pre-Registered Cross-Family Solver Consensus Outperforms LLM Judges on Templated NL-to-FOL Translation with a Supplied Predicate Signature},
+  author={Anonymous},
+  year={2026}
+}</div>
+    </footer>
+
+  </main>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img src="figures/fig_dev_auroc_v0.png" alt="">
+</div>
+
+<script>
+(function(){
+  var sections = document.querySelectorAll('section[id]');
+  var sideLinks = document.querySelectorAll('nav.side a');
+  var mobLinks = document.querySelectorAll('nav.mobile a');
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var id = entry.target.id;
+        sideLinks.forEach(function(a){a.classList.toggle('active', a.getAttribute('href')==='#'+id)});
+        mobLinks.forEach(function(a){a.classList.toggle('active', a.getAttribute('href')==='#'+id)});
+      }
+    });
+  }, {rootMargin:'-20% 0px -60% 0px'});
+
+  sections.forEach(function(s){observer.observe(s)});
+
+  // Lightbox
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  var lbClose = lb.querySelector('.lightbox-close');
+  var prevFocus = null;
+
+  document.querySelectorAll('.fig img').forEach(function(img){
+    img.setAttribute('tabindex','0');
+    img.addEventListener('click', openLb);
+    img.addEventListener('keydown', function(e){if(e.key==='Enter')openLb.call(this,e)});
+  });
+
+  function openLb(e){
+    prevFocus = document.activeElement;
+    lbImg.src = this.src;
+    lbImg.alt = this.alt;
+    lb.removeAttribute('hidden');
+    lbClose.focus();
+  }
+
+  function closeLb(){
+    lb.setAttribute('hidden','');
+    lbImg.removeAttribute('src');
+    if(prevFocus) prevFocus.focus();
+  }
+
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){if(e.target===lb) closeLb()});
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && !lb.hasAttribute('hidden')) closeLb();
+  });
+})();
+</script>
+
+</body>
+</html>
