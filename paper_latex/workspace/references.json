@@ -1,0 +1,116 @@
+{
+  "Brunello2026": {
+    "source": "semantic_scholar",
+    "title": "Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted Framework to Focus Human Relabeling",
+    "first_author": "Brunello",
+    "year": 2026,
+    "s2_paper_id": "ecbee7abfea235f4d6445a26bce913c40c799a45",
+    "doi": "10.48550/arXiv.2606.02837",
+    "arxiv": "2606.02837"
+  },
+  "Han2022": {
+    "source": "semantic_scholar",
+    "title": "FOLIO: Natural Language Reasoning with First-Order Logic",
+    "first_author": "Han",
+    "year": 2022,
+    "s2_paper_id": "5581bf85386737bd3378eec68189759a05280bea",
+    "doi": "10.48550/arXiv.2209.00840",
+    "arxiv": "2209.00840"
+  },
+  "Yang2023": {
+    "source": "semantic_scholar",
+    "title": "Harnessing the Power of Large Language Models for Natural Language to First-Order Logic Translation",
+    "first_author": "Yang",
+    "year": 2023,
+    "s2_paper_id": "e4e625f8e8ae5ee82e75de5ad6e07af57cca7f53",
+    "doi": "10.48550/arXiv.2305.15541",
+    "arxiv": "2305.15541"
+  },
+  "Chiang2024": {
+    "source": "semantic_scholar",
+    "title": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+    "first_author": "Chiang",
+    "year": 2024,
+    "s2_paper_id": "53f4fb0e9972989194368faf288ff8e3cba5bd60",
+    "doi": "10.48550/arXiv.2403.04132",
+    "arxiv": "2403.04132"
+  },
+  "Wei2022": {
+    "source": "semantic_scholar",
+    "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+    "first_author": "Wei",
+    "year": 2022,
+    "s2_paper_id": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+    "doi": "10.52202/068431-1800",
+    "arxiv": "2201.11903"
+  },
+  "Wang2022": {
+    "source": "semantic_scholar",
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+    "first_author": "Wang",
+    "year": 2022,
+    "s2_paper_id": "5f19ae1135a9500940978104ec15a5b8751bc7d2",
+    "arxiv": "2203.11171"
+  },
+  "Bayless2025": {
+    "source": "semantic_scholar",
+    "title": "A Neurosymbolic Approach to Natural Language Formalization and Verification",
+    "first_author": "Bayless",
+    "year": 2025,
+    "s2_paper_id": "8b6d7956c8a4f5418847316a69fded71de370339",
+    "doi": "10.48550/arXiv.2511.09008",
+    "arxiv": "2511.09008"
+  },
+  "Vossel2025": {
+    "source": "semantic_scholar",
+    "title": "Advancing Natural Language Formalization to First Order Logic with Fine-tuned LLMs",
+    "first_author": "Vossel",
+    "year": 2025,
+    "s2_paper_id": "8d1d88b8befa4e0c493b5c9361ebe6a32fb59e77",
+    "doi": "10.48550/arXiv.2509.22338",
+    "arxiv": "2509.22338"
+  },
+  "Thatikonda2025": {
+    "source": "semantic_scholar",
+    "title": "Assessing the Sensitivity and Alignment of FOL Closeness Metrics",
+    "first_author": "Thatikonda",
+    "year": 2025,
+    "s2_paper_id": "412f0d746b470d51e6a03d56b20b5ea8c3b0f35f",
+    "doi": "10.18653/v1/2025.findings-emnlp.910",
+    "arxiv": "2501.08613"
+  },
+  "Zhang2023": {
+    "source": "semantic_scholar",
+    "title": "SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency",
+    "first_author": "Zhang",
+    "year": 2023,
+    "s2_paper_id": "6af460d34bfc8e955e43fbe15cedcf329b48bc19",
+    "doi": "10.48550/arXiv.2311.01740",
+    "arxiv": "2311.01740"
+  },
+  "Eckhardt1985": {
+    "source": "semantic_scholar",
+    "title": "A Theoretical Basis for the Analysis of Multiversion Software Subject to Coincident Errors",
+    "first_author": "Eckhardt",
+    "year": 1985,
+    "s2_paper_id": "c3a7e368f1faecb0bdfb4e1f757edb883d690ff8",
+    "doi": "10.1109/TSE.1985.231895"
+  },
+  "Moura2008": {
+    "source": "semantic_scholar",
+    "title": "Z3: An Efficient SMT Solver",
+    "first_author": "Moura",
+    "year": 2008,
+    "s2_paper_id": "3960dda299e0f8615a7db675b8e6905b375ecf8a",
+    "doi": "10.1007/978-3-540-78800-3_24"
+  },
+  "Qi2025": {
+    "source": "semantic_scholar",
+    "title": "Large Language Models Meet Symbolic Provers for Logical Reasoning Evaluation",
+    "first_author": "Qi",
+    "year": 2025,
+    "s2_paper_id": "f8192ee0765fe874d2259536e92aa33a48e50bb1",
+    "doi": "10.48550/arXiv.2502.06563",
+    "arxiv": "2502.06563"
+  }
+}
