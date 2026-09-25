@@ -1,0 +1,194 @@
+{
+ "status": "INCOMPLETE: the replay was cut off by the run-level OpenRouter budget stop (HTTP 403 aii_run_budget_exhausted); items without >=2 new votes are unreplayed, not disagreements",
+ "stop_rule_decision": "UNDECIDED (replay incomplete); on the replayed items the majority agreement is 0.9725",
+ "stop_rule": "panel NOT used for E2 if combined majority agreement with E's stored votes < 0.85 or a panel model id is no longer served",
+ "combined_majority_agreement_all_items": 0.3941,
+ "combined_majority_agreement_replayed_items": 0.9725,
+ "passes": false,
+ "combined": {
+  "n_items": 269,
+  "agreement_P1": 1.0,
+  "n_P1": 109,
+  "agreement_P3": 0.9266,
+  "n_P3": 109,
+  "agreement_R1": 0.9394,
+  "n_R1": 99,
+  "majority_agreement": 0.3941,
+  "n_no_majority_old": 3,
+  "n_no_majority_new": 160,
+  "n_replayed_with_>=2_new_votes": 109,
+  "majority_agreement_on_replayed_items": 0.9725
+ },
+ "synthetic_gate_77": {
+  "n_items": 77,
+  "agreement_P1": 1.0,
+  "n_P1": 77,
+  "agreement_P3": 0.9481,
+  "n_P3": 77,
+  "agreement_R1": 0.9221,
+  "n_R1": 77,
+  "majority_agreement": 0.974,
+  "n_no_majority_old": 0,
+  "n_no_majority_new": 0,
+  "n_replayed_with_>=2_new_votes": 77,
+  "majority_agreement_on_replayed_items": 0.974
+ },
+ "synthetic_gate_reference_items": {
+  "n_items": 20,
+  "agreement_P1": 1.0,
+  "n_P1": 20,
+  "agreement_P3": 1.0,
+  "n_P3": 20,
+  "agreement_R1": 0.9,
+  "n_R1": 20,
+  "majority_agreement": 1.0,
+  "n_no_majority_old": 0,
+  "n_no_majority_new": 0,
+  "n_replayed_with_>=2_new_votes": 20,
+  "majority_agreement_on_replayed_items": 1.0
+ },
+ "trackh_192_judgements": {
+  "n_items": 192,
+  "agreement_P1": 1.0,
+  "n_P1": 32,
+  "agreement_P3": 0.875,
+  "n_P3": 32,
+  "agreement_R1": 1.0,
+  "n_R1": 22,
+  "majority_agreement": 0.1615,
+  "n_no_majority_old": 3,
+  "n_no_majority_new": 160,
+  "n_replayed_with_>=2_new_votes": 32,
+  "majority_agreement_on_replayed_items": 0.9688
+ },
+ "gate_balanced_accuracy": {
+  "P1": {
+   "today": 0.861,
+   "E": 0.861,
+   "today_passes_gate": true
+  },
+  "P3": {
+   "today": 0.875,
+   "E": 0.85,
+   "today_passes_gate": true
+  },
+  "R1": {
+   "today": 0.837,
+   "E": 0.863,
+   "today_passes_gate": true
+  }
+ },
+ "trackh_majority_vs_experts": {
+  "today": {
+   "unambiguous": {
+    "n_judgements": 22,
+    "accuracy": 0.682
+   },
+   "ambiguous_READING_CHOICE": {
+    "n_judgements": 10,
+    "accuracy": 0.6
+   },
+   "orig_flagged_rate_unamb": 0.12,
+   "corr_accepted_rate_unamb": 0.08
+  },
+  "E": {
+   "unambiguous": {
+    "n_judgements": 150,
+    "accuracy": 0.727
+   },
+   "ambiguous_READING_CHOICE": {
+    "n_judgements": 42,
+    "accuracy": 0.786
+   },
+   "orig_flagged_rate_unamb": 0.84,
+   "corr_accepted_rate_unamb": 0.613
+  }
+ },
+ "trackh_per_member_vs_experts": {
+  "P1": {
+   "today": {
+    "unambiguous": {
+     "n_judgements": 22,
+     "accuracy": 0.682
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 10,
+     "accuracy": 0.5
+    },
+    "orig_flagged_rate_unamb": 0.12,
+    "corr_accepted_rate_unamb": 0.08
+   },
+   "E": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.747
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.69
+    },
+    "orig_flagged_rate_unamb": 0.867,
+    "corr_accepted_rate_unamb": 0.627
+   }
+  },
+  "P3": {
+   "today": {
+    "unambiguous": {
+     "n_judgements": 22,
+     "accuracy": 0.682
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 10,
+     "accuracy": 0.7
+    },
+    "orig_flagged_rate_unamb": 0.12,
+    "corr_accepted_rate_unamb": 0.08
+   },
+   "E": {
+    "unambiguous": {
+     "n_judgements": 150,
+     "accuracy": 0.693
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 42,
+     "accuracy": 0.762
+    },
+    "orig_flagged_rate_unamb": 0.773,
+    "corr_accepted_rate_unamb": 0.613
+   }
+  },
+  "R1": {
+   "today": {
+    "unambiguous": {
+     "n_judgements": 12,
+     "accuracy": 0.75
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 10,
+     "accuracy": 0.7
+    },
+    "orig_flagged_rate_unamb": 0.067,
+    "corr_accepted_rate_unamb": 0.053
+   },
+   "E": {
+    "unambiguous": {
+     "n_judgements": 142,
+     "accuracy": 0.725
+    },
+    "ambiguous_READING_CHOICE": {
+     "n_judgements": 38,
+     "accuracy": 0.711
+    },
+    "orig_flagged_rate_unamb": 0.72,
+    "corr_accepted_rate_unamb": 0.653
+   }
+  }
+ },
+ "cohen_kappa_P3_R1": {
+  "today": 0.7412,
+  "n_today": 99,
+  "E_stored": 0.673,
+  "n_E": 257
+ },
+ "cache": "fresh work/panel_cache.jsonl (created empty for E2); no E reply could be served"
+}
