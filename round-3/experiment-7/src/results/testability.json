@@ -1,0 +1,474 @@
+{
+ "SIG": {
+  "condition": "SIG",
+  "utc": "2026-09-24T01:59:41Z",
+  "topup": false,
+  "primary_pool_rule": "10 few-shot SIG rows labelled CORRECT or ERROR (pure z3 labels); OFF_SIGNATURE, UNKNOWN, READING_CHOICE, UNPARSEABLE excluded and counted",
+  "word_terciles": {
+   "cut_1": 30,
+   "cut_2": 35,
+   "rule": "T1: words < cut_1; T2: cut_1 <= words < cut_2; T3: words >= cut_2 (main sentences)"
+  },
+  "n_CORRECT": 1595,
+  "n_ERROR": 429,
+  "sentences_with_CORRECT": 221,
+  "sentences_with_ERROR": 190,
+  "n_sentences_in_pool": 221,
+  "label_counts_all_rows": {
+   "CORRECT": 1595,
+   "ERROR": 429,
+   "UNPARSEABLE": 20,
+   "OFF_SIGNATURE": 50,
+   "READING_CHOICE": 116
+  },
+  "per_template_counts": {
+   "T1": {
+    "CORRECT": 226,
+    "ERROR": 34
+   },
+   "T2": {
+    "CORRECT": 199,
+    "ERROR": 77
+   },
+   "T3": {
+    "CORRECT": 192,
+    "ERROR": 15
+   },
+   "T4": {
+    "CORRECT": 145,
+    "ERROR": 84
+   },
+   "T5": {
+    "ERROR": 65,
+    "CORRECT": 188
+   },
+   "T6": {
+    "CORRECT": 187,
+    "ERROR": 40
+   },
+   "T7": {
+    "CORRECT": 220,
+    "ERROR": 47
+   },
+   "T8": {
+    "ERROR": 37,
+    "CORRECT": 71
+   },
+   "T9": {
+    "ERROR": 30,
+    "CORRECT": 167
+   }
+  },
+  "strata": {
+   "word_tercile": {
+    "W1": {
+     "CORRECT": 449,
+     "ERROR": 125,
+     "reportable_30_30": true
+    },
+    "W2": {
+     "CORRECT": 594,
+     "ERROR": 149,
+     "reportable_30_30": true
+    },
+    "W3": {
+     "CORRECT": 552,
+     "ERROR": 155,
+     "reportable_30_30": true
+    }
+   },
+   "clause_type": {
+    "as_long_as+unless": {
+     "CORRECT": 145,
+     "ERROR": 84,
+     "reportable_30_30": true
+    },
+    "but_only_if": {
+     "CORRECT": 71,
+     "ERROR": 37,
+     "reportable_30_30": true
+    },
+    "except_when": {
+     "CORRECT": 199,
+     "ERROR": 77,
+     "reportable_30_30": true
+    },
+    "except_when+provided_that": {
+     "CORRECT": 187,
+     "ERROR": 40,
+     "reportable_30_30": true
+    },
+    "provided_that": {
+     "CORRECT": 192,
+     "ERROR": 15,
+     "reportable_30_30": false
+    },
+    "provided_that+unless": {
+     "CORRECT": 188,
+     "ERROR": 65,
+     "reportable_30_30": true
+    },
+    "unless": {
+     "CORRECT": 613,
+     "ERROR": 111,
+     "reportable_30_30": true
+    }
+   },
+   "template_id": {
+    "T1": {
+     "CORRECT": 226,
+     "ERROR": 34,
+     "reportable_30_30": true
+    },
+    "T2": {
+     "CORRECT": 199,
+     "ERROR": 77,
+     "reportable_30_30": true
+    },
+    "T3": {
+     "CORRECT": 192,
+     "ERROR": 15,
+     "reportable_30_30": false
+    },
+    "T4": {
+     "CORRECT": 145,
+     "ERROR": 84,
+     "reportable_30_30": true
+    },
+    "T5": {
+     "CORRECT": 188,
+     "ERROR": 65,
+     "reportable_30_30": true
+    },
+    "T6": {
+     "CORRECT": 187,
+     "ERROR": 40,
+     "reportable_30_30": true
+    },
+    "T7": {
+     "CORRECT": 220,
+     "ERROR": 47,
+     "reportable_30_30": true
+    },
+    "T8": {
+     "CORRECT": 71,
+     "ERROR": 37,
+     "reportable_30_30": true
+    },
+    "T9": {
+     "CORRECT": 167,
+     "ERROR": 30,
+     "reportable_30_30": true
+    }
+   },
+   "nconds_weak": {
+    "4": {
+     "CORRECT": 220,
+     "ERROR": 47,
+     "reportable_30_30": true
+    },
+    "5": {
+     "CORRECT": 1375,
+     "ERROR": 382,
+     "reportable_30_30": true
+    }
+   }
+  },
+  "sha256_label_vector": "396aed1fa05c5172517a6bcf36adc6c5d3646b086b4ccbe43f0d158c87b8501e",
+  "verdict": "TESTABLE",
+  "off_signature_share_of_parseable": 0.0228310502283105,
+  "F3_triggered": false,
+  "loose_view_counts": {
+   "CORRECT": 1595,
+   "ERROR": 429,
+   "UNPARSEABLE": 20,
+   "OFF_SIGNATURE": 50,
+   "READING_CHOICE": 116
+  }
+ },
+ "FREE": {
+  "condition": "FREE",
+  "utc": "2026-09-24T04:28:42Z",
+  "primary_pool_rule": "tiers A+B, CORRECT/ERROR, excluding CONTESTED, reading_choice, REF_FLAGGED, UNRESOLVED; all FREE candidate rows (few-shot + zero-shot); the few-shot-only pool is reported alongside",
+  "word_terciles": {
+   "cut_1": 30,
+   "cut_2": 35,
+   "rule": "T1: words < cut_1; T2: cut_1 <= words < cut_2; T3: words >= cut_2 (main sentences)"
+  },
+  "n_CORRECT": 34,
+  "n_ERROR": 420,
+  "sentences_with_CORRECT": 15,
+  "sentences_with_ERROR": 158,
+  "n_sentences_in_pool": 159,
+  "label_counts_all_rows": {
+   "UNRESOLVED": 1811,
+   "ERROR": 420,
+   "UNPARSEABLE": 188,
+   "CORRECT": 34,
+   "NO_OUTPUT": 199
+  },
+  "per_template_counts": {
+   "T1": {
+    "ERROR": 64,
+    "CORRECT": 7
+   },
+   "T2": {
+    "ERROR": 48,
+    "CORRECT": 4
+   },
+   "T3": {
+    "ERROR": 42
+   },
+   "T4": {
+    "ERROR": 31,
+    "CORRECT": 4
+   },
+   "T5": {
+    "ERROR": 52,
+    "CORRECT": 2
+   },
+   "T6": {
+    "ERROR": 34,
+    "CORRECT": 11
+   },
+   "T7": {
+    "ERROR": 54
+   },
+   "T8": {
+    "ERROR": 57,
+    "CORRECT": 2
+   },
+   "T9": {
+    "ERROR": 38,
+    "CORRECT": 4
+   }
+  },
+  "strata": {
+   "word_tercile": {
+    "W1": {
+     "CORRECT": 22,
+     "ERROR": 157,
+     "reportable_30_30": false
+    },
+    "W2": {
+     "CORRECT": 9,
+     "ERROR": 144,
+     "reportable_30_30": false
+    },
+    "W3": {
+     "CORRECT": 3,
+     "ERROR": 119,
+     "reportable_30_30": false
+    }
+   },
+   "clause_type": {
+    "as_long_as+unless": {
+     "CORRECT": 4,
+     "ERROR": 31,
+     "reportable_30_30": false
+    },
+    "but_only_if": {
+     "CORRECT": 2,
+     "ERROR": 57,
+     "reportable_30_30": false
+    },
+    "except_when": {
+     "CORRECT": 4,
+     "ERROR": 48,
+     "reportable_30_30": false
+    },
+    "except_when+provided_that": {
+     "CORRECT": 11,
+     "ERROR": 34,
+     "reportable_30_30": false
+    },
+    "provided_that": {
+     "CORRECT": 0,
+     "ERROR": 42,
+     "reportable_30_30": false
+    },
+    "provided_that+unless": {
+     "CORRECT": 2,
+     "ERROR": 52,
+     "reportable_30_30": false
+    },
+    "unless": {
+     "CORRECT": 11,
+     "ERROR": 156,
+     "reportable_30_30": false
+    }
+   },
+   "template_id": {
+    "T1": {
+     "CORRECT": 7,
+     "ERROR": 64,
+     "reportable_30_30": false
+    },
+    "T2": {
+     "CORRECT": 4,
+     "ERROR": 48,
+     "reportable_30_30": false
+    },
+    "T3": {
+     "CORRECT": 0,
+     "ERROR": 42,
+     "reportable_30_30": false
+    },
+    "T4": {
+     "CORRECT": 4,
+     "ERROR": 31,
+     "reportable_30_30": false
+    },
+    "T5": {
+     "CORRECT": 2,
+     "ERROR": 52,
+     "reportable_30_30": false
+    },
+    "T6": {
+     "CORRECT": 11,
+     "ERROR": 34,
+     "reportable_30_30": false
+    },
+    "T7": {
+     "CORRECT": 0,
+     "ERROR": 54,
+     "reportable_30_30": false
+    },
+    "T8": {
+     "CORRECT": 2,
+     "ERROR": 57,
+     "reportable_30_30": false
+    },
+    "T9": {
+     "CORRECT": 4,
+     "ERROR": 38,
+     "reportable_30_30": false
+    }
+   },
+   "nconds_weak": {
+    "4": {
+     "CORRECT": 0,
+     "ERROR": 54,
+     "reportable_30_30": false
+    },
+    "5": {
+     "CORRECT": 34,
+     "ERROR": 366,
+     "reportable_30_30": true
+    }
+   }
+  },
+  "sha256_label_vector": "97997ea4964509459eaabc1dac4496f8eddd28551e9440365481d6511a06d2c2",
+  "verdict": "NOT_TESTABLE",
+  "few_shot_only": {
+   "n_CORRECT": 29,
+   "n_ERROR": 358,
+   "sentences_with_CORRECT": 14,
+   "sentences_with_ERROR": 142,
+   "n_sentences_in_pool": 144,
+   "label_counts_all_rows": {
+    "UNRESOLVED": 1646,
+    "ERROR": 358,
+    "UNPARSEABLE": 177,
+    "CORRECT": 29
+   },
+   "per_template_counts": {
+    "T1": {
+     "ERROR": 55,
+     "CORRECT": 6
+    },
+    "T2": {
+     "ERROR": 39,
+     "CORRECT": 4
+    },
+    "T3": {
+     "ERROR": 32
+    },
+    "T4": {
+     "ERROR": 28,
+     "CORRECT": 3
+    },
+    "T5": {
+     "ERROR": 47,
+     "CORRECT": 1
+    },
+    "T6": {
+     "ERROR": 28,
+     "CORRECT": 9
+    },
+    "T7": {
+     "ERROR": 45
+    },
+    "T8": {
+     "ERROR": 48,
+     "CORRECT": 2
+    },
+    "T9": {
+     "ERROR": 36,
+     "CORRECT": 4
+    }
+   },
+   "sha256_label_vector": "009f6e318348d496ce2b2c2a83d83237b303e8224902daaed1927c9c78cf9256",
+   "verdict": "NOT_TESTABLE"
+  },
+  "tier_A_only": {
+   "n_CORRECT": 34,
+   "n_ERROR": 420,
+   "sentences_with_CORRECT": 15,
+   "sentences_with_ERROR": 158,
+   "n_sentences_in_pool": 159,
+   "label_counts_all_rows": {
+    "UNRESOLVED": 1811,
+    "ERROR": 420,
+    "UNPARSEABLE": 188,
+    "CORRECT": 34,
+    "NO_OUTPUT": 199
+   },
+   "per_template_counts": {
+    "T1": {
+     "ERROR": 64,
+     "CORRECT": 7
+    },
+    "T2": {
+     "ERROR": 48,
+     "CORRECT": 4
+    },
+    "T3": {
+     "ERROR": 42
+    },
+    "T4": {
+     "ERROR": 31,
+     "CORRECT": 4
+    },
+    "T5": {
+     "ERROR": 52,
+     "CORRECT": 2
+    },
+    "T6": {
+     "ERROR": 34,
+     "CORRECT": 11
+    },
+    "T7": {
+     "ERROR": 54
+    },
+    "T8": {
+     "ERROR": 57,
+     "CORRECT": 2
+    },
+    "T9": {
+     "ERROR": 38,
+     "CORRECT": 4
+    }
+   },
+   "sha256_label_vector": "97997ea4964509459eaabc1dac4496f8eddd28551e9440365481d6511a06d2c2",
+   "verdict": "NOT_TESTABLE"
+  },
+  "tier_counts": {
+   "UNRESOLVED:none": 1811,
+   "ERROR:A": 420,
+   "UNPARSEABLE:-": 188,
+   "CORRECT:A": 34,
+   "NO_OUTPUT:-": 199
+  }
+ }
+}
