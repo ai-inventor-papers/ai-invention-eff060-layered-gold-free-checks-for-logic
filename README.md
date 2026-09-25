@@ -1,3 +1,22 @@
+<!-- aii-runs-index:start -->
+## Runs in this repository
+
+Several runs publish to this repository, each to its own branch. Open a run to see its paper, code and notebooks. The `main` branch below holds the lineage's first run.
+
+| Run | Paper | Updated |
+|---|---|---|
+| [run_An1uy2kF2SjZ](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_An1uy2kF2SjZ) | Cross-Family Solver Consensus as a Gold-Free Faithfulness Metric for Logic Translation | 2026-09-25 19:13 UTC |
+| [run_qck1d05BqxkX](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_qck1d05BqxkX) | Cross-Family Solver Consensus as a Gold-Free Faithfulness Metric for Natural Language to First-Order Logic Translation | 2026-09-25 16:06 UTC |
+| [run_e4aqYfQhdCkX](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_e4aqYfQhdCkX) | Cross-Family Solver Consensus Outperforms LLM Judges for Logic Translation Evaluation | 2026-09-25 15:32 UTC |
+| [run_StxQVNnY7aQW](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_StxQVNnY7aQW) | (no paper yet) | 2026-09-25 12:23 UTC |
+| [run_Jhw6i0bFXdo3](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_Jhw6i0bFXdo3) | Gold-Free Faithfulness Metrics for NL-to-FOL Translation | 2026-09-25 10:21 UTC |
+| [run_cNhUBrixEdz7](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_cNhUBrixEdz7) | Gold-Free Faithfulness Metrics for NL-to-FOL Translation | 2026-09-25 03:25 UTC |
+| [run_-tTYmHVAOMOt](https://github.com/ai-inventor-papers/ai-invention-eff060-layered-gold-free-checks-for-logic/tree/fork/run_-tTYmHVAOMOt) | Gold-Free Faithfulness Metrics for NL-to-FOL Translation | 2026-09-25 00:29 UTC |
+
+---
+
+<!-- aii-runs-index:end -->
+
 # Gold-Free Faithfulness Metrics for NL-to-FOL Translation
 
 <div align="center">
