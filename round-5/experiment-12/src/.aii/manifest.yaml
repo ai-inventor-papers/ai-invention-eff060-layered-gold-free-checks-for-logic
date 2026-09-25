@@ -1,0 +1,22 @@
+entries:
+  - path: e2bsrc/.venv/
+    delete: regenerable
+    source: "cd e2bsrc && uv venv .venv --python=3.12 && uv pip install --python=.venv/bin/python -r pyproject.toml scikit-learn"
+  - path: exp5src/.venv/
+    delete: regenerable
+    source: "cd exp5src && uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r pyproject.toml"
+  - path: e2bsrc/nltk_data/
+    delete: redownloadable
+    source: "e2bsrc/.venv/bin/python -c \"import nltk; [nltk.download(p, download_dir='e2bsrc/nltk_data') for p in ('wordnet','omw-1.4')]\""
+  - path: exp5src/data/nltk_data/
+    delete: redownloadable
+    source: "bash restore.sh (curl wordnet, omw-1.4, words zips from raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora into exp5src/data/nltk_data/corpora and unzip)"
+  - path: e2bsrc/raw/hf/
+    delete: redownloadable
+    source: "huggingface: opendatalab/ProverQA dev/{easy,medium,hard}.json @ e2561beed450272690da658d21ae667570dbbafc; tasksource/folio folio_v2_{train,validation}.jsonl @ 295b95fb4fe9be4ff3f933b73142d142cf6b2c97 (bash restore.sh)"
+  - path: e2bsrc/.pytest_cache/
+    delete: regenerable
+    source: "e2bsrc/.venv/bin/python -m pytest -q -c e2bsrc/pytest.ini e2bsrc/tests/test_fol.py"
+  - path: "**/__pycache__/"
+    delete: regenerable
+    source: "python bytecode, recreated on import"
