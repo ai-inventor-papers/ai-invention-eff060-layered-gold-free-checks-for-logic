@@ -1,0 +1,80 @@
+{
+ "n_rows": 1100,
+ "label_counts": {
+  "ERROR": 590,
+  "CORRECT": 339,
+  "UNPARSEABLE": 115,
+  "CONTESTED": 56
+ },
+ "parse_ok": 985,
+ "consensus_imputed_lt2_peers": 0,
+ "judge_missing_on_parseable": {
+  "judge_cheap_disg": 803,
+  "judge_cheap_orig": 985,
+  "judge_cheap2_disg": 985,
+  "judge_cheap2_orig": 985,
+  "judge_local_qwen8b_disg": 0,
+  "judge_local_qwen8b_orig": 0
+ },
+ "COVERAGE_view_long": {
+  "n_rows": 182,
+  "n_error": 164,
+  "n_correct": 18,
+  "n_sentences": 37,
+  "n_err_sent": 37,
+  "n_cor_sent": 8,
+  "metrics": {
+   "c_score_align": {
+    "n": 182,
+    "strat": 0.6340782122905028,
+    "strat_ci": [
+     0.4699907809110629,
+     0.7899376648741883
+    ],
+    "pooled": 0.6719173441734417,
+    "coverage": 1.0
+   },
+   "judge_cheap_disg": {
+    "n": 96,
+    "strat": 0.8492063492063492,
+    "strat_ci": [
+     0.4582738095238095,
+     1.0
+    ],
+    "pooled": 0.8154121863799283,
+    "coverage": 0.5274725274725275
+   },
+   "p_peer_text": {
+    "n": 182,
+    "strat": 0.8561452513966481,
+    "strat_ci": [
+     0.7647398225637352,
+     0.9348260127615371
+    ],
+    "pooled": 0.8651761517615176,
+    "coverage": 1.0
+   }
+  },
+  "deltas": {
+   "c_score_align - judge_cheap_disg": {
+    "n": 96,
+    "n_error": 93,
+    "n_correct": 3,
+    "testable": false,
+    "delta": -0.23015873015873012,
+    "ci": [
+     -0.5,
+     0.5151515151515151
+    ],
+    "p_le0": 0.774,
+    "ci_gt0": false,
+    "pooled_delta": -0.15591397849462363,
+    "ci_pooled_cluster_boot": [
+     -0.5,
+     0.5
+    ]
+   }
+  },
+  "testable": false
+ }
+}

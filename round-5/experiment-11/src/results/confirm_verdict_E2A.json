@@ -1,0 +1,290 @@
+{
+ "criteria_verbatim_source": "prereg_iter5_E2A.json :: hypothesis_criteria_verbatim",
+ "a": {
+  "cell": "R_AB LONG (L25+EXC)",
+  "delta_vs_flashlite_disg": {},
+  "delta_vs_flashlite_orig": {},
+  "delta_vs_nano_orig": {},
+  "delta_vs_nano_disg": {},
+  "holds": false,
+  "n": 94,
+  "n_error": 76,
+  "n_correct": 18,
+  "n_sentences": 12,
+  "testable": false
+ },
+ "b": {
+  "nested_S4_E2_plus_V0_minus_S4_E2": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": -0.06393678160919547,
+   "ci": [
+    -0.13429691327780502,
+    -0.0016673953944405823
+   ],
+   "p_le0": 0.9795,
+   "ci_gt0": false,
+   "pooled_delta": -0.06469298245614041,
+   "ci_pooled_cluster_boot": [
+    -0.13336468885672934,
+    0.0018281535648994069
+   ]
+  },
+  "holds": false,
+  "S4_features": [
+   "judge_local_qwen8b_disg",
+   "judge_local_qwen8b_orig",
+   "l2_bow",
+   "l3_z3"
+  ],
+  "S4_features_dropped": [
+   "judge_cheap_disg",
+   "judge_cheap_orig",
+   "judge_cheap2_disg",
+   "judge_cheap2_orig"
+  ],
+  "round_trip": "NOT_RUN (declared: no API/local verbaliser in E2-A)"
+ },
+ "c": {
+  "status": "NOT_TESTABLE",
+  "reason": "FALLBACK B: the gloss gate failed twice (gloss_v1 half A, gloss_v2 half B); every MAPPED row is UNRESOLVED_GLOSS_GATE_FAILED, so the gated label set has 0 CORRECT rows",
+  "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13/results/confirm_verdict_rcomp.json",
+  "summary": {
+   "criterion": "(c) c_score_align - flash-lite judge, within-template AUROC, both views, both 95% CIs > 0, on the untouched gated set",
+   "VERDICT": "NOT_TESTABLE",
+   "reason": "FALLBACK B: the gloss gate failed twice (gloss_v1 half A, gloss_v2 half B); every MAPPED row is UNRESOLVED_GLOSS_GATE_FAILED, so the gated label set has 0 CORRECT rows",
+   "confirmatory_counts": {
+    "disg": {
+     "n_ERROR": 602,
+     "n_CORRECT": 0,
+     "sentences_ERROR": 193,
+     "sentences_CORRECT": 0,
+     "TESTABLE": false
+    },
+    "orig": {
+     "n_ERROR": 605,
+     "n_CORRECT": 0,
+     "sentences_ERROR": 197,
+     "sentences_CORRECT": 0,
+     "TESTABLE": false
+    }
+   },
+   "flags": {
+    "gate_failed_twice_fallback_B": true,
+    "gate_v2_used": true,
+    "underpowered": true,
+    "soundness_bar_failed": null,
+    "s6_flip": null,
+    "s3_flip": false,
+    "s1a_flip": false,
+    "partial_budget": false
+   },
+   "flags_note": "soundness_bar_failed / s6_flip are not applicable: the SIG e2e gloss check and the Haiku-only regime need gloss verdicts, which do not exist under FALLBACK B",
+   "PROVISIONAL_NON_CONFIRMATORY": {
+    "labels": "ERROR_CERT (y=1) vs MAPPED = UNRESOLVED_GLOSS_GATE_FAILED (y=0), untouched rows",
+    "disg": {
+     "n": 1706,
+     "n_err": 602,
+     "n_cor": 1104,
+     "auroc_a": 0.8007358664119437,
+     "auroc_a_ci": [
+      0.7702116511425956,
+      0.8340869930688215
+     ],
+     "auroc_b": 0.5841505695889054,
+     "auroc_b_ci": [
+      0.5495939769189366,
+      0.6184259547075768
+     ],
+     "delta": 0.2165852968230383,
+     "ci": [
+      0.1752971795896373,
+      0.2602777367219074
+     ]
+    },
+    "orig": {
+     "n": 1709,
+     "n_err": 605,
+     "n_cor": 1104,
+     "auroc_a": 0.8038910396678449,
+     "auroc_a_ci": [
+      0.7739355038605688,
+      0.8355198553257014
+     ],
+     "auroc_b": 0.6326866969645963,
+     "auroc_b_ci": [
+      0.6012777260140908,
+      0.6659150654091057
+     ],
+     "delta": 0.17120434270324858,
+     "ci": [
+      0.13535299319740351,
+      0.20644188639523636
+     ]
+    },
+    "both_ci_gt_0_provisional": true,
+    "noise_corrected_delta_blind_audit_consensus": {
+     "disg": 0.34971325897052524,
+     "orig": 0.2764381032087265
+    },
+    "must_not_be_counted_as_confirmation": true
+   },
+   "seals": {
+    "labels_all": "b7916aeae77ecfe2556e0f545bb5813843a36d12ba73043dfc1320c13c45cd5e",
+    "labels_untouched": "79eb623a1a75279c1db96c8d31311b59e16bcc7b911064f04c9909fb4d6afcbb",
+    "scores": "results/score_seal_rcomp.json",
+    "all_verified_before_join": true
+   }
+  }
+ },
+ "fallback_substitute_bar": {
+  "note": "prereg_addendum_budgetstop.json: local Qwen3-8B rubric-A judge, DECLARED SUBSTITUTE, secondary, cannot CONFIRM",
+  "V0_minus_local_disg": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": -0.09123563218390807,
+   "ci": [
+    -0.218563825355164,
+    0.01666913214990131
+   ],
+   "p_le0": 0.9535,
+   "ci_gt0": false,
+   "pooled_delta": -0.07858187134502925,
+   "ci_pooled_cluster_boot": [
+    -0.3013478142076503,
+    0.026345267445599552
+   ]
+  },
+  "V0_minus_local_orig": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": -0.11063218390804597,
+   "ci": [
+    -0.30249022314239704,
+    0.016954976993418292
+   ],
+   "p_le0": 0.956,
+   "ci_gt0": false,
+   "pooled_delta": -0.09868421052631582,
+   "ci_pooled_cluster_boot": [
+    -0.35584295453295944,
+    0.00914402173913046
+   ]
+  },
+  "PT_minus_local_disg": {
+   "n": 94,
+   "n_error": 76,
+   "n_correct": 18,
+   "testable": false,
+   "delta": 0.009339080459770055,
+   "ci": [
+    -0.08920336473207408,
+    0.11692169262678427
+   ],
+   "p_le0": 0.431,
+   "ci_gt0": false,
+   "pooled_delta": 0.016812865497075946,
+   "ci_pooled_cluster_boot": [
+    -0.09434224318658278,
+    0.11752724157716957
+   ]
+  },
+  "L25_V0_minus_local_disg": {
+   "n": 42,
+   "n_error": 35,
+   "n_correct": 7,
+   "testable": false,
+   "delta": -0.21632653061224494,
+   "ci": [
+    -0.5238095238095237,
+    0.024727746212120434
+   ],
+   "p_le0": 0.9525,
+   "ci_gt0": false,
+   "pooled_delta": -0.21632653061224494,
+   "ci_pooled_cluster_boot": [
+    -0.5238095238095237,
+    0.024727746212120434
+   ]
+  },
+  "EXC_V0_minus_local_disg": {
+   "n": 52,
+   "n_error": 41,
+   "n_correct": 11,
+   "testable": false,
+   "delta": -0.02328159645232819,
+   "ci": [
+    -0.14880952380952384,
+    0.07073643410852715
+   ],
+   "p_le0": 0.6795,
+   "ci_gt0": false,
+   "pooled_delta": -0.02328159645232819,
+   "ci_pooled_cluster_boot": [
+    -0.14880952380952384,
+    0.07073643410852715
+   ]
+  },
+  "DT_V0_minus_local_disg": {
+   "n": 179,
+   "n_error": 74,
+   "n_correct": 105,
+   "testable": true,
+   "delta": 0.003217503217503248,
+   "ci": [
+    -0.04201372813276252,
+    0.05230824741110137
+   ],
+   "p_le0": 0.4515,
+   "ci_gt0": false,
+   "pooled_delta": 0.003217503217503248,
+   "ci_pooled_cluster_boot": [
+    -0.04201372813276252,
+    0.05230824741110137
+   ]
+  }
+ },
+ "overall": "NOT_TESTABLE ((a): too few rows with the pre-registered flash-lite disguised bar; see fallback_substitute_bar)",
+ "also_reported": {
+  "L25_alone": {
+   "delta": {},
+   "testable": false,
+   "se_from_ci": null,
+   "mde80": null
+  },
+  "EXC": null,
+  "DT_sign": {
+   "n": 63,
+   "n_error": 13,
+   "n_correct": 50,
+   "testable": false,
+   "delta": -0.08307692307692305,
+   "ci": [
+    -0.26649739583333326,
+    0.13743950393224424
+   ],
+   "p_le0": 0.7725,
+   "ci_gt0": false,
+   "pooled_delta": -0.08307692307692305,
+   "ci_pooled_cluster_boot": [
+    -0.2722046551626513,
+    0.12857216343327452
+   ]
+  },
+  "long_without_pilot": null,
+  "R_A_long": null,
+  "R_VEX_long": null
+ },
+ "placebo": {
+  "shuffled_labels_mean_auroc": 0.5008755017735967,
+  "shuffled_labels_p95": 0.6064295977011493,
+  "within_stratum_score_permutation_mean": 0.49735272988505747,
+  "pass_0.5pm0.03": true
+ }
+}

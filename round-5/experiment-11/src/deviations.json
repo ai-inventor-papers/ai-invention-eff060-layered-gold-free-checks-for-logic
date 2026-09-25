@@ -1,0 +1,70 @@
+[
+ {
+  "id": "D-STEP",
+  "what": "The prompt reaching this session held only the tail of the research question; the step identity (iteration 5, gen_art_experiment_11 = strategy direction 1 = plan gen_plan_experiment_1, E2-A) was inferred from the workspace path and the iteration-4 plan->artifact mapping (experiment_9 <- plan idx1, experiment_10 <- plan idx2)."
+ },
+ {
+  "id": "D-PIN",
+  "what": "OpenRouter provider routing pinned (allow_fallbacks=false) for the three panel models to the providers that served E (from E's cost ledger): Haiku-4.5 Amazon Bedrock; GLM-4.6 Venice, Novita; Kimi-K2-0905 Novita. Env-driven hook in e2src/src/or_client.py (diff DPIN.diff); request routing only. Also adds a 'seconds' field to ledger rows."
+ },
+ {
+  "id": "D-SURPLUS",
+  "what": "The 98 pre-registered L25 surplus sentences were NOT activated (E2-B claims them, e2b/E2B_SURPLUS_CLAIM.json); E2-A = frozen base 350 L25 + 100 EXC + 100 DT."
+ },
+ {
+  "id": "D-LEDGER",
+  "what": "e2src/cost_ledger.jsonl restarted empty for this artifact's spend; the iteration-4 dataset-4 spend ($0.2409) is kept in e2src/cost_ledger_iter4.jsonl and excluded from the $9.5 cap."
+ },
+ {
+  "id": "D-DRIFTCACHE",
+  "what": "The drift replay used a fresh panel cache (iteration 4's unpinned cache moved to work/panel_cache_iter4_unpinned.jsonl)."
+ },
+ {
+  "id": "D-PANELPREFIX",
+  "what": "panel_run.py was driven in sha1-ordered prefixes of 110 sentences through its own --labels option (a prefix-filtered copy of labels_heldout.jsonl), because trimming work/sentences.json crashes sentence_units(); frozen code unchanged."
+ },
+ {
+  "id": "D-PARAMS",
+  "what": "exp-5 score_sentence run with variants=['ALIGN'] (NF-anchored is a closed strand), k6_seeds=0, famfield=False, medoid_budget_s=0: auxiliary readouts only; V0/ALIGN g reproduce E rows to 1e-9 (scoring/tests/test_v0_repro.py, 34 rows)."
+ },
+ {
+  "id": "D-ENV",
+  "what": "The scoring env is exp-6's pinned pyproject: CPU packages in /root/e2a_env (symlink env/), torch/transformers in /root/e2a_gpu (local disk; the network filesystem was too slow for the CUDA wheels). Same versions."
+ },
+ {
+  "id": "D-BUDGET",
+  "what": "At ~11:40 UTC the run-level 'Test idea' OpenRouter budget ($12.00 shared by all concurrent artifacts) was exhausted (HTTP 403 aii_run_budget_exhausted); this artifact had spent ~$2.05. The key did not recover (polled every 15 min). Consequences: panel labels exist only for the first sha1-order prefix of 110 sentences (107 with complete stage-1 votes); no reference repair; flash-lite disguised judge on ~15% of parseable rows (random sha1(row_key) prefix); flash-lite original, gpt-4.1-nano and the round trip not run. Handled by prereg_addendum_budgetstop.json (written before any label was assembled)."
+ },
+ {
+  "id": "D-LOCALBAR",
+  "what": "Declared substitute bar: T1's local Qwen3-8B rubric-A judge (both views, $0 on the L4 GPU) reported as secondary evidence; cannot CONFIRM."
+ },
+ {
+  "id": "D-S4",
+  "what": "S4_E2 uses only features with >=95% R_AB coverage (T1 entry rule): local judge x2, L2-bow, L3. API judges and round trip absent."
+ },
+ {
+  "id": "D-HRENAME",
+  "what": "GG failed its development gate g3 in the freeze sibling (FAIL(g3)); c_gg was not computed; H-RENAME is NOT CONFIRMED; V0 rename controls reported."
+ },
+ {
+  "id": "D-HIMPROVE",
+  "what": "Freeze winner 'NONE: V0 stands'; V1-V5 reported as development-only exploratory rows (Holm over 5)."
+ },
+ {
+  "id": "D-PILOTMETRICS",
+  "what": "The user's pilot structural metrics were scored on E2 with the frozen T1 adaptation (artificial documents); pilot_rerun_jacc is oriented 1 - Jaccard (cross-system proxy; E2 has one prompt variant)."
+ },
+ {
+  "id": "D-UNION",
+  "what": "E2-B finalized with NO panel labels (R_A_UNAUDITED only, not testable under E's rule), so the union long pool adds no R_AB rows."
+ },
+ {
+  "id": "D-C",
+  "what": "Criterion (c) read from the sibling: R_COMP FREE verdict NOT_TESTABLE (gloss gate failed twice; 0 CORRECT rows)."
+ },
+ {
+  "id": "D-PREFIXCUT",
+  "what": "At 15:12 UTC panel records of sentences outside the completed first sha1-order prefix (110 sentences: 37 L25, 37 EXC, 36 DT) were moved aside (e2src/work/*_ALL_before_prefix_cut.jsonl) before the frozen $0 label chain (assemble_e2 -> controls_e2 -> testability_e2 -> seal_e2 -> verify_seal); all analyses use that prefix (--prefix 110). Cutoff reached 15:30 UTC with the key still at $0.00 of $12.00."
+ }
+]
