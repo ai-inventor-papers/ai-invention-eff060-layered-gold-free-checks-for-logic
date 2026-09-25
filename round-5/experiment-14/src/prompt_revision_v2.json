@@ -1,0 +1,9 @@
+{
+ "written_utc": "2026-09-24T11:26:34Z",
+ "revision": "the ONE pre-registered prompt revision (after the dev halves)",
+ "trigger": "G-A dev half A balanced accuracy 0.780 < 0.90 (NO_NONCE 0.508, YES_FORM 0.492, NO_ROLE 0.730); G-B dev 0.950",
+ "change": "system text only: explicit rules for built-in negation / fixed arguments, argument-role reading, and nonce tokens",
+ "gloss_gg_v2_sha256": "48394616002323cb0608527746812df0a1953264385fff205e4a1b3b9087c46d",
+ "gloss_gg_gateA_v2_sha256": "24784d011329cc5880ec40a1fe3461b1018b4ac48b546d94facd17ad6e9d218c",
+ "confirm_rule": "confirm halves (G-A half B, G-B confirm) run ONCE with v2"
+}
