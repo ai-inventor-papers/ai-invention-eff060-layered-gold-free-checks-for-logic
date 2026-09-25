@@ -1,0 +1,219 @@
+{
+ "status": "OK",
+ "peers": [
+  "local/qwen2.5-1.5b-instruct-q4km",
+  "local/gemma-2-2b-it-q4km"
+ ],
+ "n_rows_scored": 486,
+ "row_status_counts": {
+  "OK": 328,
+  "csc_insufficient_peers": 158
+ },
+ "delta_anchor_rows_used": 98,
+ "delta_anchor_rows_excluded_insufficient": 101,
+ "n_bases": 27,
+ "base_endorsement_rate": 0.481,
+ "base_endorsement_rate_excl_insufficient": 0.3,
+ "n_bases_sufficient": 20,
+ "format_counts": {
+  "local/gemma-2-2b-it-q4km|fail|parse_ok=False": 6,
+  "local/gemma-2-2b-it-q4km|json|parse_ok=False": 111,
+  "local/gemma-2-2b-it-q4km|json|parse_ok=True": 369,
+  "local/qwen2.5-1.5b-instruct-q4km|fail|parse_ok=False": 42,
+  "local/qwen2.5-1.5b-instruct-q4km|json|parse_ok=False": 15,
+  "local/qwen2.5-1.5b-instruct-q4km|json|parse_ok=True": 429
+ },
+ "symbol_usage_by_role": {
+  "GENUINE": {
+   "rate": 0.814,
+   "n": 4636
+  },
+  "FOREIGN": {
+   "rate": 0.112,
+   "n": 116
+  },
+  "OTHER_NEW": {
+   "rate": 0.014,
+   "n": 70
+  },
+  "DONOR": {
+   "rate": 0.16,
+   "n": 75
+  },
+  "NONCE": {
+   "rate": 0.143,
+   "n": 21
+  },
+  "SYNONYM": {
+   "rate": 0.696,
+   "n": 23
+  }
+ },
+ "symbol_usage_by_model_role": {
+  "local/qwen2.5-1.5b-instruct-q4km|GENUINE": {
+   "rate": 0.815,
+   "n": 2488
+  },
+  "local/gemma-2-2b-it-q4km|GENUINE": {
+   "rate": 0.813,
+   "n": 2148
+  },
+  "local/qwen2.5-1.5b-instruct-q4km|FOREIGN": {
+   "rate": 0.121,
+   "n": 66
+  },
+  "local/gemma-2-2b-it-q4km|FOREIGN": {
+   "rate": 0.1,
+   "n": 50
+  },
+  "local/qwen2.5-1.5b-instruct-q4km|OTHER_NEW": {
+   "rate": 0.0,
+   "n": 39
+  },
+  "local/gemma-2-2b-it-q4km|OTHER_NEW": {
+   "rate": 0.032,
+   "n": 31
+  },
+  "local/qwen2.5-1.5b-instruct-q4km|DONOR": {
+   "rate": 0.167,
+   "n": 42
+  },
+  "local/gemma-2-2b-it-q4km|DONOR": {
+   "rate": 0.152,
+   "n": 33
+  },
+  "local/qwen2.5-1.5b-instruct-q4km|NONCE": {
+   "rate": 0.154,
+   "n": 13
+  },
+  "local/gemma-2-2b-it-q4km|NONCE": {
+   "rate": 0.125,
+   "n": 8
+  },
+  "local/qwen2.5-1.5b-instruct-q4km|SYNONYM": {
+   "rate": 0.667,
+   "n": 12
+  },
+  "local/gemma-2-2b-it-q4km|SYNONYM": {
+   "rate": 0.727,
+   "n": 11
+  }
+ },
+ "p_peer_eq_mutant_given_used_new_symbol": {
+  "MEANING_RENAME": {
+   "rate": 0.0,
+   "n": 12
+  },
+  "ADD_FOREIGN": {
+   "rate": 0.0,
+   "n": 13
+  }
+ },
+ "delta_anchor": [
+  {
+   "op_label": "ADD_FOREIGN",
+   "n": 29,
+   "e_own_sig": 0.0,
+   "e_base_sig": 0.0,
+   "delta_anchor_rowlevel": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "delta_anchor_peershare": 0.0,
+   "lo_share": 0.0,
+   "hi_share": 0.0
+  },
+  {
+   "op_label": "BIND",
+   "n": 23,
+   "e_own_sig": 0.0,
+   "e_base_sig": 0.0,
+   "delta_anchor_rowlevel": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "delta_anchor_peershare": 0.0,
+   "lo_share": 0.0,
+   "hi_share": 0.0
+  },
+  {
+   "op_label": "DROP",
+   "n": 12,
+   "e_own_sig": 0.167,
+   "e_base_sig": 0.083,
+   "delta_anchor_rowlevel": 0.083,
+   "lo": -0.167,
+   "hi": 0.333,
+   "delta_anchor_peershare": 0.042,
+   "lo_share": -0.083,
+   "hi_share": 0.167
+  },
+  {
+   "op_label": "MEANING_RENAME",
+   "n": 22,
+   "e_own_sig": 0.0,
+   "e_base_sig": 0.0,
+   "delta_anchor_rowlevel": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "delta_anchor_peershare": 0.0,
+   "lo_share": 0.0,
+   "hi_share": 0.0
+  },
+  {
+   "op_label": "RENAME_NONCE",
+   "n": 5,
+   "e_own_sig": 0.0,
+   "e_base_sig": 0.0,
+   "delta_anchor_rowlevel": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "delta_anchor_peershare": 0.0,
+   "lo_share": 0.0,
+   "hi_share": 0.0
+  },
+  {
+   "op_label": "RENAME_SYN",
+   "n": 7,
+   "e_own_sig": 0.0,
+   "e_base_sig": 0.0,
+   "delta_anchor_rowlevel": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "delta_anchor_peershare": 0.0,
+   "lo_share": 0.0,
+   "hi_share": 0.0
+  }
+ ],
+ "placebo_within_base_label_shuffle": [
+  {
+   "op_label_permuted": "ADD_FOREIGN",
+   "n": 29,
+   "delta_anchor_rowlevel": 0.034
+  },
+  {
+   "op_label_permuted": "BIND",
+   "n": 23,
+   "delta_anchor_rowlevel": 0.0
+  },
+  {
+   "op_label_permuted": "DROP",
+   "n": 12,
+   "delta_anchor_rowlevel": 0.0
+  },
+  {
+   "op_label_permuted": "MEANING_RENAME",
+   "n": 22,
+   "delta_anchor_rowlevel": 0.0
+  },
+  {
+   "op_label_permuted": "RENAME_NONCE",
+   "n": 5,
+   "delta_anchor_rowlevel": 0.0
+  },
+  {
+   "op_label_permuted": "RENAME_SYN",
+   "n": 7,
+   "delta_anchor_rowlevel": 0.0
+  }
+ ],
+ "caveat": "secondary arm with 1.5-2B local peers; NOT the pre-registered peers; no gate verdict"
+}
