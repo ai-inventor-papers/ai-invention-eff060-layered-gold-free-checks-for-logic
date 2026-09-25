@@ -1,0 +1,20 @@
+{
+ "n_checks": 429,
+ "n_mismatch": 0,
+ "mismatches": [],
+ "placebo_sigproxy_e_by_permuted_op": {
+  "ADD_FOREIGN": 0.0,
+  "ADD_INTERNAL": 0.0,
+  "BIND": 0.0,
+  "CONN": 0.0,
+  "DROP": 0.0,
+  "MEANING_RENAME": 0.0,
+  "NEG": 0.0,
+  "QUANT": 0.0,
+  "RESTR": 0.0,
+  "REV": 0.0,
+  "SWAP": 0.0
+ },
+ "placebo_spread": 0.0,
+ "all_pass": true
+}
