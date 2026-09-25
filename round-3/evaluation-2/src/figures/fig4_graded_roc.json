@@ -1,0 +1,24 @@
+{
+ "type": "ROC",
+ "named_points": {
+  "any_peer_agrees (c<1)": {
+   "e": 0.44419889502762433,
+   "d": 0.13109048723897912,
+   "auroc_b": 0.7123553088666983
+  },
+  "majority END_MAJ (c<0.5)": {
+   "e": 0.12430939226519337,
+   "d": 0.537122969837587,
+   "auroc_b": 0.6692838189486099
+  },
+  "all_peers_agree (c==0)": {
+   "e": 0.019337016574585635,
+   "d": 0.888631090487239,
+   "auroc_b": 0.5460159464690877
+  }
+ },
+ "source": [
+  "tables/graded_trace_c_score_align.csv",
+  "tables/graded_trace_c_score_exact.csv"
+ ]
+}
