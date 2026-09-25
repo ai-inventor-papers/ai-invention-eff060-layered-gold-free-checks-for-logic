@@ -1,0 +1,397 @@
+{
+ "title": "All baselines re-run on held-out dataset E (iter 2)",
+ "created_iso": "2026-09-23T18:02:15",
+ "created_ts": 1790186535.6667595,
+ "data": {
+  "dataset": "iter_1/gen_art/gen_art_dataset_1 full_data_out.json group heldout_candidates (8507 rows, 700 sentences)",
+  "blind_loader": "src/e_pool.py load_E(blind=True) strips 18 label keys + 4 class-structure keys"
+ },
+ "models": {
+  "embed": "sentence-transformers/all-mpnet-base-v2",
+  "judge_cheap": "google/gemini-2.5-flash-lite",
+  "judge_cheap2": "openai/gpt-4.1-nano",
+  "judge_cheap_fallbacks": [
+   "qwen/qwen3-30b-a3b-instruct-2507"
+  ],
+  "judge_strong": "google/gemini-3.1-pro-preview",
+  "judge_strong_params": {
+   "reasoning": {
+    "effort": "low"
+   }
+  },
+  "nli": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+  "nli_alt": "cross-encoder/nli-deberta-v3-large",
+  "recall_probe": "google/gemini-2.5-flash-lite",
+  "roundtrip_llm": "google/gemini-2.5-flash-lite",
+  "judge_strong_max_tokens": 4000,
+  "sc5": "openai/gpt-4.1-nano",
+  "b2_reader": "google/gemini-2.5-flash-lite",
+  "local_verbaliser": "Qwen/Qwen3-8B (bf16, greedy, same VERBALISE prompt)"
+ },
+ "model_swaps": [],
+ "prices_per_token": {
+  "google/gemini-2.5-flash-lite": {
+   "in": 1e-07,
+   "out": 4e-07
+  },
+  "openai/gpt-4.1-nano": {
+   "in": 1e-07,
+   "out": 4e-07
+  },
+  "google/gemini-3.1-pro-preview": {
+   "in": 2e-06,
+   "out": 1.2e-05
+  }
+ },
+ "prompts": {
+  "recall": "Translate this sentence into first-order logic in FOLIO notation: {text}\nReturn only the formula on one line, no explanation.",
+  "reformalise": "Write a first-order logic formula (symbols ∀ ∃ ¬ ∧ ∨ → ↔ ⊕) for this sentence, using ONLY these predicates/constants: {sig}. Use the notation ∀x (P(x) → Q(x)). Return only the formula on one line, no explanation. Sentence: {sent}",
+  "rubric": "You check whether a first-order logic formula faithfully expresses the meaning of an English sentence. Predicate and constant names may differ from the words of the sentence; logically equivalent rewritings are acceptable; judge MEANING only: quantifiers, which things are conditions vs asserted properties, negation, argument order, and whether any content is missing or added.",
+  "rubric_variant": "A",
+  "sha1": {
+   "RECALL": "c6cdc4224784af54cabc106b4d83937ffce3e9ed",
+   "REFORMALISE": "7ee0282c02a02996ee21134237f46f436d4eed27",
+   "RUBRIC_A": "06686913c59b6d9a7daeb5748cb9f53ed2b2e812",
+   "RUBRIC_B": "51f2574d702f9858bf10290b4740282a029b6b27",
+   "USER_JSON": "087210fc38f83ea7d188dab52770de50572a5c9b",
+   "USER_JSON_A": "5b3ccfb9d82edbbfb5bd1bb7a4e574da62be38b4",
+   "USER_YESNO": "b36e93cb44615e19dcb36e85ad8664dcb2acb458",
+   "VERBALISE": "584f33d03322a050f7cc516c5b22ca05d581e91b"
+  },
+  "user_json": "Sentence: {text}\nFormula: {fol}\nReturn JSON: {{\"faithful_prob\": <0-100>, \"verdict\": \"FAITHFUL\"|\"UNFAITHFUL\", \"error_type\": <one of NEG/REV/QUANT/RESTR/CONN/MOVE/DROP/ADD/SWAP/BIND/SCOPE/UNGLUE/COMPOUND/NONE, NONE if faithful>, \"reason\": \"<=25 words\"}}",
+  "user_yesno": "Sentence: {text}\nFormula: {fol}\nAnswer with one word: YES if faithful, NO otherwise.",
+  "verbalise": "Translate this first-order logic formula into one plain English sentence. Say exactly what the formula says, including odd or unnatural structure; do not fix it. Read CamelCase predicate names as words. Formula: {fol}",
+  "sc5_prompt": "dataset E prompts/fewshot_v1.txt (system + 6 exemplars + 'Sentence: {sentence}')",
+  "sc5_prompt_sha1": "6c4db3c308c31083efb48446c4bfdca767731414"
+ },
+ "prompt_sha1_check": {
+  "RUBRIC_A": "06686913c59b6d9a7daeb5748cb9f53ed2b2e812",
+  "USER_JSON_A": "5b3ccfb9d82edbbfb5bd1bb7a4e574da62be38b4",
+  "USER_YESNO": "b36e93cb44615e19dcb36e85ad8664dcb2acb458",
+  "VERBALISE": "584f33d03322a050f7cc516c5b22ca05d581e91b"
+ },
+ "max_tokens": {
+  "judge_cheap": 150,
+  "judge_cheap2": 1,
+  "recall": 200,
+  "reformalise": 200,
+  "verbalise": 120,
+  "sc5": 300,
+  "b2_reader": 400,
+  "judge_strong": 4000
+ },
+ "temperature": {
+  "judges": 0,
+  "verbaliser": 0,
+  "sc5": 0.7,
+  "b2_reader": 0
+ },
+ "orientation": "every metric oriented so that higher = more likely UNFAITHFUL (judges: 1-P(faithful))",
+ "unparseable_rule": "LLM components are NOT called on unparseable candidates; they receive the pre-declared worst oriented score (1.0; SC eq_frac 0) and count as coverage failures in the COVERAGE view",
+ "json_fail_rule": "judge_cheap: one retry, then fallback oriented score 0.5 (counted)",
+ "pools": {
+  "E_POOL": "system_class=='llm'",
+  "GOLDSYS": "system=='malls_gpt4_gold'",
+  "CCG": "system_class=='symbolic_eventsem' (separate)",
+  "PRIMARY": "candidate_fol non-empty AND parses with labeller/fol.py AND converts to z3"
+ },
+ "label_regimes": {
+  "R_AB": "tier in {A,B} & final in {CORRECT,ERROR} & not reading_choice (headline)",
+  "R_A": "tier == 'A' only (A_unaudited_ref excluded)",
+  "COVERAGE": "R_AB ∪ UNPARSEABLE-as-ERROR",
+  "sensitivity": [
+   "CONTESTED_AS_CORRECT",
+   "CONTESTED_AS_ERROR",
+   "ALL_TIERS",
+   "R_AB_L25_NO_TOPUP"
+  ]
+ },
+ "label_vector_function": "sha1('\\n'.join(sorted(f'{item_id}:{label}')))  (src/e_pool.py label_vector_sha1)",
+ "combination_feature_sets": {
+  "S1": [
+   "parse_fail",
+   "pilot_joint_conflict",
+   "pilot_arity_incons",
+   "pilot_shape_incons",
+   "pilot_dangling",
+   "pilot_undeclared",
+   "pilot_rerun_jacc"
+  ],
+  "S2": [
+   "rt_nli_min",
+   "rt_nli_fwd",
+   "rt_nli_bwd",
+   "rt_nli_contra",
+   "rt_embed_cos",
+   "rt_nli_min_local",
+   "rt_embed_cos_local"
+  ],
+  "S3": [
+   "judge_cheap_disg",
+   "judge_cheap_orig",
+   "judge_cheap2_disg",
+   "judge_cheap2_orig"
+  ],
+  "SC": [
+   "sc5_eq_frac",
+   "sc5_entropy"
+  ],
+  "S4": [
+   "parse_fail",
+   "pilot_joint_conflict",
+   "pilot_arity_incons",
+   "pilot_shape_incons",
+   "pilot_dangling",
+   "pilot_undeclared",
+   "pilot_rerun_jacc",
+   "rt_nli_min",
+   "rt_nli_fwd",
+   "rt_nli_bwd",
+   "rt_nli_contra",
+   "rt_embed_cos",
+   "rt_nli_min_local",
+   "rt_embed_cos_local",
+   "judge_cheap_disg",
+   "judge_cheap_orig",
+   "judge_cheap2_disg",
+   "judge_cheap2_orig",
+   "sc5_eq_frac",
+   "sc5_entropy"
+  ],
+  "S4_iter1": [
+   "parse_fail",
+   "pilot_joint_conflict",
+   "pilot_arity_incons",
+   "pilot_shape_incons",
+   "pilot_dangling",
+   "pilot_undeclared",
+   "pilot_rerun_jacc",
+   "rt_nli_min",
+   "rt_nli_fwd",
+   "rt_nli_bwd",
+   "rt_nli_contra",
+   "rt_embed_cos",
+   "judge_cheap_disg",
+   "judge_cheap2_disg",
+   "judge_cheap_orig",
+   "judge_cheap2_orig"
+  ],
+  "S5": [
+   "parse_fail",
+   "pilot_joint_conflict",
+   "pilot_arity_incons",
+   "pilot_shape_incons",
+   "pilot_dangling",
+   "pilot_undeclared",
+   "pilot_rerun_jacc",
+   "rt_nli_min",
+   "rt_nli_fwd",
+   "rt_nli_bwd",
+   "rt_nli_contra",
+   "rt_embed_cos",
+   "rt_nli_min_local",
+   "rt_embed_cos_local",
+   "judge_cheap_disg",
+   "judge_cheap_orig",
+   "judge_cheap2_disg",
+   "judge_cheap2_orig",
+   "sc5_eq_frac",
+   "sc5_entropy",
+   "judge_strong_orig",
+   "judge_strong_disg"
+  ]
+ },
+ "combination_model": "L2 logistic regression C=1.0, standardised within training folds, missing -> 0 + missing-indicator (src/analysis.py combo_oof logic); folds_E below; for fold k fit on labelled rows of other folds, predict ALL rows of fold k",
+ "folds_E": "fold(sentence_id) = int(sha1('E_folds_v1|'+sentence_id),16) % 5 over all 700 sentences",
+ "thresholds": {
+  "rule": "frozen from the SCREEN (exp D results/analysis.json); judges flag if P(faithful)<0.5",
+  "values_from_expD": {
+   "parse_fail": 0.5,
+   "pilot_joint_conflict": 0.5,
+   "pilot_arity_incons": 0.0,
+   "pilot_shape_incons": 0.0,
+   "pilot_dangling": 0.5,
+   "pilot_undeclared": 0.0,
+   "pilot_rerun_jacc": 0.5,
+   "rt_nli_min": 0.9774119272828102,
+   "rt_nli_fwd": 0.33368949890136723,
+   "rt_nli_bwd": 0.9551530726253987,
+   "rt_nli_contra": 0.026751494035124845,
+   "rt_nli_min_alt": 0.9949031063355506,
+   "rt_embed_cos": 0.3201072692871094,
+   "rt_reformalise_eq": 0.5,
+   "judge_cheap_orig": 0.5,
+   "judge_cheap_disg": 0.5,
+   "judge_cheap2_orig": 0.5,
+   "judge_cheap2_disg": 0.5,
+   "judge_strong_orig": 0.5,
+   "judge_strong_disg": 0.5,
+   "judge_local_qwen8b_orig": 0.5,
+   "judge_local_qwen8b_disg": 0.5,
+   "judge_local_llama8b_orig": 0.5,
+   "judge_local_llama8b_disg": 0.5,
+   "judge_local_qwen14b_orig": 0.5,
+   "judge_local_qwen14b_disg": 0.5,
+   "rt_nli_min_localverb": 0.9840680196881295,
+   "rt_reformalise_eq_localverb": 0.5
+  },
+  "new_columns": {
+   "rt_nli_min_local": "exp D rt_nli_min_localverb screen threshold",
+   "rt_embed_cos_local": "exp D rt_embed_cos screen threshold (no local-verbaliser cosine existed)",
+   "rt_nli_min_alt": "exp D value",
+   "sc5_eq_frac": "flag if eq_frac < 0.5 (oriented > 0.5)",
+   "sc5_entropy": "descriptive (no threshold): flag if > median screen value unavailable -> 0.5 nat",
+   "b2_score": "90th percentile of b2_score on screen track-H CORRECT items (computed in b2_gate before any E label)",
+   "S4": "nested: within each training fold, the training-fit score quantile giving FA=0.10 on training CORRECT rows"
+  }
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "cluster": "metadata_sentence_id",
+  "seed": 0,
+  "ci": "percentile 95%"
+ },
+ "testability": {
+  "rule": ">=50 CORRECT and >=50 ERROR rows and >=25 sentences per side (dataset card §3)",
+  "R_AB": {
+   "L25": true,
+   "L20": true,
+   "EXC": true,
+   "CTRL": true,
+   "L25_topup_only": false
+  },
+  "R_A": {
+   "L25": false,
+   "L20": true,
+   "EXC": true,
+   "CTRL": false,
+   "pooled_L20_EXC_CTRL": true
+  },
+  "untestable_cells": "reported descriptively with sign only, never tested"
+ },
+ "frontier_frame_rule": "cells {CORRECT,ERROR} x {L25,L20,EXC,CTRL} within R_AB ∩ PRIMARY ∩ E_POOL; 300 rows: 38 per cell (37 in the last 4 cells); order sha1(item_id+'frontier_v1'); <=1 row per sentence per cell and <=2 rows per sentence overall; inclusion probability = n_drawn/n_cell (IPW)",
+ "analyses": [
+  "(a) AUROC/AUPRC/precision-recall-FA at frozen thresholds, tie rate; R_AB, R_A, COVERAGE, sensitivity; pooled/per stratum/long pool",
+  "(b) paired Δ vs judge_cheap_disg: cluster bootstrap + DeLong",
+  "(c) frontier vs cheap judge on the frame, unweighted + IPW, $ per call vs $0.002 gate",
+  "(d) contamination DiD GOLDSYS vs E_POOL, gold-recognition probe, MDE = 2.8 x bootstrap SE",
+  "(e) judge recall per error type at matched FA 0.10/0.20; error_type field accuracy vs majority chance",
+  "(f) complexity AUROC per bin + GEE (exchangeable, groups = sentence) judge_correct ~ z(words)+C(stratum)",
+  "(g) coverage, $ and seconds per item",
+  "(h) gold-error / correct-not-equivalent rates",
+  "(i) system-level Kendall tau-b over 13 system x variant rows (descriptive)",
+  "(j) invariance on exp D's 282 shared rewrites (B2 new, judges joined)",
+  "(k) B2 report"
+ ],
+ "b2_spec": {
+  "mutant_ops": [
+   "NEG",
+   "REV",
+   "QUANT",
+   "RESTR",
+   "CONN",
+   "DROP",
+   "SWAP",
+   "SCOPE"
+  ],
+  "n_mutants": 6,
+  "max_candidates_tried": 20,
+  "z3_timeout_ms": 2000,
+  "direction": "mutant i even: phi TRUE & psi FALSE world; odd: phi FALSE & psi TRUE; fallback other direction",
+  "domain": "constants + k fresh individuals, k=1..3, |D|<=4 (constants+1 if >3 constants), cap 6",
+  "world_solver": "z3 Optimize minimising #true atoms, smallest SAT domain first",
+  "verbaliser": "fixed template, no LLM",
+  "reader": "google/gemini-2.5-flash-lite T=0, one call per item, text only (never a formula)",
+  "score": "b2_score = (#determined verdicts != phi-truth + 0.5 x #UNDETERMINED) / n_worlds",
+  "gate": "balanced accuracy >= 0.85 on worlds of track-H expert-corrected formulas (40-item dev slice excluded)",
+  "prompt_dev": "<=2 variants on a 40-item screen-H dev slice; frozen in prereg_b2.json",
+  "status_fallback": "non-ok -> oriented score 0.5 (coverage failure)"
+ },
+ "budget": {
+  "cap_total": 9.5,
+  "caps": {
+   "judge_cheap": 1.8,
+   "judge_cheap2": 0.9,
+   "sc5": 0.7,
+   "roundtrip": 0.5,
+   "strong": 3.0,
+   "strong_dryrun": 0.3,
+   "retest": 0.05,
+   "b2_reader": 2.0,
+   "dryrun": 0.1,
+   "setup_probe": 0.05
+  },
+  "note": "the run-shared OpenRouter key had $0.00 left at freeze (see key_state); F-KEY applies if it dies"
+ },
+ "time_fallback_order": [
+  "judge_cheap orig/disg + cheap2 disg",
+  "pilot + parse + API-verbaliser NLI/cosine",
+  "SC-5",
+  "S4 + folds",
+  "frontier 300",
+  "B2 screen + gate",
+  "B2 on E",
+  "local verbaliser",
+  "cheap2 orig",
+  "B2 rewrites"
+ ],
+ "departures": [
+  "frontier on a 300-row stratified frame (budget)",
+  "frame drawing reads labels (disclosed; nothing tuned on it)",
+  "pilot 'documents' are artificial (system|variant, stratum, sha1 bucket of ~20 sentences) groups",
+  "rerun-Jaccard: zero-shot vs few-shot for Llama-3.3-70B/Qwen3-235B, cross-system for the rest",
+  "rt_reformalise_eq not re-run (closed at 0.513)",
+  "R_ADJ/R_COMP labels do not exist yet: exported feature table + fit_s4_oof",
+  "B2 is new: reader gate before fusion",
+  "judges not run on unparseable rows (worst score)",
+  "matched-FA recall uses per-judge E thresholds (descriptive)",
+  "system-level tau descriptive",
+  "disguise_item called with its default seed (seed = text), as the sibling experiment does"
+ ],
+ "key_state": {
+  "limit": 50,
+  "limit_reset": "daily",
+  "limit_remaining": 0,
+  "usage_daily": 50.092611951
+ },
+ "frontier_frame": {
+  "file": "data/frontier_frame.json",
+  "sha256": "076f83a4af10f7cd4edb674c9fd75a0c42dd163b2881827b2e71629cf0950132",
+  "n": 284,
+  "per_cell": {
+   "CORRECT|L25": 38,
+   "CORRECT|L20": 38,
+   "CORRECT|EXC": 38,
+   "CORRECT|CTRL": 31,
+   "ERROR|L25": 37,
+   "ERROR|L20": 37,
+   "ERROR|EXC": 37,
+   "ERROR|CTRL": 28
+  },
+  "cells_population": {
+   "CORRECT|L25": 176,
+   "CORRECT|L20": 225,
+   "CORRECT|EXC": 216,
+   "CORRECT|CTRL": 179,
+   "ERROR|L25": 689,
+   "ERROR|L20": 578,
+   "ERROR|EXC": 378,
+   "ERROR|CTRL": 135
+  }
+ },
+ "label_vectors": {
+  "note": "lines 'metadata_item_id:label' over ROWS (the 115 colliding item_ids appear once per row); '_rowkey' variant uses row_key (item_id~variant for colliding rows)",
+  "R_AB": {
+   "n": 2941,
+   "sha1": "1bfcb30634ab6e9c3f00d40d398584b5892a805f",
+   "sha1_rowkey": "06ada566f12a6f61b27664931cd191a9df355b90"
+  },
+  "R_A": {
+   "n": 897,
+   "sha1": "715bfc1e28599a58343f379820f6990254ab30ef",
+   "sha1_rowkey": "0bf77dfccc5acaae1361052ed7db051560db1adf"
+  }
+ },
+ "freeze_context": "Frozen before ANY score file exists. The only label read before scoring is stage 'frame' (draw_frontier_frame logic in method.py), which reads item_id, final_label, tier, reading_choice, source_stratum and sentence_id to draw the 300-row frontier frame and hash the R_AB/R_A label vectors; no parameter, prompt, threshold or model choice depends on it.",
+ "frozen_iso": "2026-09-23T18:02:24"
+}

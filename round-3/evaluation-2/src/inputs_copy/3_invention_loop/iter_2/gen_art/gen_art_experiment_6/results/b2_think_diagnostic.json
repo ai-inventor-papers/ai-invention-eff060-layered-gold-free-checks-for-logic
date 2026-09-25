@@ -1,0 +1,36 @@
+{
+ "note": "POST-HOC diagnostic, NOT pre-registered; screen data only (track-H expert-corrected formulas, 40-item dev slice excluded). Same worlds and frozen reader prompt (v2); reader = Qwen3-8B with thinking ON, greedy, <= 2048 new tokens, batch 12.",
+ "gate_items": 251,
+ "reader_fail_token_budget": 127,
+ "thinking_reader_on_completed_items": {
+  "n_items_ok": 124,
+  "n_true_worlds": 224,
+  "n_false_worlds": 203,
+  "acc_true": 0.7991,
+  "acc_false": 0.7734,
+  "bal_acc": 0.7863,
+  "undet_share": 0.1475
+ },
+ "non_thinking_reader_on_the_same_completed_items": {
+  "n_items_ok": 124,
+  "n_true_worlds": 224,
+  "n_false_worlds": 203,
+  "acc_true": 0.5893,
+  "acc_false": 0.6108,
+  "bal_acc": 0.6001,
+  "undet_share": 0.171
+ },
+ "non_thinking_reader_all_gate_items": {
+  "n_items": 262,
+  "n_ok": 249,
+  "n_true_worlds": 606,
+  "n_false_worlds": 539,
+  "acc_true": 0.44554455445544555,
+  "acc_false": 0.5064935064935064,
+  "bal_acc": 0.476019030474476,
+  "undet_share": 0.2017467248908297
+ },
+ "seconds_per_item": 9.49,
+ "screen_part": "SKIPPED (time): with 51% of reads exhausting the token budget the screen AUROC would be dominated by fallbacks",
+ "reading": "Reader capacity matters: on the same completed items balanced accuracy rises from 0.60 (non-thinking) to 0.79 (thinking), but stays below the 0.85 gate and costs ~9.5 s/item on an RTX 4090 with half of the items not finishing within 2,048 tokens. The world construction is readable by a reasoning reader; an 8B non-thinking reader cannot use it."
+}

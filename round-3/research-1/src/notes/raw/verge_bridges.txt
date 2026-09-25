@@ -1,0 +1,96 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://arxiv.org/html/2601.20055
+Type: HTML
+Pattern: Bridges and cross-model consensus|Formalization Consensus\. (4 matches in 98393 chars)
+
+--- Content ---
+
+2984:... Computation
+     1. The Greedy Approximation.
+     2. Stability & Order Dependence:
+  12. C Semantic Claim Type Definitions
+     1. C.1 Technical Implementation Details
+        1. C.1.1 Atomic Decomposition Strategy
+        2. C.1.2 Formalization into SMT-LIB2
+     2. C.2 Formal Definition of Semantic Equivalence
+        1. C.2.1 Logical Framework
+        2. C.2.2 Equivalence Definition
+        3. C.2.3 Verification Implementation
+     3. C.3 Semantic Router Stress-Test Dataset
+  13. D Adversarial Robustness and Context Faithfulness
+  14. E Reproducibility & Implementation Details
+     1. E.1 Hyperparameters and Configuration
+     2. E.2 Prompt Templates
+        1. E.2.1 Claim Decomposition & Classification
+        2. E.2.2 Autoformalization (Natural Language →\rightarrowSMT-LIB2)
+        3. E.2.3 Feedback Injection (Refinement Step)
+     3. E.3 Consensus and Scoring Metrics
+        1. Formalization Consensus.
+        2. Variance-Based Scoring.
+     4. E.4 Pipeline Reliability and Failure Modes
+        1. Decomposition.
+        2. Formalization funnel.
+        3. Routing distribution.
+        4. Error taxonomy.
+        5. Entity extraction.
+        6. Shared hallucinations.
+        7. Bridges and cross-model consensus.
+     5. E.5 Compute Infrastructure
+     6. E.6 Benchmark Descriptions
+  15. F Detailed Verification Trajectories
+
+
+
+[ License: CC BY-NC-ND 4.0 ](https://info.arxiv.org/help/license/index.html#licenses-available)
+
+arXiv:2601.20055v2 [cs.CL] 02 May 2026
+
+# VERGE: Formal Refinement and Guidance Engine for Verifiable LLM Reasoning
+
+Vikash Singh Darion Cassel ††thanks: Work done during internship at Amazon Web Services Affiliation: Case Western Reserve University  Affiliation: Amazon Web Services  Nathaniel Weir  Affiliation: Amazon Web Services  Nick Feng  Affiliation: Amazon Web Services  Sam Bayless  Affiliation: Amazon Web Services 
+
+###### Abstract
+
+Despite the syntactic fluency of Large Language Models (LLMs), ensuring their logical correctness in high-stakes domains remains a fundamental challenge. We present a neurosymbolic framework that combines LLMs with SMT solvers to produce ve...
+--
+79479:...nd logic. 3. Do not include (check-sat) commands; simply assert the facts. 4. If a statement is ambiguous, use uninterpreted functions. Input Context: [CONTEXT]   
+Input Claim: [CLAIM]   
+Output: <smt> ... code ... </smt>
+
+#### E.2.3 Feedback Injection (Refinement Step)
+
+When the SMT solver returns UNSAT, we calculate the Minimal Correction Set (MCS) and feed it back to the model using this template.
+
+System Prompt: Refinement Your previous answer contained logical contradictions verified by a formal solver. Please refine your reasoning. Verification Report: • Status: UNSATISFIABLE • Conflict Logic: [Z3_UNSAT_CORE] • Actionable Feedback: The set of claims {C1, C3} cannot be true simultaneously. Specifically, [MCS_DESCRIPTION]. Instruction: Rewrite your answer to resolve this contradiction. Do not weaken the premises; correct your derivation.
+
+### E.3 Consensus and Scoring Metrics
+
+##### Formalization Consensus.
+
+To ensure the SMT code faithfully represents the natural language, we generate K=3K=3 candidate formalizations for every claim. We compute the Semantic Equivalence between candidates by querying the solver for the unsatisfiability of their negation (see Eq. 3). We construct an equivalence graph where edges represent proven logical identity. If a clique of size ≥⌈K/2⌉\geq\lceil K/2\rceil (majority consensus) is found, the representative formalization is accepted. Otherwise, the claim is flagged as “Ambiguous” and routed to Soft Verification.
+
+##### Variance-Based Scoring.
+
+The final confidence score 𝒮⁡(𝒜)\mathcal{S}(\mathcal{A}) is penalized if high-confidence claims contradict each other. We define the score as:
+
+| 𝒮⁡(𝒜)=μc​l​a​i​m​s⋅max⁡(0.5,1.0−σc​l​a​i​m​sμc​l​a​i​m​s+ϵ)\mathcal{S}(\mathcal{A})=\mu_{claims}\cdot\max\left(0.5,1.0-\frac{\sigma_{claims}}{\mu_{claims}+\epsilon}\right) |...
+--
+83693:...e error, soft fallback); _(ii)_ quantifier scope (consensus disagreement); _(iii)_ missing axioms (spurious UNSAT triggers context refinement, §3.3). The Soft-Only ablation (−22.8%-22.8\% avg) confirms these safeguards are load-bearing.
+
+##### Entity extraction.
+
+Accuracy is 93−99%93{-}99\% across benchmarks, errors concentrated in type misassignment. A gold-entity study on AR-LSAT lifts consensus by 2.1%2.1\% and accuracy by 0.7%0.7\%, indicating robustness to extraction noise.
+
+##### Shared hallucinations.
+
+Soft verification can fail under correlated judge errors. VERGE mitigates via the variance penalty (Eq. 6), a 0.90.9 cap on soft claim contributions (entailment cannot be overridden by consensus), and the joint check (soft claims contradicting hard ones are flagged). None of these eliminates shared hallucinations; we treat this as fundamental to any consensus-based verifier.
+
+##### Bridges and cross-model consensus.
+
+Bridging axioms are LLM-generated and validated only conservatively (§3.5); principled validation via compositional translation remains open. Multi-sample consensus uses one formalizer; cross-model consensus is supported but not yet evaluated. Bridging axioms enter only the joint check, never individual verification. Adding constraints can destroy but never create satisfiability, so a faulty bridge triggers conservative over-refinement but cannot cause acceptance of an incorrect answer. Empirically, joint SAT disagrees with individual verification on 8.3%8.3\% of GPT-OSS-120B problems; 72%72\% are genuine conflicts and 28%28\% bridge artifacts, with net accuracy impact below 0.5%0.5\%.
+
+Benchmark | Acc@T=10 | Acc@T=15 | Acc@T=20 | Δ\Delta(T=10→\to20)  
+---|---|---|---|---  
+FOLIO | 86.1 | 86.3 | 86.3 | +0.2  
+ZebraLogic | 92.3 | 92.4 | 92.5 | +0.2  
+AR-LSAT | 92.1 | 92.2 | 92.2 | +0.1...

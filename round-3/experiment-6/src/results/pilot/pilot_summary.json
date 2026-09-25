@@ -1,0 +1,131 @@
+{
+ "t2_determinism": {
+  "n": 10,
+  "agree_within_0.05": 10,
+  "pass": true,
+  "pairs": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.95,
+    0.95
+   ],
+   [
+    0.95,
+    0.95
+   ],
+   [
+    0.95,
+    0.95
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    1.0,
+    1.0
+   ]
+  ]
+ },
+ "judge_cheap": {
+  "calls": 52,
+  "usd": 0.002407,
+  "mean_usd_call": 4.6288461538461544e-05,
+  "p80_usd_call": 5.172e-05,
+  "mean_s_call": 0.861076923076923,
+  "mean_out_tok": 54.5
+ },
+ "judge_cheap2": {
+  "calls": 40,
+  "usd": 0.0007842,
+  "mean_usd_call": 1.9605e-05,
+  "p80_usd_call": 2.2040000000000002e-05,
+  "mean_s_call": 1.080575,
+  "mean_out_tok": 2.0
+ },
+ "strong": {
+  "calls": 10,
+  "usd": 0.046654,
+  "mean_usd_call": 0.0046654,
+  "p80_usd_call": 0.005704000000000001,
+  "mean_s_call": 4.526000000000001,
+  "mean_out_tok": 345.0
+ },
+ "roundtrip": {
+  "calls": 20,
+  "usd": 0.0004791,
+  "mean_usd_call": 2.3955000000000004e-05,
+  "p80_usd_call": 2.786e-05,
+  "mean_s_call": 0.74465,
+  "mean_out_tok": 38.1
+ },
+ "sc5": {
+  "n_sentences": 4,
+  "sample_parse_rate": 0.95
+ },
+ "judge_cheap_fail_rate": {
+  "n": 40,
+  "fail": 2,
+  "fail_reasons": {
+   "json_parse": 2
+  },
+  "src": {
+   "None": 40
+  },
+  "finish": {
+   "None": 40
+  }
+ },
+ "judge_cheap2_fail_rate": {
+  "n": 40,
+  "fail": 0,
+  "fail_reasons": {},
+  "src": {
+   "logprobs": 40
+  },
+  "finish": {
+   "None": 40
+  }
+ },
+ "judge_strong_fail_rate": {
+  "n": 10,
+  "fail": 0,
+  "fail_reasons": {},
+  "src": {
+   "None": 10
+  },
+  "finish": {
+   "stop": 10
+  }
+ },
+ "verbalise": {
+  "n": 20,
+  "fail": 0,
+  "leak": 0
+ },
+ "key_after": {
+  "limit": 7.0,
+  "limit_remaining": 4.475637,
+  "usage": 2.524363,
+  "ts": 1790214783.492599
+ }
+}

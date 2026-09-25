@@ -1,0 +1,5 @@
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6/results/summary.md :: ## Frame (284 rows): larger vs cheap judge
+contrast,delta,ci,delong_p,delta_ipw,ci_ipw
+judge_local_qwen14b_orig - judge_local_qwen8b_orig,0.0251,"[-0.0157, 0.0655]",0.256393,0.0184,"[-0.0229, 0.0584]"
+judge_local_qwen14b_disg - judge_local_qwen8b_disg,-0.0238,"[-0.0726, 0.0218]",0.379153,-0.0196,"[-0.0726, 0.0312]"
+judge_local_qwen14b_orig - judge_local_qwen8b_disg,-0.0345,"[-0.0841, 0.0191]",0.250144,-0.0353,"[-0.0873, 0.0188]"

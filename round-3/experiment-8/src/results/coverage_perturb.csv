@@ -1,0 +1,28 @@
+metric,n_rows,n_scored_ok,n_fail_filled,n_not_scorable,reasons,reference_row_only
+c_align,5402,3419,0,1983,na:peer_unavailable=37; na:no_peers_yet(R_COMP)=1946,False
+c_nf,5402,3419,0,1983,na:peer_unavailable=37; na:no_peers_yet(R_COMP)=1946,False
+c_hyb,5402,3419,0,1983,na:peer_unavailable=37; na:no_peers_yet(R_COMP)=1946,False
+g_align,5402,3419,0,1983,na:peer_unavailable=37; na:no_peers_yet(R_COMP)=1946,False
+g_nf,5402,3419,0,1983,na:peer_unavailable=37; na:no_peers_yet(R_COMP)=1946,False
+g_hyb,5402,3419,0,1983,na:peer_unavailable=37; na:no_peers_yet(R_COMP)=1946,False
+parse_fail,5402,5402,0,0,,True
+pilot_joint_conflict,5402,5397,5,0,,True
+pilot_arity_incons,5402,5402,0,0,,True
+pilot_shape_incons,5402,5402,0,0,,True
+pilot_dangling,5402,5402,0,0,,True
+l2_bow,5402,5402,0,0,,False
+l3_z3,5402,3456,0,1946,na:no_cached_questionnaire(R_COMP)=1946,False
+p_peer_text,5402,5402,0,0,,False
+p_text,5402,5402,0,0,,False
+sc5_local_eq_frac,5402,3456,0,1946,na:no_sc_samples(R_COMP)=1946,False
+sc5_local_entropy,5402,3456,0,1946,na:no_sc_samples(R_COMP)=1946,False
+judge_local_qwen8b_disg,5402,5402,0,0,,False
+judge_local_llama8b_disg,5402,5402,0,0,,False
+rt_nli_min_local,5402,5402,0,0,,False
+rt_nli_fwd_local,5402,5402,0,0,,False
+rt_nli_bwd_local,5402,5402,0,0,,False
+rt_nli_contra_local,5402,5402,0,0,,False
+rt_nli_min_alt_local,5402,5402,0,0,,False
+rt_embed_cos_local,5402,5402,0,0,,False
+judge_cheap_disg,5402,5258,144,0,,False
+S4_local,5402,5402,0,0,,False

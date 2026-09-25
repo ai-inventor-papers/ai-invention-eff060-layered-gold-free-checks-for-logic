@@ -1,0 +1,168 @@
+{
+ "definition": "src/vocab_exact.py docstring",
+ "labelling_ref_differs_from_row_reference": 0,
+ "include": {
+  "n": 616,
+  "n_error": 183,
+  "n_correct": 433,
+  "sent_err": 81,
+  "sent_cor": 122,
+  "testable": true,
+  "per_stratum": {
+   "L25": {
+    "n_error": 35,
+    "n_correct": 44,
+    "sent_err": 17,
+    "sent_cor": 27,
+    "testable": false
+   },
+   "L20": {
+    "n_error": 61,
+    "n_correct": 66,
+    "sent_err": 30,
+    "sent_cor": 35,
+    "testable": true
+   },
+   "EXC": {
+    "n_error": 80,
+    "n_correct": 137,
+    "sent_err": 32,
+    "sent_cor": 40,
+    "testable": true
+   },
+   "CTRL": {
+    "n_error": 7,
+    "n_correct": 186,
+    "sent_err": 2,
+    "sent_cor": 20,
+    "testable": false
+   }
+  },
+  "n_testable_strata": 2,
+  "tier_counts": {
+   "A": 510,
+   "B": 106
+  },
+  "error_op_mix_vex": {
+   "CONN": 109,
+   "COMPOUND": 87,
+   "DROP": 86,
+   "ADD": 64,
+   "NEG": 34,
+   "MOVE": 27,
+   "RESTR": 24,
+   "BIND": 14,
+   "UNGLUE": 8,
+   "SCOPE": 5,
+   "QUANT": 5,
+   "REV": 5,
+   "SWAP": 3
+  },
+  "error_op_mix_all_RAB": {
+   "DROP": 1404,
+   "COMPOUND": 1148,
+   "ADD": 1050,
+   "CONN": 677,
+   "RESTR": 483,
+   "BIND": 420,
+   "MOVE": 222,
+   "MEANING_RENAME": 221,
+   "REV": 205,
+   "SWAP": 172,
+   "NEG": 128,
+   "QUANT": 122,
+   "UNGLUE": 103,
+   "SCOPE": 34,
+   "OTHER": 17,
+   "REST": 1
+  }
+ },
+ "include_strict": {
+  "n": 565,
+  "n_error": 139,
+  "n_correct": 426,
+  "sent_err": 65,
+  "sent_cor": 120,
+  "testable": true,
+  "per_stratum": {
+   "L25": {
+    "n_error": 24,
+    "n_correct": 43,
+    "sent_err": 14,
+    "sent_cor": 27,
+    "testable": false
+   },
+   "L20": {
+    "n_error": 49,
+    "n_correct": 65,
+    "sent_err": 24,
+    "sent_cor": 34,
+    "testable": false
+   },
+   "EXC": {
+    "n_error": 65,
+    "n_correct": 132,
+    "sent_err": 26,
+    "sent_cor": 39,
+    "testable": true
+   },
+   "CTRL": {
+    "n_error": 1,
+    "n_correct": 186,
+    "sent_err": 1,
+    "sent_cor": 20,
+    "testable": false
+   }
+  },
+  "n_testable_strata": 1,
+  "tier_counts": {
+   "A": 484,
+   "B": 81
+  },
+  "error_op_mix_vex": {
+   "CONN": 87,
+   "COMPOUND": 69,
+   "DROP": 67,
+   "ADD": 51,
+   "NEG": 26,
+   "MOVE": 22,
+   "RESTR": 18,
+   "UNGLUE": 7,
+   "BIND": 7,
+   "SCOPE": 5,
+   "REV": 5,
+   "SWAP": 3,
+   "QUANT": 2
+  },
+  "error_op_mix_all_RAB": {
+   "DROP": 1404,
+   "COMPOUND": 1148,
+   "ADD": 1050,
+   "CONN": 677,
+   "RESTR": 483,
+   "BIND": 420,
+   "MOVE": 222,
+   "MEANING_RENAME": 221,
+   "REV": 205,
+   "SWAP": 172,
+   "NEG": 128,
+   "QUANT": 122,
+   "UNGLUE": 103,
+   "SCOPE": 34,
+   "OTHER": 17,
+   "REST": 1
+  }
+ },
+ "exclusions": {
+  "tierA_reverified": 510,
+  "not_vex": 1652,
+  "VOCAB_GRAN": 416,
+  "tierB_panel_kept": 106,
+  "tierA_label_mismatch": 2
+ },
+ "vex_reasons": {
+  "ok": 618,
+  "cand_symbol_not_in_ref": 1652,
+  "VOCAB_GRAN": 416
+ }
+}

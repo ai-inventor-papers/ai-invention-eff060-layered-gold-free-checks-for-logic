@@ -1,0 +1,14 @@
+18:16:57|INFO   |bases 300 {'E_TRUSTED_AGREED': 36, 'E_GOLD_PANEL_OK': 95, 'E_PANEL_REPAIRED': 69, 'RCOMP': 100}
+18:17:09|INFO   |25/300 bases done
+18:17:09|INFO   |50/300 bases done
+18:17:11|INFO   |75/300 bases done
+18:17:12|INFO   |100/300 bases done
+18:17:13|INFO   |125/300 bases done
+18:17:15|INFO   |150/300 bases done
+18:17:16|INFO   |175/300 bases done
+18:17:17|INFO   |200/300 bases done
+18:17:20|INFO   |225/300 bases done
+18:17:23|INFO   |250/300 bases done
+18:17:26|INFO   |275/300 bases done
+18:17:29|INFO   |300/300 bases done
+18:17:30|INFO   |{"tested": 12225, "trivial": 2324, "equivalent": 5249, "control_REORDER_na": 21, "free_variable": 418, "control_CONTRAPOSITIVE_na": 11, "skip_polarity_NONMONO": 1506, "skip_polarity_VACUOUS": 20, "bases": 300, "mutants": 4234, "controls": 868, "per_op_pol": {"ADD:DOWN": 280, "ADD:UP": 281, "ADD_INTERNAL:DOWN": 60, "ADD_INTERNAL:UP": 140, "BIND:DOWN": 250, "BIND:UP": 231, "CONN:DOWN": 241, "CONN:UP": 289, "DROP:DOWN": 241, "DROP:UP": 51, "MEANING_RENAME:DOWN": 264, "MEANING_RENAME:UP": 234, "MOVE:UP": 6, "NEG:DOWN": 283, "NEG:UP": 300, "QUANT:UP": 281, "RESTR:UP": 279, "REV:UP": 281, "SWAP:DOWN": 134, "SWAP:UP": 108}, "complete_pairs": 1354, "per_control": {"RENAME_NONCE": 159, "CONTRAPOSITIVE": 281, "REORDER_COMMUTE": 258, "RENAME_SYN": 141, "DEMORGAN": 8, "REORDER_QUANT": 21}}

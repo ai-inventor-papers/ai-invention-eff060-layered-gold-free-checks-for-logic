@@ -1,0 +1,128 @@
+{
+ "title": "Consensus mechanism audit (T4 on dataset E) - pre-registration of every analysis choice",
+ "note": "Written after the LABEL-FREE pairwise matrix was computed and before any label-joined analysis. Dataset E labels were already seen by earlier iterations: this prereg guards against analysis-choice drift, NOT against label peeking.",
+ "seed": 0,
+ "B": 2000,
+ "bootstrap": "sentence-cluster, numpy default_rng(0), sentence_ids resampled with replacement",
+ "population": "R_AB rows (analyse_E.regime) that are parseable with |P_c|>=2 (consensus-scorable)",
+ "endorsement_rules": {
+  "END_MAJ (PRIMARY)": "endorsed iff n_eq > |P_c|/2 <=> FROZEN c_score_align < 0.5; exact tie at half NOT endorsed",
+  "END_PLUR": "endorsed iff candidate eqmv-equivalent to a node of the UNIQUE largest peer class (components of the True graph induced on P_c's nodes, size in peer rows); ties -> not endorsed",
+  "END_FAM2": ">=2 distinct other vendor families have >=1 row equivalent to the candidate",
+  "END_FAMMAJ": "each other family votes once (any equivalent row); endorsed iff > half of available families endorse",
+  "END_MAJ_EXACT (diagnostic)": "END_MAJ counting only reason=='exact' (or identical string) endorsements (aligner-free)"
+ },
+ "unknown": "UNKNOWN (None) = not equivalent",
+ "binary_score": "b = 1 - endorsed (1 = predicted error)",
+ "identity": "AUROC_b = 1 - (e+d)/2 asserted to 1e-12; e = P(endorsed|ERROR), d = P(not endorsed|CORRECT)",
+ "stratified": "sum_s w_s (1-(e_s+d_s)/2), w_s = n_err,s * n_cor,s",
+ "cuts": {
+  "words_tercile_cuts": [
+   20.0,
+   26.0
+  ],
+  "words_tercile_rule": "T1: words<=q1, T2: q1<words<=q2, T3: >q2; cut points = 1/3, 2/3 quantiles of R_AB SENTENCE words (np.quantile, linear)",
+  "n_conditions_bins": [
+   "0-1",
+   "2",
+   "3",
+   "4+"
+  ],
+  "exception_types_kept": [
+   "but_not",
+   "except",
+   "unless",
+   "without"
+  ],
+  "exception_type_counts_R_AB_rows": {
+   "but_not": 70,
+   "without": 170,
+   "unless": 277,
+   "except": 133,
+   "excluding": 26
+  }
+ },
+ "min_cell": {
+  "rows_of_relevant_class": 30,
+  "sentences": 10,
+  "else": "descriptive, no CI"
+ },
+ "vocab_exact": {
+  "trusted_reference_status": [
+   "GOLD_PANEL_OK",
+   "PANEL_REPAIRED",
+   "TRUSTED_AGREED"
+  ],
+  "normalise": "re.sub(r'[^a-z0-9]', '', name.lower())",
+  "match": "Counter of normalised (predicate name, arity) over distinct predicate keys AND set of normalised constants equal to the reference's",
+  "y_exact": "1 iff NOT pure-z3 equivalent (common._eq, fingerprint prefilter + z3, ms=3000, no align) to the reference; UNKNOWN excluded",
+  "testable_iff": ">=50 ERROR and >=50 CORRECT"
+ },
+ "gee": {
+  "family": "Binomial(logit)",
+  "cov_struct": "Exchangeable (fallback Independence, logged)",
+  "groups": "sentence_id",
+  "se": "robust sandwich",
+  "predictors": "z-scored on the analysis population"
+ },
+ "M1": {
+  "model": "endorsed(END_MAJ) ~ z(n_conditions) + z(words) + C(source_stratum) among R_AB ERROR rows",
+  "confirm": "n_conditions coef < 0 with 95% CI excluding 0",
+  "refute": "coef > 0 with CI excluding 0",
+  "rival": "N-version programming (Eckhardt-Lee 1985; Knight-Leveson 1986): coincident failures concentrate on difficult inputs -> positive slope",
+  "sensitivities": [
+   "END_FAM2",
+   "END_FAMMAJ",
+   "END_PLUR",
+   "END_MAJ_EXACT",
+   "long pool only",
+   "+C(vendor family)",
+   "R_A only",
+   "no stratum dummies"
+  ]
+ },
+ "M2": {
+  "model": "divergent = 1-endorsed ~ z(words) + z(n_conditions) + C(source_stratum) among R_AB CORRECT rows",
+  "confirm": "words coef > 0 with CI excluding 0",
+  "extra": "split by correct_not_equivalent"
+ },
+ "NET": {
+  "primary": "Delta(e+d) = (e+d)[words T3] - (e+d)[words T1], cluster bootstrap B=2000",
+  "secondary": "AME_e + AME_d per SD of words from plain logistic refits in every replicate",
+  "repeat": [
+   "n_conditions 4+ vs 0-1",
+   "long pool only"
+  ],
+  "interpretation": "CI upper < 0 -> AUROC_b improves with length (scatter dominates); CI lower > 0 -> degrades (legitimate divergence dominates); else balanced/undetermined"
+ },
+ "SCATTER": {
+  "unit": "sentence with >=2 labelled LLM rows of the class from >=2 families; CROSS-FAMILY pairs only",
+  "quantities": [
+   "SI_err",
+   "SI_cor",
+   "SI_mix",
+   "joint failure rate",
+   "classes per output"
+  ],
+  "prediction": "SI_err low and falling with n_conditions; SI_cor high",
+  "pair_gee": "eq ~ C(pair_type) * z(n_conditions)"
+ },
+ "M3_local": "correct_c = 1[b==y] (END_MAJ) ~ z(words) vs local judge thresholded at END_MAJ's flag rate (no frozen judge threshold); SECONDARY",
+ "M4": {
+  "family_unit": "prereg family_map_vendor (8 LLM vendor families -> K_max = 7)",
+  "draws": 50,
+  "draw_seed": "sha1('M4|'+row_key+'|'+k+'|'+j)",
+  "k95": "smallest k with mean AUROC(k) >= 0.95 AUROC(K_max)",
+  "confirm": "k95 <= 5",
+  "fixed_pools": "all C(8,3)=56; cross-fit on exp 6 folds_E (fold_E = sha1('E_folds_v1|'+sid)%5); also k=2,4",
+  "lofo_rule": "no single family carries the effect iff every LOFO dAUROC CI lower > -0.03 AND every LOFO AUROC > 0.712",
+  "M4_subset_score": "c_k = 1 - eq rows / all pool rows of the chosen families (no |P|>=2 minimum inside subsets)"
+ },
+ "deviations": {
+  "D1": "eqmv timeout 3000 ms (not the direction's 2 s): exact reproduction of the frozen score requires identical settings",
+  "D2": "k = 1..7 (8 vendor families), not 1..9",
+  "D3": "G2: 0.33% rows differ from the frozen score; eqmv's align/fingerprint use Python str hash (PYTHONHASHSEED-dependent) and exp 5 workers ran with random hash seeds",
+  "D4": "T4 runs on dataset E only (R_COMP has no candidates yet; T2 experiment owns them)",
+  "D5": "prereg written after the label-free matrix was computed (before any label join)"
+ }
+}

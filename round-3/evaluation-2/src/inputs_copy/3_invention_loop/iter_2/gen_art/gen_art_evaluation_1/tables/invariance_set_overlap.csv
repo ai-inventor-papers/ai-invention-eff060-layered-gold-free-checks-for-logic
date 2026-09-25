@@ -1,0 +1,10 @@
+# source: exp A invariance_set.json, exp D data/invariance_items.json, exp C consensus.json rewrites; FOL compared after whitespace removal
+family,n_A,n_D,n_C,shared_base_AD,identical_rewrites_AD,SAME_REWRITE_SET_AD,shared_base_AC,identical_rewrites_AC,SAME_REWRITE_SET_AC,shared_base_CD,identical_rewrites_CD,SAME_REWRITE_SET_CD
+CONTRAPOSITIVE,40,39,54,32,0,NO,20,0,NO,20,0,NO
+DEMORGAN,33,39,54,27,0,NO,16,0,NO,18,0,NO
+PRENEX,1,1,3,1,0,NO,1,1,PARTIAL,1,0,NO
+RENAME,150,150,150,124,14,PARTIAL,80,6,PARTIAL,77,0,NO
+RENAME_CONST_ONLY,0,0,96,0,0,NO,0,0,NO,0,0,NO
+RENAME_PRED_ONLY,0,0,150,0,0,NO,0,0,NO,0,0,NO
+REORDER,34,41,54,28,0,NO,17,16,PARTIAL,18,0,NO
+REPRINT,0,12,0,0,0,NO,0,0,NO,0,0,NO
