@@ -1,0 +1,20 @@
+07:13:15|INFO   |stage all: 221 sentences, 342 tasks to compute, code_sha dd73975642f428cc
+07:13:21|INFO   |20/342 tasks, 6s, 0.30 s/task, ETA 1.6 min
+07:13:22|INFO   |40/342 tasks, 7s, 0.17 s/task, ETA 0.9 min
+07:13:23|INFO   |60/342 tasks, 7s, 0.12 s/task, ETA 0.6 min
+07:13:23|INFO   |80/342 tasks, 8s, 0.10 s/task, ETA 0.5 min
+07:13:24|INFO   |100/342 tasks, 9s, 0.09 s/task, ETA 0.4 min
+07:13:25|INFO   |120/342 tasks, 10s, 0.08 s/task, ETA 0.3 min
+07:13:26|INFO   |140/342 tasks, 11s, 0.08 s/task, ETA 0.3 min
+07:13:26|INFO   |160/342 tasks, 11s, 0.07 s/task, ETA 0.2 min
+07:13:27|INFO   |180/342 tasks, 12s, 0.07 s/task, ETA 0.2 min
+07:13:28|INFO   |200/342 tasks, 13s, 0.06 s/task, ETA 0.2 min
+07:13:29|INFO   |220/342 tasks, 14s, 0.06 s/task, ETA 0.1 min
+07:13:29|INFO   |240/342 tasks, 14s, 0.06 s/task, ETA 0.1 min
+07:13:30|INFO   |260/342 tasks, 15s, 0.06 s/task, ETA 0.1 min
+07:13:31|INFO   |280/342 tasks, 16s, 0.06 s/task, ETA 0.1 min
+07:13:32|INFO   |300/342 tasks, 16s, 0.05 s/task, ETA 0.0 min
+07:13:32|INFO   |320/342 tasks, 17s, 0.05 s/task, ETA 0.0 min
+07:13:33|INFO   |340/342 tasks, 18s, 0.05 s/task, ETA 0.0 min
+07:13:33|INFO   |342/342 tasks, 18s, 0.05 s/task, ETA 0.0 min
+07:13:34|INFO   |stage all done: 342 tasks in 18s
