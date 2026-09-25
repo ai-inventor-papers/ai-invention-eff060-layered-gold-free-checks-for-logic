@@ -1,0 +1,33 @@
+{
+  "figure_id": "fig3",
+  "renderer": "make_fig3.py (hand-written matplotlib with the aii-data-fig-gen house style and layout passes; no catalogue type colours bars by CI significance)",
+  "title": "Consensus advantage by sentence complexity",
+  "xlabel": "Source stratum of Dataset E",
+  "ylabel": "Δ AUROC (consensus − judge)",
+  "ylim": [-0.3, 0.45],
+  "aspect": "16:9",
+  "width_in": 7.0,
+  "null_line": 0.0,
+  "comparison": "c_score_align - judge_cheap_disg (cross-family consensus minus flash-lite disguised LLM judge)",
+  "source": "run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json :: a_head_on[<cell>].deltas['c_score_align - judge_cheap_disg [<stat>]']",
+  "ci": "95% sentence-cluster bootstrap CI (B = 2000)",
+  "strata_definitions": {
+    "CTRL": "FOLIO-v2-train premises (short control stratum)",
+    "L25": "MALLS-train, >=25 words and >=3 conditions",
+    "L20": "MALLS-train, 20-24 words and >=3 conditions",
+    "EXC": "MALLS-train, sentences with unless/except/excluding/other-than clauses",
+    "L20+EXC tier A": "L20 and EXC strata pooled, tier-A labels only (R_A), stratified AUROC"
+  },
+  "bars": [
+    {"cell": "R_AB CTRL", "label": "CTRL\nFOLIO, short", "stat": "pooled", "n": 386, "n_error": 149, "n_correct": 237, "n_sentences": 38,
+     "delta": -0.06913884405176562, "ci": [-0.23209395724327353, 0.09780506135821655]},
+    {"cell": "R_AB L25", "label": "L25\n≥25 words", "stat": "pooled", "n": 873, "n_error": 697, "n_correct": 176, "n_sentences": 111,
+     "delta": 0.06942089474370672, "ci": [-0.019780765838617136, 0.14780487429803624]},
+    {"cell": "R_AB L20", "label": "L20\n20–24 words", "stat": "pooled", "n": 821, "n_error": 592, "n_correct": 229, "n_sentences": 79,
+     "delta": 0.10793476336598606, "ci": [0.031113155779998347, 0.18296153385628933]},
+    {"cell": "R_AB EXC", "label": "EXC\nexceptions", "stat": "pooled", "n": 606, "n_error": 384, "n_correct": 222, "n_sentences": 64,
+     "delta": 0.1968961148648649, "ci": [0.1236777858529562, 0.2689240783337272]},
+    {"cell": "R_A L20+EXC", "label": "L20+EXC\ntier-A labels", "stat": "strat", "n": 449, "n_error": 261, "n_correct": 188, "n_sentences": 108,
+     "delta": 0.29941908034691533, "ci": [0.21218117482349824, 0.3897211402882066]}
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "type": "custom_barh_ci_bracket",
+  "renderer": "fig2_render.py",
+  "title": "Consensus vs. LLM judges on dataset E (development)",
+  "xlabel": "Stratified AUROC (0.5 = chance)",
+  "aspect": "4:3",
+  "width_in": 7.0,
+  "xlim": [
+    0.5,
+    0.85
+  ],
+  "chance": 0.5,
+  "source": {
+    "file": "run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json",
+    "section": "metrics_R_AB.<metric>.strat.{auroc,ci}",
+    "population": {
+      "n": 2686,
+      "n_error": 1822,
+      "n_correct": 864,
+      "n_sentences": 292,
+      "labels": "R_AB"
+    },
+    "ci": "95% sentence-cluster percentile bootstrap, B = 2000, seed 0",
+    "status_note": "E was frozen before scoring for the pre-registered T1 test, but was later reused for variant selection (iter 5); the run's final review treats these numbers as development evidence. The fresh-set (E2) version of this contrast was NOT_TESTABLE."
+  },
+  "groups": {
+    "consensus": "Consensus-based",
+    "baseline": "Baselines and LLM judges"
+  },
+  "rows": [
+    {
+      "label": "S4 + consensus",
+      "key": "S4_full_plus_c_score_align_oof",
+      "group": "consensus",
+      "value": 0.77387,
+      "ci": [
+        0.7432,
+        0.80199
+      ]
+    },
+    {
+      "label": "PEER+TEXT (fused)",
+      "key": "p_peer_text",
+      "group": "consensus",
+      "value": 0.75281,
+      "ci": [
+        0.7197,
+        0.78383
+      ]
+    },
+    {
+      "label": "Cross-family consensus",
+      "key": "c_score_align",
+      "group": "consensus",
+      "value": 0.74146,
+      "ci": [
+        0.7051,
+        0.77495
+      ]
+    },
+    {
+      "label": "Stacked baselines (S4)",
+      "key": "S4_full_oof",
+      "group": "baseline",
+      "value": 0.73509,
+      "ci": [
+        0.69915,
+        0.76634
+      ]
+    },
+    {
+      "label": "Qwen3-8B judge (disguised)",
+      "key": "L:judge_local_qwen8b_disg",
+      "group": "baseline",
+      "value": 0.67427,
+      "ci": [
+        0.64571,
+        0.70292
+      ]
+    },
+    {
+      "label": "GPT-4.1-Nano judge (original)",
+      "key": "judge_cheap2_orig",
+      "group": "baseline",
+      "value": 0.65263,
+      "ci": [
+        0.61641,
+        0.68805
+      ]
+    },
+    {
+      "label": "Flash-Lite judge (disguised)",
+      "key": "judge_cheap_disg",
+      "group": "baseline",
+      "value": 0.64249,
+      "ci": [
+        0.60691,
+        0.67643
+      ]
+    },
+    {
+      "label": "Flash-Lite judge (original)",
+      "key": "judge_cheap_orig",
+      "group": "baseline",
+      "value": 0.62281,
+      "ci": [
+        0.59273,
+        0.65108
+      ]
+    },
+    {
+      "label": "Round-trip NLI",
+      "key": "rt_nli_min",
+      "group": "baseline",
+      "value": 0.6059,
+      "ci": [
+        0.56948,
+        0.64473
+      ]
+    },
+    {
+      "label": "Self-consistency (SC-5)",
+      "key": "sc5_eq_frac",
+      "group": "baseline",
+      "value": 0.59791,
+      "ci": [
+        0.55943,
+        0.63732
+      ]
+    }
+  ],
+  "bracket": {
+    "from": "Cross-family consensus",
+    "to": "Flash-Lite judge (disguised)",
+    "key": "a_head_on['R_AB pooled'].deltas['c_score_align - judge_cheap_disg [strat]']",
+    "delta": 0.09898,
+    "ci": [
+      0.04935,
+      0.14599
+    ],
+    "label": "Δ = +0.099\n[+0.049, +0.146]"
+  }
+}

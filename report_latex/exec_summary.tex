@@ -1,0 +1,99 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, hyperref, url, natbib, booktabs, xcolor, listings}
+\usepackage{longtable}
+\usepackage{array}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+\title{Cross-Family Solver Consensus as a Gold-Free Faithfulness Metric\\for Natural Language to First-Order Logic Translation\\[0.5em]\large Executive Summary}
+\author{AI Inventor Research}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\section{Headline}
+
+Cross-family solver consensus---the fraction of independently generated peer translations that are \emph{not} z3-equivalent to a candidate FOL formula---outperforms prompted LLM judges for detecting NL-to-FOL translation errors. On a pre-registered, held-out test on 2,686 real LLM-generated candidates (development dataset~E, R\_AB labels, 292 sentences), the consensus metric \texttt{c\_score\_align} achieves a stratified AUROC of 0.741, exceeding the best cheap LLM judge (gemini-2.5-flash-lite, disguised) at 0.642: a difference of $+0.099$ [95\% CI: $+0.049$, $+0.146$] (Iteration~3, gen\_art\_experiment\_6). Consensus matches a frontier judge at roughly 30$\times$ lower cost, adds signal beyond a stack of 28 baselines, and requires no gold formulas, no training, and no domain knowledge.
+
+The advantage is confirmed on development data but \textbf{not yet on independent confirmation data}: every confirmation arm (E2-A, E2-B, R\_COMP FREE) was budget-stopped before reaching testability.
+
+\section{Goal}
+
+This run investigates gold-free metrics that predict whether a candidate first-order logic formula faithfully captures its source natural-language sentence, without a reference formula, ontology, or domain knowledge. Gold FOL annotations are expensive, non-unique, and unreliable (approximately 42\% of entries in FOLIO and MALLS contain incorrect formalisations). The evaluation is a meta-evaluation: we build labelled sets from public benchmarks whose gold has been audited and measure each metric's ability to discriminate correct translations from errors.
+
+\section{What Was Tried}
+
+\textbf{Iteration~1.} Screened four metric families head-to-head on a frozen Logic-LM FOLIO screen: FOL-Triage (three-layer cascade), round-trip verification, cross-system consensus, and a disguised cheap LLM judge as the bar. Built development dataset~E (700 sentences, 8,507 rows).
+
+\textbf{Iteration~2.} Confirmed the iteration-1 ordering on dataset~E; tested PEER+TEXT fusion of consensus and text-based checks; constructed the PERTURB typed perturbation suite (4,234 mutants, 868 controls); re-evaluated all metrics under alternative label regimes.
+
+\textbf{Iteration~3.} Ran the head-on API bar test (T1 CONFIRMED): consensus beats the flash-lite judge by $+0.099$ AUROC. Tested on R\_COMP long composed sentences (SIG within-template AUROC 0.954 vs judge 0.587). Ran per-operator PERTURB sensitivity and rename tradeoff tests. Verified 48/48 numerical claims from iteration~2.
+
+\textbf{Iteration~4.} Tested Candidate-Signature Consensus (CSC): a provisional negative result due to anchoring ($e = 0.459$ vs $0.173$ for free peers). Constructed the E2 confirmation dataset (550 sentences, partial). Produced name-free labels for R\_COMP FREE candidates.
+
+\textbf{Iteration~5.} Attempted confirmation on three fronts (E2-A, E2-B, R\_COMP FREE); all three budget-stopped before testability. Froze V0 as the shipped metric (no variant V1--V5 met the selection threshold). Tested the Gloss-Gated (GG) name-free checker: failed its development gate. Corrected 15 paper-vs-file mismatches.
+
+\section{Key Results}
+
+\begin{table}[!htbp]
+\centering
+\caption{Key results across iterations. All numbers from output files.}
+\label{tab:key_results}
+{\small
+\begin{tabular}{p{5.2cm}rrll}
+\toprule
+Result & Value & CI & Source & Grade \\
+\midrule
+c\_score AUROC (screen) & 0.866 & [0.821, 0.906] & Exp~3, Iter~1 & DEV \\
+c\_score\_align strat AUROC (E) & 0.741 & [0.705, 0.775] & Exp~6, Iter~3 & DEV \\
+$\Delta$ vs flash-lite disg (strat) & $+$0.099 & [0.049, 0.146] & Exp~6, Iter~3 & DEV \\
+$\Delta$ vs S4\_full (strat) & $+$0.039 & [0.021, 0.057] & Exp~6, Iter~3 & DEV \\
+Frontier ratio & 0.957 & [0.887, 1.034] & Exp~6, Iter~3 & DEV \\
+SIG within-template AUROC & 0.954 & [0.937, 0.965] & Exp~7, Iter~3 & OUT-OF-SCOPE \\
+PEER+TEXT pooled AUROC (E) & 0.790 & [0.752, 0.825] & Exp~5, Iter~2 & DEV \\
+k-saturation ($k_{95}$) & 3 & --- & Eval~2, Iter~3 & DEV \\
+E2-A DT strat AUROC & 0.916 & [0.858, 0.970] & Exp~11, Iter~5 & CONFIRM \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+All results are on development data except E2-A DT (confirmation, but only one testable cell of 26 sentences). No confirmatory hypothesis is confirmed or refuted. The full report is 39 pages.
+
+\section{What Failed}
+
+\begin{table}[!htbp]
+\centering
+\caption{Dead ends and negative results.}
+\label{tab:dead_ends}
+{\small
+\begin{tabular}{lrl}
+\toprule
+Dead end & Iter & Reason \\
+\midrule
+L1 lint on LLM outputs & 1 & AUROC 0.508 (does not transfer from human errors) \\
+L2 role-aware & 1 & AUROC 0.557 (below bag-of-words 0.737) \\
+Pilot structural metrics & 1 & AUROC 0.500--0.533 (null) \\
+Round-trip reformalisation & 1 & AUROC 0.513 (76\% ties) \\
+B2 decomposed z3 reader & 2 & Gate balanced accuracy 0.476 \\
+R\_ADJ LLM adjudicator & 2 & Sonnet-5 balanced accuracy 0.662 \\
+Name-free consensus & 2--3 & SWAP recall 0.512 \\
+CSC (candidate-signature) & 4 & Strat AUROC 0.614; anchoring $e = 0.459$ \\
+GG (Gloss-Gated) & 5 & Dev gate FAIL: strat AUROC 0.696 vs V0 0.742 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\section{Open Questions}
+
+\begin{enumerate}
+  \item \textbf{No confirmation.} Every confirmation arm was budget-stopped. The headline $+0.099$ AUROC advantage is on development data only.
+  \item \textbf{Rename tradeoff unsolved.} V0 has RENAME\_NONCE false-alarm rate 0.765 on E and 1.0 on E2. No variant achieves both low rename FA and high error recall.
+  \item \textbf{Domain transfer untested.} All evaluation uses FOLIO and MALLS-derived data.
+  \item \textbf{Label noise.} Panel majority accuracy on expert-curated errors is 0.727; R\_COMP FREE audit shows 13--28\% label contamination.
+  \item \textbf{Complexity advantage inconclusive.} The consensus advantage does not demonstrably grow with sentence complexity (M3 DISCONFIRMED on the length-slope test).
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,340 @@
+{
+  "Pan2023": {
+    "source": "semantic_scholar",
+    "title": "Logic-LM: Empowering Large Language Models with Symbolic Solvers for Faithful Logical Reasoning",
+    "first_author": "Pan",
+    "year": 2023,
+    "s2_paper_id": "9e9e4df2996bac794c4f04cb887df3e553bae4fd",
+    "doi": "10.48550/arXiv.2305.12295",
+    "arxiv": "2305.12295"
+  },
+  "Ryu2024": {
+    "source": "semantic_scholar",
+    "title": "Divide and Translate: Compositional First-Order Logic Translation and Verification for Complex Logical Reasoning",
+    "first_author": "Ryu",
+    "year": 2024,
+    "s2_paper_id": "0fc5a9cb7525f0b0a995c3d949efe29ab760f0f8",
+    "doi": "10.48550/arXiv.2410.08047",
+    "arxiv": "2410.08047"
+  },
+  "Singh2026": {
+    "source": "semantic_scholar",
+    "title": "Beyond Solver Verdicts: Generative Reward Models for Autoformalization",
+    "first_author": "Singh",
+    "year": 2026,
+    "s2_paper_id": "9d58c72195d3f6b7276deb428c6a038e69f2892e",
+    "arxiv": "2609.11085"
+  },
+  "Brunello2026": {
+    "source": "semantic_scholar",
+    "title": "Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted Framework to Focus Human Relabeling",
+    "first_author": "Brunello",
+    "year": 2026,
+    "s2_paper_id": "ecbee7abfea235f4d6445a26bce913c40c799a45",
+    "doi": "10.48550/arXiv.2606.02837",
+    "arxiv": "2606.02837"
+  },
+  "Amrollahi2026": {
+    "source": "semantic_scholar",
+    "title": "Faithful Autoformalization via Roundtrip Verification and Repair",
+    "first_author": "Amrollahi",
+    "year": 2026,
+    "s2_paper_id": "493c2fc9ffa3bff8f5e306f4a788ab63d3465e0f",
+    "doi": "10.48550/arXiv.2604.25031",
+    "arxiv": "2604.25031"
+  },
+  "Xu2026": {
+    "source": "semantic_scholar",
+    "title": "Reasoning without Gold Standards: A Proxy-Judge Theory of Autoformalization",
+    "first_author": "Xu",
+    "year": 2026,
+    "s2_paper_id": "d2a87718abb5a418dfee2f62982a0bdf0b0f68a1",
+    "doi": "10.48550/arXiv.2606.09449",
+    "arxiv": "2606.09449"
+  },
+  "Zhang2026": {
+    "source": "semantic_scholar",
+    "title": "Monotonic Reference-Free Refinement for Autoformalization",
+    "first_author": "Zhang",
+    "year": 2026,
+    "s2_paper_id": "04cabbb1613f88d41bece5eeafa541cfafc9937c",
+    "doi": "10.48550/arXiv.2601.23166",
+    "arxiv": "2601.23166"
+  },
+  "Karia2024": {
+    "source": "semantic_scholar",
+    "title": "∀uto∃∨∧L: Autonomous Evaluation of LLMs for Truth Maintenance and Reasoning Tasks",
+    "first_author": "Karia",
+    "year": 2024,
+    "s2_paper_id": "e4a4a98cf3ce47937c406918f43f35f494273498",
+    "doi": "10.48550/arXiv.2410.08437",
+    "arxiv": "2410.08437"
+  },
+  "Brunello2025": {
+    "source": "semantic_scholar",
+    "title": "Do LLMs Really Struggle at NL-FOL Translation? Revealing their Strengths via a Novel Benchmarking Strategy",
+    "first_author": "Brunello",
+    "year": 2025,
+    "s2_paper_id": "c4a4db4494eee389037a3ea370fd3bab402aa0bd",
+    "doi": "10.1609/aaai.v40i36.40258",
+    "arxiv": "2511.11816"
+  },
+  "Eckhardt1985": {
+    "source": "semantic_scholar",
+    "title": "A Theoretical Basis for the Analysis of Multiversion Software Subject to Coincident Errors",
+    "first_author": "Eckhardt",
+    "year": 1985,
+    "s2_paper_id": "c3a7e368f1faecb0bdfb4e1f757edb883d690ff8",
+    "doi": "10.1109/TSE.1985.231895"
+  },
+  "Hayes1986": {
+    "source": "semantic_scholar",
+    "title": "Specification directed module testing",
+    "first_author": "Hayes",
+    "year": 1986,
+    "s2_paper_id": "4ce851e5061b78ca25f061e4933974c9f1d5852e",
+    "doi": "10.1109/TSE.1986.6312926"
+  },
+  "Liu2026": {
+    "source": "semantic_scholar",
+    "title": "LLMs as a Jury: Cross-Model Consensus Can Outperform Process Reward Models for LLM Reasoning",
+    "first_author": "Liu",
+    "year": 2026,
+    "s2_paper_id": "d62fbf4d9f49a9cc2821b055bb82cd8e8ea96a9b",
+    "doi": "10.48550/arXiv.2607.10139",
+    "arxiv": "2607.10139"
+  },
+  "Verga2024": {
+    "source": "semantic_scholar",
+    "title": "Replacing Judges with Juries: Evaluating LLM Generations with a Panel of Diverse Models",
+    "first_author": "Verga",
+    "year": 2024,
+    "s2_paper_id": "1a9d2a8093d2886b27e5854c1f20d873f02edfb0",
+    "doi": "10.48550/arXiv.2404.18796",
+    "arxiv": "2404.18796"
+  },
+  "Zhang2023": {
+    "source": "semantic_scholar",
+    "title": "SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency",
+    "first_author": "Zhang",
+    "year": 2023,
+    "s2_paper_id": "6af460d34bfc8e955e43fbe15cedcf329b48bc19",
+    "doi": "10.48550/arXiv.2311.01740",
+    "arxiv": "2311.01740"
+  },
+  "Yang2023": {
+    "source": "semantic_scholar",
+    "title": "Harnessing the Power of Large Language Models for Natural Language to First-Order Logic Translation",
+    "first_author": "Yang",
+    "year": 2023,
+    "s2_paper_id": "e4e625f8e8ae5ee82e75de5ad6e07af57cca7f53",
+    "doi": "10.48550/arXiv.2305.15541",
+    "arxiv": "2305.15541"
+  },
+  "Vossel2025": {
+    "source": "semantic_scholar",
+    "title": "Advancing Natural Language Formalization to First Order Logic with Fine-tuned LLMs",
+    "first_author": "Vossel",
+    "year": 2025,
+    "s2_paper_id": "8d1d88b8befa4e0c493b5c9361ebe6a32fb59e77",
+    "doi": "10.48550/arXiv.2509.22338",
+    "arxiv": "2509.22338"
+  },
+  "Lu2024": {
+    "source": "semantic_scholar",
+    "title": "FormalAlign: Automated Alignment Evaluation for Autoformalization",
+    "first_author": "Lu",
+    "year": 2024,
+    "s2_paper_id": "5b5be0a0965c6f3314489b38c41c349f07fb95a1",
+    "doi": "10.48550/arXiv.2410.10135",
+    "arxiv": "2410.10135"
+  },
+  "Thatikonda2025": {
+    "source": "semantic_scholar",
+    "title": "Assessing the Sensitivity and Alignment of FOL Closeness Metrics",
+    "first_author": "Thatikonda",
+    "year": 2025,
+    "s2_paper_id": "412f0d746b470d51e6a03d56b20b5ea8c3b0f35f",
+    "doi": "10.18653/v1/2025.findings-emnlp.910",
+    "arxiv": "2501.08613"
+  },
+  "Han2026": {
+    "source": "semantic_scholar",
+    "title": "SHADOWBENCH: Toward Reliable Automatic Evaluation of Semantic Alignment in Autoformalization",
+    "first_author": "Han",
+    "year": 2026,
+    "s2_paper_id": "44824efc89c85d81cd3ebd14d6743f3925380a05",
+    "arxiv": "2608.29270"
+  },
+  "Zhang2026a": {
+    "source": "semantic_scholar",
+    "title": "Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization",
+    "first_author": "Zhang",
+    "year": 2026,
+    "s2_paper_id": "66357c8a3191d9c965999ff77944da49da269456",
+    "doi": "10.48550/arXiv.2606.31002",
+    "arxiv": "2606.31002"
+  },
+  "Dai2026": {
+    "source": "semantic_scholar",
+    "title": "The Signal-Coverage Matrix: Stratifying Type and Semantic Errors in Statement Autoformalization",
+    "first_author": "Dai",
+    "year": 2026,
+    "s2_paper_id": "1b3643d6c04ee986e2dac4508fd012f52e674c48",
+    "doi": "10.48550/arXiv.2606.28013",
+    "arxiv": "2606.28013"
+  },
+  "Shi2022": {
+    "source": "semantic_scholar",
+    "title": "Natural Language to Code Translation with Execution",
+    "first_author": "Shi",
+    "year": 2022,
+    "s2_paper_id": "47e15941c8b157873c8264e4bf50318d1ba5cd18",
+    "doi": "10.48550/arXiv.2204.11454",
+    "arxiv": "2204.11454"
+  },
+  "Wang2022": {
+    "source": "semantic_scholar",
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+    "first_author": "Wang",
+    "year": 2022,
+    "s2_paper_id": "5f19ae1135a9500940978104ec15a5b8751bc7d2",
+    "arxiv": "2203.11171"
+  },
+  "Kuhn2023": {
+    "source": "semantic_scholar",
+    "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation",
+    "first_author": "Kuhn",
+    "year": 2023,
+    "s2_paper_id": "507465f8d46489a68a527cb5304d76bdb6c31ed9",
+    "doi": "10.48550/arXiv.2302.09664",
+    "arxiv": "2302.09664"
+  },
+  "Kuncheva2003": {
+    "source": "semantic_scholar",
+    "title": "Measures of Diversity in Classifier Ensembles and Their Relationship with the Ensemble Accuracy",
+    "first_author": "Kuncheva",
+    "year": 2003,
+    "s2_paper_id": "2642e2ddaf39596405369f7c61e74aa95e836694",
+    "doi": "10.1023/A:1022859003006"
+  },
+  "Ron2026": {
+    "source": "semantic_scholar",
+    "title": "N-Version Programming with Coding Agents",
+    "first_author": "Ron",
+    "year": 2026,
+    "s2_paper_id": "2f46fc3749d3f91a17799fc23a7aaa2e05068e62",
+    "doi": "10.48550/arXiv.2606.20158",
+    "arxiv": "2606.20158"
+  },
+  "Farquhar2024": {
+    "source": "semantic_scholar",
+    "title": "Detecting hallucinations in large language models using semantic entropy",
+    "first_author": "Farquhar",
+    "year": 2024,
+    "s2_paper_id": "f82f49c20c6acc69f884f05e3a9f1ceea91061ce",
+    "doi": "10.1038/s41586-024-07421-0"
+  },
+  "Lian2026": {
+    "source": "semantic_scholar",
+    "title": "Admission Without Answers: Label-Free Certification and Experience Learning for LLM-Based Optimization Modeling",
+    "first_author": "Lian",
+    "year": 2026,
+    "s2_paper_id": "2136c3fbbc6fea98ff27a94eb1c946681b114ddf",
+    "arxiv": "2608.15565"
+  },
+  "Alvanaki2026": {
+    "source": "semantic_scholar",
+    "title": "NoTB: Oracle-Free Triage of LLM-Generated RTL via Cross-Model Formal Consensus",
+    "first_author": "Alvanaki",
+    "year": 2026,
+    "s2_paper_id": "28720f53b975be5b4c03132f856d8e8245310ab9",
+    "arxiv": "2608.21962"
+  },
+  "Bayless2025": {
+    "source": "semantic_scholar",
+    "title": "A Neurosymbolic Approach to Natural Language Formalization and Verification",
+    "first_author": "Bayless",
+    "year": 2025,
+    "s2_paper_id": "8b6d7956c8a4f5418847316a69fded71de370339",
+    "doi": "10.48550/arXiv.2511.09008",
+    "arxiv": "2511.09008"
+  },
+  "Wang2026": {
+    "source": "semantic_scholar",
+    "title": "SCP-NL2TL: Selective Conformal Prediction with Semantic Verification for Natural Language to Temporal Logic Specifications",
+    "first_author": "Wang",
+    "year": 2026,
+    "s2_paper_id": "75b0cb082650f0ca2faa4b13a6ccd3410d815a6e",
+    "arxiv": "2608.05439"
+  },
+  "Kim2025": {
+    "source": "semantic_scholar",
+    "title": "Correlated Errors in Large Language Models",
+    "first_author": "Kim",
+    "year": 2025,
+    "s2_paper_id": "365ba5ab458c8ad6d4ed6996ab3e0ff3f386edbc",
+    "doi": "10.48550/arXiv.2506.07962",
+    "arxiv": "2506.07962"
+  },
+  "Nee2026": {
+    "source": "semantic_scholar",
+    "title": "Wavering Oracles: Selective Updating and Correlated Failures in LLMs and Their Implications for Scientific Workflows",
+    "first_author": "Nee",
+    "year": 2026,
+    "s2_paper_id": "f7558b789937065b53d52b5b4147baf1cabb335f",
+    "arxiv": "2609.11428"
+  },
+  "Ding2026": {
+    "source": "semantic_scholar",
+    "title": "When LLMs Agree, Are They Right? Auditing Self-Consistency and Cross-Model Agreement as Confidence Signals",
+    "first_author": "Ding",
+    "year": 2026,
+    "s2_paper_id": "c4fb17d1a1f80abd52ecc66513b0025b74e794c0",
+    "doi": "10.48550/arXiv.2607.08065",
+    "arxiv": "2607.08065"
+  },
+  "Hagele2026": {
+    "source": "semantic_scholar",
+    "title": "The Hot Mess of AI: How Does Misalignment Scale With Model Intelligence and Task Complexity?",
+    "first_author": "Hägele",
+    "year": 2026,
+    "s2_paper_id": "cc1dfd92acacf58a5e50eed6aadbb093d4af67f8",
+    "doi": "10.48550/arXiv.2601.23045",
+    "arxiv": "2601.23045"
+  },
+  "Khanbayov2026": {
+    "source": "semantic_scholar",
+    "title": "When Does Consensus Mean Correctness? Measuring the Agreement-Accuracy Coupling with Semantics-Preserving Re-Rendering",
+    "first_author": "Khanbayov",
+    "year": 2026,
+    "s2_paper_id": "83d2c1b9e6f8177f525a609ba93ee705e1a55bbd",
+    "arxiv": "2608.05670"
+  },
+  "Han2022": {
+    "source": "semantic_scholar",
+    "title": "FOLIO: Natural Language Reasoning with First-Order Logic",
+    "first_author": "Han",
+    "year": 2022,
+    "s2_paper_id": "5581bf85386737bd3378eec68189759a05280bea",
+    "doi": "10.48550/arXiv.2209.00840",
+    "arxiv": "2209.00840"
+  },
+  "Jain2023": {
+    "source": "semantic_scholar",
+    "title": "Baseline Defenses for Adversarial Attacks Against Aligned Language Models",
+    "first_author": "Jain",
+    "year": 2023,
+    "s2_paper_id": "3e30a7ac4886b28eb50151f58e14a1d698cccd0e",
+    "doi": "10.48550/arXiv.2309.00614",
+    "arxiv": "2309.00614"
+  },
+  "Knight1986": {
+    "source": "semantic_scholar",
+    "title": "An experimental evaluation of the assumption of independence in multiversion programming",
+    "first_author": "Knight",
+    "year": 1986,
+    "s2_paper_id": "990ea46ace7c5cc96441bd3d5f318eeaa1855f8c",
+    "doi": "10.1109/TSE.1986.6312924"
+  }
+}
