@@ -3,7 +3,7 @@
  "created_iso": "2026-09-23T18:02:15",
  "created_ts": 1790186535.6667595,
  "data": {
-  "dataset": "iter_1/gen_art/gen_art_dataset_1 full_data_out.json group heldout_candidates (8507 rows, 700 sentences)",
+  "dataset": "round-1/dataset-1/src full_data_out.json group heldout_candidates (8507 rows, 700 sentences)",
   "blind_loader": "src/e_pool.py load_E(blind=True) strips 18 label keys + 4 class-structure keys"
  },
  "models": {

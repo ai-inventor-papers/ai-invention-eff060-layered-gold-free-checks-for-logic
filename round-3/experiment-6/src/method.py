@@ -1,12 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_3
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5
 """Every baseline re-run on the held-out NL->FOL set E (iteration 2, gen_art experiment 6 = plan gen_plan_experiment_2).
 
 Stages (idempotent; every LLM call cached in results/llm_cache.jsonl, every score appended to results/scores/*.jsonl):
@@ -65,12 +57,12 @@ WORKERS = max(1, min(12, NUM_CPUS - 2))
 # prereg_T1 freeze; the LLM cache (results/llm_cache.jsonl) makes the later full sweep reuse the pilot calls for free
 SCORES = Path(os.environ["T1_SCORES_DIR"]) if os.environ.get("T1_SCORES_DIR") else RES / "scores"
 SCORES.mkdir(parents=True, exist_ok=True)
-EXPD = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_4")
-EXPA = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_1")
-EXPC = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_experiment_3")
+EXPD = Path(__file__).resolve().parents[3] / "round-1/experiment-4/src"
+EXPA = Path(__file__).resolve().parents[3] / "round-1/experiment-1/src"
+EXPC = Path(__file__).resolve().parents[3] / "round-1/experiment-3/src"
 PREREG = ROOT / "prereg_baselines.json"
 PREREG_SHA = ROOT / "prereg_baselines.sha256"
-FEWSHOT = json.loads((Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1")
+FEWSHOT = json.loads((Path(__file__).resolve().parents[3] / "round-1/dataset-1/src"
                       / "prompts" / "fewshot_v1.txt").read_text())
 
 
@@ -2131,7 +2123,7 @@ def stage_retest_sibling():
     experiment, separate caches/processes/batches), standing in for the API test-retest (4f) that F-KEY made impossible."""
     import numpy as np
     from scipy.stats import spearmanr
-    sib_p = ROOT.parent / "gen_art_experiment_5" / "results" / "E_judge_local.jsonl"
+    sib_p = ROOT.parent / "experiment-5/src" / "results" / "E_judge_local.jsonl"
     if not sib_p.exists():
         logger.warning("sibling local judge file not found")
         return
@@ -2219,7 +2211,7 @@ def stage_b2_read_api(limit=None, which=("dev", "gate", "screen", "rewrites", "E
 # t1_join, t1_analysis (src/analyse_T1.py). See README.md.
 PREREG_T1 = ROOT / "prereg_T1.json"
 PREREG_T1_SHA = ROOT / "prereg_T1.sha256"
-EXP5_DIR = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+EXP5_DIR = Path(__file__).resolve().parents[3] / "round-2/experiment-5/src"
 EXPC_CONS = EXPC / "src" / "consensus.py"
 
 

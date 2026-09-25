@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json
 """Independent re-derivation of the headline numbers (T4c) + shuffled-label placebos (T4b).
 
 Separate code path from src/analysis.py / src/analysis_E.py: labels are read straight from dataset E's JSON, scores
@@ -19,7 +15,7 @@ import numpy as np
 from scipy.stats import rankdata
 
 ROOT = Path(__file__).resolve().parent.parent
-E = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json")
+E = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src/full_data_out.json"
 
 
 def mw_auc(y, s):

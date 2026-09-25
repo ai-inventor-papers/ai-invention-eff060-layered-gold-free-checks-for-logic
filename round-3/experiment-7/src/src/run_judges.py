@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5
 """S7b / S7c / S9: LLM-judge comparators through the vendored exp-D judge path (identical rubric, disguise, cache keying).
 
 cheap     google/gemini-2.5-flash-lite, judges.judge_json(RUBRIC_A, USER_JSON_A, max_tokens=150, json_object, T=0) on
@@ -217,7 +213,7 @@ def run_frontier(pilot: bool, n_rows: int, cap: float) -> None:
 
 def regress() -> None:
     """T4 ($0): identical prompt construction -> identical exp-5 cache keys for 10 dataset-E rows; disguise identical."""
-    X5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+    X5 = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src"
     cache_keys = set()
     for l in (X5 / "results" / "llm_cache.jsonl").read_text().splitlines():
         try:

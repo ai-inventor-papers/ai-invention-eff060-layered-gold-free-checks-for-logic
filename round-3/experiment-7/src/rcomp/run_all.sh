@@ -46,7 +46,7 @@ fi
 $PY src/prereg.py declare || true
 step $PY src/verify.py
 step $PY src/card.py
-SKILL_DIR=/ai-inventor/.claude/skills/aii-json
+SKILL_DIR=../../../../tools/aii-json
 $SKILL_DIR/../.ability_client_venv/bin/python $SKILL_DIR/scripts/aii_json_validate_schema.py --format exp_sel_data_out --file "$PWD/full_data_out.json"
 $SKILL_DIR/../.ability_client_venv/bin/python $SKILL_DIR/scripts/aii_json_format_mini_preview.py --input "$PWD/full_data_out.json" --format exp_sel_data_out \
   && mv full_full_data_out.json full_data_out.json && mv mini_full_data_out.json mini_data_out.json && mv preview_full_data_out.json preview_data_out.json

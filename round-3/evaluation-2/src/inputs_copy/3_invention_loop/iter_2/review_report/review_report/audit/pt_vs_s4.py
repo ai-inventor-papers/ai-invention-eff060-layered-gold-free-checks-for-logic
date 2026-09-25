@@ -7,7 +7,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.linear_model import LogisticRegression
 G = Path(__file__).resolve().parents[9] / 'round-2'
 OUT = Path(__file__).parent / 'pt_vs_s4.json'
-e6 = json.load(open(G/'gen_art_experiment_6/full_method_out.json'))
+e6 = json.load(open(G/'experiment-6/src/full_method_out.json'))
 rows6 = {}
 for ds in e6['datasets']:
     if ds['dataset'] != 'E_heldout': continue
@@ -16,7 +16,7 @@ for ds in e6['datasets']:
         k = (ex['metadata_item_id'], inp.get('prompt_variant'))
         rows6.setdefault(k, []).append(ex)
 rows5 = {}
-for l in open(G/'gen_art_experiment_5/results/per_item_E.jsonl'):
+for l in open(G/'experiment-5/src/results/per_item_E.jsonl'):
     d = json.loads(l); rows5.setdefault((d['item_id'], d['prompt_variant']), []).append(d)
 def f(x):
     try: return float(x)

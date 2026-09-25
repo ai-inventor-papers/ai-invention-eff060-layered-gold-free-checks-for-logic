@@ -3,7 +3,7 @@
 # so that `python3 notes/quotes.py` can re-verify the quote ledger. Web access + aii-web-tools skill required.
 set -u
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SKILL_DIR=/ai-inventor/.claude/skills/aii-web-tools
+SKILL_DIR=../../../../tools/aii-web-tools
 PY=$SKILL_DIR/../.ability_client_venv/bin/python
 mkdir -p "$ROOT/notes/full" "$ROOT/notes/raw"
 grep -E '^\| 20' "$ROOT/notes/FETCH_INDEX.md" | while IFS='|' read -r _ ts file url mode _; do

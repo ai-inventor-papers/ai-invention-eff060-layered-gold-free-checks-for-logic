@@ -1,14 +1,9 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3
-
 # R_COMP + PERTURB: long composed sentences with trusted answers (run_u75jRHUss0zo, invention iter 2, dataset_3)
 
-Workspace (absolute): `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3`
+Workspace (absolute): `../../../../round-2/dataset-3/src`
 
 This repository builds two held-out tables for evaluating gold-free NL→FOL faithfulness metrics. It deepens dataset E
-(`iter_1/gen_art/gen_art_dataset_1`). E's code is copied into `labeller/` and `src_e/`; E itself is never written to.
+(`round-1/dataset-1/src`). E's code is copied into `labeller/` and `src_e/`; E itself is never written to.
 
 1. **R_COMP.** 250 main + 100 reserve composed sentences. Each has at least 25 words, at least 3 conditions and exactly
    one unless / except / provided-that / as-long-as / only-if clause.

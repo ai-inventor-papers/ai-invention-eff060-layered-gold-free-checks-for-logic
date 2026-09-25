@@ -1,8 +1,3 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json
-
 # T1: peer-agreement consensus vs paid LLM judges on held-out NL→FOL set E
 
 Iteration 3, experiment 1 of run `run_u75jRHUss0zo` (plan `gen_plan_experiment_1_idx1`).
@@ -166,7 +161,7 @@ All ten are in `results/deviations.json`. The ones that matter for reading the n
 Kept artifacts live at
 `./`, for example
 `…/results/llm_cache.jsonl` and `…/results/per_item_T1.jsonl`. Dataset E itself is at
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json`.
+`../../../round-1/dataset-1/src/full_data_out.json`.
 
 ## How to run
 

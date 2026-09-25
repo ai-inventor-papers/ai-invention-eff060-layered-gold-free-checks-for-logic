@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json
 """Raw-file re-derivation of the T1 headline numbers (TODO 5), on a code path disjoint from src/ and tests/audit_T1.py.
 
 Reads ONLY raw inputs, never the joined or aggregated outputs:
@@ -34,7 +30,7 @@ import numpy as np
 from scipy.stats import rankdata
 
 ROOT = Path(__file__).resolve().parent.parent
-E_FULL = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json")
+E_FULL = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src/full_data_out.json"
 
 
 def auc_rank(y: np.ndarray, s: np.ndarray) -> float:

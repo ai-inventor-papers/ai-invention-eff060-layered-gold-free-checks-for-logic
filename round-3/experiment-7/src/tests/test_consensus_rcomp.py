@@ -1,7 +1,3 @@
-# NOTE (published copy): this file names server paths this repository
-# does not publish (a stage it does not ship, or another run's workspace),
-# so the steps that read them will not run from a clone as written:
-#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5
 """T3: consensus unit tests on a synthetic 4-family pool + regression of the vendored exp-5 c_score_align on dataset E.
 Run: .venv/bin/python -m pytest tests/test_consensus_rcomp.py -q"""
 import json
@@ -15,7 +11,7 @@ for p in (ROOT / "src" / "vendor_x5", ROOT / "src", ROOT / "rcomp" / "src_e"):
 import consensus_rcomp as CR  # noqa: E402
 import score_consensus as SC  # noqa: E402
 
-X5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+X5 = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src"
 BASE = "∀x (Dog(x) ∧ Barks(x) ∧ ¬Young(x) → Loud(x))"
 CONTRA = "∀x (¬Loud(x) → ¬(Dog(x) ∧ Barks(x) ∧ ¬Young(x)))"
 MUT = "∀x (Dog(x) ∧ Barks(x) ∧ Young(x) → Loud(x))"

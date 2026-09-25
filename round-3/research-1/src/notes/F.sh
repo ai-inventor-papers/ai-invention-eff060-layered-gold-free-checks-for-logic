@@ -1,6 +1,6 @@
 #!/bin/bash
 # full-text fetch: F.sh <name> <url>
-SKILL_DIR=/ai-inventor/.claude/skills/aii-web-tools
+SKILL_DIR=../../../../tools/aii-web-tools
 PY=$SKILL_DIR/../.ability_client_venv/bin/python
 OUT=../notes/full/$1.md
 echo "URL: $2 | FULL FETCH | $(date -u +%FT%TZ)" > $OUT

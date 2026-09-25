@@ -315,7 +315,7 @@
           "id": "C1c",
           "claim_as_reported": "exp 5 contamination arm: disguise IMPROVES the Qwen judge on E (orig - disg)",
           "corrected_value": "-0.064 [-0.098, -0.032]",
-          "source_path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/results/analysis.json",
+          "source_path": "../../../round-2/experiment-5/src/results/analysis.json",
           "key_path": "i_contamination.judge_local_qwen8b.orig_minus_disg",
           "verified": true
         }
@@ -329,7 +329,7 @@
           "n_cor": 165,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": true,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_AB.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_AB.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -340,7 +340,7 @@
           "n_cor": 283,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": true,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_ALL.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_ALL.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         },
         {
@@ -351,7 +351,7 @@
           "n_cor": 47,
           "n_sentences": "NOT_IN_FILES",
           "testable_50_50": false,
-          "source": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_evaluation_1/tables/available_case_R_ADJ_A.csv :: max(n), max(n_err)",
+          "source": "../../../round-2/evaluation-1/src/tables/available_case_R_ADJ_A.csv :: max(n), max(n_err)",
           "note": "these regimes are dataset E's own Haiku/GLM/Kimi screen-audit panel labels, NOT the R_ADJ adjudicator (dataset 2, DROPPED)"
         }
       ],

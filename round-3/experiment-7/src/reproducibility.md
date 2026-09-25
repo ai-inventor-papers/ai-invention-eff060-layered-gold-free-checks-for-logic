@@ -1,8 +1,3 @@
-> NOTE (published copy): this file names server paths this repository
-> does not publish (a stage it does not ship, or another run's workspace),
-> so the steps that read them will not run from a clone as written:
->   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/
-
 # Reproducing R_COMP: model agreement vs LLM judges (gen_art_experiment_7)
 
 This file records what was **actually run** (2026-09-24, 01:35–04:35 UTC), in order. All API stages are resumable,
@@ -47,7 +42,7 @@ derives from it) to the new location. Every script otherwise derives its paths f
   and exp-5/exp-D code are vendored in `src/vendor_e_panel/` and `src/vendor_x5/`. Their hashes and patches are in
   `results/VENDOR_SHA256.json`.
 - Read-only references by absolute path (tests only): exp 5
-  `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/`, used for the T3
+  `../../../round-2/experiment-5/src/`, used for the T3
   and T4 regressions.
 - Model download (GPU judge): `Qwen/Qwen3-8B` from Hugging Face (about 16 GB). `.venv_gpu/bin/python -c "from huggingface_hub import snapshot_download; snapshot_download('Qwen/Qwen3-8B')"`.
 - Environment variables (names only): `OPENROUTER_API_KEY`, `OPENROUTER_BASE_URL` (all LLM calls go through
