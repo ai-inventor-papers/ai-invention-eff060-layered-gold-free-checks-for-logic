@@ -1,0 +1,12 @@
+{
+ "spent": 0.000797,
+ "by_component": {
+  "judge_cheap_primary": 0.0007969000000000001
+ },
+ "cap_total": 3.0,
+ "caps": {
+  "judge_cheap_primary": 2.4,
+  "setup_probe": 0.05
+ },
+ "ts": 1790190525.493395
+}

@@ -1,0 +1,27 @@
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/full_data_out.json :: datasets[perturb_suite].examples (metadata_operator, metadata_position_polarity, metadata_matched_pair_id/complete)
+# source: /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3/dataset_card.md :: totals 4,234 / 868 / 1,354
+kind,operator,polarity,n,caveat
+mutant,ADD,DOWN,340,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,ADD,UP,421,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,BIND,DOWN,250,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,BIND,UP,231,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,CONN,DOWN,241,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,CONN,UP,289,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,DROP,DOWN,241,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,DROP,UP,51,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,MEANING_RENAME,DOWN,264,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,MEANING_RENAME,UP,234,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,MOVE,UP,6,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,NEG,DOWN,283,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,NEG,UP,300,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,QUANT,UP,281,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,RESTR,UP,279,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,REV,UP,281,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,SWAP,DOWN,134,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+mutant,SWAP,UP,108,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+control,CONTRAPOSITIVE,,289,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+control,RENAME,,300,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+control,REORDER,,279,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+TOTAL,mutants,,4234,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+TOTAL,controls,,868,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows
+TOTAL,complete_matched_pairs,,1354,synthetic; never pooled with real-error AUROC; QUANT/REV/RESTR UP-only; SCOPE/UNGLUE 0 rows

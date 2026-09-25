@@ -1,0 +1,5 @@
+{
+ "F_sentences": 0,
+ "note": "iter3 exp7: F (gpt-5.1) dropped for the shared-key budget; F is a candidate only (never a peer). FREE = 10 few-shot + zero-shot G1b/G2 via src_e/generate.py unchanged.",
+ "cap": 1.5
+}

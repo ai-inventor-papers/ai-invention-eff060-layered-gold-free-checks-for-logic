@@ -1,0 +1,23 @@
+{
+ "P1_R_AB": "INCONCLUSIVE",
+ "P1_R_A": "INCONCLUSIVE",
+ "P2": "REFUTED",
+ "P3": "INCONCLUSIVE",
+ "P4": "REFUTED",
+ "criteria": {
+  "judge_cheap_disg": {
+   "testable_pooled_R_AB (>=300/class)": false,
+   "a_R_AB_CI_gt_0": false,
+   "a_R_A_sign_gt_0": false,
+   "criterion_a_this_artifact": false,
+   "criterion_c_long_CI_gt_0": false
+  },
+  "judge_local_qwen8b_disg": {
+   "testable_pooled_R_AB (>=300/class)": true,
+   "a_R_AB_CI_gt_0": true,
+   "a_R_A_sign_gt_0": true,
+   "criterion_a_this_artifact": true,
+   "criterion_c_long_CI_gt_0": true
+  }
+ }
+}

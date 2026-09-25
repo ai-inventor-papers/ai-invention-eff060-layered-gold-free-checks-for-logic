@@ -1,0 +1,16 @@
+entries:
+  - path: .venv/
+    delete: regenerable
+    source: "uv venv .venv --python=3.12 && uv pip install --python .venv/bin/python -r pyproject.toml"
+  - path: .venv_gpu/
+    delete: regenerable
+    source: "uv venv .venv_gpu --python=3.12 && uv pip install --python .venv_gpu/bin/python -r requirements_gpu.txt"
+  - path: "**/__pycache__/"
+    delete: regenerable
+    source: "created automatically by python on import"
+  - path: .pytest_cache/
+    delete: regenerable
+    source: ".venv/bin/python -m pytest tests -q"
+  - path: rcomp/.pytest_cache/
+    delete: regenerable
+    source: "cd rcomp && .venv/bin/python -m pytest tests -q"
