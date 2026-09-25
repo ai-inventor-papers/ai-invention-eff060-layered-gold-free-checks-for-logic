@@ -1,0 +1,440 @@
+{
+ "globbed_at_utc": "2026-09-24T11:43:47.750841+00:00",
+ "files": {
+  "confirm_verdict_E2A.json": [],
+  "confirm_verdict_E2B.json": [],
+  "union_longpool.json": [],
+  "confirm_verdict_rcomp.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13/results/confirm_verdict_rcomp.json",
+    "sha256": "a4f92ec4bfc1ee0e01bb402cf12d25f8aa2e5d83832f0b67e53b9d4ba4800986",
+    "mtime": "2026-09-24T11:41:36+00:00",
+    "top_level_keys": [
+     "criterion",
+     "VERDICT",
+     "reason",
+     "confirmatory_counts",
+     "flags",
+     "flags_note",
+     "PROVISIONAL_NON_CONFIRMATORY",
+     "seals"
+    ]
+   }
+  ],
+  "freeze/selection.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/selection.json",
+    "sha256": "ed8c1364b0e223c4ebc01aee6fd803577ce13ea8ca25eb8d853bab35ff491a9a",
+    "mtime": "2026-09-24T11:20:44+00:00",
+    "top_level_keys": [
+     "winner",
+     "rule_text",
+     "n_screened",
+     "margin",
+     "population",
+     "cells",
+     "E_status",
+     "qualification",
+     "E_numbers",
+     "V4_coefficients_frozen",
+     "V4_features",
+     "V4_threshold_note",
+     "V2_recipe",
+     "V2_full_E_weights_reference",
+     "V5_families",
+     "V5_note",
+     "stability",
+     "permutation_null",
+     "sha256",
+     "E2_instructions",
+     "written_utc"
+    ]
+   }
+  ],
+  "freeze/gg_gate.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/gg_gate.json",
+    "sha256": "7bf0a2d3ba9bf4cb9cf54187343ff4877be896afe169a76e11c3628e84ffb334",
+    "mtime": "2026-09-24T11:30:54+00:00",
+    "top_level_keys": [
+     "status",
+     "gates",
+     "checker_model",
+     "checker_provider",
+     "prompt",
+     "prompt_sha256",
+     "prompt_revision",
+     "caps",
+     "map_family",
+     "E_headline",
+     "why_it_fails",
+     "written_utc",
+     "boundary"
+    ]
+   }
+  ],
+  "freeze/CONSENSUS_FREEZE_READY.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/freeze/CONSENSUS_FREEZE_READY.json",
+    "sha256": "2f81335a21e90573bb563e4c458434d9ea6d6a0efc7ec07f55e6a0762ad671fb",
+    "mtime": "2026-09-24T11:30:54+00:00",
+    "top_level_keys": [
+     "token",
+     "written_utc",
+     "V",
+     "GG",
+     "files",
+     "workspace"
+    ]
+   }
+  ],
+  "hmech_E2.json": [],
+  "improve_E2.json": [],
+  "rename_E2.json": [],
+  "e2/E2_DRIFT_DECISION.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_11/e2/E2_DRIFT_DECISION.json",
+    "sha256": "36965541168a3d3bb86a6b03c96b07e48e5f3034082da26a1d6931cf29e6ed16",
+    "mtime": "2026-09-24T11:18:35+00:00",
+    "top_level_keys": [
+     "token",
+     "decision",
+     "written_utc",
+     "criteria",
+     "n_replayed",
+     "per_member_agreement",
+     "pinned_providers",
+     "deviation",
+     "diag_iter4",
+     "source"
+    ]
+   }
+  ],
+  "e2/E2A_FINAL_READY.json": [],
+  "e2b/E2B_FINAL_READY.json": [],
+  "score_seal.json": [],
+  "score_seal_rcomp.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_13/results/score_seal_rcomp.json",
+    "sha256": "1b9f0c2554c85e7d7cc06ea3978024aca42ed51735bbfb41d3488b19cf66ef2e",
+    "mtime": "2026-09-24T11:17:45+00:00",
+    "top_level_keys": [
+     "utc",
+     "n_rows",
+     "n_untouched",
+     "columns",
+     "untouched_row_keys_sha256",
+     "scores_file_sha256",
+     "inputs_sha256",
+     "code_sha256",
+     "note"
+    ]
+   }
+  ],
+  "judges_costmatched.jsonl": [],
+  "judge_frontier.jsonl": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_12/scores/judge_frontier.jsonl",
+    "sha256": "6667f7c556436530b08bb0e79ae0b22e21eb8a981195945b7c7e291586944c7a",
+    "mtime": "2026-09-24T11:39:14+00:00",
+    "top_level_keys": null
+   }
+  ],
+  "screen_E.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/results/screen_E.json",
+    "sha256": "73be4e3ab5adae9e339fd46f7844b9612308996cc43d34653894c97e1c9c8b16",
+    "mtime": "2026-09-24T11:18:53+00:00",
+    "top_level_keys": [
+     "population",
+     "B",
+     "seed",
+     "repro",
+     "auroc",
+     "delta_vs_V0",
+     "delta_vs_judges",
+     "binary",
+     "key_diagnostic",
+     "NET_T3_minus_T1",
+     "t9_e",
+     "ed",
+     "oracle",
+     "runtime_s"
+    ]
+   }
+  ],
+  "gg_dev.json": [
+   {
+    "path": "/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_5/gen_art/gen_art_experiment_14/results/gg_dev.json",
+    "sha256": "d1debbc3ad240fc9a72d281ae9601c05852c7940cc8242750853362c4b615b82",
+    "mtime": "2026-09-24T11:29:57+00:00",
+    "top_level_keys": [
+     "population_Z",
+     "auroc",
+     "ed",
+     "t9_e",
+     "perturb",
+     "gates",
+     "pairs_E",
+     "examples",
+     "cost",
+     "gloss_run"
+    ]
+   }
+  ]
+ },
+ "shell_fields": [
+  {
+   "section": "\u00a75.2 Drift gate (E2 panel, pinned providers)",
+   "label": "decision (PASS/FAIL)",
+   "ref": "e2/E2_DRIFT_DECISION.json::decision",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.2 Drift gate (E2 panel, pinned providers)",
+   "label": "drift criteria (track-H flag rates etc.)",
+   "ref": "e2/E2_DRIFT_DECISION.json::criteria",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.2 Drift gate (E2 panel, pinned providers)",
+   "label": "replayed judgements / per-member agreement",
+   "ref": "e2/E2_DRIFT_DECISION.json::n_replayed|per_member_agreement",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.2 Drift gate (E2 panel, pinned providers)",
+   "label": "pinned provider per panel model",
+   "ref": "e2/E2_DRIFT_DECISION.json::pinned_providers",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "\u0394 strat c_score_align \u2212 flash-lite disguised [CI]",
+   "ref": "confirm_verdict_E2A.json::longpool.delta_strat_flashlite_disg.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "\u0394 vs flash-lite original",
+   "ref": "confirm_verdict_E2A.json::longpool.delta_strat_flashlite_orig.point",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "\u0394 vs gpt-4.1-nano",
+   "ref": "confirm_verdict_E2A.json::longpool.delta_strat_nano.point",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "nested [S4_E2 + c] \u2212 S4_E2 [CI]",
+   "ref": "confirm_verdict_E2A.json::nested.delta_strat.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "L25 alone \u0394 [CI] (MDE stated)",
+   "ref": "confirm_verdict_E2A.json::L25.delta_strat_flashlite_disg.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "DT sign",
+   "ref": "confirm_verdict_E2A.json::DT.delta_sign",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "n (usable sentences / rows) and completed fraction per stratum",
+   "ref": "confirm_verdict_E2A.json::n",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.3 E2-A long-pool confirmation (PRIMARY, pre-declared)",
+   "label": "verdict",
+   "ref": "confirm_verdict_E2A.json::verdict",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.4 E2-B replication, union and heterogeneity",
+   "label": "E2-B long-pool \u0394 [CI]",
+   "ref": "confirm_verdict_E2B.json::longpool.delta_strat_flashlite_disg.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.4 E2-B replication, union and heterogeneity",
+   "label": "union long-pool \u0394 [CI]",
+   "ref": "union_longpool.json::union.delta_strat_flashlite_disg.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.4 E2-B replication, union and heterogeneity",
+   "label": "between-sample heterogeneity",
+   "ref": "union_longpool.json::heterogeneity",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.4 E2-B replication, union and heterogeneity",
+   "label": "cost-matched judge \u0394",
+   "ref": "confirm_verdict_E2B.json::costmatched.delta",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.4 E2-B replication, union and heterogeneity",
+   "label": "frontier ratio [CI], 300-row subsample",
+   "ref": "confirm_verdict_E2B.json::frontier.ratio.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.5 R_COMP FREE, criterion (c)",
+   "label": "gloss gate balanced accuracy",
+   "ref": "confirm_verdict_rcomp.json::gloss_gate.balanced_accuracy",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.5 R_COMP FREE, criterion (c)",
+   "label": "CORRECT / ERROR rows (untouched)",
+   "ref": "confirm_verdict_rcomp.json::labels.counts_untouched",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.5 R_COMP FREE, criterion (c)",
+   "label": "within-template \u0394 vs flash-lite disguised [CI]",
+   "ref": "confirm_verdict_rcomp.json::criterion_c.disg.ci",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.5 R_COMP FREE, criterion (c)",
+   "label": "within-template \u0394 vs flash-lite original [CI]",
+   "ref": "confirm_verdict_rcomp.json::criterion_c.orig.ci",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.5 R_COMP FREE, criterion (c)",
+   "label": "with/without out-of-family form classes",
+   "ref": "confirm_verdict_rcomp.json::sensitivity.excl_out_of_family",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.5 R_COMP FREE, criterion (c)",
+   "label": "verdict",
+   "ref": "confirm_verdict_rcomp.json::verdict",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.6 H-MECH (i)\u2013(iv) on E2 labels",
+   "label": "(i) share of non-agreeing peers of CORRECT labelled ERROR",
+   "ref": "hmech_E2.json::i.share_peer_error",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.6 H-MECH (i)\u2013(iv) on E2 labels",
+   "label": "(ii) SCATTER ratio",
+   "ref": "hmech_E2.json::ii.scatter_ratio",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.6 H-MECH (i)\u2013(iv) on E2 labels",
+   "label": "(iii) NET \u0394(e+d) [CI]",
+   "ref": "hmech_E2.json::iii.net_delta.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.6 H-MECH (i)\u2013(iv) on E2 labels",
+   "label": "(iv) exact vs ALIGN d and e (MR-type, ADD/DROP)",
+   "ref": "hmech_E2.json::iv.align_vs_exact",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.7 H-IMPROVE (dev screen \u2192 frozen \u2192 E2)",
+   "label": "variants screened / winner or NONE",
+   "ref": "freeze/selection.json::winner",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.7 H-IMPROVE (dev screen \u2192 frozen \u2192 E2)",
+   "label": "screen table (E long pool, L25, CTRL)",
+   "ref": "screen_E.json::delta_vs_V0|variants",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.7 H-IMPROVE (dev screen \u2192 frozen \u2192 E2)",
+   "label": "winner \u2212 V0 on E2 long pool [CI]",
+   "ref": "improve_E2.json::delta_vs_V0.ci",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.8 H-RENAME / GG",
+   "label": "GG dev gate PASS/FAIL (gloss model id, prompt sha)",
+   "ref": "freeze/gg_gate.json::status|gate.pass",
+   "status": "FIELD_PRESENT; FILLED (seal present)"
+  },
+  {
+   "section": "\u00a75.8 H-RENAME / GG",
+   "label": "RENAME_SYN paired flip on E2 CORRECT",
+   "ref": "rename_E2.json::RENAME_SYN.flip",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.8 H-RENAME / GG",
+   "label": "c_score_align rename FA and flip on E2",
+   "ref": "rename_E2.json::c_score_align",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.9 Complexity, coverage, cost, system-level \u03c4-b",
+   "label": "d / e slopes over words and conditions",
+   "ref": "confirm_verdict_E2A.json::complexity",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.9 Complexity, coverage, cost, system-level \u03c4-b",
+   "label": "coverage (unparseables in denominator)",
+   "ref": "confirm_verdict_E2A.json::coverage",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.9 Complexity, coverage, cost, system-level \u03c4-b",
+   "label": "$ and seconds per candidate, FULL vs MARGINAL",
+   "ref": "confirm_verdict_E2A.json::cost",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.9 Complexity, coverage, cost, system-level \u03c4-b",
+   "label": "system-level \u03c4-b (13 system \u00d7 variant rows)",
+   "ref": "confirm_verdict_E2A.json::system_level.tau_b",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.10 Verdict table",
+   "label": "H-PRIMARY",
+   "ref": "confirm_verdict_E2A.json::verdict",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.10 Verdict table",
+   "label": "criterion (c)",
+   "ref": "confirm_verdict_rcomp.json::verdict",
+   "status": "FIELD_MISSING (proposed name; resolve at paper time)"
+  },
+  {
+   "section": "\u00a75.10 Verdict table",
+   "label": "H-MECH (i)\u2013(iv)",
+   "ref": "hmech_E2.json::verdicts",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.10 Verdict table",
+   "label": "H-IMPROVE",
+   "ref": "improve_E2.json::verdict",
+   "status": "FILE_MISSING"
+  },
+  {
+   "section": "\u00a75.10 Verdict table",
+   "label": "H-RENAME",
+   "ref": "rename_E2.json::verdict",
+   "status": "FILE_MISSING"
+  }
+ ]
+}
