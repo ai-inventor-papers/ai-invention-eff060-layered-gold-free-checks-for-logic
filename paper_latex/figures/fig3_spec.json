@@ -1,0 +1,194 @@
+{
+  "figure_id": "fig3",
+  "renderer": "render_fig3.py (hand-written matplotlib on the aii-data-fig-gen house style)",
+  "chart": "grouped bars of AUROC drawn up from chance (0.5), 95% CI whiskers, paired delta under each stratum",
+  "ylabel": "AUROC (ERROR vs CORRECT)",
+  "ylim": [
+    0.5,
+    1.0
+  ],
+  "chance": 0.5,
+  "series": [
+    {
+      "key": "consensus",
+      "label": "Consensus (aligned)"
+    },
+    {
+      "key": "judge",
+      "label": "Flash-Lite judge (disguised)"
+    }
+  ],
+  "groups": [
+    {
+      "key": "E",
+      "label": "Development set E: real translations, per stratum"
+    },
+    {
+      "key": "RCOMP",
+      "label": "R_COMP, SIG"
+    }
+  ],
+  "strata": [
+    {
+      "name": "CTRL",
+      "desc": "<12 words",
+      "group": "E",
+      "n": 386,
+      "n_error": 149,
+      "n_correct": 237,
+      "n_sentences": 38,
+      "consensus": {
+        "auroc": 0.74205,
+        "ci": [
+          0.616,
+          0.8632
+        ]
+      },
+      "judge": {
+        "auroc": 0.81119,
+        "ci": [
+          0.6997,
+          0.9125
+        ]
+      },
+      "delta": {
+        "value": -0.06914,
+        "ci": [
+          -0.2321,
+          0.0978
+        ]
+      },
+      "source": "iter_3 gen_art_experiment_6 results/analysis_T1.json :: a_head_on['R_AB CTRL'] (pooled within stratum)"
+    },
+    {
+      "name": "L20",
+      "desc": "≥20 words",
+      "group": "E",
+      "n": 821,
+      "n_error": 592,
+      "n_correct": 229,
+      "n_sentences": 79,
+      "consensus": {
+        "auroc": 0.72247,
+        "ci": [
+          0.6638,
+          0.7812
+        ]
+      },
+      "judge": {
+        "auroc": 0.61453,
+        "ci": [
+          0.5608,
+          0.6708
+        ]
+      },
+      "delta": {
+        "value": 0.10793,
+        "ci": [
+          0.0311,
+          0.183
+        ]
+      },
+      "source": "iter_3 gen_art_experiment_6 results/analysis_T1.json :: a_head_on['R_AB L20'] (pooled within stratum)"
+    },
+    {
+      "name": "L25",
+      "desc": "≥25 words\n≥3 conditions",
+      "group": "E",
+      "n": 873,
+      "n_error": 697,
+      "n_correct": 176,
+      "n_sentences": 111,
+      "consensus": {
+        "auroc": 0.71209,
+        "ci": [
+          0.6403,
+          0.7678
+        ]
+      },
+      "judge": {
+        "auroc": 0.64267,
+        "ci": [
+          0.5774,
+          0.7049
+        ]
+      },
+      "delta": {
+        "value": 0.06942,
+        "ci": [
+          -0.0198,
+          0.1478
+        ]
+      },
+      "source": "iter_3 gen_art_experiment_6 results/analysis_T1.json :: a_head_on['R_AB L25'] (pooled within stratum)"
+    },
+    {
+      "name": "EXC",
+      "desc": "exception",
+      "group": "E",
+      "n": 606,
+      "n_error": 384,
+      "n_correct": 222,
+      "n_sentences": 64,
+      "consensus": {
+        "auroc": 0.81369,
+        "ci": [
+          0.7559,
+          0.8663
+        ]
+      },
+      "judge": {
+        "auroc": 0.61679,
+        "ci": [
+          0.5549,
+          0.6752
+        ]
+      },
+      "delta": {
+        "value": 0.1969,
+        "ci": [
+          0.1237,
+          0.2689
+        ]
+      },
+      "source": "iter_3 gen_art_experiment_6 results/analysis_T1.json :: a_head_on['R_AB EXC'] (pooled within stratum)"
+    },
+    {
+      "name": "Long rules",
+      "desc": "≥25 words\n4–5 conditions",
+      "group": "RCOMP",
+      "n": 1904,
+      "n_error": 395,
+      "n_correct": 1509,
+      "n_sentences": 220,
+      "consensus": {
+        "auroc": 0.95434,
+        "ci": [
+          0.9388,
+          0.9676
+        ]
+      },
+      "judge": {
+        "auroc": 0.58722,
+        "ci": [
+          0.5507,
+          0.6223
+        ]
+      },
+      "delta": {
+        "value": 0.36712,
+        "ci": [
+          0.3284,
+          0.404
+        ]
+      },
+      "source": "iter_3 gen_art_experiment_7 results/analysis.json :: SIG.primary (within-template AUROC, rows with a judge score)"
+    }
+  ],
+  "provenance_notes": [
+    "All CIs are sentence-cluster percentile bootstrap, B = 2000, seed 0, as computed by the source experiments.",
+    "The draft specification listed the judge at 0.551 (L20) and 0.515 (L25); the run's analysis file gives 0.6145 and 0.6427. The file values are plotted.",
+    "Consensus in the Long-rules group is c_score_sig, which equals c_score_align under the shared-signature (SIG) condition.",
+    "Source files are in the published repository under round-5/experiment-14/src/inputs_copy/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json and round-3/experiment-7/src/results/analysis.json."
+  ]
+}

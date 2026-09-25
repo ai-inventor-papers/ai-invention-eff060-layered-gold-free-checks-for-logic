@@ -1,0 +1,4 @@
+entries: []
+# No files exceed the 10 MB auto-keep floor.
+# workspace/ is 12 MB total but contains only text files (LaTeX build artifacts),
+# which are exempt regardless of size.

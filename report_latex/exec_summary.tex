@@ -1,0 +1,114 @@
+\documentclass[11pt,letterpaper]{article}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{graphicx, geometry, amsmath, hyperref, booktabs, xcolor}
+\usepackage{adjustbox}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+\emergencystretch=2em
+\title{Gold-Free Faithfulness Metrics for NL-to-FOL Translation\\[0.5em]\large Executive Summary}
+\date{September 2026}
+\begin{document}
+\maketitle
+
+\section*{Goal}
+
+This research investigated whether a candidate first-order logic (FOL) formula can be scored for faithfulness to its source natural-language sentence \emph{without} a reference (gold) formula.
+The run explored three metric families---deterministic formula checks (FOL-Triage), cross-family solver consensus, and text-based alignment---over five iterations, benchmarked against LLM judges and structural baselines on two public datasets (FOLIO, MALLS) with solver-verified labels.
+The bar to beat was a disguised cheap LLM judge (Gemini 2.5 Flash Lite, AUROC 0.777).
+
+\section*{What was tried}
+
+\textbf{Iteration 1.}
+Four experiments on the Logic-LM frozen screen ($n=546$): FOL-Triage (deterministic lint, bag-of-words, and questionnaire layers), cross-system consensus via z3 equivalence among 9 LLM families, a full baselines suite (judges, round-trip NLI, structural metrics), and a summary comparison of discrimination vs.\ rename invariance.
+
+\textbf{Iteration 2.}
+Five experiments on development set E ($n=2{,}686$ rows, 292 sentences): PEER+TEXT fusion of consensus with text layers, re-evaluation under alternative label regimes, name-free consensus, and baselines.
+Also attempted: B2 decomposed z3 reader (DROPPED) and R\_ADJ adjudicator
+(DROPPED).
+
+\textbf{Iteration 3.}
+Confirmation on development set E with the head-on API bar test (T1), long composed sentences from R\_COMP, PERTURB sensitivity/rename tests, and mechanism verification (hypothesis testing on error endorsement and complexity slope).
+
+\textbf{Iteration 4.}
+Candidate-Signature Consensus (CSC): tested whether giving peers the candidate's own symbols improves discrimination.
+Also: CSC on PERTURB (budget exhausted), E2 confirmation set construction (partial), R\_COMP FREE name-free labels, and vocabulary analysis.
+
+\textbf{Iteration 5.}
+Freeze-and-screen of five V0 variants, Gloss-Gated (GG) name-free checker, and three confirmation arms (all NOT\_TESTABLE due to budget exhaustion).
+
+\section*{Key results}
+
+\begin{table}[!htbp]
+\centering
+\adjustbox{max width=\linewidth}{
+\begin{tabular}{llrrl}
+\toprule
+Result & Source & AUROC & 95\% CI & Notes \\
+\midrule
+c\_score\_align (consensus) & Iter.\ 1, Exp.\ C & 0.866 & [0.821, 0.906] & Pooled, track L ($n=546$) \\
+c\_score\_align (stratified) & Iter.\ 3, Test T1 & 0.774 & [0.739, 0.808] & Dev set E, R\_AB PRIMARY \\
+$\Delta$ vs judge (stratified) & Iter.\ 3, Test T1 & +0.099 & [+0.049, +0.146] & Paired, flash-lite bar \\
+PEER+TEXT fusion & Iter.\ 2, Exp.\ 5 & 0.790 & [0.75, 0.82] & R\_AB pooled ($n=2{,}686$) \\
+Fusion $-$ c\_align (strat) & Iter.\ 2, Exp.\ 5 & +0.011 & [$-$0.012, 0.038] & Not significant \\
+FOL-Triage fused & Iter.\ 1, Exp.\ A & 0.759 & [0.695, 0.825] & Below judge bar \\
+Cheap judge (flash-lite) & Iter.\ 1, Exp.\ D & 0.777 & [0.720, 0.827] & The bar ($n=524$) \\
+SIGPROXY (cued, 3-fam) & Iter.\ 4, Exp.\ 10 & 0.930 & [0.916, 0.943] & R\_COMP, controlled vocab \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The cross-family solver consensus metric (c\_score\_align) is the strongest gold-free signal discovered.
+It beats the cheap judge by a statistically significant margin on both the frozen screen and the development set.
+Adding text-accounting layers (PEER+TEXT) provides no significant gain over c\_score\_align alone once stratum-composition confounds are removed.
+The consensus advantage is largest on long, exception-bearing sentences: on R\_A L20+EXC, c\_score\_align reaches 0.860 while the judge falls to 0.554 ($\Delta$ +0.306 [+0.232, +0.376]).
+
+\section*{What failed}
+
+\begin{table}[!htbp]
+\centering
+\adjustbox{max width=\linewidth}{
+\begin{tabular}{llp{7cm}}
+\toprule
+Dead end & Iter. & Reason \\
+\midrule
+L1 lint on LLM outputs & 1 & AUROC 0.508; does not transfer from human annotation errors \\
+L2 role-aware check & 1 & AUROC 0.557; below simpler bag-of-words \\
+Pilot structural metrics & 1 & AUROC 0.500--0.533 (null) \\
+Round-trip reformalisation & 1 & AUROC 0.513; 76\% ties \\
+B2 decomposed z3 reader & 2 & Gate balanced accuracy 0.476 (target $\geq$ 0.85) \\
+R\_ADJ LLM adjudicator & 2 & Sonnet-5 balanced accuracy 0.662 (target $\geq$ 0.80) \\
+Name-free consensus (c\_nf) & 2--3 & SWAP recall 0.512; sacrifices structural-error detection \\
+CSC (Candidate-Signature) & 4 & Strat AUROC 0.614; anchoring $e=0.459$ (gates G1, G2 fail) \\
+GG (Gloss-Gated) checker & 5 & Strat AUROC 0.696; $d=0.629$ (gate g3 FAIL) \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The fundamental tradeoff is between discrimination and rename invariance.
+Consensus achieves the highest AUROC (0.866) but has a RENAME flip rate of 0.765 because z3 equivalence is sensitive to predicate names.
+FOL-Triage is nearly rename-invariant (flip rate 0.013) but sits below the judge bar.
+CSC attempted to fix the rename problem by sharing the candidate's vocabulary with peers; the anchoring effect ($e = 0.459$) dominated the convergence benefit ($d$ reduction $-0.184$), producing a net negative.
+GG attempted to bypass names entirely with a gloss-gated meaning matcher; it achieved low error endorsement ($e = 0.081$) but very high correct-row divergence ($d = 0.629$).
+
+\section*{Best result}
+
+Cross-family solver consensus (c\_score\_align): \textbf{stratified AUROC 0.774} [0.739, 0.808] on development set E (R\_AB PRIMARY, 354 rows, 144 sentences), confirmed in iteration 3, Test T1.
+It beats the flash-lite judge by $\Delta$ +0.099 [+0.049, +0.146] (paired, stratified).
+On long sentences with exceptions, the advantage grows to $\Delta$ +0.306.
+The metric costs \$0.000525 per candidate (30$\times$ cheaper than the judge) and requires peer translations from $\geq$3 independent model families plus z3 pairwise equivalence checking.
+Its main limitation is non-invariance under predicate renaming (flip rate 0.765 under RENAME); all attempts to fix this (name-free consensus, CSC, GG) degraded discrimination.
+
+\section*{Open questions}
+
+\begin{enumerate}
+\item \textbf{Rename invariance.} No variant achieved both high AUROC and low rename sensitivity. Can a normalisation layer (canonical naming, signature-free equivalence) close the gap without anchoring?
+\item \textbf{Confirmation on held-out data.} The E2 confirmation set was constructed (550 sentences) but labelling was incomplete due to budget exhaustion. All three iteration-5 confirmation arms are NOT\_TESTABLE.
+\item \textbf{Flash-lite bar on E.} The primary bar (flash-lite judge) is UNTESTABLE on the full development set; only 20 items were scored before API key exhaustion. The local Qwen3-8B fallback was used instead.
+\item \textbf{Frontier judge interaction.} Under adjudicated labels, the frontier judge advantage over the cheap judge is +0.166 (significant). Whether consensus still beats the frontier judge on adjudicated labels is untested.
+\item \textbf{Cost of diversity.} The peer pool requires $\geq$3 model families. Whether cheaper or fewer peers suffice without degrading AUROC is unexplored.
+\item \textbf{Error typing.} Consensus detects COMPOUND and polarity errors well (recall 0.55, 0.53) but has near-zero recall on MEANING\_RENAME and PEER\_ENDORSED errors. Can error-type-specific signals be combined?
+\end{enumerate}
+
+\end{document}

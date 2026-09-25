@@ -1,0 +1,122 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Wu2022,Pan2023}
+\citation{Han2022}
+\citation{Brunello2026}
+\citation{Ganguly2025,Ryu2024}
+\citation{Amrollahi2026}
+\citation{Singh2026}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{Amrollahi2026}
+\citation{Singh2026}
+\citation{Lu2024}
+\citation{Ganguly2025}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Stratified AUROC of cross-family solver consensus and baseline faithfulness metrics on the held-out development set (2,686 candidate formalizations, 1,822 unfaithful / 864 faithful, 292 sentences). Whiskers are 95\% sentence-clustered bootstrap CIs ($B=2000$). The dashed line marks the pre-registered judge bar (Flash-Lite judge, disguised view, 0.642) and the dotted line marks chance (0.5). Consensus scores highest (0.741) and exceeds the judge bar by $+0.099$ $[0.049, 0.146]$. Adding it to the combined baseline stack raises AUROC by $+0.039$ $[0.021, 0.057]$, so it carries signal the baselines lack.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:main_auroc}{{1}{2}{Stratified AUROC of cross-family solver consensus and baseline faithfulness metrics on the held-out development set (2,686 candidate formalizations, 1,822 unfaithful / 864 faithful, 292 sentences). Whiskers are 95\% sentence-clustered bootstrap CIs ($B=2000$). The dashed line marks the pre-registered judge bar (Flash-Lite judge, disguised view, 0.642) and the dotted line marks chance (0.5). Consensus scores highest (0.741) and exceeds the judge bar by $+0.099$ $[0.049, 0.146]$. Adding it to the combined baseline stack raises AUROC by $+0.039$ $[0.021, 0.057]$, so it carries signal the baselines lack}{figure.1}{}}
+\citation{Eckhardt1985,Knight1986}
+\citation{Du2023,Liu2026,Zhang2023}
+\citation{Zhang2023}
+\citation{Liu2026}
+\citation{Alvanaki2026}
+\citation{Wang2026}
+\citation{Bayless2025}
+\citation{Eckhardt1985}
+\citation{Knight1986}
+\citation{Li2024}
+\citation{Chen2023}
+\citation{Ryu2024}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Gold-free evaluation of formal translations.}{3}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Cross-model consensus.}{3}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Self-consistency for formal languages.}{3}{section*.3}\protected@file@percent }
+\citation{Pan2023}
+\citation{Moura2008}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{4}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Setting}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Peer Pool Generation}{4}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Pairwise Equivalence with Vocabulary Alignment}{4}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces How consensus scoring works. (a)\nobreakspace  {}A sentence is translated by $K=4$ LLM families; families A--C produce logically equivalent formulas (up to vocabulary), while family\nobreakspace  {}D swaps the condition and conclusion. (b)\nobreakspace  {}Candidate from family\nobreakspace  {}A: vocabulary-aligned z3 equivalence with B, C succeeds () and fails with D (\texttimes ), giving a consensus score of $1/3 = 0.33$ (low, likely correct). (c)\nobreakspace  {}Candidate from family\nobreakspace  {}D: equivalence fails with all three peers, giving a score of $3/3 = 1.0$ (high, likely erroneous).}}{4}{figure.2}\protected@file@percent }
+\newlabel{fig:method_diagram}{{2}{4}{How consensus scoring works. (a)~A sentence is translated by $K=4$ LLM families; families A--C produce logically equivalent formulas (up to vocabulary), while family~D swaps the condition and conclusion. (b)~Candidate from family~A: vocabulary-aligned z3 equivalence with B, C succeeds (\checkmark ) and fails with D (\texttimes ), giving a consensus score of $1/3 = 0.33$ (low, likely correct). (c)~Candidate from family~D: equivalence fails with all three peers, giving a score of $3/3 = 1.0$ (high, likely erroneous)}{figure.2}{}}
+\citation{Han2022}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Consensus Score}{5}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Decomposition: Endorsement and Divergence}{5}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Cost and Efficiency}{5}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{5}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Meta-Evaluation Datasets}{5}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Development set (E).}{5}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Perturbation suite (PERTURB).}{6}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{R\_COMP (long rule sentences).}{6}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Baselines}{6}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation Protocol}{6}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{7}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Main Result: Consensus vs.\ Baselines on Development Set E}{7}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Stratified AUROC on the primary population (R\_AB). $\Delta $ is the margin over the pre-registered judge bar (Flash-Lite disguised).}}{7}{table.1}\protected@file@percent }
+\newlabel{tab:main}{{1}{7}{Stratified AUROC on the primary population (R\_AB). $\Delta $ is the margin over the pre-registered judge bar (Flash-Lite disguised)}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Consensus on Long Rule Sentences}{7}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Comparison with Frontier Judge}{7}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces AUROC for consensus (aligned) and the disguised Flash-Lite judge per sentence stratum. Left of the dashed line: the four strata of development set\nobreakspace  {}E (CTRL $n{=}386$, L20 $n{=}821$, L25 $n{=}873$, EXC $n{=}606$). On short FOLIO controls consensus has no advantage (CTRL: $\Delta {=}{-}0.07$ $[-0.23, 0.10]$). The gap is significant on L20 ($+0.11$) and largest on exception sentences (EXC: $+0.20$). Right of the dashed line: R\_COMP under the SIG condition (templated long rule sentences, $n{=}1{,}904$), where consensus reaches 0.954 versus the judge's 0.587.}}{8}{figure.3}\protected@file@percent }
+\newlabel{fig:complexity}{{3}{8}{AUROC for consensus (aligned) and the disguised Flash-Lite judge per sentence stratum. Left of the dashed line: the four strata of development set~E (CTRL $n{=}386$, L20 $n{=}821$, L25 $n{=}873$, EXC $n{=}606$). On short FOLIO controls consensus has no advantage (CTRL: $\Delta {=}{-}0.07$ $[-0.23, 0.10]$). The gap is significant on L20 ($+0.11$) and largest on exception sentences (EXC: $+0.20$). Right of the dashed line: R\_COMP under the SIG condition (templated long rule sentences, $n{=}1{,}904$), where consensus reaches 0.954 versus the judge's 0.587}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}How Many Families Are Needed?}{9}{subsection.5.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Consensus AUROC as a function of the number of peer families $k$.}}{9}{table.2}\protected@file@percent }
+\newlabel{tab:k_families}{{2}{9}{Consensus AUROC as a function of the number of peer families $k$}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Sensitivity to Error Types}{9}{subsection.5.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Within-base AUROC on the PERTURB suite.}}{9}{table.3}\protected@file@percent }
+\newlabel{tab:perturb}{{3}{9}{Within-base AUROC on the PERTURB suite}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Negative Results}{9}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pilot structural metrics.}{9}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Round-trip reformalisation.}{9}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Consensus AUROC as a function of the number of peer families $k$ on the development set ($n{=}2{,}014$ candidates from 186 sentences with all seven peer families available). Each point averages over 50 random $k$-subsets. Blue solid line: all sentences; orange dashed line: long-sentence tercile. Dotted grey line: full 7-family pool (AUROC 0.784). AUROC rises steeply from $k{=}1$ (0.685) to $k{=}3$ (0.757, 96.6\% of full pool) and gains little thereafter. The long-sentence tercile starts lower and keeps climbing, needing $k{=}5$ families to reach 95\% of its own full-pool value.}}{10}{figure.4}\protected@file@percent }
+\newlabel{fig:k_families}{{4}{10}{Consensus AUROC as a function of the number of peer families $k$ on the development set ($n{=}2{,}014$ candidates from 186 sentences with all seven peer families available). Each point averages over 50 random $k$-subsets. Blue solid line: all sentences; orange dashed line: long-sentence tercile. Dotted grey line: full 7-family pool (AUROC 0.784). AUROC rises steeply from $k{=}1$ (0.685) to $k{=}3$ (0.757, 96.6\% of full pool) and gains little thereafter. The long-sentence tercile starts lower and keeps climbing, needing $k{=}5$ families to reach 95\% of its own full-pool value}{figure.4}{}}
+\citation{Eckhardt1985,Knight1986}
+\citation{Eckhardt1985,Liu2026}
+\@writefile{toc}{\contentsline {paragraph}{Candidate-signature consensus.}{11}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Fusion does not beat consensus alone.}{11}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{11}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Why Consensus Works}{11}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}The Vocabulary Problem}{11}{subsection.6.2}\protected@file@percent }
+\citation{Singh2026}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Limitations of Confirmation}{12}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{12}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Vocabulary dependence.}{12}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Error endorsement ceiling.}{12}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Label protocol sensitivity.}{12}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Short sentences.}{12}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Rename invariance unsolved.}{12}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Confirmation incomplete.}{12}{section*.16}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Alvanaki2026}{{1}{2026}{{Alvanaki et~al.}}{{Alvanaki, Yang, Seyoum, and Carloni}}}
+\bibcite{Amrollahi2026}{{2}{2026}{{Amrollahi et~al.}}{{Amrollahi, Lopez, and Barrett}}}
+\bibcite{Bayless2025}{{3}{2025}{{Bayless et~al.}}{{Bayless, Buliani, Cassel, Cook, Clough, et~al.}}}
+\bibcite{Brunello2026}{{4}{2026}{{Brunello et~al.}}{{Brunello, Curaba, Geatti, Mignani, Montanari, and Saccomanno}}}
+\bibcite{Chen2023}{{5}{2023}{{Chen et~al.}}{{Chen, Aksitov, Alon, Ren, Xiao, Yin, Prakash, Sutton, Wang, and Zhou}}}
+\bibcite{Moura2008}{{6}{2008}{{de~Moura and Bjørner}}{{}}}
+\bibcite{Du2023}{{7}{2023}{{Du et~al.}}{{Du, Li, Torralba, Tenenbaum, and Mordatch}}}
+\bibcite{Eckhardt1985}{{8}{1985}{{Eckhardt and Lee}}{{}}}
+\bibcite{Ganguly2025}{{9}{2025}{{Ganguly et~al.}}{{Ganguly, Singh, Sankar, Zhang, Zhang, Iyengar, Han, Sharma, Kalyanaraman, and Chaudhary}}}
+\bibcite{Han2022}{{10}{2022}{{Han et~al.}}{{Han, Schoelkopf, Zhao, Qi, Riddell, et~al.}}}
+\bibcite{Knight1986}{{11}{1986}{{Knight and Leveson}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{13}{section.8}\protected@file@percent }
+\bibcite{Li2024}{{12}{2024}{{Li et~al.}}{{Li, Wu, Li, Wei, Zhang, Yang, and Ma}}}
+\bibcite{Liu2026}{{13}{2026}{{Liu}}{{}}}
+\bibcite{Lu2024}{{14}{2024}{{Lu et~al.}}{{Lu, Wan, Huang, Xiong, Liu, and Guo}}}
+\bibcite{Pan2023}{{15}{2023}{{Pan et~al.}}{{Pan, Albalak, Wang, and Wang}}}
+\bibcite{Ryu2024}{{16}{2024}{{Ryu et~al.}}{{Ryu, Kim, Lee, and Yang}}}
+\bibcite{Singh2026}{{17}{2026}{{Singh et~al.}}{{Singh, Ganguly, Goel, Torkamani, Han, Lilien, Erata, and Chaudhary}}}
+\bibcite{Wang2026}{{18}{2026}{{Wang et~al.}}{{Wang, Luo, Fu, Xu, Dong, and Cai}}}
+\bibcite{Wu2022}{{19}{2022}{{Wu et~al.}}{{Wu, Jiang, Li, Rabe, Staats, Jamnik, and Szegedy}}}
+\bibcite{Zhang2023}{{20}{2023}{{Zhang et~al.}}{{Zhang, Li, Das, Malin, and Sricharan}}}
+\gdef \@abspage@last{14}

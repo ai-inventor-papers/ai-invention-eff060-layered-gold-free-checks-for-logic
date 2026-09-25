@@ -1,0 +1,44 @@
+{
+  "figure_id": "fig4",
+  "renderer": "render_fig4.py (hand-written matplotlib on the aii-data-fig-gen house style; the catalogue 'line' type has no asymmetric CI band or reference line)",
+  "chart": "line: consensus AUROC against number of peer families k, overall with 95% CI band and long-sentence tercile, full-pool reference line",
+  "source": {
+    "artifact": "gen_art_evaluation_2 (art_FWy8D4_y9GBn), iteration 3",
+    "file": "tables/m4_auroc_k_cost.csv (same values in results/part_a.json -> M4.random_k_primary)",
+    "columns": "k, auroc_mean, ci_lo, ci_hi, auroc_T3",
+    "population": "development set E, R_AB rows (tiers A+B, CORRECT vs ERROR, LLM candidates) with all 7 other vendor families available: n = 2014 candidates (1309 ERROR / 705 CORRECT), 186 sentences",
+    "aggregation": "AUROC averaged over 50 reproducible random k-subsets of the candidate's 7 other families; CI = 95% sentence-cluster bootstrap (B = 2000) of that mean",
+    "tercile": "T3 = longest third of sentences by word count (pre-registered cuts, prereg_mech.json)",
+    "not_plotted": "k = 8, 9 exist only in a slot-level sensitivity run on 856 rows / 73 sentences, a different population, so the primary curve stops at k = 7. The 0.785 of the cross-fitted best fixed 3-family pool is a different quantity (one chosen pool, not a random-subset mean) and is not drawn."
+  },
+  "aspect": "4:3",
+  "width_in": 7.0,
+  "xlabel": "Number of peer families (k)",
+  "ylabel": "Consensus AUROC (ERROR vs CORRECT)",
+  "ylim": [0.55, 0.85],
+  "x": [1, 2, 3, 4, 5, 6, 7],
+  "series": [
+    {
+      "key": "all",
+      "label": "All sentences (95% CI band)",
+      "linestyle": "-",
+      "marker": "o",
+      "values": [0.6850, 0.7376, 0.7572, 0.7699, 0.7759, 0.7804, 0.7838],
+      "ci_lo":  [0.6491, 0.6953, 0.7131, 0.7249, 0.7304, 0.7351, 0.7386],
+      "ci_hi":  [0.7213, 0.7791, 0.7995, 0.8130, 0.8193, 0.8236, 0.8273],
+      "k95": 3
+    },
+    {
+      "key": "T3",
+      "label": "Long-sentence tercile",
+      "linestyle": "--",
+      "marker": "^",
+      "values": [0.5813, 0.6176, 0.6512, 0.6822, 0.6979, 0.7144, 0.7265],
+      "k95": 5
+    }
+  ],
+  "reference": {
+    "value": 0.7838,
+    "label": "7-family full pool, all sentences"
+  }
+}

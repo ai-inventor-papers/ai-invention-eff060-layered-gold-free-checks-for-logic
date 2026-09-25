@@ -1,0 +1,176 @@
+{
+  "Wu2022": {
+    "source": "semantic_scholar",
+    "title": "Autoformalization with Large Language Models",
+    "first_author": "Wu",
+    "year": 2022,
+    "s2_paper_id": "c28e95a06dfcf13fc65a1cac83722f53e34f12a5",
+    "doi": "10.48550/arXiv.2205.12615",
+    "arxiv": "2205.12615"
+  },
+  "Pan2023": {
+    "source": "semantic_scholar",
+    "title": "Logic-LM: Empowering Large Language Models with Symbolic Solvers for Faithful Logical Reasoning",
+    "first_author": "Pan",
+    "year": 2023,
+    "s2_paper_id": "9e9e4df2996bac794c4f04cb887df3e553bae4fd",
+    "doi": "10.48550/arXiv.2305.12295",
+    "arxiv": "2305.12295"
+  },
+  "Han2022": {
+    "source": "semantic_scholar",
+    "title": "FOLIO: Natural Language Reasoning with First-Order Logic",
+    "first_author": "Han",
+    "year": 2022,
+    "s2_paper_id": "5581bf85386737bd3378eec68189759a05280bea",
+    "doi": "10.48550/arXiv.2209.00840",
+    "arxiv": "2209.00840"
+  },
+  "Brunello2026": {
+    "source": "semantic_scholar",
+    "title": "Fixing FOLIO and MALLS: Verified Annotations and an LLM-assisted Framework to Focus Human Relabeling",
+    "first_author": "Brunello",
+    "year": 2026,
+    "s2_paper_id": "ecbee7abfea235f4d6445a26bce913c40c799a45",
+    "doi": "10.48550/arXiv.2606.02837",
+    "arxiv": "2606.02837"
+  },
+  "Ganguly2025": {
+    "source": "semantic_scholar",
+    "title": "Grammars of Formal Uncertainty: When to Trust LLMs in Automated Reasoning Tasks",
+    "first_author": "Ganguly",
+    "year": 2025,
+    "s2_paper_id": "0d88e13ccdbfd4a060d9c29f20b9dcb54097cacd",
+    "doi": "10.48550/arXiv.2505.20047",
+    "arxiv": "2505.20047"
+  },
+  "Ryu2024": {
+    "source": "semantic_scholar",
+    "title": "Divide and Translate: Compositional First-Order Logic Translation and Verification for Complex Logical Reasoning",
+    "first_author": "Ryu",
+    "year": 2024,
+    "s2_paper_id": "0fc5a9cb7525f0b0a995c3d949efe29ab760f0f8",
+    "doi": "10.48550/arXiv.2410.08047",
+    "arxiv": "2410.08047"
+  },
+  "Amrollahi2026": {
+    "source": "semantic_scholar",
+    "title": "Faithful Autoformalization via Roundtrip Verification and Repair",
+    "first_author": "Amrollahi",
+    "year": 2026,
+    "s2_paper_id": "493c2fc9ffa3bff8f5e306f4a788ab63d3465e0f",
+    "doi": "10.48550/arXiv.2604.25031",
+    "arxiv": "2604.25031"
+  },
+  "Singh2026": {
+    "source": "semantic_scholar",
+    "title": "Beyond Solver Verdicts: Generative Reward Models for Autoformalization",
+    "first_author": "Singh",
+    "year": 2026,
+    "s2_paper_id": "9d58c72195d3f6b7276deb428c6a038e69f2892e",
+    "arxiv": "2609.11085"
+  },
+  "Lu2024": {
+    "source": "semantic_scholar",
+    "title": "FormalAlign: Automated Alignment Evaluation for Autoformalization",
+    "first_author": "Lu",
+    "year": 2024,
+    "s2_paper_id": "5b5be0a0965c6f3314489b38c41c349f07fb95a1",
+    "doi": "10.48550/arXiv.2410.10135",
+    "arxiv": "2410.10135"
+  },
+  "Eckhardt1985": {
+    "source": "semantic_scholar",
+    "title": "A Theoretical Basis for the Analysis of Multiversion Software Subject to Coincident Errors",
+    "first_author": "Eckhardt",
+    "year": 1985,
+    "s2_paper_id": "c3a7e368f1faecb0bdfb4e1f757edb883d690ff8",
+    "doi": "10.1109/TSE.1985.231895"
+  },
+  "Knight1986": {
+    "source": "semantic_scholar",
+    "title": "An experimental evaluation of the assumption of independence in multiversion programming",
+    "first_author": "Knight",
+    "year": 1986,
+    "s2_paper_id": "990ea46ace7c5cc96441bd3d5f318eeaa1855f8c",
+    "doi": "10.1109/TSE.1986.6312924"
+  },
+  "Du2023": {
+    "source": "semantic_scholar",
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "first_author": "Du",
+    "year": 2023,
+    "s2_paper_id": "4780d0a027c5c5a8e01d7cf697f6296880ffc945",
+    "doi": "10.48550/arXiv.2305.14325",
+    "arxiv": "2305.14325"
+  },
+  "Liu2026": {
+    "source": "semantic_scholar",
+    "title": "LLMs as a Jury: Cross-Model Consensus Can Outperform Process Reward Models for LLM Reasoning",
+    "first_author": "Liu",
+    "year": 2026,
+    "s2_paper_id": "d62fbf4d9f49a9cc2821b055bb82cd8e8ea96a9b",
+    "doi": "10.48550/arXiv.2607.10139",
+    "arxiv": "2607.10139"
+  },
+  "Zhang2023": {
+    "source": "semantic_scholar",
+    "title": "SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-aware Cross-check Consistency",
+    "first_author": "Zhang",
+    "year": 2023,
+    "s2_paper_id": "6af460d34bfc8e955e43fbe15cedcf329b48bc19",
+    "doi": "10.48550/arXiv.2311.01740",
+    "arxiv": "2311.01740"
+  },
+  "Alvanaki2026": {
+    "source": "semantic_scholar",
+    "title": "NoTB: Oracle-Free Triage of LLM-Generated RTL via Cross-Model Formal Consensus",
+    "first_author": "Alvanaki",
+    "year": 2026,
+    "s2_paper_id": "28720f53b975be5b4c03132f856d8e8245310ab9",
+    "arxiv": "2608.21962"
+  },
+  "Wang2026": {
+    "source": "semantic_scholar",
+    "title": "SCP-NL2TL: Selective Conformal Prediction with Semantic Verification for Natural Language to Temporal Logic Specifications",
+    "first_author": "Wang",
+    "year": 2026,
+    "s2_paper_id": "75b0cb082650f0ca2faa4b13a6ccd3410d815a6e",
+    "arxiv": "2608.05439"
+  },
+  "Bayless2025": {
+    "source": "semantic_scholar",
+    "title": "A Neurosymbolic Approach to Natural Language Formalization and Verification",
+    "first_author": "Bayless",
+    "year": 2025,
+    "s2_paper_id": "8b6d7956c8a4f5418847316a69fded71de370339",
+    "doi": "10.48550/arXiv.2511.09008",
+    "arxiv": "2511.09008"
+  },
+  "Li2024": {
+    "source": "semantic_scholar",
+    "title": "Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency",
+    "first_author": "Li",
+    "year": 2024,
+    "s2_paper_id": "865e08c41499c29e5152e84551228ec6f59f013a",
+    "doi": "10.48550/arXiv.2410.20936",
+    "arxiv": "2410.20936"
+  },
+  "Chen2023": {
+    "source": "semantic_scholar",
+    "title": "Universal Self-Consistency for Large Language Model Generation",
+    "first_author": "Chen",
+    "year": 2023,
+    "s2_paper_id": "5f66d1a667eec13b5d337c3fc5619bcef95092bd",
+    "doi": "10.48550/arXiv.2311.17311",
+    "arxiv": "2311.17311"
+  },
+  "Moura2008": {
+    "source": "semantic_scholar",
+    "title": "Z3: An Efficient SMT Solver",
+    "first_author": "Moura",
+    "year": 2008,
+    "s2_paper_id": "3960dda299e0f8615a7db675b8e6905b375ecf8a",
+    "doi": "10.1007/978-3-540-78800-3_24"
+  }
+}

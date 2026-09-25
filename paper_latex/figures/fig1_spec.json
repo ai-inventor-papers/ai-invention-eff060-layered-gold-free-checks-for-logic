@@ -1,0 +1,168 @@
+{
+  "figure_id": "fig1",
+  "type": "hand_written_dot_ci",
+  "title": "Consensus vs. baselines on held-out data",
+  "xlabel": "Stratified AUROC (unfaithful vs. faithful; 0.5 = chance)",
+  "aspect": "4:3",
+  "width_in": 7.0,
+  "xlim": [
+    0.45,
+    0.83
+  ],
+  "xticks": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8
+  ],
+  "population": {
+    "set": "E_POOL PRIMARY under R_AB (held-out development set)",
+    "n_rows": 2686,
+    "n_error": 1822,
+    "n_correct": 864,
+    "n_sentences": 292,
+    "ci": "95% sentence-clustered percentile bootstrap, B = 2000, seed 0",
+    "stat": "stratified AUROC (only ERROR/CORRECT pairs from the same source stratum count)"
+  },
+  "source": {
+    "artifact": "run_u75jRHUss0zo/3_invention_loop/iter_3/gen_art/gen_art_experiment_6/results/analysis_T1.json",
+    "key": "metrics_R_AB[<metric>].strat.{auroc, ci}",
+    "table": "same artifact, results/tables_T1.md section '(a) Item-level AUROC on R_AB'"
+  },
+  "highlight": "c_score_align",
+  "rows": [
+    {
+      "label": "Consensus (aligned)",
+      "metric": "c_score_align",
+      "auroc": 0.741462,
+      "ci": [
+        0.705102,
+        0.774946
+      ]
+    },
+    {
+      "label": "Combined baseline stack (28 feat.)",
+      "metric": "S4_full_oof",
+      "auroc": 0.735093,
+      "ci": [
+        0.699153,
+        0.766339
+      ]
+    },
+    {
+      "label": "FOL-Triage fused (text checks)",
+      "metric": "p_text",
+      "auroc": 0.670182,
+      "ci": [
+        0.634227,
+        0.704459
+      ]
+    },
+    {
+      "label": "GPT-4.1-nano judge",
+      "metric": "judge_cheap2_orig",
+      "auroc": 0.652629,
+      "ci": [
+        0.616409,
+        0.68805
+      ]
+    },
+    {
+      "label": "Flash-Lite judge (disguised)",
+      "metric": "judge_cheap_disg",
+      "auroc": 0.642486,
+      "ci": [
+        0.60691,
+        0.67643
+      ]
+    },
+    {
+      "label": "Round-trip NLI",
+      "metric": "rt_nli_min",
+      "auroc": 0.605903,
+      "ci": [
+        0.569479,
+        0.644734
+      ]
+    },
+    {
+      "label": "Self-consistency (5 samples)",
+      "metric": "sc5_eq_frac",
+      "auroc": 0.597912,
+      "ci": [
+        0.559432,
+        0.637324
+      ]
+    },
+    {
+      "label": "Pilot: rerun predicate overlap",
+      "metric": "L:pilot_rerun_jacc",
+      "auroc": 0.597746,
+      "ci": [
+        0.560001,
+        0.633848
+      ]
+    },
+    {
+      "label": "Parse/compile rate",
+      "metric": "L:parse_fail",
+      "auroc": 0.5,
+      "ci": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "reference_lines": [
+    {
+      "label": "Pre-registered judge bar (0.642)",
+      "x": 0.642486,
+      "style": "--",
+      "source_metric": "judge_cheap_disg"
+    },
+    {
+      "label": "Chance (0.5)",
+      "x": 0.5,
+      "style": ":"
+    }
+  ],
+  "reported_deltas_not_drawn": {
+    "c_score_align - judge_cheap_disg [strat]": {
+      "delta": 0.099,
+      "ci": [
+        0.049,
+        0.146
+      ],
+      "key": "a_head_on['R_AB pooled'].deltas"
+    },
+    "c_score_align - S4_full_oof [strat]": {
+      "delta": 0.006,
+      "ci": [
+        -0.031,
+        0.042
+      ],
+      "key": "a_head_on['R_AB pooled'].deltas['S4_full_oof - c_score_align [strat]'] (sign flipped)"
+    },
+    "S4_full + c_score_align - S4_full [strat, nested]": {
+      "delta": 0.039,
+      "ci": [
+        0.021,
+        0.057
+      ],
+      "key": "b_s4.nested"
+    }
+  },
+  "draft_values_not_supported_by_artifacts": {
+    "note": "The draft specification's CIs and several point values match no artifact file; the artifact values above replace them.",
+    "Combined baseline stack 0.700 [0.658, 0.739]": "artifact S4_full_oof strat = 0.735 [0.699, 0.766]; 0.700 is gpt-4.1-nano's POOLED AUROC",
+    "FOL-Triage fused 0.614": "artifact p_text (L2-bow + L3 text checks) strat = 0.670 [0.634, 0.704]",
+    "Self-consistency 0.592": "artifact sc5_eq_frac strat = 0.598 [0.559, 0.637]",
+    "Round-trip NLI 0.564": "artifact rt_nli_min strat = 0.606 [0.569, 0.645]",
+    "Structural pilots 0.510 (single aggregated bar)": "no such aggregate exists; conflict/arity/shape/dangling pilots have only POOLED AUROCs on this set (0.500-0.541, iter_2 exp 6), so they are not drawn on a stratified axis; the rerun-overlap pilot and parse rate have stratified values and are drawn",
+    "all draft CIs (e.g. consensus [0.693, 0.787])": "artifact CIs are narrower, e.g. consensus [0.705, 0.775]",
+    "'+0.041 over the combined stack'": "artifact: standalone +0.006 [-0.031, +0.042]; nested gain from adding consensus to the stack +0.039 [0.021, 0.057]"
+  }
+}
