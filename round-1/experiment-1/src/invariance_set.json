@@ -1,0 +1,4994 @@
+[
+ {
+  "item_id": "00b1b9552be255b7",
+  "family": "RENAME",
+  "rewritten_fol": "Incorporate(isWalden, cognition)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "00b1b9552be255b7",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "00b1b9552be255b7",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "00b1b9552be255b7",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "00b1b9552be255b7",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "038a2cfeeb417ff0",
+  "family": "RENAME",
+  "rewritten_fol": "IsIndoEuropean(isFrench)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "038a2cfeeb417ff0",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "038a2cfeeb417ff0",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "038a2cfeeb417ff0",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "038a2cfeeb417ff0",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "03af5a29f0267dfd",
+  "family": "RENAME",
+  "rewritten_fol": "IsIndoEuropean(isFrench)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "03af5a29f0267dfd",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "03af5a29f0267dfd",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "03af5a29f0267dfd",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "03af5a29f0267dfd",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "03df2c5be04c824b",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsDog(x) → (Beast(x) ∧ IsBark(x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "03df2c5be04c824b",
+  "family": "REORDER",
+  "rewritten_fol": "∀x ((Dog(x) → (Bark(x) ∧ Animal(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "03df2c5be04c824b",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∀x ((Dog(x) → ¬((¬Animal(x) ∨ ¬Bark(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "03df2c5be04c824b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "03df2c5be04c824b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬((Animal(x) ∧ Bark(x))) → ¬Dog(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "04dd12ce3df73749",
+  "family": "RENAME",
+  "rewritten_fol": "IsPopular(isBlackMirror)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "04dd12ce3df73749",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "04dd12ce3df73749",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "04dd12ce3df73749",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "04dd12ce3df73749",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "05a389bf74f0a19d",
+  "family": "RENAME",
+  "rewritten_fol": "IsLead(isBeethoven, isViennaMusicSociety)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "05a389bf74f0a19d",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "05a389bf74f0a19d",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "05a389bf74f0a19d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "05a389bf74f0a19d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0778a38c6422ad34",
+  "family": "RENAME",
+  "rewritten_fol": "LocatedInch(peking, northernPRC)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "0778a38c6422ad34",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0778a38c6422ad34",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0778a38c6422ad34",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0778a38c6422ad34",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "07a86e965863573b",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsDigital(x) → ¬Analogue(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "07a86e965863573b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "07a86e965863573b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "07a86e965863573b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "07a86e965863573b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬¬Analog(x) → ¬Digital(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0b69fcdbfaa0aaeb",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((Affectionateness(x) ∧ IsPositive(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "0b69fcdbfaa0aaeb",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Positive(x) ∧ Affection(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0b69fcdbfaa0aaeb",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Affection(x) ∨ ¬Positive(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0b69fcdbfaa0aaeb",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0b69fcdbfaa0aaeb",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0d6f2b63ef74896f",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsRomance(x) → IsIndoEuropean(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "0d6f2b63ef74896f",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0d6f2b63ef74896f",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0d6f2b63ef74896f",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0d6f2b63ef74896f",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬IndoEuropean(x) → ¬Romance(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0ecf43c8059a13c4",
+  "family": "RENAME",
+  "rewritten_fol": "∀x (∀y (∀z (((Tall(x, y) ∧ Tall(y, z)) → Tall(x, z)))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "0ecf43c8059a13c4",
+  "family": "REORDER",
+  "rewritten_fol": "∀x (∀y (∀z (((Taller(y, z) ∧ Taller(x, y)) → Taller(x, z)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0ecf43c8059a13c4",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∀x (∀y (∀z ((¬((¬Taller(x, y) ∨ ¬Taller(y, z))) → Taller(x, z)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0ecf43c8059a13c4",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0ecf43c8059a13c4",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x (∀y (∀z ((¬Taller(x, z) → ¬((Taller(x, y) ∧ Taller(y, z)))))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0f7339a15615b424",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((HouseholdContraption(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "0f7339a15615b424",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0f7339a15615b424",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0f7339a15615b424",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0f7339a15615b424",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬HouseholdAppliance(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "0fce5e2d992d51f8",
+  "family": "RENAME",
+  "rewritten_fol": "GrandSlamChamp(isDjokovic)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "0fce5e2d992d51f8",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0fce5e2d992d51f8",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0fce5e2d992d51f8",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "0fce5e2d992d51f8",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "103a87b11fc6aab3",
+  "family": "RENAME",
+  "rewritten_fol": "IsNetflixShow(isBlackMirror)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "103a87b11fc6aab3",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "103a87b11fc6aab3",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "103a87b11fc6aab3",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "103a87b11fc6aab3",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "10ab3102cfae3e77",
+  "family": "RENAME",
+  "rewritten_fol": "(HouseholdContraption(sandstorm) ∧ ¬Sucking(sandstorm))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "10ab3102cfae3e77",
+  "family": "REORDER",
+  "rewritten_fol": "(¬Suck(duster) ∧ HouseholdAppliance(duster))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "10ab3102cfae3e77",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬HouseholdAppliance(duster) ∨ ¬¬Suck(duster)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "10ab3102cfae3e77",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "10ab3102cfae3e77",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "140fcb91be059781",
+  "family": "RENAME",
+  "rewritten_fol": "Smart(harass)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "140fcb91be059781",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "140fcb91be059781",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "140fcb91be059781",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "140fcb91be059781",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1551e57bd9ad5ade",
+  "family": "RENAME",
+  "rewritten_fol": "IsLead(isRoderickStrong, isDiamondMine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1551e57bd9ad5ade",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1551e57bd9ad5ade",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1551e57bd9ad5ade",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1551e57bd9ad5ade",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "160869971de3efa0",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsStriker(x) → SoccerParticipant(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "160869971de3efa0",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "160869971de3efa0",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "160869971de3efa0",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "160869971de3efa0",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬SoccerPlayer(x) → ¬Striker(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "18e9c2c532163b8e",
+  "family": "RENAME",
+  "rewritten_fol": "GrandSlamChamp(isDjokovic)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "18e9c2c532163b8e",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "18e9c2c532163b8e",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "18e9c2c532163b8e",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "18e9c2c532163b8e",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "197e182217cbf2ad",
+  "family": "RENAME",
+  "rewritten_fol": "SoccerParticipant(isRobert)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "197e182217cbf2ad",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "197e182217cbf2ad",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "197e182217cbf2ad",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "197e182217cbf2ad",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "19f7201546bc44d2",
+  "family": "RENAME",
+  "rewritten_fol": "(¬IsWillCompose(isGeorge) → ¬IsCompose(isGeorge))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "19f7201546bc44d2",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "19f7201546bc44d2",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "19f7201546bc44d2",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "19f7201546bc44d2",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "(¬¬Compose(george) → ¬¬WillCompose(george))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "1a536a4769fdd6c7",
+  "family": "RENAME",
+  "rewritten_fol": "LocatedInch(isBarutinCove, isSnowIsland)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1a536a4769fdd6c7",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1a536a4769fdd6c7",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1a536a4769fdd6c7",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1a536a4769fdd6c7",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1abbdfc867e80b7c",
+  "family": "RENAME",
+  "rewritten_fol": "Foreigner(isMarvin)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1abbdfc867e80b7c",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1abbdfc867e80b7c",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1abbdfc867e80b7c",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1abbdfc867e80b7c",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1b158da783afd692",
+  "family": "RENAME",
+  "rewritten_fol": "Visit(isJuanDeOnate, isPicuris)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1b158da783afd692",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1b158da783afd692",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1b158da783afd692",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1b158da783afd692",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1b45f3fa4d44e533",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((IsOrchestra(x) ∧ ∃y ((IsMusicPiece(y) ∧ IsPremiere(x, y)))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1b45f3fa4d44e533",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((∃y ((Premiere(x, y) ∧ MusicPiece(y))) ∧ Orchestra(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "1b45f3fa4d44e533",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Orchestra(x) ∨ ¬(∃y ((MusicPiece(y) ∧ Premiere(x, y)))))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "1b45f3fa4d44e533",
+  "family": "PRENEX",
+  "rewritten_fol": "∃x (∃y ((Orchestra(x) ∧ (MusicPiece(y) ∧ Premiere(x, y)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "1b45f3fa4d44e533",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1caa4b859f2dab8f",
+  "family": "RENAME",
+  "rewritten_fol": "ManagedEdifice(isOliveGarden)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1caa4b859f2dab8f",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1caa4b859f2dab8f",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1caa4b859f2dab8f",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1caa4b859f2dab8f",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1cb909a4bb537540",
+  "family": "RENAME",
+  "rewritten_fol": "∃x (Beast(x))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1cb909a4bb537540",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1cb909a4bb537540",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1cb909a4bb537540",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1cb909a4bb537540",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1d9939888eb5fe03",
+  "family": "RENAME",
+  "rewritten_fol": "IsMonkey(stone)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1d9939888eb5fe03",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1d9939888eb5fe03",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1d9939888eb5fe03",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1d9939888eb5fe03",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1daad5b3678f4fc0",
+  "family": "RENAME",
+  "rewritten_fol": "¬IsBlock(isMichael, blowy)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1daad5b3678f4fc0",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1daad5b3678f4fc0",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1daad5b3678f4fc0",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1daad5b3678f4fc0",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1e4cf06b2058cdd6",
+  "family": "RENAME",
+  "rewritten_fol": "IsStriker(isRobert)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1e4cf06b2058cdd6",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1e4cf06b2058cdd6",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1e4cf06b2058cdd6",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1e4cf06b2058cdd6",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1fc3dce5ba247df9",
+  "family": "RENAME",
+  "rewritten_fol": "IsWildTurkey(isJoey)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "1fc3dce5ba247df9",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1fc3dce5ba247df9",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1fc3dce5ba247df9",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "1fc3dce5ba247df9",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20dd32a68d47ddae",
+  "family": "RENAME",
+  "rewritten_fol": "Mammalian(world)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "20dd32a68d47ddae",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20dd32a68d47ddae",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20dd32a68d47ddae",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20dd32a68d47ddae",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20f40e74cb241020",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Foursquare(x) → Form(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "20f40e74cb241020",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20f40e74cb241020",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20f40e74cb241020",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "20f40e74cb241020",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Shape(x) → ¬Square(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "21c39e0ea2b11685",
+  "family": "RENAME",
+  "rewritten_fol": "¬RealityTelevision(breakingBadness)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "21c39e0ea2b11685",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "21c39e0ea2b11685",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "21c39e0ea2b11685",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "21c39e0ea2b11685",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2467aa0442bc1ea9",
+  "family": "RENAME",
+  "rewritten_fol": "IsMusicPiece(symphonyNonine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2467aa0442bc1ea9",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2467aa0442bc1ea9",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2467aa0442bc1ea9",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2467aa0442bc1ea9",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "254a464d47a003fe",
+  "family": "RENAME",
+  "rewritten_fol": "IsLeft(isRobert, isBayernMunchen)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "254a464d47a003fe",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "254a464d47a003fe",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "254a464d47a003fe",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "254a464d47a003fe",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "25c9ae7a35dad6a8",
+  "family": "RENAME",
+  "rewritten_fol": "Apprehension(machineRendering)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "25c9ae7a35dad6a8",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "25c9ae7a35dad6a8",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "25c9ae7a35dad6a8",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "25c9ae7a35dad6a8",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2677a2f2bcdea80a",
+  "family": "RENAME",
+  "rewritten_fol": "IsStar(isRobertLewandowski)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2677a2f2bcdea80a",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2677a2f2bcdea80a",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2677a2f2bcdea80a",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2677a2f2bcdea80a",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2752ab52dc191882",
+  "family": "RENAME",
+  "rewritten_fol": "(IsMan(isPeter) ∧ Tall(isPeter, isMichael))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2752ab52dc191882",
+  "family": "REORDER",
+  "rewritten_fol": "(Taller(peter, michael) ∧ Man(peter))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "2752ab52dc191882",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Man(peter) ∨ ¬Taller(peter, michael)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "2752ab52dc191882",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2752ab52dc191882",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "27d9c951419d9553",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Homo(x) → Person(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "27d9c951419d9553",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "27d9c951419d9553",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "27d9c951419d9553",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "27d9c951419d9553",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Mortal(x) → ¬Human(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "28336008f96a0dd4",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Vacuity(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "28336008f96a0dd4",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "28336008f96a0dd4",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "28336008f96a0dd4",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "28336008f96a0dd4",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬Vacuum(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "28ed94a83c03574b",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((ManagedEdifice(x) ∧ Pet(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "28ed94a83c03574b",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Pets(x) ∧ ManagedBuilding(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "28ed94a83c03574b",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬ManagedBuilding(x) ∨ ¬Pets(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "28ed94a83c03574b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "28ed94a83c03574b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2b53546fdeb47cbe",
+  "family": "RENAME",
+  "rewritten_fol": "Sucking(infinite)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2b53546fdeb47cbe",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2b53546fdeb47cbe",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2b53546fdeb47cbe",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2b53546fdeb47cbe",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2c6dcc9476cec213",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsCat(x) → Pet(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2c6dcc9476cec213",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2c6dcc9476cec213",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2c6dcc9476cec213",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2c6dcc9476cec213",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Pets(x) → ¬Cat(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "2d1079bdb7398a86",
+  "family": "RENAME",
+  "rewritten_fol": "¬(∃x ((IsDigital(x) ∧ Analogue(x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2d1079bdb7398a86",
+  "family": "REORDER",
+  "rewritten_fol": "¬(∃x ((Analog(x) ∧ Digital(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "2d1079bdb7398a86",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬(∃x (¬((¬Digital(x) ∨ ¬Analog(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "2d1079bdb7398a86",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2d1079bdb7398a86",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2d194df9fd4335ca",
+  "family": "RENAME",
+  "rewritten_fol": "Associate(isGerman, isSpanish)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "2d194df9fd4335ca",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2d194df9fd4335ca",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2d194df9fd4335ca",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "2d194df9fd4335ca",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "30612e7d1c67b86b",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsPortray(x, isRealPeople) → RealityTelevision(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "30612e7d1c67b86b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "30612e7d1c67b86b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "30612e7d1c67b86b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "30612e7d1c67b86b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬RealityTV(x) → ¬Portray(x, realPeople)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "32a968330356972b",
+  "family": "RENAME",
+  "rewritten_fol": "IsF1Visa(microphone)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "32a968330356972b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32a968330356972b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32a968330356972b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32a968330356972b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32ac1eb5da746d45",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((Affectionateness(x) ∧ IsLove(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "32ac1eb5da746d45",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Love(x) ∧ Affection(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "32ac1eb5da746d45",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Affection(x) ∨ ¬Love(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "32ac1eb5da746d45",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32ac1eb5da746d45",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32ebeb1ffc6e2b75",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsCat(x) → IsPet(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "32ebeb1ffc6e2b75",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32ebeb1ffc6e2b75",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32ebeb1ffc6e2b75",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "32ebeb1ffc6e2b75",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Pet(x) → ¬Cat(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "3360569982cd4722",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((Affectionateness(x) ∧ IsPositive(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3360569982cd4722",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Positive(x) ∧ Affection(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "3360569982cd4722",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Affection(x) ∨ ¬Positive(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "3360569982cd4722",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3360569982cd4722",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "34c5fbf493dafe5d",
+  "family": "RENAME",
+  "rewritten_fol": "(IsMan(isPeter) ∧ Tall(isPeter, isMichael))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "34c5fbf493dafe5d",
+  "family": "REORDER",
+  "rewritten_fol": "(Taller(peter, michael) ∧ Man(peter))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "34c5fbf493dafe5d",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Man(peter) ∨ ¬Taller(peter, michael)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "34c5fbf493dafe5d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "34c5fbf493dafe5d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3503771a5547cd20",
+  "family": "RENAME",
+  "rewritten_fol": "IsMusicPiece(symphonyNonine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3503771a5547cd20",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3503771a5547cd20",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3503771a5547cd20",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3503771a5547cd20",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "357671bb86c7f13d",
+  "family": "RENAME",
+  "rewritten_fol": "(IsBook(isPalaceOfFlies) ∧ PublishedPast(isPalaceOfFlies, newVesselImperativeness))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "357671bb86c7f13d",
+  "family": "REORDER",
+  "rewritten_fol": "(PublishedBy(palaceOfFlies, newVesselPress) ∧ Book(palaceOfFlies))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "357671bb86c7f13d",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Book(palaceOfFlies) ∨ ¬PublishedBy(palaceOfFlies, newVesselPress)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "357671bb86c7f13d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "357671bb86c7f13d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "358cfec1bda615e1",
+  "family": "RENAME",
+  "rewritten_fol": "∃x (((IsVisit(isJuan, x) ∧ MountainScope(x)) ∧ Inch(x, isNewMexico)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "358cfec1bda615e1",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((In(x, newMexico) ∧ (MountainRange(x) ∧ Visit(juan, x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "358cfec1bda615e1",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬((Visit(juan, x) ∧ MountainRange(x))) ∨ ¬In(x, newMexico))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "358cfec1bda615e1",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "358cfec1bda615e1",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "368295a254975e2a",
+  "family": "RENAME",
+  "rewritten_fol": "IsLead(isBeethoven, isViennaMusicSociety)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "368295a254975e2a",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "368295a254975e2a",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "368295a254975e2a",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "368295a254975e2a",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "38309ad5fa2ed317",
+  "family": "RENAME",
+  "rewritten_fol": "SoccerParticipant(isRobert)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "38309ad5fa2ed317",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "38309ad5fa2ed317",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "38309ad5fa2ed317",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "38309ad5fa2ed317",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "384b33bf41b14dad",
+  "family": "RENAME",
+  "rewritten_fol": "IsFeud(empire, isDiamondMine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "384b33bf41b14dad",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "384b33bf41b14dad",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "384b33bf41b14dad",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "384b33bf41b14dad",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "395e4091203c8719",
+  "family": "RENAME",
+  "rewritten_fol": "InternationalPupil(microphone)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "395e4091203c8719",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "395e4091203c8719",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "395e4091203c8719",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "395e4091203c8719",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "39af887cb51f918a",
+  "family": "RENAME",
+  "rewritten_fol": "¬(∃x ((IsPolitician(x) ∧ IsMember(x, isNaziReichstag))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "39af887cb51f918a",
+  "family": "REORDER",
+  "rewritten_fol": "¬(∃x ((Member(x, naziReichstag) ∧ Politician(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "39af887cb51f918a",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬(∃x (¬((¬Politician(x) ∨ ¬Member(x, naziReichstag)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "39af887cb51f918a",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "39af887cb51f918a",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3a8b6809c84ac2e0",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsRomance(x) → IsIndoEuropean(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3a8b6809c84ac2e0",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3a8b6809c84ac2e0",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3a8b6809c84ac2e0",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3a8b6809c84ac2e0",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬IndoEuropean(x) → ¬Romance(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "3aad115ef64edfd5",
+  "family": "RENAME",
+  "rewritten_fol": "IsLeft(isRobert, isBayernMunchen)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3aad115ef64edfd5",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3aad115ef64edfd5",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3aad115ef64edfd5",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3aad115ef64edfd5",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ad06eaa5dba1302",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((HouseholdContraption(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3ad06eaa5dba1302",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ad06eaa5dba1302",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ad06eaa5dba1302",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ad06eaa5dba1302",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬HouseholdAppliance(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "3ba0361176a71b58",
+  "family": "RENAME",
+  "rewritten_fol": "¬IsBlock(isMichael, blowy)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3ba0361176a71b58",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ba0361176a71b58",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ba0361176a71b58",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3ba0361176a71b58",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3bc18a26445bcd30",
+  "family": "RENAME",
+  "rewritten_fol": "IsStriker(isRobertLewandowski)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3bc18a26445bcd30",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3bc18a26445bcd30",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3bc18a26445bcd30",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3bc18a26445bcd30",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3d12953df0ccee91",
+  "family": "RENAME",
+  "rewritten_fol": "Associate(isGerman, isSpanish)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3d12953df0ccee91",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3d12953df0ccee91",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3d12953df0ccee91",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3d12953df0ccee91",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f66906231206a66",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsMonkey(x) → Mammalian(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3f66906231206a66",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f66906231206a66",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f66906231206a66",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f66906231206a66",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Mammal(x) → ¬Monkey(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "3f8a5fd01fa4fd49",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsFir(x) → IsEvergreen(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "3f8a5fd01fa4fd49",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f8a5fd01fa4fd49",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f8a5fd01fa4fd49",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "3f8a5fd01fa4fd49",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Evergreen(x) → ¬Fir(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "40bf87dba30fa220",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsStriker(x) → SoccerParticipant(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "40bf87dba30fa220",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40bf87dba30fa220",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40bf87dba30fa220",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40bf87dba30fa220",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬SoccerPlayer(x) → ¬Striker(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "40d0746525a7ba09",
+  "family": "RENAME",
+  "rewritten_fol": "Nine(isFluminense)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "40d0746525a7ba09",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40d0746525a7ba09",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40d0746525a7ba09",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40d0746525a7ba09",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40e8a65aeea9ca18",
+  "family": "RENAME",
+  "rewritten_fol": "((IsMine(isHardingPegmatite) ∧ Inch(isHardingPegmatite, isPicuris)) ∧ Donate(isHardingPegmatite))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "40e8a65aeea9ca18",
+  "family": "REORDER",
+  "rewritten_fol": "(Donated(hardingPegmatite) ∧ (In(hardingPegmatite, picuris) ∧ Mine(hardingPegmatite)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "40e8a65aeea9ca18",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬((Mine(hardingPegmatite) ∧ In(hardingPegmatite, picuris))) ∨ ¬Donated(hardingPegmatite)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "40e8a65aeea9ca18",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "40e8a65aeea9ca18",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4128b9c58e397a1d",
+  "family": "RENAME",
+  "rewritten_fol": "¬(∃x ((DigitalMedium(x) ∧ Analogue(x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4128b9c58e397a1d",
+  "family": "REORDER",
+  "rewritten_fol": "¬(∃x ((Analog(x) ∧ DigitalMedia(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "4128b9c58e397a1d",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬(∃x (¬((¬DigitalMedia(x) ∨ ¬Analog(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "4128b9c58e397a1d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4128b9c58e397a1d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "41e3838949df3a30",
+  "family": "RENAME",
+  "rewritten_fol": "IsTerricolous(isKiki)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "41e3838949df3a30",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "41e3838949df3a30",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "41e3838949df3a30",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "41e3838949df3a30",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4425090375c77442",
+  "family": "RENAME",
+  "rewritten_fol": "IsStriker(isRobert)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4425090375c77442",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4425090375c77442",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4425090375c77442",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4425090375c77442",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4490a179234c5828",
+  "family": "RENAME",
+  "rewritten_fol": "Favourite(isJames, summertime)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4490a179234c5828",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4490a179234c5828",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4490a179234c5828",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4490a179234c5828",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "473dcf58877eb09e",
+  "family": "RENAME",
+  "rewritten_fol": "Vacuity(infinite)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "473dcf58877eb09e",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "473dcf58877eb09e",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "473dcf58877eb09e",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "473dcf58877eb09e",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "475ace2fcd0054ec",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsStriker(x) → Participant(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "475ace2fcd0054ec",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "475ace2fcd0054ec",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "475ace2fcd0054ec",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "475ace2fcd0054ec",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Player(x) → ¬Striker(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "47b305f1a78eefba",
+  "family": "RENAME",
+  "rewritten_fol": "∃x (Beast(x))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "47b305f1a78eefba",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "47b305f1a78eefba",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "47b305f1a78eefba",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "47b305f1a78eefba",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4a84a5b9de48bcf3",
+  "family": "RENAME",
+  "rewritten_fol": "Foreigner(isMarvin)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4a84a5b9de48bcf3",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4a84a5b9de48bcf3",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4a84a5b9de48bcf3",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4a84a5b9de48bcf3",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4d7ad45b6143d39a",
+  "family": "RENAME",
+  "rewritten_fol": "Lead(isRoderickStrong, creedBrother)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4d7ad45b6143d39a",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4d7ad45b6143d39a",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4d7ad45b6143d39a",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4d7ad45b6143d39a",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4dd09881dc934f2e",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Hellenic(x) → Homo(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4dd09881dc934f2e",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4dd09881dc934f2e",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4dd09881dc934f2e",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4dd09881dc934f2e",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Human(x) → ¬Greek(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "4e0cf7c0e4ffacb5",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Lamia(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4e0cf7c0e4ffacb5",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4e0cf7c0e4ffacb5",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4e0cf7c0e4ffacb5",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4e0cf7c0e4ffacb5",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬Vampire(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "4e80085adca83afe",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsMachineLearningAlgorithm(x) → ((SupervisedAcquisition(x) ∨ UnsupervisedAcquisition(x)) ∨ ReinforcementAcquisition(x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "4e80085adca83afe",
+  "family": "REORDER",
+  "rewritten_fol": "∀x ((MachineLearningAlgorithm(x) → (ReinforcementLearning(x) ∨ (UnsupervisedLearning(x) ∨ SupervisedLearning(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "4e80085adca83afe",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4e80085adca83afe",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "4e80085adca83afe",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬(((SupervisedLearning(x) ∨ UnsupervisedLearning(x)) ∨ ReinforcementLearning(x))) → ¬MachineLearningAlgorithm(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "510240b176fffccf",
+  "family": "RENAME",
+  "rewritten_fol": "IsScriptEditor(isAndrewCollins, isBadults)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "510240b176fffccf",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "510240b176fffccf",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "510240b176fffccf",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "510240b176fffccf",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56863fa0dd57a597",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((ManagedEdifice(x) ∧ IsPet(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "56863fa0dd57a597",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Pet(x) ∧ ManagedBuilding(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "56863fa0dd57a597",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬ManagedBuilding(x) ∨ ¬Pet(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "56863fa0dd57a597",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56863fa0dd57a597",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56b96fb7528eed02",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsBook(x) → Incorporate(x, cognition)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "56b96fb7528eed02",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56b96fb7528eed02",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56b96fb7528eed02",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56b96fb7528eed02",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Contain(x, knowledge) → ¬Book(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "56e27df8782c7036",
+  "family": "RENAME",
+  "rewritten_fol": "Crabbed(isTom)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "56e27df8782c7036",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56e27df8782c7036",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56e27df8782c7036",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "56e27df8782c7036",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "580260f39dafc7a8",
+  "family": "RENAME",
+  "rewritten_fol": "(IsRomance(isFrench) ∧ IsRomance(isSpanish))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "580260f39dafc7a8",
+  "family": "REORDER",
+  "rewritten_fol": "(Romance(spanish) ∧ Romance(french))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "580260f39dafc7a8",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Romance(french) ∨ ¬Romance(spanish)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "580260f39dafc7a8",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "580260f39dafc7a8",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "58f38c688223e497",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Addition(x, cognition) → Smart(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "58f38c688223e497",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "58f38c688223e497",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "58f38c688223e497",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "58f38c688223e497",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Smarter(x) → ¬Gain(x, knowledge)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "597f8ea7a0ade319",
+  "family": "RENAME",
+  "rewritten_fol": "Mammalian(homo)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "597f8ea7a0ade319",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "597f8ea7a0ade319",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "597f8ea7a0ade319",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "597f8ea7a0ade319",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "59dcfc27e50b2b65",
+  "family": "RENAME",
+  "rewritten_fol": "IsRomance(isGerman)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "59dcfc27e50b2b65",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "59dcfc27e50b2b65",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "59dcfc27e50b2b65",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "59dcfc27e50b2b65",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e06430ff96ea0d6",
+  "family": "RENAME",
+  "rewritten_fol": "BornInch(isDani, beantown)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "5e06430ff96ea0d6",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e06430ff96ea0d6",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e06430ff96ea0d6",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e06430ff96ea0d6",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e460b658843f6e5",
+  "family": "RENAME",
+  "rewritten_fol": "GrandSlamChamp(isDjokovic)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "5e460b658843f6e5",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e460b658843f6e5",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e460b658843f6e5",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5e460b658843f6e5",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5ed31e85f7777036",
+  "family": "RENAME",
+  "rewritten_fol": "(IsBook(isPalaceOfFlies) ∧ Print(isPalaceOfFlies, newVesselImperativeness))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "5ed31e85f7777036",
+  "family": "REORDER",
+  "rewritten_fol": "(Published(palaceOfFlies, newVesselPress) ∧ Book(palaceOfFlies))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "5ed31e85f7777036",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Book(palaceOfFlies) ∨ ¬Published(palaceOfFlies, newVesselPress)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "5ed31e85f7777036",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5ed31e85f7777036",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f13d3cb13c9ba3e",
+  "family": "RENAME",
+  "rewritten_fol": "Lead(isRoderickStrong, creedBrother)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "5f13d3cb13c9ba3e",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f13d3cb13c9ba3e",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f13d3cb13c9ba3e",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f13d3cb13c9ba3e",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f1c0d38d2d4ac5b",
+  "family": "RENAME",
+  "rewritten_fol": "Proprietor(isTom)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "5f1c0d38d2d4ac5b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f1c0d38d2d4ac5b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f1c0d38d2d4ac5b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f1c0d38d2d4ac5b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f28d44b5b95f83d",
+  "family": "RENAME",
+  "rewritten_fol": "Lead(isRoderickStrong, isDiamondMine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "5f28d44b5b95f83d",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f28d44b5b95f83d",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f28d44b5b95f83d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "5f28d44b5b95f83d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6032214657839627",
+  "family": "RENAME",
+  "rewritten_fol": "∀x (((IsNetflixShow(x) ∧ IsPopular(x)) → BingeTicker(karenic, x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6032214657839627",
+  "family": "REORDER",
+  "rewritten_fol": "∀x (((Popular(x) ∧ NetflixShow(x)) → BingeWatch(karen, x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6032214657839627",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∀x ((¬((¬NetflixShow(x) ∨ ¬Popular(x))) → BingeWatch(karen, x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6032214657839627",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6032214657839627",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬BingeWatch(karen, x) → ¬((NetflixShow(x) ∧ Popular(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "61e2b66d846d04f0",
+  "family": "RENAME",
+  "rewritten_fol": "IsCapital(peking, prc)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "61e2b66d846d04f0",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "61e2b66d846d04f0",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "61e2b66d846d04f0",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "61e2b66d846d04f0",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "64b9f574ae05dff2",
+  "family": "RENAME",
+  "rewritten_fol": "¬(∃x ((IsPet(x) ∧ IsCat(x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "64b9f574ae05dff2",
+  "family": "REORDER",
+  "rewritten_fol": "¬(∃x ((Cat(x) ∧ Pet(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "64b9f574ae05dff2",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬(∃x (¬((¬Pet(x) ∨ ¬Cat(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "64b9f574ae05dff2",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "64b9f574ae05dff2",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6577f0b72391d71e",
+  "family": "RENAME",
+  "rewritten_fol": "Favourite(isEmma, summertime)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6577f0b72391d71e",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6577f0b72391d71e",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6577f0b72391d71e",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6577f0b72391d71e",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66617157c50b6d98",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Speculator(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "66617157c50b6d98",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66617157c50b6d98",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66617157c50b6d98",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66617157c50b6d98",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬Plunger(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "66944c7ed3fd6f82",
+  "family": "RENAME",
+  "rewritten_fol": "Visit(isJuan, isPicuris)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "66944c7ed3fd6f82",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66944c7ed3fd6f82",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66944c7ed3fd6f82",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "66944c7ed3fd6f82",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6707f3ddb3f4e2aa",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Lamia(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6707f3ddb3f4e2aa",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6707f3ddb3f4e2aa",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6707f3ddb3f4e2aa",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6707f3ddb3f4e2aa",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬Vampire(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6735788e35ac1d90",
+  "family": "RENAME",
+  "rewritten_fol": "IsPet(isTed)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6735788e35ac1d90",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6735788e35ac1d90",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6735788e35ac1d90",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6735788e35ac1d90",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "676f6bba410d19cf",
+  "family": "RENAME",
+  "rewritten_fol": "IsLead(isRoderickStrong, isDiamondMine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "676f6bba410d19cf",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "676f6bba410d19cf",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "676f6bba410d19cf",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "676f6bba410d19cf",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "67bec371eb22b453",
+  "family": "RENAME",
+  "rewritten_fol": "RentFlat(isTom, isOliveGarden)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "67bec371eb22b453",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "67bec371eb22b453",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "67bec371eb22b453",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "67bec371eb22b453",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6907323ad380ed24",
+  "family": "RENAME",
+  "rewritten_fol": "(IsNetflixShow(isStrangerThings) ∧ IsPopular(isStrangerThings))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6907323ad380ed24",
+  "family": "REORDER",
+  "rewritten_fol": "(Popular(strangerThings) ∧ NetflixShow(strangerThings))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6907323ad380ed24",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬NetflixShow(strangerThings) ∨ ¬Popular(strangerThings)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6907323ad380ed24",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6907323ad380ed24",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6994bfb4c3443581",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsHeck(x) → Beast(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6994bfb4c3443581",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6994bfb4c3443581",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6994bfb4c3443581",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6994bfb4c3443581",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Animal(x) → ¬Heck(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "69c1c3d3834817cf",
+  "family": "RENAME",
+  "rewritten_fol": "∃x (((MountainScope(x) ∧ Inch(x, isNewMexico)) ∧ Visit(isJuanDeOnate, x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "69c1c3d3834817cf",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Visited(juanDeOnate, x) ∧ (In(x, newMexico) ∧ MountainRange(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "69c1c3d3834817cf",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬((MountainRange(x) ∧ In(x, newMexico))) ∨ ¬Visited(juanDeOnate, x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "69c1c3d3834817cf",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "69c1c3d3834817cf",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "69eae0e408a01455",
+  "family": "RENAME",
+  "rewritten_fol": "(IsFrom(isDescampe, belgique) ∧ IsLeaderboard(isDescampe, isDuMaurierClassic1992))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "69eae0e408a01455",
+  "family": "REORDER",
+  "rewritten_fol": "(Leaderboard(descampe, duMaurierClassic1992) ∧ From(descampe, belgium))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "69eae0e408a01455",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬From(descampe, belgium) ∨ ¬Leaderboard(descampe, duMaurierClassic1992)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "69eae0e408a01455",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "69eae0e408a01455",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6aaa65487191c29c",
+  "family": "RENAME",
+  "rewritten_fol": "∀x (∀y ((IsRead(x, y) → Addition(x, cognition))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6aaa65487191c29c",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6aaa65487191c29c",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6aaa65487191c29c",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6aaa65487191c29c",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x (∀y ((¬Gain(x, knowledge) → ¬Read(x, y))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6b41af34053ebc46",
+  "family": "RENAME",
+  "rewritten_fol": "(Participant(isAilton) ∧ IsLoanedTo(isAilton, isBraga))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6b41af34053ebc46",
+  "family": "REORDER",
+  "rewritten_fol": "(LoanedTo(ailton, braga) ∧ Player(ailton))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6b41af34053ebc46",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Player(ailton) ∨ ¬LoanedTo(ailton, braga)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6b41af34053ebc46",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6b41af34053ebc46",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7beba84409764b",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((HouseholdContraption(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6c7beba84409764b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7beba84409764b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7beba84409764b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7beba84409764b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬HouseholdAppliance(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6c7f90f95b9508c7",
+  "family": "RENAME",
+  "rewritten_fol": "¬World(breakingBadness)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6c7f90f95b9508c7",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7f90f95b9508c7",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7f90f95b9508c7",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6c7f90f95b9508c7",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6cb9c656c2d84727",
+  "family": "RENAME",
+  "rewritten_fol": "IsPremiere(isViennaMusicSociety, symphonyNonine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6cb9c656c2d84727",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6cb9c656c2d84727",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6cb9c656c2d84727",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6cb9c656c2d84727",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6d4e9763829dcff1",
+  "family": "RENAME",
+  "rewritten_fol": "(IsRomance(isFrench) ∧ IsRomance(isSpanish))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6d4e9763829dcff1",
+  "family": "REORDER",
+  "rewritten_fol": "(Romance(spanish) ∧ Romance(french))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6d4e9763829dcff1",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Romance(french) ∨ ¬Romance(spanish)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6d4e9763829dcff1",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6d4e9763829dcff1",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6e7c7927fd45cd94",
+  "family": "RENAME",
+  "rewritten_fol": "¬IsBlock(isMichael, blowy)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6e7c7927fd45cd94",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6e7c7927fd45cd94",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6e7c7927fd45cd94",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6e7c7927fd45cd94",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6eeb6731dbe7758c",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Vacuity(x) → Sucking(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6eeb6731dbe7758c",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6eeb6731dbe7758c",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6eeb6731dbe7758c",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6eeb6731dbe7758c",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Suck(x) → ¬Vacuum(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6f7885a171a3214c",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((Homo(x) ∧ IsHorse(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "6f7885a171a3214c",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Horse(x) ∧ Human(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6f7885a171a3214c",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Human(x) ∨ ¬Horse(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "6f7885a171a3214c",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "6f7885a171a3214c",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "700ca7b07191f9c4",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsCat(x) → Mammalian(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "700ca7b07191f9c4",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "700ca7b07191f9c4",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "700ca7b07191f9c4",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "700ca7b07191f9c4",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Mammal(x) → ¬Cat(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "71cda73aa941d129",
+  "family": "RENAME",
+  "rewritten_fol": "IsVisit(isJuan, isPicuris)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "71cda73aa941d129",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "71cda73aa941d129",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "71cda73aa941d129",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "71cda73aa941d129",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "71e0c513137dc112",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((Affectionateness(x) ∧ IsLove(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "71e0c513137dc112",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((Love(x) ∧ Affection(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "71e0c513137dc112",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Affection(x) ∨ ¬Love(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "71e0c513137dc112",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "71e0c513137dc112",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "726e826987197af5",
+  "family": "RENAME",
+  "rewritten_fol": "(Include(isDiamondMine, creedBrother) ∧ Include(isDiamondMine, isIvyNile))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "726e826987197af5",
+  "family": "REORDER",
+  "rewritten_fol": "(Includes(diamondMine, ivyNile) ∧ Includes(diamondMine, creedBrothers))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "726e826987197af5",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬Includes(diamondMine, creedBrothers) ∨ ¬Includes(diamondMine, ivyNile)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "726e826987197af5",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "726e826987197af5",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "73f4b6d6d3288c5d",
+  "family": "RENAME",
+  "rewritten_fol": "Smart(harass)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "73f4b6d6d3288c5d",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "73f4b6d6d3288c5d",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "73f4b6d6d3288c5d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "73f4b6d6d3288c5d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "74485661f13ac675",
+  "family": "RENAME",
+  "rewritten_fol": "¬(∃x ((IsDigital(x) ∧ Analogue(x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "74485661f13ac675",
+  "family": "REORDER",
+  "rewritten_fol": "¬(∃x ((Analog(x) ∧ Digital(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "74485661f13ac675",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬(∃x (¬((¬Digital(x) ∨ ¬Analog(x)))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "74485661f13ac675",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "74485661f13ac675",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "7461d9949c56e9ec",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsNetflixShow(x) → (IsPopular(x) → BingeTicker(karenic, x))))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "7461d9949c56e9ec",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "7461d9949c56e9ec",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "7461d9949c56e9ec",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "7461d9949c56e9ec",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬((Popular(x) → BingeWatch(karen, x))) → ¬NetflixShow(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "758736d5bf088757",
+  "family": "RENAME",
+  "rewritten_fol": "∃x ((IsPet(x) ∧ ¬Mammalian(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "758736d5bf088757",
+  "family": "REORDER",
+  "rewritten_fol": "∃x ((¬Mammal(x) ∧ Pet(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "758736d5bf088757",
+  "family": "DEMORGAN",
+  "rewritten_fol": "∃x (¬((¬Pet(x) ∨ ¬¬Mammal(x))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "758736d5bf088757",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "758736d5bf088757",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "76edd940dc6c103f",
+  "family": "RENAME",
+  "rewritten_fol": "IsPremiere(isViennaMusicSociety, symphonyNonine)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "76edd940dc6c103f",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "76edd940dc6c103f",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "76edd940dc6c103f",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "76edd940dc6c103f",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "77783532d24036cb",
+  "family": "RENAME",
+  "rewritten_fol": "LanguageCoevals(machineRendering)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "77783532d24036cb",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "77783532d24036cb",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "77783532d24036cb",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "77783532d24036cb",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "787321b3321f78b5",
+  "family": "RENAME",
+  "rewritten_fol": "FootballNine(isFluminense)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "787321b3321f78b5",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "787321b3321f78b5",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "787321b3321f78b5",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "787321b3321f78b5",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "82920678cb7e820b",
+  "family": "RENAME",
+  "rewritten_fol": "IsComposer(isBeethoven)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "82920678cb7e820b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "82920678cb7e820b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "82920678cb7e820b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "82920678cb7e820b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "830c1a0f0fd3f514",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsStriker(x) → SoccerParticipant(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "830c1a0f0fd3f514",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "830c1a0f0fd3f514",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "830c1a0f0fd3f514",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "830c1a0f0fd3f514",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬SoccerPlayer(x) → ¬Striker(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "84115b40240d8db7",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Homo(x) → Mammalian(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "84115b40240d8db7",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "84115b40240d8db7",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "84115b40240d8db7",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "84115b40240d8db7",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Mammal(x) → ¬Human(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "8609f3ea9ecde2cb",
+  "family": "RENAME",
+  "rewritten_fol": "Mammalian(world)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8609f3ea9ecde2cb",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8609f3ea9ecde2cb",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8609f3ea9ecde2cb",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8609f3ea9ecde2cb",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "860e50edf98fb002",
+  "family": "RENAME",
+  "rewritten_fol": "Favourite(isEmma, summertime)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "860e50edf98fb002",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "860e50edf98fb002",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "860e50edf98fb002",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "860e50edf98fb002",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "86fd04580d74936b",
+  "family": "RENAME",
+  "rewritten_fol": "NovelAuthor(isDani)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "86fd04580d74936b",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "86fd04580d74936b",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "86fd04580d74936b",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "86fd04580d74936b",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a7c7b75774c6375",
+  "family": "RENAME",
+  "rewritten_fol": "IsAlligator(isTed)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8a7c7b75774c6375",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a7c7b75774c6375",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a7c7b75774c6375",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a7c7b75774c6375",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a86f55b0151364d",
+  "family": "RENAME",
+  "rewritten_fol": "Foreigner(isMarvin)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8a86f55b0151364d",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a86f55b0151364d",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a86f55b0151364d",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8a86f55b0151364d",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c1e06d59bc435db",
+  "family": "RENAME",
+  "rewritten_fol": "SoccerParticipant(isRobertLewandowski)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8c1e06d59bc435db",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c1e06d59bc435db",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c1e06d59bc435db",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c1e06d59bc435db",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c20ae9e612c830e",
+  "family": "RENAME",
+  "rewritten_fol": "((IsCanCompose(isGeorge) ∧ IsWantsToCompose(isGeorge)) → IsWillCompose(isGeorge))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8c20ae9e612c830e",
+  "family": "REORDER",
+  "rewritten_fol": "((WantsToCompose(george) ∧ CanCompose(george)) → WillCompose(george))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "8c20ae9e612c830e",
+  "family": "DEMORGAN",
+  "rewritten_fol": "(¬((¬CanCompose(george) ∨ ¬WantsToCompose(george))) → WillCompose(george))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "8c20ae9e612c830e",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c20ae9e612c830e",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "(¬WillCompose(george) → ¬((CanCompose(george) ∧ WantsToCompose(george))))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "8c4d1d1d7296f2c5",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsRomance(x) → IsIndoEuropean(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8c4d1d1d7296f2c5",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c4d1d1d7296f2c5",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c4d1d1d7296f2c5",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8c4d1d1d7296f2c5",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬IndoEuropean(x) → ¬Romance(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "8cf20e469b820a1c",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsCat(x) → Pet(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8cf20e469b820a1c",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8cf20e469b820a1c",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8cf20e469b820a1c",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8cf20e469b820a1c",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Pets(x) → ¬Cat(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "8d5b87353d8bc5a1",
+  "family": "RENAME",
+  "rewritten_fol": "IsPlaysFor(ailtonSylva, isFluminense)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8d5b87353d8bc5a1",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8d5b87353d8bc5a1",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8d5b87353d8bc5a1",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8d5b87353d8bc5a1",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8e79aa322a2d0a6c",
+  "family": "RENAME",
+  "rewritten_fol": "ManagedEdifice(isOliveGarden)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8e79aa322a2d0a6c",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8e79aa322a2d0a6c",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8e79aa322a2d0a6c",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8e79aa322a2d0a6c",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8ff54d55241225ba",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((Homo(x) → Mammalian(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "8ff54d55241225ba",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8ff54d55241225ba",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8ff54d55241225ba",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "8ff54d55241225ba",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Mammal(x) → ¬Human(x)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "90d70d6ec0e38d29",
+  "family": "RENAME",
+  "rewritten_fol": "¬Director(isBeethoven)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "90d70d6ec0e38d29",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "90d70d6ec0e38d29",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "90d70d6ec0e38d29",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "90d70d6ec0e38d29",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "90f8f40a5ae2afd2",
+  "family": "RENAME",
+  "rewritten_fol": "(IsNetflixShow(isStrangerThings) ∧ IsPopular(isStrangerThings))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "90f8f40a5ae2afd2",
+  "family": "REORDER",
+  "rewritten_fol": "(Popular(strangerThings) ∧ NetflixShow(strangerThings))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "90f8f40a5ae2afd2",
+  "family": "DEMORGAN",
+  "rewritten_fol": "¬((¬NetflixShow(strangerThings) ∨ ¬Popular(strangerThings)))",
+  "verified_equiv": true
+ },
+ {
+  "item_id": "90f8f40a5ae2afd2",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "90f8f40a5ae2afd2",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91932212297c5fae",
+  "family": "RENAME",
+  "rewritten_fol": "¬IsDownload(karenic, isBlackMirror)",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "91932212297c5fae",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91932212297c5fae",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91932212297c5fae",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91932212297c5fae",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91e03d1a479b017a",
+  "family": "RENAME",
+  "rewritten_fol": "∀x ((IsCat(x) → Mammalian(x)))",
+  "verified_equiv": "rename-bijection (not z3; lexical)"
+ },
+ {
+  "item_id": "91e03d1a479b017a",
+  "family": "REORDER",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91e03d1a479b017a",
+  "family": "DEMORGAN",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91e03d1a479b017a",
+  "family": "PRENEX",
+  "rewritten_fol": null,
+  "verified_equiv": "n/a",
+  "note": "family does not apply"
+ },
+ {
+  "item_id": "91e03d1a479b017a",
+  "family": "CONTRAPOSITIVE",
+  "rewritten_fol": "∀x ((¬Mammal(x) → ¬Cat(x)))",
+  "verified_equiv": true
+ }
+]

@@ -1,0 +1,27 @@
+[
+ {
+  "what": "OpenRouter outage 13:30-~15:00 UTC",
+  "status": "recovered",
+  "reason": "shared key hit its $50 daily limit; the local Qwen2.5-1.5B answers produced meanwhile are kept as a robustness row (L3_gate_local_model, l3_score_local); all planned OpenRouter calls ran afterwards"
+ },
+ {
+  "what": "decomposed-judge ablation",
+  "status": "complete",
+  "coverage": "1266/1266 parseable (text, formula) pairs answered by the primary model (flash-lite)"
+ },
+ {
+  "what": "contamination (nonce-disguised L3)",
+  "status": "complete",
+  "coverage": "417/417 disguised sentences answered by the primary model"
+ },
+ {
+  "what": "L3 test-retest (60 HREF)",
+  "status": "complete",
+  "coverage": "60/60"
+ },
+ {
+  "what": "LLM-judge / round-trip / self-consistency / pilot structural baselines",
+  "status": "not in this artifact (by design)",
+  "reason": "owned by sibling experiments C and D on the same item_ids; ΔAUROC vs the disguised judge is computed in iteration 2"
+ }
+]
