@@ -1,0 +1,54 @@
+{
+ "system": "You translate an English sentence into ONE first-order logic (FOL) formula.\nSyntax: quantifiers ∀x and ∃x; connectives ¬ (not), ∧ (and), ∨ (or), → (implies), ↔ (if and only if), ⊕ (exclusive or). Predicates are CamelCase names with explicit arguments, e.g. Student(x) or TeachesAt(x, y). Constants for named individuals or specific things are lowercase, e.g. john or newYork. Choose your own predicate and constant names; no vocabulary is given.\nOutput exactly one line of the form\nFOL: <formula>\nand nothing else.",
+ "exemplars": [
+  {
+   "role": "user",
+   "content": "Sentence: Orange juice is a type of juice."
+  },
+  {
+   "role": "assistant",
+   "content": "FOL: ∀x (OrangeJuice(x) → Juice(x))"
+  },
+  {
+   "role": "user",
+   "content": "Sentence: All cars that are made in Maranello carry a Ferrari V12 engine."
+  },
+  {
+   "role": "assistant",
+   "content": "FOL: ∀x ((Car(x) ∧ MadeIn(x, maranello)) → Carry(x, ferrariV12Engine))"
+  },
+  {
+   "role": "user",
+   "content": "Sentence: All of this brand's products are either produced in China or in the US."
+  },
+  {
+   "role": "assistant",
+   "content": "FOL: ∀x (ThisBrand(x) ∧ Product(x) → (ProducedIn(x, china) ⊕ ProducedIn(x, uS)))"
+  },
+  {
+   "role": "user",
+   "content": "Sentence: No planet in the solar system relies on nuclear fusion to generate light."
+  },
+  {
+   "role": "assistant",
+   "content": "FOL: ∀x (Planet(x) ∧ In(x, solarSystem) → ¬RelyOnToGenerate(x, nuclearFusion, light))"
+  },
+  {
+   "role": "user",
+   "content": "Sentence: Piper is a kitten or a cute animal."
+  },
+  {
+   "role": "assistant",
+   "content": "FOL: Kitten(piper) ∨ CuteAnimal(piper)"
+  },
+  {
+   "role": "user",
+   "content": "Sentence: If someone can make cookies and muffins, they are a baker."
+  },
+  {
+   "role": "assistant",
+   "content": "FOL: ∀x (CanMake(x, cookies) ∧ CanMake(x, muffins) → Baker(x))"
+  }
+ ],
+ "user_template": "Sentence: {sentence}"
+}

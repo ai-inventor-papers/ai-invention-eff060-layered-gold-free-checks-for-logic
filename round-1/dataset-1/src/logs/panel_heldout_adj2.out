@@ -1,0 +1,4 @@
+16:16:59|INFO   |adjudication by P1: 64 sentences, 173 items (of 5323 items in 700 sentences)
+16:17:08|INFO   |adj 16/64 phase $1.607 total $9.771
+16:17:19|INFO   |adj 32/64 phase $1.670 total $9.833
+16:17:19|INFO   |adjudication done: phase $1.670 total $9.833
