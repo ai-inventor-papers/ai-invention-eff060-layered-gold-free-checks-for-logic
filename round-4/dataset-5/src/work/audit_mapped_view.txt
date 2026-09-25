@@ -1,0 +1,300 @@
+[0] T1 Every student who spends money, who lives in a cold place, and who is Emily's friend has early-morning habits, unless the student prefers state ownership of the means of production.
+   W: ∀x (Student(x) ∧ Spend(x, money) ∧ LiveIn(x, coldPlace) ∧ EmilysFriend_2(x) ∧ ¬Prefer(x, stateOwnershipOfMeansOfProduction) → Have(x, earlyMorningHabit))
+   S: ∀x (Student(x) ∧ Spend(x, money) ∧ LiveIn(x, coldPlace) ∧ EmilysFriend_2(x) → (Have(x, earlyMorningHabit) ↔ ¬Prefer(x, stateOwnershipOfMeansOfProduction)))
+   C: ∀x ((Student(x) ∧ Spends(x, money) ∧ LivesIn(x, coldPlace) ∧ Friend(x, emily)) → (¬Prefers(x, stateOwnershipOfMeansOfProduction) → EarlyMorningHabits(x)))
+   search: weak maps=48 bridges=['B1', 'B2']
+[1] T6 Except when the film has a touchscreen interface, every film that is not displayed on the homepage and that is used primarily for communication is supported by independent research, provided that the film has its particles closely packed together.
+   W: ∀x (Film(x) ∧ ¬DisplayedIn(x, homepage) ∧ UsedForCommunication(x) ∧ ParticlesCloselyPacked(x) ∧ ¬TouchscreenInterface(x) → SupportedByIndependentResearch(x))
+   S: ∀x (Film(x) ∧ ¬DisplayedIn(x, homepage) ∧ UsedForCommunication(x) ∧ ParticlesCloselyPacked(x) → (SupportedByIndependentResearch(x) ↔ ¬TouchscreenInterface(x)))
+   C: ∀x (Film(x) ∧ ¬DisplayedOn(x, homepage) ∧ UsedPrimarilyFor(x, communication) ∧ ParticlesCloselyPacked(x) → (¬HasTouchscreenInterface(x) → SupportedBy(x, independentResearch)))
+   search: weak maps=36 bridges=['B2', 'B2']
+[2] T4 An integer that is tall and that has a mutation requires talent as long as the integer has height, unless the integer steps on the stonefish.
+   W: ∀x (Integer(x) ∧ Tall(x) ∧ Have(x, mutation) ∧ Height(x) ∧ ¬SteppedOnBy(stonefish, x) → Require(x, talent))
+   S: ∀x (Integer(x) ∧ Tall(x) ∧ Have(x, mutation) ∧ Height(x) → (Require(x, talent) ↔ ¬SteppedOnBy(stonefish, x)))
+   C: ∀x ((Integer(x) ∧ Tall(x) ∧ HasMutation(x) ∧ HasHeight(x) ∧ ¬StepsOn(x, stonefish)) → RequiresTalent(x))
+   search: weak maps=48 bridges=['B1', 'B1']
+[3] T3 Every linear function that is designed by Apple and that is developed to provide immunity against infectious diseases is perfect, providing that the linear function can only use content from the input documents and is food.
+   W: ∀x (LinearFunction(x) ∧ DesignedBy(x, apple) ∧ DevelopedToProvideImmunity(x, infectiousDiseases) ∧ OnlyUseInputDocument(x) ∧ Food(x) → Perfect(x))
+   S: ∀x (LinearFunction(x) ∧ DesignedBy(x, apple) ∧ DevelopedToProvideImmunity(x, infectiousDiseases) → (Perfect(x) ↔ (OnlyUseInputDocument(x) ∧ Food(x))))
+   C: ∀x ((LinearFunction(x) ∧ DesignedBy(x, apple) ∧ DevelopedToProvideImmunity(x, infectiousDiseases) ∧ CanOnlyUseContentFromInputDocuments(x) ∧ Food(x)) → Perfect(x))
+   search: weak maps=120 bridges=[]
+[4] T3 Any loud car that is archaea and that has high engagement metrics is food, provided that the loud car is made in Maranello and has an Apple logo.
+   W: ∀x (LoudCar(x) ∧ Archaea(x) ∧ Have(x, highEngagementMetric) ∧ MadeIn(x, maranello) ∧ With(x, appleLogo) → Food(x))
+   S: ∀x (LoudCar(x) ∧ Archaea(x) ∧ Have(x, highEngagementMetric) → (Food(x) ↔ (MadeIn(x, maranello) ∧ With(x, appleLogo))))
+   C: ∀x ((Car(x) ∧ Loud(x) ∧ Archaea(x) ∧ HighEngagementMetrics(x) ∧ MadeIn(x, maranello) ∧ HasLogo(x, apple)) → Food(x))
+   search: weak maps=1800 bridges=['B1', 'B4', 'B4']
+[5] T6 Except when the device is sold at Apple Stores, every device that is for reading and that is used primarily for media consumption is in French, provided that the device is supported by legs.
+   W: ∀x (Device(x) ∧ ForReading(x) ∧ UsedForMediaConsumption(x) ∧ SupportedByLegs(x) ∧ ¬SoldIn(x, appleStore) → InFrench(x))
+   S: ∀x (Device(x) ∧ ForReading(x) ∧ UsedForMediaConsumption(x) ∧ SupportedByLegs(x) → (InFrench(x) ↔ ¬SoldIn(x, appleStore)))
+   C: ∀x ((Device(x) ∧ (ForReading(x) ∧ PrimarilyForMediaConsumption(x)) ∧ ¬SoldAt(x, appleStores) ∧ SupportedByLegs(x)) → InLanguage(x, french))
+   search: weak maps=48 bridges=['B2']
+[6] T2 If a museum ship is electronic and has a hollow body, and the museum ship also is not deemed reliable, then the museum ship has been adapted from its original version, except when the museum ship has minimal environmental impact during production.
+   W: ∀x (MuseumShip(x) ∧ Electronic(x) ∧ HollowBody(x) ∧ ¬DeemedReliable(x) ∧ ¬MinimalEnvironmentalImpactDuringProduction(x) → AdaptedFromOriginal(x))
+   S: ∀x (MuseumShip(x) ∧ Electronic(x) ∧ HollowBody(x) ∧ ¬DeemedReliable(x) → (AdaptedFromOriginal(x) ↔ ¬MinimalEnvironmentalImpactDuringProduction(x)))
+   C: ∀x ((MuseumShip(x) ∧ Electronic(x) ∧ HollowBody(x) ∧ ¬Reliable(x)) → (AdaptedFromOriginalVersion(x) ∨ MinimalEnvironmentalImpactDuringProduction(x)))
+   search: weak maps=36 bridges=[]
+[7] T7 Anyone who lives in the boreal taiga zone, prefers a planned economy, and is sentenced to a punishment can use the left foot very efficiently unless they have a job at a school.
+   W: ∀x (LiveIn(x, borealTaigaZone) ∧ Prefer(x, plannedEconomy) ∧ SentencedToPunishment(x) ∧ ¬HaveJobAt(x, school) → UseEfficiently(x, leftFoot))
+   S: ∀x (LiveIn(x, borealTaigaZone) ∧ Prefer(x, plannedEconomy) ∧ SentencedToPunishment(x) → (UseEfficiently(x, leftFoot) ↔ ¬HaveJobAt(x, school)))
+   C: ∀x ((LivesIn(x, borealTaigaZone) ∧ Prefers(x, plannedEconomy) ∧ SentencedTo(x, punishment)) → (CanUseEfficiently(x, leftFoot) ∨ HasJobAt(x, school)))
+   search: weak maps=12 bridges=['B2']
+[8] T1 Every museum ship that collects and focuses electromagnetic radiation, that emits radiation across the electromagnetic spectrum, and that is peer-reviewed has video features, unless the museum ship is sold at Walmart.
+   W: ∀x (MuseumShip(x) ∧ CollectsAndFocusesElectromagneticRadiation(x) ∧ EmitsRadiationAcrossElectromagneticSpectrum(x) ∧ PeerReviewed(x) ∧ ¬SoldIn(x, walmart) → Contain(x, videoFeature))
+   S: ∀x (MuseumShip(x) ∧ CollectsAndFocusesElectromagneticRadiation(x) ∧ EmitsRadiationAcrossElectromagneticSpectrum(x) ∧ PeerReviewed(x) → (Contain(x, videoFeature) ↔ ¬SoldIn(x, walmart)))
+   C: ∀x ((MuseumShip(x) ∧ CollectsAndFocuses(x, electromagneticRadiation) ∧ Emits(x, radiation, electromagneticSpectrum) ∧ PeerReviewed(x)) → (VideoFeatures(x) ∨ SoldAt(x, walmart)))
+   search: weak maps=48 bridges=['B1', 'B2', 'B2']
+[9] T9 No prokaryote that is sold in the US, that is convenient, and that is not read by Tomas is capable of abstract thoughts, except when the prokaryote is in the Croton River watershed.
+   W: ∀x (Prokaryote(x) ∧ SoldIn(x, us) ∧ Convenient(x) ∧ ¬ReadBy(x, tomas) ∧ ¬In(x, crotonRiverWatershed) → ¬CapableOf(x, abstractThought))
+   S: ∀x (Prokaryote(x) ∧ SoldIn(x, us) ∧ Convenient(x) ∧ ¬ReadBy(x, tomas) → (¬CapableOf(x, abstractThought) ↔ ¬In(x, crotonRiverWatershed)))
+   C: ∀x (Prokaryote(x) ∧ SoldIn(x, uS) ∧ Convenient(x) ∧ ¬ReadBy(x, tomas) ∧ ¬In(x, crotonRiverWatershed) → ¬CapableOf(x, abstractThoughts))
+   search: weak maps=48 bridges=[]
+[10] T7 Anyone who has a lot of music decorations in their room, does not live in cramped residential buildings, and works at a pool is a student in the class unless they know how to use a queue.
+   W: ∀x (MusicDecorations(x, room) ∧ ¬LiveIn(x, crampedBuilding) ∧ WorkAt(x, pool) ∧ ¬Know(x, howToUseQueue) → StudentInTheClass(x))
+   S: ∀x (MusicDecorations(x, room) ∧ ¬LiveIn(x, crampedBuilding) ∧ WorkAt(x, pool) → (StudentInTheClass(x) ↔ ¬Know(x, howToUseQueue)))
+   C: ∀x (HasMusicDecorations(x) ∧ ¬LivesInCrampedBuilding(x) ∧ WorksAtPool(x) → (StudentInClass(x) ↔ ¬KnowsHowToUseQueue(x)))
+   search: strong maps=4 bridges=['B1', 'B1', 'B1', 'B1']
+[11] T8 If a refrigerator is software, deforms elastically, and is credible, then the refrigerator has skis on the front, but only if the refrigerator records videos.
+   W: ∀x (Refrigerator(x) ∧ Software(x) ∧ DeformsElastically(x) ∧ Credible(x) ∧ HasSkisOnFront(x) → RecordVideos(x))
+   S: ∀x (Refrigerator(x) ∧ Software(x) ∧ DeformsElastically(x) ∧ Credible(x) → (HasSkisOnFront(x) ↔ RecordVideos(x)))
+   C: ∀x (Refrigerator(x) ∧ Software(x) ∧ DeformsElastically(x) ∧ IsCredible(x) → (HasSkisOnFront(x) ↔ RecordsVideos(x)))
+   search: strong maps=48 bridges=[]
+[12] T5 Every cup that has a limited shelf life and that is created using digital tools involves competition against another team, provided that the cup has a flat surface, unless the cup is used for writing.
+   W: ∀x (Cup(x) ∧ LimitedShelfLife(x) ∧ CreatedWithDigitalTools(x) ∧ FlatSurface(x) ∧ ¬UsedForWriting(x) → InvolvesCompetitionAgainstAnotherTeam(x))
+   S: ∀x (Cup(x) ∧ LimitedShelfLife(x) ∧ CreatedWithDigitalTools(x) ∧ FlatSurface(x) → (InvolvesCompetitionAgainstAnotherTeam(x) ↔ ¬UsedForWriting(x)))
+   C: ∀x (Cup(x) ∧ LimitedShelfLife(x) ∧ CreatedUsing(x, digitalTools) ∧ ¬UsedFor(x, writing) → (FlatSurface(x) → CompetitionAgainst(x, anotherTeam)))
+   search: weak maps=48 bridges=['B2', 'B2', 'B2']
+[13] T6 Except when the celestial body is a first automobile, every celestial body that blocks direct current and that is played by plucking is free to modify, provided that the celestial body is eco-friendly.
+   W: ∀x (CelestialBody(x) ∧ BlocksDirectCurrent(x) ∧ PlayedByPlucking(x) ∧ EcoFriendly(x) ∧ ¬FirstAutomobile(x) → FreeToModify(x))
+   S: ∀x (CelestialBody(x) ∧ BlocksDirectCurrent(x) ∧ PlayedByPlucking(x) ∧ EcoFriendly(x) → (FreeToModify(x) ↔ ¬FirstAutomobile(x)))
+   C: ∀x (CelestialBody(x) ∧ ¬(FirstAutomobile(x)) ∧ BlocksDirectCurrent(x) ∧ PlayedByPlucking(x) ∧ EcoFriendly(x) → CanModify(x))
+   search: weak maps=48 bridges=[]
+[14] T7 Anyone who does not work from home, has a high win ratio, and has a talent of cooking is entitled to national social insurance coverage unless they are enrolled in an academic program.
+   W: ∀x (¬WorkFrom(x, home) ∧ HighWinRatio(x) ∧ Has(x, talentOfCooking) ∧ ¬EnrolledIn(x, academicProgram) → EntitledTo(x, nationalSocialInsuranceCoverage))
+   S: ∀x (¬WorkFrom(x, home) ∧ HighWinRatio(x) ∧ Has(x, talentOfCooking) → (EntitledTo(x, nationalSocialInsuranceCoverage) ↔ ¬EnrolledIn(x, academicProgram)))
+   C: ∀x ((¬WorkFromHome(x) ∧ HighWinRatio(x) ∧ TalentOfCooking(x)) → (EntitledToNationalSocialInsurance(x) ↔ ¬EnrolledInAcademicProgram(x)))
+   search: strong maps=4 bridges=['B1', 'B1', 'B1', 'B1']
+[15] T4 A racing car that involves competition against another team and that is played by striking the strings is environment-friendly as long as the racing car has a fixed shape and volume, unless the racing car is used in the lab computer.
+   W: ∀x (RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStriking(x) ∧ FixedShapeAndVolume(x) ∧ ¬UsedIn(x, labComputer) → EnvironmentFriendly(x))
+   S: ∀x (RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStriking(x) ∧ FixedShapeAndVolume(x) → (EnvironmentFriendly(x) ↔ ¬UsedIn(x, labComputer)))
+   C: ∀x ((RacingCar(x) ∧ InvolvesCompetition(x, anotherTeam) ∧ PlayedByStrikingStrings(x)) ∧ (HasFixedShape(x) ∧ HasFixedVolume(x)) → (EnvironmentFriendly(x) ↔ ¬UsedInLabComputer(x)))
+   search: strong maps=480 bridges=['B1', 'B2', 'B4', 'B4']
+[16] T9 No prokaryote that is sold in the US, that is convenient, and that is not read by Tomas is capable of abstract thoughts, except when the prokaryote is in the Croton River watershed.
+   W: ∀x (Prokaryote(x) ∧ SoldIn(x, us) ∧ Convenient(x) ∧ ¬ReadBy(x, tomas) ∧ ¬In(x, crotonRiverWatershed) → ¬CapableOf(x, abstractThought))
+   S: ∀x (Prokaryote(x) ∧ SoldIn(x, us) ∧ Convenient(x) ∧ ¬ReadBy(x, tomas) → (¬CapableOf(x, abstractThought) ↔ ¬In(x, crotonRiverWatershed)))
+   C: ∀x ((Prokaryote(x) ∧ SoldIn(x, us) ∧ Convenient(x) ∧ ¬ReadBy(x, tomas) ∧ ¬In(x, crotonRiverWatershed)) → ¬CapableOfAbstractThoughts(x))
+   search: weak maps=48 bridges=['B1']
+[17] T3 Any Bulbophyllum that freezes food and that has minimal environmental impact during production is written by Tolkien, provided that the Bulbophyllum is an evergreen tree and is in Size Town.
+   W: ∀x (GenusBulbophyllum(x) ∧ FreezeFood(x) ∧ MinimalEnvironmentalImpactDuringProduction(x) ∧ Evergreen(x) ∧ In(x, sizeTown) → WrittenBy(x, tolkien))
+   S: ∀x (GenusBulbophyllum(x) ∧ FreezeFood(x) ∧ MinimalEnvironmentalImpactDuringProduction(x) → (WrittenBy(x, tolkien) ↔ (Evergreen(x) ∧ In(x, sizeTown))))
+   C: ∀x (Bulbophyllum(x) ∧ Freezes(x, food) ∧ MinimalEnvironmentalImpact(x, production) ∧ EvergreenTree(x) ∧ In(x, sizeTown) → WrittenBy(x, tolkien))
+   search: weak maps=120 bridges=['B2', 'B2']
+[18] T1 Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an elected official.
+   W: ∀x (Legislator(x) ∧ At(x, boardGameNight) ∧ VisitRegularly(x, coffeeShop) ∧ Can(x, distinguishTheTasteOfDifferentCondiments) ∧ ¬ElectedOfficial(x) → EmilysFriend_2(x))
+   S: ∀x (Legislator(x) ∧ At(x, boardGameNight) ∧ VisitRegularly(x, coffeeShop) ∧ Can(x, distinguishTheTasteOfDifferentCondiments) → (EmilysFriend_2(x) ↔ ¬ElectedOfficial(x)))
+   C: ∀x (Legislator(x) ∧ AtBoardGameNight(x) ∧ VisitsCoffeeShopRegularly(x) ∧ CanDistinguishCondimentTaste(x) ∧ ¬ElectedOfficial(x) → EmilysFriend(x))
+   search: weak maps=48 bridges=['B1', 'B1', 'B1']
+[19] T2 If a movie has four-wheel drive and exceeds its elastic limit, and the movie also is intended to be driven at moderate speeds, then the movie is used for writing, except when the movie is in Manhattan.
+   W: ∀x (Movie(x) ∧ FourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ IntendedToBeDrivenAt(x, moderateSpeed) ∧ ¬In(x, manhattan) → UsedForWriting(x))
+   S: ∀x (Movie(x) ∧ FourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ IntendedToBeDrivenAt(x, moderateSpeed) → (UsedForWriting(x) ↔ ¬In(x, manhattan)))
+   C: ∀x (FourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ IntendedForModerateSpeeds(x) → (UsedForWriting(x) ⊕ InManhattan(x)))
+   search: strong maps=72 bridges=['B1', 'B3']
+[20] T8 When a camera does not orbit around a star, is designed by Apple, and produces sound through the vibration of stretched strings, the camera has a spherical shape, but only if the camera has skis on the front.
+   W: ∀x (Camera(x) ∧ ¬OrbitsAroundStar(x) ∧ DesignedBy(x, apple) ∧ ProducesSoundThroughStringVibration(x) ∧ SphericalShape(x) → HasSkisOnFront(x))
+   S: ∀x (Camera(x) ∧ ¬OrbitsAroundStar(x) ∧ DesignedBy(x, apple) ∧ ProducesSoundThroughStringVibration(x) → (SphericalShape(x) ↔ HasSkisOnFront(x)))
+   C: ∀x ((¬OrbitsAround(x, star) ∧ DesignedBy(x, apple) ∧ ProducesSoundThrough(x, vibrationOfStretchedStrings) ∧ HasSkisOn(x, front)) → SphericalShape(x))
+   search: weak maps=144 bridges=['B2', 'B2', 'B3']
+[21] T8 When a king is in chemical endangerment, can enter the building, and is not good at planning, the king captures images using a camera, but only if the king is Emily's friend.
+   W: ∀x (King(x) ∧ InChemicalEndangerment(x) ∧ EnterBuilding(x) ∧ ¬GoodAt(x, planning) ∧ CapturesImagesWithCamera(x) → EmilysFriend_2(x))
+   S: ∀x (King(x) ∧ InChemicalEndangerment(x) ∧ EnterBuilding(x) ∧ ¬GoodAt(x, planning) → (CapturesImagesWithCamera(x) ↔ EmilysFriend_2(x)))
+   C: ∀x (King(x) ∧ ChemicalEndangerment(x) ∧ CanEnterBuilding(x) ∧ ¬GoodAtPlanning(x) → (CapturesImagesUsingCamera(x) ↔ FriendsWithEmily(x)))
+   search: strong maps=12 bridges=['B1']
+[22] T3 Every American Airlines aircraft that is food and that makes tea has been adapted from its original version, providing that the American Airlines aircraft is displayed on the homepage and has a high carbohydrate content.
+   W: ∀x (AmericanAirlinesAircraft(x) ∧ Food(x) ∧ MakeTea(x) ∧ DisplayedIn(x, homepage) ∧ HighCarbohydrateContent(x) → AdaptedFromOriginal(x))
+   S: ∀x (AmericanAirlinesAircraft(x) ∧ Food(x) ∧ MakeTea(x) → (AdaptedFromOriginal(x) ↔ (DisplayedIn(x, homepage) ∧ HighCarbohydrateContent(x))))
+   C: ∀x (AmericanAirlinesAircraft(x) ∧ ProvidesFood(x) ∧ MakesTea(x) → (DisplayedOnHomepage(x) ∧ HasHighCarbohydrateContent(x) → AdaptedFromOriginalVersion(x)))
+   search: weak maps=120 bridges=['B1']
+[23] T3 Any mobile phone that is not made from grain and that requires frequent watering is written by Tolkien, provided that the mobile phone has two conductive plates and emits low levels of pollutants.
+   W: ∀x (MobilePhone(x) ∧ ¬MadeFromGrain(x) ∧ RequiresFrequentWatering(x) ∧ HasTwoConductivePlates(x) ∧ EmitsLowLevelsOfPollutants(x) → WrittenBy(x, tolkien))
+   S: ∀x (MobilePhone(x) ∧ ¬MadeFromGrain(x) ∧ RequiresFrequentWatering(x) → (WrittenBy(x, tolkien) ↔ (HasTwoConductivePlates(x) ∧ EmitsLowLevelsOfPollutants(x))))
+   C: ∀x ((MobilePhone(x) ∧ ¬MadeFrom(x, grain) ∧ RequiresFrequentWatering(x) ∧ HasConductivePlates(x, two) ∧ EmitsLowPollutants(x)) → WrittenBy(x, tolkien))
+   search: weak maps=48 bridges=['B2', 'B2']
+[24] T9 No habitat that is portable, that is extractive, and that is noninvasive has skis on the front, unless the habitat is in the Croton River watershed.
+   W: ∀x (Habitat(x) ∧ Portable(x) ∧ Extractive(x) ∧ Noninvasive(x) ∧ ¬In(x, crotonRiverWatershed) → ¬HasSkisOnFront(x))
+   S: ∀x (Habitat(x) ∧ Portable(x) ∧ Extractive(x) ∧ Noninvasive(x) → (¬HasSkisOnFront(x) ↔ ¬In(x, crotonRiverWatershed)))
+   C: ∀x (Habitat(x) ∧ Portable(x) ∧ Extractive(x) ∧ Noninvasive(x) ∧ ¬HasSkisOnFront(x) → In(x, crotonRiverWatershed))
+   search: weak maps=120 bridges=['B1', 'B5']
+[25] T8 When a king is in chemical endangerment, can enter the building, and is not good at planning, the king captures images using a camera, but only if the king is Emily's friend.
+   W: ∀x (King(x) ∧ InChemicalEndangerment(x) ∧ EnterBuilding(x) ∧ ¬GoodAt(x, planning) ∧ CapturesImagesWithCamera(x) → EmilysFriend_2(x))
+   S: ∀x (King(x) ∧ InChemicalEndangerment(x) ∧ EnterBuilding(x) ∧ ¬GoodAt(x, planning) → (CapturesImagesWithCamera(x) ↔ EmilysFriend_2(x)))
+   C: ∀x (King(x) ∧ InChemicalEndangerment(x) ∧ CanEnter(x, building) ∧ NotGoodAt(x, planning) → (CaptureImages(x, using, camera) → Friend(x, emily)))
+   search: weak maps=192 bridges=['B2', 'B2', 'B5']
+[26] T1 Each legislator who is at Board Game night, who visits a coffee shop regularly, and who can distinguish the taste of different condiments is Emily's friend, except if the legislator is an elected official.
+   W: ∀x (Legislator(x) ∧ At(x, boardGameNight) ∧ VisitRegularly(x, coffeeShop) ∧ Can(x, distinguishTheTasteOfDifferentCondiments) ∧ ¬ElectedOfficial(x) → EmilysFriend_2(x))
+   S: ∀x (Legislator(x) ∧ At(x, boardGameNight) ∧ VisitRegularly(x, coffeeShop) ∧ Can(x, distinguishTheTasteOfDifferentCondiments) → (EmilysFriend_2(x) ↔ ¬ElectedOfficial(x)))
+   C: ∀x ((Legislator(x) ∧ At(x, boardGameNight) ∧ RegularlyVisits(x, coffeeShop) ∧ CanDistinguish(x, taste, differentCondiments) ∧ ¬ElectedOfficial(x)) → Friend(x, emily))
+   search: weak maps=48 bridges=['B2']
+[27] T2 When a book boils water and is electronic, and the book also is disposable, the book is in an urban area, except when the book takes photos.
+   W: ∀x (Book(x) ∧ BoilWater(x) ∧ Electronic(x) ∧ Disposable(x) ∧ ¬TakePhotos(x) → InUrbanArea(x))
+   S: ∀x (Book(x) ∧ BoilWater(x) ∧ Electronic(x) ∧ Disposable(x) → (InUrbanArea(x) ↔ ¬TakePhotos(x)))
+   C: ∀x (Book(x) ∧ BoilsWater(x) ∧ Electronic(x) ∧ Disposable(x) ∧ ¬TakesPhotos(x) → InUrbanArea(x))
+   search: weak maps=48 bridges=[]
+[28] T4 A plane that has an objective to score points and that is not edible has a high surface temperature as long as the plane is used for working, unless the plane is water.
+   W: ∀x (Plane(x) ∧ ObjectiveToScorePoints(x) ∧ ¬Edible(x) ∧ UsedForWorking(x) ∧ ¬Water(x) → HighSurfaceTemperature(x))
+   S: ∀x (Plane(x) ∧ ObjectiveToScorePoints(x) ∧ ¬Edible(x) ∧ UsedForWorking(x) → (HighSurfaceTemperature(x) ↔ ¬Water(x)))
+   C: ∀x (Plane(x) ∧ HasObjectiveToScorePoints(x) ∧ ¬Edible(x) ∧ UsedForWorking(x) ∧ ¬Water(x) → HighSurfaceTemperature(x))
+   search: weak maps=36 bridges=[]
+[29] T6 Except if the white-collar worker thinks Santa Claus is made up, each white-collar worker who is European and who attends yoga classes regularly is at Board Game night, provided that the white-collar worker is in the Big 3.
+   W: ∀x (WhiteCollarWorker(x) ∧ European(x) ∧ AttendRegularly(x, yogaClass) ∧ InBig3(x) ∧ ¬ThinkMadeUp(x, santaClaus) → At(x, boardGameNight))
+   S: ∀x (WhiteCollarWorker(x) ∧ European(x) ∧ AttendRegularly(x, yogaClass) ∧ InBig3(x) → (At(x, boardGameNight) ↔ ¬ThinkMadeUp(x, santaClaus)))
+   C: ∀x (WhiteCollarWorker(x) ∧ European(x) ∧ RegularlyAttends(x, yogaClasses) ∧ In(x, big3) → (¬Thinks(x, madeUp, santaClaus) → At(x, boardGameNight)))
+   search: weak maps=48 bridges=['B2']
+[30] T1 Every building that is interactive, that is not capable of abstract thoughts, and that contains books is open to the public, unless the building has a high carbohydrate content.
+   W: ∀x (Building(x) ∧ Interactive(x) ∧ ¬CapableOf(x, abstractThought) ∧ ContainsBooks(x) ∧ ¬HighCarbohydrateContent(x) → OpenToPublic(x))
+   S: ∀x (Building(x) ∧ Interactive(x) ∧ ¬CapableOf(x, abstractThought) ∧ ContainsBooks(x) → (OpenToPublic(x) ↔ ¬HighCarbohydrateContent(x)))
+   C: ∀x (Building(x) ∧ Interactive(x) ∧ ¬CapableOfAbstractThoughts(x) ∧ Contains(x, books) → (OpenToPublic(x) ∨ HighCarbohydrateContent(x)))
+   search: weak maps=36 bridges=['B1', 'B2']
+[31] T4 A racing car that involves competition against another team and that is played by striking the strings is environment-friendly as long as the racing car has a fixed shape and volume, unless the racing car is used in the lab computer.
+   W: ∀x (RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStriking(x) ∧ FixedShapeAndVolume(x) ∧ ¬UsedIn(x, labComputer) → EnvironmentFriendly(x))
+   S: ∀x (RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStriking(x) ∧ FixedShapeAndVolume(x) → (EnvironmentFriendly(x) ↔ ¬UsedIn(x, labComputer)))
+   C: ∀x ((RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStrikingStrings(x) ∧ HasFixedShapeAndVolume(x) ∧ ¬UsedInLabComputer(x)) → EnvironmentFriendly(x))
+   search: weak maps=48 bridges=['B1']
+[32] T6 Except when the capacitor requires a group of players to work together, every capacitor that is not separated by an insulator and that takes photos is intended to be driven at moderate speeds, provided that the capacitor is environment-friendly.
+   W: ∀x (Capacitor(x) ∧ ¬SeparatedByInsulator(x) ∧ TakePhotos(x) ∧ EnvironmentFriendly(x) ∧ ¬RequiresGroupOfPlayers(x) → IntendedToBeDrivenAt(x, moderateSpeed))
+   S: ∀x (Capacitor(x) ∧ ¬SeparatedByInsulator(x) ∧ TakePhotos(x) ∧ EnvironmentFriendly(x) → (IntendedToBeDrivenAt(x, moderateSpeed) ↔ ¬RequiresGroupOfPlayers(x)))
+   C: ∀x ((Capacitor(x) ∧ (¬SeparatedByInsulator(x, _) ∧ TakesPhotos(x)) ∧ EnvironmentFriendly(x)) → (¬RequiresGroup(x) → DrivenAtModerateSpeeds(x)))
+   search: weak maps=36 bridges=['B1', 'B2']
+[33] T9 No nuclear-powered submarine that can only use content from the input documents, that is not designed for traveling on snow, and that is written in Python is round, unless the nuclear-powered submarine produces sound by vibrating strings.
+   W: ∀x (NuclearPoweredSubmarine(x) ∧ OnlyUseInputDocument(x) ∧ ¬DesignedForSnowTravel(x) ∧ WrittenIn(x, python) ∧ ¬ProducesSoundByVibratingStrings(x) → ¬Round(x))
+   S: ∀x (NuclearPoweredSubmarine(x) ∧ OnlyUseInputDocument(x) ∧ ¬DesignedForSnowTravel(x) ∧ WrittenIn(x, python) → (¬Round(x) ↔ ¬ProducesSoundByVibratingStrings(x)))
+   C: ∀x ((NuclearPoweredSubmarine(x) ∧ CanOnlyUseContentFromInputDocuments(x) ∧ ¬DesignedForTravelingOnSnow(x) ∧ WrittenInPython(x) ∧ ¬ProducesSoundByVibratingStrings(x)) → ¬Round(x))
+   search: weak maps=48 bridges=['B1']
+[34] T5 Every entity that is tall and that is stung by the stonefish excludes meat, provided that the entity requires a medical diagnosis, unless the entity is without mutations.
+   W: ∀x (Entity(x) ∧ Tall(x) ∧ Sting_2(stonefish, x) ∧ Require(x, medicalDiagnosis) ∧ ¬Without(x, mutation) → ExcludesMeat(x))
+   S: ∀x (Entity(x) ∧ Tall(x) ∧ Sting_2(stonefish, x) ∧ Require(x, medicalDiagnosis) → (ExcludesMeat(x) ↔ ¬Without(x, mutation)))
+   C: ∀x ((Tall(x) ∧ StungBy(x, stonefish) ∧ Requires(x, medicalDiagnosis) ∧ ¬WithoutMutations(x)) → Exclude(x, meat))
+   search: weak maps=72 bridges=['B2', 'B3']
+[35] T7 Anyone who makes a lot of money, is familiar with laws, and is American enjoys state ownership of means of production unless they are one of Emily's friends.
+   W: ∀x (MakeALotOfMoney(x) ∧ FamiliarWithLaws(x) ∧ American(x) ∧ ¬EmilysFriend(x) → Enjoy(x, stateOwnershipOfMeansOfProduction))
+   S: ∀x (MakeALotOfMoney(x) ∧ FamiliarWithLaws(x) ∧ American(x) → (Enjoy(x, stateOwnershipOfMeansOfProduction) ↔ ¬EmilysFriend(x)))
+   C: ∀x ((MakesLotsOfMoney(x) ∧ FamiliarWith(x, laws) ∧ American(x)) → (Enjoys(x, stateOwnershipOfMeansOfProduction) ∨ FriendOf(x, emily)))
+   search: weak maps=12 bridges=['B2', 'B2']
+[36] T5 Every iPhone that does not have a video mode and that has a hollow body is in Size Town, provided that the iPhone is deemed reliable, unless the iPhone is a type of food.
+   W: ∀x (IPhone(x) ∧ ¬HasVideoMode(x) ∧ HollowBody(x) ∧ DeemedReliable(x) ∧ ¬FoodType(x) → In(x, sizeTown))
+   S: ∀x (IPhone(x) ∧ ¬HasVideoMode(x) ∧ HollowBody(x) ∧ DeemedReliable(x) → (In(x, sizeTown) ↔ ¬FoodType(x)))
+   C: ∀x (iPhone(x) ∧ ¬HasVideoMode(x) ∧ HasHollowBody(x) ∧ Reliable(x) ∧ ¬IsFood(x) → In(x, sizeTown))
+   search: weak maps=36 bridges=[]
+[37] T9 No telescope that is made in Maranello, that requires moderate water, and that does not support the weight of a bridge is free to modify, except when the telescope is played by bowing.
+   W: ∀x (Telescope(x) ∧ MadeIn(x, maranello) ∧ RequiresModerateWater(x) ∧ ¬SupportsBridgeWeight(x) ∧ ¬PlayedByBowing(x) → ¬FreeToModify(x))
+   S: ∀x (Telescope(x) ∧ MadeIn(x, maranello) ∧ RequiresModerateWater(x) ∧ ¬SupportsBridgeWeight(x) → (¬FreeToModify(x) ↔ ¬PlayedByBowing(x)))
+   C: ∀x (Telescope(x) ∧ MadeIn(x, maranello) ∧ Requires(x, moderateWater) ∧ ¬Supports(x, weightOfBridge) ∧ ¬PlayedByBowing(x) → ¬FreeToModify(x))
+   search: weak maps=48 bridges=['B2', 'B2']
+[38] T2 If a movie has four-wheel drive and exceeds its elastic limit, and the movie also is intended to be driven at moderate speeds, then the movie is used for writing, except when the movie is in Manhattan.
+   W: ∀x (Movie(x) ∧ FourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ IntendedToBeDrivenAt(x, moderateSpeed) ∧ ¬In(x, manhattan) → UsedForWriting(x))
+   S: ∀x (Movie(x) ∧ FourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ IntendedToBeDrivenAt(x, moderateSpeed) → (UsedForWriting(x) ↔ ¬In(x, manhattan)))
+   C: ∀x (FourWheelDrive(x) ∧ ExceedsElasticLimit(x) ∧ ModerateSpeeds(x) → UsedForWriting(x) ⊕ ¬In(x, manhattan))
+   search: strong maps=72 bridges=['B3', 'B5']
+[39] T1 Every square that is shipped from Colombia, that is reusable, and that is dustless uses a rigorous methodology, unless the square loses its leaves in autumn.
+   W: ∀x (Square(x) ∧ ShippedFrom(x, colombia) ∧ Reusable(x) ∧ Dustless(x) ∧ ¬LosesLeavesInAutumn(x) → RigorousMethodology(x))
+   S: ∀x (Square(x) ∧ ShippedFrom(x, colombia) ∧ Reusable(x) ∧ Dustless(x) → (RigorousMethodology(x) ↔ ¬LosesLeavesInAutumn(x)))
+   C: ∀x (Square(x) ∧ ShippedFrom(x, colombia) ∧ Reusable(x) ∧ Dustless(x) → (UsesRigorousMethodology(x) ∨ LosesLeavesInAutumn(x)))
+   search: weak maps=48 bridges=[]
+[40] T7 Anyone who makes a lot of money, is familiar with laws, and is American enjoys state ownership of means of production unless they are one of Emily's friends.
+   W: ∀x (MakeALotOfMoney(x) ∧ FamiliarWithLaws(x) ∧ American(x) ∧ ¬EmilysFriend(x) → Enjoy(x, stateOwnershipOfMeansOfProduction))
+   S: ∀x (MakeALotOfMoney(x) ∧ FamiliarWithLaws(x) ∧ American(x) → (Enjoy(x, stateOwnershipOfMeansOfProduction) ↔ ¬EmilysFriend(x)))
+   C: ∀x ((MakesALotOfMoney(x) ∧ FamiliarWith(x, laws) ∧ American(x) ∧ ¬FriendOf(x, emily)) → Enjoys(x, stateOwnershipOfMeansOfProduction))
+   search: weak maps=12 bridges=['B2', 'B2']
+[41] T8 When a welterweight is cool, can use the right foot very efficiently, and is British, the welterweight prefers a planned economy, but only if the welterweight is female.
+   W: ∀x (WelterWeight(x) ∧ Cool(x) ∧ UseEfficiently(x, rightFoot) ∧ British(x) ∧ Prefer(x, plannedEconomy) → Female(x))
+   S: ∀x (WelterWeight(x) ∧ Cool(x) ∧ UseEfficiently(x, rightFoot) ∧ British(x) → (Prefer(x, plannedEconomy) ↔ Female(x)))
+   C: ∀x ((Welterweight(x) ∧ Cool(x) ∧ EfficientRightFoot(x) ∧ British(x)) → ((Female(x) → Prefer(x, plannedEconomy)) ∧ (Welterweight(x) → (Cool(x) ∧ EfficientRightFoot(x) ∧ British(x)))))
+   search: weak maps=240 bridges=['B1', 'B1', 'B2']
+[42] T6 Except when the essayist has a lot of music decorations in their room, every essayist who attends the conference and who is not addicted to coffee is dependent on caffeine, provided that the essayist loves the opera.
+   W: ∀x (Essayist(x) ∧ Attend(x) ∧ ¬AddictedTo(x, coffee) ∧ Love(x, opera) ∧ ¬MusicDecorations(x, room) → IsDependentOn(x, caffeine))
+   S: ∀x (Essayist(x) ∧ Attend(x) ∧ ¬AddictedTo(x, coffee) ∧ Love(x, opera) → (IsDependentOn(x, caffeine) ↔ ¬MusicDecorations(x, room)))
+   C: ∀x (Essayist(x) ∧ Attends(x, conference) ∧ ¬AddictedTo(x, coffee) ∧ Loves(x, opera) → (¬HasMany(x, musicDecorations) → DependentOn(x, caffeine)))
+   search: weak maps=36 bridges=['B2']
+[43] T9 No professional basketball player who is in the Big 3, who has good business sense, and who is from China pays their taxes, unless the professional basketball player lives in the boreal taiga zone.
+   W: ∀x (ProfessionalBasketballPlayer(x) ∧ InBig3(x) ∧ Have(x, goodBusinessSense) ∧ From(x, china) ∧ ¬LiveIn(x, borealTaigaZone) → ¬Taxpayer(x))
+   S: ∀x (ProfessionalBasketballPlayer(x) ∧ InBig3(x) ∧ Have(x, goodBusinessSense) ∧ From(x, china) → (¬Taxpayer(x) ↔ ¬LiveIn(x, borealTaigaZone)))
+   C: ∀x (ProfessionalBasketballPlayer(x) ∧ In(x, big3) ∧ GoodBusinessSense(x) ∧ From(x, china) → (¬PaysTaxes(x) ∨ LivesIn(x, borealTaigaZone)))
+   search: weak maps=120 bridges=['B1', 'B2']
+[44] T3 Every violin that is connected to Google Home and that is not an evergreen tree is used for eating, providing that the violin grows in Ben's yard and relies on electric power for propulsion.
+   W: ∀x (Violin(x) ∧ ConnectTo(x, googleHome) ∧ ¬Evergreen(x) ∧ GrownIn(x, benSYard) ∧ ReliesOnElectricPowerForPropulsion(x) → UsedForEating(x))
+   S: ∀x (Violin(x) ∧ ConnectTo(x, googleHome) ∧ ¬Evergreen(x) → (UsedForEating(x) ↔ (GrownIn(x, benSYard) ∧ ReliesOnElectricPowerForPropulsion(x))))
+   C: ∀x ((Violin(x) ∧ ConnectedTo(x, googleHome) ∧ ¬EvergreenTree(x) ∧ GrowsIn(x, bensYard) ∧ ReliesOnForPropulsion(x, electricPower)) → UsedForEating(x))
+   search: weak maps=48 bridges=['B2']
+[45] T5 Every tipped employee who catches the sunrise and who is truly innocent has committed a crime, provided that the tipped employee is not harmful, unless the tipped employee is one of Michael's neighbors.
+   W: ∀x (TippedEmployee(x) ∧ CatchTheSunrise(x) ∧ Innocent(x) ∧ ¬Harmful(x) ∧ ¬MichaelsNeightbor(x) → Commited(x, crime))
+   S: ∀x (TippedEmployee(x) ∧ CatchTheSunrise(x) ∧ Innocent(x) ∧ ¬Harmful(x) → (Commited(x, crime) ↔ ¬MichaelsNeightbor(x)))
+   C: ∀x ((TippedEmployee(x) ∧ Catches(x, sunrise) ∧ TrulyInnocent(x) ∧ ¬Harmful(x) ∧ ¬NeighborOf(x, michael)) → CommittedCrime(x))
+   search: weak maps=36 bridges=['B1', 'B2', 'B2']
+[46] T7 Anybody who is always tired in the morning, lives in a large city, and is enrolled in an academic program is invited to join the club unless they work full-time.
+   W: ∀x (AlwaysTiredInMorning(x) ∧ LiveIn(x, largeCity) ∧ EnrolledIn(x, academicProgram) ∧ ¬Work(x, fullTime) → InvitedToJoin(x, club))
+   S: ∀x (AlwaysTiredInMorning(x) ∧ LiveIn(x, largeCity) ∧ EnrolledIn(x, academicProgram) → (InvitedToJoin(x, club) ↔ ¬Work(x, fullTime)))
+   C: ∀x ((AlwaysTired(x, morning) ∧ LivesIn(x, largeCity) ∧ EnrolledIn(x, academicProgram) ∧ ¬WorksFullTime(x)) → InvitedToJoin(x, club))
+   search: weak maps=12 bridges=['B1', 'B2']
+[47] T8 If a mobile phone is formed by volcanic activity, does not have a spherical shape, and is social media, then the mobile phone requires refrigeration, but only if the mobile phone is free to modify.
+   W: ∀x (MobilePhone(x) ∧ FormedByVolcanicActivity(x) ∧ ¬SphericalShape(x) ∧ SocialMedia(x) ∧ RequiresRefrigeration(x) → FreeToModify(x))
+   S: ∀x (MobilePhone(x) ∧ FormedByVolcanicActivity(x) ∧ ¬SphericalShape(x) ∧ SocialMedia(x) → (RequiresRefrigeration(x) ↔ FreeToModify(x)))
+   C: ∀x (MobilePhone(x) ∧ FormedBy(x, volcanicActivity) ∧ ¬Spherical(x) ∧ SocialMedia(x) → (RequiresRefrigeration(x) ↔ FreeToModify(x)))
+   search: strong maps=12 bridges=['B2']
+[48] T8 If a centerback player is bad at chess, is criticized by their boss, and does not publish journals, then the centerback player has a relaxed schedule, but only if the centerback player is a young working professional.
+   W: ∀x (ProfessionalCenterback(x) ∧ BadAt(x, chess) ∧ CriticizedBy(x, boss) ∧ ¬Publish(x, journal) ∧ Have(x, relaxedSchedule) → YoungWorkingProfession(x))
+   S: ∀x (ProfessionalCenterback(x) ∧ BadAt(x, chess) ∧ CriticizedBy(x, boss) ∧ ¬Publish(x, journal) → (Have(x, relaxedSchedule) ↔ YoungWorkingProfession(x)))
+   C: ∀x ((CenterbackPlayer(x) ∧ BadAt(x, chess) ∧ CriticizedBy(x, boss) ∧ ¬Publishes(x, journals)) → (RelaxedSchedule(x) ↔ YoungWorkingProfessional(x)))
+   search: strong maps=12 bridges=['B1']
+[49] T4 A non-convex function that is by Phoenix and that is not in French is biodegradable so long as the non-convex function is made from metal, unless the non-convex function can be deployed on artillery fortifications.
+   W: ∀x (NonConvexFunction(x) ∧ By(phoenix, x) ∧ ¬InFrench(x) ∧ MadeFrom(x, metal) ∧ ¬DeployCannons(x) → Biodegradable(x))
+   S: ∀x (NonConvexFunction(x) ∧ By(phoenix, x) ∧ ¬InFrench(x) ∧ MadeFrom(x, metal) → (Biodegradable(x) ↔ ¬DeployCannons(x)))
+   C: ∀x (NonConvexFunction(x) ∧ By(x, phoenix) ∧ ¬In(x, french) ∧ MadeFrom(x, metal) ∧ ¬CanBeDeployedOn(x, artilleryFortifications) → Biodegradable(x))
+   search: weak maps=72 bridges=['B2', 'B2', 'B5', 'B5']
+[50] T5 Each adult who is in our family and who attends yoga classes regularly spends money, provided that the adult has ample space, except if the adult is eligible for overtime pay.
+   W: ∀x (Adult(x) ∧ In(x, ourFamily) ∧ AttendRegularly(x, yogaClass) ∧ Have(x, ampleSpace) ∧ ¬EligibleForOvertimePay(x) → Spend(x, money))
+   S: ∀x (Adult(x) ∧ In(x, ourFamily) ∧ AttendRegularly(x, yogaClass) ∧ Have(x, ampleSpace) → (Spend(x, money) ↔ ¬EligibleForOvertimePay(x)))
+   C: ∀x (Adult(x) ∧ InFamily(x) ∧ AttendsYogaRegularly(x) ∧ HasAmpleSpace(x) ∧ ¬EligibleForOvertime(x) → SpendsMoney(x))
+   search: weak maps=48 bridges=['B1', 'B1', 'B1', 'B1']
+[51] T5 Each award-winning novelist who is not sentenced to a punishment and who is a citizen of Lawton Park is in chemical endangerment, provided that the award-winning novelist is harmful, except if the award-winning novelist is male.
+   W: ∀x (AwardWinningNovelist(x) ∧ ¬SentencedToPunishment(x) ∧ ResidentOf(x, lawtonPark) ∧ Harmful(x) ∧ ¬Male(x) → InChemicalEndangerment(x))
+   S: ∀x (AwardWinningNovelist(x) ∧ ¬SentencedToPunishment(x) ∧ ResidentOf(x, lawtonPark) ∧ Harmful(x) → (InChemicalEndangerment(x) ↔ ¬Male(x)))
+   C: ∀x ((AwardWinningNovelist(x) ∧ ¬SentencedTo(x, punishment) ∧ CitizenOf(x, lawtonPark) ∧ Harmful(x) ∧ ¬Male(x)) → In(x, chemicalEndangerment))
+   search: weak maps=36 bridges=['B2', 'B2']
+[52] T4 A convex function that steps on the stonefish and that is depressing is stung by the stonefish so long as the convex function affects males, unless the convex function requires practice.
+   W: ∀x (ConvexFunction(x) ∧ SteppedOnBy(stonefish, x) ∧ Depressing(x) ∧ Affect(x, male) ∧ ¬Require(x, practice) → Sting_2(stonefish, x))
+   S: ∀x (ConvexFunction(x) ∧ SteppedOnBy(stonefish, x) ∧ Depressing(x) ∧ Affect(x, male) → (Sting_2(stonefish, x) ↔ ¬Require(x, practice)))
+   C: ∀f (ConvexFunction(f) ∧ StepsOn(f, stonefish) ∧ Depressing(f) → ((Affects(f, males) ∧ ¬Requires(f, practice)) → StungBy(f, stonefish)))
+   search: weak maps=6 bridges=[]
+[53] T5 Every project that is not in Size Town and that contains Vitamin C produces a powerful and energetic jet of particles, provided that the project is perfect, unless the project is extractive.
+   W: ∀x (Project(x) ∧ ¬In(x, sizeTown) ∧ Contain(x, vitaminC) ∧ Perfect(x) ∧ ¬Extractive(x) → ProducesPowerfulEnergeticJet(x))
+   S: ∀x (Project(x) ∧ ¬In(x, sizeTown) ∧ Contain(x, vitaminC) ∧ Perfect(x) → (ProducesPowerfulEnergeticJet(x) ↔ ¬Extractive(x)))
+   C: ∀x ((Project(x) ∧ ¬In(x, sizeTown) ∧ Contains(x, vitaminC) ∧ Perfect(x) → Produce(x, powerfulEnergeticJet)) ∨ Extractive(x))
+   search: weak maps=36 bridges=['B2']
+[54] T9 No opera singer who lives in North America, who performs at the New Haven Symphony Orchestra, and who does not know about breath-first-search publishes journals, unless the opera singer is uncomfortable.
+   W: ∀x (IsOperaSinger(x) ∧ LiveIn(x, northAmerica) ∧ PerformAt(x, newHavenSymphonyOrchestra) ∧ ¬Know(x, breathFirstSearch) ∧ ¬Uncomfortable(x) → ¬Publish(x, journal))
+   S: ∀x (IsOperaSinger(x) ∧ LiveIn(x, northAmerica) ∧ PerformAt(x, newHavenSymphonyOrchestra) ∧ ¬Know(x, breathFirstSearch) → (¬Publish(x, journal) ↔ ¬Uncomfortable(x)))
+   C: ∀x (OperaSinger(x) ∧ LivesIn(x, northAmerica) ∧ PerformsAt(x, newHavenSymphonyOrchestra) ∧ ¬KnowsAbout(x, breathFirstSearch) → (Uncomfortable(x) → PublishesJournals(x)))
+   search: weak maps=48 bridges=['B1']
+[55] T1 Every substance that is designed for observing celestial objects, that grows well in partial shade, and that is dustless has an objective to score points, unless the substance is built for rugged terrain.
+   W: ∀x (Substance(x) ∧ DesignedForObservingCelestialObjects(x) ∧ GrowsWellInPartialShade(x) ∧ Dustless(x) ∧ ¬BuiltForRuggedTerrain(x) → ObjectiveToScorePoints(x))
+   S: ∀x (Substance(x) ∧ DesignedForObservingCelestialObjects(x) ∧ GrowsWellInPartialShade(x) ∧ Dustless(x) → (ObjectiveToScorePoints(x) ↔ ¬BuiltForRuggedTerrain(x)))
+   C: ∀x (Substance(x) ∧ DesignedFor(x, observingCelestialObjects) ∧ GrowsWellIn(x, partialShade) ∧ Dustless(x) → (Objective(x, scorePoints) ∨ BuiltFor(x, ruggedTerrain)))
+   search: weak maps=48 bridges=['B2', 'B2', 'B2', 'B2']
+[56] T7 Anybody who can pack and move out of their room very easily, comes to work every day with a positive attitude, and does not spend money is hardworking unless they are entitled to national social insurance coverage.
+   W: ∀x (MoveOutEasily(x) ∧ ComeToWorkWithEveryDay(x, positiveAttitude) ∧ ¬Spend(x, money) ∧ ¬EntitledTo(x, nationalSocialInsuranceCoverage) → Hardworking(x))
+   S: ∀x (MoveOutEasily(x) ∧ ComeToWorkWithEveryDay(x, positiveAttitude) ∧ ¬Spend(x, money) → (Hardworking(x) ↔ ¬EntitledTo(x, nationalSocialInsuranceCoverage)))
+   C: ∀x (((CanPackAndMove(x) ∧ PositiveAttitude(x)) ∧ ¬SpendsMoney(x)) → (Hardworking(x) ∨ EntitledTo(x, nationalSocialInsuranceCoverage)))
+   search: weak maps=12 bridges=['B1', 'B1', 'B1', 'B2']
+[57] T3 Every book that is open for business and that does not require refrigeration contains chat features, providing that the book is perfect and belongs to the company.
+   W: ∀x (Book(x) ∧ OpenForBusiness(x) ∧ ¬RequiresRefrigeration(x) ∧ Perfect(x) ∧ BelongTo(x, company) → Contain(x, chatFeature))
+   S: ∀x (Book(x) ∧ OpenForBusiness(x) ∧ ¬RequiresRefrigeration(x) → (Contain(x, chatFeature) ↔ (Perfect(x) ∧ BelongTo(x, company))))
+   C: ∀x (Book(x) ∧ OpenForBusiness(x) ∧ ¬RequireRefrigeration(x) ∧ Perfect(x) ∧ BelongTo(x, company) → ContainsChatFeatures(x))
+   search: weak maps=48 bridges=['B1']
+[58] T4 A racing car that involves competition against another team and that is played by striking the strings is environment-friendly as long as the racing car has a fixed shape and volume, unless the racing car is used in the lab computer.
+   W: ∀x (RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStriking(x) ∧ FixedShapeAndVolume(x) ∧ ¬UsedIn(x, labComputer) → EnvironmentFriendly(x))
+   S: ∀x (RacingCar(x) ∧ InvolvesCompetitionAgainstAnotherTeam(x) ∧ PlayedByStriking(x) ∧ FixedShapeAndVolume(x) → (EnvironmentFriendly(x) ↔ ¬UsedIn(x, labComputer)))
+   C: ∀x (RacingCar(x) ∧ InvolvesCompetition(x, anotherTeam) ∧ PlayedByStriking(x, strings) → (HasFixedShapeAndVolume(x) → (¬UsedIn(x, labComputer) → EnvironmentFriendly(x))))
+   search: weak maps=48 bridges=['B2', 'B2']
+[59] T6 Except when the device is sold at Apple Stores, every device that is for reading and that is used primarily for media consumption is in French, provided that the device is supported by legs.
+   W: ∀x (Device(x) ∧ ForReading(x) ∧ UsedForMediaConsumption(x) ∧ SupportedByLegs(x) ∧ ¬SoldIn(x, appleStore) → InFrench(x))
+   S: ∀x (Device(x) ∧ ForReading(x) ∧ UsedForMediaConsumption(x) ∧ SupportedByLegs(x) → (InFrench(x) ↔ ¬SoldIn(x, appleStore)))
+   C: ∀x ((Device(x) ∧ ForReading(x) ∧ PrimarilyUsedFor(x, mediaConsumption) ∧ SupportedByLegs(x)) → (¬SoldAt(x, appleStore) → InLanguage(x, french)))
+   search: weak maps=48 bridges=['B2', 'B2']
