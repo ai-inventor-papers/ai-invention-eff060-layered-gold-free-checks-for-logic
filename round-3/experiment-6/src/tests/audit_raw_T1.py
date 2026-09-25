@@ -30,7 +30,7 @@ import numpy as np
 from scipy.stats import rankdata
 
 ROOT = Path(__file__).resolve().parent.parent
-E_FULL = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_1/gen_art/gen_art_dataset_1/full_data_out.json")
+E_FULL = Path(__file__).resolve().parents[4] / "round-1/dataset-1/src/full_data_out.json"
 
 
 def auc_rank(y: np.ndarray, s: np.ndarray) -> float:

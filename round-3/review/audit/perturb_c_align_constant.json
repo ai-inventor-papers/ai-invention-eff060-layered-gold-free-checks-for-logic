@@ -1,0 +1,93 @@
+{
+ "ADD": {
+  "n": 472,
+  "share_c_eq_1": 0.9979,
+  "mean": 0.9998
+ },
+ "BIND": {
+  "n": 314,
+  "share_c_eq_1": 1.0,
+  "mean": 1.0
+ },
+ "CONN": {
+  "n": 327,
+  "share_c_eq_1": 0.9847,
+  "mean": 0.9969
+ },
+ "CONTROL:BASE": {
+  "n": 198,
+  "share_c_eq_1": 0.2626,
+  "mean": 0.6736
+ },
+ "CONTROL:CONTRAPOSITIVE": {
+  "n": 179,
+  "share_c_eq_1": 0.2793,
+  "mean": 0.7141
+ },
+ "CONTROL:DEMORGAN": {
+  "n": 8,
+  "share_c_eq_1": 0.0,
+  "mean": 0.3159
+ },
+ "CONTROL:RENAME_NONCE": {
+  "n": 110,
+  "share_c_eq_1": 1.0,
+  "mean": 1.0
+ },
+ "CONTROL:RENAME_SYN": {
+  "n": 88,
+  "share_c_eq_1": 0.7386,
+  "mean": 0.9125
+ },
+ "CONTROL:REORDER_COMMUTE": {
+  "n": 158,
+  "share_c_eq_1": 0.2532,
+  "mean": 0.6969
+ },
+ "CONTROL:REORDER_QUANT": {
+  "n": 20,
+  "share_c_eq_1": 0.45,
+  "mean": 0.8701
+ },
+ "DROP": {
+  "n": 191,
+  "share_c_eq_1": 0.9424,
+  "mean": 0.9879
+ },
+ "MEANING_RENAME": {
+  "n": 318,
+  "share_c_eq_1": 0.9969,
+  "mean": 0.9985
+ },
+ "MOVE": {
+  "n": 6,
+  "share_c_eq_1": 1.0,
+  "mean": 1.0
+ },
+ "NEG": {
+  "n": 379,
+  "share_c_eq_1": 0.9947,
+  "mean": 0.9992
+ },
+ "QUANT": {
+  "n": 179,
+  "share_c_eq_1": 0.9777,
+  "mean": 0.9982
+ },
+ "RESTR": {
+  "n": 177,
+  "share_c_eq_1": 0.9887,
+  "mean": 0.9991
+ },
+ "REV": {
+  "n": 179,
+  "share_c_eq_1": 0.9944,
+  "mean": 0.9995
+ },
+ "SWAP": {
+  "n": 116,
+  "share_c_eq_1": 0.9914,
+  "mean": 0.9993
+ },
+ "predicted_auroc_if_all_mutants_c1": 0.8659
+}

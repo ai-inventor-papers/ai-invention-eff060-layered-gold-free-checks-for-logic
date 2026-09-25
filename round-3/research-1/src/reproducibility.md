@@ -44,10 +44,10 @@ queries were printed to its terminal and **not saved**. What is saved is every p
 
 **Session 2 (02:57–03:15 UTC).**
 1. Read our own numbers (read-only) from the iteration-1 and iteration-2 artifacts:
-   - `iter_2/gen_art/gen_art_experiment_5/results/tables.md`
-   - `iter_1/gen_art/gen_art_experiment_3/README.md`
-   - `iter_1/gen_art/gen_art_experiment_4/results/summary.md` and its `README.md`
-   - `iter_2/gen_art/gen_art_evaluation_1/README.md`
+   - `round-2/experiment-5/src/results/tables.md`
+   - `round-1/experiment-3/src/README.md`
+   - `round-1/experiment-4/src/results/summary.md` and its `README.md`
+   - `round-2/evaluation-1/src/README.md`
 2. Local greps (`lg.py`) over the session-1 full texts: NoTB §4.1–4.3.4, Jury §3.2 / App C / §5.4, GenV Tables 1, 4 and 10 and App B,
    ARc §3.2 / §4.1, Kim et al. (limitations), 2608.05670 Prop. 5, SCP-NL2TL Table 1, AutoEval §4.
 3. Eight new searches, **all saved** to `notes/raw/search2/s01–s08.txt`, run in this order at 02:59 UTC:

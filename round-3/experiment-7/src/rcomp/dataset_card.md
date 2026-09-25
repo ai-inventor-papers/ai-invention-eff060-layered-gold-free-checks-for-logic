@@ -1,6 +1,6 @@
 # Dataset card: R_COMP (long composed sentences with trusted references) + PERTURB (typed perturbation suite)
 
-Generated 2026-09-23 22:07 UTC by `src/card.py`. Run `run_u75jRHUss0zo`, invention iteration 2, `gen_art_dataset_3` (plan `gen_plan_dataset_2_idx4`). It builds on dataset E (`iter_1/gen_art/gen_art_dataset_1`) and never writes to it. Absolute workspace: `/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_dataset_3`.
+Generated 2026-09-23 22:07 UTC by `src/card.py`. Run `run_u75jRHUss0zo`, invention iteration 2, `gen_art_dataset_3` (plan `gen_plan_dataset_2_idx4`). It builds on dataset E (`round-1/dataset-1/src`) and never writes to it. Absolute workspace: `../../../../round-2/dataset-3/src`.
 
 ## 0. Status: read this first
 **The R_COMP candidate generation, labelling and adjudication have NOT run yet.** The shared OpenRouter key (a $50/day limit shared by every run on the machine) hit its daily limit at about 18:00 UTC on 2026-09-23, roughly five minutes into this module, after 67 lexicon-extraction calls ($0.414). The limit resets daily at 00:00 UTC, after this module's deadline (23:49 UTC). Every later poll (`logs/key_status.log`, every 5 min) showed `limit_remaining = 0`; the last line is `2026-09-23T21:48:40Z 0 (replacement key, usage_daily 50.06 at 21:39 UTC)`.

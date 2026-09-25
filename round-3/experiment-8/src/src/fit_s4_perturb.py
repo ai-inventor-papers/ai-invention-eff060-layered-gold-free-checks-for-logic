@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_6
 """S4_local for PERTURB (labelled DEVIATION D-S4FULL): exp 6's S4 local feature stack refitted ONCE on all E R_AB rows
 (no OOF folds exist for PERTURB rows), written to results/s4_perturb_coefs.json BEFORE any PERTURB label is read.
 

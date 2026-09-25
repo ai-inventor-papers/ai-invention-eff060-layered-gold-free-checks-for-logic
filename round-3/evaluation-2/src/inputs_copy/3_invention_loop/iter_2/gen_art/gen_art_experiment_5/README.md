@@ -129,7 +129,7 @@ and higher scores. The global-shuffle placebo is 0.50 for every metric.
 | `data/screen/` | copies of the iteration-1 screen inputs (exp C pools, screen labels, exp A/D per-item files) |
 
 Workspace path (all kept artifacts are read from here):
-`/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5/`.
+`../../../../../../../../round-2/experiment-5/src/`.
 In particular: `results/per_item_E.jsonl` (the join input for iteration 3), `results/prereg.json` and `results/analysis.json`.
 
 ## Functions (`src/peer_text.py`)

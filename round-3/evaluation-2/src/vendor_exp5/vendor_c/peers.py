@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/iter_3/gen_hypo/claude_agent/data/yuan-yang__MALLS-v0__MALLS-v0.1-train.json
 """STEP 3/4: peer translations (6 fresh model families, T=0) and self-consistency samples (K=5, T=0.7)
 through OpenRouter, with a response cache (never re-bills), a running cost total checked before every
 call, hard stops, and a separate parse/map stage that turns cached responses into

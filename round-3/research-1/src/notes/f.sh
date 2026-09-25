@@ -1,6 +1,6 @@
 #!/bin/bash
 # usage: f.sh <outname> <url> [maxchars] [offset]
-SKILL_DIR=/ai-inventor/.claude/skills/aii-web-tools
+SKILL_DIR=../../../../tools/aii-web-tools
 PY=$SKILL_DIR/../.ability_client_venv/bin/python
 OUT=../notes/raw/$1.txt
 echo "URL: $2 | FETCH | $(date -u +%FT%TZ)" > $OUT

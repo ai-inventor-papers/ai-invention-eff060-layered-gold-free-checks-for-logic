@@ -13,7 +13,7 @@ from loguru import logger
 from .common import DATA, RES, ROOT, jdump, jload, read_jsonl
 
 FIG = ROOT / "figures"
-CHART = Path("/ai-inventor/.claude/skills/aii-data-fig-gen/scripts/chart_gen.py")
+CHART = Path(__file__).resolve().parents[4] / "tools/aii-data-fig-gen/scripts/chart_gen.py"
 
 
 def f3(x, d=3):

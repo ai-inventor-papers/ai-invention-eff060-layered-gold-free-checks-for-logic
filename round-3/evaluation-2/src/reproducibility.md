@@ -10,11 +10,11 @@ cd ~/work/consensus_audit
 ```
 
 The code reads its **inputs by absolute path** (`src/paths.py`: `RUN = ../../..`). The inputs are:
-- exp 5 (`iter_2/gen_art/gen_art_experiment_5`)
+- exp 5 (`round-2/experiment-5/src`)
 - exp 6 (`iter_2/gen_art/gen_art_experiment_6`)
-- dataset E (`iter_1/gen_art/gen_art_dataset_1`, whose 27.7 MB `full_data_out.json` and `raw/generations.jsonl` are not copied)
+- dataset E (`round-1/dataset-1/src`, whose 27.7 MB `full_data_out.json` and `raw/generations.jsonl` are not copied)
 - datasets 2 and 3 and evaluation 1 (`iter_2/gen_art/...`)
-- the reviewer audit (`iter_2/review_report/review_report/audit/`)
+- the reviewer audit (`round-2/review/audit/`)
 - iteration-1 exp 1, 3 and 4
 
 Every input smaller than 10 MB is mirrored under `inputs_copy/3_invention_loop/...`, with its sha256 in `tables/source_hashes.csv`. On another machine, either recreate that directory tree at the same absolute path, or edit `RUN` in `src/paths.py`. The vendored exp-5 scoring code is in `vendor_exp5/`, and its hashes are checked identical to the source.
@@ -49,8 +49,8 @@ uv run pytest -q tests                            # 23 passed (~25 s)
 #   audit/rederive.py, audit/m2_specificity.py -> audit/*.json (~1.5 min)
 #   figures + eval_out.json
 .venv/bin/python eval.py --stage all --skip-matrix   # the final run: reuses the matrix, re-runs every analysis + audits
-python /ai-inventor/.claude/skills/aii-json/scripts/aii_json_format_mini_preview.py --input eval_out.json   # full_/mini_/preview_
-python /ai-inventor/.claude/skills/aii-json/scripts/aii_json_validate_schema.py --format exp_eval_sol_out --file $PWD/eval_out.json
+python ../../../tools/aii-json/scripts/aii_json_format_mini_preview.py --input eval_out.json   # full_/mini_/preview_
+python ../../../tools/aii-json/scripts/aii_json_validate_schema.py --format exp_eval_sol_out --file $PWD/eval_out.json
 ```
 
 Seeds are fixed throughout:

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# NOTE (published copy): this file names server paths this repository
+# does not publish (a stage it does not ship, or another run's workspace),
+# so the steps that read them will not run from a clone as written:
+#   /ai-inventor/aii_data/runs/run_u75jRHUss0zo/iter_3/gen_hypo/claude_agent/data
 """STEP 1: build the SHARED SCREEN (track L = released Logic-LM outputs vs trusted references;
 track H = original human gold vs corrected gold), label every item with the shared labeller, write
 results/screen_items.json + results/screen_label_hash.txt, plus results/units.json (the translation units

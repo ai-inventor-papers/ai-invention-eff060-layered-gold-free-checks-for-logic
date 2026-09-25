@@ -213,7 +213,7 @@ def run_frontier(pilot: bool, n_rows: int, cap: float) -> None:
 
 def regress() -> None:
     """T4 ($0): identical prompt construction -> identical exp-5 cache keys for 10 dataset-E rows; disguise identical."""
-    X5 = Path("/ai-inventor/aii_data/runs/run_u75jRHUss0zo/3_invention_loop/iter_2/gen_art/gen_art_experiment_5")
+    X5 = Path(__file__).resolve().parents[4] / "round-2/experiment-5/src"
     cache_keys = set()
     for l in (X5 / "results" / "llm_cache.jsonl").read_text().splitlines():
         try:
