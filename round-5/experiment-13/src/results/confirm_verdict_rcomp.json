@@ -1,0 +1,87 @@
+{
+ "criterion": "(c) c_score_align - flash-lite judge, within-template AUROC, both views, both 95% CIs > 0, on the untouched gated set",
+ "VERDICT": "NOT_TESTABLE",
+ "reason": "FALLBACK B: the gloss gate failed twice (gloss_v1 half A, gloss_v2 half B); every MAPPED row is UNRESOLVED_GLOSS_GATE_FAILED, so the gated label set has 0 CORRECT rows",
+ "confirmatory_counts": {
+  "disg": {
+   "n_ERROR": 602,
+   "n_CORRECT": 0,
+   "sentences_ERROR": 193,
+   "sentences_CORRECT": 0,
+   "TESTABLE": false
+  },
+  "orig": {
+   "n_ERROR": 605,
+   "n_CORRECT": 0,
+   "sentences_ERROR": 197,
+   "sentences_CORRECT": 0,
+   "TESTABLE": false
+  }
+ },
+ "flags": {
+  "gate_failed_twice_fallback_B": true,
+  "gate_v2_used": true,
+  "underpowered": true,
+  "soundness_bar_failed": null,
+  "s6_flip": null,
+  "s3_flip": false,
+  "s1a_flip": false,
+  "partial_budget": false
+ },
+ "flags_note": "soundness_bar_failed / s6_flip are not applicable: the SIG e2e gloss check and the Haiku-only regime need gloss verdicts, which do not exist under FALLBACK B",
+ "PROVISIONAL_NON_CONFIRMATORY": {
+  "labels": "ERROR_CERT (y=1) vs MAPPED = UNRESOLVED_GLOSS_GATE_FAILED (y=0), untouched rows",
+  "disg": {
+   "n": 1706,
+   "n_err": 602,
+   "n_cor": 1104,
+   "auroc_a": 0.8007358664119437,
+   "auroc_a_ci": [
+    0.7702116511425956,
+    0.8340869930688215
+   ],
+   "auroc_b": 0.5841505695889054,
+   "auroc_b_ci": [
+    0.5495939769189366,
+    0.6184259547075768
+   ],
+   "delta": 0.2165852968230383,
+   "ci": [
+    0.1752971795896373,
+    0.2602777367219074
+   ]
+  },
+  "orig": {
+   "n": 1709,
+   "n_err": 605,
+   "n_cor": 1104,
+   "auroc_a": 0.8038910396678449,
+   "auroc_a_ci": [
+    0.7739355038605688,
+    0.8355198553257014
+   ],
+   "auroc_b": 0.6326866969645963,
+   "auroc_b_ci": [
+    0.6012777260140908,
+    0.6659150654091057
+   ],
+   "delta": 0.17120434270324858,
+   "ci": [
+    0.13535299319740351,
+    0.20644188639523636
+   ]
+  },
+  "both_ci_gt_0_provisional": true,
+  "noise_corrected_delta_blind_audit_consensus": {
+   "disg": 0.34971325897052524,
+   "orig": 0.2764381032087265
+  },
+  "must_not_be_counted_as_confirmation": true
+ },
+ "seals": {
+  "labels_all": "b7916aeae77ecfe2556e0f545bb5813843a36d12ba73043dfc1320c13c45cd5e",
+  "labels_untouched": "79eb623a1a75279c1db96c8d31311b59e16bcc7b911064f04c9909fb4d6afcbb",
+  "scores": "results/score_seal_rcomp.json",
+  "all_verified_before_join": true
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "gloss_v1_A": {
+  "half": "A",
+  "version": "gloss_v1",
+  "n_items": 442,
+  "per_class": {
+   "YES_IDENT": {
+    "n": 63,
+    "haiku": {
+     "recall": 0.952,
+     "ci": [
+      0.869,
+      0.984
+     ]
+    },
+    "qwen": {
+     "recall": 0.984,
+     "ci": [
+      0.915,
+      0.997
+     ]
+    },
+    "both_yes": {
+     "recall": 0.937,
+     "ci": [
+      0.848,
+      0.975
+     ]
+    }
+   },
+   "YES_SYN": {
+    "n": 64,
+    "haiku": {
+     "recall": 0.766,
+     "ci": [
+      0.649,
+      0.853
+     ]
+    },
+    "qwen": {
+     "recall": 0.812,
+     "ci": [
+      0.7,
+      0.889
+     ]
+    },
+    "both_yes": {
+     "recall": 0.672,
+     "ci": [
+      0.55,
+      0.774
+     ]
+    }
+   },
+   "YES_FORM": {
+    "n": 63,
+    "haiku": {
+     "recall": 0.619,
+     "ci": [
+      0.496,
+      0.729
+     ]
+    },
+    "qwen": {
+     "recall": 0.714,
+     "ci": [
+      0.593,
+      0.811
+     ]
+    },
+    "both_yes": {
+     "recall": 0.508,
+     "ci": [
+      0.388,
+      0.627
+     ]
+    }
+   },
+   "NO_NONCE": {
+    "n": 63,
+    "haiku": {
+     "recall": 0.603,
+     "ci": [
+      0.48,
+      0.715
+     ]
+    },
+    "qwen": {
+     "recall": 0.825,
+     "ci": [
+      0.714,
+      0.9
+     ]
+    },
+    "both_yes": {
+     "recall": 0.889,
+     "ci": [
+      0.788,
+      0.945
+     ]
+    }
+   },
+   "NO_DONOR": {
+    "n": 63,
+    "haiku": {
+     "recall": 0.857,
+     "ci": [
+      0.75,
+      0.923
+     ]
+    },
+    "qwen": {
+     "recall": 0.968,
+     "ci": [
+      0.891,
+      0.991
+     ]
+    },
+    "both_yes": {
+     "recall": 1.0,
+     "ci": [
+      0.943,
+      1.0
+     ]
+    }
+   },
+   "NO_ROLE": {
+    "n": 63,
+    "haiku": {
+     "recall": 0.635,
+     "ci": [
+      0.511,
+      0.743
+     ]
+    },
+    "qwen": {
+     "recall": 0.698,
+     "ci": [
+      0.576,
+      0.798
+     ]
+    },
+    "both_yes": {
+     "recall": 0.825,
+     "ci": [
+      0.714,
+      0.9
+     ]
+    }
+   },
+   "NO_MERGE": {
+    "n": 63,
+    "haiku": {
+     "recall": 1.0,
+     "ci": [
+      0.943,
+      1.0
+     ]
+    },
+    "qwen": {
+     "recall": 1.0,
+     "ci": [
+      0.943,
+      1.0
+     ]
+    },
+    "both_yes": {
+     "recall": 1.0,
+     "ci": [
+      0.943,
+      1.0
+     ]
+    }
+   }
+  },
+  "per_checker": {
+   "haiku": {
+    "recall_YES": 0.779,
+    "recall_NO": 0.774,
+    "balanced_accuracy": 0.776,
+    "recall_YES_ci": [
+     0.715,
+     0.832
+    ],
+    "recall_NO_ci": [
+     0.718,
+     0.821
+    ],
+    "no_verdict": 0
+   },
+   "qwen": {
+    "recall_YES": 0.837,
+    "recall_NO": 0.873,
+    "balanced_accuracy": 0.855,
+    "recall_YES_ci": [
+     0.778,
+     0.883
+    ],
+    "recall_NO_ci": [
+     0.826,
+     0.909
+    ],
+    "no_verdict": 0
+   },
+   "both_yes": {
+    "recall_YES": 0.705,
+    "recall_NO": 0.929,
+    "balanced_accuracy": 0.817,
+    "recall_YES_ci": [
+     0.637,
+     0.766
+    ],
+    "recall_NO_ci": [
+     0.89,
+     0.954
+    ],
+    "no_verdict": 0
+   }
+  },
+  "cohen_kappa_haiku_qwen": 0.58,
+  "PASS": false,
+  "artifact_spend_usd": 0.1318
+ },
+ "gloss_v2_B": {
+  "half": "B",
+  "version": "gloss_v2",
+  "n_items": 398,
+  "per_class": {
+   "YES_IDENT": {
+    "n": 57,
+    "haiku": {
+     "recall": 0.596,
+     "ci": [
+      0.467,
+      0.714
+     ]
+    },
+    "qwen": {
+     "recall": 0.982,
+     "ci": [
+      0.907,
+      0.997
+     ]
+    },
+    "both_yes": {
+     "recall": 0.579,
+     "ci": [
+      0.45,
+      0.698
+     ]
+    }
+   },
+   "YES_SYN": {
+    "n": 56,
+    "haiku": {
+     "recall": 0.679,
+     "ci": [
+      0.548,
+      0.786
+     ]
+    },
+    "qwen": {
+     "recall": 0.804,
+     "ci": [
+      0.682,
+      0.887
+     ]
+    },
+    "both_yes": {
+     "recall": 0.571,
+     "ci": [
+      0.441,
+      0.692
+     ]
+    }
+   },
+   "YES_FORM": {
+    "n": 57,
+    "haiku": {
+     "recall": 0.526,
+     "ci": [
+      0.399,
+      0.65
+     ]
+    },
+    "qwen": {
+     "recall": 0.842,
+     "ci": [
+      0.726,
+      0.915
+     ]
+    },
+    "both_yes": {
+     "recall": 0.509,
+     "ci": [
+      0.383,
+      0.634
+     ]
+    }
+   },
+   "NO_NONCE": {
+    "n": 57,
+    "haiku": {
+     "recall": 0.456,
+     "ci": [
+      0.334,
+      0.584
+     ]
+    },
+    "qwen": {
+     "recall": 0.877,
+     "ci": [
+      0.768,
+      0.939
+     ]
+    },
+    "both_yes": {
+     "recall": 1.0,
+     "ci": [
+      0.937,
+      1.0
+     ]
+    }
+   },
+   "NO_DONOR": {
+    "n": 57,
+    "haiku": {
+     "recall": 0.544,
+     "ci": [
+      0.416,
+      0.666
+     ]
+    },
+    "qwen": {
+     "recall": 0.93,
+     "ci": [
+      0.833,
+      0.972
+     ]
+    },
+    "both_yes": {
+     "recall": 0.982,
+     "ci": [
+      0.907,
+      0.997
+     ]
+    }
+   },
+   "NO_ROLE": {
+    "n": 57,
+    "haiku": {
+     "recall": 0.474,
+     "ci": [
+      0.35,
+      0.601
+     ]
+    },
+    "qwen": {
+     "recall": 0.754,
+     "ci": [
+      0.629,
+      0.848
+     ]
+    },
+    "both_yes": {
+     "recall": 0.93,
+     "ci": [
+      0.833,
+      0.972
+     ]
+    }
+   },
+   "NO_MERGE": {
+    "n": 57,
+    "haiku": {
+     "recall": 0.614,
+     "ci": [
+      0.484,
+      0.729
+     ]
+    },
+    "qwen": {
+     "recall": 1.0,
+     "ci": [
+      0.937,
+      1.0
+     ]
+    },
+    "both_yes": {
+     "recall": 1.0,
+     "ci": [
+      0.937,
+      1.0
+     ]
+    }
+   }
+  },
+  "per_checker": {
+   "haiku": {
+    "recall_YES": 0.6,
+    "recall_NO": 0.522,
+    "balanced_accuracy": 0.561,
+    "recall_YES_ci": [
+     0.525,
+     0.671
+    ],
+    "recall_NO_ci": [
+     0.457,
+     0.586
+    ],
+    "no_verdict": 141
+   },
+   "qwen": {
+    "recall_YES": 0.876,
+    "recall_NO": 0.89,
+    "balanced_accuracy": 0.883,
+    "recall_YES_ci": [
+     0.819,
+     0.918
+    ],
+    "recall_NO_ci": [
+     0.843,
+     0.925
+    ],
+    "no_verdict": 0
+   },
+   "both_yes": {
+    "recall_YES": 0.553,
+    "recall_NO": 0.978,
+    "balanced_accuracy": 0.766,
+    "recall_YES_ci": [
+     0.478,
+     0.626
+    ],
+    "recall_NO_ci": [
+     0.95,
+     0.991
+    ],
+    "no_verdict": 0
+   }
+  },
+  "cohen_kappa_haiku_qwen": 0.687,
+  "PASS": false,
+  "artifact_spend_usd": 0.3044
+ }
+}
