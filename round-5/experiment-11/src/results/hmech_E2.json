@@ -1,0 +1,102 @@
+{
+ "i_all_families": {
+  "share_nonagreeing_peers_labelled_ERROR": 0.9090909090909091,
+  "ci": [
+   0.8423645320197044,
+   0.9767475467132678
+  ],
+  "n_peer_judgements": 352,
+  "n_sentences": 32,
+  "verdict": "CONFIRMED"
+ },
+ "i_pool3_deepseek_microsoft_openai": {
+  "share_nonagreeing_peers_labelled_ERROR": 0.9181818181818182,
+  "ci": [
+   0.8416530373831775,
+   0.9811320754716981
+  ],
+  "n_peer_judgements": 110,
+  "n_sentences": 25,
+  "verdict": "CONFIRMED"
+ },
+ "ii_scatter": {
+  "SI_err": 0.1132716049382716,
+  "SI_cor": 0.8287698412698412,
+  "ratio": 7.316660179057999,
+  "ci": [
+   4.002864505955566,
+   20.804995465288847
+  ],
+  "n_sentences": 24,
+  "verdict": "NOT_READ"
+ },
+ "iii_net": {
+  "delta_e_plus_d_T3_minus_T1": 0.3471721137521222,
+  "ci": [
+   -0.035838403865423654,
+   0.8549673143088443
+  ],
+  "e_T1": 0.12903225806451613,
+  "d_T1": 0.078125,
+  "e_T3": 0.08064516129032258,
+  "d_T3": 0.47368421052631576,
+  "tercile_cuts_words": [
+   17.0,
+   19.0
+  ],
+  "n_T1": 126,
+  "n_T3": 81,
+  "verdict": "CONFIRMED"
+ },
+ "iv_exact_vs_align": {
+  "by_class": {
+   "CORRECT": {
+    "n": 123,
+    "stat": "d",
+    "exact": 0.7398373983739838,
+    "ALIGN": 0.17886178861788618,
+    "ALIGN_minus_exact": -0.5609756097560976,
+    "ci": [
+     -0.7317479674796747,
+     -0.38594693701466787
+    ]
+   },
+   "MEANING_RENAME_type (tier-B VOCAB_GRAN->ERROR)": {
+    "n": 8,
+    "stat": "e",
+    "exact": 0.125,
+    "ALIGN": 0.625,
+    "ALIGN_minus_exact": 0.5,
+    "ci": [
+     0.125,
+     0.875
+    ]
+   },
+   "ADD/DROP": {
+    "n": 118,
+    "stat": "e",
+    "exact": 0.0,
+    "ALIGN": 0.09322033898305085,
+    "ALIGN_minus_exact": 0.09322033898305085,
+    "ci": [
+     0.0,
+     0.19445058997050144
+    ]
+   },
+   "OTHER_ERROR": {
+    "n": 24,
+    "stat": "e",
+    "exact": 0.0,
+    "ALIGN": 0.0,
+    "ALIGN_minus_exact": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "ALIGN_lower_d": true,
+  "ALIGN_higher_e_on_rename_and_adddrop": true,
+  "verdict": "CONFIRMED"
+ }
+}
