@@ -1,0 +1,47 @@
+warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+URL: https://dspace.mit.edu/server/api/core/bitstreams/1331578f-65c1-4665-a0be-1bc3cdc001d5/content
+Type: PDF
+Pattern: same (incorrect|wrong)|identical (fault|incorrect|output|result)|more than one version failed|different (outputs|results)|particular input|difficult (4 matches in 70128 chars)
+
+--- Content ---
+
+7008:... the system to disconnect after a preset time delay. On the A310, it 
+is sufﬁcient to know that there has been a failure as backup procedures allow the continued safe ﬂight and 
+landing of the aircraft. Dual programming has also been applied to point switching, signal control, and 
+trafﬁc control in the Gothenburg area by Swedish State Railways [9]. In the latter system, if the two 
+programs show different results, signal lights are switched to red. Dual programming has further been 
+proposed for safety systems in nuclear reactors. Voges, Fetsch, and Gmeiner [10] have proposed its use in 
+the design of a reactor shutdown system which serves the purpose of detecting cooling disturbances in a 
+fast breeder reactor and initializing automatic shutdown of the reactor in case of possible emergency. Also, 
+both R...
+--
+8142:...ftware and executing them on large 
+numbers of test cases without manual or independent veriﬁcation of the correct output. The output is 
+assumed correct as long as both versions of the programs agree. The argument is made that preparing test 
+data and determining correct output is difﬁcult and expensive for much real-time software. Since it is 
+assumed ‘‘unlikely’’ that two programs will contain identical faults, a large number of test cases can be run 
+in a relatively short time and with a large reduction in effort required for validation of test results. 
+In addition, it has been argued that each individual version of the software can have lower reliability 
+than would be necessary if only one version were produced. The higher required software reliability is 
+* 
+assumed to be obtained through the vot...
+--
+23503:...ty of the programs written for this experiment is remarkably high. Table 1 shows the 
+observed failure rates of the twenty seven versions. Of the twenty seven, no failures were recorded by six 
+versions and the remainder were successful on more than 99% of the tests. Twenty three of the twenty 
+seven were successful on more than 99.9% of the tests. 
+Table 2 shows the number of test cases in which more than one version failed on the same input. We 
+ﬁnd it surprising that test cases occurred in which eight of the twenty seven versions failed. 
+Where multiple failure occurred on the same input, it is natural to suspect that the failures occurred in 
+the versions supplied by only one of the universities involved. It might be argued that students at the same 
+university have a similar background and that this would tend t...
+--
+29214:...ion that is closely approximated by the standardized normal distribution. 
+For this experiment, our null hypothesis is that the above is a correct model of the data. We can 
+estimate the quantity Pmore from the observed probabilities of failure shown in table 1. There were twenty 
+seven versions (i.e. N = 27), one million tests were executed (i.e. n = 1,000,000), and the number of tests in 
+which more than one version failed was 1255 (i.e. K = 1255). With these parameters, the statistic z has the 
+value 100.51. This is greater than 2.33 which is the 99% point in the the standard normal distribution, and 
+so we reject the null hypothesis with a conﬁdence level of 99%. We conclude that the model does not hold. 
+However, clearly the only potential problem with the model is that it is derived from the assumption of 
+inde...

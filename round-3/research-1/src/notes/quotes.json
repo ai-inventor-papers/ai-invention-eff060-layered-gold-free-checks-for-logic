@@ -1,0 +1,1392 @@
+[
+ {
+  "qid": "Q1a",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "arXiv v1 (22 Aug 2026), MLCAD 2026",
+  "locator": "Abstract",
+  "quote": "On 78 CVDP RTL-generation tasks, four-family formal consensus achieves 94.7% precision at 27% coverage; three-family consensus achieves 87% precision at 33% coverage.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1b",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.3.1",
+  "quote": "raises precision to 85.3% and 87%, respectively",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1c",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 3.2",
+  "quote": "Tool errors, interface mismatches, and inconclusive results do not contribute equivalence edges.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1d",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 3.2",
+  "quote": "NoTB infers clock and reset signals from port names such as clk, reset, and rst_n.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1e",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.3.4",
+  "quote": "Generating 20 implementations per specification across four model families costs $14.93 over the full dataset.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1f",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.3.4",
+  "quote": "the LLM-as-a-judge baseline requires 1,556 additional model calls in our evaluation.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1g",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 3.4",
+  "quote": "Hence, NoTB is a selective-prediction method, not a universal correctness classifier.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1h",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 1",
+  "quote": "false-acceptance rates vary by up to 45% across generating models despite similar ground-truth pass rates",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1i",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.3.2",
+  "quote": "high-precision triage remains possible in every leave-one-out setting",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2a",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "arXiv v3 (17 Aug 2026)",
+  "locator": "Sec 1",
+  "quote": "wrong answers scatter while the correct one accumulates agreement",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2b",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Sec 3.2",
+  "quote": "the probability that, when a model is wrong, it produces the single attractor wrong answer that other erring models also tend to produce.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2c",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Sec 3.2 Generative model",
+  "quote": "This is the minimal model that couples the two forces governing agreement: a shared difficulty that correlates errors, and a shared attractor that makes some errors agree.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2d",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Fig 2 caption",
+  "quote": "where many-option multiple choice forces wrong answers to collide",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2e",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "App D",
+  "quote": "Two of the six are not genuine errors but grading artifacts where the unanimous answer is correct in a different surface form",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2f",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Sec 5.3 On cost",
+  "quote": "Because disagreement concentrates on the hard problems, this recovers the full-panel accuracy at close to two-model cost",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2g",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Table 8 caption",
+  "quote": "while distinct models decorrelate them, most so across families",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2h",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Sec 6",
+  "quote": "a panel of three to four cross-family models, with the majority verdict as the answer and the agreement fraction as a calibrated abstention signal",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3a",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "arXiv v2 (11 Sep 2026)",
+  "locator": "Abstract",
+  "quote": "we introduce Generative Verification (GenV), which distills an offline Z3-equivalence oracle into a reference-free, continuous reference-equivalence score",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3b",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Sec 5 RQ1",
+  "quote": "On the combined benchmark of 950 rows containing 260 VPUs, GenV+HN achieves 0.961 AUROC.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3c",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Sec 5 RQ2",
+  "quote": "achieving 0.964 on ProverQA, 0.925 on MALLS, 0.915 on ProntoQA, 0.842 on ProofWriter, 0.830 on FOLIO, and 0.642 on LogicNLI",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3d",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "App B, three-model panel",
+  "quote": "indicating that much of the disagreement with the Z3 oracle is systematic and repeatable across model judges",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3e",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Limitations",
+  "quote": "GenV+HN optimizes for strict reference-equivalence under the Z3 oracle rather than subjective human intent",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3f",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Computational Budget",
+  "quote": "Training the GenV models via Low-Rank Adaptation (LoRA) required approximately 12 GPU hours on a single NVIDIA H100-80GB GPU.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q4a",
+  "source_index": 4,
+  "file": "notes/full/li2024.md",
+  "url": "https://arxiv.org/html/2410.20936",
+  "version": "arXiv v2, NeurIPS 2024",
+  "locator": "Sec 5 Model",
+  "quote": "we employ few-shot prompting, and set the temperature of the generation process to",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q4b",
+  "source_index": 4,
+  "file": "notes/full/li2024.md",
+  "url": "https://arxiv.org/html/2410.20936",
+  "version": "v2",
+  "locator": "Sec 5 Metric",
+  "quote": "the MATH dataset does not contain aligned formal statements, we manually check each formalization result.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q4c",
+  "source_index": 4,
+  "file": "notes/full/li2024.md",
+  "url": "https://arxiv.org/html/2410.20936",
+  "version": "v2",
+  "locator": "Sec 1",
+  "quote": "The relative efficiency of our method, ranging from 8.4% to 21.9%",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q5a",
+  "source_index": 5,
+  "file": "notes/full/gofu.md",
+  "url": "https://arxiv.org/html/2505.20047",
+  "version": "arXiv v1; NeurIPS 2025 (proceedings)",
+  "locator": "Sec 1 contributions",
+  "quote": "enables selective verification to cut error rates by 14-100% with minimal abstention",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q5b",
+  "source_index": 5,
+  "file": "notes/full/gofu.md",
+  "url": "https://arxiv.org/html/2505.20047",
+  "version": "v1",
+  "locator": "Sec 1",
+  "quote": "SMT-based autoformalization significantly boosted accuracy on tasks like ProofWriter (+34.8%) but harmed others like FOLIO (-44.5%)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q6a",
+  "source_index": 6,
+  "file": "notes/full/sac3_html.md",
+  "url": "https://arxiv.org/html/2311.01740v2",
+  "version": "arXiv v2; EMNLP 2023 (arXiv comment)",
+  "locator": "Sec 1",
+  "quote": "achieves a high AUROC score of 99.4% and 97.0% respectively, which significantly outperforms the self-consistency baseline",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q7a",
+  "source_index": 7,
+  "file": "notes/full/formalalign.md",
+  "url": "https://arxiv.org/abs/2410.10135",
+  "version": "arXiv v1; ICLR 2025 (OpenReview PDF header)",
+  "locator": "Abstract",
+  "quote": "employing a dual loss that combines a pair of mutually enhancing autoformalization and alignment tasks",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q8a",
+  "source_index": 8,
+  "file": "notes/full/roundtrip.md",
+  "url": "https://arxiv.org/abs/2604.25031",
+  "version": "arXiv v3 (21 Sep 2026)",
+  "locator": "Abstract",
+  "quote": "We propose a roundtrip verification approach which does not require ground-truth annotations",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q8b",
+  "source_index": 8,
+  "file": "notes/full/roundtrip.md",
+  "url": "https://arxiv.org/abs/2604.25031",
+  "version": "v3",
+  "locator": "Abstract",
+  "quote": "rules that fail the equivalence check show 1.4x-2.5x more natural language inference (NLI) drift than rules that pass it",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q9a",
+  "source_index": 9,
+  "file": "notes/full/clover_ryu.md",
+  "url": "https://arxiv.org/html/2410.08047v2",
+  "version": "arXiv v2; ICLR 2025 camera-ready",
+  "locator": "Sec 3.3 Logical Consistency",
+  "quote": "An LLM might also make mistake in intermediate steps of compositional first-order logic translation and generate incorrect formulas, but these are less likely to be logically equivalent.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q9b",
+  "source_index": 9,
+  "file": "notes/full/clover_ryu.md",
+  "url": "https://arxiv.org/html/2410.08047v2",
+  "version": "v2",
+  "locator": "Sec 3.3 Logical Consistency",
+  "quote": "However, we observe that an LLM sometimes makes consistent mistakes in the last step of compositional first-order logic translation, which leads to logically equivalent incorrect formulas.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q10a",
+  "source_index": 10,
+  "file": "notes/full/clover.md",
+  "url": "https://arxiv.org/abs/2310.17807",
+  "version": "arXiv v4",
+  "locator": "Abstract",
+  "quote": "Clover performs consistency checks among code, docstrings, and formal annotations.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q11a",
+  "source_index": 11,
+  "file": "notes/full/proxyjudge.md",
+  "url": "https://arxiv.org/html/2606.09449",
+  "version": "arXiv v1 (8 Jun 2026)",
+  "locator": "Abstract",
+  "quote": "We introduce a reference-free proxy-judge framework for AF that replaces gold-standard matching with a vector of per-axis property checks.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q12a",
+  "source_index": 12,
+  "file": "notes/full/monotonic.md",
+  "url": "https://arxiv.org/abs/2601.23166",
+  "version": "arXiv v2 (7 May 2026)",
+  "locator": "Abstract",
+  "quote": "leverages complementary feedback from theorem provers and LLM-based judges, without access to ground-truth or existing formalizations",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q13a",
+  "source_index": 13,
+  "file": "notes/full/consensus_correct.md",
+  "url": "https://arxiv.org/html/2608.05670",
+  "version": "arXiv v1 (6 Aug 2026)",
+  "locator": "Sec 1 contributions",
+  "quote": "it certifies correctness only above a threshold set by how diffuse the model",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q13b",
+  "source_index": 13,
+  "file": "notes/full/consensus_correct.md",
+  "url": "https://arxiv.org/html/2608.05670",
+  "version": "v1",
+  "locator": "Sec 1",
+  "quote": "nor novelty for the concentration-versus-correctness distinction itself, which the self-consistency literature states.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q13c",
+  "source_index": 13,
+  "file": "notes/full/consensus_correct.md",
+  "url": "https://arxiv.org/html/2608.05670",
+  "version": "v1",
+  "locator": "Sec 4, after Prop. 5",
+  "quote": "dispersion spread over many wrong answers cannot produce a confidently wrong consensus",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q14a",
+  "source_index": 14,
+  "file": "notes/full/kim2025.md",
+  "url": "https://arxiv.org/html/2506.07962",
+  "version": "arXiv v1; ICML 2025",
+  "locator": "Abstract",
+  "quote": "on one leaderboard dataset, models agree 60% of the time when both models err.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q14b",
+  "source_index": 14,
+  "file": "notes/full/kim2025.md",
+  "url": "https://arxiv.org/html/2506.07962",
+  "version": "v1",
+  "locator": "Sec 1",
+  "quote": "Importantly, even after conditioning on these factors, pairs of models that are more accurate individually also have more correlated errors.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q14c",
+  "source_index": 14,
+  "file": "notes/full/kim2025.md",
+  "url": "https://arxiv.org/html/2506.07962",
+  "version": "v1",
+  "locator": "Sec 1",
+  "quote": "judges overinflate the accuracy of models that are less accurate than it",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q15a",
+  "source_index": 15,
+  "file": "notes/full/wavering.md",
+  "url": "https://arxiv.org/html/2609.11428",
+  "version": "arXiv v1 (10 Sep 2026)",
+  "locator": "Sec 5 (ensemble)",
+  "quote": "The published models have 70.5 percent mean exact answer agreement and 0.285 mean pairwise error correlation.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q15b",
+  "source_index": 15,
+  "file": "notes/full/wavering.md",
+  "url": "https://arxiv.org/html/2609.11428",
+  "version": "v1",
+  "locator": "Sec 4 data",
+  "quote": "SycoBench-600 contains 600 English four option questions",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q16a",
+  "source_index": 16,
+  "file": "notes/full/x2607_08065.md",
+  "url": "https://arxiv.org/abs/2607.08065",
+  "version": "arXiv v2 (28 Jul 2026)",
+  "locator": "Abstract",
+  "quote": "agreement is a positive but weak predictor (rho 0.20-0.59, all positive under item-clustered resampling)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q16b",
+  "source_index": 16,
+  "file": "notes/full/x2607_08065.md",
+  "url": "https://arxiv.org/abs/2607.08065",
+  "version": "v2",
+  "locator": "Abstract",
+  "quote": "with confident errors recurring across providers above a marginal-preserving null",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q17a",
+  "source_index": 17,
+  "file": "notes/full/x2608_18795.md",
+  "url": "https://arxiv.org/abs/2608.18795",
+  "version": "arXiv v2 (31 Aug 2026)",
+  "locator": "Abstract",
+  "quote": "coverage phi (the mechanical/empirical ratio) shows a benchmark-associated direction: 0.81-0.93 on multiple-choice GPQA-Diamond against 0.59-0.78 on open-domain AIME",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q17b",
+  "source_index": 17,
+  "file": "notes/full/x2608_18795.md",
+  "url": "https://arxiv.org/abs/2608.18795",
+  "version": "v2",
+  "locator": "Abstract",
+  "quote": "Agreement is graded evidence, not certification.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q18a",
+  "source_index": 18,
+  "file": "notes/full/ronnver.md",
+  "url": "https://arxiv.org/html/2606.20158",
+  "version": "arXiv v1 (18 Jun 2026)",
+  "locator": "Sec 1",
+  "quote": "the experiment produces 429 coincident-failure cases where the random independence model predicts only 115.36",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q18b",
+  "source_index": 18,
+  "file": "notes/full/ronnver.md",
+  "url": "https://arxiv.org/html/2606.20158",
+  "version": "v1",
+  "locator": "Fig 7 caption",
+  "quote": "Failures overwhelmingly concentrate in LICs 9 and 14",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q19a",
+  "source_index": 19,
+  "file": "notes/full/shadowbench.md",
+  "url": "https://arxiv.org/abs/2608.29270",
+  "version": "arXiv v3; EMNLP 2026",
+  "locator": "Abstract",
+  "quote": "that characterize the intended statement",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q20a",
+  "source_index": 20,
+  "file": "notes/raw/kl_mit.txt",
+  "url": "https://dspace.mit.edu/server/api/core/bitstreams/1331578f-65c1-4665-a0be-1bc3cdc001d5/content",
+  "version": "IEEE TSE 12(1):96-109, 1986 (author PDF)",
+  "locator": "Sec 1",
+  "quote": "incorrect output given the same input) is very low for independently developed software",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q20b",
+  "source_index": 20,
+  "file": "notes/raw/kl_mit2.txt",
+  "url": "https://dspace.mit.edu/server/api/core/bitstreams/1331578f-65c1-4665-a0be-1bc3cdc001d5/content",
+  "version": "1986",
+  "locator": "Sec 4",
+  "quote": "Table 2 shows the number of test cases in which more than one version failed on the same input.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q20c",
+  "source_index": 20,
+  "file": "notes/raw/kl_mit.txt",
+  "url": "https://dspace.mit.edu/server/api/core/bitstreams/1331578f-65c1-4665-a0be-1bc3cdc001d5/content",
+  "version": "1986",
+  "locator": "Sec 5",
+  "quote": "which more than one version failed was 1255",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q20d",
+  "source_index": 20,
+  "file": "notes/raw/kl_mit.txt",
+  "url": "https://dspace.mit.edu/server/api/core/bitstreams/1331578f-65c1-4665-a0be-1bc3cdc001d5/content",
+  "version": "1986",
+  "locator": "Sec 3",
+  "quote": "executed, each program produces a 15 by 15 Boolean array, a 15 element Boolean",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q21a",
+  "source_index": 21,
+  "file": "notes/full/el1985_acm.md",
+  "url": "https://dl.acm.org/doi/10.1109/TSE.1985.231895",
+  "version": "IEEE TSE 11(12):1511-1517, 1985 (abstract only)",
+  "locator": "Abstract",
+  "quote": "An intensity function, called the intensity of coincident errors, has",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q22a",
+  "source_index": 22,
+  "file": "notes/full/lm1989_ntrs.md",
+  "url": "https://ntrs.nasa.gov/citations/19900036555",
+  "version": "IEEE TSE 15(12):1596-1614, 1989 (abstract only)",
+  "locator": "Abstract",
+  "quote": "The use of diverse methodologies is shown to decrease the probability of the simultaneous failure of several",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q23a",
+  "source_index": 23,
+  "file": "notes/raw/adelard.txt",
+  "url": "https://www.adelard.com/media/vfngprxq/divchap.pdf",
+  "version": "Bishop, shortened chapter of Lyu (ed.) Software Fault Tolerance, Wiley 1995",
+  "locator": "Sec 2",
+  "quote": "dissimilar faults do not guarantee dissimilar failures",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q23b",
+  "source_index": 23,
+  "file": "notes/raw/adelard.txt",
+  "url": "https://www.adelard.com/media/vfngprxq/divchap.pdf",
+  "version": "1995",
+  "locator": "Sec 4",
+  "quote": "any variation in the degree of difficulty for particular input",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q23c",
+  "source_index": 23,
+  "file": "notes/raw/adelard.txt",
+  "url": "https://www.adelard.com/media/vfngprxq/divchap.pdf",
+  "version": "1995",
+  "locator": "Sec 2",
+  "quote": "In one program the failure (when it occurred) produced a",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q24a",
+  "source_index": 24,
+  "file": "notes/full/gold2606.md",
+  "url": "https://arxiv.org/abs/2606.02837",
+  "version": "arXiv v2 (3 Sep 2026), accepted EMNLP 2026",
+  "locator": "Abstract",
+  "quote": "contain incorrect FOL formalizations (i.e., ground truth labels)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q24b",
+  "source_index": 24,
+  "file": "notes/full/gold2606v1.md",
+  "url": "https://arxiv.org/abs/2606.02837v1",
+  "version": "arXiv v1 (1 Jun 2026)",
+  "locator": "Abstract",
+  "quote": "finding that approximately 39% and 36% of entries, respectively, contain incorrect FOL formalizations",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q26a",
+  "source_index": 26,
+  "file": "notes/full/scm.md",
+  "url": "https://arxiv.org/abs/2606.28013",
+  "version": "arXiv v1 (26 Jun 2026)",
+  "locator": "Abstract",
+  "quote": "The two judges disagree by 26 to 37 pp on elab-feedback outputs (vs. 7 pp on Vanilla)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q27a",
+  "source_index": 27,
+  "file": "notes/full/fol2501.md",
+  "url": "https://arxiv.org/abs/2501.08613",
+  "version": "arXiv v3; EMNLP 2025 (arXiv comment)",
+  "locator": "Abstract",
+  "quote": "We observe a closer alignment between BertScore and LLM judgement, proving the importance of semantic evaluation.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q28a",
+  "source_index": 28,
+  "file": "notes/full/karia.md",
+  "url": "https://arxiv.org/html/2410.08437",
+  "version": "arXiv v3; ICLR 2025",
+  "locator": "Sec 4",
+  "quote": "For translating logic expressions with more than 20 operators, none exceeded 50% accuracy in maintaining truth.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q28b",
+  "source_index": 28,
+  "file": "notes/full/karia.md",
+  "url": "https://arxiv.org/html/2410.08437",
+  "version": "v3",
+  "locator": "Sec 4",
+  "quote": "LLMs cannot serve as accurate verifiers of logical equivalence",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q29a",
+  "source_index": 29,
+  "file": "notes/full/beyondcomp.md",
+  "url": "https://arxiv.org/html/2606.31002",
+  "version": "arXiv v2 (3 Sep 2026)",
+  "locator": "Sec 1",
+  "quote": "the criterion agrees with human majority on 87/97 cases",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q29b",
+  "source_index": 29,
+  "file": "notes/full/abs_2606.31002.md",
+  "url": "https://arxiv.org/abs/2606.31002",
+  "version": "v2",
+  "locator": "Abstract",
+  "quote": "LLM judging is therefore useful as a human-calibrated, conservative aggregate measure, not as an equivalence oracle.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q30a",
+  "source_index": 30,
+  "file": "notes/full/abs_2608.15565.md",
+  "url": "https://arxiv.org/abs/2608.15565",
+  "version": "arXiv v4 (16 Sep 2026)",
+  "locator": "Abstract",
+  "quote": "It generates models from three model families, runs each on the stated problem and on instances with resampled parameters",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q30b",
+  "source_index": 30,
+  "file": "notes/full/abs_2608.15565.md",
+  "url": "https://arxiv.org/abs/2608.15565",
+  "version": "v4",
+  "locator": "Abstract",
+  "quote": "raises candidate-level admission precision to 0.927, against 0.871 for majority vote over the host's own samples and 0.726 for execution success",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q31a",
+  "source_index": 31,
+  "file": "notes/full/abs_2605.25186.md",
+  "url": "https://arxiv.org/abs/2605.25186",
+  "version": "arXiv v2; EMNLP 2026",
+  "locator": "Abstract",
+  "quote": "We find that behavioral divergence between formalizations is essentially uncorrelated with their structural agreement",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q31b",
+  "source_index": 31,
+  "file": "notes/full/vernie.md",
+  "url": "https://arxiv.org/html/2605.25186",
+  "version": "v2",
+  "locator": "Sec 4.3.2",
+  "quote": "A Boolean comparison requires a shared input vocabulary, but different formalizations rarely share the same leaf nodes",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q31c",
+  "source_index": 31,
+  "file": "notes/full/vernie.md",
+  "url": "https://arxiv.org/html/2605.25186",
+  "version": "v2",
+  "locator": "Sec 4.2.1",
+  "quote": "We therefore use the consistency study only to select among candidate models and treat matching correctness as an open limitation.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q32a",
+  "source_index": 32,
+  "file": "notes/raw/verge_bridges.txt",
+  "url": "https://arxiv.org/html/2601.20055",
+  "version": "arXiv v2 (2 May 2026)",
+  "locator": "App E.4 'Bridges and cross-model consensus'",
+  "quote": "Multi-sample consensus uses one formalizer; cross-model consensus is supported but not yet evaluated.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q33a",
+  "source_index": 33,
+  "file": "notes/raw/arc_rq2.txt",
+  "url": "https://arxiv.org/html/2511.09008",
+  "version": "arXiv v2 (13 Jul 2026)",
+  "locator": "Sec 2",
+  "quote": "ARc cross-checks per-query translations across diverse models using a notion of symbolic equivalence, with confidence thresholds indicating semantic agreement.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q33b",
+  "source_index": 33,
+  "file": "notes/raw/arc_rq2.txt",
+  "url": "https://arxiv.org/html/2511.09008",
+  "version": "v2",
+  "locator": "Sec 5 RQ2",
+  "quote": "soundness rises from 98.4% to 99.4% and FPR drops from 4.8% to 1.8%, at the cost of reduced recall (28.0% to 14.9%).",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q34a",
+  "source_index": 34,
+  "file": "notes/full/abs_2608.05439.md",
+  "url": "https://arxiv.org/abs/2608.05439",
+  "version": "arXiv v1 (5 Aug 2026)",
+  "locator": "Abstract",
+  "quote": "the dispersion of repeated translations under exact semantic equivalence",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q34b",
+  "source_index": 34,
+  "file": "notes/full/scpnl2tl.md",
+  "url": "https://arxiv.org/html/2608.05439",
+  "version": "v1",
+  "locator": "Sec 3",
+  "quote": "This extends self-consistency [60] to formal specifications, where equivalence can be checked exactly [35].",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q35a",
+  "source_index": 35,
+  "file": "notes/full/scd2608.md",
+  "url": "https://arxiv.org/abs/2608.30258",
+  "version": "arXiv v1 (31 Aug 2026)",
+  "locator": "Abstract",
+  "quote": "We generate K logical translations per input using a frontier LLM and cluster them by semantic equivalence",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q36a",
+  "source_index": 36,
+  "file": "notes/full/logicllama.md",
+  "url": "https://arxiv.org/html/2305.15541",
+  "version": "arXiv v1; ACL 2024 (as cited by GenV)",
+  "locator": "Sec 4.2.3",
+  "quote": "We solve this by finding the binding that gives the highest LE score via greedy search and filling the rest of the missing inputs with dummy inputs.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q37a",
+  "source_index": 37,
+  "file": "notes/full/vossel.md",
+  "url": "https://arxiv.org/html/2509.22338",
+  "version": "arXiv v2; IJCLR 2025",
+  "locator": "Sec 3 Predicate matching",
+  "quote": "predicates are mapped to ground truth predicates using the normalized Levenshtein distance (threshold 0.6)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q37b",
+  "source_index": 37,
+  "file": "notes/full/vossel.md",
+  "url": "https://arxiv.org/html/2509.22338",
+  "version": "v2",
+  "locator": "Sec 2",
+  "quote": "this approach either requires static signatures ensuring that the same predicates are used in both expressions or a normalization step to align predicate names",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q38a",
+  "source_index": 38,
+  "file": "notes/full/mbrexec.md",
+  "url": "https://arxiv.org/abs/2204.11454",
+  "version": "arXiv v2; EMNLP 2022",
+  "locator": "Abstract",
+  "quote": "We select output programs from a generated candidate set by marginalizing over program implementations that share the same semantics.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q39a",
+  "source_index": 39,
+  "file": "notes/full/codet.md",
+  "url": "https://arxiv.org/abs/2207.10397",
+  "version": "arXiv v2",
+  "locator": "Abstract",
+  "quote": "considers both the consistency of the outputs against the generated test cases and the agreement of the outputs with other code samples",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q40a",
+  "source_index": 40,
+  "file": "notes/full/selfcons.md",
+  "url": "https://arxiv.org/abs/2203.11171",
+  "version": "arXiv v4; ICLR 2023",
+  "locator": "Abstract",
+  "quote": "Self-consistency leverages the intuition that a complex reasoning problem typically admits multiple different ways of thinking leading to its unique correct answer.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q41a",
+  "source_index": 41,
+  "file": "notes/full/sement.md",
+  "url": "https://arxiv.org/abs/2302.09664",
+  "version": "arXiv v3; ICLR 2023",
+  "locator": "Abstract",
+  "quote": "Our method is unsupervised, uses only a single model, and requires no modifications to off-the-shelf language models.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q43a",
+  "source_index": 43,
+  "file": "notes/full/poll.md",
+  "url": "https://arxiv.org/abs/2404.18796",
+  "version": "arXiv v2",
+  "locator": "Abstract",
+  "quote": "exhibits less intra-model bias due to its composition of disjoint model families, and does so while being over seven times less expensive",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q45a",
+  "source_index": 45,
+  "file": "notes/full/petsql.md",
+  "url": "https://arxiv.org/abs/2403.09732",
+  "version": "arXiv v4",
+  "locator": "Abstract",
+  "quote": "we propose using cross-consistency across different LLMs rather than self-consistency within a particular LLM",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q46a",
+  "source_index": 46,
+  "file": "notes/full/alphacode.md",
+  "url": "https://arxiv.org/abs/2203.07814",
+  "version": "arXiv v1 (Science 2022 version not fetched)",
+  "locator": "Abstract",
+  "quote": "large-scale model sampling to explore the search space, followed by filtering based on program behavior to a small set of submissions",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q48a",
+  "source_index": 48,
+  "file": "notes/full/abs_2605.29800.md",
+  "url": "https://arxiv.org/abs/2605.29800",
+  "version": "arXiv v1 (28 May 2026)",
+  "locator": "Abstract",
+  "quote": "we find that the 9 judges effectively provide only about 2 independent votes",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q48b",
+  "source_index": 48,
+  "file": "notes/full/ninejudges.md",
+  "url": "https://arxiv.org/html/2605.29800",
+  "version": "v1",
+  "locator": "Table (Condorcet gap decomposition)",
+  "quote": "Gap explained by difficulty | 6.8%",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q49a",
+  "source_index": 49,
+  "file": "notes/full/abs_2601.23045.md",
+  "url": "https://arxiv.org/abs/2601.23045",
+  "version": "arXiv v2; ICLR 2026",
+  "locator": "Abstract",
+  "quote": "Across all tasks and frontier models we measure, the longer models spend reasoning and taking actions,",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q50a",
+  "source_index": 50,
+  "file": "notes/full/abs_2606.27288.md",
+  "url": "https://arxiv.org/abs/2606.27288",
+  "version": "arXiv v1 (25 Jun 2026)",
+  "locator": "Abstract",
+  "quote": "average pairwise error correlation rho, cannot identify beta: error laws with identical marginals and pairwise correlations can have different all-wrong rates",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q51a",
+  "source_index": 51,
+  "file": "notes/full/abs_2607.23931.md",
+  "url": "https://arxiv.org/abs/2607.23931",
+  "version": "arXiv v1 (27 Jul 2026)",
+  "locator": "Abstract",
+  "quote": "shared errors create a positive asymptotic error floor for majority voting",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q52a",
+  "source_index": 52,
+  "file": "notes/full/abs_2603.06612.md",
+  "url": "https://arxiv.org/abs/2603.06612",
+  "version": "arXiv v1 (20 Feb 2026)",
+  "locator": "Abstract",
+  "quote": "aggregation fails to provide a robust truth signal because language model errors are strongly correlated",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q53a",
+  "source_index": 53,
+  "file": "notes/full/abs_2607.20464.md",
+  "url": "https://arxiv.org/abs/2607.20464",
+  "version": "arXiv v1; EIML@ICML 2026",
+  "locator": "Abstract",
+  "quote": "Self-consistency gives accurate per-question uncertainty but no detectable cross-question structure; only a diverse ensemble surfaces what a model does not know.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q54a",
+  "source_index": 54,
+  "file": "notes/full/javaerr.md",
+  "url": "https://arxiv.org/html/2606.14113",
+  "version": "arXiv v1 (12 Jun 2026)",
+  "locator": "Sec 5",
+  "quote": "This indicates that harder problems elicited more heterogeneous erroneous outputs",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q55a",
+  "source_index": 55,
+  "file": "notes/full/geirhos.md",
+  "url": "https://arxiv.org/abs/2006.16736",
+  "version": "arXiv v3; NeurIPS 2020",
+  "locator": "Abstract",
+  "quote": "a quantitative analysis for measuring whether two decision making systems systematically make errors on the same inputs",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q56a",
+  "source_index": 56,
+  "file": "notes/full/abs_2605.29001.md",
+  "url": "https://arxiv.org/abs/2605.29001",
+  "version": "arXiv v1",
+  "locator": "Abstract",
+  "quote": "Cross-model unanimity found these errors automatically",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q58a",
+  "source_index": 58,
+  "file": "notes/full/abs_2605.13817.md",
+  "url": "https://arxiv.org/abs/2605.13817",
+  "version": "arXiv v1 (13 May 2026)",
+  "locator": "Abstract",
+  "quote": "stochastic variation across independent formalizations is a signal of ambiguity",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q59a",
+  "source_index": 59,
+  "file": "notes/full/abs_2609.03422.md",
+  "url": "https://arxiv.org/abs/2609.03422",
+  "version": "arXiv v1 (3 Sep 2026)",
+  "locator": "Abstract",
+  "quote": "increased generative-process diversity is associated with reduced correlated failure in model pairs",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q57a",
+  "source_index": 57,
+  "file": "notes/full/abs_2506.10903.md",
+  "url": "https://arxiv.org/abs/2506.10903",
+  "version": "arXiv v2 (21 Aug 2026)",
+  "locator": "Abstract",
+  "quote": "epistemically and formally grounded ensemble (EFG) of LLM judges",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1j",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.1 Metrics",
+  "quote": "We report precision (correct accepts / total accepts) and coverage (accepts / evaluable specs) at the specification level",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1k",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.2.1",
+  "quote": "Thus, LLM-as-a-judge does not provide a stable high-confidence triage signal.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q1l",
+  "source_index": 1,
+  "file": "notes/full/notb.md",
+  "url": "https://arxiv.org/html/2608.21962v1",
+  "version": "v1",
+  "locator": "Sec 4.3.1",
+  "quote": "For each specification, we measure the model diversity of the largest equivalence cluster and analyze how this signal relates to correctness.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2i",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Sec 3.2 Generative model",
+  "quote": "Per problem, draw a latent difficulty",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2j",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "App C Multi-attractor refinement",
+  "quote": "the single-attractor floor overshoots substantially",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q2k",
+  "source_index": 2,
+  "file": "notes/full/jury.md",
+  "url": "https://arxiv.org/html/2607.10139",
+  "version": "v3",
+  "locator": "Sec 5.4",
+  "quote": "Resampling one model cannot escape that model's correlated errors at any",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3g",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Table 1 (a)",
+  "quote": "Self-consistency vote (K=5) | 0.863",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3h",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Table 4 / Table 10",
+  "quote": "Z3-equivalence to reference | 0.907 | 0.654 Panel-majority intent | 0.679 | 0.778",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3i",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "App B, contested slice",
+  "quote": "When shifting the target from strict reference-equivalence to panel-majority intent,",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q3j",
+  "source_index": 3,
+  "file": "notes/full/genv.md",
+  "url": "https://arxiv.org/html/2609.11085",
+  "version": "v2",
+  "locator": "Table 1 (b)",
+  "quote": "Round-trip back-translationrf{}^{\\text{rf}} | 0.578",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q13d",
+  "source_index": 13,
+  "file": "notes/full/consensus_correct.md",
+  "url": "https://arxiv.org/html/2608.05670",
+  "version": "v1",
+  "locator": "Prop. 5 (iii)",
+  "quote": "Call the errors _diffuse at level_",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q14d",
+  "source_index": 14,
+  "file": "notes/full/kim2025.md",
+  "url": "https://arxiv.org/html/2506.07962",
+  "version": "v1",
+  "locator": "Limitations",
+  "quote": "some questions may also be harder than others. Future work should consider developing a metric that is robust to these characteristics.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q14e",
+  "source_index": 14,
+  "file": "notes/full/kim2025.md",
+  "url": "https://arxiv.org/html/2506.07962",
+  "version": "v1",
+  "locator": "Sec 1",
+  "quote": "choosing between incorrect answers uniformly at random would lead to an agreement rate of",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q15c",
+  "source_index": 15,
+  "file": "notes/full/wavering.md",
+  "url": "https://arxiv.org/html/2609.11428",
+  "version": "v1",
+  "locator": "Abstract",
+  "quote": "Mean error correlation of 0.285 reduces seven models to an effective independent count of 2.58.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q25a",
+  "source_index": 25,
+  "file": "notes/full/brunello.md",
+  "url": "https://arxiv.org/abs/2511.11816",
+  "version": "arXiv v1; AAAI 2026 (arXiv comment)",
+  "locator": "Abstract",
+  "quote": "we propose a novel evaluation protocol explicitly designed to distinguish genuine semantic-level logical understanding from superficial pattern recognition, memorization, and dataset contamination",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q33c",
+  "source_index": 33,
+  "file": "notes/full/arc.md",
+  "url": "https://arxiv.org/html/2511.09008",
+  "version": "v2",
+  "locator": "Sec 3.2",
+  "quote": "the confidence score of a premise-conclusion pair",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q33d",
+  "source_index": 33,
+  "file": "notes/full/arc.md",
+  "url": "https://arxiv.org/html/2511.09008",
+  "version": "v2",
+  "locator": "Sec 3.2",
+  "quote": "is the proportion of the",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q33e",
+  "source_index": 33,
+  "file": "notes/full/arc.md",
+  "url": "https://arxiv.org/html/2511.09008",
+  "version": "v2",
+  "locator": "Sec 3",
+  "quote": "autoformalizes the statement under validation into logic formulas (over the policy model schema)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q42a",
+  "source_index": 42,
+  "file": "notes/full/farquhar.md",
+  "url": "https://www.nature.com/articles/s41586-024-07421-0",
+  "version": "Nature 630, 2024",
+  "locator": "Abstract",
+  "quote": "proposing entropy-based uncertainty estimators for LLMs to detect a subset of hallucinations",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q44a",
+  "source_index": 44,
+  "file": "notes/full/chen_sql.md",
+  "url": "https://aclanthology.org/2023.findings-emnlp.785/",
+  "version": "Findings of EMNLP 2023",
+  "locator": "Abstract",
+  "quote": "we propose a parser-independent error detection model for text-to-SQL semantic parsing",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q47a",
+  "source_index": 47,
+  "file": "notes/full/kuncheva.md",
+  "url": "https://lucykuncheva.co.uk/ensemble_diversity.html",
+  "version": "Machine Learning 51, 2003 (listed on author page)",
+  "locator": "Diversity toolbox list",
+  "quote": "Coincident Failure Diveristy (CFD)",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q49b",
+  "source_index": 49,
+  "file": "notes/full/abs_2601.23045.md",
+  "url": "https://arxiv.org/abs/2601.23045",
+  "version": "v2",
+  "locator": "Abstract",
+  "quote": "as more capable AIs pursue harder tasks, requiring more sequential action and thought, our results predict failures to be accompanied by more incoherent behavior",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q50b",
+  "source_index": 50,
+  "file": "notes/full/abs_2606.27288.md",
+  "url": "https://arxiv.org/abs/2606.27288",
+  "version": "v1",
+  "locator": "Abstract",
+  "quote": "locating co-failure in answer format rather than subject",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q60a",
+  "source_index": 60,
+  "file": "notes/full/zorzo_nvp.md",
+  "url": "https://www.inf.pucrs.br/~zorzo/cs/n-versionprogramming.pdf",
+  "version": "FTCS-8 1978, pp. 3-9 (reprint in FTCS-25, 1995)",
+  "locator": "Sec 5 (experiments)",
+  "quote": "faulty but identical results (due to missing logic) may outvote correct results",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q60b",
+  "source_index": 60,
+  "file": "notes/full/zorzo_nvp.md",
+  "url": "https://www.inf.pucrs.br/~zorzo/cs/n-versionprogramming.pdf",
+  "version": "1978",
+  "locator": "Sec 5",
+  "quote": "For cases in which missing logic is the cause of incorrect software operation, error symptoms",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q60c",
+  "source_index": 60,
+  "file": "notes/full/zorzo_nvp.md",
+  "url": "https://www.inf.pucrs.br/~zorzo/cs/n-versionprogramming.pdf",
+  "version": "1978",
+  "locator": "Sec 3",
+  "quote": "These voting processes will be called \"inexact voting\".",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q61a",
+  "source_index": 61,
+  "file": "notes/full/xdis2603.md",
+  "url": "https://arxiv.org/abs/2603.25450",
+  "version": "arXiv v2 (11 Jun 2026)",
+  "locator": "Abstract",
+  "quote": "On MMLU, CMP achieves a mean AUROC of 0.75 against a within-model entropy baseline of 0.59.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q62a",
+  "source_index": 62,
+  "file": "notes/full/abs_2607.19899.md",
+  "url": "https://arxiv.org/abs/2607.19899",
+  "version": "arXiv v1; PAAMS 2026 (arXiv comment)",
+  "locator": "Abstract",
+  "quote": "ablation shows that strengthening base learners increases error correlation while reducing disagreement",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q28c",
+  "source_index": 28,
+  "file": "notes/full/karia.md",
+  "url": "https://arxiv.org/html/2410.08437",
+  "version": "v3",
+  "locator": "Sec 4",
+  "quote": "for anything but toy expressions (low descriptional complexity), after which",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q8c",
+  "source_index": 8,
+  "file": "notes/full/roundtrip_html.md",
+  "url": "https://arxiv.org/html/2604.25031",
+  "version": "v3",
+  "locator": "Sec 1",
+  "quote": "We use two LLMs, Claude Opus 4.6 (Anthropic) and GPT-5.2 (OpenAI).",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q4d",
+  "source_index": 4,
+  "file": "notes/full/li2024.md",
+  "url": "https://arxiv.org/html/2410.20936",
+  "version": "v2",
+  "locator": "Sec 1 / Fig 1 caption",
+  "quote": "scores and selects the best result from k autoformalization candidates based on two complementary self-consistency methods",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q34c",
+  "source_index": 34,
+  "file": "notes/full/scpnl2tl.md",
+  "url": "https://arxiv.org/html/2608.05439",
+  "version": "v1",
+  "locator": "Sec 4 Tasks and data",
+  "quote": "tiers are defined post hoc by the number of atomic propositions in the reference formula",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q34d",
+  "source_index": 34,
+  "file": "notes/full/scpnl2tl.md",
+  "url": "https://arxiv.org/html/2608.05439",
+  "version": "v1",
+  "locator": "Table 1 caption",
+  "quote": "Error-detection AUROC by scoring channel, grouped by information source.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q34e",
+  "source_index": 34,
+  "file": "notes/full/scpnl2tl.md",
+  "url": "https://arxiv.org/html/2608.05439",
+  "version": "v1",
+  "locator": "Sec 4 Tasks and data",
+  "quote": "Translation correctness is determined using the benchmark-provided canonical equivalence checker",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q34f",
+  "source_index": 34,
+  "file": "notes/full/scpnl2tl.md",
+  "url": "https://arxiv.org/html/2608.05439",
+  "version": "v1",
+  "locator": "Sec 4 LLM Translators",
+  "quote": "Two translators spanning a wide reliability range are evaluated.",
+  "verified_in_fetched_text": true
+ },
+ {
+  "qid": "Q63a",
+  "source_index": 63,
+  "file": "notes/full/abs_2608.00285.md",
+  "url": "https://arxiv.org/abs/2608.00285",
+  "version": "arXiv (31 Jul 2026)",
+  "locator": "Abstract",
+  "quote": "Sixteen language models drawn from ten families produced, on average, the semantic diversity of 1.69 distinct formulations",
+  "verified_in_fetched_text": true
+ }
+]
