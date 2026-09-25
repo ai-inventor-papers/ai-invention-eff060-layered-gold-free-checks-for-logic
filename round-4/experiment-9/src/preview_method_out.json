@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "method_name": "Candidate-Signature Consensus (CSC), T6-E, iteration 4",
+    "status": "DEVELOPMENT E; PROVISIONAL (paid sweep stopped by the platform budget)",
+    "orientation": "every predict_* is higher = more likely ERROR; 'NA' = not computed for that row (CSC exists only for rows whose peer calls completed)",
+    "what_c_csc_measures": "1 - share of family-disjoint peers (given the candidate's own symbol list) whose formula is z3-equivalent to the candidate with symbols matched by lowercased name and arity; not truth against a refere...",
+    "populations": {
+      "PRIMARY": {
+        "n": 354,
+        "n_err": 196,
+        "n_cor": 158,
+        "n_sent": 144
+      },
+      "GE2": {
+        "n": 475,
+        "n_err": 232,
+        "n_cor": 243,
+        "n_sent": 145
+      },
+      "MINI200": {
+        "n": 180,
+        "n_err": 120,
+        "n_cor": 60,
+        "n_sent": 130
+      },
+      "FULL": {
+        "n": 2686,
+        "n_err": 1822,
+        "n_cor": 864,
+        "n_sent": 292
+      },
+      "PRIMARY_by_stratum": {
+        "L25": {
+          "n_err": 59,
+          "n_cor": 22
+        },
+        "L20": {
+          "n_err": 77,
+          "n_cor": 20
+        },
+        "EXC": {
+          "n_err": 41,
+          "n_cor": 45
+        },
+        "CTRL": {
+          "n_err": 19,
+          "n_cor": 71
+        }
+      },
+      "PRIMARY_by_family": {
+        "meta": 100,
+        "google": 61,
+        "qwen": 56,
+        "mistral": 37,
+        "openai": 30,
+        "cohere": 27,
+        "microsoft": 22,
+        "deepseek": 21
+      }
+    },
+    "gate_file": "csc_gate_E.json",
+    "tables": "tables.md",
+    "analysis": "results/analysis.json"
+  },
+  "datasets": [
+    {
+      "dataset": "dataset_E_R_AB_E_POOL",
+      "examples": [
+        {
+          "input": "{\"text\": \"A planet x supports life form y if the atmospheric conditions and temperature are suitable for the survival of that life form.\", \"candidate_fol\": \"∀x ∀y (Planet(x) ∧ LifeForm(y) ∧ SuitableFo...",
+          "output": "ERROR",
+          "predict_c_csc": "0.333333",
+          "predict_c_csc_graded": "0.200000",
+          "predict_c_csc_multi": "0.333333",
+          "predict_HYB_MEAN": "0.666667",
+          "predict_baseline_free_matched_exact": "1.000000",
+          "predict_baseline_free_matched_align": "1.000000",
+          "predict_baseline_c_score_align_9peer": "1.000000",
+          "predict_baseline_judge_flashlite_disguised": "0.900000",
+          "predict_baseline_judge_flashlite_original": "0.700000",
+          "predict_baseline_judge_nano_original": "0.731047",
+          "predict_baseline_roundtrip_nli_min": "0.060697",
+          "predict_baseline_selfconsistency_sc5": "1.000000",
+          "predict_baseline_p_peer_text": "0.932597",
+          "predict_baseline_S4_full_oof": "0.933923",
+          "metadata_row_key": "005373780d1cd737|fewshot_v1",
+          "metadata_sentence_id": "0eb31fdb1d83",
+          "metadata_stratum": "L20",
+          "metadata_family": "deepseek",
+          "metadata_label_tier": "B",
+          "metadata_in_PRIMARY": true,
+          "metadata_csc_status": "OK",
+          "metadata_csc_n_usable": 3,
+          "metadata_csc_n_missing_calls": 0,
+          "metadata_free_status": "OK",
+          "metadata_words": 22,
+          "metadata_n_conditions": 4,
+          "metadata_csc_peer_majority_fol": "∀v0 (∀v1 (((((planet(v0) ∧ lifeform(v1)) ∧ suitableforsurvival(k_atmosphericconditions, v1)) ∧ suitableforsurvival(k_temperature, v1)) → supports(v0, v1))))",
+          "metadata_csc_peer_fols": [
+            "∀x ∀y ((Planet(x) ∧ LifeForm(y) ∧ Supports(x, y)) → SuitableConditionsAndTemperature(x))",
+            "∀x ∀y ((Planet(x) ∧ LifeForm(y) ∧ SuitableForSurvival(atmosphericConditions, y) ∧ SuitableForSurvival(temperature, y)) → Supports(x, y))",
+            "∀x ∀y ((Planet(x) ∧ LifeForm(y)) → (SuitableForSurvival(atmosphericConditions, y) ∧ SuitableForSurvival(temperature, y) → Supports(x, y)))"
+          ],
+          "metadata_csc_usd": 0.0005338075
+        },
+        {
+          "input": "{\"text\": \"An object is a television if it is an electronic device that receives and displays broadcast signals, providing audiovisual entertainment and information.\", \"candidate_fol\": \"∀x (Television(...",
+          "output": "ERROR",
+          "predict_c_csc": "0.666667",
+          "predict_c_csc_graded": "0.500000",
+          "predict_c_csc_multi": "0.333333",
+          "predict_HYB_MEAN": "0.833333",
+          "predict_baseline_free_matched_exact": "1.000000",
+          "predict_baseline_free_matched_align": "1.000000",
+          "predict_baseline_c_score_align_9peer": "1.000000",
+          "predict_baseline_judge_flashlite_disguised": "1.000000",
+          "predict_baseline_judge_flashlite_original": "0.000000",
+          "predict_baseline_judge_nano_original": "0.437822",
+          "predict_baseline_roundtrip_nli_min": "0.558569",
+          "predict_baseline_selfconsistency_sc5": "1.000000",
+          "predict_baseline_p_peer_text": "0.770932",
+          "predict_baseline_S4_full_oof": "0.839200",
+          "metadata_row_key": "02156d80f007aff7|zeroshot_v1",
+          "metadata_sentence_id": "0f995c93155d",
+          "metadata_stratum": "L20",
+          "metadata_family": "meta",
+          "metadata_label_tier": "B",
+          "metadata_in_PRIMARY": true,
+          "metadata_csc_status": "OK",
+          "metadata_csc_n_usable": 3,
+          "metadata_csc_n_missing_calls": 0,
+          "metadata_free_status": "OK",
+          "metadata_words": 22,
+          "metadata_n_conditions": 3,
+          "metadata_csc_peer_majority_fol": null,
+          "metadata_csc_peer_fols": [
+            "∀x ((ElectronicDevice(x) ∧ ReceivesBroadcastSignals(x) ∧ DisplaysSignals(x) ∧ ProvidesAudiovisualEntertainment(x) ∧ ProvidesInformation(x)) → Television(x))",
+            "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+            "∀x (Television(x) ↔ (ElectronicDevice(x) ∧ ReceivesBroadcastSignals(x) ∧ DisplaysSignals(x) ∧ ProvidesAudiovisualEntertainment(x) ∧ ProvidesInformation(x)))"
+          ],
+          "metadata_csc_usd": 0.00052165
+        },
+        {
+          "input": "{\"text\": \"A bird can fly unless it's flightless or injured.\", \"candidate_fol\": \"∀x (Bird(x) ∧ ¬Flightless(x) ∧ ¬Injured(x) → CanFly(x))\", \"system\": \"G2:qwen/qwen3-235b-a22b-2507\", \"prompt_variant\": \"f...",
+          "output": "CORRECT",
+          "predict_c_csc": "0.333333",
+          "predict_c_csc_graded": "0.200000",
+          "predict_c_csc_multi": "0.333333",
+          "predict_HYB_MEAN": "0.416667",
+          "predict_baseline_free_matched_exact": "0.666667",
+          "predict_baseline_free_matched_align": "0.666667",
+          "predict_baseline_c_score_align_9peer": "0.500000",
+          "predict_baseline_judge_flashlite_disguised": "1.000000",
+          "predict_baseline_judge_flashlite_original": "0.050000",
+          "predict_baseline_judge_nano_original": "0.998675",
+          "predict_baseline_roundtrip_nli_min": "0.068174",
+          "predict_baseline_selfconsistency_sc5": "0.800000",
+          "predict_baseline_p_peer_text": "0.240856",
+          "predict_baseline_S4_full_oof": "0.434890",
+          "metadata_row_key": "02193a83918cdc0a|fewshot_v1",
+          "metadata_sentence_id": "8681dfaac4bf",
+          "metadata_stratum": "EXC",
+          "metadata_family": "qwen",
+          "metadata_label_tier": "A",
+          "metadata_in_PRIMARY": true,
+          "metadata_csc_status": "OK",
+          "metadata_csc_n_usable": 3,
+          "metadata_csc_n_missing_calls": 0,
+          "metadata_free_status": "OK",
+          "metadata_words": 9,
+          "metadata_n_conditions": 3,
+          "metadata_csc_peer_majority_fol": "∀v0 ((bird(v0) → ((¬flightless(v0) ∧ ¬injured(v0)) → canfly(v0))))",
+          "metadata_csc_peer_fols": [
+            "∀x (Bird(x) → (¬Flightless(x) ∧ ¬Injured(x) → CanFly(x)))",
+            "∀x ((CanMake(x, cookies) ∧ CanMake(x, muffins)) → Baker(x))",
+            "∀x (Bird(x) → (¬Flightless(x) ∧ ¬Injured(x) → CanFly(x)))"
+          ],
+          "metadata_csc_usd": 0.00054298
+        }
+      ]
+    }
+  ]
+}
