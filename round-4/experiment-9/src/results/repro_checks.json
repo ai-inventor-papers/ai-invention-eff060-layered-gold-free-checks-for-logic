@@ -1,0 +1,18 @@
+{
+ "m4_pool_deepseek+microsoft+openai": {
+  "auroc": 0.7840536320486238,
+  "strat_auroc": 0.7427699504489165,
+  "target_auroc": 0.784520131776288,
+  "target_strat": 0.7426532918903646,
+  "pass": true,
+  "neutral": 0.6266243516243516,
+  "n": 2686
+ },
+ "T1_c_score_align": {
+  "auroc": 0.7823775511241208,
+  "strat_auroc": 0.7414618757606236,
+  "target_auroc": 0.782,
+  "target_strat": 0.741,
+  "pass": true
+ }
+}

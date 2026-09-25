@@ -1,0 +1,56 @@
+07:40:40|INFO   |guard ok: {'scores_sha256': 'cd9f94e88086773d8fba2b976a06cd6228adc206eddc563e49d5716fd70560bf', 'prereg_sha256': 'd1f51857f17b0d27c7ef09af84c6554fadd4d680f669ed5fb515b5d7a4e6b017', 'addendum1_sha256': 'f3ed03cb8a154a97e6d0188500cf5509ec0d0616f49e0711b1997cb5e94a8ca8', 'order_ok': True, 'analysis_start_ts': 1790235640.257269}
+07:40:40|INFO   |status: {'own_status_PRIMARY': {'OK': 354}, 'own_status_GE2': {'OK': 472, 'csc_insufficient_peers': 3}, 'free_status_FULL': {'OK': 2463, 'csc_insufficient_peers': 223}, 'free_align_status_FULL': {'OK': 2463, 'csc_insufficient_peers': 223}, 'own_unknown_pairs_PRIMARY': 0, 'own_insufficient_share_PRIMARY': 0.0, 'free_insufficient_share_FULL': 0.08302308265078183, 'peer_pair_agree_exact': {'CSC_OWN_PRIMARY': 0.551789077212806, 'FREE_MATCHED_same_rows': 0.3621399176954732, 'FREE_MATCHED_FULL': 0.2090946000812018}}
+07:40:46|INFO   |(a) done 7s
+07:42:41|INFO   |NET done 121s
+07:42:56|INFO   |[PRIMARY] R_AB [strat]: n_err 196 n_cor 158
+07:43:00|INFO   |[PRIMARY] R_AB [pooled]: n_err 196 n_cor 158
+07:43:11|INFO   |[PRIMARY] long L25+L20+EXC [strat]: n_err 177 n_cor 87
+07:43:14|INFO   |[PRIMARY] L25 [pooled]: n_err 59 n_cor 22
+07:43:17|INFO   |[PRIMARY] L20 [pooled]: n_err 77 n_cor 20
+07:43:20|INFO   |[PRIMARY] EXC [pooled]: n_err 41 n_cor 45
+07:43:23|INFO   |[PRIMARY] CTRL [pooled]: n_err 19 n_cor 71
+07:43:38|INFO   |[PRIMARY] tier A only [strat]: n_err 65 n_cor 114
+07:43:50|INFO   |[PRIMARY] VEX subset [strat]: n_err 22 n_cor 115
+07:43:51|INFO   |[GE2] R_AB [strat]: n_err 232 n_cor 243
+07:43:51|INFO   |[GE2] R_AB [pooled]: n_err 232 n_cor 243
+07:43:52|INFO   |[GE2] long L25+L20+EXC [strat]: n_err 207 n_cor 122
+07:43:52|INFO   |[GE2] L25 [pooled]: n_err 61 n_cor 34
+07:43:53|INFO   |[GE2] L20 [pooled]: n_err 91 n_cor 34
+07:43:53|INFO   |[GE2] EXC [pooled]: n_err 55 n_cor 54
+07:43:53|INFO   |[GE2] CTRL [pooled]: n_err 25 n_cor 121
+07:43:54|INFO   |[GE2] tier A only [strat]: n_err 79 n_cor 184
+07:43:55|INFO   |[GE2] VEX subset [strat]: n_err 27 n_cor 185
+07:43:56|INFO   |[MINI200] R_AB [strat]: n_err 120 n_cor 60
+07:43:57|INFO   |[MINI200] R_AB [pooled]: n_err 120 n_cor 60
+07:43:57|INFO   |[MINI200] long L25+L20+EXC [strat]: n_err 112 n_cor 45
+07:43:58|INFO   |[MINI200] L25 [pooled]: n_err 44 n_cor 17
+07:43:58|INFO   |[MINI200] L20 [pooled]: n_err 48 n_cor 12
+07:43:58|INFO   |[MINI200] EXC [pooled]: n_err 20 n_cor 16
+07:43:58|INFO   |[MINI200] CTRL [pooled]: n_err 8 n_cor 15
+07:43:59|INFO   |[MINI200] tier A only [strat]: n_err 29 n_cor 33
+07:44:00|INFO   |[MINI200] VEX subset [strat]: n_err 6 n_cor 33
+07:44:03|INFO   |[FULL] R_AB [strat]: n_err 1822 n_cor 864
+07:44:05|INFO   |[FULL] R_AB [pooled]: n_err 1822 n_cor 864
+07:44:07|INFO   |[FULL] long L25+L20+EXC [strat]: n_err 1673 n_cor 627
+07:44:08|INFO   |[FULL] L25 [pooled]: n_err 697 n_cor 176
+07:44:09|INFO   |[FULL] L20 [pooled]: n_err 592 n_cor 229
+07:44:09|INFO   |[FULL] EXC [pooled]: n_err 384 n_cor 222
+07:44:10|INFO   |[FULL] CTRL [pooled]: n_err 149 n_cor 237
+07:44:12|INFO   |[FULL] tier A only [strat]: n_err 453 n_cor 414
+07:44:14|INFO   |[FULL] VEX subset [strat]: n_err 183 n_cor 433
+07:44:15|INFO   |[PRI_excl] R_AB [strat]: n_err 196 n_cor 158
+07:44:16|INFO   |[PRI_excl] R_AB [pooled]: n_err 196 n_cor 158
+07:44:16|INFO   |[PRI_excl] long L25+L20+EXC [strat]: n_err 177 n_cor 87
+07:44:17|INFO   |[PRI_excl] L25 [pooled]: n_err 59 n_cor 22
+07:44:17|INFO   |[PRI_excl] L20 [pooled]: n_err 77 n_cor 20
+07:44:17|INFO   |[PRI_excl] EXC [pooled]: n_err 41 n_cor 45
+07:44:17|INFO   |[PRI_excl] CTRL [pooled]: n_err 19 n_cor 71
+07:44:18|INFO   |[PRI_excl] tier A only [strat]: n_err 65 n_cor 114
+07:44:19|INFO   |[PRI_excl] VEX subset [strat]: n_err 22 n_cor 115
+07:44:19|INFO   |(b) done 219s
+07:44:26|INFO   |(c) done 226s
+07:44:36|INFO   |(d) done 236s
+07:44:36|INFO   |(e) done 237s
+07:45:24|INFO   |(f) done 284s
+07:45:51|INFO   |(h) done 312s
+07:45:52|INFO   |analysis written, 312s
