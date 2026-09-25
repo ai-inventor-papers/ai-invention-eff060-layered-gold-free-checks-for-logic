@@ -1,0 +1,12 @@
+{
+ "paired_disg_n": 1706,
+ "c_align_on_paired": 0.8007,
+ "judge_disg_on_paired": 0.5842,
+ "c_score_align": 0.8022,
+ "c_exact": 0.6057,
+ "c_score_hyb": 0.8174,
+ "c_score_nf": 0.7426,
+ "judge_cheap_disg": 0.5871,
+ "judge_cheap_orig": 0.6332,
+ "c_align_flag_rate_MAPPED_gt0.5": 0.691
+}

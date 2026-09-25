@@ -1,0 +1,9 @@
+11:43:34|INFO   |seals: {'label_all': True, 'label_untouched': True, 'label_seal_mode': 'final', 'label_seal_all': 'b7916aeae77ecfe2556e0f545bb5813843a36d12ba73043dfc1320c13c45cd5e', 'label_seal_untouched': '79eb623a1a75279c1db96c8d31311b59e16bcc7b911064f04c9909fb4d6afcbb', 'score_file_ok': True, 'prereg_ok': True, 'addendum_ok': True, 'ALL_OK': True}
+11:43:34|INFO   |confirmatory: NOT_TESTABLE {'n_ERROR': 602, 'n_CORRECT': 0, 'sentences_ERROR': 193, 'sentences_CORRECT': 0, 'TESTABLE': False}
+11:43:35|INFO   |provisional headline: disg 0.217 [0.1752971795896373, 0.2602777367219074]; orig 0.171 [0.13535299319740351, 0.20644188639523636]
+11:43:43|INFO   |metrics done 10s
+11:43:56|INFO   |nested done 23s
+11:43:59|WARNING|GEE Exchangeable failed for eq ~ C(pair_type) * zn: Iteration limit reached prior to convergence
+11:44:02|INFO   |h-mech done 29s
+11:44:30|INFO   |sens/variants/complexity/system/coverage/cost done 56s
+11:45:26|INFO   |done in 113s

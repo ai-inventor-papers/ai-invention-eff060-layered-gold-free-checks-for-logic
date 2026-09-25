@@ -1,0 +1,25 @@
+{
+ "addendum_to": "prereg_iter5_E2A.json (sha256 28b96e8b...)",
+ "written_utc": "2026-09-24T11:52:27Z",
+ "written_before": "any E2 label beyond the iteration-4 pilot has been assembled, sealed or read; no E2 label has been joined to any score",
+ "trigger": "HTTP 403 aii_run_budget_exhausted at ~11:40 UTC: the run-level 'Test idea' OpenRouter budget ($12.00, shared by all concurrent artifacts) is spent; this artifact's own spend is ~$2.05 of its $9.5 cap.",
+ "state_at_trigger": {
+  "generation": "complete (550 sentences x 10 slots)",
+  "solver_labels": "complete (550)",
+  "panel": "stage 1 + P1 adjudication complete for the first sha1-order prefix of 110 sentences (107 with full P3+R1 votes); later prefixes incomplete",
+  "reference_repair": "not run",
+  "flash-lite judge": "~235 of 4,308 unique disguised calls; original view none",
+  "nano judge": "none",
+  "label-free CPU scores": "complete (V0, PT, c_exact, V1-V5, L2, L3, pilot metrics)",
+  "local Qwen3-8B judge": "running on the GPU ($0)"
+ },
+ "rules": {
+  "poll": "key status every 15 min; on recovery the paid chain resumes automatically (panel prefixes, API judges, repair, relabel); cached calls are never re-billed",
+  "cutoff": "if the key has not recovered by 15:30 UTC, finalize with what exists",
+  "population_if_cutoff": "the completed random prefix: the first K sentences of the frozen sha1 order whose panel prefix finished (K = 110 unless more prefixes complete), all strata; the completed fraction per stratum is reported. Rows of sentences outside the prefix are not analysed (no completion selection).",
+  "primary_if_cutoff": "(a) is evaluated exactly as pre-registered on the rows that have a flash-lite disguised score (a random sha1(row_key)-ordered subset); if that cell fails the testability rule (>=50 ERROR and >=50 CORRECT rows, >=25 sentences each) (a) is NOT_TESTABLE and the overall verdict is PARTIAL/NOT_TESTABLE, never CONFIRM.",
+  "fallback_comparator": "the local Qwen3-8B rubric-A judge (T1's local judge, disguised view primary, original secondary) is reported as a DECLARED SUBSTITUTE bar: V0 - local judge strat Delta with CI. It is secondary evidence and cannot produce CONFIRM.",
+  "S4_if_cutoff": "S4_E2 uses the features with >=95% coverage on R_AB (entry rule of T1): in the blocked state that is the local judge (both views), L2-bow, L3; (b) is reported with that feature list.",
+  "unchanged": "metrics, orientation, bootstrap (B=2000, seed 0, stratified sentence clusters), seal order, criteria text"
+ }
+}

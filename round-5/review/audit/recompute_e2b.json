@@ -1,0 +1,26 @@
+{
+ "n": 382,
+ "n_err": 334,
+ "V0": {
+  "pooled": 0.7424,
+  "n": 381
+ },
+ "flashlite_disg": {
+  "pooled": 0.4907,
+  "n": 276
+ },
+ "p_peer_text": {
+  "pooled": 0.6594,
+  "n": 382
+ },
+ "V4": {
+  "pooled": 0.7658,
+  "n": 381
+ },
+ "V2": {
+  "pooled": 0.7554,
+  "n": 381
+ },
+ "V0_FA_on_CORRECT_gt0.5": 0.833,
+ "V0_flag_rate_all": 0.913
+}
